@@ -16,16 +16,17 @@
     "library": {
       "repository": "https://github.com/nscottnichols/ffmt",
       "branch": "library-portable",
-      "pull_request": null,
+      "pull_request": "https://github.com/nscottnichols/ffmt/pull/9",
       "commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
-      "publication_status": "pending"
+      "publication_status": "open"
     },
     "evaluation": {
       "repository": "https://github.com/nscottnichols/ffmt-evaluation",
       "branch": "evaluation-campaign",
-      "pull_request": null,
-      "commit": null,
-      "publication_status": "pending"
+      "pull_request": "https://github.com/nscottnichols/ffmt-evaluation/pull/1",
+      "commit": "46972133c7875dcc70422ca85121dfd394a15dc6",
+      "publication_status": "open",
+      "commit_scope": "Initial companion import; a follow-up validates adapter fixes, safe paper rebuilds and provenance metadata. Branch and PR identify the current tip."
     }
   },
   "replacement_changes": [
@@ -37,7 +38,8 @@
       "replacement_target_ids": [
         "library",
         "evaluation"
-      ]
+      ],
+      "status": "closed_superseded"
     },
     {
       "old_pr": "https://github.com/nscottnichols/ffmt/pull/2",
@@ -46,7 +48,8 @@
       "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
       "replacement_target_ids": [
         "library"
-      ]
+      ],
+      "status": "closed_superseded"
     },
     {
       "old_pr": "https://github.com/nscottnichols/ffmt/pull/3",
@@ -55,7 +58,8 @@
       "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
       "replacement_target_ids": [
         "library"
-      ]
+      ],
+      "status": "closed_superseded"
     },
     {
       "old_pr": "https://github.com/nscottnichols/ffmt/pull/4",
@@ -65,7 +69,8 @@
       "replacement_target_ids": [
         "library",
         "evaluation"
-      ]
+      ],
+      "status": "closed_superseded"
     },
     {
       "old_pr": "https://github.com/nscottnichols/ffmt/pull/5",
@@ -75,7 +80,8 @@
       "replacement_target_ids": [
         "library",
         "evaluation"
-      ]
+      ],
+      "status": "closed_superseded"
     },
     {
       "old_pr": "https://github.com/nscottnichols/ffmt/pull/6",
@@ -85,7 +91,8 @@
       "replacement_target_ids": [
         "library",
         "evaluation"
-      ]
+      ],
+      "status": "closed_superseded"
     },
     {
       "old_pr": "https://github.com/nscottnichols/ffmt/pull/7",
@@ -94,7 +101,8 @@
       "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
       "replacement_target_ids": [
         "evaluation"
-      ]
+      ],
+      "status": "closed_superseded"
     }
   ],
   "qualified_snapshots": [

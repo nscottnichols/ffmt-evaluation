@@ -90,10 +90,17 @@ python3 tools/conformance.py --ffmt-checkout /path/to/ffmt --dry-run --case lite
 
 `tools/report.py`, `tools/benchmark_report.py`, and `tools/paper_tables.py`
 reproduce compact exports from explicitly selected captured manifests.
-`tools/build_paper.sh` regenerates manuscript tables and the PDF.
+`tools/build_paper.sh` generates tables and a PDF in a fresh ignored output
+directory, preserving the historical paper and selection ledger.
 Independent compiler/runtime reproducers live in [test/regressions](test/regressions/README.md)
 and [implementation_limitation](implementation_limitation/). Their failures are
 evidence of the recorded environment; they are not library conformance passes.
 
 The [JLSE development skill](skills/ffmt-jlse-development/SKILL.md) provides
 orchestration and worker guidance for this evaluation repository.
+
+The [split validation](docs/provenance/validation.json) records passing standalone
+library checks and an evaluation smoke against an archived source revision.
+The former mixed PR stack is closed as superseded by
+[library PR9](https://github.com/nscottnichols/ffmt/pull/9) and
+[evaluation PR1](https://github.com/nscottnichols/ffmt-evaluation/pull/1).

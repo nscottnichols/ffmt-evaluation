@@ -92,7 +92,7 @@ def summarize(path, terminal_only=False):
     termination = path.parent / "termination.json"
     termination_record = dict(evidence=json.loads(termination.read_text()),
         sha256=hashlib.sha256(termination.read_bytes()).hexdigest()) if termination.is_file() else None
-    return dict(profile=m["profile"], label=m["label"], started=m["started"], finished=m.get("finished"),
+    result = dict(profile=m["profile"], label=m["label"], started=m["started"], finished=m.get("finished"),
                 source=m["source"], oracle=m["oracle"], host=m["host"], environment=m.get("environment"),
                 selection=m.get("selection"), termination=termination_record,
                 fatal_error=m.get("fatal_error"),
@@ -103,6 +103,11 @@ def summarize(path, terminal_only=False):
                 cobalt_jobid=m.get("cobalt_jobid"), discovery=m.get("discovery"),
                 hardware=hardware_identity(dict(hostname=m["host"].get("name"), machine=m["host"].get("architecture")), m.get("discovery")),
                 configurations=configurations)
+    # New portable manifests distinguish runner and source repositories.
+    # Keep those identities and their invocation without inventing fields in
+    # historical manifests that predate the repository split.
+    result.update({key: m[key] for key in ("runner", "invocation", "workspace", "profiles") if key in m})
+    return result
 
 
 def main():

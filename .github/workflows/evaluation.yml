@@ -12,4 +12,7 @@ jobs:
           python-version: '3.12'
       - run: python3 -m unittest discover -s test -v
       - run: python3 -m py_compile tools/*.py tools/jlse/*.py
-      - run: bash -n tools/jlse/*.sh tools/build_paper.sh
+      - run: |
+          for script in tools/jlse/*.sh tools/build_paper.sh; do
+            bash -n "$script"
+          done

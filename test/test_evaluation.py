@@ -17,6 +17,7 @@ from unittest import mock
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 import evaluation
 import report
+import benchmark_report
 
 submission_spec = importlib.util.spec_from_file_location("jlse_submit", evaluation.ROOT / "tools/jlse/submit.py")
 submission = importlib.util.module_from_spec(submission_spec)
@@ -241,6 +242,35 @@ class ReportEvidenceTests(unittest.TestCase):
             with mock.patch.object(report, "ROOT", root):
                 result = report.summarize(path.resolve(), terminal_only=True)
             self.assertEqual(result["input_manifest"], "artifacts/manifest.json")
+
+    def test_compact_exports_preserve_separate_source_runner_and_invocation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            common = dict(invocation=["python3", "/runner/tools/conformance.py", "--revision", "a" * 40],
+                          workspace="/evaluation", profiles=dict(path="/evaluation/profiles.json", sha256="b" * 64))
+            runner = dict(checkout="/runner", commit="c" * 40)
+            path = self.manifest(directory, "completed", "pass")
+            qualification = json.loads(path.read_text())
+            qualification.update(common, runner=runner)
+            path.write_text(json.dumps(qualification))
+            with mock.patch.object(report, "ROOT", directory):
+                compact = report.summarize(path)
+            self.assertEqual(compact["runner"], runner)
+            for key, value in common.items():
+                self.assertEqual(compact[key], value)
+
+            benchmark = dict(common, source_checkout="/source", runner_checkout="/runner",
+                             source_commit="a" * 40, runner_commit="c" * 40,
+                             source_worktree=False, source_files={}, results=[], builds=[])
+            path.write_text(json.dumps(benchmark))
+            output = directory / "benchmark-export.json"
+            with mock.patch.object(sys, "argv", ["benchmark_report.py", str(path), "--output", str(output)]):
+                benchmark_report.main()
+            compact = json.loads(output.read_text())["runs"][0]
+            self.assertEqual(compact["source_commit"], benchmark["source_commit"])
+            self.assertEqual(compact["runner_commit"], benchmark["runner_commit"])
+            for key in (*common, "source_checkout", "runner_checkout"):
+                self.assertEqual(compact[key], benchmark[key])
 
 
 if __name__ == "__main__":

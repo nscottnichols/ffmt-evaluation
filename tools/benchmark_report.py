@@ -91,6 +91,8 @@ def main():
                                            "cobalt_jobid", "hostname", "started", "finished", "source_commit", "discovery", "compiler_versions",
                                            "fmt_commit", "timer_policy", "sycl_cache_persistent", "sycl_jit_policy", "warmups", "samples", "selection",
                                            "source_worktree", "runner_commit", "runner_files", "environment"]}
+        compact.update({key: run[key] for key in ("source_checkout", "runner_checkout", "workspace",
+                                                 "profiles", "invocation") if key in run})
         if "source_worktree" not in run:
             compact["source_identity_note"] = "Historical source_commit recorded the runner checkout HEAD; use revision and source_files for the captured library identity"
         compact.update(raw_manifest=str(path), raw_manifest_sha256=hashlib.sha256(raw).hexdigest())

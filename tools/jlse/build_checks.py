@@ -32,11 +32,26 @@ def main():
     output = ROOT / "artifacts" / args.profile / ("build-checks-" + os.environ["COBALT_JOBID"])
     output.mkdir(parents=True, exist_ok=False)
     source, build = output / "source", output / "cmake"
+    # load_conformance selects the requested source repository in this parent.
+    # Children must see the immutable detached tree instead: otherwise CTest's
+    # portable runner would inherit the original repository's live WORKTREE.
+    child_environment = {"FFMT_SOURCE_ROOT": str(source)}
     manifest = dict(schema_version=1, revision=evaluation.git(source_root, "rev-parse", args.revision),
         profile=args.profile, cobalt_jobid=os.environ["COBALT_JOBID"],
-        sources=evaluation.identity(checkout, source_root, args.revision), steps=[], status="running")
+        sources=evaluation.identity(checkout, source_root, args.revision),
+        build_source_checkout=str(source), child_environment=child_environment,
+        steps=[], status="running")
     def step(name, command, timeout=1800):
-        result = conformance.run(command, output, name, timeout)
+        previous = {key: os.environ.get(key) for key in child_environment}
+        try:
+            os.environ.update(child_environment)
+            result = conformance.run(command, output, name, timeout)
+        finally:
+            for key, value in previous.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
         manifest["steps"].append(dict(name=name, **conformance.record(result)))
         (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
         print(name, result["exit_code"], flush=True)
