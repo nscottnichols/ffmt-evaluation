@@ -101,6 +101,9 @@ orchestration and worker guidance for this evaluation repository.
 
 The [split validation](docs/provenance/validation.json) records passing standalone
 library checks and an evaluation smoke against an archived source revision.
-The former mixed PR stack is closed as superseded by
-[library PR9](https://github.com/nscottnichols/ffmt/pull/9) and
+The former mixed PR stack is closed as superseded by the
+[portable library review stack](docs/provenance/review-stack.md) and
 [evaluation PR1](https://github.com/nscottnichols/ffmt-evaluation/pull/1).
+The library stack starts at [PR10](https://github.com/nscottnichols/ffmt/pull/10)
+and ends at the focused [PR9](https://github.com/nscottnichols/ffmt/pull/9).
+Evaluation pins and historical evidence remain unchanged.

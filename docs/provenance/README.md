@@ -12,12 +12,16 @@ documentation remain in [ffmt](https://github.com/nscottnichols/ffmt).
 
 [split.json](split.json) records all seven original PR tips, their replacement
 targets, the original source snapshots, source hashes and preserved file hashes.
-The replacements are [library PR9](https://github.com/nscottnichols/ffmt/pull/9)
-and [evaluation PR1](https://github.com/nscottnichols/ffmt-evaluation/pull/1).
-The ledger identifies the library commit, initial companion import and validated
-evaluation implementation; later publication-only metadata commits remain on
-those PR branches. Historical PR numbers in frozen reports and the paper describe
-the original campaign; consult the ledger for their replacement changes.
+The replacement library change is now a [seven-part review stack](review-stack.md),
+from [PR10](https://github.com/nscottnichols/ffmt/pull/10) through the focused
+[PR9](https://github.com/nscottnichols/ffmt/pull/9). The evaluation change remains
+[evaluation PR1](https://github.com/nscottnichols/ffmt-evaluation/pull/1).
+The original split ledger identifies the first portable library commit, initial
+companion import and validated evaluation implementation. The supplemental
+[review-stack ledger](review-stack.json) maps the unchanged final library tree
+to its new review commits and retains the original library pin through an archive
+tag. Historical PR numbers in frozen reports and the paper describe the original
+campaign; consult these ledgers for the corresponding review changes.
 
 ## Retained snapshots
 
@@ -33,6 +37,7 @@ library branch's merge ancestry.
 | `qualified/20261022-primary` | `21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8` | Main 54-case stdout and 8,216-record memory campaign; selected failures remain included |
 | `qualified/20261022-postfix` | `98dba67cdb2dc4686cc512736ad92fdeaebeb63a` | Focused later backend checks, portability checks and shortest-memory measurements |
 | `qualified/20261022-final` | `0c2cb764d8ee436bc0221e88cefe417dcbb8d678` | Final counted-view host checks, build integration and host source coverage |
+| `archive/library-portable-20261022` | `4b8cf257fc68c5b20c0c493e34d1d90269e76fd9` | Original portable repository split, preserved for unchanged evaluation source/runner pins and split-validation provenance |
 
 The independent fmt oracle remains
 `0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f`. It belongs to the
@@ -43,6 +48,7 @@ Fetch retained refs explicitly when an existing clone has not downloaded them:
 ```sh
 git -C ../ffmt fetch origin \
   refs/tags/archive/jlse-campaign-20261022:refs/tags/archive/jlse-campaign-20261022 \
+  refs/tags/archive/library-portable-20261022:refs/tags/archive/library-portable-20261022 \
   'refs/tags/qualified/20261022-*:refs/tags/qualified/20261022-*'
 git -C ../ffmt show qualified/20261022-primary:include/ffmt/core.hpp
 ```

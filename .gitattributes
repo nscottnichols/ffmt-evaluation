@@ -1,0 +1,4 @@
+# Captured validation inputs and evidence are generated review material.
+docs/provenance/review-stack-validation/** linguist-generated=true
+# Preserve scheduler output byte for byte, including timestamp trailing spaces.
+docs/provenance/review-stack-validation/**/*.cobaltlog -whitespace

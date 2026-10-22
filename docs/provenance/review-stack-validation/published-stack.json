@@ -1,0 +1,98 @@
+{
+  "original_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+  "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+  "original_tree": "f3cc9d33e0443dc9f1e1a1941c19843401988b19",
+  "stages": [
+    {
+      "stage": "infra",
+      "branch": "review/conformance",
+      "title": "Add independent portable fmt conformance tooling",
+      "commit": "3845e997e481c7f3a29b472d7f5edb331ba708b6",
+      "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "part": 1,
+      "base_branch": "main",
+      "pr": 10,
+      "url": "https://github.com/nscottnichols/ffmt/pull/10",
+      "pr_title": "[1/7] Add independent portable fmt conformance tooling",
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/pr-1.md"
+    },
+    {
+      "stage": "core",
+      "branch": "review/core",
+      "title": "Unify checked formatting and bounded device output",
+      "commit": "2f7508c4fa2a2032eb9d7ce77a3d687ac34bb557",
+      "base_commit": "3845e997e481c7f3a29b472d7f5edb331ba708b6",
+      "part": 2,
+      "base_branch": "review/conformance",
+      "pr": 11,
+      "url": "https://github.com/nscottnichols/ffmt/pull/11",
+      "pr_title": "[2/7] Unify checked formatting and bounded device output",
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/pr-2.md"
+    },
+    {
+      "stage": "ranges",
+      "branch": "review/ranges",
+      "title": "Add named arguments, range formatting and forwarding",
+      "commit": "3e5ae22ba1a3dd84cd4dc539eb67e788bec69dfd",
+      "base_commit": "2f7508c4fa2a2032eb9d7ce77a3d687ac34bb557",
+      "part": 3,
+      "base_branch": "review/core",
+      "pr": 12,
+      "url": "https://github.com/nscottnichols/ffmt/pull/12",
+      "pr_title": "[3/7] Add named arguments, range formatting and forwarding",
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/pr-3.md"
+    },
+    {
+      "stage": "families",
+      "branch": "review/families",
+      "title": "Add chrono, standard type and styling adapters",
+      "commit": "7bccd77f4bf5517c6657c7960b73c40802c42620",
+      "base_commit": "3e5ae22ba1a3dd84cd4dc539eb67e788bec69dfd",
+      "part": 4,
+      "base_branch": "review/ranges",
+      "pr": 13,
+      "url": "https://github.com/nscottnichols/ffmt/pull/13",
+      "pr_title": "[4/7] Add chrono, standard type and styling adapters",
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/pr-4.md"
+    },
+    {
+      "stage": "printf",
+      "branch": "review/printf",
+      "title": "Add checked typed printf formatting",
+      "commit": "745088a005daea7abc9414916d4accb384c17bc3",
+      "base_commit": "7bccd77f4bf5517c6657c7960b73c40802c42620",
+      "part": 5,
+      "base_branch": "review/families",
+      "pr": 14,
+      "url": "https://github.com/nscottnichols/ffmt/pull/14",
+      "pr_title": "[5/7] Add checked typed printf formatting",
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/pr-5.md"
+    },
+    {
+      "stage": "bench",
+      "branch": "review/benchmarks",
+      "title": "Add verified portable formatting benchmark primitives",
+      "commit": "159fdf2a4ca1378ed38cf4c79dbddc5aba3a6f63",
+      "base_commit": "745088a005daea7abc9414916d4accb384c17bc3",
+      "part": 6,
+      "base_branch": "review/printf",
+      "pr": 15,
+      "url": "https://github.com/nscottnichols/ffmt/pull/15",
+      "pr_title": "[6/7] Add verified portable formatting benchmark primitives",
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/pr-6.md"
+    },
+    {
+      "stage": "integration",
+      "branch": "library-portable",
+      "title": "Package the library and document portable APIs and backends",
+      "commit": "aeff043614725d58d383c8add086f548d77d05eb",
+      "base_commit": "159fdf2a4ca1378ed38cf4c79dbddc5aba3a6f63",
+      "part": 7,
+      "base_branch": "review/benchmarks",
+      "pr": 9,
+      "url": "https://github.com/nscottnichols/ffmt/pull/9",
+      "pr_title": "[7/7] Package the library and document portable APIs and backends",
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/pr-7.md"
+    }
+  ]
+}

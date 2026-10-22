@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "cobalt_jobid": "1011212",
+  "hostname": "rome00",
+  "invocation": [
+    "/home/nnichols/.local/bin/python3",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.py",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/manifest.json"
+  ],
+  "source_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "source_tree": "f3cc9d33e0443dc9f1e1a1941c19843401988b19",
+  "fmt_commit": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "installed_prefix": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/integration/install",
+  "original_attempt": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/manifest.json",
+    "sha256": "805e0f547bbc75a2101c7f4fb614f3a16f31adfa66808558c7241dc226f9a22e",
+    "cobalt_jobid": "1011211",
+    "status": "failure",
+    "failed_step": "package-consumer-build",
+    "failure_classification": "test_fixture_error",
+    "explanation": "Generated fixture included internal core.hpp directly; its documented inclusion contract requires base.hpp, which is the public entry used by README and the library regressions."
+  },
+  "policy": "Only correct the generated consumer include; no library source/history change, no repeated full suite or GPU campaign.",
+  "runner": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.py",
+    "sha256": "f29a12497df271d767158ca20aa894781d8dcfbecd54234b660edef34acaa659"
+  },
+  "consumer_sources": {
+    "CMakeLists.txt": {
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/CMakeLists.txt",
+      "sha256": "9b4509fd3da67a6a91b8cde00006d25ef2486ead5b7bf8645cff8b9dace3c238"
+    },
+    "main.cpp": {
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/main.cpp",
+      "sha256": "c6f717e6b9b3a55c08deb4464741085782f3061b4e57e44815c491fa5db9be67"
+    }
+  },
+  "installed_headers": {
+    "include/ffmt/args.hpp": {
+      "sha256": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+      "expected_sha256": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+      "matches": true
+    },
+    "include/ffmt/base.hpp": {
+      "sha256": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+      "expected_sha256": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+      "matches": true
+    },
+    "include/ffmt/chrono.hpp": {
+      "sha256": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+      "expected_sha256": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+      "matches": true
+    },
+    "include/ffmt/color.hpp": {
+      "sha256": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+      "expected_sha256": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+      "matches": true
+    },
+    "include/ffmt/core.hpp": {
+      "sha256": "54abfadff1d1a5d8ab4f9f1bdd10342142516032257fbe517f048239833e686c",
+      "expected_sha256": "54abfadff1d1a5d8ab4f9f1bdd10342142516032257fbe517f048239833e686c",
+      "matches": true
+    },
+    "include/ffmt/detail/extended.hpp": {
+      "sha256": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+      "expected_sha256": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+      "matches": true
+    },
+    "include/ffmt/detail/family.hpp": {
+      "sha256": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+      "expected_sha256": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+      "matches": true
+    },
+    "include/ffmt/detail/floating.hpp": {
+      "sha256": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+      "expected_sha256": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+      "matches": true
+    },
+    "include/ffmt/detail/numeric.hpp": {
+      "sha256": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+      "expected_sha256": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+      "matches": true
+    },
+    "include/ffmt/detail/text.hpp": {
+      "sha256": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+      "expected_sha256": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+      "matches": true
+    },
+    "include/ffmt/detail/transport.hpp": {
+      "sha256": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+      "expected_sha256": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+      "matches": true
+    },
+    "include/ffmt/detail/unicode.hpp": {
+      "sha256": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+      "expected_sha256": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+      "matches": true
+    },
+    "include/ffmt/enum.hpp": {
+      "sha256": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+      "expected_sha256": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+      "matches": true
+    },
+    "include/ffmt/printf.hpp": {
+      "sha256": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+      "expected_sha256": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+      "matches": true
+    },
+    "include/ffmt/ranges.hpp": {
+      "sha256": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+      "expected_sha256": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+      "matches": true
+    },
+    "include/ffmt/std.hpp": {
+      "sha256": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+      "expected_sha256": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+      "matches": true
+    },
+    "include/ffmt/std23.hpp": {
+      "sha256": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d",
+      "expected_sha256": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d",
+      "matches": true
+    }
+  },
+  "steps": [
+    {
+      "name": "compiler-version",
+      "command": [
+        "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+        "--version"
+      ],
+      "command_shell": "/soft/compilers/llvm/release-22.1.8/bin/clang++ --version",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer",
+      "timeout_seconds": 180,
+      "exit_code": 0,
+      "seconds": 0.023225202108733356,
+      "status": "pass",
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/compiler-version.stdout",
+      "stdout_sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607",
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/compiler-version.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer",
+        "-B",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/build",
+        "-DCMAKE_CXX_COMPILER=/soft/compilers/llvm/release-22.1.8/bin/clang++",
+        "-DCMAKE_PREFIX_PATH=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/integration/install"
+      ],
+      "command_shell": "cmake -S /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer -B /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/build -DCMAKE_CXX_COMPILER=/soft/compilers/llvm/release-22.1.8/bin/clang++ -DCMAKE_PREFIX_PATH=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/integration/install",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer",
+      "timeout_seconds": 180,
+      "exit_code": 0,
+      "seconds": 1.023713761009276,
+      "status": "pass",
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/configure.stdout",
+      "stdout_sha256": "8d99b803da5f6b628e22eda23ac82b1720f8da86dab5332ba13a598468dc09d6",
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/configure.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/build",
+        "-j2"
+      ],
+      "command_shell": "cmake --build /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/build -j2",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer",
+      "timeout_seconds": 180,
+      "exit_code": 0,
+      "seconds": 0.9738526940345764,
+      "status": "pass",
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/build.stdout",
+      "stdout_sha256": "e9715ed574f44058d8eec26a7896afe6d61aa9014ea461183493cf192d323696",
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/build.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "run",
+      "command": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/build/consumer"
+      ],
+      "command_shell": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/build/consumer",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer",
+      "timeout_seconds": 180,
+      "exit_code": 0,
+      "seconds": 0.011180119006894529,
+      "status": "pass",
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/run.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/run.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "finished": "2026-10-22T22:25:14.085972+00:00"
+}
