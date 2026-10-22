@@ -1,0 +1,833 @@
+{
+  "schema_version": 1,
+  "purpose": "Repository-boundary migration ledger; historical evidence and qualified snapshots retain their original identities.",
+  "original_library": {
+    "repository": "https://github.com/nscottnichols/ffmt",
+    "upstream_repository": "https://github.com/TApplencourt/ffmt",
+    "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+    "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+    "archive_commit": "52da08a40ec414528ee002163992d77259c54776"
+  },
+  "oracle": {
+    "repository": "https://github.com/fmtlib/fmt",
+    "commit": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f"
+  },
+  "replacement_targets": {
+    "library": {
+      "repository": "https://github.com/nscottnichols/ffmt",
+      "branch": "library-portable",
+      "pull_request": null,
+      "commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "publication_status": "pending"
+    },
+    "evaluation": {
+      "repository": "https://github.com/nscottnichols/ffmt-evaluation",
+      "branch": "evaluation-campaign",
+      "pull_request": null,
+      "commit": null,
+      "publication_status": "pending"
+    }
+  },
+  "replacement_changes": [
+    {
+      "old_pr": "https://github.com/nscottnichols/ffmt/pull/1",
+      "old_branch": "conformance-infrastructure",
+      "old_tip": "b2a2793c1a4735afd58ae82d02ae7a0f93150c4c",
+      "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+      "replacement_target_ids": [
+        "library",
+        "evaluation"
+      ]
+    },
+    {
+      "old_pr": "https://github.com/nscottnichols/ffmt/pull/2",
+      "old_branch": "conformance-engine",
+      "old_tip": "3af47568ed57047d688396c6ca2428441bae8285",
+      "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+      "replacement_target_ids": [
+        "library"
+      ]
+    },
+    {
+      "old_pr": "https://github.com/nscottnichols/ffmt/pull/3",
+      "old_branch": "conformance-families",
+      "old_tip": "b6d95df228f96591bc08f44fa96bceaf1ff375de",
+      "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+      "replacement_target_ids": [
+        "library"
+      ]
+    },
+    {
+      "old_pr": "https://github.com/nscottnichols/ffmt/pull/4",
+      "old_branch": "conformance-qualification",
+      "old_tip": "58fd27f1c6f062ca1ad2325a37c9403d455bd355",
+      "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+      "replacement_target_ids": [
+        "library",
+        "evaluation"
+      ]
+    },
+    {
+      "old_pr": "https://github.com/nscottnichols/ffmt/pull/5",
+      "old_branch": "conformance-portability",
+      "old_tip": "7ee8b70777fbb8607e6851d00b06f5060567afde",
+      "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+      "replacement_target_ids": [
+        "library",
+        "evaluation"
+      ]
+    },
+    {
+      "old_pr": "https://github.com/nscottnichols/ffmt/pull/6",
+      "old_branch": "conformance-campaign-tools",
+      "old_tip": "25726dac764182e7a2e9b3a8aea477d5fc8e148e",
+      "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+      "replacement_target_ids": [
+        "library",
+        "evaluation"
+      ]
+    },
+    {
+      "old_pr": "https://github.com/nscottnichols/ffmt/pull/7",
+      "old_branch": "conformance-results",
+      "old_tip": "52da08a40ec414528ee002163992d77259c54776",
+      "archive_ref": "refs/tags/archive/jlse-campaign-20261022",
+      "replacement_target_ids": [
+        "evaluation"
+      ]
+    }
+  ],
+  "qualified_snapshots": [
+    {
+      "id": "baseline",
+      "original_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "preservation_ref": "refs/tags/qualified/20261022-baseline",
+      "scope": "Original 40-case baseline campaign; this revision predates the bounded-memory API and portable runner.",
+      "header_files": {
+        "include/ffmt/base.hpp": "888701e5c1ef7d0c2fcd07a45a55161bf27acd6c5f42365a1ef2076ddcd73ef8"
+      },
+      "canonical_header_sha256": "29871eedb085fe8d3e992e99e5f4963dcef9cc620005845ec5efd2d34bf82257",
+      "header_changes_from_final": [
+        "include/ffmt/args.hpp",
+        "include/ffmt/base.hpp",
+        "include/ffmt/chrono.hpp",
+        "include/ffmt/color.hpp",
+        "include/ffmt/core.hpp",
+        "include/ffmt/detail/extended.hpp",
+        "include/ffmt/detail/family.hpp",
+        "include/ffmt/detail/floating.hpp",
+        "include/ffmt/detail/numeric.hpp",
+        "include/ffmt/detail/text.hpp",
+        "include/ffmt/detail/transport.hpp",
+        "include/ffmt/detail/unicode.hpp",
+        "include/ffmt/enum.hpp",
+        "include/ffmt/printf.hpp",
+        "include/ffmt/ranges.hpp",
+        "include/ffmt/std.hpp",
+        "include/ffmt/std23.hpp"
+      ]
+    },
+    {
+      "id": "primary",
+      "original_commit": "21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8",
+      "preservation_ref": "refs/tags/qualified/20261022-primary",
+      "scope": "Primary 54-case stdout and 8,216-record memory campaign, plus focused wrappers; failures and partial runs retained.",
+      "header_files": {
+        "include/ffmt/args.hpp": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+        "include/ffmt/base.hpp": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+        "include/ffmt/chrono.hpp": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+        "include/ffmt/color.hpp": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+        "include/ffmt/core.hpp": "9d84f5a6b448d9f576948765fd56bf1c1ecd80881a029b2e88fba58dca5091e5",
+        "include/ffmt/detail/extended.hpp": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+        "include/ffmt/detail/family.hpp": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+        "include/ffmt/detail/floating.hpp": "68dcaa97dd326a926699a795e932f593d95e64a84afafd4dc874e7ce96f469f5",
+        "include/ffmt/detail/numeric.hpp": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+        "include/ffmt/detail/text.hpp": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+        "include/ffmt/detail/transport.hpp": "5a53ebd359bb77b3a22fa1beeca525ce13fd636d4b6a4aa3a47585a101134c2f",
+        "include/ffmt/detail/unicode.hpp": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+        "include/ffmt/enum.hpp": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+        "include/ffmt/printf.hpp": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+        "include/ffmt/ranges.hpp": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+        "include/ffmt/std.hpp": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+        "include/ffmt/std23.hpp": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d"
+      },
+      "canonical_header_sha256": "332a7a7f9c6ae67d47b7a06c88869583351d2bc35f27acbcb897c92f9f40eec8",
+      "header_changes_from_final": [
+        "include/ffmt/core.hpp",
+        "include/ffmt/detail/floating.hpp",
+        "include/ffmt/detail/transport.hpp"
+      ]
+    },
+    {
+      "id": "postfix",
+      "original_commit": "98dba67cdb2dc4686cc512736ad92fdeaebeb63a",
+      "preservation_ref": "refs/tags/qualified/20261022-postfix",
+      "scope": "Focused post-fix chipStar, AMD/Intel wrapper, host portability and shortest-memory measurements; scope remains as captured.",
+      "header_files": {
+        "include/ffmt/args.hpp": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+        "include/ffmt/base.hpp": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+        "include/ffmt/chrono.hpp": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+        "include/ffmt/color.hpp": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+        "include/ffmt/core.hpp": "b64bf7e48fd798b0ef3d0799cd295c684f3b74cfa71ea80038a417b76ca5820f",
+        "include/ffmt/detail/extended.hpp": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+        "include/ffmt/detail/family.hpp": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+        "include/ffmt/detail/floating.hpp": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+        "include/ffmt/detail/numeric.hpp": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+        "include/ffmt/detail/text.hpp": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+        "include/ffmt/detail/transport.hpp": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+        "include/ffmt/detail/unicode.hpp": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+        "include/ffmt/enum.hpp": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+        "include/ffmt/printf.hpp": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+        "include/ffmt/ranges.hpp": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+        "include/ffmt/std.hpp": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+        "include/ffmt/std23.hpp": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d"
+      },
+      "canonical_header_sha256": "334ca65c8c774630e85a8ef7ebd614ac50486b8f98b7ca024ae994c434545eb5",
+      "header_changes_from_final": [
+        "include/ffmt/core.hpp"
+      ]
+    },
+    {
+      "id": "final",
+      "original_commit": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "preservation_ref": "refs/tags/qualified/20261022-final",
+      "scope": "Final counted-view validation, host sanitizer/build integration and host source coverage; not a replacement hardware campaign.",
+      "header_files": {
+        "include/ffmt/args.hpp": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+        "include/ffmt/base.hpp": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+        "include/ffmt/chrono.hpp": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+        "include/ffmt/color.hpp": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+        "include/ffmt/core.hpp": "54abfadff1d1a5d8ab4f9f1bdd10342142516032257fbe517f048239833e686c",
+        "include/ffmt/detail/extended.hpp": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+        "include/ffmt/detail/family.hpp": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+        "include/ffmt/detail/floating.hpp": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+        "include/ffmt/detail/numeric.hpp": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+        "include/ffmt/detail/text.hpp": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+        "include/ffmt/detail/transport.hpp": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+        "include/ffmt/detail/unicode.hpp": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+        "include/ffmt/enum.hpp": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+        "include/ffmt/printf.hpp": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+        "include/ffmt/ranges.hpp": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+        "include/ffmt/std.hpp": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+        "include/ffmt/std23.hpp": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d"
+      },
+      "canonical_header_sha256": "14438e1c9faf6bf2e170e13b371c12a87df42d3f1b5ce597abc22bcbc30ab817",
+      "header_changes_from_final": []
+    }
+  ],
+  "additional_recorded_commits": [
+    {
+      "commit": "09728023a5ae3c94581b7bb3cc2c77c3b03761c8",
+      "subject": "Use generic printf format pointers for chipStar SPIR-V",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "0be0a26241fb4b8647f99882d1e2b0dc59b20361",
+      "subject": "Qualify JLSE execution spaces and capture validated measurements",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/supplemental-qualification.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "subject": "Validate counted format views without constexpr address comparisons",
+      "referenced_by": [
+        "docs/results/build-integration.json",
+        "docs/results/coverage.json",
+        "docs/results/portability-regressions.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "167de53b903ce85f497f1a50e8b079f29c6efda3",
+      "subject": "Preserve checked dynamic specs under GCC ASan and bound BitInt support",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "17cdd60938bc872e1cc545e86c45ab889afbe848",
+      "subject": "Harden qualification lifecycle, toolchains and measured-source provenance",
+      "referenced_by": [
+        "docs/results/benchmark-postfix-proof.json",
+        "docs/results/benchmarks.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8",
+      "subject": "Preserve mutable formatting and repair native family portability",
+      "referenced_by": [
+        "docs/results/benchmark-source-proof.json",
+        "docs/results/benchmarks.json",
+        "docs/results/campaign-index.json",
+        "docs/results/host-final.json",
+        "docs/results/paper-selection.json",
+        "docs/results/qualification.json",
+        "docs/results/supplemental-qualification.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "subject": "Merge pull request #12 from TApplencourt/cuda-device-compile",
+      "referenced_by": [
+        "docs/results/baseline.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "48aae9b3d2b478d68216d5ae06187defec740b4f",
+      "subject": "Preserve failed combined-build evidence before case isolation",
+      "referenced_by": [
+        "docs/results/portability-regressions.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "4a5e0619b8c4bbf3f998bc8011d0e9eccb8c3130",
+      "subject": "Merge branch 'conformance-campaign-tools' into conformance-results",
+      "referenced_by": [
+        "test/regressions/nvidia_omp_callback.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "8867e87c1105ba6cddbb87b926ae1b0e257a0204",
+      "subject": "Add device-suitable fmt families and checked percent formatting",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "98dba67cdb2dc4686cc512736ad92fdeaebeb63a",
+      "subject": "Initialize complete shortest-decimal candidates for device copies",
+      "referenced_by": [
+        "docs/results/benchmark-postfix-proof.json",
+        "docs/results/benchmarks.json",
+        "docs/results/campaign-index.json",
+        "docs/results/paper-selection.json",
+        "docs/results/portability-regressions.json",
+        "docs/results/qualification.json",
+        "docs/results/supplemental-qualification.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    },
+    {
+      "commit": "9fbb1f4455767f6d832549bb27d546ba81c0b491",
+      "subject": "Integrate compiler regression fixes from the engine stack",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ],
+      "preserved_by": "refs/tags/archive/jlse-campaign-20261022"
+    }
+  ],
+  "source_equivalence": {
+    "original_commit": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+    "new_library_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "scope": "All library headers and the portable conformance corpus only. Runner, scheduler and reporting code changed during the split and are not claimed to be qualified by historical hardware runs.",
+    "header_files": {
+      "include/ffmt/args.hpp": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+      "include/ffmt/base.hpp": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+      "include/ffmt/chrono.hpp": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+      "include/ffmt/color.hpp": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+      "include/ffmt/core.hpp": "54abfadff1d1a5d8ab4f9f1bdd10342142516032257fbe517f048239833e686c",
+      "include/ffmt/detail/extended.hpp": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+      "include/ffmt/detail/family.hpp": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+      "include/ffmt/detail/floating.hpp": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+      "include/ffmt/detail/numeric.hpp": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+      "include/ffmt/detail/text.hpp": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+      "include/ffmt/detail/transport.hpp": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+      "include/ffmt/detail/unicode.hpp": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+      "include/ffmt/enum.hpp": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+      "include/ffmt/printf.hpp": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+      "include/ffmt/ranges.hpp": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+      "include/ffmt/std.hpp": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+      "include/ffmt/std23.hpp": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d"
+    },
+    "canonical_header_sha256": "14438e1c9faf6bf2e170e13b371c12a87df42d3f1b5ce597abc22bcbc30ab817",
+    "canonical_hash_encoding": "SHA-256 of UTF-8 json.dumps(header_files, sort_keys=True, separators=(comma, colon))",
+    "corpus": {
+      "path": "test/conformance/cases.py",
+      "sha256": "b50ecda885148c5fef472f44593781140dc1bfdd9d1700d1d109a78141c54342"
+    }
+  },
+  "preserved_evidence": [
+    {
+      "original_path": "docs/paper/ffmt.pdf",
+      "evaluation_path": "docs/paper/ffmt.pdf",
+      "sha256": "a688aa4217ca5da4caf7bdddc432e562ca83083de6c6511d93188969f22dec96",
+      "bytes": 305016
+    },
+    {
+      "original_path": "docs/paper/ffmt.tex",
+      "evaluation_path": "docs/paper/ffmt.tex",
+      "sha256": "67784af08b7a085790cdbbe8561b66013b9dc279645b3e3adff1b482f1eb93ce",
+      "bytes": 20171
+    },
+    {
+      "original_path": "docs/paper/outline-v2.tex",
+      "evaluation_path": "docs/paper/outline-v2.tex",
+      "sha256": "519add4175236b66b5c52300b6a7f00a0accec5bc4894a894eaea7911dcd73f0",
+      "bytes": 48790
+    },
+    {
+      "original_path": "docs/paper/results.tex",
+      "evaluation_path": "docs/paper/results.tex",
+      "sha256": "aaffa6b8221c3d7ecf20054ba1d3bef8e5219b303549ce551b8d153bd8ec4b6e",
+      "bytes": 7660
+    },
+    {
+      "original_path": "docs/results/baseline.json",
+      "evaluation_path": "docs/results/baseline.json",
+      "sha256": "a0c74fb2cc3b9c81317ff9d498fe0094bee1519e77c6e31835dfd4f07cf43954",
+      "bytes": 1162536
+    },
+    {
+      "original_path": "docs/results/baseline.md",
+      "evaluation_path": "docs/results/baseline.md",
+      "sha256": "a77f77775dc365d7a9e72d1dfffb728a81389633ab963cea31e490d2ebb04c06",
+      "bytes": 8636
+    },
+    {
+      "original_path": "docs/results/benchmark-postfix-proof.json",
+      "evaluation_path": "docs/results/benchmark-postfix-proof.json",
+      "sha256": "c6b6501d97525808ceedc2e573e1ba54e00d371d781fc20198a4a7241ad36ade",
+      "bytes": 2108
+    },
+    {
+      "original_path": "docs/results/benchmark-source-proof.json",
+      "evaluation_path": "docs/results/benchmark-source-proof.json",
+      "sha256": "df53d090ea4cee0a4ac98a19da0fe3e84185d41ece175a9a91cc6beee86fa897",
+      "bytes": 3606
+    },
+    {
+      "original_path": "docs/results/benchmarks.json",
+      "evaluation_path": "docs/results/benchmarks.json",
+      "sha256": "901ce3095ddb2e392e12e7b1d0cf5edbbb74b20d4aa6c1c2d3ffacf93c4ded72",
+      "bytes": 2079935
+    },
+    {
+      "original_path": "docs/results/build-integration.json",
+      "evaluation_path": "docs/results/build-integration.json",
+      "sha256": "e804286dd3a23b7675f789ec2ef113877d1298822b1e7f057865b283c59948ae",
+      "bytes": 141589
+    },
+    {
+      "original_path": "docs/results/campaign-index.json",
+      "evaluation_path": "docs/results/campaign-index.json",
+      "sha256": "ede94ee2d4fce7cd40342d3cba0906a2d90307188aa3b9bae3ed490fe43369b7",
+      "bytes": 35977
+    },
+    {
+      "original_path": "docs/results/coverage.json",
+      "evaluation_path": "docs/results/coverage.json",
+      "sha256": "87b16a5c1132ebdd677ad7f65966d04a12e6b4abc8715106698f918f8d49b7cc",
+      "bytes": 7050
+    },
+    {
+      "original_path": "docs/results/host-final.json",
+      "evaluation_path": "docs/results/host-final.json",
+      "sha256": "28a44f978c4b5218ccacb6c2de4646abbfd37846e14a59dcb80b089c2687d0fc",
+      "bytes": 109616
+    },
+    {
+      "original_path": "docs/results/host-regressions.json",
+      "evaluation_path": "docs/results/host-regressions.json",
+      "sha256": "e449f00ac9c7e8239a9668099090b4501192aed68edf94f084ab5b19d2fdf583",
+      "bytes": 9505
+    },
+    {
+      "original_path": "docs/results/paper-selection.json",
+      "evaluation_path": "docs/results/paper-selection.json",
+      "sha256": "c971b2329ebdab401323c4882d47dd892b3f54e9d50a08bad0abded6f5832d66",
+      "bytes": 117708
+    },
+    {
+      "original_path": "docs/results/portability-regressions.json",
+      "evaluation_path": "docs/results/portability-regressions.json",
+      "sha256": "2b2d647fd99d0001cc86147e35949b1306629d9d7baa4dd30db9ead122cd3593",
+      "bytes": 36906
+    },
+    {
+      "original_path": "docs/results/qualification-selection.json",
+      "evaluation_path": "docs/results/qualification-selection.json",
+      "sha256": "5eedde3c71fbdc6c0c9e0f2faf586a7a70d5d58b3af71177121f37cc713cf24a",
+      "bytes": 1673
+    },
+    {
+      "original_path": "docs/results/qualification.json",
+      "evaluation_path": "docs/results/qualification.json",
+      "sha256": "1d28e97975b89e9aa0bfd47c3ddda826ec42e5457f0211a70942dbe48492788f",
+      "bytes": 3602943
+    },
+    {
+      "original_path": "docs/results/qualification.md",
+      "evaluation_path": "docs/results/qualification.md",
+      "sha256": "7c22d86efdc667c1734ded53b8ca832b5c8b5e6661a8a5c7d1781032e9b157c9",
+      "bytes": 10384
+    },
+    {
+      "original_path": "docs/results/supplemental-qualification.json",
+      "evaluation_path": "docs/results/supplemental-qualification.json",
+      "sha256": "43b1f36f1e124e1e9429e49e9341e6150c3dc758908e4707394f42486caff4d6",
+      "bytes": 167921
+    },
+    {
+      "original_path": "implementation_limitation/dpcpp_O0.cpp",
+      "evaluation_path": "implementation_limitation/dpcpp_O0.cpp",
+      "sha256": "4765ea351641e2448f64df4904ef535fafb41c943d398a9f38610c67ed124430",
+      "bytes": 314
+    },
+    {
+      "original_path": "implementation_limitation/icpx_omp_pragma_in_dowhile.cpp",
+      "evaluation_path": "implementation_limitation/icpx_omp_pragma_in_dowhile.cpp",
+      "sha256": "ff535d29cafcee4e6c9caed5030560fba56d02d36719e615d1fe52faedfa2aa6",
+      "bytes": 283
+    },
+    {
+      "original_path": "test/regressions/amd_omp_callback.cpp",
+      "evaluation_path": "test/regressions/amd_omp_callback.cpp",
+      "sha256": "e8efb0de16e4786e65c8a7b67c980b36eb10776aacb3d9c84e4548c300e509a4",
+      "bytes": 5099
+    },
+    {
+      "original_path": "test/regressions/amd_omp_callback.json",
+      "evaluation_path": "test/regressions/amd_omp_callback.json",
+      "sha256": "0449af43a27a5f3bf6889f60d5793477ee0ec49471ba51562db8847c4bed2bd6",
+      "bytes": 3933
+    },
+    {
+      "original_path": "test/regressions/nvidia_omp_callback.json",
+      "evaluation_path": "test/regressions/nvidia_omp_callback.json",
+      "sha256": "22202213b8389f12a41f4b928e40149b02064fc74ebabc782e4c3ede4454651d",
+      "bytes": 4769
+    }
+  ],
+  "preserved_campaign_configuration": [
+    {
+      "original_path": "platforms/profiles.json",
+      "evaluation_path": "docs/provenance/original-profiles.json",
+      "sha256": "c96e8e74e10c89f11cc6db3bfd493abb7c380f0118cdfddac0f056d75e06cfb4",
+      "bytes": 799
+    },
+    {
+      "original_path": "platforms/dependencies.json",
+      "evaluation_path": "docs/provenance/original-dependencies.json",
+      "sha256": "45ab27aec7bab4b3009ba76b79c736ad11ab3811fce65c75641ce5dcc35bb4ec",
+      "bytes": 1421
+    }
+  ],
+  "selected_raw_inputs": [
+    {
+      "path": "artifacts/chiatta/baseline-20261022T012630Z/manifest.json",
+      "sha256": "751131d73b037a23f3d2313dc581569214254733f407494fc26300726d09d7f1",
+      "referenced_by": [
+        "docs/results/baseline.json"
+      ]
+    },
+    {
+      "path": "artifacts/chiatta/benchmark-20261022T022010Z/manifest.json",
+      "sha256": "0be070180777372f6ff50becade5ffbee77494f096dd0fb7309e194f1a409335",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/chiatta/benchmark-20261022T023451Z/manifest.json",
+      "sha256": "8a212ae9a969f247a14a76c83a48209261df50f46d7cd49dee7e38133aa2a688",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/chiatta/benchmark-20261022T035410Z-1011069/manifest.json",
+      "sha256": "5ef34b1b8197221543050a540746e38a79148d01e13634dffd2754553bfea510",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/paper-selection.json"
+      ]
+    },
+    {
+      "path": "artifacts/chiatta/benchmark-20261022T041434108940Z-1011073/manifest.json",
+      "sha256": "979da9831a1737a20f76c508d92c0c444a90f0fecea2f4a321dfd68d5172d31b",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/paper-selection.json"
+      ]
+    },
+    {
+      "path": "artifacts/chiatta/head-20261022T030712Z/manifest.json",
+      "sha256": "3737c84effc22b0a633031fcf4ae6e983877db492a9ef8168882f580d501862b",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/chiatta/head-20261022T040624605234Z/manifest.json",
+      "sha256": "96b6cbeb68847cccc9848d209df71b22f5a545b8b55d5b519fecbdcaca245c4a",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/chiatta/head-20261022T041428747719Z/manifest.json",
+      "sha256": "976893860ec5424b23b638f4fbc9142a43250ced7e4bc36d5a44788f90a06c22",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/gh200/baseline-20261022T013236Z/manifest.json",
+      "sha256": "a913d4a9b4d4443b585a0a2b35c80d31848a67796911e6b142fd6e1de3b6e5e5",
+      "referenced_by": [
+        "docs/results/baseline.json"
+      ]
+    },
+    {
+      "path": "artifacts/gh200/benchmark-20261022T015141Z/manifest.json",
+      "sha256": "73dd35549421b1243ef5ae68633486d1e40a91ada3a522af1ad5c8ac6e9bad15",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/gh200/benchmark-20261022T023450Z/manifest.json",
+      "sha256": "43d5117916f415814b5553043ceee6a2d06885fad2aec797eb156871a551995a",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/gh200/benchmark-20261022T034302Z-1011066/manifest.json",
+      "sha256": "bb23b4e5cd1589c6f59d67d59d9f7fce08ea604a4805c385ce5874ed2900edb4",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/paper-selection.json"
+      ]
+    },
+    {
+      "path": "artifacts/gh200/head-20261022T030813Z/manifest.json",
+      "sha256": "285fd447abab0330e19fe06f4d68e89ebc367653dc676cdc83986d7fe7a3014f",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/gh200/host-tests-1011050/manifest.json",
+      "sha256": "bf39ebcbc87a26291a380f347681ca50c3c409c9403c791544656f948d7cf78d",
+      "referenced_by": [
+        "docs/results/host-final.json"
+      ]
+    },
+    {
+      "path": "artifacts/h100/baseline-20261022T012808Z/manifest.json",
+      "sha256": "086d43fd3d54d48204252bae9293941062f7c9cbb8b75bf9030007ec515269b8",
+      "referenced_by": [
+        "docs/results/baseline.json"
+      ]
+    },
+    {
+      "path": "artifacts/h100/benchmark-20261022T020149Z/manifest.json",
+      "sha256": "83aca9bafeda3995b32e61f07eae93ae1a3d6b02e636aba4d96826fa4662fe91",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/h100/benchmark-20261022T021316Z/manifest.json",
+      "sha256": "06b9fad7f8bcc9288791e7f9d99aafd1f2a5001844707388036c65429bf26c8a",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/h100/benchmark-20261022T030237Z-1011035/manifest.json",
+      "sha256": "8247540f2889d7c817801ff54096cefd70e3847549a61b8db186b8b6e3b5c7ff",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/h100/benchmark-20261022T035630Z-1011067/manifest.json",
+      "sha256": "a44294805d45e995801ba7e223f5539cfaa26af116bd7388ab698920270917f7",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/paper-selection.json"
+      ]
+    },
+    {
+      "path": "artifacts/h100/head-20261022T030743Z/manifest.json",
+      "sha256": "afeb4dfe3a4c7dbd33a611547f5d77141ccb9144dee05f50f8d58eab8123ecbe",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/h100/head-20261022T035952033756Z/manifest.json",
+      "sha256": "b5c954481404409edfeaed7d009cd0cab5c25b1c5909eda7371ea22d9f7c3cf1",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/local/final-host-tests.json",
+      "sha256": "fd98a6549e23a60ddc35a36110f1f9096976554dd04a3fe5cb6cf1d20f999210",
+      "referenced_by": [
+        "docs/results/host-final.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/baseline-20261022T012631Z/manifest.json",
+      "sha256": "d88e33868a2f3f191278d763472ae8d5bfb43cf9af019c021f6a388237d3b5e5",
+      "referenced_by": [
+        "docs/results/baseline.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/benchmark-20261022T013902Z/manifest.json",
+      "sha256": "038974606870dadefb28c7308c316623930c393818485f8a7ab92faf141a25b0",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/benchmark-20261022T015947Z/manifest.json",
+      "sha256": "b90bb2a89d5b32b1718bad6a50116d4ba9f9d5e7cfba83553568d885b68067ee",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/benchmark-20261022T020440Z/manifest.json",
+      "sha256": "7b4f679c21854015308d7889593f60a66ee2b2a422c03b1711501125125343b1",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/benchmark-20261022T023450Z/manifest.json",
+      "sha256": "1a774518a14476efd464ae769cecf5f6ad8a6ad5aa0aaea825c5dc8b3beb8517",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/benchmark-20261022T030227Z-1011036/manifest.json",
+      "sha256": "2f32ccd2c683da06c99cf4847a308908b40101d6be404f2ad147ef8b69245777",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/benchmark-20261022T033045Z-1011061/manifest.json",
+      "sha256": "10e6668d00233b65e3618b6b7adbc5eb28a6ef6e8e5309ea48daaf2ecb958ec4",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/paper-selection.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/head-20261022T030853Z/manifest.json",
+      "sha256": "24f8df8cebc66f3f149bee3437d10aebc670c77cefc4a5492bcf88c6e8cd9ef0",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/mi300x/head-20261022T041338072912Z/manifest.json",
+      "sha256": "1a6f0eb5e916f0a3cebfb014d565750a558f969ef935ad1396bc8da6bce42e62",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/baseline-20261022T012631Z/manifest.json",
+      "sha256": "2b12d43fed149372d8e64ffbff1bd25234df8922b002e53af15d0bb23725b0d4",
+      "referenced_by": [
+        "docs/results/baseline.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/benchmark-20261022T013619Z/manifest.json",
+      "sha256": "e4fa990a5b061c8da1a9a2dca1b5f07e7f8c60868bd21dcbbbe6fa20a87ae0de",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/paper-selection.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/benchmark-20261022T015141Z/manifest.json",
+      "sha256": "be58230785a5e0ca974c0f8a2cdc85b3c9c1d28ef9b55227b18a9ff02f9541cb",
+      "referenced_by": [
+        "docs/results/benchmarks.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/benchmark-20261022T030227Z-1011037/manifest.json",
+      "sha256": "b9d7cff6795dc03a1df72192e456a58948ce1d99f6568af4fe9f761f6fc4844e",
+      "referenced_by": [
+        "docs/results/benchmarks.json",
+        "docs/results/paper-selection.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/build-checks-1011080/manifest.json",
+      "sha256": "f1d8f288ab4456dbf9f8906e2077f3c96b9374c3fe374de39c44d5c56995c779",
+      "referenced_by": [
+        "docs/results/build-integration.json",
+        "docs/results/coverage.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/build-checks-1011080/source/artifacts/negative/20261022T043946Z/manifest.json",
+      "sha256": "d5efeed829214b6d305a4a3fe4555f61f0fedba17d703b6e0727994d26081e8a",
+      "referenced_by": [
+        "docs/results/build-integration.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/head-20261022T031215Z/manifest.json",
+      "sha256": "44281ffd5437369c65448a50b5bbf0632b343636c498a12af2de17fa29a089c6",
+      "referenced_by": [
+        "docs/results/qualification.json"
+      ]
+    },
+    {
+      "path": "artifacts/rome/host-tests-1011046/manifest.json",
+      "sha256": "db05312eb6e4ac4aee80185ae424474f02a1af32d63e7bb738dd4f9101548898",
+      "referenced_by": [
+        "docs/results/host-final.json"
+      ]
+    }
+  ],
+  "local_resources": [
+    {
+      "evaluation_path": "artifacts",
+      "retained_real_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts",
+      "mode": "ignored local symlink",
+      "tracked": false
+    },
+    {
+      "evaluation_path": "software",
+      "retained_real_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/software",
+      "mode": "ignored local symlink",
+      "tracked": false
+    },
+    {
+      "evaluation_path": "third_party",
+      "retained_real_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party",
+      "mode": "ignored local symlink",
+      "tracked": false
+    }
+  ],
+  "historical_path_policy": "Captured commands, source hashes, statuses, failures, compiler/runtime identities, raw paths and measurement provenance are retained byte for byte. Historical relative artifacts/ paths resolve below the evaluation checkout through the local symlink; historical absolute /ffmt/ paths retain their original meaning. New runs identify separate evaluation, portable-runner and source checkouts. Raw evidence and installed software are local ignored resources and are not implied to exist in a fresh clone.",
+  "upstream_history_note": "Two standalone implementation_limitation reproducers already existed in the upstream baseline ancestry. They are removed from the replacement library tree and preserved in evaluation; the existing upstream commit history is not rewritten."
+}
