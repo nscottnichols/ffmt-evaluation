@@ -14,8 +14,9 @@ documentation remain in [ffmt](https://github.com/nscottnichols/ffmt).
 targets, the original source snapshots, source hashes and preserved file hashes.
 The replacements are [library PR9](https://github.com/nscottnichols/ffmt/pull/9)
 and [evaluation PR1](https://github.com/nscottnichols/ffmt-evaluation/pull/1).
-The ledger identifies the library commit and initial companion import; later
-metadata commits remain on those PR branches. Historical PR numbers in frozen reports and the paper describe
+The ledger identifies the library commit, initial companion import and validated
+evaluation implementation; later publication-only metadata commits remain on
+those PR branches. Historical PR numbers in frozen reports and the paper describe
 the original campaign; consult the ledger for their replacement changes.
 
 ## Retained snapshots

@@ -24,9 +24,10 @@
       "repository": "https://github.com/nscottnichols/ffmt-evaluation",
       "branch": "evaluation-campaign",
       "pull_request": "https://github.com/nscottnichols/ffmt-evaluation/pull/1",
-      "commit": "46972133c7875dcc70422ca85121dfd394a15dc6",
+      "commit": "f325208eaebdcffcb0baea31164df6b448178593",
       "publication_status": "open",
-      "commit_scope": "Initial companion import; a follow-up validates adapter fixes, safe paper rebuilds and provenance metadata. Branch and PR identify the current tip."
+      "commit_scope": "Validated evaluation implementation; subsequent publication-only provenance metadata commits may follow on this branch.",
+      "import_commit": "46972133c7875dcc70422ca85121dfd394a15dc6"
     }
   },
   "replacement_changes": [
