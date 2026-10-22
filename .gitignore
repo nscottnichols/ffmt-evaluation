@@ -1,0 +1,7 @@
+artifacts/
+software/
+third_party/
+build/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
