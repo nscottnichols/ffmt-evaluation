@@ -1,0 +1,45 @@
+{
+  "scope": "Read-only late-export static audit; compiler/CMake runtime checks remain for root allocation",
+  "cpp_source_inventory": {
+    "actual_split_sources": 33,
+    "registered_unique_sources": 33,
+    "missing": [],
+    "extra": []
+  },
+  "markdown_complete_checkout_links": {
+    "inspected": [
+      "docs/BUILD.md",
+      "docs/BUILD.md",
+      "docs/contributing/SANITIZERS.md",
+      "docs/contributing/CONFORMANCE_CI.md",
+      "docs/contributing/REPRODUCERS.md",
+      "README.md",
+      "docs/API.md",
+      "docs/BACKENDS.md",
+      "docs/CONFORMANCE.md"
+    ],
+    "missing": []
+  },
+  "no_silent_cmake_existence_filter": true,
+  "reference_strict_math": true,
+  "python_discovery_all_capabilities": true,
+  "files_sha256": {
+    "cmake-package/CMakeLists.txt": "214a4577a447c4324be1988a2af5d57df3c2b044b51b072c9f23ef3d2eb37264",
+    "cmake-package/cmake/ffmtConfig.cmake.in": "5507277e40d1930f59e07bd6b1a0e97921381768376c9a2a3d0be29449cf88da",
+    "cmake-package/docs/BUILD.md": "ccc181f7d9a8cfa777d1d5760ec70f94de19951df2ba552ff584768beb2d21c9",
+    "cmake-package/examples/cmake-consumer/CMakeLists.txt": "05411fec7c98f3edada81518c78f95dd65bb83330b09b10731bcd73c5442ec10",
+    "cmake-package/examples/cmake-consumer/main.cpp": "3567e79e02c17edb19db3e44b6c1f8622215294877a8d6a4c63a9f49ccd9a986",
+    "cmake-tests/CMakeLists.txt": "bec49b3f518958c03a434094cdfe18382c13a4cd96cc05f72c98a7cdcc2f034d",
+    "cmake-tests/cmake/ffmtTests.cmake": "a0a109f709b48ddd8564d8c5d0f261ce7d997a5f9c159d6624678f2ae5398135",
+    "cmake-tests/docs/BUILD.md": "8cb1e7d555874e8a62584bb7878657aeb392890c7493c5ded9b78422afd707a6",
+    "ci-sanitizers/.github/workflows/host.yml": "9feb8c06d7a3120dabfa0c62ec8ddf60b5d63a626679169a922219f6bc6ca2d7",
+    "ci-sanitizers/docs/contributing/SANITIZERS.md": "8018ec1804f2933dd5eb9ada88d02f0de1c5d22827a6cb085a374a9313ba5abb",
+    "ci-conformance/.github/workflows/host.yml": "95c7e3a499c92586ae4885c9612477c009aeeeeb61730ccab13da6b8bb02d53a",
+    "ci-conformance/docs/contributing/CONFORMANCE_CI.md": "873c9ec3e9f97474be57c2cd77451938d9e1832e1c707972e50d88cba4dbb36b",
+    "reproducer-relocation/docs/contributing/REPRODUCERS.md": "f6bdfca40c628c733cfd3a20f68acd602b78d7a41f7bc259ca1daf998d32b059",
+    "api-index/README.md": "7853f7cb4e7733cfe46aea6dc59e620bee9a116116dadde78f40f9b17aa63a08",
+    "api-index/docs/API.md": "afaf53fa1baa365b3f4e804ef3a65e0e93d40a9f3e508b91169434b36b5696a8",
+    "api-index/docs/BACKENDS.md": "0fa03c4b5e764c01e70f21621aa4990f084aa28146c769a5b60db15c40f85d1c",
+    "api-index/docs/CONFORMANCE.md": "6184fe30c5b247fce10e304f47cb9b7a1ff9b2597ec77af2b335ea30e3b0aa36"
+  }
+}

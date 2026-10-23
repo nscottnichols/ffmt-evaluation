@@ -1,0 +1,21 @@
+{
+  "id": "tool-oracle-negatives",
+  "title": "Compare invalid literal rejection against the independent oracle",
+  "dependencies": [
+    "tool-isolation"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_negative_driver.py"
+  ],
+  "problem": "Matching valid output does not establish that an implementation rejects malformed or type-incompatible format literals.",
+  "example": "The unclosed \"{\" fixture must produce an intended format diagnostic in both the target compiler and the host fmt oracle.",
+  "design": "Reuse the diagnostic classifier for revisioned negative fixture modules and preserve both compiler diagnostics separately.",
+  "tradeoffs": "This adds compile-time rejection parity, not runtime parser exception parity. The baseline fixture registry has no new negative cases until engine migration.",
+  "reading_order": [
+    "tools/conformance.py:negatives",
+    "tools/compile_diagnostics.py"
+  ],
+  "docs": "Revisioned negative fixtures accompany parser behavior and run through both the independent host fmt oracle and the selected target compiler."
+}

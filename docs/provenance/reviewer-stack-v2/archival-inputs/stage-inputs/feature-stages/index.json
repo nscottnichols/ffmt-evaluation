@@ -1,0 +1,498 @@
+[
+  {
+    "id": "chrono",
+    "title": "Format durations, calendar values and time points",
+    "dependencies": [
+      "shared-family"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "chrono"
+      ],
+      "commands": [
+        "make build/focused_chrono CXX=\"$CXX\" && ./build/focused_chrono"
+      ]
+    },
+    "problem": "Format chrono values without host locale, timezone-database or strftime services.",
+    "example": "#include <ffmt/chrono.hpp>\nffmt::println(\"{:%T}\", std::chrono::milliseconds{-123456}); // -00:02:03.456\nffmt::println(\"{:%G-W%V-%u}\", std::chrono::year{2021}/1/1); // 2020-W53-5",
+    "design": "Civil-date arithmetic and explicit tokens preserve device callability; locale/timezone queries remain unsupported.",
+    "tradeoffs": "The header supports durations, C++20 calendar values, `std::tm`, system time\npoints and local time points using civil-date arithmetic and explicit tokens.\nFractional precision, negative timestamps and ISO week years follow the pinned\nfmt reference. This implementation provides locale-independent formatting; it\ndoes not query clocks, a timezone database or locale services. Local time points\ntherefore reject zone/offset tokens. Device use requires the involved standard\nchrono operations to be available on that device.",
+    "reading_order": [
+      "include/ffmt/chrono.hpp",
+      "test/conformance/test_chrono.cpp"
+    ],
+    "docs": [
+      "docs/features/chrono.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Conventional header layout; duration/calendar/token/wide/rejection tests grouped, oracle calendar wrappers kept local. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "chrono"
+      ],
+      "fixture_modules": [
+        "cases_chrono.py"
+      ]
+    },
+    "before": "A std::chrono::milliseconds value has no formatter, so the %T token cannot produce a duration.",
+    "after": "#include <ffmt/chrono.hpp>\nffmt::println(\"{:%T}\", std::chrono::milliseconds{-123456}); // -00:02:03.456\nffmt::println(\"{:%G-W%V-%u}\", std::chrono::year{2021}/1/1); // 2020-W53-5",
+    "validation": {
+      "commands": [
+        "make build/focused_chrono CXX=\"$CXX\" && ./build/focused_chrono"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "enum-helpers",
+    "title": "Opt enums into integer formatting",
+    "dependencies": [
+      "migration"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "enum"
+      ],
+      "commands": [
+        "make build/focused_enum CXX=\"$CXX\" && ./build/focused_enum"
+      ]
+    },
+    "problem": "Expose enum underlying values without globally accepting every enum.",
+    "example": "#include <ffmt/enum.hpp>\nnamespace status_example {\nusing ffmt::enums::format_as;\nenum class status : int { warning = -3 };\n}\nffmt::println(\"{:+05}\", status_example::status::warning); // -0003",
+    "design": "Small ADL opt-in shares the integer parser and avoids symbolic-name reflection.",
+    "tradeoffs": "`ffmt::underlying(value)` explicitly exposes an enum's underlying integer.\nOpting into `ffmt::enums::format_as` in the enum's namespace enables ADL mapping\nwith the integer formatter's specifications. This prints integer values rather\nthan discovering symbolic names. The opt-in avoids globally making every enum\nformattable.",
+    "reading_order": [
+      "include/ffmt/enum.hpp",
+      "test/conformance/test_enum.cpp"
+    ],
+    "docs": [
+      "docs/features/enums.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Conventional header layout; enum-specific tests/docs extracted from omnibus. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "enum"
+      ],
+      "fixture_modules": []
+    },
+    "before": "An enum with no formatter or ADL mapping cannot be passed directly to checked formatting.",
+    "after": "#include <ffmt/enum.hpp>\nnamespace status_example {\nusing ffmt::enums::format_as;\nenum class status : int { warning = -3 };\n}\nffmt::println(\"{:+05}\", status_example::status::warning); // -0003",
+    "validation": {
+      "commands": [
+        "make build/focused_enum CXX=\"$CXX\" && ./build/focused_enum"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "feature-integration",
+    "title": "Test names with independent range and standard adapters",
+    "dependencies": [
+      "named-arguments",
+      "ranges",
+      "standard-types"
+    ],
+    "change_kind": "integration-tests",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "feature_integration"
+      ],
+      "commands": [
+        "make build/focused_feature_integration CXX=\"$CXX\" && ./build/focused_feature_integration"
+      ]
+    },
+    "problem": "Verify cross-feature composition without making optional adapters depend on each other.",
+    "example": "#include <ffmt/args.hpp>\n#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{values:*>{width}:03}\", ffmt::arg(\"values\", values), ffmt::arg(\"width\", 25));",
+    "design": "Integration-only fixtures sit above independent feature branches.",
+    "tradeoffs": "Named argument wrappers preserve the referenced family's mutability and provide\nruntime names for outer width fields. The interaction tests combine names with\nranges and standard-type adapters. Each family and named arguments also has an\nindependent test suite, so this integration adds no prerequisite between those\nfeatures.",
+    "reading_order": [
+      "test/conformance/test_feature_integration.cpp"
+    ],
+    "docs": [
+      "docs/features/feature-integration.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Only existing named-range, named-complex and mutable named-range interaction tests moved into a dedicated suite. No library implementation source."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "feature_integration"
+      ],
+      "fixture_modules": []
+    },
+    "before": "Independent names/ranges/std suites do not verify named widths on optional adapters or mutable named ranges.",
+    "after": "#include <ffmt/args.hpp>\n#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{values:*>{width}:03}\", ffmt::arg(\"values\", values), ffmt::arg(\"width\", 25));",
+    "validation": {
+      "commands": [
+        "make build/focused_feature_integration CXX=\"$CXX\" && ./build/focused_feature_integration"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "named-arguments",
+    "title": "Add referenced named arguments",
+    "dependencies": [
+      "migration"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "named_arguments"
+      ],
+      "commands": [
+        "make build/focused_named_arguments CXX=\"$CXX\" && ./build/focused_named_arguments"
+      ]
+    },
+    "problem": "Resolve human-readable field names while retaining typed value references.",
+    "example": "#include <ffmt/args.hpp>\nchar out[16];\nauto result = ffmt::format_to_n(out, sizeof out, \"{value:04x}\", ffmt::arg(\"value\", 42));\n// out contains \"002a\"; result.written == result.required == 4.",
+    "design": "Name lookup is runtime; wrappers do not allocate or own their referents.",
+    "tradeoffs": "`ffmt::arg(name, value)` stores a name view and a value reference. The name\ncharacters and value must outlive use of the wrapper; temporary values remain\nvalid through the formatting expression. Names and named width/precision fields\nare resolved at runtime. Literal parsing checks structural syntax, but cannot\nfully validate a named field's type/specification because names are runtime data.\nUse checked results to observe unresolved names or incompatible specifications.",
+    "reading_order": [
+      "include/ffmt/args.hpp",
+      "test/conformance/test_named_arguments.cpp"
+    ],
+    "docs": [
+      "docs/features/named-arguments.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Borrowing/lifetime comments and conventional header layout; decomposed named tests plus direct missing-name, incompatible-spec and invalid-width status regressions. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "named_arguments"
+      ],
+      "fixture_modules": [
+        "cases_named.py"
+      ]
+    },
+    "before": "A checked core call with {value:04x} has no name wrapper to bind value; use positional indices instead.",
+    "after": "#include <ffmt/args.hpp>\nchar out[16];\nauto result = ffmt::format_to_n(out, sizeof out, \"{value:04x}\", ffmt::arg(\"value\", 42));\n// out contains \"002a\"; result.written == result.required == 4.",
+    "validation": {
+      "commands": [
+        "make build/focused_named_arguments CXX=\"$CXX\" && ./build/focused_named_arguments"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "ranges",
+    "title": "Format ranges, tuples and joins",
+    "dependencies": [
+      "shared-family"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "ranges",
+        "ranges_iterators",
+        "ranges_forwarding"
+      ],
+      "commands": [
+        "make build/focused_ranges CXX=\"$CXX\" && ./build/focused_ranges",
+        "make build/focused_ranges_iterators CXX=\"$CXX\" && ./build/focused_ranges_iterators",
+        "make build/focused_ranges_forwarding CXX=\"$CXX\" && ./build/focused_ranges_forwarding"
+      ]
+    },
+    "problem": "Format structured containers using element formatters while preserving iterator semantics.",
+    "example": "#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{::03}\", values);  // [001, -02, 033]\nffmt::println(\"{:02x}\", ffmt::join(values, \",\"));",
+    "design": "Range detection and constrained formatter specializations; standard operations remain device-dependent.",
+    "tradeoffs": "Ranges select sequence, set, map, string or debug-string presentation. Tuples\nand container adaptors have explicit adapters; nested specifications follow the\nsecond colon, while `n` removes delimiters. `range_format_kind` customizes string\nversus debug-string treatment. Joins hold iterator/delimiter views; keep their\nunderlying objects alive. Mutable and move-only input iterators are preserved.\nRight/center alignment on streaming iterators requires repeatable element\nformatters and forward ranges; bounded writable buffers handle consuming ranges\nwithout replay. The standard-library operations used by the range must be\ncallable on the selected device.",
+    "reading_order": [
+      "include/ffmt/ranges.hpp",
+      "test/conformance/test_ranges.cpp",
+      "test/conformance/test_ranges_iterators.cpp",
+      "test/conformance/test_ranges_forwarding.cpp"
+    ],
+    "docs": [
+      "docs/features/ranges.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Conventional header layout; range/iterator/mutation tests extracted and grouped, cross-feature named-range assertion moved to integration. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "ranges",
+        "ranges_iterators",
+        "ranges_forwarding"
+      ],
+      "fixture_modules": [
+        "cases_ranges.py"
+      ]
+    },
+    "before": "An std::array<int,3> has no formatter, so a checked call with {::03} is rejected.",
+    "after": "#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{::03}\", values);  // [001, -02, 033]\nffmt::println(\"{:02x}\", ffmt::join(values, \",\"));",
+    "validation": {
+      "commands": [
+        "make build/focused_ranges CXX=\"$CXX\" && ./build/focused_ranges",
+        "make build/focused_ranges_iterators CXX=\"$CXX\" && ./build/focused_ranges_iterators",
+        "make build/focused_ranges_forwarding CXX=\"$CXX\" && ./build/focused_ranges_forwarding"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "shared-family",
+    "title": "Share nested output accounting and family alignment",
+    "dependencies": [
+      "migration"
+    ],
+    "change_kind": "preparatory-refactor",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "family_support"
+      ],
+      "commands": [
+        "make build/focused_family_support CXX=\"$CXX\" && ./build/focused_family_support"
+      ]
+    },
+    "problem": "Optional formatters need consistent nested alignment without buffering or replaying mutations.",
+    "example": "// Internal support, used by optional formatter headers:\nreturn ffmt::detail::family_padded(ctx, spec, [&](auto& body) {\n  ffmt::detail::family_ascii(body, \"body\");\n}, /* replayable = */ false);",
+    "design": "Extend bounded sink iterators with padding marks/reordering and delegate hooks, then share family outer parsing and one-pass accounting. Streaming destinations explicitly require replayable values for right/center alignment.",
+    "tradeoffs": "The internal helpers share outer alignment parsing, display-column accounting,\ndebug defaults and nested formatting. Left-aligned output renders once on any\niterator. Bounded writable pointer buffers also support right/center alignment\nin one pass by inserting padding while retaining the exact truncated prefix.\nOther iterators require replayable values for right/center alignment; unknown\ncustom formatters and consuming ranges return `unsupported_type` before invoking\nthe formatter. These helpers are implementation details, not a public extension\nAPI. Optional formatters should document which input operations are device callable.",
+    "reading_order": [
+      "include/ffmt/detail/output.hpp:bounded padding and sink delegation hooks",
+      "include/ffmt/detail/family.hpp",
+      "test/conformance/test_family_support.cpp"
+    ],
+    "docs": [
+      "docs/features/family-support.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Original qualified sink padding/delegation hooks restored as their own header step; family whitespace/comments and once -> render_and_measure lambda rename. Direct tests cover one-pass bounded alignment, nonreplayable stream rejection and replayable stream success. No intended behavior change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "family_support"
+      ],
+      "fixture_modules": []
+    },
+    "before": "Each optional formatter would otherwise duplicate alignment parsing and counting, risking replay of mutating values.",
+    "after": "// Internal support, used by optional formatter headers:\nreturn ffmt::detail::family_padded(ctx, spec, [&](auto& body) {\n  ffmt::detail::family_ascii(body, \"body\");\n}, /* replayable = */ false);",
+    "validation": {
+      "commands": [
+        "make build/focused_family_support CXX=\"$CXX\" && ./build/focused_family_support"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "standard-types",
+    "title": "Adapt standard value wrappers and complex numbers",
+    "dependencies": [
+      "shared-family"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "std"
+      ],
+      "commands": [
+        "make build/focused_std CXX=\"$CXX\" && ./build/focused_std"
+      ]
+    },
+    "problem": "Format common standard wrappers through existing contained-value formatters.",
+    "example": "#include <ffmt/std.hpp>\nffmt::println(\"{}\", std::optional<int>{42});  // optional(42)\nffmt::println(\"{:.2f}\", std::complex<double>{1, -2.2}); // (1.00-2.20i)",
+    "design": "Explicit adapters avoid streams and RTTI; each standard operation must be available on the target.",
+    "tradeoffs": "Optional and variant values use debug presentation for contained text; bitsets,\nbytes, reference wrappers, atomics, complex numbers, source locations and pointer\nviews have explicit adapters. `ffmt::ptr` makes a raw/smart pointer printable\nwithout dereferencing it. Atomic formatting loads the current value; a format\ncall is not an atomic snapshot across multiple arguments. These adapters do not\nsupply filesystem, streams, RTTI, thread-ID or exception-traversal services.\nStandard-library types and their operations must themselves be device callable.",
+    "reading_order": [
+      "include/ffmt/std.hpp",
+      "test/conformance/test_std.cpp"
+    ],
+    "docs": [
+      "docs/features/standard-types.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Conventional header layout; wrapper/bitset/complex/pointer/rejection tests extracted and grouped. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "std"
+      ],
+      "fixture_modules": [
+        "cases_std.py"
+      ]
+    },
+    "before": "std::optional<int> and std::complex<double> have no formatter in the core.",
+    "after": "#include <ffmt/std.hpp>\nffmt::println(\"{}\", std::optional<int>{42});  // optional(42)\nffmt::println(\"{:.2f}\", std::complex<double>{1, -2.2}); // (1.00-2.20i)",
+    "validation": {
+      "commands": [
+        "make build/focused_std CXX=\"$CXX\" && ./build/focused_std"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "std23",
+    "title": "Format C++23 expected and unexpected values",
+    "dependencies": [
+      "standard-types"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "std23"
+      ],
+      "commands": [
+        "make test-cxx23 CXX=\"$CXX\" # compiler mode must be C++23; exit 77 is unsupported"
+      ]
+    },
+    "problem": "Represent expected values and errors when the standard library supports C++23.",
+    "example": "#include <ffmt/std23.hpp>\nffmt::println(\"{}\", std::expected<int, int>{42}); // expected(42)",
+    "design": "Separate opt-in header and skip semantics preserve C++20 portability.",
+    "tradeoffs": "`std23.hpp` adds `std::expected` and `std::unexpected` adapters when the selected\nstandard library exposes C++23 expected support. C++20 users can omit the header.\nThe contained value and error must be formattable. Optional tests report skip\n(exit 77) when the standard library lacks the feature; that skip is not evidence\nof conformance. Enable the suite with a C++23 compiler mode.",
+    "reading_order": [
+      "include/ffmt/std23.hpp",
+      "test/conformance/test_std23.cpp"
+    ],
+    "docs": [
+      "docs/features/std23.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Conventional header/test layout and standalone C++23 suite name; every expected/unexpected fixture retained. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "std23"
+      ],
+      "fixture_modules": []
+    },
+    "before": "std::expected<int,int> has no formatter after including std.hpp alone.",
+    "after": "#include <ffmt/std23.hpp>\nffmt::println(\"{}\", std::expected<int, int>{42}); // expected(42)",
+    "validation": {
+      "commands": [
+        "make test-cxx23 CXX=\"$CXX\" # compiler mode must be C++23; exit 77 is unsupported"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "styling",
+    "title": "Add explicit ANSI color and emphasis wrappers",
+    "dependencies": [
+      "shared-family"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "style"
+      ],
+      "commands": [
+        "make build/focused_style CXX=\"$CXX\" && ./build/focused_style"
+      ]
+    },
+    "problem": "Request ANSI styling explicitly around an existing formattable value.",
+    "example": "#include <ffmt/color.hpp>\nffmt::println(\"{}\", ffmt::styled(42, ffmt::fg(ffmt::rgb(255,20,30)) | ffmt::emphasis::bold));",
+    "design": "Typed composition emits deterministic bytes without terminal detection.",
+    "tradeoffs": "Styles explicitly emit ANSI escape bytes around the formatted value and reset\nwhen a nonempty style ends. There is no terminal detection; captured output also\ncontains those bytes. RGB, terminal palette colors and emphasis flags compose\nwith `operator|`. Incompatible repeated terminal colors report `invalid_format`.\nThe wrapped formatter still owns ordinary value parsing and width semantics.",
+    "reading_order": [
+      "include/ffmt/color.hpp",
+      "test/conformance/test_style.cpp"
+    ],
+    "docs": [
+      "docs/features/styling.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Conventional header layout and standalone explicit-style tests/docs. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "style"
+      ],
+      "fixture_modules": [
+        "cases_style.py"
+      ]
+    },
+    "before": "There is no typed style wrapper to emit ANSI foreground and emphasis around a value.",
+    "after": "#include <ffmt/color.hpp>\nffmt::println(\"{}\", ffmt::styled(42, ffmt::fg(ffmt::rgb(255,20,30)) | ffmt::emphasis::bold));",
+    "validation": {
+      "commands": [
+        "make build/focused_style CXX=\"$CXX\" && ./build/focused_style"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  },
+  {
+    "id": "typed-printf",
+    "title": "Add checked typed percent formatting",
+    "dependencies": [
+      "shared-family"
+    ],
+    "change_kind": "feature",
+    "remove": [],
+    "tests": {
+      "suites": [
+        "printf"
+      ],
+      "commands": [
+        "make build/focused_printf CXX=\"$CXX\" && ./build/focused_printf"
+      ]
+    },
+    "problem": "Support percent formatting without unsafe C varargs or the writing conversion %n.",
+    "example": "#include <ffmt/printf.hpp>\nchar out[32];\nauto result = ffmt::printf_to_n(out, sizeof out, \"%#08x %.3f\", 42u, 1.25);\n// out contains \"0x00002a 1.250\".",
+    "design": "A separate typed grammar shares primitive conversion and bounded sinks, but does not implement %n.",
+    "tradeoffs": "The percent parser uses typed arguments rather than C varargs and shares the\nbounded output/error contract of brace formatting. It supports positional\narguments, dynamic width/precision, integer length modifiers and narrow/wide\noutput. Invalid conversions report errors; `%n` is rejected and never writes\nthrough a pointer. Floating arguments follow printf's float-to-double promotion.\nThis parser is intentionally separate from brace parsing so each grammar can be\nreviewed and tested independently.",
+    "reading_order": [
+      "include/ffmt/printf.hpp:family_printf_value",
+      "include/ffmt/printf.hpp:family_printf",
+      "test/conformance/test_printf.cpp:dynamic_and_positional_fields",
+      "test/conformance/test_printf.cpp:invalid_conversions_do_not_write"
+    ],
+    "docs": [
+      "docs/features/printf.md"
+    ],
+    "source_provenance": {
+      "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_changes": "Conventional header layout; all percent-format matrices/arguments/guards retained in named test groups. No implementation token change."
+    },
+    "minimal_wiring": {
+      "focused_suites": [
+        "printf"
+      ],
+      "fixture_modules": [
+        "cases_printf.py"
+      ]
+    },
+    "before": "Brace formatting does not interpret %#08x; there is no typed percent parser or explicit %n rejection.",
+    "after": "#include <ffmt/printf.hpp>\nchar out[32];\nauto result = ffmt::printf_to_n(out, sizeof out, \"%#08x %.3f\", 42u, 1.25);\n// out contains \"0x00002a 1.250\".",
+    "validation": {
+      "commands": [
+        "make build/focused_printf CXX=\"$CXX\" && ./build/focused_printf"
+      ],
+      "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+      "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+    }
+  }
+]

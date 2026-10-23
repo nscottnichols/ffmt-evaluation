@@ -1,0 +1,21 @@
+{
+  "id": "ci-review-waves",
+  "title": "Run hosted compiler CI when a review wave becomes ready",
+  "dependencies": [],
+  "change_kind": "ci-policy",
+  "remove": [],
+  "tests": [],
+  "problem": "Publishing many complete draft prerequisites can launch every expensive compiler matrix simultaneously.",
+  "example": "A draft PR keeps its captured local validation; marking it ready triggers the host and device compiler jobs through ready_for_review.",
+  "design": "Keep normal push and PR checks, but skip compiler jobs while the PR is draft and explicitly listen for ready_for_review.",
+  "tradeoffs": "Drafts have no hosted compiler result; skipped jobs must not be described as passing. Local intermediate checks remain required before publication.",
+  "reading_order": [
+    ".github/workflows/host.yml:pull_request and job conditions",
+    ".github/workflows/device.yml:pull_request and job conditions",
+    "docs/contributing/CI.md"
+  ],
+  "docs": [
+    "docs/contributing/CI.md"
+  ],
+  "wave": 1
+}

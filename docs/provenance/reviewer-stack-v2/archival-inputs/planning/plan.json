@@ -1,0 +1,2543 @@
+{
+  "schema_version": 2,
+  "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+  "original_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "stages": [
+    {
+      "id": "ci-review-waves",
+      "title": "Run hosted compiler CI when a review wave becomes ready",
+      "dependencies": [],
+      "change_kind": "ci-policy",
+      "remove": [],
+      "tests": [],
+      "problem": "Publishing many complete draft prerequisites can launch every expensive compiler matrix simultaneously.",
+      "example": "A draft PR keeps its captured local validation; marking it ready triggers the host and device compiler jobs through ready_for_review.",
+      "design": "Keep normal push and PR checks, but skip compiler jobs while the PR is draft and explicitly listen for ready_for_review.",
+      "tradeoffs": "Drafts have no hosted compiler result; skipped jobs must not be described as passing. Local intermediate checks remain required before publication.",
+      "reading_order": [
+        ".github/workflows/host.yml:pull_request and job conditions",
+        ".github/workflows/device.yml:pull_request and job conditions",
+        "docs/contributing/CI.md"
+      ],
+      "docs": [
+        "docs/contributing/CI.md"
+      ],
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-review-waves"
+    },
+    {
+      "id": "ci-resource-bounds",
+      "title": "Bound template-build concurrency and cancel stale CI revisions",
+      "dependencies": [
+        "ci-review-waves"
+      ],
+      "change_kind": "ci-policy",
+      "remove": [],
+      "tests": [],
+      "problem": "Launching one compiler per hosted CPU can exhaust memory once formatting templates grow; stale runs consume the same runner quota.",
+      "example": "On a runner with many CPUs, make -j2 bounds compiler processes while a newer PR commit cancels the superseded workflow.",
+      "design": "Set a consistent two-job compile bound and a workflow/PR concurrency key without reducing the compiler matrix.",
+      "tradeoffs": "Less parallelism may increase wall time. Cancelled stale runs are incomplete evidence, not passing checks.",
+      "reading_order": [
+        ".github/workflows/host.yml:concurrency and Make commands",
+        ".github/workflows/device.yml:concurrency and Make commands",
+        "docs/contributing/CI_RESOURCES.md"
+      ],
+      "docs": [
+        "docs/contributing/CI_RESOURCES.md"
+      ],
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-resource-bounds"
+    },
+    {
+      "id": "oracle-pin",
+      "title": "Pin the shared fmt oracle to an immutable revision",
+      "dependencies": [
+        "ci-resource-bounds"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_oracle_pin.py"
+        ],
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+          "test-host",
+          "test-fast-math"
+        ]
+      ],
+      "problem": "System format implementations and moving oracle revisions can disagree about expected output.",
+      "example": "For a subnormal double, every portable test compares the same ffmt bytes with the same fmt revision on every compiler.",
+      "design": "Pin the Make reference before introducing the independent oracle and new focused comparisons; retain an explicit external FMT_DIR override.",
+      "tradeoffs": "Expected behavior follows this fixed fmt revision rather than the installed standard library; updating it requires an explicit compatibility review.",
+      "reading_order": [
+        "Makefile:FMT_REF",
+        "docs/contributing/ORACLE.md"
+      ],
+      "docs": "docs/contributing/ORACLE.md",
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/oracle-pin"
+    },
+    {
+      "id": "build-registration",
+      "title": "Register portable capability tests without silently omitting sources",
+      "dependencies": [
+        "oracle-pin"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_build_registration.py"
+        ]
+      ],
+      "problem": "Discovering test source files with a wildcard can silently omit a declared test when its file is missing.",
+      "example": "A registration naming test/conformance/test_output.cpp is a required Make prerequisite; deleting that source fails the build rather than shrinking the test suite.",
+      "design": "Each capability adds a small explicit registration. A shared Make fragment provides compiler, reference-library, C++ standard and optional-extension handling.",
+      "tradeoffs": "Registrations are additional build metadata, but independent feature branches add separate files and do not edit one combined test source or suite list.",
+      "reading_order": [
+        "mk/portable-tests.mk",
+        "docs/contributing/TESTS.md"
+      ],
+      "docs": "docs/contributing/TESTS.md",
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration"
+    },
+    {
+      "id": "coverage-metrics",
+      "title": "Report source-file region, executable-line and branch coverage",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_coverage_metrics.py"
+        ],
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "coverage"
+        ]
+      ],
+      "problem": "One-header region percentages omit new headers and cannot describe executable-line or branch-edge coverage.",
+      "example": "Two headers with a region at the same coordinates remain two regions; an unexecuted branch side stays uncovered.",
+      "design": "Include source filenames in union keys, preserve any-instantiation coverage, and read executable lines from LLVM LCOV export rather than estimating spans.",
+      "tradeoffs": "Only instantiated runtime code is measured. Device-only code, compile-time evaluation and uninstantiated templates remain outside the denominator. This PR preserves the blocking policy.",
+      "reading_order": [
+        ".github/scripts/coverage_union.py:regions",
+        ".github/scripts/coverage_union.py:metrics",
+        "test/conformance/test_coverage_metrics.py"
+      ],
+      "docs": "Coverage metrics can accept a file or header directory. This measurement extension does not relax the existing regression gate; policy is reviewed separately.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/coverage-metrics",
+      "wave": 2
+    },
+    {
+      "id": "coverage-policy",
+      "title": "Replace the blocking coverage regression gate with reporting",
+      "dependencies": [
+        "coverage-metrics"
+      ],
+      "change_kind": "coverage-policy",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "coverage"
+        ]
+      ],
+      "problem": "Header movement and template instantiation alter the coverage denominator, so aggregate percentage decreases can block a behavior-preserving change.",
+      "example": "Before: a 0.02 percentage-point drop fails CI. After: valid per-file base/head JSON is uploaded and the same drop is visible but does not block merging.",
+      "design": "Keep invalid or empty measurement blocking, report region/line/branch metrics across all library headers, and make per-file regression assessment a human review decision.",
+      "tradeoffs": "This deliberately loses automatic detection of real percentage regressions. Passing CI no longer guarantees nondecreasing coverage; correctness and sanitizer checks remain independent blocking checks.",
+      "reading_order": [
+        "docs/contributing/COVERAGE.md",
+        ".github/workflows/host.yml:coverage",
+        "Makefile:coverage"
+      ],
+      "docs": [
+        "docs/contributing/COVERAGE.md"
+      ],
+      "wave": 2,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/coverage-policy"
+    },
+    {
+      "id": "tool-process",
+      "title": "Capture exact subprocess bytes and terminate timed-out children",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_process.py"
+        ],
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_output.py"
+        ]
+      ],
+      "problem": "Compiler drivers can spawn children that outlive a timeout; text decoding can erase output distinctions.",
+      "example": "compare_bytes(b\"value\\n\", b\"value\") reports a mismatch; an embedded NUL remains observable.",
+      "design": "Keep byte capture, process lifetime and evidence-path handling in one small reusable module; save both streams before returning.",
+      "tradeoffs": "Timeout cleanup uses POSIX process groups; its regression is explicitly skipped where killpg is unavailable.",
+      "reading_order": [
+        "tools/process_evidence.py:run",
+        "tools/process_evidence.py:compare_bytes",
+        "test/conformance/test_process.py",
+        "test/conformance/test_output.py"
+      ],
+      "docs": "Process results preserve raw stdout/stderr, exit status, command arguments and elapsed time. Timeout cleanup kills the complete compiler process group.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-process",
+      "wave": 3
+    },
+    {
+      "id": "tool-negative",
+      "title": "Require intended diagnostics in negative compilation tests",
+      "dependencies": [
+        "tool-process"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_negative_driver.py"
+        ],
+        [
+          "make",
+          "-j2",
+          "test-negative",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}"
+        ]
+      ],
+      "problem": "Treating every failed compilation as a rejected format lets missing headers and compiler crashes pass.",
+      "example": "A consteval invalid-format diagnostic passes; \"fmt/format.h: No such file or directory\" is an infrastructure failure.",
+      "design": "Compile a positive control and syntax-only fixture before testing both ffmt paths and fmt. Classify diagnostics independently of the differential runner.",
+      "tradeoffs": "Compiler diagnostic recognition is a conservative heuristic, not a compiler-independent proof; unfamiliar wording fails visibly.",
+      "reading_order": [
+        "tools/compile_diagnostics.py",
+        "tools/negative.py",
+        "test/conformance/test_negative_driver.py"
+      ],
+      "docs": "Negative compilation requires the intended format diagnostic. Infrastructure failures, unrelated errors and unexpected acceptance fail the check.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-negative",
+      "wave": 3
+    },
+    {
+      "id": "tool-host-oracle",
+      "title": "Compare host output with an independently compiled fmt oracle",
+      "dependencies": [
+        "tool-process"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_*.py"
+        ],
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "The legacy test harness can share assumptions with the implementation; expected bytes need an independent formatting implementation.",
+      "example": "A standalone fmt process formats INT64_MIN; a separate ffmt process must produce the identical bytes.",
+      "design": "Compile fmt only into host reference executables, and compile ffmt targets without fmt headers. Require a clean checkout at the exact oracle pin without modifying it, and record format.h/format.cc hashes. Begin with four baseline cases supported before engine migration.",
+      "tradeoffs": "Separate reference and target compilation reduces shared assumptions but costs compile time. Dirty or differently pinned oracle checkouts fail visibly. Accelerator routes and later feature cases arrive in independent changes.",
+      "reading_order": [
+        "test/conformance/cases_baseline.py",
+        "tools/oracle.py:oracle_identity",
+        "tools/conformance.py:build_oracle and configuration",
+        "tools/backend_host.py",
+        "test/conformance/test_oracle.py",
+        "test/conformance/test_fixture_registry.py"
+      ],
+      "docs": "The host differential runner compiles the pinned fmt oracle independently. The reference checkout must be clean, and exact format.h/format.cc hashes are retained; verification never changes the caller checkout. Feature fixture modules are introduced with implementations; every loaded fixture file receives a source hash.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle",
+      "wave": 3
+    },
+    {
+      "id": "benchmark-driver",
+      "title": "Verify benchmark output before collecting timing samples",
+      "dependencies": [
+        "benchmark-primitives",
+        "tool-snapshots"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_benchmark.py"
+        ],
+        [
+          "python3",
+          "tools/benchmark.py",
+          "--route",
+          "host-buffer",
+          "--family",
+          "integer",
+          "--mode",
+          "memory",
+          "--capacity",
+          "128",
+          "--memory-iterations",
+          "128",
+          "--fmt-dir",
+          "{fmt_dir}"
+        ]
+      ],
+      "problem": "Fast timing numbers are meaningless if the candidate truncates output or executes a different workload.",
+      "example": "Before measuring integer memory formatting, compare its emitted verification bytes with a separate pinned fmt executable.",
+      "design": "Snapshot sources and benchmark primitives, require a clean pinned fmt oracle, compare output before timing, validate sample counts and checksums, and retain exact commands and source hashes.",
+      "tradeoffs": "Host wall timing includes launch and synchronization for accelerators. Verification process time and first batch are recorded separately; neither is a cold-JIT claim.",
+      "reading_order": [
+        "tools/benchmark.py:main and verification before timing",
+        "tools/benchmark.py:build and metrics",
+        "tools/oracle.py:oracle_identity",
+        "test/conformance/test_benchmark.py"
+      ],
+      "docs": "Output verification precedes timing. Manifests retain source snapshots, runner files, exact compiler commands and timer policy; campaign conclusions belong in ffmt-evaluation.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-driver",
+      "wave": 12
+    },
+    {
+      "id": "benchmark-primitives",
+      "title": "Add explicit memory and printing benchmark primitives",
+      "dependencies": [
+        "migration"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "{cxx}",
+          "-std=c++20",
+          "-O2",
+          "-fno-fast-math",
+          "-Iinclude",
+          "test/conformance/benchmark.cpp",
+          "-o",
+          "{output}/benchmark-smoke"
+        ],
+        [
+          "{output}/benchmark-smoke",
+          "0",
+          "0",
+          "0",
+          "1",
+          "8",
+          "1"
+        ]
+      ],
+      "problem": "Formatting into memory and printing have different costs; a reusable benchmark must preserve that distinction.",
+      "example": "Integer memory mode formats value={:+012d} into a bounded buffer; print mode emits the same presentation through the selected transport.",
+      "design": "Keep the callable primitive, single-process sampling harness and optional second translation unit directly reviewable as handwritten C++.",
+      "tradeoffs": "These primitives define workloads, not hardware conclusions. Five warmups and thirty samples do not make first invocation a cold-JIT measurement.",
+      "reading_order": [
+        "test/conformance/benchmark_calls.hpp",
+        "test/conformance/benchmark.cpp",
+        "test/conformance/benchmark_extra.cpp"
+      ],
+      "docs": "Memory and print modes are separate workload primitives. Input values are exact binary fractions; shortest conversion is compared with fmt in memory only.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-primitives",
+      "wave": 12
+    },
+    {
+      "id": "benchmark-resources",
+      "title": "Retain compiler resource reports independently of timing measurements",
+      "dependencies": [
+        "benchmark-driver"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_benchmark.py"
+        ],
+        [
+          "python3",
+          "tools/benchmark.py",
+          "--route",
+          "host-buffer",
+          "--resources-only",
+          "--family",
+          "integer",
+          "--mode",
+          "memory",
+          "--capacity",
+          "128",
+          "--fmt-dir",
+          "{fmt_dir}"
+        ]
+      ],
+      "problem": "Object size, static compiler frame size, accelerator scratch and registers describe different resources and must not be conflated with measured runtime.",
+      "example": "--resources-only compiles one- and two-call probes and preserves the compiler report without claiming device execution.",
+      "design": "Keep raw tool output, object hashes and backend image metadata beside parsed resource fields; distinguish compile-only probe outcomes from timing rows.",
+      "tradeoffs": "Tool availability and diagnostic wording vary. Static frame reports exclude cumulative call depth; linked-image and conversion-table sizes are separate measurements.",
+      "reading_order": [
+        "test/conformance/benchmark_resource.cpp",
+        "tools/benchmark.py:resources",
+        "tools/benchmark.py:image_tables"
+      ],
+      "docs": "Resource probes are compile-only evidence. Compiler frames, scratch, registers, retained tables and image sizes are named separately and retain raw commands and diagnostics.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-resources",
+      "wave": 12
+    },
+    {
+      "id": "tool-adapter-support",
+      "title": "Share explicit compiler target selection between execution adapters",
+      "dependencies": [
+        "tool-isolation"
+      ],
+      "change_kind": "mechanical-move",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_device_arch.py"
+        ]
+      ],
+      "problem": "CUDA, HIP and OpenMP launchers need the same target-selection rules without importing each other.",
+      "example": "FFMT_GPU_ARCH=sm_80 selects sm_80 without consulting nvidia-smi.",
+      "design": "Isolate architecture discovery behind two small functions; prefer explicit environment overrides and retain existing fallback targets.",
+      "tradeoffs": "Fallback targets support compilation without a device, but do not prove execution compatibility. Execution controls remain required.",
+      "reading_order": [
+        "tools/device_arch.py",
+        "test/conformance/test_device_arch.py"
+      ],
+      "docs": "Set FFMT_GPU_ARCH explicitly when a compiler target differs from the first visible device. Target discovery is a compiler default, not execution evidence.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-adapter-support",
+      "wave": 10
+    },
+    {
+      "id": "tool-cuda",
+      "title": "Add independent CUDA differential execution adapter",
+      "dependencies": [
+        "tool-adapter-support"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_adapter_cuda.py"
+        ]
+      ],
+      "problem": "CUDA source compilation needs compiler-specific language and architecture flags, and successful compilation alone cannot establish that a kernel executed.",
+      "example": "--route cuda selects Clang CUDA; --route nvcc selects NVIDIA nvcc.\nBoth launch one execute_case(index) kernel, check launch/synchronization errors,\nand require FFMT_DEVICE metadata before comparing stdout bytes.",
+      "design": "Keep both CUDA compiler routes in one handwritten runtime adapter. Probe device availability, record the selected device, launch one thread, and synchronize before the process exits.",
+      "tradeoffs": "The common fixture stays free of fmt device code. These Python tests inspect the generated source and flags; a CUDA device/runtime is still required to establish execution.",
+      "reading_order": [
+        "tools/backend_cuda.py",
+        "test/conformance/test_adapter_cuda.py"
+      ],
+      "docs": "Run a literal case in a one-thread CUDA kernel through nvcc or Clang. Execution requires a CUDA device and runtime; Python checks only source generation here.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-cuda",
+      "wave": 10
+    },
+    {
+      "id": "tool-hip",
+      "title": "Add independent HIP differential execution adapter",
+      "dependencies": [
+        "tool-adapter-support"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_adapter_hip.py"
+        ]
+      ],
+      "problem": "HIP and chipStar share a launch API but need different compiler flag choices; a failed launch must not be mistaken for a formatting mismatch.",
+      "example": "--route hip uses hipcc with the selected ROCm offload architecture.\n--route chipstar uses the externally selected HIP runtime.\nBoth check hipLaunchKernelGGL, the last launch error and device synchronization.",
+      "design": "Use one handwritten HIP runtime adapter for the two compiler routes. Keep architecture selection on the native HIP route, and retain device properties and launch failures as separate evidence.",
+      "tradeoffs": "The caller supplies the appropriate hipcc/runtime environment. Portable tests check source generation and flag overrides; they do not execute a HIP or chipStar kernel.",
+      "reading_order": [
+        "tools/backend_hip.py",
+        "test/conformance/test_adapter_hip.py"
+      ],
+      "docs": "Run the same case through a HIP kernel without a fmt device build. Execution requires the selected HIP or chipStar runtime and a device.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-hip",
+      "wave": 10
+    },
+    {
+      "id": "tool-isolation",
+      "title": "Preserve failed batches before isolating individual cases",
+      "dependencies": [
+        "tool-snapshots",
+        "tool-negative"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_runner.py"
+        ],
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--shard-size",
+          "2",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "A combined switch can fail although individual cases succeed, and retrying without saving it erases the failure.",
+      "example": "When a two-case binary crashes, save its source hash and diagnostic before retrying one-case binaries.",
+      "design": "Require a positive execution control, recursively split failed build batches, and isolate remaining cases after runtime failures. Save each checkpoint atomically.",
+      "tradeoffs": "Retries increase compile time and isolated passes do not erase batch failures. A failed control produces not_run outcomes, not a formatting judgment.",
+      "reading_order": [
+        "tools/conformance.py:configuration",
+        "test/conformance/test_runner.py"
+      ],
+      "docs": "Failed batch builds and executions remain in manifest shard_failures before per-case isolation. Positive controls separate missing execution capability from formatting outcomes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-isolation",
+      "wave": 5
+    },
+    {
+      "id": "tool-kokkos",
+      "title": "Add independent KOKKOS differential execution adapter",
+      "dependencies": [
+        "tool-isolation"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_adapter_kokkos.py"
+        ]
+      ],
+      "problem": "A Kokkos installation can select a different DefaultExecutionSpace from the route requested by a test, producing a misleading backend result.",
+      "example": "--route kokkos-cuda requires DefaultExecutionSpace::name() == \"Cuda\".\nA Serial installation returns 77 before formatting, rather than being reported\nas a successful CUDA comparison.",
+      "design": "Wrap the existing base compiler adapter with Kokkos includes/link flags, require the requested execution space, run one parallel_for, and fence before finalization. Advertise an accelerator wrapper only when its base adapter is present.",
+      "tradeoffs": "Kokkos must be installed externally with the requested execution space. Source-generation tests cover the guard, launch and lifecycle, while runtime/device availability remains unqualified here.",
+      "reading_order": [
+        "tools/backend_kokkos.py",
+        "test/conformance/test_adapter_kokkos.py"
+      ],
+      "docs": "Only advertise kokkos-cuda when the CUDA base adapter is present. Kokkos must be installed externally with the selected execution space; no site profiles are included.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-kokkos",
+      "wave": 10
+    },
+    {
+      "id": "tool-memory-cuda",
+      "title": "Execute numeric memory records through the CUDA adapter",
+      "dependencies": [
+        "tool-numeric-memory",
+        "tool-cuda"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_memory_cuda.py"
+        ]
+      ],
+      "problem": "CUDA stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+      "example": "cudaMemcpyHostToDevice -> memory_kernel -> cudaDeviceSynchronize\n-> cudaMemcpyDeviceToHost -> serialize(input, output)",
+      "design": "Allocate CUDA input/output buffers, copy input encodings, zero output, launch memory_kernel, check errors/synchronize, and copy framed results back. The numeric formatting body remains the shared handwritten template.",
+      "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+      "reading_order": [
+        "tools/backend_cuda.py:numeric_launcher",
+        "test/conformance/numeric_memory.cpp.in",
+        "test/conformance/test_memory_cuda.py"
+      ],
+      "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-cuda",
+      "wave": 11
+    },
+    {
+      "id": "tool-memory-hip",
+      "title": "Execute numeric memory records through the HIP adapter",
+      "dependencies": [
+        "tool-numeric-memory",
+        "tool-hip"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_memory_hip.py"
+        ]
+      ],
+      "problem": "HIP stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+      "example": "hipMemcpyHostToDevice -> hipLaunchKernelGGL -> hipDeviceSynchronize\n-> hipMemcpyDeviceToHost -> serialize(input, output)",
+      "design": "Allocate HIP input/output buffers, copy input encodings, zero output, launch with hipLaunchKernelGGL, check errors/synchronize, and copy framed results back. The same adapter also serves the chipStar route.",
+      "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+      "reading_order": [
+        "tools/backend_hip.py:numeric_launcher",
+        "test/conformance/numeric_memory.cpp.in",
+        "test/conformance/test_memory_hip.py"
+      ],
+      "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-hip",
+      "wave": 11
+    },
+    {
+      "id": "tool-memory-kokkos",
+      "title": "Execute numeric memory records through the KOKKOS adapter",
+      "dependencies": [
+        "tool-numeric-memory",
+        "tool-kokkos"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_memory_kokkos.py"
+        ]
+      ],
+      "problem": "Kokkos stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+      "example": "host mirror -> deep_copy(device_input) -> parallel_for(format_record)\n-> create_mirror_view_and_copy(HostSpace, device_output) -> serialize",
+      "design": "Require the requested DefaultExecutionSpace, deep-copy input through a host mirror, format into a device View with parallel_for, and copy a HostSpace mirror back before serialization and finalization.",
+      "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+      "reading_order": [
+        "tools/backend_kokkos.py:numeric_launcher",
+        "test/conformance/numeric_memory.cpp.in",
+        "test/conformance/test_memory_kokkos.py"
+      ],
+      "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-kokkos",
+      "wave": 11
+    },
+    {
+      "id": "tool-memory-openmp",
+      "title": "Execute numeric memory records through the OPENMP adapter",
+      "dependencies": [
+        "tool-numeric-memory",
+        "tool-openmp"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_memory_openmp.py"
+        ]
+      ],
+      "problem": "OpenMP stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+      "example": "omp_is_initial_device() must be false\nmap(to: input[0:count]) + map(from: output[0:count])\n-> format_record on the target -> serialize copied records",
+      "design": "Require non-initial-device execution, map input encodings to the target and output records from it, then format each record in a target teams distribute parallel for region.",
+      "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+      "reading_order": [
+        "tools/backend_openmp.py:numeric_launcher",
+        "test/conformance/numeric_memory.cpp.in",
+        "test/conformance/test_memory_openmp.py"
+      ],
+      "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-openmp",
+      "wave": 11
+    },
+    {
+      "id": "tool-memory-sycl",
+      "title": "Execute numeric memory records through the SYCL adapter",
+      "dependencies": [
+        "tool-numeric-memory",
+        "tool-sycl"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_memory_sycl.py"
+        ]
+      ],
+      "problem": "SYCL stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+      "example": "GPU queue: memcpy(input) -> memset(output) -> parallel_for(format_record)\n-> memcpy(output) -> serialize(input, output); every stage waits and reports exceptions",
+      "design": "Use a GPU queue and explicit device USM allocations. Wait on input copies, zeroing, parallel_for and output copies with wait_and_throw before freeing memory and serializing results.",
+      "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+      "reading_order": [
+        "tools/backend_sycl.py:numeric_launcher",
+        "test/conformance/numeric_memory.cpp.in",
+        "test/conformance/test_memory_sycl.py"
+      ],
+      "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-sycl",
+      "wave": 11
+    },
+    {
+      "id": "tool-numeric-memory",
+      "title": "Compare bounded numeric memory records with host fmt output",
+      "dependencies": [
+        "tool-oracle-negatives",
+        "migration"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_numeric_memory.py"
+        ],
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--numeric-samples",
+          "32",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Printf transport can hide whether floating-point conversion and bounded output accounting produced the correct memory bytes.",
+      "example": "A record for a subnormal double checks the input encoding, output bytes, written/required counts and error status against independent fmt.",
+      "design": "Use explicit binary framing and a fixed seed. Keep numeric operations in a conventionally formatted handwritten C++ template that is hashed with runner inputs.",
+      "tradeoffs": "The default corpus has 4096 seeded float encodings, 4096 seeded double encodings, and 24 boundary/special encodings. This is representative sampling, not exhaustive floating-point proof. The portable smoke command reduces the seed count to 32 per type and executes host memory only.",
+      "reading_order": [
+        "test/conformance/numeric_memory.cpp.in",
+        "tools/numeric_memory.py:parse_records",
+        "tools/conformance.py:memory_suite",
+        "test/conformance/test_numeric_memory.py"
+      ],
+      "docs": "The numeric memory suite checks byte payloads, framing, input bits, written and required sizes, and error status. The template is handwritten source, not excluded generated material. Raw record framing is unchanged from the preserved suite.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory",
+      "wave": 11
+    },
+    {
+      "id": "tool-openmp",
+      "title": "Add independent OPENMP differential execution adapter",
+      "dependencies": [
+        "tool-adapter-support"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_adapter_openmp.py"
+        ]
+      ],
+      "problem": "OpenMP target regions can silently run on the initial host device, allowing a host result to masquerade as accelerator conformance.",
+      "example": "--route omp-cuda / omp-hip use Clang NVPTX / AMDGPU offload flags.\n--route omp-spirv uses icpx -fiopenmp -fopenmp-targets=spir64.\nAn initial-device control returns 77 before any output case is judged.",
+      "design": "Share one target-region launcher across the three compiler routes, require omp_is_initial_device() to be false, record the device number, and keep route-specific flags beside the launcher.",
+      "tradeoffs": "Host fallback becomes a failed execution control, not a formatting pass. Portable tests inspect source generation and flags; they do not establish an available OpenMP device runtime.",
+      "reading_order": [
+        "tools/backend_openmp.py",
+        "test/conformance/test_adapter_openmp.py"
+      ],
+      "docs": "Reject an OpenMP target region that executes on the initial host device. Execution requires a working offload toolchain and accelerator; host fallback is failure.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-openmp",
+      "wave": 10
+    },
+    {
+      "id": "tool-oracle-negatives",
+      "title": "Compare invalid literal rejection against the independent oracle",
+      "dependencies": [
+        "tool-isolation"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_negative_driver.py"
+        ]
+      ],
+      "problem": "Matching valid output does not establish that an implementation rejects malformed or type-incompatible format literals.",
+      "example": "The unclosed \"{\" fixture must produce an intended format diagnostic in both the target compiler and the host fmt oracle.",
+      "design": "Reuse the diagnostic classifier for revisioned negative fixture modules and preserve both compiler diagnostics separately.",
+      "tradeoffs": "This adds compile-time rejection parity, not runtime parser exception parity. The baseline fixture registry has no new negative cases until engine migration.",
+      "reading_order": [
+        "tools/conformance.py:negatives",
+        "tools/compile_diagnostics.py"
+      ],
+      "docs": "Revisioned negative fixtures accompany parser behavior and run through both the independent host fmt oracle and the selected target compiler.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-oracle-negatives",
+      "wave": 5
+    },
+    {
+      "id": "tool-snapshots",
+      "title": "Qualify immutable headers from an independent source checkout",
+      "dependencies": [
+        "tool-host-oracle"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_snapshots.py"
+        ],
+        [
+          "python3",
+          "tools/conformance.py",
+          "--revision",
+          "HEAD",
+          "--case",
+          "literal",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Re-running a comparison against a moving worktree can silently change the source under test.",
+      "example": "--source-root ../ffmt --revision COMMIT snapshots that commit even when its working headers have subsequent edits.",
+      "design": "Snapshot include/ through git archive for pinned revisions, or copy current headers for WORKTREE; identify runner checkout separately from library checkout.",
+      "tradeoffs": "Only headers belong to the library snapshot. Exact runner/fixture hashes and compiler commands remain separate evidence, not an assertion of a clean worktree.",
+      "reading_order": [
+        "tools/conformance.py:snapshot",
+        "tools/conformance.py:Campaign.__init__",
+        "test/conformance/test_snapshots.py"
+      ],
+      "docs": "--revision COMMIT snapshots immutable headers. --source-root CHECKOUT separates the tested library checkout from the portable runner; manifests retain both revisions and all captured hashes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-snapshots",
+      "wave": 5
+    },
+    {
+      "id": "tool-sycl",
+      "title": "Add independent SYCL differential execution adapter",
+      "dependencies": [
+        "tool-isolation"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_adapter_sycl.py"
+        ]
+      ],
+      "problem": "SYCL implementations may select different devices, and asynchronous kernel errors need to be observed before stdout comparison.",
+      "example": "--route sycl uses icpx -fsycl; --route acpp uses AdaptiveCpp generic targets.\nThe launcher requests sycl::gpu_selector_v, records the device name/fp64 support,\nand waits with wait_and_throw() before judging output.",
+      "design": "Keep Intel SYCL and AdaptiveCpp compiler flags in one handwritten SYCL adapter. A mandatory GPU selector and explicit exception-aware wait prevent CPU fallback or pending errors from looking like a formatting pass.",
+      "tradeoffs": "The caller supplies a working SYCL GPU runtime. Python tests check selection, launch/wait structure and flag overrides; accelerator execution is not qualified here.",
+      "reading_order": [
+        "tools/backend_sycl.py",
+        "test/conformance/test_adapter_sycl.py"
+      ],
+      "docs": "Use a GPU selector, launch one SYCL task, and retain its device name. Execution requires SYCL or AdaptiveCpp GPU support; a CPU fallback cannot pass.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-sycl",
+      "wave": 10
+    },
+    {
+      "id": "accounting",
+      "title": "Count bounded output independently of formatting",
+      "dependencies": [
+        "checked-config"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/accounting.md"
+      ],
+      "problem": "Truncation must retain the complete required length without writing beyond caller capacity.",
+      "example": "#include <ffmt/detail/checked.hpp> // internal engine during staged introduction\nchar bytes[2];\nffmt::detail::iterator_sink<char*, char> sink{bytes, 2};\nsink.repeat('x', 7); // bytes == {'x', 'x'}; written == 2; required == 7",
+      "design": "All iterator copies share a sink. Required-length overflow is detected before arithmetic wraps.",
+      "tradeoffs": "Counts describe code units, not display columns; family alignment hooks arrive with shared family support.",
+      "reading_order": [
+        "include/ffmt/detail/result.hpp",
+        "include/ffmt/detail/output.hpp",
+        "test/conformance/test_core_accounting.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting",
+      "wave": 2
+    },
+    {
+      "id": "checked-config",
+      "title": "Extract the qualified compiler configuration",
+      "dependencies": [
+        "core-prepare"
+      ],
+      "change_kind": "mechanical-extraction",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-j2",
+          "test-host",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer"
+        ]
+      ],
+      "docs": [
+        "docs/api/checked-config.md"
+      ],
+      "problem": "The standalone checked engine needs the same compiler and backend configuration as the qualified implementation.",
+      "example": "#include <ffmt/detail/config.hpp>",
+      "design": "Compiler macros and standard includes are copied without changes from aeff043. The extraction hash records the exact body.",
+      "tradeoffs": "This header is internal; callers continue including base.hpp. It does not activate the replacement engine.",
+      "reading_order": [
+        "include/ffmt/detail/config.hpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/checked-config",
+      "wave": 2
+    },
+    {
+      "id": "conversion-preparation",
+      "title": "Isolate the qualified decimal conversion helpers",
+      "dependencies": [
+        "primitives"
+      ],
+      "change_kind": "mechanical-extraction",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/conversion-preparation.md"
+      ],
+      "problem": "The qualified conversion routines were embedded in the public base header.",
+      "example": "// Existing handwritten bodies move into detail/dragonbox.hpp and detail/exact_decimal.hpp.",
+      "design": "Bodies are copied unchanged from aeff043. Only namespace and OpenMP-region wrappers are added; extraction hashes are recorded.",
+      "tradeoffs": "The helpers are not activated until conversion integration. Handwritten logic remains explicitly handwritten.",
+      "reading_order": [
+        "include/ffmt/detail/dragonbox.hpp",
+        "include/ffmt/detail/exact_decimal.hpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation",
+      "wave": 4
+    },
+    {
+      "id": "core-prepare",
+      "title": "Preserve the existing implementation behind a wrapper",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "mechanical-move",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-j2",
+          "test-host",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer"
+        ]
+      ],
+      "docs": [
+        "docs/api/core-prepare.md"
+      ],
+      "problem": "The replacement engine needs independent qualification while current callers remain usable.",
+      "example": "#include <ffmt/base.hpp> // still selects the original implementation",
+      "design": "The legacy header is copied byte for byte from upstream 3fe258a; the public wrapper only selects it.",
+      "tradeoffs": "The temporary extra include is removed once migration is validated.",
+      "reading_order": [
+        "include/ffmt/base.hpp",
+        "include/ffmt/detail/legacy_base.hpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/core-prepare",
+      "wave": 2
+    },
+    {
+      "id": "extended-floats",
+      "title": "Preserve native long-double and binary128 representations",
+      "dependencies": [
+        "floating-formatting",
+        "extended-integers"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/extended-floats.md"
+      ],
+      "problem": "Passing extended values through double loses range and precision before formatting.",
+      "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[64];\nauto result = ffmt::format_to(buffer, \"{:.21g}\", 1.234567890123456789L);\n// Conversion uses the native long-double representation; it does not narrow to double.",
+      "design": "Native 80-bit and 128-bit decomposition feeds the same exact decimal algorithm. Formatting does not require quadmath conversion.",
+      "tradeoffs": "Layouts and availability are target dependent. Unsupported representations return a checked status.",
+      "reading_order": [
+        "include/ffmt/detail/floating.hpp",
+        "include/ffmt/detail/extended.hpp",
+        "test/conformance/test_engine_extended.cpp",
+        "test/conformance/test_engine_quad.cpp"
+      ],
+      "source_changes": "Test-only binary128 guard enables FMT_USE_FLOAT128 before the oracle include only when FFMT_HAS_FLOAT128 is true; unsupported compilers still compile the return77 branch. Formatter logic is unchanged.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats",
+      "wave": 4
+    },
+    {
+      "id": "extended-integers",
+      "title": "Format native 128-bit and bit-precise integers",
+      "dependencies": [
+        "primitives"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/extended-integers.md"
+      ],
+      "problem": "Standard type traits do not consistently recognize native extended integers.",
+      "example": "#include <ffmt/detail/checked.hpp>\nusing U = unsigned __int128; // when the compiler supplies this type\nchar buffer[64];\nauto result = ffmt::format_to(buffer, \"{:#x}\", U(1) << 100);\n// Writes the full native value, \"0x10000000000000000000000000\".",
+      "design": "Explicit signed and unsigned traits preserve the native width. _BitInt support follows the oracle surface through 64 bits.",
+      "tradeoffs": "Compiler extensions are conditional. Wider _BitInt values report unsupported rather than narrowing.",
+      "reading_order": [
+        "include/ffmt/detail/arguments.hpp",
+        "test/conformance/test_core_int128.cpp",
+        "test/conformance/test_engine_bitint.cpp"
+      ],
+      "source_changes": "Native extension test now returns77 when int128 is unavailable, so absence is recorded as skip rather than a passing empty test. Formatter logic is unchanged.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-integers",
+      "wave": 4
+    },
+    {
+      "id": "floating-conversion",
+      "title": "Convert binary floating values with bounded integer storage",
+      "dependencies": [
+        "conversion-preparation"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/floating-conversion.md"
+      ],
+      "problem": "Device environments cannot consistently provide host conversion services.",
+      "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[64];\nauto size = ffmt::detail::portable_shortest(\n    buffer, std::numeric_limits<double>::denorm_min());\n// buffer[0..size) is \"5e-324\", matching the independent fmt oracle.",
+      "design": "Representation bits drive classification and exact interval comparisons. Bounded integer limbs hold decimal expansions without output-capacity limits.",
+      "tradeoffs": "Integer interval conversion uses more code and bounded working storage than forwarding to libc, while avoiding locale and allocation services. Internal conversion renders supported finite magnitudes; the formatting layer handles signs and nonfinite spellings. The documented 1100/16520-digit bounds cover exact IEEE expansions and interval endpoints, rather than limiting requested output precision. Direct oracle tests cover adjacent powers of two, subnormal/normal transitions, maximum finite values, rounding ties and carries.",
+      "reading_order": [
+        "include/ffmt/detail/floating.hpp",
+        "test/conformance/test_core_conversion.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-conversion",
+      "wave": 4
+    },
+    {
+      "id": "floating-formatting",
+      "title": "Format float and double with exact presentation rules",
+      "dependencies": [
+        "floating-conversion"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/floating-formatting.md"
+      ],
+      "problem": "Floating fields need correct rounding even when requested precision exceeds stored output.",
+      "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[2];\nauto result = ffmt::format_to_n(buffer, sizeof buffer, \"{:.2000f}\", 0.125);\n// Stores \"0.\"; result.written == 2; result.required == 2002.",
+      "design": "Shortest formatting uses Dragonbox normally and integer interval conversion for fast-math and SPIR-V. Requested trailing zeros stream through counted sinks.",
+      "tradeoffs": "The oracle stays strictly compiled. Host fast-math tests use separately established expected strings and do not qualify device runtimes.",
+      "reading_order": [
+        "include/ffmt/detail/numeric.hpp",
+        "test/conformance/test_core_floating.cpp",
+        "test/conformance/test_engine_fast_math.cpp"
+      ],
+      "additional_suites": [
+        {
+          "name": "core_floating_portable",
+          "source": "test/conformance/test_core_floating.cpp",
+          "standard": "c++20",
+          "flags": [
+            "-DFFMT_PORTABLE_SHORTEST=1"
+          ],
+          "reference": true,
+          "optional": false
+        }
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting",
+      "wave": 4
+    },
+    {
+      "id": "format-as",
+      "title": "Map user values through ADL format_as",
+      "dependencies": [
+        "formatter-compatibility"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/format-as.md"
+      ],
+      "problem": "Small wrappers should reuse primitive formatting without a full formatter specialization.",
+      "example": "#include <ffmt/detail/checked.hpp>\nstruct status { unsigned code; };\nconstexpr auto format_as(status value) { return value.code; }\n// ffmt::format_to(buffer, \"{:#x}\", status{42}) writes \"0x2a\".\n// The same mapped value can supply a dynamic integer width.",
+      "design": "ADL mapping participates in parsing, output and dynamic width validation. Values retain references until mapping occurs.",
+      "tradeoffs": "Mappings terminate at primitive representations; they are not a recursive serialization interface.",
+      "reading_order": [
+        "include/ffmt/detail/type_traits.hpp",
+        "test/conformance/test_core_format_as.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/format-as",
+      "wave": 5
+    },
+    {
+      "id": "formatter-compatibility",
+      "title": "Support parse/context formatters and correct forwarding",
+      "dependencies": [
+        "primitives"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/formatter-compatibility.md"
+      ],
+      "problem": "User-defined values need to consume specs and write into the caller context.",
+      "example": "#include <ffmt/detail/checked.hpp>\nstruct point { int value; };\ntemplate <class Char>\nstruct ffmt::formatter<point, Char> : ffmt::formatter<int, Char> {\n  template <class Context>\n  auto format(const point& p, Context& ctx) const {\n    return ffmt::formatter<int, Char>::format(p.value, ctx);\n  }\n};\n// Formatting point{42} with \"{:04x}\" now writes \"002a\".\n// Inherited parse() checks the same specs as the integer formatter.",
+      "design": "Eligibility checks inspect the cv-qualified reference accepted by format. Shared sink iterators preserve nested counts without copying user objects.",
+      "tradeoffs": "The protocol is template based with checked statuses; it does not provide exception services or type-erased stores.",
+      "reading_order": [
+        "include/ffmt/detail/formatters.hpp",
+        "include/ffmt/detail/context.hpp",
+        "test/conformance/test_core_formatters.cpp",
+        "test/conformance/test_core_forwarding.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility",
+      "wave": 5
+    },
+    {
+      "id": "legacy-compatibility",
+      "title": "Adapt the existing static formatter protocol",
+      "dependencies": [
+        "format-as"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/legacy-compatibility.md"
+      ],
+      "problem": "Existing ffmt formatters return a literal and a tuple from static format functions.",
+      "example": "Inside an existing ffmt::formatter<point> specialization:\nstatic constexpr auto format(point p) {\n  return ffmt::formatted<\"({}, {})\", int, int>{{p.x, p.y}};\n}\n// Formatting point{2, 7} with \"{}\" continues to write \"(2, 7)\".\n// test_core_legacy.cpp checks the corresponding narrow and wide output.",
+      "design": "Legacy values expand through the counted engine. Narrow nested literals are converted for wide destinations without allocating.",
+      "tradeoffs": "Legacy custom formatters accept empty specs; modern parse/context formatters remain the spec-aware interface.",
+      "reading_order": [
+        "include/ffmt/detail/execution.hpp",
+        "test/conformance/test_core_legacy.cpp",
+        "test/conformance/test_legacy_forwarding.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility",
+      "wave": 5
+    },
+    {
+      "id": "migration",
+      "title": "Select the checked engine through the public header",
+      "dependencies": [
+        "transport",
+        "extended-floats",
+        "tool-oracle-negatives"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--route",
+          "host-specifiers",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ],
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+          "test-host",
+          "test-fast-math"
+        ],
+        [
+          "make",
+          "-j2",
+          "test-fast-math",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}"
+        ]
+      ],
+      "docs": [
+        "docs/api/migration.md"
+      ],
+      "problem": "The separately qualified engine must replace both old output paths while preserving API spellings.",
+      "example": "#include <ffmt/base.hpp>\nauto result = ffmt::try_print(\"{:04x}\", 42);",
+      "design": "The public wrapper selects the same engine tested throughout this stack. Existing macros, static formatters and built-in SYCL formatters remain available.",
+      "tradeoffs": "Void compatibility calls discard checked status. Host checks do not replace preserved accelerator campaign evidence.",
+      "reading_order": [
+        "include/ffmt/base.hpp",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/sycl_formatters.hpp",
+        "test/conformance/cases_engine.py",
+        "test/conformance/cases_baseline.py",
+        "test/test_body_host.inc:complete independent oracle output",
+        "test/test_buffer_path.cpp:null-string rejection",
+        "test/test_floats.cpp:shortest formatting on both routes",
+        "test/test_fast_math.cpp:subnormals on both routes"
+      ],
+      "wave": 6,
+      "source_changes": "Restore all aeff historical suite migrations: oracle output is no longer truncated to staging capacity; null strings are checked for rejection; both compatibility routes test shortest floats and fast-math subnormals. These are restored qualified test behaviors, not new formatter algorithms.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration"
+    },
+    {
+      "id": "obsolete-deletion",
+      "title": "Delete the retired formatter implementation",
+      "dependencies": [
+        "migration"
+      ],
+      "change_kind": "obsolete-code-deletion",
+      "remove": [
+        "include/ffmt/detail/legacy_base.hpp"
+      ],
+      "tests": [
+        [
+          "make",
+          "-j2",
+          "test-host",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer"
+        ]
+      ],
+      "docs": [
+        "docs/api/obsolete-deletion.md"
+      ],
+      "problem": "The public header no longer references the old implementation after migration.",
+      "example": "#include <ffmt/base.hpp> // unchanged for callers",
+      "design": "Only the unused legacy implementation is deleted; archived snapshots retain it for comparison.",
+      "tradeoffs": "The static formatter protocol and legacy emit-hook adapter remain supported by the new implementation.",
+      "reading_order": [
+        "include/ffmt/base.hpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/obsolete-deletion",
+      "wave": 6
+    },
+    {
+      "id": "parsing",
+      "title": "Parse and validate counted format strings",
+      "dependencies": [
+        "accounting"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/parsing.md"
+      ],
+      "problem": "Runtime execution and literal validation need a single grammar.",
+      "example": "Given the handler in test_core_parsing.cpp:\nffmt::detail::walk_format<char>(\"{{{:04x}}}\", events);\n// Receives two literal braces and one argument with width 4/type x.\n// \"{0} {}\" instead returns invalid_format for mixed index modes.",
+      "design": "A handler receives parsed fields; parse context tracks index modes and checks dynamic references without producing output.",
+      "tradeoffs": "This prefix supports ASCII fill; counted Unicode decoding is introduced with its tests.",
+      "reading_order": [
+        "include/ffmt/detail/parse.hpp",
+        "test/conformance/test_core_parsing.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing",
+      "wave": 3
+    },
+    {
+      "id": "primitives",
+      "title": "Format primitive values into bounded memory",
+      "dependencies": [
+        "parsing"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/primitives.md"
+      ],
+      "problem": "The old print-only interface cannot safely target caller-owned memory or report the full required size.",
+      "example": "#include <ffmt/detail/checked.hpp> // public base.hpp migrates later\nchar buffer[2];\nauto result = ffmt::format_to_n(buffer, sizeof buffer, \"{:04x}\", 42);\n// buffer == {'0', '0'}; result.written == 2; result.required == 4",
+      "design": "Builtin formatters share one parser and counted sink. Signs, base prefixes, padding and digits have separate output responsibilities.",
+      "tradeoffs": "Floating, Unicode display rules and customization protocols are introduced separately.",
+      "reading_order": [
+        "include/ffmt/detail/integer.hpp",
+        "include/ffmt/detail/memory.hpp",
+        "include/ffmt/detail/execution.hpp",
+        "test/conformance/test_core_primitives.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives",
+      "wave": 3
+    },
+    {
+      "id": "transport",
+      "title": "Deliver counted bytes through host and accelerator stdout",
+      "dependencies": [
+        "unicode",
+        "legacy-compatibility",
+        "floating-formatting"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+          "test-host"
+        ]
+      ],
+      "docs": [
+        "docs/api/transport.md"
+      ],
+      "problem": "Long output and percent signs must reach stdout without reinterpretation as format syntax.",
+      "example": "#include <ffmt/detail/checked.hpp> // base.hpp switches in the migration PR\nauto result = ffmt::try_print(\"a{}b\", char(0));\n// The default host counted transport emits all three bytes: a, NUL, b.\n// A transport without counted-byte support reports its limitation.",
+      "design": "A bounded sink emits counted chunks. Backend printf uses fixed conversion formats; compatibility hooks receive safe escaped pieces.",
+      "tradeoffs": "Some backend or legacy transports cannot preserve embedded NULs and report errors. Host captures validate contracts, not accelerator runtime behavior.",
+      "reading_order": [
+        "include/ffmt/detail/transport.hpp",
+        "include/ffmt/detail/legacy_emit.hpp",
+        "test/conformance/test_engine_transport.cpp",
+        "test/conformance/test_engine_legacy_hook.cpp",
+        "test/capture.hpp:raw stream equality after parsed diagnostics"
+      ],
+      "source_changes": "Preserve original byte-counted transport and restore aeff raw stdout equality regression in the legacy capture helper. Portable legacy-host checks ensure this stricter harness remains valid before migration.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport",
+      "wave": 5
+    },
+    {
+      "id": "unicode",
+      "title": "Apply counted Unicode decoding and display rules",
+      "dependencies": [
+        "primitives"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [],
+      "docs": [
+        "docs/api/unicode.md"
+      ],
+      "problem": "Byte counts alone misalign multibyte text, and decoding must respect counted boundaries.",
+      "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[32];\nauto result = ffmt::format_to(buffer, \"{:\u2500^9}\", \"\u00e9\");\n// Bytes encode \"\u2500\u2500\u2500\u2500\u00e9\u2500\u2500\u2500\u2500\": display width 9, rather than padding by UTF-8 byte count.",
+      "design": "Counted UTF-8 decoding, display-width tables and printability tables govern fill, alignment, precision and debug escapes. Wide output follows code-unit semantics.",
+      "tradeoffs": "These are qualified fmt semantics, not terminal-specific grapheme measurement. Unicode can still be disabled explicitly.",
+      "reading_order": [
+        "include/ffmt/detail/parse.hpp",
+        "include/ffmt/detail/unicode_width.hpp",
+        "include/ffmt/detail/text.hpp",
+        "test/conformance/test_core_unicode.cpp"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode",
+      "wave": 4
+    },
+    {
+      "id": "chrono",
+      "title": "Format durations, calendar values and time points",
+      "dependencies": [
+        "shared-family"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Format chrono values without host locale, timezone-database or strftime services.",
+      "example": "#include <ffmt/chrono.hpp>\nffmt::println(\"{:%T}\", std::chrono::milliseconds{-123456}); // -00:02:03.456\nffmt::println(\"{:%G-W%V-%u}\", std::chrono::year{2021}/1/1); // 2020-W53-5",
+      "design": "Civil-date arithmetic and explicit tokens preserve device callability; locale/timezone queries remain unsupported.",
+      "tradeoffs": "The header supports durations, C++20 calendar values, `std::tm`, system time\npoints and local time points using civil-date arithmetic and explicit tokens.\nFractional precision, negative timestamps and ISO week years follow the pinned\nfmt reference. This implementation provides locale-independent formatting; it\ndoes not query clocks, a timezone database or locale services. Local time points\ntherefore reject zone/offset tokens. Device use requires the involved standard\nchrono operations to be available on that device.",
+      "reading_order": [
+        "include/ffmt/chrono.hpp",
+        "test/conformance/test_chrono.cpp"
+      ],
+      "docs": [
+        "docs/features/chrono.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Conventional header layout; duration/calendar/token/wide/rejection tests grouped, oracle calendar wrappers kept local. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "chrono"
+        ],
+        "fixture_modules": [
+          "cases_chrono.py"
+        ]
+      },
+      "before": "A std::chrono::milliseconds value has no formatter, so the %T token cannot produce a duration.",
+      "after": "#include <ffmt/chrono.hpp>\nffmt::println(\"{:%T}\", std::chrono::milliseconds{-123456}); // -00:02:03.456\nffmt::println(\"{:%G-W%V-%u}\", std::chrono::year{2021}/1/1); // 2020-W53-5",
+      "validation": {
+        "commands": [
+          "make build/focused_chrono CXX=\"$CXX\" && ./build/focused_chrono"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/chrono",
+      "wave": 8
+    },
+    {
+      "id": "enum-helpers",
+      "title": "Opt enums into integer formatting",
+      "dependencies": [
+        "migration"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [],
+      "problem": "Expose enum underlying values without globally accepting every enum.",
+      "example": "#include <ffmt/enum.hpp>\nnamespace status_example {\nusing ffmt::enums::format_as;\nenum class status : int { warning = -3 };\n}\nffmt::println(\"{:+05}\", status_example::status::warning); // -0003",
+      "design": "Small ADL opt-in shares the integer parser and avoids symbolic-name reflection.",
+      "tradeoffs": "`ffmt::underlying(value)` explicitly exposes an enum's underlying integer.\nOpting into `ffmt::enums::format_as` in the enum's namespace enables ADL mapping\nwith the integer formatter's specifications. This prints integer values rather\nthan discovering symbolic names. The opt-in avoids globally making every enum\nformattable.",
+      "reading_order": [
+        "include/ffmt/enum.hpp",
+        "test/conformance/test_enum.cpp"
+      ],
+      "docs": [
+        "docs/features/enums.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Conventional header layout; enum-specific tests/docs extracted from omnibus. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "enum"
+        ],
+        "fixture_modules": []
+      },
+      "before": "An enum with no formatter or ADL mapping cannot be passed directly to checked formatting.",
+      "after": "#include <ffmt/enum.hpp>\nnamespace status_example {\nusing ffmt::enums::format_as;\nenum class status : int { warning = -3 };\n}\nffmt::println(\"{:+05}\", status_example::status::warning); // -0003",
+      "validation": {
+        "commands": [
+          "make build/focused_enum CXX=\"$CXX\" && ./build/focused_enum"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/enum-helpers",
+      "wave": 7
+    },
+    {
+      "id": "feature-integration",
+      "title": "Test names with independent range and standard adapters",
+      "dependencies": [
+        "named-arguments",
+        "ranges",
+        "standard-types"
+      ],
+      "change_kind": "integration-tests",
+      "remove": [],
+      "tests": [],
+      "problem": "Verify cross-feature composition without making optional adapters depend on each other.",
+      "example": "#include <ffmt/args.hpp>\n#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{values:*>{width}:03}\", ffmt::arg(\"values\", values), ffmt::arg(\"width\", 25));",
+      "design": "Integration-only fixtures sit above independent feature branches.",
+      "tradeoffs": "Named argument wrappers preserve the referenced family's mutability and provide\nruntime names for outer width fields. The interaction tests combine names with\nranges and standard-type adapters. Each family and named arguments also has an\nindependent test suite, so this integration adds no prerequisite between those\nfeatures.",
+      "reading_order": [
+        "test/conformance/test_feature_integration.cpp"
+      ],
+      "docs": [
+        "docs/features/feature-integration.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Only existing named-range, named-complex and mutable named-range interaction tests moved into a dedicated suite. No library implementation source."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "feature_integration"
+        ],
+        "fixture_modules": []
+      },
+      "before": "Independent names/ranges/std suites do not verify named widths on optional adapters or mutable named ranges.",
+      "after": "#include <ffmt/args.hpp>\n#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{values:*>{width}:03}\", ffmt::arg(\"values\", values), ffmt::arg(\"width\", 25));",
+      "validation": {
+        "commands": [
+          "make build/focused_feature_integration CXX=\"$CXX\" && ./build/focused_feature_integration"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/feature-integration",
+      "wave": 9
+    },
+    {
+      "id": "named-arguments",
+      "title": "Add referenced named arguments",
+      "dependencies": [
+        "migration"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Resolve human-readable field names while retaining typed value references.",
+      "example": "#include <ffmt/args.hpp>\nchar out[16];\nauto result = ffmt::format_to_n(out, sizeof out, \"{value:04x}\", ffmt::arg(\"value\", 42));\n// out contains \"002a\"; result.written == result.required == 4.",
+      "design": "Name lookup is runtime; wrappers do not allocate or own their referents.",
+      "tradeoffs": "`ffmt::arg(name, value)` stores a name view and a value reference. The name\ncharacters and value must outlive use of the wrapper; temporary values remain\nvalid through the formatting expression. Names and named width/precision fields\nare resolved at runtime. Literal parsing checks structural syntax, but cannot\nfully validate a named field's type/specification because names are runtime data.\nUse checked results to observe unresolved names or incompatible specifications.",
+      "reading_order": [
+        "include/ffmt/args.hpp",
+        "test/conformance/test_named_arguments.cpp"
+      ],
+      "docs": [
+        "docs/features/named-arguments.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Borrowing/lifetime comments and conventional header layout; decomposed named tests plus direct missing-name, incompatible-spec and invalid-width status regressions. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "named_arguments"
+        ],
+        "fixture_modules": [
+          "cases_named.py"
+        ]
+      },
+      "before": "A checked core call with {value:04x} has no name wrapper to bind value; use positional indices instead.",
+      "after": "#include <ffmt/args.hpp>\nchar out[16];\nauto result = ffmt::format_to_n(out, sizeof out, \"{value:04x}\", ffmt::arg(\"value\", 42));\n// out contains \"002a\"; result.written == result.required == 4.",
+      "validation": {
+        "commands": [
+          "make build/focused_named_arguments CXX=\"$CXX\" && ./build/focused_named_arguments"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/named-arguments",
+      "wave": 7
+    },
+    {
+      "id": "ranges",
+      "title": "Format ranges, tuples and joins",
+      "dependencies": [
+        "shared-family"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Format structured containers using element formatters while preserving iterator semantics.",
+      "example": "#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{::03}\", values);  // [001, -02, 033]\nffmt::println(\"{:02x}\", ffmt::join(values, \",\"));",
+      "design": "Range detection and constrained formatter specializations; standard operations remain device-dependent.",
+      "tradeoffs": "Ranges select sequence, set, map, string or debug-string presentation. Tuples\nand container adaptors have explicit adapters; nested specifications follow the\nsecond colon, while `n` removes delimiters. `range_format_kind` customizes string\nversus debug-string treatment. Joins hold iterator/delimiter views; keep their\nunderlying objects alive. Mutable and move-only input iterators are preserved.\nRight/center alignment on streaming iterators requires repeatable element\nformatters and forward ranges; bounded writable buffers handle consuming ranges\nwithout replay. The standard-library operations used by the range must be\ncallable on the selected device.",
+      "reading_order": [
+        "include/ffmt/ranges.hpp",
+        "test/conformance/test_ranges.cpp",
+        "test/conformance/test_ranges_iterators.cpp",
+        "test/conformance/test_ranges_forwarding.cpp"
+      ],
+      "docs": [
+        "docs/features/ranges.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Conventional header layout; range/iterator/mutation tests extracted and grouped, cross-feature named-range assertion moved to integration. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "ranges",
+          "ranges_iterators",
+          "ranges_forwarding"
+        ],
+        "fixture_modules": [
+          "cases_ranges.py"
+        ]
+      },
+      "before": "An std::array<int,3> has no formatter, so a checked call with {::03} is rejected.",
+      "after": "#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{::03}\", values);  // [001, -02, 033]\nffmt::println(\"{:02x}\", ffmt::join(values, \",\"));",
+      "validation": {
+        "commands": [
+          "make build/focused_ranges CXX=\"$CXX\" && ./build/focused_ranges",
+          "make build/focused_ranges_iterators CXX=\"$CXX\" && ./build/focused_ranges_iterators",
+          "make build/focused_ranges_forwarding CXX=\"$CXX\" && ./build/focused_ranges_forwarding"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges",
+      "wave": 8
+    },
+    {
+      "id": "shared-family",
+      "title": "Share nested output accounting and family alignment",
+      "dependencies": [
+        "migration"
+      ],
+      "change_kind": "preparatory-refactor",
+      "remove": [],
+      "tests": [],
+      "problem": "Optional formatters need consistent nested alignment without buffering or replaying mutations.",
+      "example": "// Internal support, used by optional formatter headers:\nreturn ffmt::detail::family_padded(ctx, spec, [&](auto& body) {\n  ffmt::detail::family_ascii(body, \"body\");\n}, /* replayable = */ false);",
+      "design": "Extend bounded sink iterators with padding marks/reordering and delegate hooks, then share family outer parsing and one-pass accounting. Streaming destinations explicitly require replayable values for right/center alignment.",
+      "tradeoffs": "The internal helpers share outer alignment parsing, display-column accounting,\ndebug defaults and nested formatting. Left-aligned output renders once on any\niterator. Bounded writable pointer buffers also support right/center alignment\nin one pass by inserting padding while retaining the exact truncated prefix.\nOther iterators require replayable values for right/center alignment; unknown\ncustom formatters and consuming ranges return `unsupported_type` before invoking\nthe formatter. These helpers are implementation details, not a public extension\nAPI. Optional formatters should document which input operations are device callable.",
+      "reading_order": [
+        "include/ffmt/detail/output.hpp:bounded padding and sink delegation hooks",
+        "include/ffmt/detail/family.hpp",
+        "test/conformance/test_family_support.cpp"
+      ],
+      "docs": [
+        "docs/features/family-support.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Original qualified sink padding/delegation hooks restored as their own header step; family whitespace/comments and once -> render_and_measure lambda rename. Direct tests cover one-pass bounded alignment, nonreplayable stream rejection and replayable stream success. No intended behavior change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "family_support"
+        ],
+        "fixture_modules": []
+      },
+      "before": "Each optional formatter would otherwise duplicate alignment parsing and counting, risking replay of mutating values.",
+      "after": "// Internal support, used by optional formatter headers:\nreturn ffmt::detail::family_padded(ctx, spec, [&](auto& body) {\n  ffmt::detail::family_ascii(body, \"body\");\n}, /* replayable = */ false);",
+      "validation": {
+        "commands": [
+          "make build/focused_family_support CXX=\"$CXX\" && ./build/focused_family_support"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/shared-family",
+      "wave": 7
+    },
+    {
+      "id": "standard-types",
+      "title": "Adapt standard value wrappers and complex numbers",
+      "dependencies": [
+        "shared-family"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Format common standard wrappers through existing contained-value formatters.",
+      "example": "#include <ffmt/std.hpp>\nffmt::println(\"{}\", std::optional<int>{42});  // optional(42)\nffmt::println(\"{:.2f}\", std::complex<double>{1, -2.2}); // (1.00-2.20i)",
+      "design": "Explicit adapters avoid streams and RTTI; each standard operation must be available on the target.",
+      "tradeoffs": "Optional and variant values use debug presentation for contained text; bitsets,\nbytes, reference wrappers, atomics, complex numbers, source locations and pointer\nviews have explicit adapters. `ffmt::ptr` makes a raw/smart pointer printable\nwithout dereferencing it. Atomic formatting loads the current value; a format\ncall is not an atomic snapshot across multiple arguments. These adapters do not\nsupply filesystem, streams, RTTI, thread-ID or exception-traversal services.\nStandard-library types and their operations must themselves be device callable.",
+      "reading_order": [
+        "include/ffmt/std.hpp",
+        "test/conformance/test_std.cpp"
+      ],
+      "docs": [
+        "docs/features/standard-types.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Conventional header layout; wrapper/bitset/complex/pointer/rejection tests extracted and grouped. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "std"
+        ],
+        "fixture_modules": [
+          "cases_std.py"
+        ]
+      },
+      "before": "std::optional<int> and std::complex<double> have no formatter in the core.",
+      "after": "#include <ffmt/std.hpp>\nffmt::println(\"{}\", std::optional<int>{42});  // optional(42)\nffmt::println(\"{:.2f}\", std::complex<double>{1, -2.2}); // (1.00-2.20i)",
+      "validation": {
+        "commands": [
+          "make build/focused_std CXX=\"$CXX\" && ./build/focused_std"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/standard-types",
+      "wave": 8
+    },
+    {
+      "id": "std23",
+      "title": "Format C++23 expected and unexpected values",
+      "dependencies": [
+        "standard-types"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_cxx23_opt_in.py"
+        ]
+      ],
+      "problem": "Represent expected values and errors when the standard library supports C++23.",
+      "example": "#include <ffmt/std23.hpp>\nffmt::println(\"{}\", std::expected<int, int>{42}); // expected(42)",
+      "design": "Keep expected/unexpected adapters in an opt-in header. Make excludes suites declaring c++23 from its default capability target and exposes test-cxx23 explicitly; CMake retains its independent opt-in option.",
+      "tradeoffs": "`std23.hpp` adds `std::expected` and `std::unexpected` adapters when the selected\nstandard library exposes C++23 expected support. C++20 users can omit the header.\nThe contained value and error must be formattable. Optional tests report skip\n(exit 77) when the standard library lacks the feature; that skip is not evidence\nof conformance. Enable the suite with a C++23 compiler mode.",
+      "reading_order": [
+        "include/ffmt/std23.hpp",
+        "test/conformance/test_std23.cpp",
+        "mk/portable-tests.mk:declared-standard selection",
+        "test/conformance/test_cxx23_opt_in.py"
+      ],
+      "docs": [
+        "docs/features/std23.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Conventional header/test layout and standalone C++23 suite name; every expected/unexpected fixture retained. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "std23"
+        ],
+        "fixture_modules": []
+      },
+      "before": "std::expected<int,int> has no formatter after including std.hpp alone.",
+      "after": "#include <ffmt/std23.hpp>\nffmt::println(\"{}\", std::expected<int, int>{42}); // expected(42)",
+      "validation": {
+        "commands": [
+          "make test-cxx23 CXX=\"$CXX\" # compiler mode must be C++23; exit 77 is unsupported"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23",
+      "wave": 9
+    },
+    {
+      "id": "styling",
+      "title": "Add explicit ANSI color and emphasis wrappers",
+      "dependencies": [
+        "shared-family"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Request ANSI styling explicitly around an existing formattable value.",
+      "example": "#include <ffmt/color.hpp>\nffmt::println(\"{}\", ffmt::styled(42, ffmt::fg(ffmt::rgb(255,20,30)) | ffmt::emphasis::bold));",
+      "design": "Typed composition emits deterministic bytes without terminal detection.",
+      "tradeoffs": "Styles explicitly emit ANSI escape bytes around the formatted value and reset\nwhen a nonempty style ends. There is no terminal detection; captured output also\ncontains those bytes. RGB, terminal palette colors and emphasis flags compose\nwith `operator|`. Incompatible repeated terminal colors report `invalid_format`.\nThe wrapped formatter still owns ordinary value parsing and width semantics.",
+      "reading_order": [
+        "include/ffmt/color.hpp",
+        "test/conformance/test_style.cpp"
+      ],
+      "docs": [
+        "docs/features/styling.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Conventional header layout and standalone explicit-style tests/docs. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "style"
+        ],
+        "fixture_modules": [
+          "cases_style.py"
+        ]
+      },
+      "before": "There is no typed style wrapper to emit ANSI foreground and emphasis around a value.",
+      "after": "#include <ffmt/color.hpp>\nffmt::println(\"{}\", ffmt::styled(42, ffmt::fg(ffmt::rgb(255,20,30)) | ffmt::emphasis::bold));",
+      "validation": {
+        "commands": [
+          "make build/focused_style CXX=\"$CXX\" && ./build/focused_style"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/styling",
+      "wave": 8
+    },
+    {
+      "id": "typed-printf",
+      "title": "Add checked typed percent formatting",
+      "dependencies": [
+        "shared-family"
+      ],
+      "change_kind": "feature",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--no-memory",
+          "--no-negative",
+          "--fmt-dir",
+          "{fmt_dir}",
+          "--host-cxx",
+          "{cxx}"
+        ]
+      ],
+      "problem": "Support percent formatting without unsafe C varargs or the writing conversion %n.",
+      "example": "#include <ffmt/printf.hpp>\nchar out[32];\nauto result = ffmt::printf_to_n(out, sizeof out, \"%#08x %.3f\", 42u, 1.25);\n// out contains \"0x00002a 1.250\".",
+      "design": "A separate typed grammar shares primitive conversion and bounded sinks, but does not implement %n.",
+      "tradeoffs": "The percent parser uses typed arguments rather than C varargs and shares the\nbounded output/error contract of brace formatting. It supports positional\narguments, dynamic width/precision, integer length modifiers and narrow/wide\noutput. Invalid conversions report errors; `%n` is rejected and never writes\nthrough a pointer. Floating arguments follow printf's float-to-double promotion.\nThis parser is intentionally separate from brace parsing so each grammar can be\nreviewed and tested independently.",
+      "reading_order": [
+        "include/ffmt/printf.hpp:family_printf_value",
+        "include/ffmt/printf.hpp:family_printf",
+        "test/conformance/test_printf.cpp:dynamic_and_positional_fields",
+        "test/conformance/test_printf.cpp:invalid_conversions_do_not_write"
+      ],
+      "docs": [
+        "docs/features/printf.md"
+      ],
+      "source_provenance": {
+        "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+        "source_changes": "Conventional header layout; all percent-format matrices/arguments/guards retained in named test groups. No implementation token change."
+      },
+      "minimal_wiring": {
+        "focused_suites": [
+          "printf"
+        ],
+        "fixture_modules": [
+          "cases_printf.py"
+        ]
+      },
+      "before": "Brace formatting does not interpret %#08x; there is no typed percent parser or explicit %n rejection.",
+      "after": "#include <ffmt/printf.hpp>\nchar out[32];\nauto result = ffmt::printf_to_n(out, sizeof out, \"%#08x %.3f\", 42u, 1.25);\n// out contains \"0x00002a 1.250\".",
+      "validation": {
+        "commands": [
+          "make build/focused_printf CXX=\"$CXX\" && ./build/focused_printf"
+        ],
+        "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+        "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+      },
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/typed-printf",
+      "wave": 8
+    },
+    {
+      "id": "api-index",
+      "title": "Make library contracts and portable guides easy to navigate",
+      "dependencies": [
+        "cmake-tests",
+        "ci-conformance",
+        "reproducer-relocation",
+        "benchmark-driver",
+        "tool-memory-cuda",
+        "tool-memory-hip",
+        "tool-memory-openmp",
+        "tool-memory-sycl",
+        "tool-memory-kokkos"
+      ],
+      "change_kind": "documentation",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "{repo}/../ffmt-evaluation/tools/review_stack/check_links.py",
+          "{source}"
+        ]
+      ],
+      "docs": [
+        "docs/API.md",
+        "docs/BACKENDS.md",
+        "docs/CONFORMANCE.md"
+      ],
+      "problem": "The top-level README combines setup, output contracts, all optional families and research links in one dense page.",
+      "example": "#include <ffmt/base.hpp>\nffmt::println(\"value = {:04x}\", 42);\n// Follow API/build/backend/conformance guides for the corresponding detail.",
+      "design": "Keep one short entry page and move detailed output/customization/configuration contracts into a linked API guide. Feature guides remain with their implementations; build and conformance pages use the actual split test names.",
+      "tradeoffs": "Readers follow focused pages for detail. Documentation describes supported contracts and sampled tests rather than implying universal backend or fmt conformance.",
+      "reading_order": [
+        "README.md",
+        "docs/API.md",
+        "docs/BUILD.md",
+        "docs/BACKENDS.md",
+        "docs/CONFORMANCE.md"
+      ],
+      "validation": {
+        "commands": [
+          "Check all repository-relative Markdown links against the assembled checkout.",
+          "Review examples against the public base and optional-header interfaces; formatter implementation is unchanged."
+        ],
+        "results": "Pending independent review and assembled portable validation.",
+        "limitations": "Documentation/link checks are read-only. Existing portable tests substantiate examples; no hardware campaign rerun follows this navigation change."
+      },
+      "source_changes": "Build integration and documentation only; no formatter implementation changes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/api-index",
+      "wave": 13
+    },
+    {
+      "id": "backend-regression-selection",
+      "title": "Exercise the migrated buffer cases in Intel backend builds",
+      "dependencies": [
+        "migration"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-n",
+          "USE_OMP_ICPX=1",
+          "compile-omp",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}"
+        ]
+      ],
+      "problem": "Intel SYCL and icpx OpenMP build targets still omitted buffer-specific regression cases after both API paths gained the shared engine.",
+      "example": "make USE_OMP_ICPX=1 compile-omp # includes test_buffer_path.cpp",
+      "design": "Add BUFFER_TESTS to these two source lists only after migration makes their grammar valid.",
+      "tradeoffs": "This increases accelerator compile work and does not establish accelerator runtime qualification.",
+      "reading_order": [
+        "Makefile:USE_OMP_ICPX and default SYCL source lists",
+        "docs/contributing/INTEL_REGRESSIONS.md"
+      ],
+      "patches": [
+        "changes.patch"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/backend-regression-selection",
+      "wave": 7
+    },
+    {
+      "id": "build-compiler-selection",
+      "title": "Resolve AdaptiveCpp through the caller environment",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-n",
+          "USE_ACPP=1",
+          "compile-omp",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}"
+        ]
+      ],
+      "problem": "The AdaptiveCpp branch prepended a path from a developer machine and could select an unintended installation.",
+      "example": "PATH=/my/compiler/bin:$PATH make USE_ACPP=1 compile-omp",
+      "design": "Remove the site-specific PATH assignment and retain the existing backend flags and explicit CXX override behavior.",
+      "tradeoffs": "Callers must load or provide their own compiler environment; this check does not claim an AdaptiveCpp runtime result.",
+      "reading_order": [
+        "Makefile:USE_ACPP",
+        "docs/contributing/COMPILER_SELECTION.md"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-compiler-selection",
+      "wave": 2
+    },
+    {
+      "id": "build-header-dependencies",
+      "title": "Rebuild legacy test objects after any library header edit",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_make_header_dependencies.py"
+        ]
+      ],
+      "problem": "Legacy test rules watched only base.hpp, so changing an internal header could silently rerun a stale binary.",
+      "example": "touch include/ffmt/detail/parse.hpp\nmake test-host # recompiles affected objects",
+      "design": "Use the complete installed header list in the existing shared prerequisite variable; exercise an unchanged object and a subsequent internal-header edit with real Make timestamp decisions.",
+      "tradeoffs": "This conservative dependency list rebuilds some tests that do not instantiate the edited header, in exchange for reliable incremental checks.",
+      "reading_order": [
+        "Makefile:FFMT_HDRS and DEPS",
+        "test/conformance/test_make_header_dependencies.py"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-header-dependencies",
+      "wave": 2
+    },
+    {
+      "id": "ci-conformance",
+      "title": "Run and retain independent host corpus checks in ready CI",
+      "dependencies": [
+        "ci-sanitizers",
+        "tool-numeric-memory",
+        "named-arguments",
+        "ranges",
+        "chrono",
+        "standard-types",
+        "std23",
+        "styling",
+        "enum-helpers",
+        "typed-printf",
+        "feature-integration"
+      ],
+      "change_kind": "ci-integration",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_*.py"
+        ],
+        [
+          "python3",
+          "tools/conformance.py",
+          "--route",
+          "host-buffer",
+          "--route",
+          "host-specifiers",
+          "--opt",
+          "2",
+          "--host-cxx",
+          "{cxx}",
+          "--fmt-dir",
+          "{fmt_dir}"
+        ]
+      ],
+      "docs": [
+        "docs/contributing/CONFORMANCE_CI.md"
+      ],
+      "problem": "Focused regressions alone do not exercise the independently compiled output corpus and framed memory comparison in hosted CI.",
+      "example": "python3 tools/conformance.py --route host-buffer --route host-specifiers --opt 2 --host-cxx g++",
+      "design": "Add one explicit differential step to each Linux compiler/optimization job and upload its complete evidence directory even after a failure.",
+      "tradeoffs": "This increases hosted compile work; cases sample behavior rather than prove full fmt compatibility. The separate runner does not inherit Make sanitizer flags. Draft compiler jobs remain skipped.",
+      "reading_order": [
+        ".github/workflows/host.yml:matrix conformance step and evidence upload",
+        "docs/contributing/CONFORMANCE_CI.md"
+      ],
+      "validation": {
+        "commands": [
+          "python3 -m unittest discover -s test/conformance -p \"test_*.py\"",
+          "python3 tools/conformance.py --route host-buffer --route host-specifiers --opt 2 --host-cxx \"$CXX\" --fmt-dir \"$FFMT_FMT_DIR\""
+        ],
+        "results": "Pending independent review and assembled portable validation.",
+        "limitations": "Portable validation runs on the complete feature commit. Hosted checks start only for ready review waves; draft skips and cancellations are not passing evidence. This does not repeat hardware campaigns."
+      },
+      "source_changes": "Build integration and documentation only; no formatter implementation changes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-conformance",
+      "wave": 13
+    },
+    {
+      "id": "ci-sanitizers",
+      "title": "Restore bool validation in the host sanitizer jobs",
+      "dependencies": [
+        "migration",
+        "coverage-policy"
+      ],
+      "change_kind": "ci-policy",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer",
+          "test-host",
+          "test-capabilities",
+          "conformance-harness",
+          "test-negative"
+        ]
+      ],
+      "docs": [
+        "docs/contributing/SANITIZERS.md"
+      ],
+      "problem": "The historical blanket bool suppression can hide undefined behavior after the old formatting path has been replaced.",
+      "example": "EXTRA_CXXFLAGS=-fsanitize=address,undefined\n# bool checks are active again",
+      "design": "Remove only the obsolete -fno-sanitize=bool exception and its explanation; preserve the matrix and all commands.",
+      "tradeoffs": "Dependency/toolchain bool defects now fail CI as well. A new suppression would need a demonstrated scoped reason.",
+      "reading_order": [
+        ".github/workflows/host.yml:matrix.env.EXTRA_CXXFLAGS",
+        "docs/contributing/SANITIZERS.md"
+      ],
+      "validation": {
+        "commands": [
+          "make -j2 CXX=\"$CXX\" EXTRA_CXXFLAGS=\"-fsanitize=address,undefined\" test-host test-capabilities conformance-harness",
+          "make -j2 CXX=\"$CXX\" EXTRA_CXXFLAGS=\"-fsanitize=address,undefined\" test-negative"
+        ],
+        "results": "Pending independent review and assembled portable validation.",
+        "limitations": "Validate sanitizers with GCC and Clang after migration. This stage does not change hosted readiness, coverage policy or corpus selection."
+      },
+      "source_changes": "Build integration and documentation only; no formatter implementation changes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-sanitizers",
+      "wave": 7
+    },
+    {
+      "id": "cmake-package",
+      "title": "Install a header-only CMake interface target",
+      "dependencies": [
+        "obsolete-deletion"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "cmake",
+          "-S",
+          ".",
+          "-B",
+          "{output}/package",
+          "-DCMAKE_CXX_COMPILER={cxx}",
+          "-DCMAKE_INSTALL_PREFIX={output}/install",
+          "-DCMAKE_DISABLE_FIND_PACKAGE_Python3=ON",
+          "-DFFMT_FMT_DIR=/unavailable"
+        ],
+        [
+          "cmake",
+          "--install",
+          "{output}/package"
+        ],
+        [
+          "cmake",
+          "-S",
+          "examples/cmake-consumer",
+          "-B",
+          "{output}/consumer",
+          "-DCMAKE_CXX_COMPILER={cxx}",
+          "-DCMAKE_PREFIX_PATH={output}/install"
+        ],
+        [
+          "cmake",
+          "--build",
+          "{output}/consumer",
+          "-j2"
+        ],
+        [
+          "{output}/consumer/ffmt_consumer"
+        ]
+      ],
+      "docs": [
+        "docs/BUILD.md"
+      ],
+      "problem": "Applications need a reusable CMake target and an installed package without inheriting oracle or test dependencies.",
+      "example": "find_package(ffmt CONFIG REQUIRED)\ntarget_link_libraries(my_program PRIVATE ffmt::ffmt)",
+      "design": "An INTERFACE target carries headers and C++20 requirements. Standard package helpers export relocatable target metadata; a small independent consumer checks the installed contract.",
+      "tradeoffs": "The target does not configure accelerator runtimes or backend flags. CMake 3.20 is required; direct header consumers do not need CMake.",
+      "reading_order": [
+        "CMakeLists.txt",
+        "cmake/ffmtConfig.cmake.in",
+        "examples/cmake-consumer/main.cpp",
+        "docs/BUILD.md"
+      ],
+      "validation": {
+        "commands": [
+          "cmake -S . -B build/package -DCMAKE_INSTALL_PREFIX=\"$PWD/build/install\" -DCMAKE_DISABLE_FIND_PACKAGE_Python3=ON -DFFMT_FMT_DIR=/unavailable",
+          "cmake --install build/package",
+          "cmake -S examples/cmake-consumer -B build/consumer -DCMAKE_PREFIX_PATH=\"$PWD/build/install\"",
+          "cmake --build build/consumer -j2 && ./build/consumer/ffmt_consumer"
+        ],
+        "results": "Pending independent review and assembled portable validation.",
+        "limitations": "Portable validation is pending on the assembled commit; root records commands and outcomes before publication."
+      },
+      "source_changes": "Build integration and documentation only; no formatter implementation changes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-package",
+      "wave": 7
+    },
+    {
+      "id": "cmake-tests",
+      "title": "Register every split portable suite explicitly in CTest",
+      "dependencies": [
+        "cmake-package",
+        "migration",
+        "named-arguments",
+        "ranges",
+        "chrono",
+        "standard-types",
+        "std23",
+        "styling",
+        "enum-helpers",
+        "typed-printf",
+        "feature-integration",
+        "tool-numeric-memory"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "cmake",
+          "-S",
+          ".",
+          "-B",
+          "{output}/cmake",
+          "-DFFMT_BUILD_TESTS=ON",
+          "-DFFMT_BUILD_CXX23_TESTS=ON",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER={cxx}",
+          "-DFFMT_FMT_DIR={fmt_dir}"
+        ],
+        [
+          "cmake",
+          "--build",
+          "{output}/cmake",
+          "-j2"
+        ],
+        [
+          "ctest",
+          "--test-dir",
+          "{output}/cmake",
+          "--output-on-failure",
+          "--no-tests=error",
+          "-j2"
+        ]
+      ],
+      "docs": [
+        "docs/BUILD.md"
+      ],
+      "problem": "The previous test list used combined source files and existence guards, which can turn a missing regression into an apparently successful configure.",
+      "example": "cmake -S . -B build/cmake -DFFMT_BUILD_TESTS=ON\ncmake --build build/cmake -j2\nctest --test-dir build/cmake --output-on-failure",
+      "design": "Explicit source registrations preserve the decomposed suites, while Python discovers all capability unit tests. Configure verifies a clean pinned oracle; only tests discover Python and Git.",
+      "tradeoffs": "Full tests require the complete feature checkout and independent oracle. Optional extension skips remain visible, and C++23 stays opt-in. This is host validation, not accelerator runtime qualification.",
+      "reading_order": [
+        "cmake/ffmtTests.cmake:ffmt_add_regression and source list",
+        "cmake/ffmtTests.cmake:extension flags and Python discovery",
+        "CMakeLists.txt:test options",
+        "docs/BUILD.md"
+      ],
+      "validation": {
+        "commands": [
+          "cmake -S . -B build/cmake -DFFMT_BUILD_TESTS=ON -DFFMT_BUILD_CXX23_TESTS=ON -DCMAKE_CXX_COMPILER=\"$CXX\" -DFFMT_FMT_DIR=\"$FFMT_FMT_DIR\"",
+          "cmake --build build/cmake -j2",
+          "ctest --test-dir build/cmake --output-on-failure",
+          "ctest --test-dir build/cmake -N"
+        ],
+        "results": "Pending independent review and assembled portable validation.",
+        "limitations": "Run on the assembled complete-feature commit. Inspect skip counts; an extension skip is not a pass. Missing declared C++ sources must fail configuration. No hosted/device result is implied."
+      },
+      "source_changes": "Build integration and documentation only; no formatter implementation changes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-tests",
+      "wave": 13
+    },
+    {
+      "id": "complete",
+      "title": "Collect the independently reviewed library graph",
+      "dependencies": [
+        "api-index",
+        "backend-regression-selection",
+        "benchmark-resources",
+        "build-compiler-selection",
+        "build-header-dependencies",
+        "local-ignores"
+      ],
+      "change_kind": "collection-only",
+      "collection_only": true,
+      "remove": [],
+      "tests": [],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/complete",
+      "wave": 14
+    },
+    {
+      "id": "local-ignores",
+      "title": "Keep local outputs and installations untracked",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [],
+      "problem": "Portable runner output, profile data and local installations must not be added accidentally when editing the library.",
+      "example": "python3 tools/conformance.py ... # artifacts/ stays untracked",
+      "design": "Restore the narrow directory and suffix ignores from the retained library snapshot.",
+      "tradeoffs": "Ignored output must be captured deliberately by an evaluation workflow when it serves as evidence.",
+      "reading_order": [
+        ".gitignore",
+        "docs/contributing/LOCAL_OUTPUTS.md"
+      ],
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/local-ignores",
+      "wave": 2
+    },
+    {
+      "id": "reproducer-relocation",
+      "title": "Remove preserved independent compiler controls from the library",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "reproducer-relocation",
+      "remove": [
+        "implementation_limitation/dpcpp_O0.cpp",
+        "implementation_limitation/icpx_omp_pragma_in_dowhile.cpp"
+      ],
+      "tests": [],
+      "docs": [
+        "docs/contributing/REPRODUCERS.md"
+      ],
+      "problem": "Two inherited compiler/runtime controls live in the library tree despite having no ffmt dependency.",
+      "example": "// The controls include SYCL/stdio, not ffmt; their preserved sources are linked in docs/contributing/REPRODUCERS.md.",
+      "design": "Delete only the redundant library copies and link fixed evaluation commits that retain the exact source bytes and provenance.",
+      "tradeoffs": "Readers follow the companion repository for independent compiler investigations; library regressions stay in this checkout.",
+      "reading_order": [
+        "docs/contributing/REPRODUCERS.md"
+      ],
+      "validation": {
+        "commands": [
+          "Verify both removed paths match the preserved evaluation source hashes; no compiler campaign rerun is required."
+        ],
+        "results": "Pending independent review and assembled portable validation.",
+        "limitations": "Read-only byte/hash verification is sufficient for relocation; original sources and captured failures stay unchanged in evaluation."
+      },
+      "source_changes": "Build integration and documentation only; no formatter implementation changes.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/reproducer-relocation",
+      "wave": 7
+    }
+  ]
+}

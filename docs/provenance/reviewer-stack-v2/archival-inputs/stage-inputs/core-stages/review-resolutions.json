@@ -1,0 +1,33 @@
+{
+  "review_source": "Independent tooling-agent core review, relayed by root",
+  "resolutions": [
+    {
+      "finding": "Bounded oracle helper incorrectly expects capacity bytes even when expected output is shorter.",
+      "resolution": "Retained bytes are min(capacity,expected.size()); prefix and sentinels checked at actual retained bound; added empty literal and empty string regressions.",
+      "affected_stage": "primitives",
+      "kind": "test-helper fix"
+    },
+    {
+      "finding": "Conversion review needs direct boundary coverage and internal precondition/capacity explanation.",
+      "resolution": "Added direct fmt differential checks over 21 positive binary64 and 21 binary32 representation boundary cases plus notation/carry neighbors, decimal tie/carry tests and explicit nonfinite classification. Documented supported finite magnitude precondition, caller sign/nonfinite handling, and conservative 1100/16520 digit capacities.",
+      "affected_stage": "floating-conversion",
+      "kind": "additional direct tests + comments/docs"
+    },
+    {
+      "finding": "Final source-annotation audit: Unicode width table extraction omitted its surrounding OpenMP declare-target region.",
+      "resolution": "Restore the same OpenMP declare-target/end-declare-target wrapper around the extracted qualified width table/helpers.",
+      "affected_stage": "unicode",
+      "kind": "preserve original compiler annotations"
+    }
+  ],
+  "algorithm_changes": false,
+  "validation": "Source review complete; instantiated portable tests pending root CPU validation on immutable assembled commits.",
+  "sha256": {
+    "primitives/files/test/conformance/core_compare.hpp": "81bb75ec249383d5715e2b2dff1ac8970926dd1c38258ecc25e8cf954f0afeb2",
+    "primitives/files/test/conformance/test_core_primitives.cpp": "44d1e5272e815655f1f831df4c7784fe3e51c041bc22e9abadd107e8be17d278",
+    "floating-conversion/files/test/conformance/test_core_conversion.cpp": "b3330c7642917c7df30b76b47f5fae3ace085e3c9988efae4dde1c12b9a95f07",
+    "floating-conversion/files/include/ffmt/detail/floating.hpp": "611e655e77dc001666a2673e07d55376a24c3d653b8dc22c708873a6ee474bd7",
+    "floating-conversion/files/docs/api/floating-conversion.md": "ea5389ba30fd36fcf1589e6b061fb48e16941c0decb103f024f0622d586188b6",
+    "unicode/files/include/ffmt/detail/unicode_width.hpp": "9b58225b056fe08f67dcddc365d9a0465d3341e902c67f6483c291a58982265a"
+  }
+}

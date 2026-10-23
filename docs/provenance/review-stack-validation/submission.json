@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "jobid": "1011211",
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "rome_7742",
+    "-n",
+    "1",
+    "-t",
+    "240",
+    "--cwd",
+    "/home/nnichols",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validate.sh",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/stack-index.json"
+  ],
+  "command_shell": "qsub --mode script -q rome_7742 -n 1 -t 240 --cwd /home/nnichols /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validate.sh /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/stack-index.json",
+  "submission_cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+  "scheduler": {
+    "kind": "Cobalt",
+    "queue": "rome_7742",
+    "nodes": 1,
+    "walltime_minutes": 240,
+    "job_cwd": "/home/nnichols",
+    "mode": "script"
+  },
+  "submission": {
+    "exit_code": 0,
+    "stdout": "1011211\n",
+    "stderr": "",
+    "recorded_from": "Original successful tools.exec_command response; command not resubmitted"
+  },
+  "scheduler_output_files": [
+    "/home/nnichols/1011211.cobaltlog",
+    "/home/nnichols/1011211.output",
+    "/home/nnichols/1011211.error"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "standard-types",
+  "title": "Adapt standard value wrappers and complex numbers",
+  "dependencies": [
+    "shared-family"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "std"
+    ],
+    "commands": [
+      "make build/focused_std CXX=\"$CXX\" && ./build/focused_std"
+    ]
+  },
+  "problem": "Format common standard wrappers through existing contained-value formatters.",
+  "example": "#include <ffmt/std.hpp>\nffmt::println(\"{}\", std::optional<int>{42});  // optional(42)\nffmt::println(\"{:.2f}\", std::complex<double>{1, -2.2}); // (1.00-2.20i)",
+  "design": "Explicit adapters avoid streams and RTTI; each standard operation must be available on the target.",
+  "tradeoffs": "Optional and variant values use debug presentation for contained text; bitsets,\nbytes, reference wrappers, atomics, complex numbers, source locations and pointer\nviews have explicit adapters. `ffmt::ptr` makes a raw/smart pointer printable\nwithout dereferencing it. Atomic formatting loads the current value; a format\ncall is not an atomic snapshot across multiple arguments. These adapters do not\nsupply filesystem, streams, RTTI, thread-ID or exception-traversal services.\nStandard-library types and their operations must themselves be device callable.",
+  "reading_order": [
+    "include/ffmt/std.hpp",
+    "test/conformance/test_std.cpp"
+  ],
+  "docs": [
+    "docs/features/standard-types.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Conventional header layout; wrapper/bitset/complex/pointer/rejection tests extracted and grouped. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "std"
+    ],
+    "fixture_modules": [
+      "cases_std.py"
+    ]
+  },
+  "before": "std::optional<int> and std::complex<double> have no formatter in the core.",
+  "after": "#include <ffmt/std.hpp>\nffmt::println(\"{}\", std::optional<int>{42});  // optional(42)\nffmt::println(\"{:.2f}\", std::complex<double>{1, -2.2}); // (1.00-2.20i)",
+  "validation": {
+    "commands": [
+      "make build/focused_std CXX=\"$CXX\" && ./build/focused_std"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

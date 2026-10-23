@@ -1,0 +1,32 @@
+{
+  "id": "coverage-policy",
+  "title": "Replace the blocking coverage regression gate with reporting",
+  "dependencies": [
+    "coverage-metrics"
+  ],
+  "change_kind": "coverage-policy",
+  "remove": [],
+  "tests": [
+    [
+      "make",
+      "-j2",
+      "CXX={cxx}",
+      "FMT_DIR={fmt_dir}",
+      "HOST_OPT=-O0",
+      "coverage"
+    ]
+  ],
+  "problem": "Header movement and template instantiation alter the coverage denominator, so aggregate percentage decreases can block a behavior-preserving change.",
+  "example": "Before: a 0.02 percentage-point drop fails CI. After: valid per-file base/head JSON is uploaded and the same drop is visible but does not block merging.",
+  "design": "Keep invalid or empty measurement blocking, report region/line/branch metrics across all library headers, and make per-file regression assessment a human review decision.",
+  "tradeoffs": "This deliberately loses automatic detection of real percentage regressions. Passing CI no longer guarantees nondecreasing coverage; correctness and sanitizer checks remain independent blocking checks.",
+  "reading_order": [
+    "docs/contributing/COVERAGE.md",
+    ".github/workflows/host.yml:coverage",
+    "Makefile:coverage"
+  ],
+  "docs": [
+    "docs/contributing/COVERAGE.md"
+  ],
+  "wave": 1
+}

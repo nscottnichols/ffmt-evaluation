@@ -1,0 +1,9 @@
+{
+  "original_revision": "aeff043614725d58d383c8add086f548d77d05eb",
+  "restructured_revision": "34ded72e14e7756938a3e1cd885f3afdf158b57e",
+  "original_methods": 26,
+  "current_methods": 53,
+  "missing_original_methods": [],
+  "changed_original_methods": [],
+  "limitation": "AST equality validates retained test bodies, not all runtime dependencies or execution."
+}

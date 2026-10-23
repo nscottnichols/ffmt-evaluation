@@ -1,0 +1,36 @@
+{
+  "reviewer": "review_architecture",
+  "scope": "Independent targeted Make preservation repair review",
+  "audited_commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "findings": [
+    {
+      "area": "negative driver",
+      "assessment": "Minimal removal of old silent rejection rules and diagnostic-aware wrapper with same positive/syntax controls; no hidden default-goal change."
+    },
+    {
+      "area": "conformance wrapper",
+      "assessment": "Independent target with clean pinned fmt and explicit revision/compiler; inserted after all to preserve default goal."
+    },
+    {
+      "area": "forced portable floats",
+      "assessment": "Explicit second registration of same source with FFMT_PORTABLE_SHORTEST=1; additional_suites metadata ensures validation rather than relying on a source glob."
+    },
+    {
+      "area": "C++23 opt-in",
+      "assessment": "Standard-based default capability filter and explicit test-cxx23 target are coherent. Initial coverage concern was a false positive: existing optional=1 marker excludes std23 from coverage. Real Make -n coverage contains no c++23 compile."
+    }
+  ],
+  "validation": {
+    "command": [
+      "make",
+      "-n",
+      "coverage",
+      "CXX=c++",
+      "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt"
+    ],
+    "exit_code": 0,
+    "no_cxx23_compile": true,
+    "compilation": false
+  },
+  "blockers": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": "build-registration",
+  "title": "Register portable capability tests without silently omitting sources",
+  "dependencies": [
+    "oracle-pin"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_build_registration.py"
+  ],
+  "problem": "Discovering test source files with a wildcard can silently omit a declared test when its file is missing.",
+  "example": "A registration naming test/conformance/test_output.cpp is a required Make prerequisite; deleting that source fails the build rather than shrinking the test suite.",
+  "design": "Each capability adds a small explicit registration. A shared Make fragment provides compiler, reference-library, C++ standard and optional-extension handling.",
+  "tradeoffs": "Registrations are additional build metadata, but independent feature branches add separate files and do not edit one combined test source or suite list.",
+  "reading_order": [
+    "mk/portable-tests.mk",
+    "docs/contributing/TESTS.md"
+  ],
+  "docs": "docs/contributing/TESTS.md",
+  "wave": 1
+}

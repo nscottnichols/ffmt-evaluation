@@ -1,0 +1,51 @@
+{
+  "id": "typed-printf",
+  "title": "Add checked typed percent formatting",
+  "dependencies": [
+    "shared-family"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "printf"
+    ],
+    "commands": [
+      "make build/focused_printf CXX=\"$CXX\" && ./build/focused_printf"
+    ]
+  },
+  "problem": "Support percent formatting without unsafe C varargs or the writing conversion %n.",
+  "example": "#include <ffmt/printf.hpp>\nchar out[32];\nauto result = ffmt::printf_to_n(out, sizeof out, \"%#08x %.3f\", 42u, 1.25);\n// out contains \"0x00002a 1.250\".",
+  "design": "A separate typed grammar shares primitive conversion and bounded sinks, but does not implement %n.",
+  "tradeoffs": "The percent parser uses typed arguments rather than C varargs and shares the\nbounded output/error contract of brace formatting. It supports positional\narguments, dynamic width/precision, integer length modifiers and narrow/wide\noutput. Invalid conversions report errors; `%n` is rejected and never writes\nthrough a pointer. Floating arguments follow printf's float-to-double promotion.\nThis parser is intentionally separate from brace parsing so each grammar can be\nreviewed and tested independently.",
+  "reading_order": [
+    "include/ffmt/printf.hpp:family_printf_value",
+    "include/ffmt/printf.hpp:family_printf",
+    "test/conformance/test_printf.cpp:dynamic_and_positional_fields",
+    "test/conformance/test_printf.cpp:invalid_conversions_do_not_write"
+  ],
+  "docs": [
+    "docs/features/printf.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Conventional header layout; all percent-format matrices/arguments/guards retained in named test groups. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "printf"
+    ],
+    "fixture_modules": [
+      "cases_printf.py"
+    ]
+  },
+  "before": "Brace formatting does not interpret %#08x; there is no typed percent parser or explicit %n rejection.",
+  "after": "#include <ffmt/printf.hpp>\nchar out[32];\nauto result = ffmt::printf_to_n(out, sizeof out, \"%#08x %.3f\", 42u, 1.25);\n// out contains \"0x00002a 1.250\".",
+  "validation": {
+    "commands": [
+      "make build/focused_printf CXX=\"$CXX\" && ./build/focused_printf"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

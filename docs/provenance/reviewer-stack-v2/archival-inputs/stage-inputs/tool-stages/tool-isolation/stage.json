@@ -1,0 +1,23 @@
+{
+  "id": "tool-isolation",
+  "title": "Preserve failed batches before isolating individual cases",
+  "dependencies": [
+    "tool-snapshots",
+    "tool-negative"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_runner.py",
+    "python3 tools/conformance.py --route host-buffer --opt 2 --no-memory --no-negative --shard-size 2"
+  ],
+  "problem": "A combined switch can fail although individual cases succeed, and retrying without saving it erases the failure.",
+  "example": "When a two-case binary crashes, save its source hash and diagnostic before retrying one-case binaries.",
+  "design": "Require a positive execution control, recursively split failed build batches, and isolate remaining cases after runtime failures. Save each checkpoint atomically.",
+  "tradeoffs": "Retries increase compile time and isolated passes do not erase batch failures. A failed control produces not_run outcomes, not a formatting judgment.",
+  "reading_order": [
+    "tools/conformance.py:configuration",
+    "test/conformance/test_runner.py"
+  ],
+  "docs": "Failed batch builds and executions remain in manifest shard_failures before per-case isolation. Positive controls separate missing execution capability from formatting outcomes."
+}

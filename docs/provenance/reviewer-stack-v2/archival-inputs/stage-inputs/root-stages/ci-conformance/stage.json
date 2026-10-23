@@ -1,0 +1,67 @@
+{
+  "id": "ci-conformance",
+  "title": "Run and retain independent host corpus checks in ready CI",
+  "dependencies": [
+    "ci-sanitizers",
+    "tool-numeric-memory",
+    "named-arguments",
+    "ranges",
+    "chrono",
+    "standard-types",
+    "std23",
+    "styling",
+    "enum-helpers",
+    "typed-printf",
+    "feature-integration"
+  ],
+  "change_kind": "ci-integration",
+  "remove": [],
+  "tests": [
+    [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "test/conformance",
+      "-p",
+      "test_*.py"
+    ],
+    [
+      "python3",
+      "tools/conformance.py",
+      "--route",
+      "host-buffer",
+      "--route",
+      "host-specifiers",
+      "--opt",
+      "2",
+      "--host-cxx",
+      "{cxx}",
+      "--fmt-dir",
+      "{fmt_dir}",
+      "--output",
+      "{output}/conformance"
+    ]
+  ],
+  "docs": [
+    "docs/contributing/CONFORMANCE_CI.md"
+  ],
+  "problem": "Focused regressions alone do not exercise the independently compiled output corpus and framed memory comparison in hosted CI.",
+  "example": "python3 tools/conformance.py --route host-buffer --route host-specifiers --opt 2 --host-cxx g++",
+  "design": "Add one explicit differential step to each Linux compiler/optimization job and upload its complete evidence directory even after a failure.",
+  "tradeoffs": "This increases hosted compile work; cases sample behavior rather than prove full fmt compatibility. The separate runner does not inherit Make sanitizer flags. Draft compiler jobs remain skipped.",
+  "reading_order": [
+    ".github/workflows/host.yml:matrix conformance step and evidence upload",
+    "docs/contributing/CONFORMANCE_CI.md"
+  ],
+  "validation": {
+    "commands": [
+      "python3 -m unittest discover -s test/conformance -p \"test_*.py\"",
+      "python3 tools/conformance.py --route host-buffer --route host-specifiers --opt 2 --host-cxx \"$CXX\" --fmt-dir \"$FFMT_FMT_DIR\""
+    ],
+    "results": "Pending independent review and assembled portable validation.",
+    "limitations": "Portable validation runs on the complete feature commit. Hosted checks start only for ready review waves; draft skips and cancellations are not passing evidence. This does not repeat hardware campaigns."
+  },
+  "source_changes": "Build integration and documentation only; no formatter implementation changes."
+}

@@ -1,0 +1,135 @@
+#include <hip/hip_runtime.h>
+#define HD __host__ __device__
+#include <ffmt/base.hpp>
+
+#include <cstdint>
+#include <cstdio>
+#include <exception>
+#include <vector>
+struct Input {
+  std::uint64_t bits;
+  unsigned kind;
+};
+struct Output {
+  unsigned written = 0, required = 0, error = 0;
+  char text[768]{};
+};
+template <class T, class U> HD T from_bits(U bits) {
+  return __builtin_bit_cast(T, bits);
+}
+template <class T> HD void format_record_value(T value, Output &out) {
+#ifdef ORACLE
+  auto s = fmt::format("{}|{:.6f}|{:.5e}|{:.17g}|{:#020.5a}", value, value,
+                       value, value, value);
+  out.required = unsigned(s.size());
+  out.written = out.required;
+  if (out.written > sizeof(out.text)) {
+    out.error = 1;
+    out.written = sizeof(out.text);
+  }
+  for (unsigned i = 0; i < out.written; ++i)
+    out.text[i] = s[i];
+#else
+  auto r = ffmt::format_to_n(out.text, sizeof(out.text),
+                             "{}|{:.6f}|{:.5e}|{:.17g}|{:#020.5a}", value,
+                             value, value, value, value);
+  out.written = unsigned(r.written);
+  out.required = unsigned(r.required);
+  out.error = unsigned(r.error);
+#endif
+}
+HD void format_record(Input in, Output &out) {
+  if (in.kind == 32)
+    format_record_value(from_bits<float>(std::uint32_t(in.bits)), out);
+  else
+    format_record_value(from_bits<double>(in.bits), out);
+}
+std::vector<Input> inputs() {
+  std::vector<Input> values;
+  const std::uint64_t special64[] = {0,
+                                     0x8000000000000000ULL,
+                                     1,
+                                     0x000fffffffffffffULL,
+                                     0x0010000000000000ULL,
+                                     0x3ff0000000000000ULL,
+                                     0x7fefffffffffffffULL,
+                                     0x7ff0000000000000ULL,
+                                     0xfff0000000000000ULL,
+                                     0x7ff8000000000001ULL,
+                                     0xfff8000000000001ULL,
+                                     0x7ff0000000000001ULL};
+  const std::uint32_t special32[] = {0,           0x80000000U, 1,
+                                     0x007fffffU, 0x00800000U, 0x3f800000U,
+                                     0x7f7fffffU, 0x7f800000U, 0xff800000U,
+                                     0x7fc00001U, 0xffc00001U, 0x7f800001U};
+  for (unsigned i = 0; i < 12; ++i) {
+    values.push_back({special64[i], 64});
+    values.push_back({special32[i], 32});
+  }
+  std::uint64_t state = 0x4d595df4d0f33173ULL;
+  for (unsigned i = 0; i < 8; ++i) {
+    state ^= state << 13;
+    state ^= state >> 7;
+    state ^= state << 17;
+    values.push_back({state, 64});
+    values.push_back({std::uint32_t(state), 32});
+  }
+  return values;
+}
+void put32(std::uint32_t v) {
+  unsigned char b[4];
+  for (int i = 0; i < 4; ++i)
+    b[i] = v >> (8 * i);
+  std::fwrite(b, 1, 4, stdout);
+}
+void put64(std::uint64_t v) {
+  put32(std::uint32_t(v));
+  put32(std::uint32_t(v >> 32));
+}
+void serialize(const std::vector<Input> &in, const std::vector<Output> &out) {
+  put32(0x46464d54U);
+  put32(unsigned(in.size()));
+  for (unsigned i = 0; i < in.size(); ++i) {
+    put32(in[i].kind);
+    put64(in[i].bits);
+    put32(out[i].written);
+    put32(out[i].required);
+    put32(out[i].error);
+    std::fwrite(out[i].text, 1, out[i].written, stdout);
+  }
+}
+
+__global__ void memory_kernel(const Input *input, Output *output,
+                              unsigned count) {
+  unsigned i = blockIdx.x * blockDim.x + threadIdx.x;
+  if (i < count)
+    format_record(input[i], output[i]);
+}
+int main() {
+  auto input = inputs();
+  std::vector<Output> output(input.size());
+  Input *device_input = nullptr;
+  Output *device_output = nullptr;
+  if (hipMalloc((void **)&device_input, input.size() * sizeof(Input)) !=
+      hipSuccess)
+    return 81;
+  if (hipMalloc((void **)&device_output, output.size() * sizeof(Output)) !=
+      hipSuccess)
+    return 82;
+  if (hipMemcpy(device_input, input.data(), input.size() * sizeof(Input),
+                hipMemcpyHostToDevice) != hipSuccess)
+    return 83;
+  if (hipMemset(device_output, 0, output.size() * sizeof(Output)) != hipSuccess)
+    return 84;
+  hipLaunchKernelGGL(memory_kernel, dim3((input.size() + 63) / 64), dim3(64), 0,
+                     0, device_input, device_output, unsigned(input.size()));
+  if (hipGetLastError() != hipSuccess || hipDeviceSynchronize() != hipSuccess)
+    return 85;
+  if (hipMemcpy(output.data(), device_output, output.size() * sizeof(Output),
+                hipMemcpyDeviceToHost) != hipSuccess)
+    return 86;
+  hipFree(device_input);
+  hipFree(device_output);
+  serialize(input, output);
+  return 0;
+}

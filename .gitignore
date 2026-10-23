@@ -1,6 +1,6 @@
-artifacts/
-software/
-third_party/
+artifacts
+software
+third_party
 build/
 __pycache__/
 *.pyc

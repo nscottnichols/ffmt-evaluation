@@ -1,0 +1,9 @@
+-- The CXX compiler identification is Clang 22.1.8
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /soft/compilers/llvm/release-22.1.8/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/build

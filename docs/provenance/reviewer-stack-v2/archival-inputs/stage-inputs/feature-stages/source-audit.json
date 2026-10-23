@@ -1,0 +1,186 @@
+{
+  "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+  "header_equivalence": [
+    {
+      "path": "include/ffmt/args.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/enum.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/detail/family.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/ranges.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/chrono.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/std.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/std23.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/color.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    },
+    {
+      "path": "include/ffmt/printf.hpp",
+      "cpp_tokens_and_include_set_equal": true,
+      "normalization": "whitespace/comments/include ordering; family.hpp additionally normalizes once -> render_and_measure"
+    }
+  ],
+  "test_mapping": {
+    "test_families.cpp": [
+      {
+        "source_lines": "29,41-51",
+        "destination": "ranges/std local legacy formatter fixtures"
+      },
+      {
+        "source_lines": "30,151-153",
+        "destination": "test_std.cpp"
+      },
+      {
+        "source_lines": "31-50,52-55,60,68-91,158-196,293-294,297-301,313-321",
+        "destination": "test_ranges.cpp"
+      },
+      {
+        "source_lines": "56-59,156-157",
+        "destination": "test_enum.cpp"
+      },
+      {
+        "source_lines": "61-67,155",
+        "destination": "test_formatter_composition.cpp"
+      },
+      {
+        "source_lines": "94-147",
+        "destination": "family_test_support.hpp; chrono oracle wrappers remain test_chrono.cpp"
+      },
+      {
+        "source_lines": "197-236,310-312",
+        "destination": "test_std.cpp"
+      },
+      {
+        "source_lines": "237-241",
+        "destination": "test_style.cpp"
+      },
+      {
+        "source_lines": "242",
+        "destination": "test_named_arguments.cpp"
+      },
+      {
+        "source_lines": "243-245",
+        "destination": "test_feature_integration.cpp"
+      },
+      {
+        "source_lines": "246-292,295-296,302-309",
+        "destination": "test_chrono.cpp"
+      }
+    ],
+    "test_engine_forwarding.cpp": [
+      {
+        "source_lines": "13-24,51-52,74-82,94-95,100-103,147-149",
+        "destination": "test_core_forwarding.cpp (fresh counters per operation; compile-negative check uses format_to before transport exists)"
+      },
+      {
+        "source_lines": "42-54,104-110",
+        "destination": "test_legacy_forwarding.cpp"
+      },
+      {
+        "source_lines": "83-85,96-99",
+        "destination": "test_named_arguments.cpp (fresh named counter begins at 1 rather than earlier sequential 4)"
+      },
+      {
+        "source_lines": "86-93",
+        "destination": "test_transport_forwarding.cpp (fresh counters per transport entry point)"
+      },
+      {
+        "source_lines": "25-41,55-69,111-146",
+        "destination": "test_ranges_forwarding.cpp"
+      }
+    ],
+    "test_families_ranges.cpp": [
+      {
+        "source_lines": "entire file except named range assertion",
+        "destination": "test_ranges_iterators.cpp"
+      },
+      {
+        "source_lines": "named mutable range assertion",
+        "destination": "test_feature_integration.cpp"
+      }
+    ],
+    "test_families_std23.cpp": [
+      {
+        "source_lines": "entire file",
+        "destination": "test_std23.cpp"
+      }
+    ],
+    "test_families_printf.cpp": [
+      {
+        "source_lines": "entire file",
+        "destination": "test_printf.cpp (matrix grouped into named functions; integer %n guard retained)"
+      }
+    ]
+  },
+  "added_tests": [
+    "test_family_support.cpp: direct single-pass bounded alignment, streaming replay rejection and Unicode columns",
+    "test_named_arguments.cpp: primitive named dynamic width",
+    "Named runtime validation: exact errors and untouched output for missing/incompatible/invalid widths",
+    "Shared-family replayable streaming right/center success"
+  ],
+  "hardware": "No hardware run. All optional header C++ tokens unchanged after documented lexical normalization; new tests require allocated CPU validation of assembled stages.",
+  "fixture_equivalence": {
+    "unchanged_case_count": 12,
+    "ids": [
+      "chrono-duration",
+      "chrono-calendar",
+      "named-fields",
+      "printf-style",
+      "range-nested-spec",
+      "tuple",
+      "join",
+      "bounded-family-padding",
+      "stream-left-family-padding",
+      "optional",
+      "complex",
+      "styled"
+    ],
+    "comparison": "Every feature fixture dictionary equals its original cases.py dictionary, including all C++ preambles and expressions."
+  },
+  "independent_review_fixes": [
+    {
+      "finding": "Range test legacy formatter specialization omitted its closing brace/semicolon at the extraction boundary.",
+      "fix": "Copied original source through line51 (including the complete specialization), reformatted and updated export.",
+      "validation": "Independent source review; assembled-prefix compiler validation pending."
+    },
+    {
+      "finding": "Documented named runtime validation tradeoff lacked direct error tests.",
+      "fix": "Added missing-name, incompatible named type/spec, negative named width and nonintegral named width cases; assert exact error, zero written output, unchanged buffer and output iterator."
+    },
+    {
+      "finding": "Shared family direct tests omitted successful replayable streaming right/center alignment.",
+      "fix": "Added explicit replayable body success with exact bytes/counts and observed measurement/output passes."
+    },
+    {
+      "finding": "Generic provenance text mentioned a padding lambda rename for unrelated features.",
+      "fix": "Replaced each stage description with its actual header/test edits."
+    }
+  ]
+}

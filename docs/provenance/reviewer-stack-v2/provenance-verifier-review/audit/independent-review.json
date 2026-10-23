@@ -1,0 +1,72 @@
+{
+  "reviewer": "review_architecture",
+  "review": "Independent pinned historical verifier review",
+  "assessment": "Explicit immutable commit required; direct commit object and full header inventory verified; raw blobs hashed without checkout or network writes; default live source mode preserved. Historical source passes; restructured source correctly fails the historical equivalence claim.",
+  "checks": [
+    {
+      "label": "historical",
+      "command": [
+        "python3",
+        "tools/verify_provenance.py",
+        "--ffmt-checkout",
+        "../ffmt",
+        "--library-revision",
+        "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout_sha256": "3a23128f703bf4d0892b77015656df3bf3043347c14ff95f2a3691d5ed8c32c9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "restructured",
+      "command": [
+        "python3",
+        "tools/verify_provenance.py",
+        "--ffmt-checkout",
+        "../ffmt",
+        "--library-revision",
+        "471627c31cd1e09a2d4587c0369ec662251f7356"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "0d301e97c09eac7d1ffbc3df419e7aef160f4757611f98c542e0eff36d5465b4"
+    },
+    {
+      "label": "historical-refs",
+      "command": [
+        "python3",
+        "tools/verify_provenance.py",
+        "--ffmt-checkout",
+        "../ffmt",
+        "--library-revision",
+        "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+        "--check-source-refs"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout_sha256": "9b8417b9e16682b12388d80cdf70fcef6a7e85aaffa88a0f571e56208b99b970",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limitations": "Static source review and local Git-object checks; no compiler or hardware run.",
+  "offline_tests": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "test",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "tests_passed": 17,
+    "seconds": 1.31
+  },
+  "source_sha256": "210b1ab3c35cbbd5cd03724db5628542db3b0030ad1a106419a544430330dadc",
+  "tests_sha256": "bfbd26c5b51b44bb317702fcac7efcb155ed08ab4b388e1b2157e31096d1f537"
+}

@@ -1,0 +1,7 @@
+{
+  "stages": 54,
+  "index_sha256": "14c2fea0473397fcd703592f16615fe2f073054e8bb5350f3236714cd048ccac",
+  "method": "Read-only Git archive scan of quoted local C++ includes; no compilation; also checked angle includes under ffmt/",
+  "missing": [],
+  "angle_ffmt_includes_missing": []
+}

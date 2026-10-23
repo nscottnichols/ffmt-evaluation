@@ -1,0 +1,37 @@
+{
+  "id": "floating-formatting",
+  "title": "Format float and double with exact presentation rules",
+  "dependencies": [
+    "floating-conversion"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_floating",
+    "test_engine_fast_math"
+  ],
+  "docs": [
+    "docs/api/floating-formatting.md"
+  ],
+  "problem": "Floating fields need correct rounding even when requested precision exceeds stored output.",
+  "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[2];\nauto result = ffmt::format_to_n(buffer, sizeof buffer, \"{:.2000f}\", 0.125);\n// Stores \"0.\"; result.written == 2; result.required == 2002.",
+  "design": "Shortest formatting uses Dragonbox normally and integer interval conversion for fast-math and SPIR-V. Requested trailing zeros stream through counted sinks.",
+  "tradeoffs": "The oracle stays strictly compiled. Host fast-math tests use separately established expected strings and do not qualify device runtimes.",
+  "reading_order": [
+    "include/ffmt/detail/numeric.hpp",
+    "test/conformance/test_core_floating.cpp",
+    "test/conformance/test_engine_fast_math.cpp"
+  ],
+  "additional_suites": [
+    {
+      "name": "core_floating_portable",
+      "source": "test/conformance/test_core_floating.cpp",
+      "standard": "c++20",
+      "flags": [
+        "-DFFMT_PORTABLE_SHORTEST=1"
+      ],
+      "reference": true,
+      "optional": false
+    }
+  ]
+}

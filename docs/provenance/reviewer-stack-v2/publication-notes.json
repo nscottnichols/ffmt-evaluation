@@ -1,0 +1,15 @@
+{
+  "migration": {
+    "problem": "The public headers still select the old printf-based paths, so callers do not yet receive the component-tested engine’s shortest floating output, checked failures and counted transport.",
+    "example": "#include <ffmt/base.hpp>\nffmt::println(\"{}\", 1152921504606846976.0);\n// Old specifiers path: 1.15292e+18\n// New public engine:  1.152921504606847e+18 (the fmt result)",
+    "design": "Select the checked engine through the public wrapper while preserving macro spellings, static formatters and built-in SYCL formatters. The legacy oracle fixtures now compare full output and fmt shortest values; null strings compare against fmt rejection rather than glibc text. These fixtures are the retained qualified regressions, introduced here with the public behavior they require.",
+    "reading_order": [
+      "include/ffmt/base.hpp",
+      "docs/api/migration.md",
+      "test/test_body_host.inc",
+      "test/test_floats.cpp",
+      "test/test_buffer_path.cpp",
+      "test/conformance/test_core_migration.cpp"
+    ]
+  }
+}

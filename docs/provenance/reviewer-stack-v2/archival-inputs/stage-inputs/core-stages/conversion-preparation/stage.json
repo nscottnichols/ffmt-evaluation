@@ -1,0 +1,23 @@
+{
+  "id": "conversion-preparation",
+  "title": "Isolate the qualified decimal conversion helpers",
+  "dependencies": [
+    "primitives"
+  ],
+  "change_kind": "mechanical-extraction",
+  "remove": [],
+  "tests": [
+    "test_core_primitives"
+  ],
+  "docs": [
+    "docs/api/conversion-preparation.md"
+  ],
+  "problem": "The qualified conversion routines were embedded in the public base header.",
+  "example": "// Existing handwritten bodies move into detail/dragonbox.hpp and detail/exact_decimal.hpp.",
+  "design": "Bodies are copied unchanged from aeff043. Only namespace and OpenMP-region wrappers are added; extraction hashes are recorded.",
+  "tradeoffs": "The helpers are not activated until conversion integration. Handwritten logic remains explicitly handwritten.",
+  "reading_order": [
+    "include/ffmt/detail/dragonbox.hpp",
+    "include/ffmt/detail/exact_decimal.hpp"
+  ]
+}

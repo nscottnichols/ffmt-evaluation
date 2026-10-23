@@ -1,0 +1,59 @@
+{
+  "id": "std23",
+  "title": "Format C++23 expected and unexpected values",
+  "dependencies": [
+    "standard-types"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "std23"
+    ],
+    "commands": [
+      "make test-cxx23 CXX=\"$CXX\" # compiler mode must be C++23; exit 77 is unsupported",
+      [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/conformance",
+        "-p",
+        "test_cxx23_opt_in.py"
+      ]
+    ]
+  },
+  "problem": "Represent expected values and errors when the standard library supports C++23.",
+  "example": "#include <ffmt/std23.hpp>\nffmt::println(\"{}\", std::expected<int, int>{42}); // expected(42)",
+  "design": "Keep expected/unexpected adapters in an opt-in header. Make excludes suites declaring c++23 from its default capability target and exposes test-cxx23 explicitly; CMake retains its independent opt-in option.",
+  "tradeoffs": "`std23.hpp` adds `std::expected` and `std::unexpected` adapters when the selected\nstandard library exposes C++23 expected support. C++20 users can omit the header.\nThe contained value and error must be formattable. Optional tests report skip\n(exit 77) when the standard library lacks the feature; that skip is not evidence\nof conformance. Enable the suite with a C++23 compiler mode.",
+  "reading_order": [
+    "include/ffmt/std23.hpp",
+    "test/conformance/test_std23.cpp",
+    "mk/portable-tests.mk:declared-standard selection",
+    "test/conformance/test_cxx23_opt_in.py"
+  ],
+  "docs": [
+    "docs/features/std23.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Conventional header/test layout and standalone C++23 suite name; every expected/unexpected fixture retained. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "std23"
+    ],
+    "fixture_modules": []
+  },
+  "before": "std::expected<int,int> has no formatter after including std.hpp alone.",
+  "after": "#include <ffmt/std23.hpp>\nffmt::println(\"{}\", std::expected<int, int>{42}); // expected(42)",
+  "validation": {
+    "commands": [
+      "make test-cxx23 CXX=\"$CXX\" # compiler mode must be C++23; exit 77 is unsupported"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

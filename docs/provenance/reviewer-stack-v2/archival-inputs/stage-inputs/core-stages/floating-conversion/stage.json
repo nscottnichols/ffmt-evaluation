@@ -1,0 +1,23 @@
+{
+  "id": "floating-conversion",
+  "title": "Convert binary floating values with bounded integer storage",
+  "dependencies": [
+    "conversion-preparation"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_conversion"
+  ],
+  "docs": [
+    "docs/api/floating-conversion.md"
+  ],
+  "problem": "Device environments cannot consistently provide host conversion services.",
+  "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[64];\nauto size = ffmt::detail::portable_shortest(\n    buffer, std::numeric_limits<double>::denorm_min());\n// buffer[0..size) is \"5e-324\", matching the independent fmt oracle.",
+  "design": "Representation bits drive classification and exact interval comparisons. Bounded integer limbs hold decimal expansions without output-capacity limits.",
+  "tradeoffs": "Integer interval conversion uses more code and bounded working storage than forwarding to libc, while avoiding locale and allocation services. Internal conversion renders supported finite magnitudes; the formatting layer handles signs and nonfinite spellings. The documented 1100/16520-digit bounds cover exact IEEE expansions and interval endpoints, rather than limiting requested output precision. Direct oracle tests cover adjacent powers of two, subnormal/normal transitions, maximum finite values, rounding ties and carries.",
+  "reading_order": [
+    "include/ffmt/detail/floating.hpp",
+    "test/conformance/test_core_conversion.cpp"
+  ]
+}

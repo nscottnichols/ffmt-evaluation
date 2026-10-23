@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "scope": "CPU portable integration and evaluation smoke; no accelerator campaign repeated",
+  "raw_manifest": "artifacts/split/checks-1011177/manifest.json",
+  "raw_manifest_sha256": "df07e64a97d6b45ae8123d1ec0faf1180679c9f6c786a20cef2ad661acfef151",
+  "allocated_checks": {
+    "schema_version": 1,
+    "library_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "evaluation_commit": "46972133c7875dcc70422ca85121dfd394a15dc6",
+    "cobalt_jobid": "1011177",
+    "hostname": "rome00",
+    "scope": "CPU portable integration and evaluation smoke; no accelerator campaign repeated",
+    "steps": [
+      {
+        "name": "fresh-source",
+        "exit_code": 0,
+        "command": [
+          "git",
+          "-C",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-library",
+          "worktree",
+          "add",
+          "--detach",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/source",
+          "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+        ],
+        "seconds": 1.2728439099737443,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/fresh-source.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/fresh-source.stderr",
+        "stdout_sha256": "9634c4f85b427617f67904ed9ac2a59e348e80199071954d037796423dc2ed4f",
+        "stderr_sha256": "7693a7d7ea47969c8bbd97ac36048702f365d86e52032c19411884321406be64"
+      },
+      {
+        "name": "compiler-clang",
+        "exit_code": 0,
+        "command": [
+          "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+          "--version"
+        ],
+        "seconds": 0.016975842008832842,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/compiler-clang.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/compiler-clang.stderr",
+        "stdout_sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "compiler-gcc",
+        "exit_code": 0,
+        "command": [
+          "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+          "--version"
+        ],
+        "seconds": 0.00914091698359698,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/compiler-gcc.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/compiler-gcc.stderr",
+        "stdout_sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "configure",
+        "exit_code": 0,
+        "command": [
+          "cmake",
+          "-S",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/source",
+          "-B",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/cmake",
+          "-DFFMT_BUILD_TESTS=ON",
+          "-DFFMT_BUILD_CXX23_TESTS=ON",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=/soft/compilers/llvm/release-22.1.8/bin/clang++",
+          "-DFFMT_FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt"
+        ],
+        "seconds": 2.713366925017908,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/configure.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/configure.stderr",
+        "stdout_sha256": "2878e21c00c6a3a15bdb718b5de2c69a4f1f1b17991aa2f5953dd19836f8d17b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "cmake-build",
+        "exit_code": 0,
+        "command": [
+          "cmake",
+          "--build",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/cmake",
+          "-j2"
+        ],
+        "seconds": 110.63617360097123,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/cmake-build.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/cmake-build.stderr",
+        "stdout_sha256": "7671508f21ddbac147d04400e2390dc4e8b764c39582a6ac431a78e322274394",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "ctest",
+        "exit_code": 0,
+        "command": [
+          "ctest",
+          "--test-dir",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/cmake",
+          "--output-on-failure",
+          "-j2"
+        ],
+        "seconds": 93.98803720198339,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/ctest.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/ctest.stderr",
+        "stdout_sha256": "238d4791cd500dde44946daf54889d99ccd0b0b0631076140eeb2cb498b107ce",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "consumer-library",
+        "exit_code": 0,
+        "command": [
+          "cmake",
+          "-S",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/source",
+          "-B",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/package",
+          "-DFFMT_BUILD_TESTS=OFF",
+          "-DCMAKE_DISABLE_FIND_PACKAGE_Python3=TRUE",
+          "-DFFMT_FMT_DIR=/missing-oracle",
+          "-DCMAKE_CXX_COMPILER=/soft/compilers/llvm/release-22.1.8/bin/clang++"
+        ],
+        "seconds": 0.8397499339771457,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-library.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-library.stderr",
+        "stdout_sha256": "9123ba99e1d4524a9feb1b2c07bcc5be8b2773d9b08734a03b912249dc43791b",
+        "stderr_sha256": "bcabdb8baf16041f63adb1930e39f0d365be1ecfd7870e8693ea2d19c2380b70"
+      },
+      {
+        "name": "install",
+        "exit_code": 0,
+        "command": [
+          "cmake",
+          "--install",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/package",
+          "--prefix",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/install"
+        ],
+        "seconds": 0.42670191696379334,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/install.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/install.stderr",
+        "stdout_sha256": "937483c6b5cbfacacdaec9fecc5843717ba09c135933e97d7dd18c7a6dc7366f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "consumer-configure",
+        "exit_code": 0,
+        "command": [
+          "cmake",
+          "-S",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/consumer",
+          "-B",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/consumer/build",
+          "-DCMAKE_PREFIX_PATH=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/install",
+          "-DCMAKE_CXX_COMPILER=/soft/compilers/llvm/release-22.1.8/bin/clang++"
+        ],
+        "seconds": 0.8503900680225343,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-configure.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-configure.stderr",
+        "stdout_sha256": "568a2169463b605d63e76078dc35fd472ddc6553a7453691a8dd03ac1b99548f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "consumer-build",
+        "exit_code": 0,
+        "command": [
+          "cmake",
+          "--build",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/consumer/build",
+          "-j2"
+        ],
+        "seconds": 0.9239239940070547,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-build.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-build.stderr",
+        "stdout_sha256": "e9715ed574f44058d8eec26a7896afe6d61aa9014ea461183493cf192d323696",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "consumer-run",
+        "exit_code": 0,
+        "command": [
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/consumer/build/consumer"
+        ],
+        "seconds": 0.003912286949343979,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-run.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/consumer-run.stderr",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "make-sanitized",
+        "exit_code": 0,
+        "command": [
+          "make",
+          "-C",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/source",
+          "-j2",
+          "test-host",
+          "test-focused",
+          "test-fast-math",
+          "test-cxx23",
+          "test-negative",
+          "conformance-harness",
+          "CXX=/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+          "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt"
+        ],
+        "seconds": 174.29272664600285,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/make-sanitized.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/make-sanitized.stderr",
+        "stdout_sha256": "593f0df59d08870cf086b81e9f49c8c85b723da74b8904859f267d6c998a8004",
+        "stderr_sha256": "fcf80a53a3b8c66a06063ec6f66f2f0351e31239bde162d36b178925ab1c0200"
+      },
+      {
+        "name": "evaluation-offline",
+        "exit_code": 0,
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/test",
+          "-v"
+        ],
+        "seconds": 0.9444383430527523,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/evaluation-offline.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/evaluation-offline.stderr",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e0aed9fb58d42d98d417a0d5e53de18910995d53ee8b1b6fc6ff18f7bd2f6661"
+      },
+      {
+        "name": "evaluation-smoke",
+        "exit_code": 0,
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/conformance.py",
+          "--ffmt-checkout",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/source",
+          "--source-root",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+          "--revision",
+          "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+          "--profile",
+          "local",
+          "--route",
+          "host-buffer",
+          "--opt",
+          "2",
+          "--case",
+          "literal",
+          "--case",
+          "nul-char",
+          "--numeric-samples",
+          "0",
+          "--no-negative",
+          "--host-cxx",
+          "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+          "--output",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/evaluation-smoke"
+        ],
+        "seconds": 10.37606598396087,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/evaluation-smoke.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/evaluation-smoke.stderr",
+        "stdout_sha256": "ef3fced6534500542562fcfa12d91b603d336aaf035e7b9d21cf53738e4645b8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "evaluation-submit-dryrun",
+        "exit_code": 0,
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/jlse/submit.py",
+          "head",
+          "rome",
+          "--ffmt-checkout",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/source",
+          "--revision",
+          "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+          "--dry-run"
+        ],
+        "seconds": 0.15759823401458561,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/evaluation-submit-dryrun.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/evaluation-submit-dryrun.stderr",
+        "stdout_sha256": "85c0d5e2a8a88009a4a1133433b46fcb63bd9698943360b76e9628cb39755a2e",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "provenance",
+        "exit_code": 0,
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/verify_provenance.py",
+          "--ffmt-checkout",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/split/checks-1011177/source"
+        ],
+        "seconds": 0.22347920999163762,
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/provenance.stdout",
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/provenance.stderr",
+        "stdout_sha256": "462183831b6ab9a6cec33515f40998eeaca9d37f20ebc16cecc942b308e0bcdf",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "status": "pass"
+  },
+  "summary": {
+    "ctest": {
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "compiler": "Clang22.1.8 Release"
+    },
+    "portable_harness_tests": 26,
+    "installed_consumer": "pass; library configured with FFMT_BUILD_TESTS=OFF, Python discovery disabled and absent fmt path",
+    "make": {
+      "status": "pass",
+      "compiler": "GCC13.3",
+      "positive_optimization": "-O0",
+      "sanitizers": [
+        "address",
+        "undefined"
+      ],
+      "optional_skips": [
+        "native BitInt unavailable"
+      ],
+      "negative_optimization": "compiler default; HOST_OPT is not forwarded to negative subprocesses"
+    },
+    "evaluation_smoke": {
+      "stdout_passed": 2,
+      "numeric_records_passed": 24,
+      "source_commit": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "fmt_commit": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f"
+    }
+  },
+  "evaluation_receipt": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/launchers/conformance-20261022T165227997376Z.json",
+    "sha256": "4139aa17e02475b57a9fada04fc017798b88190b8a5f8126432219887836413f",
+    "sources": {
+      "evaluation_checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation",
+      "evaluation_commit": "46972133c7875dcc70422ca85121dfd394a15dc6",
+      "evaluation_dirty": true,
+      "runner_checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/split/checks-1011177/source",
+      "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "runner_dirty": false,
+      "source_checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+      "source_revision": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "source_commit": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "source_worktree": false,
+      "source_dirty": false,
+      "profiles_sha256": "c96e8e74e10c89f11cc6db3bfd493abb7c380f0118cdfddac0f056d75e06cfb4",
+      "configured_library_pin": {
+        "schema_version": 1,
+        "repository": "https://github.com/nscottnichols/ffmt.git",
+        "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+        "source_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+      }
+    },
+    "launcher_files_match_import_commit": {
+      "tools/evaluation.py": "3072f3e446ab56d64557f6f5890d001e2dd712be7b579f510c23ee3b8a350c47",
+      "tools/conformance.py": "1e58c56710db7f81b7b642aeb26a7085ec60c91177902a82db347f16e34a4016"
+    }
+  },
+  "source_hashes": {
+    "include/ffmt/args.hpp": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+    "include/ffmt/base.hpp": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+    "include/ffmt/chrono.hpp": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+    "include/ffmt/color.hpp": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+    "include/ffmt/core.hpp": "54abfadff1d1a5d8ab4f9f1bdd10342142516032257fbe517f048239833e686c",
+    "include/ffmt/detail/extended.hpp": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+    "include/ffmt/detail/family.hpp": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+    "include/ffmt/detail/floating.hpp": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+    "include/ffmt/detail/numeric.hpp": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+    "include/ffmt/detail/text.hpp": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+    "include/ffmt/detail/transport.hpp": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+    "include/ffmt/detail/unicode.hpp": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+    "include/ffmt/enum.hpp": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+    "include/ffmt/printf.hpp": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+    "include/ffmt/ranges.hpp": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+    "include/ffmt/std.hpp": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+    "include/ffmt/std23.hpp": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d"
+  },
+  "script_hashes": {
+    "artifacts/split/validate.py": "8a4aa9111c42971e6e4ec57c7739cd4ec18e71e9fad15b26ae030292660f8bd2",
+    "artifacts/split/validate.sh": "4c5a95245330e58123387de8075ee4982f38eb1fdb559c757952e705a8f67fad"
+  },
+  "final_offline_tests": {
+    "command": [
+      "/home/nnichols/.local/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "test",
+      "-v"
+    ],
+    "exit_code": 0,
+    "count": 13,
+    "timestamp_utc": "2026-10-22T16:59:20.882178+00:00",
+    "logs": {
+      "stdout": {
+        "path": "artifacts/split/final-offline/tests.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "artifacts/split/final-offline/tests.stderr",
+        "sha256": "fd707b1b91921fbb53c4813afac58252c52c38fdc40561c219c0aa0e351d34bb"
+      }
+    },
+    "source_files": {
+      "tools/benchmark.py": "321894166e1e34ec28ecf2a683977fb255cae421d7587b1a3ca6daec06a42f49",
+      "tools/benchmark_report.py": "57f64d901915f06098e5d9585185b55a5639b8ec960c55bbd715425c5a6c7693",
+      "tools/conformance.py": "1e58c56710db7f81b7b642aeb26a7085ec60c91177902a82db347f16e34a4016",
+      "tools/evaluation.py": "3072f3e446ab56d64557f6f5890d001e2dd712be7b579f510c23ee3b8a350c47",
+      "tools/jlse/build_checks.py": "392f6872179c127c10eb80ae5927614c3852ac001dbe5d75c0a1af4d16e39093",
+      "tools/jlse/diagnose.py": "c47d15bbdd1f886dbb0d0d472c47fbbd2f0ca3f453b8eaf4ddc7d5be4e219e49",
+      "tools/jlse/discover.py": "e93be744580c73afc3ed67595d0551b79f0986b2d0a18c7273b4da4c18df1464",
+      "tools/jlse/host_tests.py": "7074aa26ddd67eef622b07e1c32730947b41ff747c7d88eeadda33bedc5546bd",
+      "tools/jlse/omp_memory_probe.py": "df509d52ec771d49635c5428c0c2c35b99777d979d466fbc373848989443031e",
+      "tools/jlse/provision.py": "6441cebec8ed3f636008d608c0bc0b7238d847e289ac70bfd1fc51a7af0ea25f",
+      "tools/jlse/submit.py": "f64670e59cdc5e2d297bd1f5a8a14ac6c57fdbd5ced65ef8b537b77bb1c49fa4",
+      "tools/paper_tables.py": "2a6024cec0027417f9c6658b467915566a53ce6ff4810730d3487a81df78ac5c",
+      "tools/report.py": "8f529193017638349c7321f8e123e89bcb40f9a05e54c9ce1e26541166f809c5",
+      "tools/verify_provenance.py": "13027658956b7247d01eb23c3a6832bef6ecc76d2c00a7d379d6f0bcdabe87cc",
+      "test/test_build_checks.py": "727286e5b695116958eba627ca78503d65a6ce3247bc565137ce2d8773380eb5",
+      "test/test_evaluation.py": "3e23908ea90d2990b8272d53ed626b4e5331d9a4a675725e68b2b4e5aa0c6ea0"
+    }
+  },
+  "post_import_scope_note": "Final offline tests include detached-source child-environment and compact-export identity regressions added after the allocated smoke. Frozen historical data was not regenerated.",
+  "paper_rebuild": {
+    "status": "pass",
+    "scope": "fresh ignored output; historical source/PDF/table/selection bytes unchanged",
+    "output": "artifacts/paper-build/20261022T165300303169Z",
+    "pages": 8,
+    "files": {
+      "build-inputs.json": "2656644140de2a2f6125cf750aacaf09fead5bc8251ade2191e9faf0bacbdfd6",
+      "ffmt.pdf": "74cba855887101e4e6fd53cd5cac9c14d8cb7dd2438f67f5bba7dc0ba9f2244d",
+      "results.tex": "aaffa6b8221c3d7ecf20054ba1d3bef8e5219b303549ce551b8d153bd8ec4b6e",
+      "paper-selection.json": "c971b2329ebdab401323c4882d47dd892b3f54e9d50a08bad0abded6f5832d66"
+    },
+    "helper_sha256": "daee60f8b7aa9799b08fd844850ad6d26366ca58a9d405a4794a3f7245642cfc"
+  },
+  "final_evaluation_implementation_commit": "f325208eaebdcffcb0baea31164df6b448178593"
+}

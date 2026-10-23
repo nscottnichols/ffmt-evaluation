@@ -1,0 +1,135 @@
+name: host
+
+# Does it format correctly? Runs the test suite on the CPU and diffs both
+# paths (FFMT_BUFFER_PATH=0 and =1, through libc printf) against {fmt}:
+# compilers x opt levels under sanitizers, plain Ubuntu / macOS builds,
+# -ffast-math, negative-compile tests, and the coverage gate.
+
+on:
+  push:
+    branches: [main, omp_support]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  matrix:
+    if: ${{ github.event_name != 'pull_request' || !github.event.pull_request.draft }}
+    name: ${{ matrix.cxx }} ${{ matrix.opt }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        cxx: [g++, clang++]
+        opt: [-O0, -O2]
+    env:
+      CXX: ${{ matrix.cxx }}
+      HOST_OPT: ${{ matrix.opt }}
+      EXTRA_CXXFLAGS: -fsanitize=address,undefined
+      UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+      ASAN_OPTIONS: detect_leaks=1:strict_string_checks=1:detect_stack_use_after_return=1
+    steps:
+      - uses: actions/checkout@v6
+      - name: Show toolchain
+        run: ${{ matrix.cxx }} --version
+      - name: Build + run host tests
+        run: make -j2 test-host test-capabilities conformance-harness
+      - name: Build + run host tests under -ffast-math
+        run: make test-fast-math
+      - name: Run negative-compile tests
+        run: make -j2 test-negative
+
+  plain:
+    if: ${{ github.event_name != 'pull_request' || !github.event.pull_request.draft }}
+    # No sanitizers, default toolchain of each OS: catches what only shows
+    # up in a normal build (macOS: Apple clang + libc++ + GNU Make 3.81 —
+    # e.g. the memfd_create and build/ target-clash breakages).
+    name: plain ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            cxx: g++
+          - os: macos-latest
+            cxx: clang++
+    env:
+      CXX: ${{ matrix.cxx }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Show toolchain
+        run: ${{ matrix.cxx }} --version && make --version | head -1
+      - name: Build + run host tests
+        run: make -j2 test-host test-capabilities conformance-harness
+      - name: Build + run host tests under -ffast-math
+        run: make test-fast-math
+      - name: Run negative-compile tests
+        run: make -j2 test-negative
+
+  coverage:
+    if: ${{ github.event_name != 'pull_request' || !github.event.pull_request.draft }}
+    name: source coverage reporting
+    runs-on: ubuntu-24.04
+    env:
+      CXX: clang++
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # Need the base branch for the comparison build.
+          fetch-depth: 0
+      - name: Install llvm + jq
+        run: sudo apt-get update && sudo apt-get install -y llvm jq
+      - name: Pick base ref
+        id: base
+        run: |
+          # PR runs compare against the merge base. Pushes fall back to
+          # comparing against origin/main for the reporting baseline.
+          if [ -n "${{ github.event.pull_request.base.sha }}" ]; then
+            echo "ref=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "ref=$(git rev-parse origin/main)" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Coverage on base
+        run: |
+          git worktree add ../base ${{ steps.base.outputs.ref }}
+          # Run `make coverage` (exists in every revision since coverage was
+          # added) just to produce the cov_* binaries; the union script
+          # below runs and exports them itself, so it works on any rev.
+          # `CXX=$CXX` on the command line is required: older revs used
+          # `CXX := icpx`, which the env-supplied `CXX` doesn't override —
+          # command-line assignments do.
+          make -C ../base CXX=$CXX -j2 coverage
+          # Coverage binary names have changed across revs (cov_dpc_all/
+          # cov_acpp_all → cov_specifiers/cov_buffer). Glob and let the
+          # workflow be name-agnostic. The script is this branch's copy, so
+          # base and head are measured the same way.
+          cd ../base
+          mapfile -t BINS < <(find build -maxdepth 1 -type f -executable -name 'cov_*')
+          python3 "$GITHUB_WORKSPACE/.github/scripts/coverage_union.py" \
+            "$($CXX -print-prog-name=llvm-cov)" "$($CXX -print-prog-name=llvm-profdata)" \
+            include/ffmt "${BINS[@]}" > "$GITHUB_WORKSPACE/base.json"
+      - name: Coverage on this branch
+        run: |
+          make -j2 coverage
+          mapfile -t BINS < <(find build -maxdepth 1 -type f -executable -name 'cov_*')
+          python3 .github/scripts/coverage_union.py \
+            "$($CXX -print-prog-name=llvm-cov)" "$($CXX -print-prog-name=llvm-profdata)" \
+            include/ffmt "${BINS[@]}" > head.json
+      - name: Report coverage (no percentage regression gate)
+        run: |
+          # Header moves and template instantiation change the denominator.
+          # Validate measurement, then leave per-file regression review to humans.
+          jq -e '.count > 0 and .covered > 0 and .lines.count > 0' head.json
+          for report in base head; do
+            echo "$report: $(jq -c '{regions: {covered, count, percent}, lines, branches}' "$report.json")" >> "$GITHUB_STEP_SUMMARY"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-coverage
+          path: |
+            base.json
+            head.json

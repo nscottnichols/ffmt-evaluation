@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "original_directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212",
+  "manifest_sha256": "806f12811bf46a2d59b15a0b17061d432fa2e2b033ffea6c19acb3cb117af072",
+  "files": [
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/manifest.json",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/manifest.json",
+      "sha256": "806f12811bf46a2d59b15a0b17061d432fa2e2b033ffea6c19acb3cb117af072",
+      "bytes": 11375
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-submission-1011212.json",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/submission.json",
+      "sha256": "6a10b7947e01215b9aa77fd73e41118f190cc2decdd1d90776733a200f3e1144",
+      "bytes": 1095
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.py",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/consumer.py",
+      "sha256": "f29a12497df271d767158ca20aa894781d8dcfbecd54234b660edef34acaa659",
+      "bytes": 5452
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.sh",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/consumer.sh",
+      "sha256": "e275859e8afccd955f47bcb1b0c92226471b7e3bad6b5d1c78e9c12b554ce588",
+      "bytes": 761
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/CMakeLists.txt",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/consumer/CMakeLists.txt",
+      "sha256": "9b4509fd3da67a6a91b8cde00006d25ef2486ead5b7bf8645cff8b9dace3c238",
+      "bytes": 189
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/consumer/main.cpp",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/consumer/main.cpp",
+      "sha256": "c6f717e6b9b3a55c08deb4464741085782f3061b4e57e44815c491fa5db9be67",
+      "bytes": 220
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/compiler-version.stdout",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607",
+      "bytes": 334
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/compiler-version.stderr",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/configure.stdout",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/configure.stdout",
+      "sha256": "8d99b803da5f6b628e22eda23ac82b1720f8da86dab5332ba13a598468dc09d6",
+      "bytes": 506
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/configure.stderr",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/configure.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/build.stdout",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/build.stdout",
+      "sha256": "e9715ed574f44058d8eec26a7896afe6d61aa9014ea461183493cf192d323696",
+      "bytes": 130
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/build.stderr",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/run.stdout",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/run.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer-validation-1011212/run.stderr",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "original_path": "/home/nnichols/1011212.cobaltlog",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/scheduler/1011212.cobaltlog",
+      "sha256": "2b9f61488428a090d99eeb3a5b26a595109bb1f766275da11ed447ecd4bf5277",
+      "bytes": 2046
+    },
+    {
+      "original_path": "/home/nnichols/1011212.output",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/scheduler/1011212.output",
+      "sha256": "e9b06fbec2eb805e711e5c41803f14f8499e52ec4c239186a5deb38fc0ffbe38",
+      "bytes": 199
+    },
+    {
+      "original_path": "/home/nnichols/1011212.error",
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/scheduler/1011212.error",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ]
+}

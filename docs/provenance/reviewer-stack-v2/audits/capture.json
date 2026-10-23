@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": ".",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews",
+      "handwritten_visible": true
+    },
+    {
+      "label": "feature-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-review.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "acpp-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/acpp-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4232,
+      "sha256": "f209a8896a585bef7aecbe8dd68825ecefe0840a74b7e94888cf93989f54275d"
+    },
+    {
+      "relative_path": "acpp-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/acpp-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4566,
+      "sha256": "f288a977887c6627fa3c7051b20a777216f37ae379ed6a177f606ea3b0c676b4"
+    },
+    {
+      "relative_path": "acpp-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/acpp-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 891,
+      "sha256": "8342ee0d0a7e492bec2ef43c18d31f27791ad698c3c0c18efbfb21a2eb39846a"
+    },
+    {
+      "relative_path": "acpp-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/acpp-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 926,
+      "sha256": "55f721c37d26652c6b01f6e6ea4d9a72a4eca436f8a20113abb5c6f3bcd56b68"
+    },
+    {
+      "relative_path": "backend-preservation.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/backend-preservation.json",
+      "storage": "visible",
+      "bytes": 3674,
+      "sha256": "4733322b4e2f3e4c6d3292fc4a95193b7247f584d118618237b7d1751a36563d"
+    },
+    {
+      "relative_path": "chipstar-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/chipstar-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4507,
+      "sha256": "9a3ab185614e41c15ddbb551fa4e32bd8ab8f6fe2ab65005dcdebe4306fe81b8"
+    },
+    {
+      "relative_path": "chipstar-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/chipstar-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4715,
+      "sha256": "731e5888bbf91a5539357a4253ca975a5d60864c80816504237c83055a29b353"
+    },
+    {
+      "relative_path": "chipstar-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/chipstar-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 954,
+      "sha256": "47aafc23e2925bbbf41bf5f34b00c76576a415ed45fd96856f8ed18327ad1947"
+    },
+    {
+      "relative_path": "chipstar-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/chipstar-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 1011,
+      "sha256": "d130a84824e6fef463f9eef2eb0999d5335162d0bca762f64fac2d3e5a760be2"
+    },
+    {
+      "relative_path": "cuda-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/cuda-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4475,
+      "sha256": "b86da18311a607c3fe22ec01941e9db1ec9e529791d6d7468c3aa6e9e1262f38"
+    },
+    {
+      "relative_path": "cuda-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/cuda-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4739,
+      "sha256": "b5eacfb7768320028f00ce49e09b76b235f1d6ee92ae943b5a937a30e9ba7498"
+    },
+    {
+      "relative_path": "cuda-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/cuda-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 925,
+      "sha256": "dcf216a77b3a7f9aa5dc038e644e398df66ec8d5bae4fcae3c9491cdfcbaba3d"
+    },
+    {
+      "relative_path": "cuda-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/cuda-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 982,
+      "sha256": "174e8923631ce448e6af0c973eaa53789bae3e6e2a06da5444f84e00c2690b7b"
+    },
+    {
+      "relative_path": "description-metadata-changes.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/description-metadata-changes.json",
+      "storage": "visible",
+      "bytes": 34833,
+      "sha256": "40b492d8ab81054a6e1dcab7c174f946fb2d15107df9b2bf468bae30d7a86714"
+    },
+    {
+      "relative_path": "final-fixture-preservation.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/final-fixture-preservation.json",
+      "storage": "visible",
+      "bytes": 1245,
+      "sha256": "1d2e24c5601f4bf32336e5de296618c0104406d11804c17bc8c4dcdb83e3eb75"
+    },
+    {
+      "relative_path": "final-preservation-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/final-preservation-review.json",
+      "storage": "visible",
+      "bytes": 1569,
+      "sha256": "cb3c69b519134112e363fc564b6c0e8196a1acfaf9e83d560f7d59d3ea56923f"
+    },
+    {
+      "relative_path": "final-source-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/final-source-review.json",
+      "storage": "visible",
+      "bytes": 28702,
+      "sha256": "fc0d6de551bd2cf8e5047774eae7f5b0bdaa16edde5da6175231986489641b63"
+    },
+    {
+      "relative_path": "foundations-independent.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/foundations-independent.json",
+      "storage": "visible",
+      "bytes": 1777,
+      "sha256": "c8a2b71605976d46dbf4d57ee39c69a454242fafc3f2fb7ca44b526c54bd86d2"
+    },
+    {
+      "relative_path": "full-fixture-preservation.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/full-fixture-preservation.json",
+      "storage": "visible",
+      "bytes": 429,
+      "sha256": "8af9650edb0b678a0f173889f43b403cd2b272ad7f15dfe6cc804cd85f3844fe"
+    },
+    {
+      "relative_path": "hip-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/hip-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4507,
+      "sha256": "9a3ab185614e41c15ddbb551fa4e32bd8ab8f6fe2ab65005dcdebe4306fe81b8"
+    },
+    {
+      "relative_path": "hip-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/hip-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4715,
+      "sha256": "731e5888bbf91a5539357a4253ca975a5d60864c80816504237c83055a29b353"
+    },
+    {
+      "relative_path": "hip-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/hip-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 954,
+      "sha256": "47aafc23e2925bbbf41bf5f34b00c76576a415ed45fd96856f8ed18327ad1947"
+    },
+    {
+      "relative_path": "hip-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/hip-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 1011,
+      "sha256": "d130a84824e6fef463f9eef2eb0999d5335162d0bca762f64fac2d3e5a760be2"
+    },
+    {
+      "relative_path": "host-buffer-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/host-buffer-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 3528,
+      "sha256": "c07942c98155e6450bc1951e2d7bcfb1e678cbe56506f653eaafc7595478717d"
+    },
+    {
+      "relative_path": "host-buffer-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/host-buffer-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 3552,
+      "sha256": "f5a9c8f1dd996b12a7ee2c4855cc751b51f86a7733da0df4832aa523a54911b7"
+    },
+    {
+      "relative_path": "host-specifiers-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/host-specifiers-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 3528,
+      "sha256": "c07942c98155e6450bc1951e2d7bcfb1e678cbe56506f653eaafc7595478717d"
+    },
+    {
+      "relative_path": "host-specifiers-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/host-specifiers-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 3552,
+      "sha256": "f5a9c8f1dd996b12a7ee2c4855cc751b51f86a7733da0df4832aa523a54911b7"
+    },
+    {
+      "relative_path": "intermediate-includes.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/intermediate-includes.json",
+      "storage": "visible",
+      "bytes": 287,
+      "sha256": "0e44c6a9eae601b7ba686f84605efce8cc3318df5d7b6c75c446f64f24347fbc"
+    },
+    {
+      "relative_path": "kokkos-cuda-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-cuda-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4668,
+      "sha256": "f69b2e0cc189be78dff8e387ee41e93260ddae109cd7d36f06db1698d122fab3"
+    },
+    {
+      "relative_path": "kokkos-cuda-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-cuda-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4832,
+      "sha256": "2cf75cf1e332d826680b2f2d1784cf68543a99a159622671f2d461f4af8105d2"
+    },
+    {
+      "relative_path": "kokkos-cuda-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-cuda-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 1190,
+      "sha256": "cd3668ed8a2f80fe2ee4c8566b8ba51eddd3c5cd6f308241346b444cda6f32d9"
+    },
+    {
+      "relative_path": "kokkos-cuda-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-cuda-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 1190,
+      "sha256": "9628502061f0f716646e2f1a64e17b3da4b7a0c080956101ecea3f95fcb7bdd0"
+    },
+    {
+      "relative_path": "kokkos-hip-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-hip-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4666,
+      "sha256": "87c9b19bb5409d23944b5d3b4f124c48dc1274c8567c3f4487f0a9878b8ce033"
+    },
+    {
+      "relative_path": "kokkos-hip-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-hip-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4830,
+      "sha256": "f13931dd95df57d692951c5622795b63ad35d0b2283d25ede4d3b1c7481e7f98"
+    },
+    {
+      "relative_path": "kokkos-hip-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-hip-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 1188,
+      "sha256": "3f7d900b1313d32ed91235a992eec6feb20a7cc06f0e50e9a8dc88e354ee83bb"
+    },
+    {
+      "relative_path": "kokkos-hip-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-hip-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 1188,
+      "sha256": "9fbada223c9b6d61c0e03e4dc7fa1b94958cd4b8ce8fd4fecf273a657d2812eb"
+    },
+    {
+      "relative_path": "kokkos-serial-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-serial-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4320,
+      "sha256": "d0fa1f66cbcc000d0c578f1e09bf82ffc73f68bccfc6122d5cb530f836abddba"
+    },
+    {
+      "relative_path": "kokkos-serial-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-serial-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4485,
+      "sha256": "4b200e8afb0ce4ba073aa1e53c572b687ab1711b0d6d29522bb4a8b995893da8"
+    },
+    {
+      "relative_path": "kokkos-serial-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-serial-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 842,
+      "sha256": "4099c6e27d394026b856564541d9a7af0127ae24ebb5a54524f35441b3565316"
+    },
+    {
+      "relative_path": "kokkos-serial-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-serial-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 843,
+      "sha256": "33ff614335a7b91604969f9da2e1be7e3c98338dc170028f5a0ecfaeb39ce50b"
+    },
+    {
+      "relative_path": "kokkos-sycl-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-sycl-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4563,
+      "sha256": "cbf2666cdbc29319d3137188542c8b1cb4fbdaeb0c495b66488054ba72ce78ea"
+    },
+    {
+      "relative_path": "kokkos-sycl-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-sycl-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4727,
+      "sha256": "7ed93e4df9d0964375afffcead440a3d5af2c9f37785a6e56a620ac9b48a861a"
+    },
+    {
+      "relative_path": "kokkos-sycl-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-sycl-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 1085,
+      "sha256": "27dcebaf73a3caaca3a9dcfb7d6fe2785ca50b7b78461bef9209c5e001041c4c"
+    },
+    {
+      "relative_path": "kokkos-sycl-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/kokkos-sycl-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 1085,
+      "sha256": "a702d69443c4afdaff978c9bb165641b226b7a853271e0bce53fca01239e3984"
+    },
+    {
+      "relative_path": "late-stages-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/late-stages-review.json",
+      "storage": "visible",
+      "bytes": 6382,
+      "sha256": "0ead0830aa8a6d7b665271483bed561db4d6d278c267eb6afc61510c825246df"
+    },
+    {
+      "relative_path": "legacy-regression-restoration.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/legacy-regression-restoration.json",
+      "storage": "visible",
+      "bytes": 2451,
+      "sha256": "b7c54aac8ce68a761608393a932202d1e9a36d328200fa14f742a49c78b0ba83"
+    },
+    {
+      "relative_path": "make-preservation-repairs.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/make-preservation-repairs.json",
+      "storage": "visible",
+      "bytes": 929,
+      "sha256": "8480cbd45feec6d01244847670769448f79ff04e10f996055777fde3eba1041a"
+    },
+    {
+      "relative_path": "notice-and-comment-repairs.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/notice-and-comment-repairs.json",
+      "storage": "visible",
+      "bytes": 339,
+      "sha256": "be1c458e15eecdb2640f5d2bb84f6cd5953741e39f94c8352593f162d0c5ac53"
+    },
+    {
+      "relative_path": "nvcc-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/nvcc-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4475,
+      "sha256": "b86da18311a607c3fe22ec01941e9db1ec9e529791d6d7468c3aa6e9e1262f38"
+    },
+    {
+      "relative_path": "nvcc-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/nvcc-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4739,
+      "sha256": "b5eacfb7768320028f00ce49e09b76b235f1d6ee92ae943b5a937a30e9ba7498"
+    },
+    {
+      "relative_path": "nvcc-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/nvcc-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 925,
+      "sha256": "dcf216a77b3a7f9aa5dc038e644e398df66ec8d5bae4fcae3c9491cdfcbaba3d"
+    },
+    {
+      "relative_path": "nvcc-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/nvcc-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 982,
+      "sha256": "174e8923631ce448e6af0c973eaa53789bae3e6e2a06da5444f84e00c2690b7b"
+    },
+    {
+      "relative_path": "omp-cuda-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-cuda-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 3872,
+      "sha256": "bc8520222148c06f2ed51d38aa2124ecd47e618523009a22abd98bf6c013ab71"
+    },
+    {
+      "relative_path": "omp-cuda-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-cuda-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4017,
+      "sha256": "67a4f188d13def86b315447e78ead69bbb955dc09a0da4e1f2f06bbc0a769d66"
+    },
+    {
+      "relative_path": "omp-cuda-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-cuda-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 762,
+      "sha256": "874260d85b03f33e5837b469f80c47f8fc5e7acc1a2112b75fe8520fcbf267ec"
+    },
+    {
+      "relative_path": "omp-cuda-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-cuda-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 790,
+      "sha256": "714b7eed1c4b68e9a616f2fda395a39a7a9e886d3dc9b3506343c9da40bb7033"
+    },
+    {
+      "relative_path": "omp-hip-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-hip-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 3872,
+      "sha256": "bc8520222148c06f2ed51d38aa2124ecd47e618523009a22abd98bf6c013ab71"
+    },
+    {
+      "relative_path": "omp-hip-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-hip-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4017,
+      "sha256": "67a4f188d13def86b315447e78ead69bbb955dc09a0da4e1f2f06bbc0a769d66"
+    },
+    {
+      "relative_path": "omp-hip-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-hip-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 762,
+      "sha256": "874260d85b03f33e5837b469f80c47f8fc5e7acc1a2112b75fe8520fcbf267ec"
+    },
+    {
+      "relative_path": "omp-hip-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-hip-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 790,
+      "sha256": "714b7eed1c4b68e9a616f2fda395a39a7a9e886d3dc9b3506343c9da40bb7033"
+    },
+    {
+      "relative_path": "omp-spirv-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-spirv-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 3872,
+      "sha256": "bc8520222148c06f2ed51d38aa2124ecd47e618523009a22abd98bf6c013ab71"
+    },
+    {
+      "relative_path": "omp-spirv-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-spirv-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4017,
+      "sha256": "67a4f188d13def86b315447e78ead69bbb955dc09a0da4e1f2f06bbc0a769d66"
+    },
+    {
+      "relative_path": "omp-spirv-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-spirv-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 762,
+      "sha256": "874260d85b03f33e5837b469f80c47f8fc5e7acc1a2112b75fe8520fcbf267ec"
+    },
+    {
+      "relative_path": "omp-spirv-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/omp-spirv-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 790,
+      "sha256": "714b7eed1c4b68e9a616f2fda395a39a7a9e886d3dc9b3506343c9da40bb7033"
+    },
+    {
+      "relative_path": "optional-header-normalized.diff",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/optional-header-normalized.diff",
+      "storage": "visible",
+      "bytes": 1840,
+      "sha256": "fa02f5528a27bb95a5ce1063c6b6d6d4050b2c2690c0f119c8a0a26a55807f6e"
+    },
+    {
+      "relative_path": "pr-description-readability.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/pr-description-readability.json",
+      "storage": "visible",
+      "bytes": 6024,
+      "sha256": "9c8236e1c9ad1da381bb04cc30c69986d97aab16e7cdbdd6f1302a32c747e89a"
+    },
+    {
+      "relative_path": "python-regression-preservation.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/python-regression-preservation.json",
+      "storage": "visible",
+      "bytes": 367,
+      "sha256": "2a73025f6e68f4c0c6ca320e3b107782d393928bfb3c7b64fd04f84357dc3d64"
+    },
+    {
+      "relative_path": "release-graph-audit.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/release-graph-audit.json",
+      "storage": "visible",
+      "bytes": 48591,
+      "sha256": "ab591fcbf02108d4832576a902897841a3825fb789f0895437ae11bf18c0fb00"
+    },
+    {
+      "relative_path": "release-inputs-vs-commits.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/release-inputs-vs-commits.json",
+      "storage": "visible",
+      "bytes": 64488,
+      "sha256": "48210d8d4e06596989603792ac5bd783718d1b42572dcdc55e086f3fa96f0682"
+    },
+    {
+      "relative_path": "review-stack-scripts-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/review-stack-scripts-review.json",
+      "storage": "visible",
+      "bytes": 2843,
+      "sha256": "4b8ff806ae28196338fa731c8b69ded336be53aed783c46f7f8bd19c0e7ddeed"
+    },
+    {
+      "relative_path": "root-build-repairs-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/root-build-repairs-review.json",
+      "storage": "visible",
+      "bytes": 2255,
+      "sha256": "a842ec054f17c4df0126d251485c6e48c61dd3cde2442df8c5f443eaa6ccbf57"
+    },
+    {
+      "relative_path": "root-core-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/root-core-review.json",
+      "storage": "visible",
+      "bytes": 22781,
+      "sha256": "eaafd27cca7122bb8dbd09c69b806778f7c2b546e938742e313dd73caa3fdc90"
+    },
+    {
+      "relative_path": "stage-inputs-vs-commits.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/stage-inputs-vs-commits.json",
+      "storage": "visible",
+      "bytes": 63841,
+      "sha256": "d272256a1fa5ec99d2ae4d5bd57e635c8552520928dd4cef40262f814be151f4"
+    },
+    {
+      "relative_path": "std23-opt-in-repair.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/std23-opt-in-repair.json",
+      "storage": "visible",
+      "bytes": 811,
+      "sha256": "24c100698dcfa539e32b961a68fcf0ad420c57af3eb824b3f944e4b4f3485751"
+    },
+    {
+      "relative_path": "sycl-numeric-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/sycl-numeric-original.cpp",
+      "storage": "visible",
+      "bytes": 4232,
+      "sha256": "f209a8896a585bef7aecbe8dd68825ecefe0840a74b7e94888cf93989f54275d"
+    },
+    {
+      "relative_path": "sycl-numeric-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/sycl-numeric-restructured.cpp",
+      "storage": "visible",
+      "bytes": 4566,
+      "sha256": "f288a977887c6627fa3c7051b20a777216f37ae379ed6a177f606ea3b0c676b4"
+    },
+    {
+      "relative_path": "sycl-stdout-original.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/sycl-stdout-original.cpp",
+      "storage": "visible",
+      "bytes": 891,
+      "sha256": "8342ee0d0a7e492bec2ef43c18d31f27791ad698c3c0c18efbfb21a2eb39846a"
+    },
+    {
+      "relative_path": "sycl-stdout-restructured.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/sycl-stdout-restructured.cpp",
+      "storage": "visible",
+      "bytes": 926,
+      "sha256": "55f721c37d26652c6b01f6e6ea4d9a72a4eca436f8a20113abb5c6f3bcd56b68"
+    },
+    {
+      "relative_path": "render-foundations-smoke/build-registration.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/build-registration.md",
+      "storage": "visible",
+      "bytes": 2440,
+      "sha256": "5f1a3a0121bd70f08e941b99ee9fca07ce93a1791e7780916d76f3e5cd7f8b8e"
+    },
+    {
+      "relative_path": "render-foundations-smoke/ci-resource-bounds.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/ci-resource-bounds.md",
+      "storage": "visible",
+      "bytes": 2761,
+      "sha256": "74fe9ce7722e7941d901269537020d42b66c50394d8892fbe3353722f9229626"
+    },
+    {
+      "relative_path": "render-foundations-smoke/ci-review-waves.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/ci-review-waves.md",
+      "storage": "visible",
+      "bytes": 2742,
+      "sha256": "ea51fe649e004c2f9a3492d88aa79a64fecba8a3f3c724877a496cddfb2a6587"
+    },
+    {
+      "relative_path": "render-foundations-smoke/coverage-metrics.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/coverage-metrics.md",
+      "storage": "visible",
+      "bytes": 2733,
+      "sha256": "db4338cc751c3efffcf961e4a49e56d01d34e857ca1f3a3e53dd36f404681902"
+    },
+    {
+      "relative_path": "render-foundations-smoke/coverage-policy.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/coverage-policy.md",
+      "storage": "visible",
+      "bytes": 2678,
+      "sha256": "7f533cd815c5b5ec9ee3c2a6e2aa82f32c238f3fd6b6b1caeb508781fdac973b"
+    },
+    {
+      "relative_path": "render-foundations-smoke/oracle-pin.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/oracle-pin.md",
+      "storage": "visible",
+      "bytes": 2480,
+      "sha256": "623b659e8a863bddb64e7ffde7c7a4de3ab751a60f873a96b204b9e933f730b3"
+    },
+    {
+      "relative_path": "render-foundations-smoke/publication.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/publication.json",
+      "storage": "visible",
+      "bytes": 5590,
+      "sha256": "36b3046e6d30a6114e43782316cbf9fc5e4330d47e6b99fa0ede2f01f65b5333"
+    },
+    {
+      "relative_path": "feature-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-review.json",
+      "storage": "visible",
+      "bytes": 4653,
+      "sha256": "c772a59f3d4cc1b166ac2293bdf9ed7f030adef59a99cac485e74534d239cb5b"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

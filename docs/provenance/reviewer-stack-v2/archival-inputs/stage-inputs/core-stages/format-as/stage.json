@@ -1,0 +1,23 @@
+{
+  "id": "format-as",
+  "title": "Map user values through ADL format_as",
+  "dependencies": [
+    "formatter-compatibility"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_format_as"
+  ],
+  "docs": [
+    "docs/api/format-as.md"
+  ],
+  "problem": "Small wrappers should reuse primitive formatting without a full formatter specialization.",
+  "example": "#include <ffmt/detail/checked.hpp>\nstruct status { unsigned code; };\nconstexpr auto format_as(status value) { return value.code; }\n// ffmt::format_to(buffer, \"{:#x}\", status{42}) writes \"0x2a\".\n// The same mapped value can supply a dynamic integer width.",
+  "design": "ADL mapping participates in parsing, output and dynamic width validation. Values retain references until mapping occurs.",
+  "tradeoffs": "Mappings terminate at primitive representations; they are not a recursive serialization interface.",
+  "reading_order": [
+    "include/ffmt/detail/type_traits.hpp",
+    "test/conformance/test_core_format_as.cpp"
+  ]
+}

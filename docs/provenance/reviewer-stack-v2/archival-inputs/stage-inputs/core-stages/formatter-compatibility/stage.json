@@ -1,0 +1,27 @@
+{
+  "id": "formatter-compatibility",
+  "title": "Support parse/context formatters and correct forwarding",
+  "dependencies": [
+    "primitives"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_formatters",
+    "test_core_forwarding",
+    "test_formatter_composition"
+  ],
+  "docs": [
+    "docs/api/formatter-compatibility.md"
+  ],
+  "problem": "User-defined values need to consume specs and write into the caller context.",
+  "example": "#include <ffmt/detail/checked.hpp>\nstruct point { int value; };\ntemplate <class Char>\nstruct ffmt::formatter<point, Char> : ffmt::formatter<int, Char> {\n  template <class Context>\n  auto format(const point& p, Context& ctx) const {\n    return ffmt::formatter<int, Char>::format(p.value, ctx);\n  }\n};\n// Formatting point{42} with \"{:04x}\" now writes \"002a\".\n// Inherited parse() checks the same specs as the integer formatter.",
+  "design": "Eligibility checks inspect the cv-qualified reference accepted by format. Shared sink iterators preserve nested counts without copying user objects.",
+  "tradeoffs": "The protocol is template based with checked statuses; it does not provide exception services or type-erased stores.",
+  "reading_order": [
+    "include/ffmt/detail/formatters.hpp",
+    "include/ffmt/detail/context.hpp",
+    "test/conformance/test_core_formatters.cpp",
+    "test/conformance/test_core_forwarding.cpp"
+  ]
+}

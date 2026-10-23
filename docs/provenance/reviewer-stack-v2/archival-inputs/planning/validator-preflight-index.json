@@ -1,0 +1,19 @@
+{
+  "original_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+  "stages": [
+    {
+      "id": "smoke",
+      "commit": "aeff043614725d58d383c8add086f548d77d05eb",
+      "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "dependencies": [],
+      "suites": [],
+      "validation_commands": [
+        [
+          "python3",
+          "--version"
+        ]
+      ]
+    }
+  ]
+}

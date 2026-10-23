@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "56cdf4f451269d34a4daaf42cd03f8ef04494fd203f16b8dff135971911f4f4c",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/reviewer-stack-v2/publication-independent-review",
+      "--input",
+      "independent-preflight.json=/tmp/ffmt-publication-review-vl56y8zh/independent-preflight.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "independent-preflight.json",
+      "original_path": "/tmp/ffmt-publication-review-vl56y8zh/independent-preflight.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "independent-preflight.json",
+      "original_path": "/tmp/ffmt-publication-review-vl56y8zh/independent-preflight.json",
+      "storage": "visible",
+      "bytes": 285,
+      "sha256": "2a683a09861ca607075ee22ed69631f00052c448f6d850cf4ba05192a4de8d47"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

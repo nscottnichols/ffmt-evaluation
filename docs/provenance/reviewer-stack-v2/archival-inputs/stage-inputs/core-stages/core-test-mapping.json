@@ -1,0 +1,26 @@
+{
+  "test_engine.cpp": [
+    "test_core_primitives.cpp",
+    "test_core_floating.cpp",
+    "test_core_unicode.cpp",
+    "test_core_formatters.cpp",
+    "test_core_format_as.cpp",
+    "test_core_legacy.cpp",
+    "test_core_migration.cpp"
+  ],
+  "test_engine_forwarding.cpp": [
+    "test_core_forwarding.cpp",
+    "test_legacy_forwarding.cpp",
+    "test_transport_forwarding.cpp",
+    "optional-feature forwarding tests owned by named/ranges stages"
+  ],
+  "unchanged_native_suites": [
+    "test_engine_extended.cpp",
+    "test_engine_quad.cpp",
+    "test_engine_bitint.cpp",
+    "test_engine_fast_math.cpp",
+    "test_engine_transport.cpp",
+    "test_engine_legacy_hook.cpp"
+  ],
+  "mixed_assertion": "The original wide string + float + legacy formatter composition assertion is retained at public migration so it does not introduce artificial feature dependencies."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "accounting",
+  "title": "Count bounded output independently of formatting",
+  "dependencies": [
+    "checked-config"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_accounting"
+  ],
+  "docs": [
+    "docs/api/accounting.md"
+  ],
+  "problem": "Truncation must retain the complete required length without writing beyond caller capacity.",
+  "example": "#include <ffmt/detail/checked.hpp> // internal engine during staged introduction\nchar bytes[2];\nffmt::detail::iterator_sink<char*, char> sink{bytes, 2};\nsink.repeat('x', 7); // bytes == {'x', 'x'}; written == 2; required == 7",
+  "design": "All iterator copies share a sink. Required-length overflow is detected before arithmetic wraps.",
+  "tradeoffs": "Counts describe code units, not display columns; family alignment hooks arrive with shared family support.",
+  "reading_order": [
+    "include/ffmt/detail/result.hpp",
+    "include/ffmt/detail/output.hpp",
+    "test/conformance/test_core_accounting.cpp"
+  ]
+}

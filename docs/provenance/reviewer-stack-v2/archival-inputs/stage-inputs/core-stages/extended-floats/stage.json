@@ -1,0 +1,28 @@
+{
+  "id": "extended-floats",
+  "title": "Preserve native long-double and binary128 representations",
+  "dependencies": [
+    "floating-formatting",
+    "extended-integers"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_engine_extended",
+    "test_engine_quad"
+  ],
+  "docs": [
+    "docs/api/extended-floats.md"
+  ],
+  "problem": "Passing extended values through double loses range and precision before formatting.",
+  "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[64];\nauto result = ffmt::format_to(buffer, \"{:.21g}\", 1.234567890123456789L);\n// Conversion uses the native long-double representation; it does not narrow to double.",
+  "design": "Native 80-bit and 128-bit decomposition feeds the same exact decimal algorithm. Formatting does not require quadmath conversion.",
+  "tradeoffs": "Layouts and availability are target dependent. Unsupported representations return a checked status.",
+  "reading_order": [
+    "include/ffmt/detail/floating.hpp",
+    "include/ffmt/detail/extended.hpp",
+    "test/conformance/test_engine_extended.cpp",
+    "test/conformance/test_engine_quad.cpp"
+  ],
+  "source_changes": "Test-only binary128 guard enables FMT_USE_FLOAT128 before the oracle include only when FFMT_HAS_FLOAT128 is true; unsupported compilers still compile the return77 branch. Formatter logic is unchanged."
+}

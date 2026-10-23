@@ -1,0 +1,43 @@
+--- qualified/include/ffmt/detail/family.hpp
++++ restructured/include/ffmt/detail/family.hpp
+@@ -283,7 +283,8 @@
+   }
+   auto out = ctx.out();
+   using OutputIt = decltype(out);
+-  auto once = [&] {
++  // Render while measuring columns. This path never invokes a formatter twice.
++  auto render_and_measure = [&] {
+     family_forward_count_state<OutputIt, Char> state{ctx.out(), {}};
+     auto counting =
+         ctx.rebind(family_forward_count_iterator<OutputIt, Char>{&state});
+@@ -291,15 +292,19 @@
+     ctx.advance_to(state.out);
+     return state.counter.size();
+   };
++  // Left padding needs only the completed body width, so every iterator can
++  // stream the body once and append its trailing padding.
+   if (!spec.align || spec.align == '<') {
+-    auto columns = once();
++    auto columns = render_and_measure();
+     write_padded(ctx, spec, columns, [](auto &) {});
+     return ctx.out();
+   }
++  // A bounded writable buffer can insert leading padding after rendering. Its
++  // accounting retains the full required size even when the stored prefix ends.
+   if constexpr (family_can_reorder<OutputIt>()) {
+     auto &output = family_padding_output(out);
+     auto mark = output.ffmt_padding_mark();
+-    auto columns = once();
++    auto columns = render_and_measure();
+     auto body_end = output.ffmt_padding_mark();
+     write_padded(ctx, spec, columns, [](auto &) {});
+     std::size_t padding = static_cast<std::size_t>(spec.width) > columns
+@@ -310,6 +315,8 @@
+                               spec.fill, spec.fill_size);
+     return ctx.out();
+   } else {
++    // Other iterators cannot insert bytes before the body. Measure, then replay
++    // only when the formatter and input explicitly permit a second traversal.
+     if (!replayable) {
+       ctx.on_error(format_error::unsupported_type);
+       return ctx.out();

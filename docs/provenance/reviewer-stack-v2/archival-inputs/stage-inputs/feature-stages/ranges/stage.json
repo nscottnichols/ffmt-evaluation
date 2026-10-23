@@ -1,0 +1,59 @@
+{
+  "id": "ranges",
+  "title": "Format ranges, tuples and joins",
+  "dependencies": [
+    "shared-family"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "ranges",
+      "ranges_iterators",
+      "ranges_forwarding"
+    ],
+    "commands": [
+      "make build/focused_ranges CXX=\"$CXX\" && ./build/focused_ranges",
+      "make build/focused_ranges_iterators CXX=\"$CXX\" && ./build/focused_ranges_iterators",
+      "make build/focused_ranges_forwarding CXX=\"$CXX\" && ./build/focused_ranges_forwarding"
+    ]
+  },
+  "problem": "Format structured containers using element formatters while preserving iterator semantics.",
+  "example": "#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{::03}\", values);  // [001, -02, 033]\nffmt::println(\"{:02x}\", ffmt::join(values, \",\"));",
+  "design": "Range detection and constrained formatter specializations; standard operations remain device-dependent.",
+  "tradeoffs": "Ranges select sequence, set, map, string or debug-string presentation. Tuples\nand container adaptors have explicit adapters; nested specifications follow the\nsecond colon, while `n` removes delimiters. `range_format_kind` customizes string\nversus debug-string treatment. Joins hold iterator/delimiter views; keep their\nunderlying objects alive. Mutable and move-only input iterators are preserved.\nRight/center alignment on streaming iterators requires repeatable element\nformatters and forward ranges; bounded writable buffers handle consuming ranges\nwithout replay. The standard-library operations used by the range must be\ncallable on the selected device.",
+  "reading_order": [
+    "include/ffmt/ranges.hpp",
+    "test/conformance/test_ranges.cpp",
+    "test/conformance/test_ranges_iterators.cpp",
+    "test/conformance/test_ranges_forwarding.cpp"
+  ],
+  "docs": [
+    "docs/features/ranges.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Conventional header layout; range/iterator/mutation tests extracted and grouped, cross-feature named-range assertion moved to integration. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "ranges",
+      "ranges_iterators",
+      "ranges_forwarding"
+    ],
+    "fixture_modules": [
+      "cases_ranges.py"
+    ]
+  },
+  "before": "An std::array<int,3> has no formatter, so a checked call with {::03} is rejected.",
+  "after": "#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{::03}\", values);  // [001, -02, 033]\nffmt::println(\"{:02x}\", ffmt::join(values, \",\"));",
+  "validation": {
+    "commands": [
+      "make build/focused_ranges CXX=\"$CXX\" && ./build/focused_ranges",
+      "make build/focused_ranges_iterators CXX=\"$CXX\" && ./build/focused_ranges_iterators",
+      "make build/focused_ranges_forwarding CXX=\"$CXX\" && ./build/focused_ranges_forwarding"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

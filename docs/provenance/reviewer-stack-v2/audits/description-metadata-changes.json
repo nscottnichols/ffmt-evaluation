@@ -1,0 +1,581 @@
+{
+  "classification": "description metadata only; source/Make/tests unchanged; no compile validation claimed",
+  "stages": [
+    {
+      "id": "tool-host-oracle",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/stage.json",
+      "fields": [
+        "design",
+        "tradeoffs",
+        "reading_order"
+      ],
+      "old_sha256": "81772ff0b7999ffefa3d4536cd568b2958928e0aac74f0d21d38d456b153e251",
+      "new_sha256": "069d9ff2fcd140c1059c90405041df99062262969333a1a2f476b67e7f6ffd04",
+      "before": {
+        "design": "Compile fmt only into host reference executables, and compile ffmt targets without fmt headers. Begin with baseline cases supported before engine migration.",
+        "tradeoffs": "Individual executables cost compile time; compiler and fmt source identities are recorded. Accelerator routes and future feature cases are absent.",
+        "reading_order": [
+          "test/conformance/cases_baseline.py",
+          "tools/conformance.py:build_oracle",
+          "tools/conformance.py:configuration",
+          "tools/backend_host.py",
+          "test/conformance/test_fixture_registry.py"
+        ]
+      },
+      "after": {
+        "design": "Compile fmt only into host reference executables, and compile ffmt targets without fmt headers. Require a clean checkout at the exact oracle pin without modifying it, and record format.h/format.cc hashes. Begin with four baseline cases supported before engine migration.",
+        "tradeoffs": "Separate reference and target compilation reduces shared assumptions but costs compile time. Dirty or differently pinned oracle checkouts fail visibly. Accelerator routes and later feature cases arrive in independent changes.",
+        "reading_order": [
+          "test/conformance/cases_baseline.py",
+          "tools/oracle.py:oracle_identity",
+          "tools/conformance.py:build_oracle and configuration",
+          "tools/backend_host.py",
+          "test/conformance/test_oracle.py",
+          "test/conformance/test_fixture_registry.py"
+        ]
+      }
+    },
+    {
+      "id": "accounting",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "da128296fb8dca6ae55369bfae93276c7ba3670e81bad5752359a4e4d1291a1a",
+      "new_sha256": "ae23802d65e85feb803d4566390d47fd0c4924a0efa2d16537be3b50f129ac31",
+      "before": {
+        "example": "sink.repeat('x', 7); // capacity 2: written=2, required=7"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp> // internal engine during staged introduction\nchar bytes[2];\nffmt::detail::iterator_sink<char*, char> sink{bytes, 2};\nsink.repeat('x', 7); // bytes == {'x', 'x'}; written == 2; required == 7"
+      }
+    },
+    {
+      "id": "parsing",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "cab9bf9e72136bc937bf3766abc8c0891fa9e06119a5c2a20c4897ac95a1a376",
+      "new_sha256": "a9d228d2b0913985a349b1636a4cca1a9f7edd94c355adf6e3a78dcc7a1d3894",
+      "before": {
+        "example": "walk_format(\"{{{:04x}}}\", handler); // literal braces and one field"
+      },
+      "after": {
+        "example": "Given the handler in test_core_parsing.cpp:\nffmt::detail::walk_format<char>(\"{{{:04x}}}\", events);\n// Receives two literal braces and one argument with width 4/type x.\n// \"{0} {}\" instead returns invalid_format for mixed index modes."
+      }
+    },
+    {
+      "id": "primitives",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "7c81b95677775d9594a00e41a160f175a8e3051dff7e65294bd3bc2c03ef3dee",
+      "new_sha256": "20cb6d66567a2718cbb9f5cd1faa0eade4a19710215fbaeb07e3d722a6d3d1fa",
+      "before": {
+        "example": "format_to_n(buffer, 2, \"{:04x}\", 42); // stores \"00\", required=4"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp> // public base.hpp migrates later\nchar buffer[2];\nauto result = ffmt::format_to_n(buffer, sizeof buffer, \"{:04x}\", 42);\n// buffer == {'0', '0'}; result.written == 2; result.required == 4"
+      }
+    },
+    {
+      "id": "unicode",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "6317ca16cd94f6b1395f705cbbc24996b7c53990bb8b6ce73c1e74f0f3a06cdd",
+      "new_sha256": "a41215d80d4d4a72758211a958b10d83b48d3f8ef7d9a67c32608b934f68e7c0",
+      "before": {
+        "example": "format_to(buffer, \"{:\u2500^9}\", \"\u00e9\");"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[32];\nauto result = ffmt::format_to(buffer, \"{:\u2500^9}\", \"\u00e9\");\n// Bytes encode \"\u2500\u2500\u2500\u2500\u00e9\u2500\u2500\u2500\u2500\": display width 9, rather than padding by UTF-8 byte count."
+      }
+    },
+    {
+      "id": "formatter-compatibility",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "21218757d6e21674e99ed00cb59edc357f8036dfa192442fb271644a804477b9",
+      "new_sha256": "7d85ae391f06b2aee5dc3198b40cded90644ea9b283c08489e97f22cc3c7b7a6",
+      "before": {
+        "example": "struct formatter<point> : formatter<int> { /* parse and format */ };"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp>\nstruct point { int value; };\ntemplate <class Char>\nstruct ffmt::formatter<point, Char> : ffmt::formatter<int, Char> {\n  template <class Context>\n  auto format(const point& p, Context& ctx) const {\n    return ffmt::formatter<int, Char>::format(p.value, ctx);\n  }\n};\n// Formatting point{42} with \"{:04x}\" now writes \"002a\".\n// Inherited parse() checks the same specs as the integer formatter."
+      }
+    },
+    {
+      "id": "format-as",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/format-as/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "f8ea1679a2582e76dabf9cd1dfb170a5f6a075cd3ecfa6f55edd2bbd1dd194f9",
+      "new_sha256": "4180c15c2098c4f0a65dd73dc24ca00b7d0953460b08e38640424cbbdf4f3282",
+      "before": {
+        "example": "constexpr auto format_as(status value) { return value.code; }"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp>\nstruct status { unsigned code; };\nconstexpr auto format_as(status value) { return value.code; }\n// ffmt::format_to(buffer, \"{:#x}\", status{42}) writes \"0x2a\".\n// The same mapped value can supply a dynamic integer width."
+      }
+    },
+    {
+      "id": "legacy-compatibility",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "dec8fdad60ec7f74916fe18fe0c0c18cf4219503f6e7052286bfd68666ca7eb1",
+      "new_sha256": "fc16a72820782c5bb3f907bd40d17c45054ed90fe406832346d6535d24577384",
+      "before": {
+        "example": "static auto format(point p) { return formatted<\"({}, {})\", int, int>{{p.x, p.y}}; }"
+      },
+      "after": {
+        "example": "Inside an existing ffmt::formatter<point> specialization:\nstatic constexpr auto format(point p) {\n  return ffmt::formatted<\"({}, {})\", int, int>{{p.x, p.y}};\n}\n// Formatting point{2, 7} with \"{}\" continues to write \"(2, 7)\".\n// test_core_legacy.cpp checks the corresponding narrow and wide output."
+      }
+    },
+    {
+      "id": "floating-conversion",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-conversion/stage.json",
+      "fields": [
+        "example",
+        "tradeoffs"
+      ],
+      "old_sha256": "68d7eae89da7391c7f3211a7f0c261c1eeb93f9bb866c4a15eefe5583c11d0fa",
+      "new_sha256": "8eb84a55e9f47af866e7f49dc14823f9c5ffe67444aeb7da48a4faafcb51816e",
+      "before": {
+        "example": "portable_shortest(buffer, std::numeric_limits<double>::denorm_min()); // \"5e-324\"",
+        "tradeoffs": "This uses more code than forwarding to libc, but avoids locale and allocation dependencies. Internal conversion accepts supported finite representations and renders their magnitude; callers handle signs and nonfinite spellings. Capacities 1100 and 16520 count decimal digits needed for exact supported IEEE values and interval endpoints, not requested output precision. Binary128 midpoint coefficients require fewer than 11570 digits, leaving conservative headroom. Direct oracle tests cover adjacent powers of two, subnormal/normal transitions, maximum finite values and notation transitions; decimal tests exercise rounding carry and ties."
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[64];\nauto size = ffmt::detail::portable_shortest(\n    buffer, std::numeric_limits<double>::denorm_min());\n// buffer[0..size) is \"5e-324\", matching the independent fmt oracle.",
+        "tradeoffs": "Integer interval conversion uses more code and bounded working storage than forwarding to libc, while avoiding locale and allocation services. Internal conversion renders supported finite magnitudes; the formatting layer handles signs and nonfinite spellings. The documented 1100/16520-digit bounds cover exact IEEE expansions and interval endpoints, rather than limiting requested output precision. Direct oracle tests cover adjacent powers of two, subnormal/normal transitions, maximum finite values, rounding ties and carries."
+      }
+    },
+    {
+      "id": "floating-formatting",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "2e57536ef588ee06a3fd17b416fd1d2ea2da082376b86881d0c9769728d63b57",
+      "new_sha256": "8c5ed563a8fc2a14dd12595d8ee643aa32d5c91736e74ec3792a52e97d69ab09",
+      "before": {
+        "example": "format_to_n(buffer, 2, \"{:.2000f}\", 0.125); // required=2002"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[2];\nauto result = ffmt::format_to_n(buffer, sizeof buffer, \"{:.2000f}\", 0.125);\n// Stores \"0.\"; result.written == 2; result.required == 2002."
+      }
+    },
+    {
+      "id": "transport",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "3d59f353361f22ffe39a71856357857823911f77961fc36af835c3cb7364f696",
+      "new_sha256": "59d006ff9cc7b2779ead94fdecee493a2e748244ac2e6f19330fb8ca2bd6b69b",
+      "before": {
+        "example": "try_print(\"a{}b\", char(0)); // counted chunk hooks preserve the NUL"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp> // base.hpp switches in the migration PR\nauto result = ffmt::try_print(\"a{}b\", char(0));\n// The default host counted transport emits all three bytes: a, NUL, b.\n// A transport without counted-byte support reports its limitation."
+      }
+    },
+    {
+      "id": "extended-integers",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-integers/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "e1cb8934ba57a7945caf65f29e4ad1d768f86eb944a48bd894b7c5261506334b",
+      "new_sha256": "486d0619def5ca5cf496f52ef5e1a6a07fc6b0aad0b1f20a84b545d0f2b6f352",
+      "before": {
+        "example": "using U = unsigned __int128;\nformat_to(buffer, \"{:#x}\", U(1) << 100);"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp>\nusing U = unsigned __int128; // when the compiler supplies this type\nchar buffer[64];\nauto result = ffmt::format_to(buffer, \"{:#x}\", U(1) << 100);\n// Writes the full native value, \"0x10000000000000000000000000\"."
+      }
+    },
+    {
+      "id": "extended-floats",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/stage.json",
+      "fields": [
+        "example"
+      ],
+      "old_sha256": "5c152615c7b7295aab8fcaa521504d84d4fbb2cadbfd600c8d13583376d98c5f",
+      "new_sha256": "5fbfd7f4118ea09f89783e3f5692bf6cb3d89afebd6cec9b5ad076c20c0b4168",
+      "before": {
+        "example": "format_to(buffer, \"{:.21g}\", 1.234567890123456789L);"
+      },
+      "after": {
+        "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[64];\nauto result = ffmt::format_to(buffer, \"{:.21g}\", 1.234567890123456789L);\n// Conversion uses the native long-double representation; it does not narrow to double."
+      }
+    },
+    {
+      "id": "tool-oracle-negatives",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-oracle-negatives/stage.json",
+      "fields": [
+        "problem"
+      ],
+      "old_sha256": "cebe1753b21628556a7c30acff8e5eca23786eee2b5dfb6e8dec46e9c48fd88d",
+      "new_sha256": "6b84c9ab7bb54b8167fc197f3476947aedb448e3cbdb4e7857d2f62cde23061c",
+      "before": {
+        "problem": "A source snapshot can reject valid formatting output correctly while silently accepting an invalid literal."
+      },
+      "after": {
+        "problem": "Matching valid output does not establish that an implementation rejects malformed or type-incompatible format literals."
+      }
+    },
+    {
+      "id": "benchmark-driver",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-driver/stage.json",
+      "fields": [
+        "design",
+        "reading_order"
+      ],
+      "old_sha256": "c57c1d169d75f769986d76ebb28ee7d63f273f812826d593ecf8dcf4174630fb",
+      "new_sha256": "bed8ca74bfbfd864a59953209cb989cd0c46d239fcea2e41f8a9c1db48a23c3b",
+      "before": {
+        "design": "Snapshot sources and benchmark primitives, compare output before timing, validate sample counts and checksums, and retain exact commands and source identities.",
+        "reading_order": [
+          "tools/benchmark.py:main",
+          "tools/benchmark.py:build",
+          "tools/benchmark.py:metrics",
+          "test/conformance/test_benchmark.py"
+        ]
+      },
+      "after": {
+        "design": "Snapshot sources and benchmark primitives, require a clean pinned fmt oracle, compare output before timing, validate sample counts and checksums, and retain exact commands and source hashes.",
+        "reading_order": [
+          "tools/benchmark.py:main and verification before timing",
+          "tools/benchmark.py:build and metrics",
+          "tools/oracle.py:oracle_identity",
+          "test/conformance/test_benchmark.py"
+        ]
+      }
+    },
+    {
+      "id": "tool-cuda",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-cuda/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "tradeoffs"
+      ],
+      "old_sha256": "79e4f7a518689854a0d64748aa6299a09393b033fd0f8ce2e7f40dea5005e8a1",
+      "new_sha256": "bb111cd81c5d9c12306041365053cebe60a56cf7bb2981e82f844512b0b74da6",
+      "before": {
+        "problem": "Portable output cases need a backend-specific execution launcher without coupling unrelated accelerator runtimes.",
+        "example": "Run a literal case in a one-thread CUDA kernel through nvcc or Clang.",
+        "design": "Register this adapter independently; keep handwritten compiler flags and C++ launch code next to each other.",
+        "tradeoffs": "Execution requires a CUDA device and runtime; Python checks only source generation here."
+      },
+      "after": {
+        "problem": "CUDA source compilation needs compiler-specific language and architecture flags, and successful compilation alone cannot establish that a kernel executed.",
+        "example": "--route cuda selects Clang CUDA; --route nvcc selects NVIDIA nvcc.\nBoth launch one execute_case(index) kernel, check launch/synchronization errors,\nand require FFMT_DEVICE metadata before comparing stdout bytes.",
+        "design": "Keep both CUDA compiler routes in one handwritten runtime adapter. Probe device availability, record the selected device, launch one thread, and synchronize before the process exits.",
+        "tradeoffs": "The common fixture stays free of fmt device code. These Python tests inspect the generated source and flags; a CUDA device/runtime is still required to establish execution."
+      }
+    },
+    {
+      "id": "tool-hip",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-hip/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "tradeoffs"
+      ],
+      "old_sha256": "7e985083725c0fb91c4065997f2a87f0199a2a63fd311ca50a41ff07b0617d14",
+      "new_sha256": "c1a717eb2189b8634b220335ebb3f186ac645da8d71df9ec2f4bcf3399cbda6e",
+      "before": {
+        "problem": "Portable output cases need a backend-specific execution launcher without coupling unrelated accelerator runtimes.",
+        "example": "Run the same case through a HIP kernel without a fmt device build.",
+        "design": "Register this adapter independently; keep handwritten compiler flags and C++ launch code next to each other.",
+        "tradeoffs": "Execution requires the selected HIP or chipStar runtime and a device."
+      },
+      "after": {
+        "problem": "HIP and chipStar share a launch API but need different compiler flag choices; a failed launch must not be mistaken for a formatting mismatch.",
+        "example": "--route hip uses hipcc with the selected ROCm offload architecture.\n--route chipstar uses the externally selected HIP runtime.\nBoth check hipLaunchKernelGGL, the last launch error and device synchronization.",
+        "design": "Use one handwritten HIP runtime adapter for the two compiler routes. Keep architecture selection on the native HIP route, and retain device properties and launch failures as separate evidence.",
+        "tradeoffs": "The caller supplies the appropriate hipcc/runtime environment. Portable tests check source generation and flag overrides; they do not execute a HIP or chipStar kernel."
+      }
+    },
+    {
+      "id": "tool-kokkos",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-kokkos/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "tradeoffs"
+      ],
+      "old_sha256": "7700d32126913862cbdf16377e1a84c93512a1b25753da0d1a2f90781066031a",
+      "new_sha256": "421fc8b0e1d55b27528c546b2b65e88934bb55e1892c9def45302ad43594bf3d",
+      "before": {
+        "problem": "Portable output cases need a backend-specific execution launcher without coupling unrelated accelerator runtimes.",
+        "example": "Only advertise kokkos-cuda when the CUDA base adapter is present.",
+        "design": "Register this adapter independently; keep handwritten compiler flags and C++ launch code next to each other.",
+        "tradeoffs": "Kokkos must be installed externally with the selected execution space; no site profiles are included."
+      },
+      "after": {
+        "problem": "A Kokkos installation can select a different DefaultExecutionSpace from the route requested by a test, producing a misleading backend result.",
+        "example": "--route kokkos-cuda requires DefaultExecutionSpace::name() == \"Cuda\".\nA Serial installation returns 77 before formatting, rather than being reported\nas a successful CUDA comparison.",
+        "design": "Wrap the existing base compiler adapter with Kokkos includes/link flags, require the requested execution space, run one parallel_for, and fence before finalization. Advertise an accelerator wrapper only when its base adapter is present.",
+        "tradeoffs": "Kokkos must be installed externally with the requested execution space. Source-generation tests cover the guard, launch and lifecycle, while runtime/device availability remains unqualified here."
+      }
+    },
+    {
+      "id": "tool-numeric-memory",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/stage.json",
+      "fields": [
+        "tradeoffs"
+      ],
+      "old_sha256": "00dbaa49e8144385bf527e98f981f20bce7804ff6378b40e827f5458afe6e16a",
+      "new_sha256": "6ae621e5bf916c8bb4d25f5e7ba353945c8216691486b071a73352cbce5ff503",
+      "before": {
+        "tradeoffs": "The 4,096 float and double encodings plus boundaries are representative samples; matching this corpus is not exhaustive floating-point proof. This stage executes host memory only."
+      },
+      "after": {
+        "tradeoffs": "The default corpus has 4096 seeded float encodings, 4096 seeded double encodings, and 24 boundary/special encodings. This is representative sampling, not exhaustive floating-point proof. The portable smoke command reduces the seed count to 32 per type and executes host memory only."
+      }
+    },
+    {
+      "id": "tool-memory-cuda",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-cuda/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "reading_order"
+      ],
+      "old_sha256": "00440144b30f6d251da22af85d640bb00e2d63b634f3ec44ea45e02b1d38063c",
+      "new_sha256": "83e3f6509ebe935317e14011e3c8f810edc50c82bcdf96590923c32922a27905",
+      "before": {
+        "problem": "Stdout transport and floating-point memory conversion can fail independently on an accelerator.",
+        "example": "Copy numeric input encodings to device memory, format there, then compare copied binary output records with host fmt.",
+        "design": "Add a memory launcher to the existing independent adapter without changing other backend modules.",
+        "reading_order": [
+          "tools/backend_cuda.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in"
+        ]
+      },
+      "after": {
+        "problem": "CUDA stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+        "example": "cudaMemcpyHostToDevice -> memory_kernel -> cudaDeviceSynchronize\n-> cudaMemcpyDeviceToHost -> serialize(input, output)",
+        "design": "Allocate CUDA input/output buffers, copy input encodings, zero output, launch memory_kernel, check errors/synchronize, and copy framed results back. The numeric formatting body remains the shared handwritten template.",
+        "reading_order": [
+          "tools/backend_cuda.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in",
+          "test/conformance/test_memory_cuda.py"
+        ]
+      }
+    },
+    {
+      "id": "tool-memory-hip",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-hip/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "reading_order"
+      ],
+      "old_sha256": "8eec29b02ac6a450dc4f4fd8d20d28bfd3a8ef2eaf1ad4c0134d0fee59369eb5",
+      "new_sha256": "e62deaeb8265ffb751c53304a4ff3e4738cc4ca0599c142fda27669466b8bada",
+      "before": {
+        "problem": "Stdout transport and floating-point memory conversion can fail independently on an accelerator.",
+        "example": "Copy numeric input encodings to device memory, format there, then compare copied binary output records with host fmt.",
+        "design": "Add a memory launcher to the existing independent adapter without changing other backend modules.",
+        "reading_order": [
+          "tools/backend_hip.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in"
+        ]
+      },
+      "after": {
+        "problem": "HIP stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+        "example": "hipMemcpyHostToDevice -> hipLaunchKernelGGL -> hipDeviceSynchronize\n-> hipMemcpyDeviceToHost -> serialize(input, output)",
+        "design": "Allocate HIP input/output buffers, copy input encodings, zero output, launch with hipLaunchKernelGGL, check errors/synchronize, and copy framed results back. The same adapter also serves the chipStar route.",
+        "reading_order": [
+          "tools/backend_hip.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in",
+          "test/conformance/test_memory_hip.py"
+        ]
+      }
+    },
+    {
+      "id": "tool-memory-kokkos",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-kokkos/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "reading_order"
+      ],
+      "old_sha256": "9659e067b9a8dca9fb18dc6de5fcf43d07d0156e1f0de601c2dcfb3b1fc9268a",
+      "new_sha256": "e83ec140c67e64ab91fb4cb639a5a28f8c333dfe1eadbf1ae110acebf49202e2",
+      "before": {
+        "problem": "Stdout transport and floating-point memory conversion can fail independently on an accelerator.",
+        "example": "Copy numeric input encodings to device memory, format there, then compare copied binary output records with host fmt.",
+        "design": "Add a memory launcher to the existing independent adapter without changing other backend modules.",
+        "reading_order": [
+          "tools/backend_kokkos.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in"
+        ]
+      },
+      "after": {
+        "problem": "Kokkos stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+        "example": "host mirror -> deep_copy(device_input) -> parallel_for(format_record)\n-> create_mirror_view_and_copy(HostSpace, device_output) -> serialize",
+        "design": "Require the requested DefaultExecutionSpace, deep-copy input through a host mirror, format into a device View with parallel_for, and copy a HostSpace mirror back before serialization and finalization.",
+        "reading_order": [
+          "tools/backend_kokkos.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in",
+          "test/conformance/test_memory_kokkos.py"
+        ]
+      }
+    },
+    {
+      "id": "tool-openmp",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-openmp/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "tradeoffs"
+      ],
+      "old_sha256": "91ce89f2bdbbfab1a366fd8b61b9e27753c675f165c80e570d1325aa3f52a986",
+      "new_sha256": "765c0326bf9442657bc1489553b88b69c7c7d5e22fa98a5381b89872003480ad",
+      "before": {
+        "problem": "Portable output cases need a backend-specific execution launcher without coupling unrelated accelerator runtimes.",
+        "example": "Reject an OpenMP target region that executes on the initial host device.",
+        "design": "Register this adapter independently; keep handwritten compiler flags and C++ launch code next to each other.",
+        "tradeoffs": "Execution requires a working offload toolchain and accelerator; host fallback is failure."
+      },
+      "after": {
+        "problem": "OpenMP target regions can silently run on the initial host device, allowing a host result to masquerade as accelerator conformance.",
+        "example": "--route omp-cuda / omp-hip use Clang NVPTX / AMDGPU offload flags.\n--route omp-spirv uses icpx -fiopenmp -fopenmp-targets=spir64.\nAn initial-device control returns 77 before any output case is judged.",
+        "design": "Share one target-region launcher across the three compiler routes, require omp_is_initial_device() to be false, record the device number, and keep route-specific flags beside the launcher.",
+        "tradeoffs": "Host fallback becomes a failed execution control, not a formatting pass. Portable tests inspect source generation and flags; they do not establish an available OpenMP device runtime."
+      }
+    },
+    {
+      "id": "tool-memory-openmp",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-openmp/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "reading_order"
+      ],
+      "old_sha256": "e1a3389ae5889eef255342d6a4646dda1a751a308dad8ca993bd9d562667866a",
+      "new_sha256": "3ed2fbdd42e8be0f9609a729b9a5b6d9a9e01c85bb435e0d5b2e0da79ca52641",
+      "before": {
+        "problem": "Stdout transport and floating-point memory conversion can fail independently on an accelerator.",
+        "example": "Copy numeric input encodings to device memory, format there, then compare copied binary output records with host fmt.",
+        "design": "Add a memory launcher to the existing independent adapter without changing other backend modules.",
+        "reading_order": [
+          "tools/backend_openmp.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in"
+        ]
+      },
+      "after": {
+        "problem": "OpenMP stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+        "example": "omp_is_initial_device() must be false\nmap(to: input[0:count]) + map(from: output[0:count])\n-> format_record on the target -> serialize copied records",
+        "design": "Require non-initial-device execution, map input encodings to the target and output records from it, then format each record in a target teams distribute parallel for region.",
+        "reading_order": [
+          "tools/backend_openmp.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in",
+          "test/conformance/test_memory_openmp.py"
+        ]
+      }
+    },
+    {
+      "id": "tool-sycl",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-sycl/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "tradeoffs"
+      ],
+      "old_sha256": "491ed90f345060059a85c2911be180fdbbf2d2e4606ebebdeac8266a5780b168",
+      "new_sha256": "e8e02ef545d633b2fdbf1fbf9c418f6f6e224ba0d9342ab5f996cba1924d2201",
+      "before": {
+        "problem": "Portable output cases need a backend-specific execution launcher without coupling unrelated accelerator runtimes.",
+        "example": "Use a GPU selector, launch one SYCL task, and retain its device name.",
+        "design": "Register this adapter independently; keep handwritten compiler flags and C++ launch code next to each other.",
+        "tradeoffs": "Execution requires SYCL or AdaptiveCpp GPU support; a CPU fallback cannot pass."
+      },
+      "after": {
+        "problem": "SYCL implementations may select different devices, and asynchronous kernel errors need to be observed before stdout comparison.",
+        "example": "--route sycl uses icpx -fsycl; --route acpp uses AdaptiveCpp generic targets.\nThe launcher requests sycl::gpu_selector_v, records the device name/fp64 support,\nand waits with wait_and_throw() before judging output.",
+        "design": "Keep Intel SYCL and AdaptiveCpp compiler flags in one handwritten SYCL adapter. A mandatory GPU selector and explicit exception-aware wait prevent CPU fallback or pending errors from looking like a formatting pass.",
+        "tradeoffs": "The caller supplies a working SYCL GPU runtime. Python tests check selection, launch/wait structure and flag overrides; accelerator execution is not qualified here."
+      }
+    },
+    {
+      "id": "tool-memory-sycl",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-sycl/stage.json",
+      "fields": [
+        "problem",
+        "example",
+        "design",
+        "reading_order"
+      ],
+      "old_sha256": "6a1aaca34c75e6d46c38ecc389090f6f5df33e8b28bba02d6dbf4691d6cdb726",
+      "new_sha256": "fa1a6b394bebad066cd2009a36920abf4d51ab5aa48b08c34431288463052df5",
+      "before": {
+        "problem": "Stdout transport and floating-point memory conversion can fail independently on an accelerator.",
+        "example": "Copy numeric input encodings to device memory, format there, then compare copied binary output records with host fmt.",
+        "design": "Add a memory launcher to the existing independent adapter without changing other backend modules.",
+        "reading_order": [
+          "tools/backend_sycl.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in"
+        ]
+      },
+      "after": {
+        "problem": "SYCL stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+        "example": "GPU queue: memcpy(input) -> memset(output) -> parallel_for(format_record)\n-> memcpy(output) -> serialize(input, output); every stage waits and reports exceptions",
+        "design": "Use a GPU queue and explicit device USM allocations. Wait on input copies, zeroing, parallel_for and output copies with wait_and_throw before freeing memory and serializing results.",
+        "reading_order": [
+          "tools/backend_sycl.py:numeric_launcher",
+          "test/conformance/numeric_memory.cpp.in",
+          "test/conformance/test_memory_sycl.py"
+        ]
+      }
+    },
+    {
+      "id": "std23",
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23/stage.json",
+      "fields": [
+        "design",
+        "reading_order"
+      ],
+      "old_sha256": "e69b9fac9b30d36bfdc8eaec19cecdf9e8cd4d18067de22353b05af16c75cc9a",
+      "new_sha256": "62c3692f10dda69bd82e93ea74e96ca240a1f1e342e256d8ad776b5a44a25a6d",
+      "before": {
+        "design": "Separate opt-in header and skip semantics preserve C++20 portability.",
+        "reading_order": [
+          "include/ffmt/std23.hpp",
+          "test/conformance/test_std23.cpp"
+        ]
+      },
+      "after": {
+        "design": "Keep expected/unexpected adapters in an opt-in header. Make excludes suites declaring c++23 from its default capability target and exposes test-cxx23 explicitly; CMake retains its independent opt-in option.",
+        "reading_order": [
+          "include/ffmt/std23.hpp",
+          "test/conformance/test_std23.cpp",
+          "mk/portable-tests.mk:declared-standard selection",
+          "test/conformance/test_cxx23_opt_in.py"
+        ]
+      }
+    }
+  ]
+}

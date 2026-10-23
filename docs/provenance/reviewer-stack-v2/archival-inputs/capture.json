@@ -1,0 +1,3167 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "stage-inputs/core-stages",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages",
+      "handwritten_visible": true
+    },
+    {
+      "label": "stage-inputs/feature-stages",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages",
+      "handwritten_visible": true
+    },
+    {
+      "label": "stage-inputs/tool-stages",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages",
+      "handwritten_visible": true
+    },
+    {
+      "label": "stage-inputs/root-stages",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/assembly-index.cache.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/assembly-index.cache.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/assembly-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/assembly-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/audit_feature_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/audit_feature_stages.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/baseline.Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/baseline.Makefile",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/baseline.host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/baseline.host.yml",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/build_core_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/build_core_stages.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/build_feature_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/build_feature_stages.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/build_tool_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/build_tool_stages.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/check_core_headers.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/check_core_headers.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/check_tool_prefixes.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/check_tool_prefixes.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/export-build-repairs.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/export-build-repairs.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/feature-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-review.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/final-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/final-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/foundation-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/foundation-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/intermediates-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/link-checker-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/link-checker-correction.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/original-pr-metadata.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/original-pr-metadata.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/plan.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/plan.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/prepare-plan.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/prepare-plan.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/release-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/release-validation-partition.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-partition.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/repaired-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/repaired-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/submit_remaining.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submit_remaining.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/tool-oracle-change.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-oracle-change.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/tool-prefix-python.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-prefix-python.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/tool-whitespace-check.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-whitespace-check.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/update_core_review.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/update_core_review.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/validator-preflight-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validator-preflight-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "planning/whitespace-normalization.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/whitespace-normalization.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/README.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/README.md",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/assemble.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/assemble.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/audit_graph.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/audit_graph.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/check_links.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/check_links.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/overview.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/overview.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/publish.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/publish.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/render.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/render.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/validate-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate-cobalt.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate.py",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "stage-inputs/core-stages/config-move-proof.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/config-move-proof.json",
+      "storage": "visible",
+      "bytes": 344,
+      "sha256": "8451417948b1c9919da64a758d6801eacc4a102f82920c0f05fb39f006546f2c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-move-proof.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-move-proof.json",
+      "storage": "visible",
+      "bytes": 449,
+      "sha256": "cf9f282f61d4b31c08d5bf9e15f8f26bcfecae97675c7ad8047a504e519df29f"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/core-test-mapping.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/core-test-mapping.json",
+      "storage": "visible",
+      "bytes": 868,
+      "sha256": "e8ed59189b6b39e597cff724b7ec026ec002619f68dc50dfecbb92ce4c70140c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/family-output-hooks.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/family-output-hooks.hpp",
+      "storage": "visible",
+      "bytes": 3983,
+      "sha256": "6929c4d1446bf93b0b565eef63c2151ed4728e7981640c89de77a31e3e1c6a63"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/generation.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/generation.json",
+      "storage": "visible",
+      "bytes": 411,
+      "sha256": "963f7f2aa397ca7834ed224897476bf1e4479d50798244f2254b7a1aa9d22860"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/header-check-first-attempt.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/header-check-first-attempt.json",
+      "storage": "visible",
+      "bytes": 707,
+      "sha256": "1efeba7af2c1b2f632f7b254ede4ac6d772b656b3828ff423f41420401969ada"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/header-check.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/header-check.json",
+      "storage": "visible",
+      "bytes": 7634,
+      "sha256": "9c82bc942111383a3ec93d998974acb07d35354b74de3166b89306d4d0d5cf8f"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/index.json",
+      "storage": "visible",
+      "bytes": 344,
+      "sha256": "cbf7f616cf202cc9e237c62fcd0162661c3bf823b24343efa4b4e70cd3436609"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/mechanical-checks.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/mechanical-checks.json",
+      "storage": "visible",
+      "bytes": 422,
+      "sha256": "205f44fd5968203c5409e2dc0f9f95fe13d1523c2a15bf35fb042a05afd14897"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/merge-check-checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/merge-check-checked.hpp",
+      "storage": "visible",
+      "bytes": 569,
+      "sha256": "a54afc9103d1162ae3daa7ecb0e7ca4903759c0e92725d9116a2b594caee3783"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/merge-check-type_categories.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/merge-check-type_categories.hpp",
+      "storage": "visible",
+      "bytes": 2145,
+      "sha256": "1b0f2aee2c8aed5d2880bd24dd3b05e2cd238c5770df47f25fe54c32f9b709f3"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/merge-check.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/merge-check.json",
+      "storage": "visible",
+      "bytes": 161,
+      "sha256": "e63918e77341c47c33f64368e48eb0b3e29e85bb581bfcdbde3a41b8fb3acfac"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/review-resolutions.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/review-resolutions.json",
+      "storage": "visible",
+      "bytes": 2424,
+      "sha256": "b1928ac5f106021342fd62ebc48ebfa7ef338aaee3f0c1331d3eff7289d52afb"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/accounting/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting/stage.json",
+      "storage": "visible",
+      "bytes": 1016,
+      "sha256": "ae23802d65e85feb803d4566390d47fd0c4924a0efa2d16537be3b50f129ac31"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/accounting/files/docs/api/accounting.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting/files/docs/api/accounting.md",
+      "storage": "visible",
+      "bytes": 419,
+      "sha256": "c1d5d819f6dec6e4d2c49eb7cf2a902c1dd48d71d4eff33941fd292b2ce475d7"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/accounting/files/include/ffmt/detail/checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting/files/include/ffmt/detail/checked.hpp",
+      "storage": "visible",
+      "bytes": 149,
+      "sha256": "319a29ef42eb28e86d11711483bb19147f66b86414cc3daf9574a21c9f2cebf6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/accounting/files/include/ffmt/detail/output.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting/files/include/ffmt/detail/output.hpp",
+      "storage": "visible",
+      "bytes": 1655,
+      "sha256": "65c7404b3eb50c7867baafb3eadb3909bd3f660f54ca33e4bfb49b15b8e1ea7b"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/accounting/files/include/ffmt/detail/result.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting/files/include/ffmt/detail/result.hpp",
+      "storage": "visible",
+      "bytes": 1956,
+      "sha256": "9ec81a5ae558e6aff14d4b06cd074a762651ba7497907adf33e6fdc6de1c60a1"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/accounting/files/test/conformance/test_core_accounting.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/accounting/files/test/conformance/test_core_accounting.cpp",
+      "storage": "visible",
+      "bytes": 743,
+      "sha256": "d5c20450250dc5c67570eaefa7a2a4f95ba024fee4b78e7084f6e62424ae3899"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/checked-config/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/checked-config/stage.json",
+      "storage": "visible",
+      "bytes": 781,
+      "sha256": "d5bcbbbdc118f4fd3284a5c7d255c760cb815b334442be8cc8fca3028b8fe7a6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/checked-config/files/docs/api/checked-config.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/checked-config/files/docs/api/checked-config.md",
+      "storage": "visible",
+      "bytes": 439,
+      "sha256": "fbbcba9ff40b0ed76d1572cc70be8e7e93e0fe2158ba19323c97261ec8dc6317"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/checked-config/files/include/ffmt/detail/config.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/checked-config/files/include/ffmt/detail/config.hpp",
+      "storage": "visible",
+      "bytes": 1194,
+      "sha256": "bcddb4507b308d983cedb1174ad47eea6fb7f97e66affd2de3078eba1f4b3821"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-preparation/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation/stage.json",
+      "storage": "visible",
+      "bytes": 883,
+      "sha256": "9adebfec2c7bc8c37beeffc28f684c9c110cfbb4cd6e0cb864027f845eb1c941"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-preparation/files/NOTICE",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation/files/NOTICE",
+      "storage": "visible",
+      "bytes": 1107,
+      "sha256": "a65b67fb48dd03646af52b2900510aef2f13b142395b887062228837cae53ca6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-preparation/files/LICENSES/dragonbox-Boost.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation/files/LICENSES/dragonbox-Boost.txt",
+      "storage": "visible",
+      "bytes": 1338,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-preparation/files/LICENSES/fmt.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation/files/LICENSES/fmt.txt",
+      "storage": "visible",
+      "bytes": 1094,
+      "sha256": "a65fcc5a1095fc33cc37e4fff69366e49d7e92f613558a2b95ed1b70e33758b4"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-preparation/files/docs/api/conversion-preparation.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation/files/docs/api/conversion-preparation.md",
+      "storage": "visible",
+      "bytes": 470,
+      "sha256": "036463f698f5530ffaeb464e38dd42180cb57ed5fae2160cb06fd050d95bb284"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-preparation/files/include/ffmt/detail/dragonbox.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation/files/include/ffmt/detail/dragonbox.hpp",
+      "storage": "visible",
+      "bytes": 22336,
+      "sha256": "f9c36d544d3ee5fff6136aa71008a26698a9742cd492b53c7904f3b0037daba4"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/conversion-preparation/files/include/ffmt/detail/exact_decimal.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/conversion-preparation/files/include/ffmt/detail/exact_decimal.hpp",
+      "storage": "visible",
+      "bytes": 3505,
+      "sha256": "31fc16be4b87da8d3e4591afa57030f9769209cc430a698e0157161027f34f8c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/core-prepare/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/core-prepare/stage.json",
+      "storage": "visible",
+      "bytes": 746,
+      "sha256": "841f07478abdf1ac691a5dbbf5af47d93420494500a375254d33810a42c74e65"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/core-prepare/files/docs/api/core-prepare.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/core-prepare/files/docs/api/core-prepare.md",
+      "storage": "visible",
+      "bytes": 402,
+      "sha256": "dc66f7cfad66ecb704fac5c5db4256c0550dc9338172285e159f15ebf7097b56"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/core-prepare/files/include/ffmt/base.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/core-prepare/files/include/ffmt/base.hpp",
+      "storage": "visible",
+      "bytes": 107,
+      "sha256": "b9de7c1c3dc0ecac12edae9dea75ce418d427f76aa0801ce12c0db474a7617d3"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/core-prepare/files/include/ffmt/detail/legacy_base.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/core-prepare/files/include/ffmt/detail/legacy_base.hpp",
+      "storage": "visible",
+      "bytes": 107760,
+      "sha256": "888701e5c1ef7d0c2fcd07a45a55161bf27acd6c5f42365a1ef2076ddcd73ef8"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/stage.json",
+      "storage": "visible",
+      "bytes": 1369,
+      "sha256": "5fbfd7f4118ea09f89783e3f5692bf6cb3d89afebd6cec9b5ad076c20c0b4168"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/files/docs/api/extended-floats.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/files/docs/api/extended-floats.md",
+      "storage": "visible",
+      "bytes": 441,
+      "sha256": "d87740082f24c0476a4fc6a7ffc53f6065335c374722f13548c177d5bb4872d0"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/files/include/ffmt/detail/arguments.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/files/include/ffmt/detail/arguments.hpp",
+      "storage": "visible",
+      "bytes": 3789,
+      "sha256": "eee5b00bb53459e583f30e8c0a4b609e517ab7b221abb61559f6157b6d766ea5"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/files/include/ffmt/detail/extended.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/files/include/ffmt/detail/extended.hpp",
+      "storage": "visible",
+      "bytes": 4854,
+      "sha256": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/files/include/ffmt/detail/floating.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/files/include/ffmt/detail/floating.hpp",
+      "storage": "visible",
+      "bytes": 12338,
+      "sha256": "02ed51afeb2f088cc2a7033e09b1a4d76095a0189ac98764a8e2e2d78a9aba32"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/files/include/ffmt/detail/numeric.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/files/include/ffmt/detail/numeric.hpp",
+      "storage": "visible",
+      "bytes": 11448,
+      "sha256": "2ee4f48f1f32955a48809145a44928bcbaf80e53864453704c4fc1895120fcdd"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/files/test/conformance/test_engine_extended.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/files/test/conformance/test_engine_extended.cpp",
+      "storage": "visible",
+      "bytes": 4077,
+      "sha256": "7974b709418d531fca9efb4da15120a89f2674a3abe1b067370a00fb40cd991c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-floats/files/test/conformance/test_engine_quad.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-floats/files/test/conformance/test_engine_quad.cpp",
+      "storage": "visible",
+      "bytes": 2266,
+      "sha256": "f57045a05e1e5e301e52ebab4d785f85ead3e47e646cf18a2e359d39ba16a62a"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-integers/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-integers/stage.json",
+      "storage": "visible",
+      "bytes": 1267,
+      "sha256": "486d0619def5ca5cf496f52ef5e1a6a07fc6b0aad0b1f20a84b545d0f2b6f352"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-integers/files/docs/api/extended-integers.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-integers/files/docs/api/extended-integers.md",
+      "storage": "visible",
+      "bytes": 434,
+      "sha256": "822faabd7faf69c39dc2745c585a0afe8151820cd04ec5c8858844eef39cc6b8"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-integers/files/include/ffmt/detail/arguments.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-integers/files/include/ffmt/detail/arguments.hpp",
+      "storage": "visible",
+      "bytes": 3407,
+      "sha256": "5179d533e7140c513aa2807a36db0946e2d90883d24e14be4147627e14364259"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-integers/files/test/conformance/test_core_int128.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-integers/files/test/conformance/test_core_int128.cpp",
+      "storage": "visible",
+      "bytes": 387,
+      "sha256": "f2692afc6bcc96ff8782fcdd842eb2b1ec1a2632a0d2d721be419ef7cf2808d2"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/extended-integers/files/test/conformance/test_engine_bitint.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/extended-integers/files/test/conformance/test_engine_bitint.cpp",
+      "storage": "visible",
+      "bytes": 1700,
+      "sha256": "adda291e1a012ac222bd7b2d4e1656ab9db3fc9f970a5369e81ad376b8759bd8"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-conversion/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-conversion/stage.json",
+      "storage": "visible",
+      "bytes": 1476,
+      "sha256": "8eb84a55e9f47af866e7f49dc14823f9c5ffe67444aeb7da48a4faafcb51816e"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-conversion/files/docs/api/floating-conversion.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-conversion/files/docs/api/floating-conversion.md",
+      "storage": "visible",
+      "bytes": 1026,
+      "sha256": "ea5389ba30fd36fcf1589e6b061fb48e16941c0decb103f024f0622d586188b6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-conversion/files/include/ffmt/detail/checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-conversion/files/include/ffmt/detail/checked.hpp",
+      "storage": "visible",
+      "bytes": 517,
+      "sha256": "24e75fb8658544e61e4284926b6bf18e150983079e0b7d0c4d1a14d136aaf173"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-conversion/files/include/ffmt/detail/floating.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-conversion/files/include/ffmt/detail/floating.hpp",
+      "storage": "visible",
+      "bytes": 10698,
+      "sha256": "611e655e77dc001666a2673e07d55376a24c3d653b8dc22c708873a6ee474bd7"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-conversion/files/test/conformance/test_core_conversion.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-conversion/files/test/conformance/test_core_conversion.cpp",
+      "storage": "visible",
+      "bytes": 4102,
+      "sha256": "b3330c7642917c7df30b76b47f5fae3ace085e3c9988efae4dde1c12b9a95f07"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/stage.json",
+      "storage": "visible",
+      "bytes": 1419,
+      "sha256": "8c5ed563a8fc2a14dd12595d8ee643aa32d5c91736e74ec3792a52e97d69ab09"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/docs/api/floating-formatting.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/docs/api/floating-formatting.md",
+      "storage": "visible",
+      "bytes": 517,
+      "sha256": "91e0bfbc007f0cf3a4ff574bedef84b101a4cd8705f2ca25f3934c4cc31d9d70"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/include/ffmt/detail/checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/include/ffmt/detail/checked.hpp",
+      "storage": "visible",
+      "bytes": 540,
+      "sha256": "c4641c7f5455b34f725942d706944b5943d670b639b52739cbaf04470209568f"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/include/ffmt/detail/numeric.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/include/ffmt/detail/numeric.hpp",
+      "storage": "visible",
+      "bytes": 11434,
+      "sha256": "30e438513f03ea163946b74c6a5c8290603283d2ac91531c0b2dd07bc994de1c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/include/ffmt/detail/type_categories.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/include/ffmt/detail/type_categories.hpp",
+      "storage": "visible",
+      "bytes": 2113,
+      "sha256": "fa5f2d96cba151d65eb828d981cfef097f65c8595afb8bf61d4899ec3fedca3f"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/include/ffmt/detail/value.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/include/ffmt/detail/value.hpp",
+      "storage": "visible",
+      "bytes": 2719,
+      "sha256": "deb69604e63964e5dcb8cdd32c11e6353c416c17fe27e3117b4b63e75c084ef7"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/test/conformance/test_core_floating.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/test/conformance/test_core_floating.cpp",
+      "storage": "visible",
+      "bytes": 1103,
+      "sha256": "7ebefd4dea4b776e973f9033da269b1b467095c05fa2848b7d3c77e5e923f319"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/test/conformance/test_engine_fast_math.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/test/conformance/test_engine_fast_math.cpp",
+      "storage": "visible",
+      "bytes": 1917,
+      "sha256": "1e4a4905191bfd80471aed50b2f0f1858d935083e74d29730c023619f2fa6f8c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/floating-formatting/files/test/conformance/suites/core_floating_portable.mk",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/floating-formatting/files/test/conformance/suites/core_floating_portable.mk",
+      "storage": "visible",
+      "bytes": 317,
+      "sha256": "a1607d0d3bd2b1f6d481f2ae4e42b876f353e679490aad3b72ec3e1913e7dae2"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/format-as/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/format-as/stage.json",
+      "storage": "visible",
+      "bytes": 1026,
+      "sha256": "4180c15c2098c4f0a65dd73dc24ca00b7d0953460b08e38640424cbbdf4f3282"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/format-as/files/docs/api/format-as.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/format-as/files/docs/api/format-as.md",
+      "storage": "visible",
+      "bytes": 427,
+      "sha256": "ed2d5d960ae67439dfc41efac3b8d5b83c725ea4fda29f9c288f5204936c1132"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/format-as/files/include/ffmt/detail/type_traits.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/format-as/files/include/ffmt/detail/type_traits.hpp",
+      "storage": "visible",
+      "bytes": 792,
+      "sha256": "4c8f69f9931fb2a429475b54de6dd433393e0d417393dd98c949f2fd6cf6ed24"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/format-as/files/test/conformance/test_core_format_as.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/format-as/files/test/conformance/test_core_format_as.cpp",
+      "storage": "visible",
+      "bytes": 615,
+      "sha256": "36c06bc66c02327a7b01f903742d39d3d7e9d96dd528197b5044e29080b0ac4f"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/formatter-compatibility/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility/stage.json",
+      "storage": "visible",
+      "bytes": 1419,
+      "sha256": "7d85ae391f06b2aee5dc3198b40cded90644ea9b283c08489e97f22cc3c7b7a6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/formatter-compatibility/files/docs/api/formatter-compatibility.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility/files/docs/api/formatter-compatibility.md",
+      "storage": "visible",
+      "bytes": 484,
+      "sha256": "3c8fe9c270ada578d68623cc63d6c99c512340a91c0af1271d152c4b25726ab2"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/formatter-compatibility/files/include/ffmt/detail/context.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility/files/include/ffmt/detail/context.hpp",
+      "storage": "visible",
+      "bytes": 5965,
+      "sha256": "7b9ed6190cb66862fa0e5e341d5237a5d181c8303be2652a72d66cb837afa36d"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/formatter-compatibility/files/test/conformance/test_core_formatters.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility/files/test/conformance/test_core_formatters.cpp",
+      "storage": "visible",
+      "bytes": 711,
+      "sha256": "e8df358a77317ce134cd96e6c968d9d17a95d35ae562bf1638c410727d36677b"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/formatter-compatibility/files/test/conformance/test_core_forwarding.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility/files/test/conformance/test_core_forwarding.cpp",
+      "storage": "visible",
+      "bytes": 1876,
+      "sha256": "97e05503f9e13820ad068b7e6d01c46962f7301755e1f2ae0720614cc635cc15"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/formatter-compatibility/files/test/conformance/test_formatter_composition.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/formatter-compatibility/files/test/conformance/test_formatter_composition.cpp",
+      "storage": "visible",
+      "bytes": 737,
+      "sha256": "fde5d08c27a76fe7fadbf5a0849ba7bfc041892dcce0bbe36c43313843b0dfee"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/stage.json",
+      "storage": "visible",
+      "bytes": 1172,
+      "sha256": "fc16a72820782c5bb3f907bd40d17c45054ed90fe406832346d6535d24577384"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/files/docs/api/legacy-compatibility.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/files/docs/api/legacy-compatibility.md",
+      "storage": "visible",
+      "bytes": 468,
+      "sha256": "40a4ed1add4449f15ee6902e474c59480dc1d4361010d02e859899d96bb7b48d"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/files/include/ffmt/detail/execution.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/files/include/ffmt/detail/execution.hpp",
+      "storage": "visible",
+      "bytes": 4995,
+      "sha256": "0f2d6f1343a7d67c39baf62bcee6df6674557e290c693aabc32bef36c194fc07"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/files/include/ffmt/detail/formatters.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/files/include/ffmt/detail/formatters.hpp",
+      "storage": "visible",
+      "bytes": 4278,
+      "sha256": "e271b444f787b44bf2b34bf9ba8d201a04f88f8ca2b89431d7c28eaf138c7191"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/files/include/ffmt/detail/type_traits.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/files/include/ffmt/detail/type_traits.hpp",
+      "storage": "visible",
+      "bytes": 816,
+      "sha256": "89834a5fa57f8911471d3a00c52147d823cb3f93eb0677edde9db7eee0371550"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/files/include/ffmt/detail/validation.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/files/include/ffmt/detail/validation.hpp",
+      "storage": "visible",
+      "bytes": 2961,
+      "sha256": "60ea28f96c33bf1759307a6e0107fda32ce72e26df85b9458f2921ebe3e3412e"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/files/test/conformance/test_core_legacy.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/files/test/conformance/test_core_legacy.cpp",
+      "storage": "visible",
+      "bytes": 735,
+      "sha256": "f104162f5c4b81a35ca9cac9978da95a44708848a00c8eadda7045811970c649"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/legacy-compatibility/files/test/conformance/test_legacy_forwarding.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/legacy-compatibility/files/test/conformance/test_legacy_forwarding.cpp",
+      "storage": "visible",
+      "bytes": 843,
+      "sha256": "aaf46b1ab07ef4ab9ac6189c628365dc97f942623748e29eba67f34bbfaa2342"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/migration/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/migration/stage.json",
+      "storage": "visible",
+      "bytes": 1012,
+      "sha256": "9748e0871869c6ccd0065d0f6f6dc86d75579ac6c39941005a19ecf042a93b6c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/migration/files/docs/api/migration.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/migration/files/docs/api/migration.md",
+      "storage": "visible",
+      "bytes": 510,
+      "sha256": "0c97f91370c8a39f3d68509396bc5e72326833fdfafbd0184e38ced9a45c8f24"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/migration/files/include/ffmt/base.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/migration/files/include/ffmt/base.hpp",
+      "storage": "visible",
+      "bytes": 145,
+      "sha256": "0b50349f217956d94f2b6b92515c8461d4e0c9f8ce8dd9e2e04649d73a6db18f"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/migration/files/include/ffmt/core.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/migration/files/include/ffmt/core.hpp",
+      "storage": "visible",
+      "bytes": 114,
+      "sha256": "86a506dde42bbd3ec34742093c467205a747aae14a44f8d00c2ed57d96045fce"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/migration/files/include/ffmt/detail/sycl_formatters.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/migration/files/include/ffmt/detail/sycl_formatters.hpp",
+      "storage": "visible",
+      "bytes": 3018,
+      "sha256": "6d2fda4928b449bd3f05238ca5aae30af4e00a7bc1e230e49b33470b383d0c5c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/migration/files/test/conformance/test_core_migration.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/migration/files/test/conformance/test_core_migration.cpp",
+      "storage": "visible",
+      "bytes": 684,
+      "sha256": "cb79a49e37db88c0f5c6d8807eaea545801939ca96729bcf8e982c0bd8280492"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/obsolete-deletion/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/obsolete-deletion/stage.json",
+      "storage": "visible",
+      "bytes": 786,
+      "sha256": "3ba49f501c6a65531bdb1d5a440b82f85cb87b314c94f9e4bb86a471b45c838e"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/obsolete-deletion/files/docs/api/obsolete-deletion.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/obsolete-deletion/files/docs/api/obsolete-deletion.md",
+      "storage": "visible",
+      "bytes": 388,
+      "sha256": "d55591074ac00c7364550205c217726f6592962f95ec53db9dd3607591d02a24"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/parsing/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing/stage.json",
+      "storage": "visible",
+      "bytes": 974,
+      "sha256": "a9d228d2b0913985a349b1636a4cca1a9f7edd94c355adf6e3a78dcc7a1d3894"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/parsing/files/docs/api/parsing.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing/files/docs/api/parsing.md",
+      "storage": "visible",
+      "bytes": 402,
+      "sha256": "2d27afa40f9139d752056fb77c1be8af6f1f3d1a1ae4ef8c6be896ed414ed6b0"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/parsing/files/include/ffmt/detail/arguments.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing/files/include/ffmt/detail/arguments.hpp",
+      "storage": "visible",
+      "bytes": 2205,
+      "sha256": "c11e086770eb9cf40d23b903da0e1d2f0c649ceb2d7d528e98957924ca9e1ed6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/parsing/files/include/ffmt/detail/checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing/files/include/ffmt/detail/checked.hpp",
+      "storage": "visible",
+      "bytes": 195,
+      "sha256": "e0c2ac42e8b1b929183beb6fd139ce7f2b805b70ecdb1fb7ad8d72e81cfb5b82"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/parsing/files/include/ffmt/detail/parse.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing/files/include/ffmt/detail/parse.hpp",
+      "storage": "visible",
+      "bytes": 8986,
+      "sha256": "f433ab5bc60ae9a9052a0bd1dcf393c88e00693f87a7357ca1d4a2d4599ed677"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/parsing/files/test/conformance/test_core_parsing.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/parsing/files/test/conformance/test_core_parsing.cpp",
+      "storage": "visible",
+      "bytes": 1264,
+      "sha256": "e0cced520cf08de32c0de0b0c4cd9cccd68532ae877293f4208f0dd4b2aef4dd"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/stage.json",
+      "storage": "visible",
+      "bytes": 1074,
+      "sha256": "20cb6d66567a2718cbb9f5cd1faa0eade4a19710215fbaeb07e3d722a6d3d1fa"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/docs/api/primitives.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/docs/api/primitives.md",
+      "storage": "visible",
+      "bytes": 451,
+      "sha256": "438c5b5888a54560309906f9f2958157b30a113df65f392f792ba39347cde196"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/checked.hpp",
+      "storage": "visible",
+      "bytes": 439,
+      "sha256": "b499d99184a8fc46c9bef24549a6b90f05b9fcd3022db00d085848021391660c"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/context.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/context.hpp",
+      "storage": "visible",
+      "bytes": 6072,
+      "sha256": "fa70ea7ffabb477095aecb347bad6fecad33b215e04e3bcb1e81c2d67235d5e5"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/execution.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/execution.hpp",
+      "storage": "visible",
+      "bytes": 2789,
+      "sha256": "5f3ef6860ad8bc4ec0830f69decbb51a46ac506d9755ef2036e05636eb5225b8"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/formatters.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/formatters.hpp",
+      "storage": "visible",
+      "bytes": 4126,
+      "sha256": "97432f6fb092d06fe54b2405b67019124c1aaac9a3a9b49cde1779f136ed5104"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/integer.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/integer.hpp",
+      "storage": "visible",
+      "bytes": 2447,
+      "sha256": "2c6838229e427372fa2537bbda794574f1b60a7f19e1844c02b26844da30a973"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/memory.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/memory.hpp",
+      "storage": "visible",
+      "bytes": 2731,
+      "sha256": "bc2d3d989d88afab5401f08ea681f102bb3c9df8217d0185725088906430283a"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/text.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/text.hpp",
+      "storage": "visible",
+      "bytes": 519,
+      "sha256": "83384f7fa4a77d3228ef4ebb07fb7c308b1786958d06d5294adb9974770f2476"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/type_categories.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/type_categories.hpp",
+      "storage": "visible",
+      "bytes": 2092,
+      "sha256": "216aa15a8c943e91d02029df299cb081c7407da501a4d2bc316534a99395c20f"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/type_traits.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/type_traits.hpp",
+      "storage": "visible",
+      "bytes": 477,
+      "sha256": "f9dc0c22d9e4f836995f027bd00fe076c2de55ed72c338c497543d19d61ffd88"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/validation.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/validation.hpp",
+      "storage": "visible",
+      "bytes": 2781,
+      "sha256": "26e8c8f2970cf959a93e9c26eb7d9b164fed58d1b5cf7ae2dad73c6857099c55"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/include/ffmt/detail/value.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/include/ffmt/detail/value.hpp",
+      "storage": "visible",
+      "bytes": 2737,
+      "sha256": "46b7e4fe23509b662c3533dfd562da13365f8a27c51f87aa3a7ed2be6975a52d"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/test/conformance/core_compare.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/test/conformance/core_compare.hpp",
+      "storage": "visible",
+      "bytes": 1541,
+      "sha256": "81bb75ec249383d5715e2b2dff1ac8970926dd1c38258ecc25e8cf954f0afeb2"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/primitives/files/test/conformance/test_core_primitives.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/primitives/files/test/conformance/test_core_primitives.cpp",
+      "storage": "visible",
+      "bytes": 2076,
+      "sha256": "44d1e5272e815655f1f831df4c7784fe3e51c041bc22e9abadd107e8be17d278"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/stage.json",
+      "storage": "visible",
+      "bytes": 1795,
+      "sha256": "59d006ff9cc7b2779ead94fdecee493a2e748244ac2e6f19330fb8ca2bd6b69b"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/docs/api/transport.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/docs/api/transport.md",
+      "storage": "visible",
+      "bytes": 517,
+      "sha256": "339d6469da88e1c28b5f9b0a56b4f10382f5d986ff34bac1137276a28dac1ec6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/include/ffmt/detail/checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/include/ffmt/detail/checked.hpp",
+      "storage": "visible",
+      "bytes": 649,
+      "sha256": "b2a56346937821f9abd93ef463e49d78e4f09728c5360716d73e8948db3f25d7"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/include/ffmt/detail/legacy_emit.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/include/ffmt/detail/legacy_emit.hpp",
+      "storage": "visible",
+      "bytes": 987,
+      "sha256": "80447c17efe12bb7cb5dd8dc75bcab4a474793882ad9dcd7abdba09fd1886637"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/include/ffmt/detail/print_macros.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/include/ffmt/detail/print_macros.hpp",
+      "storage": "visible",
+      "bytes": 588,
+      "sha256": "e89ec90ae9f022efe2bd9cc50618fb62746e5e4acd3683ce31f2d671588f5fc2"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/include/ffmt/detail/transport.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/include/ffmt/detail/transport.hpp",
+      "storage": "visible",
+      "bytes": 11281,
+      "sha256": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/include/ffmt/detail/type_categories.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/include/ffmt/detail/type_categories.hpp",
+      "storage": "visible",
+      "bytes": 2145,
+      "sha256": "1b0f2aee2c8aed5d2880bd24dd3b05e2cd238c5770df47f25fe54c32f9b709f3"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/test/capture.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/test/capture.hpp",
+      "storage": "visible",
+      "bytes": 5716,
+      "sha256": "c406ebce772daa3cb8f574bd59db0486d74dc1082c4314a6a45b97319cc5a0af"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/test/conformance/test_engine_legacy_hook.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/test/conformance/test_engine_legacy_hook.cpp",
+      "storage": "visible",
+      "bytes": 1208,
+      "sha256": "229a5a3534f40db645562083e7d88608bf8c315d3e46b0ead4f46060e35be3be"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/test/conformance/test_engine_transport.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/test/conformance/test_engine_transport.cpp",
+      "storage": "visible",
+      "bytes": 4099,
+      "sha256": "060f222a50c2663ccadf2e0b26c86d39fafdcb30bd479ed017133c68ecfaa8d6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/transport/files/test/conformance/test_transport_forwarding.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/transport/files/test/conformance/test_transport_forwarding.cpp",
+      "storage": "visible",
+      "bytes": 1074,
+      "sha256": "5dfea8378b1dc64b813e9e6eb6f2a60227475dfb05a3259e8a941496f4af2b88"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/stage.json",
+      "storage": "visible",
+      "bytes": 1148,
+      "sha256": "a41215d80d4d4a72758211a958b10d83b48d3f8ef7d9a67c32608b934f68e7c0"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/NOTICE",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/NOTICE",
+      "storage": "visible",
+      "bytes": 1107,
+      "sha256": "a65b67fb48dd03646af52b2900510aef2f13b142395b887062228837cae53ca6"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/LICENSES/dragonbox-Boost.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/LICENSES/dragonbox-Boost.txt",
+      "storage": "visible",
+      "bytes": 1338,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/LICENSES/fmt.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/LICENSES/fmt.txt",
+      "storage": "visible",
+      "bytes": 1094,
+      "sha256": "a65fcc5a1095fc33cc37e4fff69366e49d7e92f613558a2b95ed1b70e33758b4"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/docs/api/unicode.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/docs/api/unicode.md",
+      "storage": "visible",
+      "bytes": 476,
+      "sha256": "a1dd0cd1db52e9a3943ccf05632f7723d6ea36b7dfc3daaf11b970c833129055"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/include/ffmt/detail/checked.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/include/ffmt/detail/checked.hpp",
+      "storage": "visible",
+      "bytes": 468,
+      "sha256": "12f9dcc64ea0e5a67807b6958a44bd160cff719db971cc17114e07ca1659668b"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/include/ffmt/detail/parse.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/include/ffmt/detail/parse.hpp",
+      "storage": "visible",
+      "bytes": 10257,
+      "sha256": "4973f9c36fb2d07843e54d8a161f33b072c29c82c3ea9e602d6b668a8714c032"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/include/ffmt/detail/text.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/include/ffmt/detail/text.hpp",
+      "storage": "visible",
+      "bytes": 3877,
+      "sha256": "13c43714687606eb3e369e4d014df480296443d5f04e0a216f77000140214024"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/include/ffmt/detail/type_categories.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/include/ffmt/detail/type_categories.hpp",
+      "storage": "visible",
+      "bytes": 2124,
+      "sha256": "675e5918711b4cc344b83f7870250b2fce8a312d027d09e5e901d79fd60e81ed"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/include/ffmt/detail/unicode.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/include/ffmt/detail/unicode.hpp",
+      "storage": "visible",
+      "bytes": 12151,
+      "sha256": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/include/ffmt/detail/unicode_width.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/include/ffmt/detail/unicode_width.hpp",
+      "storage": "visible",
+      "bytes": 2889,
+      "sha256": "9b58225b056fe08f67dcddc365d9a0465d3341e902c67f6483c291a58982265a"
+    },
+    {
+      "relative_path": "stage-inputs/core-stages/unicode/files/test/conformance/test_core_unicode.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-stages/unicode/files/test/conformance/test_core_unicode.cpp",
+      "storage": "visible",
+      "bytes": 624,
+      "sha256": "0120131426ce113e23ad69e2e29e756ca87dc1080eee74192628fa03e57135ad"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/index.json",
+      "storage": "visible",
+      "bytes": 26914,
+      "sha256": "f19571f6967c765d7061504274408c989e2e7d7ca1bda46c8b1b87f8fba70faf"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/source-audit.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/source-audit.json",
+      "storage": "visible",
+      "bytes": 7041,
+      "sha256": "64c44c48001342196d7b8ee44e9d640ce00727b00242703a9d8a4090f2a83865"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/tooling-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/tooling-review.json",
+      "storage": "visible",
+      "bytes": 4402,
+      "sha256": "3a97e2507b44172df2e8bac728cad7cbb6dfa03ff65a435502ed2d0f3993d5fb"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/chrono/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/chrono/stage.json",
+      "storage": "visible",
+      "bytes": 2581,
+      "sha256": "51fd9ba4e2ddd04cd3a1ca9e5be3d26989ac29018db92cabf7f865af17b7d245"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/chrono/files/docs/features/chrono.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/chrono/files/docs/features/chrono.md",
+      "storage": "visible",
+      "bytes": 752,
+      "sha256": "1beb3c5e0cb81d882c74c7a4010a8295240c1a0f3e06f4c732a8151c0052df71"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/chrono/files/include/ffmt/chrono.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/chrono/files/include/ffmt/chrono.hpp",
+      "storage": "visible",
+      "bytes": 33924,
+      "sha256": "5fdbb0bdcf019fad442694676cf25c47c574c6b833bdf22687a4d2ac9e72e0f7"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/chrono/files/test/conformance/cases_chrono.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/chrono/files/test/conformance/cases_chrono.py",
+      "storage": "visible",
+      "bytes": 794,
+      "sha256": "85ce823b3bd06a76d651b8c88bf2d6c64a826f51e7a236934bf7926cd86863bb"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/chrono/files/test/conformance/test_chrono.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/chrono/files/test/conformance/test_chrono.cpp",
+      "storage": "visible",
+      "bytes": 5697,
+      "sha256": "9ca09ed16ead927f402ccab2a3d42ec1cdca5a9a1325798c6cb4808a65fb32ac"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/core-handoff/README.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/core-handoff/README.txt",
+      "storage": "visible",
+      "bytes": 311,
+      "sha256": "ea4ac15953a31cc52c30e9dcdc23e69ca8dd1cc8bb5344ac7100121679c26ca4"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/core-handoff/formatter-compatibility/files/test/conformance/test_core_forwarding.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/core-handoff/formatter-compatibility/files/test/conformance/test_core_forwarding.cpp",
+      "storage": "visible",
+      "bytes": 1876,
+      "sha256": "97e05503f9e13820ad068b7e6d01c46962f7301755e1f2ae0720614cc635cc15"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/core-handoff/formatter-compatibility/files/test/conformance/test_formatter_composition.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/core-handoff/formatter-compatibility/files/test/conformance/test_formatter_composition.cpp",
+      "storage": "visible",
+      "bytes": 737,
+      "sha256": "fde5d08c27a76fe7fadbf5a0849ba7bfc041892dcce0bbe36c43313843b0dfee"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/core-handoff/legacy-compatibility/files/test/conformance/test_legacy_forwarding.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/core-handoff/legacy-compatibility/files/test/conformance/test_legacy_forwarding.cpp",
+      "storage": "visible",
+      "bytes": 843,
+      "sha256": "aaf46b1ab07ef4ab9ac6189c628365dc97f942623748e29eba67f34bbfaa2342"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/core-handoff/transport/files/test/conformance/test_transport_forwarding.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/core-handoff/transport/files/test/conformance/test_transport_forwarding.cpp",
+      "storage": "visible",
+      "bytes": 1074,
+      "sha256": "5dfea8378b1dc64b813e9e6eb6f2a60227475dfb05a3259e8a941496f4af2b88"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/enum-helpers/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/enum-helpers/stage.json",
+      "storage": "visible",
+      "bytes": 2260,
+      "sha256": "a304f11b21f8ba5bc41762e2de13bd9f67657eaf3abf42246e8212184ca5a7fe"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/enum-helpers/files/docs/features/enums.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/enum-helpers/files/docs/features/enums.md",
+      "storage": "visible",
+      "bytes": 564,
+      "sha256": "c9217e925596bc4930d7ca17fcbdbb0c7fbce1c409c14d6e834bdd07ea1869da"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/enum-helpers/files/include/ffmt/enum.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/enum-helpers/files/include/ffmt/enum.hpp",
+      "storage": "visible",
+      "bytes": 730,
+      "sha256": "a2980b8f23cc09d0b120e686c5e7e75f629fa801bbcd9265a162f128d28d59a6"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/enum-helpers/files/test/conformance/test_enum.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/enum-helpers/files/test/conformance/test_enum.cpp",
+      "storage": "visible",
+      "bytes": 917,
+      "sha256": "efe53c0bc12f5bb5f740e2c071a0235e365406a4058a8538063c54780749527d"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/feature-integration/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/feature-integration/stage.json",
+      "storage": "visible",
+      "bytes": 2478,
+      "sha256": "34dd38aa28df63316460d809a1f8b85a7812f1d2299cf6c4b09be32c8e1b2a5f"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/feature-integration/files/docs/features/feature-integration.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/feature-integration/files/docs/features/feature-integration.md",
+      "storage": "visible",
+      "bytes": 564,
+      "sha256": "72a8ca85ab07504725a622911c888b9ce6982c803a71146ed8679f377947a0cf"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/feature-integration/files/test/conformance/test_feature_integration.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/feature-integration/files/test/conformance/test_feature_integration.cpp",
+      "storage": "visible",
+      "bytes": 1694,
+      "sha256": "b4f3adbe5017ac5e73f996c884655a447114aeb093fa6a2dae2a5fa1c4afacfb"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/named-arguments/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/named-arguments/stage.json",
+      "storage": "visible",
+      "bytes": 2627,
+      "sha256": "66d6e4935fd0381aa8d0b347c1ef810d52654ebb3bd51eb7e528fe55c56fad4b"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/named-arguments/files/docs/features/named-arguments.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/named-arguments/files/docs/features/named-arguments.md",
+      "storage": "visible",
+      "bytes": 697,
+      "sha256": "f1be6aab67bc2240955689d08a5f083c34eb8af67649821556fe6a8dca31cd5c"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/named-arguments/files/include/ffmt/args.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/named-arguments/files/include/ffmt/args.hpp",
+      "storage": "visible",
+      "bytes": 941,
+      "sha256": "287471a083535503df852ee3a3e6166e672e5f0f062366e82754b26152b786a8"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/named-arguments/files/test/conformance/cases_named.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/named-arguments/files/test/conformance/cases_named.py",
+      "storage": "visible",
+      "bytes": 357,
+      "sha256": "4b10e481879aac1707eb8954403d26638deacad12aa947667a7f31c536d3ed36"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/named-arguments/files/test/conformance/test_named_arguments.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/named-arguments/files/test/conformance/test_named_arguments.cpp",
+      "storage": "visible",
+      "bytes": 3033,
+      "sha256": "20bc4effe148a4da251828962a623e2da90e2c2229e337bbe5c7a0b163446db6"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/ranges/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges/stage.json",
+      "storage": "visible",
+      "bytes": 3280,
+      "sha256": "b30b6f13036c78e140d2d050e05ebefb87bddc73fe1548f71ebe6be10e0e0b62"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/ranges/files/docs/features/ranges.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges/files/docs/features/ranges.md",
+      "storage": "visible",
+      "bytes": 867,
+      "sha256": "7f5c30d759e52a9372acc8880758125ce58e919f3970f0a3f4e984318fe3d696"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/ranges/files/include/ffmt/ranges.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges/files/include/ffmt/ranges.hpp",
+      "storage": "visible",
+      "bytes": 23297,
+      "sha256": "8bf1661d22ef27449093a835aa96f7260af1c5c83db34886b77ba2f9455f03a6"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/ranges/files/test/conformance/cases_ranges.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges/files/test/conformance/cases_ranges.py",
+      "storage": "visible",
+      "bytes": 4338,
+      "sha256": "a6c24329ee67b199bccd9d36e214e7bb29643382ddc579061c580e31501f8e3d"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/ranges/files/test/conformance/test_ranges.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges/files/test/conformance/test_ranges.cpp",
+      "storage": "visible",
+      "bytes": 6833,
+      "sha256": "7f65bb70a818292d46368dcb7440ec58da65392d8832872d96a3e4c6c6c47b20"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/ranges/files/test/conformance/test_ranges_forwarding.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges/files/test/conformance/test_ranges_forwarding.cpp",
+      "storage": "visible",
+      "bytes": 4473,
+      "sha256": "da85a38fa8c1fbfc05470cdad2f8849c46c870b47da2dc89e46c1d1606e3fbde"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/ranges/files/test/conformance/test_ranges_iterators.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/ranges/files/test/conformance/test_ranges_iterators.cpp",
+      "storage": "visible",
+      "bytes": 11092,
+      "sha256": "bfe22f206be3e06e1365bc3211ac12ceb853d1f6ff863a7825b80f65e48bb430"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/shared-family/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/shared-family/stage.json",
+      "storage": "visible",
+      "bytes": 3158,
+      "sha256": "ec4fefb81dfc88bd5f6ce8397bcdc0cd623dccec722ce48833426fa7d22c06d0"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/shared-family/files/docs/features/family-support.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/shared-family/files/docs/features/family-support.md",
+      "storage": "visible",
+      "bytes": 880,
+      "sha256": "c2a412653941f43ee01f388c2d88ba2f539c376502d4181035c07ec22f9df197"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/shared-family/files/include/ffmt/detail/family.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/shared-family/files/include/ffmt/detail/family.hpp",
+      "storage": "visible",
+      "bytes": 12624,
+      "sha256": "9a6ee375496a0bd334a0efc01d1a1ed1600719a786abfd0b78976d4c1fa3787d"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/shared-family/files/include/ffmt/detail/output.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/shared-family/files/include/ffmt/detail/output.hpp",
+      "storage": "visible",
+      "bytes": 3983,
+      "sha256": "6929c4d1446bf93b0b565eef63c2151ed4728e7981640c89de77a31e3e1c6a63"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/shared-family/files/test/conformance/family_test_support.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/shared-family/files/test/conformance/family_test_support.hpp",
+      "storage": "visible",
+      "bytes": 3393,
+      "sha256": "a1ca59040bc8c7c63c5cd0dc785d052bbb497b96c821f0219e2231029cfcce03"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/shared-family/files/test/conformance/test_family_support.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/shared-family/files/test/conformance/test_family_support.cpp",
+      "storage": "visible",
+      "bytes": 3924,
+      "sha256": "b1b5d8c04499af727d30a9923c2eaf2126c9784ba455c33cffda454fb660e133"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/standard-types/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/standard-types/stage.json",
+      "storage": "visible",
+      "bytes": 2501,
+      "sha256": "cfec75b0f38f1c235b526d293f3cbeec6b16075eb833df060dbbf91533922c14"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/standard-types/files/docs/features/standard-types.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/standard-types/files/docs/features/standard-types.md",
+      "storage": "visible",
+      "bytes": 759,
+      "sha256": "55a8cc10ea831ae53b1bad5f208f0416cfc1ccb474079687f7b3d0ec71768484"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/standard-types/files/include/ffmt/std.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/standard-types/files/include/ffmt/std.hpp",
+      "storage": "visible",
+      "bytes": 9971,
+      "sha256": "5eadf79fa1ed7459fe2bb38d471630de926a5174c4f24f79f0e16bc5de74d8c3"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/standard-types/files/test/conformance/cases_std.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/standard-types/files/test/conformance/cases_std.py",
+      "storage": "visible",
+      "bytes": 683,
+      "sha256": "57095dd5277f2098a44f824288be53649ef106fb8c273071f005e53110bf4be0"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/standard-types/files/test/conformance/test_std.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/standard-types/files/test/conformance/test_std.cpp",
+      "storage": "visible",
+      "bytes": 3750,
+      "sha256": "a0feb3908988311afe1becbd82e60b2620122b5c7cc153433dfd7fa701c1a0bb"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/std23/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23/stage.json",
+      "storage": "visible",
+      "bytes": 2592,
+      "sha256": "62c3692f10dda69bd82e93ea74e96ca240a1f1e342e256d8ad776b5a44a25a6d"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/std23/files/docs/features/std23.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23/files/docs/features/std23.md",
+      "storage": "visible",
+      "bytes": 715,
+      "sha256": "0a4a1ed40eabff097e109babec4b72ab16e713b95e19c1162c42f6472c01b98c"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/std23/files/include/ffmt/std23.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23/files/include/ffmt/std23.hpp",
+      "storage": "visible",
+      "bytes": 2071,
+      "sha256": "c97e7a914dae904089eef809523b0c58963393a0a6f49b154fed13073fbf407d"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/std23/files/mk/portable-tests.mk",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23/files/mk/portable-tests.mk",
+      "storage": "visible",
+      "bytes": 2507,
+      "sha256": "b31e1965657e6b624d971654942d1c0667d2ae8e09e52144547dc21b6095cdd2"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/std23/files/test/conformance/test_cxx23_opt_in.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23/files/test/conformance/test_cxx23_opt_in.py",
+      "storage": "visible",
+      "bytes": 2304,
+      "sha256": "7c3dc56c583281f37b1fdbd09a3f22488b7e638e99466e25c4b22be8bd3cd0be"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/std23/files/test/conformance/test_std23.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/std23/files/test/conformance/test_std23.cpp",
+      "storage": "visible",
+      "bytes": 1200,
+      "sha256": "84dacc4b955619f84f8d6403cd2a4dfcfb0e810f1d853c5a3088214f5fa8744e"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/styling/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/styling/stage.json",
+      "storage": "visible",
+      "bytes": 2204,
+      "sha256": "3c8d0ab37c37594b0cf27f53a1ea1b0e880645adfaf3d1fc0c75f9e2d05ee6fe"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/styling/files/docs/features/styling.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/styling/files/docs/features/styling.md",
+      "storage": "visible",
+      "bytes": 552,
+      "sha256": "3dc4d6c64e29a3b9e25312392cb73ccfff3381b32e53847788bf67f8e3717b5f"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/styling/files/include/ffmt/color.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/styling/files/include/ffmt/color.hpp",
+      "storage": "visible",
+      "bytes": 14894,
+      "sha256": "2e640a0714f3e3784befa308a3a78c85a1654f700b6f36b80c0516873c419934"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/styling/files/test/conformance/cases_style.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/styling/files/test/conformance/cases_style.py",
+      "storage": "visible",
+      "bytes": 472,
+      "sha256": "f55e8539f2af310758988b35a524291ee03c017202a0e9615568eafc268d9d94"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/styling/files/test/conformance/test_style.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/styling/files/test/conformance/test_style.cpp",
+      "storage": "visible",
+      "bytes": 1132,
+      "sha256": "29792bc502ad4101a1fe318f5d9bd78a43253d5be857f4d0003100d66940bbb9"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/typed-printf/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/typed-printf/stage.json",
+      "storage": "visible",
+      "bytes": 2643,
+      "sha256": "4a964b365e6c7f748df67def4e309439c2c8018387f3b393dd0a9fc6694e4ffb"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/typed-printf/files/docs/features/printf.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/typed-printf/files/docs/features/printf.md",
+      "storage": "visible",
+      "bytes": 699,
+      "sha256": "09789fb12eee677ac1efcaf078096dffc80b32b1727c089224c2ed6075c1aa57"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/typed-printf/files/include/ffmt/printf.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/typed-printf/files/include/ffmt/printf.hpp",
+      "storage": "visible",
+      "bytes": 16868,
+      "sha256": "fcdc9232a3466f2328ead0925e438e0c06ee4e4c19bde7c1f56e88cce95da436"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/typed-printf/files/test/conformance/cases_printf.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/typed-printf/files/test/conformance/cases_printf.py",
+      "storage": "visible",
+      "bytes": 391,
+      "sha256": "40b14ecd8fd61744fc3ecc23f1779ba5a4ebe1605e2fa7e48dbd4d0b1b2c1c1c"
+    },
+    {
+      "relative_path": "stage-inputs/feature-stages/typed-printf/files/test/conformance/test_printf.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-stages/typed-printf/files/test/conformance/test_printf.cpp",
+      "storage": "visible",
+      "bytes": 6165,
+      "sha256": "2ca1ff3aeca8bebcd359dd2c8222dcd4525dd475b2ce31701af1483aae58c6cb"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/index.json",
+      "storage": "visible",
+      "bytes": 489,
+      "sha256": "596b12d9d222ce51ea180010df50246027d500bbec30091f4f3940ff0daf17d2"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-driver/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-driver/stage.json",
+      "storage": "visible",
+      "bytes": 1496,
+      "sha256": "bed8ca74bfbfd864a59953209cb989cd0c46d239fcea2e41f8a9c1db48a23c3b"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-driver/files/docs/conformance/benchmark-driver.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-driver/files/docs/conformance/benchmark-driver.md",
+      "storage": "visible",
+      "bytes": 1004,
+      "sha256": "1d68eb54648dc6dc4d54570966c1379f202ad4a7a0be8896b7a7073190527dd4"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-driver/files/test/conformance/test_benchmark.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-driver/files/test/conformance/test_benchmark.py",
+      "storage": "visible",
+      "bytes": 1249,
+      "sha256": "dfc1f310dd04fa65ac8a33a6eef8ecad6017ac962072de894c21ba7388a0190d"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-driver/files/tools/benchmark.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-driver/files/tools/benchmark.py",
+      "storage": "visible",
+      "bytes": 16187,
+      "sha256": "50d3ea032b02069ea08b3d547b5e8bfefb4a630cf1954cc24da35ba04f4747a0"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-primitives/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-primitives/stage.json",
+      "storage": "visible",
+      "bytes": 1430,
+      "sha256": "4e50fa753bdea10c3f3e7e725399ba1709f2f75f746470f40e3a17b70e8aa1de"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-primitives/files/docs/conformance/benchmark-primitives.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-primitives/files/docs/conformance/benchmark-primitives.md",
+      "storage": "visible",
+      "bytes": 920,
+      "sha256": "e441564434135f09d0094c672a46264011ca3d63f9efa3f2bdf3e2ef34d78919"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-primitives/files/test/conformance/benchmark.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-primitives/files/test/conformance/benchmark.cpp",
+      "storage": "visible",
+      "bytes": 9698,
+      "sha256": "c2d5e2306994470df3c2f4ddbfc1a0d55d5c04408d6d06af6b5d74dd8821d4ac"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-primitives/files/test/conformance/benchmark_calls.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-primitives/files/test/conformance/benchmark_calls.hpp",
+      "storage": "visible",
+      "bytes": 2423,
+      "sha256": "ea2a00e20fc6a1448ee63c4d009713659515af1093a63afdb1751839e39e8db3"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-primitives/files/test/conformance/benchmark_extra.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-primitives/files/test/conformance/benchmark_extra.cpp",
+      "storage": "visible",
+      "bytes": 256,
+      "sha256": "603235a564b05df3b9f6746c409a683308f3fc76362dee5dfbce127de2694bf4"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-resources/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-resources/stage.json",
+      "storage": "visible",
+      "bytes": 1419,
+      "sha256": "edfd71bb254a896da37ba8bcff71a8ca15b49a987a36f26305ce9fa44e6eea6f"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-resources/files/docs/conformance/benchmark-resources.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-resources/files/docs/conformance/benchmark-resources.md",
+      "storage": "visible",
+      "bytes": 1046,
+      "sha256": "9f7683e8c355f1c50c173612d6ee84572eb98eb73ddc777477717e57ba23e5bb"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-resources/files/test/conformance/benchmark_resource.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-resources/files/test/conformance/benchmark_resource.cpp",
+      "storage": "visible",
+      "bytes": 1775,
+      "sha256": "658e11f8bb5d7523dc72246bf81534971a1ed8ee1d041a3348cfb14920b404a2"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/benchmark-resources/files/tools/benchmark.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/benchmark-resources/files/tools/benchmark.py",
+      "storage": "visible",
+      "bytes": 25181,
+      "sha256": "3d3e203c9913413f4d8b22d6bdbf4e33a1693133c4106fed2f074c898680f0f6"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/coverage-metrics/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/coverage-metrics/stage.json",
+      "storage": "visible",
+      "bytes": 1287,
+      "sha256": "fc923e429bba9aaa5d5dbe09857460a37218df1ca5819aab0dcd621f63d7da59"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/coverage-metrics/files/.github/scripts/coverage_union.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/coverage-metrics/files/.github/scripts/coverage_union.py",
+      "storage": "visible",
+      "bytes": 4633,
+      "sha256": "8a4a273303ed1f7db1f78098dcfcae59774bbb18403a652748436c64fa7dada6"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/coverage-metrics/files/docs/conformance/coverage-metrics.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/coverage-metrics/files/docs/conformance/coverage-metrics.md",
+      "storage": "visible",
+      "bytes": 918,
+      "sha256": "ffa2b9dabefb6b4f3e5b43040b0fd279d0d0d24969beb2f8c8650fbdbcb915ae"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/coverage-metrics/files/test/conformance/test_coverage_metrics.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/coverage-metrics/files/test/conformance/test_coverage_metrics.py",
+      "storage": "visible",
+      "bytes": 2219,
+      "sha256": "237ca2128cc3cbec79c2bd9d2508b9b1f5f52ede1e99b2510c0147b5583ab30b"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-adapter-support/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-adapter-support/stage.json",
+      "storage": "visible",
+      "bytes": 1072,
+      "sha256": "a865b04b33affd69a14104b9b7243b7ba3d74b2dea0113dbacc3a9ca1356a662"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-adapter-support/files/docs/conformance/tool-adapter-support.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-adapter-support/files/docs/conformance/tool-adapter-support.md",
+      "storage": "visible",
+      "bytes": 757,
+      "sha256": "8c8f6d3f11677249fc98c2505556fa09efca05bc7d8d500ba115d47a07424e0d"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-adapter-support/files/test/conformance/test_device_arch.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-adapter-support/files/test/conformance/test_device_arch.py",
+      "storage": "visible",
+      "bytes": 1478,
+      "sha256": "42b2ad83ff201f3dc117310557f090338467078d523dfc6830610b4aebfdfb03"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-adapter-support/files/tools/device_arch.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-adapter-support/files/tools/device_arch.py",
+      "storage": "visible",
+      "bytes": 928,
+      "sha256": "390b7a4c8a801a5fcd98ce11813e0fa0de3078deebe00b0c28f0207881adb714"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-cuda/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-cuda/stage.json",
+      "storage": "visible",
+      "bytes": 1352,
+      "sha256": "bb111cd81c5d9c12306041365053cebe60a56cf7bb2981e82f844512b0b74da6"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-cuda/files/docs/conformance/tool-cuda.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-cuda/files/docs/conformance/tool-cuda.md",
+      "storage": "visible",
+      "bytes": 697,
+      "sha256": "032aa4d77c09bd12387ecacb7f5efa05bae48c227ef42c3e4f9fef2f3bd98c96"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-cuda/files/test/conformance/test_adapter_cuda.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-cuda/files/test/conformance/test_adapter_cuda.py",
+      "storage": "visible",
+      "bytes": 1591,
+      "sha256": "7a8cc4966a963ab8c8e86e8cad6b5b0d4c8d324cf53bba6f682f7abe682bfa06"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-cuda/files/tools/backend_cuda.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-cuda/files/tools/backend_cuda.py",
+      "storage": "visible",
+      "bytes": 1506,
+      "sha256": "ae275fb61bf6c5b321beb05e3725c1e3fc325de93ed949a9a92a9f7bebce59c7"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-engine-cases/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-engine-cases/stage.json",
+      "storage": "visible",
+      "bytes": 1171,
+      "sha256": "8e905290fd0b0e7758892badf4ecc1cbbc8f0d7477e0a835ea5edb1ca5d24bd6"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-engine-cases/files/docs/conformance/tool-engine-cases.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-engine-cases/files/docs/conformance/tool-engine-cases.md",
+      "storage": "visible",
+      "bytes": 825,
+      "sha256": "f18faa48861918271c71d6d3a1150da6edfbd869e23fcb263a2b28913838379c"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-engine-cases/files/test/conformance/cases_engine.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-engine-cases/files/test/conformance/cases_engine.py",
+      "storage": "visible",
+      "bytes": 3573,
+      "sha256": "35623eb4885664ee6521800d0be203c5f8e5ea19c0c968f0355a2105f5c3bfac"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-hip/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-hip/stage.json",
+      "storage": "visible",
+      "bytes": 1313,
+      "sha256": "c1a717eb2189b8634b220335ebb3f186ac645da8d71df9ec2f4bcf3399cbda6e"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-hip/files/docs/conformance/tool-hip.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-hip/files/docs/conformance/tool-hip.md",
+      "storage": "visible",
+      "bytes": 651,
+      "sha256": "343685925aa9cbcebb66980792bca9f073033ccbc256cbdc90b69002f19b454a"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-hip/files/test/conformance/test_adapter_hip.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-hip/files/test/conformance/test_adapter_hip.py",
+      "storage": "visible",
+      "bytes": 1577,
+      "sha256": "e120d4f0113fdb575873ed8d2aa1d205fc3968717a899d6c0bfa3df0930a4e24"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-hip/files/tools/backend_hip.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-hip/files/tools/backend_hip.py",
+      "storage": "visible",
+      "bytes": 1167,
+      "sha256": "d5476f4153288d7bc0578f446818702ae7fc91d79dce7f9416bfc1f626acab72"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/stage.json",
+      "storage": "visible",
+      "bytes": 1819,
+      "sha256": "069d9ff2fcd140c1059c90405041df99062262969333a1a2f476b67e7f6ffd04"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/Makefile",
+      "storage": "visible",
+      "bytes": 15920,
+      "sha256": "06258344861b006f1b7fa2391ec22b5e3746521850f945aee049a08be2990c59"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/docs/conformance/tool-host-oracle.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/docs/conformance/tool-host-oracle.md",
+      "storage": "visible",
+      "bytes": 1125,
+      "sha256": "a024445f86a3b4e8fa8d82a1afb274c0c47db772df4847813753745e8f1955f3"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/test/conformance/case_support.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/test/conformance/case_support.py",
+      "storage": "visible",
+      "bytes": 208,
+      "sha256": "a0943576cb728f0294860a97e68ad3c966e442131a8b7b20a73facbf32a684cd"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/test/conformance/cases.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/test/conformance/cases.py",
+      "storage": "visible",
+      "bytes": 1069,
+      "sha256": "d9508f95e4beb86108b8e769b9d6956cd6dcb7b24c1e94c8e4cd39a0955872d2"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/test/conformance/cases_baseline.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/test/conformance/cases_baseline.py",
+      "storage": "visible",
+      "bytes": 346,
+      "sha256": "58a6ff11d707689ada9905c3336fa2df7a9a3bf68c0a0b3c88eb2ae72944e188"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/test/conformance/test_fixture_registry.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/test/conformance/test_fixture_registry.py",
+      "storage": "visible",
+      "bytes": 1140,
+      "sha256": "5c187fd871a07a626cbbe6f10c0a8526d57378c6bfe80f3ef4e38504ecaf7a6f"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/test/conformance/test_oracle.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/test/conformance/test_oracle.py",
+      "storage": "visible",
+      "bytes": 2844,
+      "sha256": "903c74eec655d871e28d1ca1b5c56722088acbc251bf8c5943fd8afef4c21aa0"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/tools/backend_host.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/tools/backend_host.py",
+      "storage": "visible",
+      "bytes": 643,
+      "sha256": "59350647aa733b94ed317d25358481dc9ae3f37257af85b11d53dfadb6eda3f4"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/tools/backends.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/tools/backends.py",
+      "storage": "visible",
+      "bytes": 1910,
+      "sha256": "3497895dc0b6d392297b9d02613c6c7f158a0b8e6c9cabbf872f24a695f59153"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/tools/conformance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/tools/conformance.py",
+      "storage": "visible",
+      "bytes": 14247,
+      "sha256": "98f6be3f02fff533bdeb54adbe45ccf5535399ba0d0c745830a65c7e7936a5be"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-host-oracle/files/tools/oracle.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-host-oracle/files/tools/oracle.py",
+      "storage": "visible",
+      "bytes": 1289,
+      "sha256": "ef6128a4e1cb1fa9101fbcea34ee3d5902314f928bfb0e4bbfea2b42e2a61042"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-isolation/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-isolation/stage.json",
+      "storage": "visible",
+      "bytes": 1307,
+      "sha256": "86044d1ace61884aeeb5608766da5b0328ef769ae41be6d296278c677e90677f"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-isolation/files/docs/conformance/tool-isolation.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-isolation/files/docs/conformance/tool-isolation.md",
+      "storage": "visible",
+      "bytes": 961,
+      "sha256": "3af5ebd637f6ced1028da90077673ac0de2bfaad9b93849c51944428833098ed"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-isolation/files/test/conformance/test_runner.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-isolation/files/test/conformance/test_runner.py",
+      "storage": "visible",
+      "bytes": 5774,
+      "sha256": "bf0bcee225561d67a19f93e69d4a8601c40096dad431366b1b5b18801f543fbe"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-isolation/files/tools/conformance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-isolation/files/tools/conformance.py",
+      "storage": "visible",
+      "bytes": 19717,
+      "sha256": "8d83255a7320994d759c351d82dccd5d5fd5b9f2d8364341cc0b11d2a2b828a3"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-kokkos/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-kokkos/stage.json",
+      "storage": "visible",
+      "bytes": 1400,
+      "sha256": "421fc8b0e1d55b27528c546b2b65e88934bb55e1892c9def45302ad43594bf3d"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-kokkos/files/docs/conformance/tool-kokkos.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-kokkos/files/docs/conformance/tool-kokkos.md",
+      "storage": "visible",
+      "bytes": 719,
+      "sha256": "8a3f88d98a092d508a6750acbb19e0173de0f81540416897282d61364bff19dc"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-kokkos/files/test/conformance/test_adapter_kokkos.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-kokkos/files/test/conformance/test_adapter_kokkos.py",
+      "storage": "visible",
+      "bytes": 1471,
+      "sha256": "c0f2bb25f96f28435e58c2bc3e0da1af476cab7468d1f4e53481a7300cf73ab0"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-kokkos/files/tools/backend_kokkos.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-kokkos/files/tools/backend_kokkos.py",
+      "storage": "visible",
+      "bytes": 2930,
+      "sha256": "fa6aa4985ef114e8ee4687b45e5916428a0f1d091a401c22fb6a61ad8f5d70a7"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-cuda/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-cuda/stage.json",
+      "storage": "visible",
+      "bytes": 1321,
+      "sha256": "83e3f6509ebe935317e14011e3c8f810edc50c82bcdf96590923c32922a27905"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-cuda/files/docs/conformance/tool-memory-cuda.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-cuda/files/docs/conformance/tool-memory-cuda.md",
+      "storage": "visible",
+      "bytes": 791,
+      "sha256": "bce14d8f72ddf4aa8a0495a8a0460993b5e4204a2e220948e6715391b69358c1"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-cuda/files/test/conformance/test_memory_cuda.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-cuda/files/test/conformance/test_memory_cuda.py",
+      "storage": "visible",
+      "bytes": 1127,
+      "sha256": "ed874c92b0afe1aa02488c5140bc3b50314a214a3741524644e3ea585701fafc"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-cuda/files/tools/backend_cuda.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-cuda/files/tools/backend_cuda.py",
+      "storage": "visible",
+      "bytes": 2740,
+      "sha256": "09bdbc49e20766b83d4b1d93a3b970b5e6c67d5aca451d07d57387bbc883cec7"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-hip/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-hip/stage.json",
+      "storage": "visible",
+      "bytes": 1305,
+      "sha256": "e62deaeb8265ffb751c53304a4ff3e4738cc4ca0599c142fda27669466b8bada"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-hip/files/docs/conformance/tool-memory-hip.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-hip/files/docs/conformance/tool-memory-hip.md",
+      "storage": "visible",
+      "bytes": 789,
+      "sha256": "da39682463e38aa2ec4bbdf7b007a89ab1b2a2eea700c5ac90ce7b37e2e6014b"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-hip/files/test/conformance/test_memory_hip.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-hip/files/test/conformance/test_memory_hip.py",
+      "storage": "visible",
+      "bytes": 1138,
+      "sha256": "c85de8541795e3f9cf9903555f7623699171738d0b1e236095fd2f1387c14fe4"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-hip/files/tools/backend_hip.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-hip/files/tools/backend_hip.py",
+      "storage": "visible",
+      "bytes": 2417,
+      "sha256": "f7a4e21c6d8a5ad52daf4bea5c5c885aa6a9c3622b7b02e90ef8070546ad59ea"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-kokkos/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-kokkos/stage.json",
+      "storage": "visible",
+      "bytes": 1339,
+      "sha256": "e83ec140c67e64ab91fb4cb639a5a28f8c333dfe1eadbf1ae110acebf49202e2"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-kokkos/files/docs/conformance/tool-memory-kokkos.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-kokkos/files/docs/conformance/tool-memory-kokkos.md",
+      "storage": "visible",
+      "bytes": 795,
+      "sha256": "e2bf43bd79e2aa589d1a3b0dc28e10bc51105a6528b6540efef2377eb9807ee5"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-kokkos/files/test/conformance/test_memory_kokkos.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-kokkos/files/test/conformance/test_memory_kokkos.py",
+      "storage": "visible",
+      "bytes": 1149,
+      "sha256": "acacfca29be6810e2953cb795a6e98e15eeb44ae1cbcb653037eb80d9b0d2e71"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-kokkos/files/tools/backend_kokkos.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-kokkos/files/tools/backend_kokkos.py",
+      "storage": "visible",
+      "bytes": 4182,
+      "sha256": "3f5911e0108ab22e7e71cc9076a7d525b94d163f2b625108fddad0ed004fb445"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-openmp/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-openmp/stage.json",
+      "storage": "visible",
+      "bytes": 1323,
+      "sha256": "3ed2fbdd42e8be0f9609a729b9a5b6d9a9e01c85bb435e0d5b2e0da79ca52641"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-openmp/files/docs/conformance/tool-memory-openmp.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-openmp/files/docs/conformance/tool-memory-openmp.md",
+      "storage": "visible",
+      "bytes": 795,
+      "sha256": "293e563b50162371ef4dcc84a2573658fa47a2ff106b3ce6582a4992e2adea57"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-openmp/files/test/conformance/test_memory_openmp.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-openmp/files/test/conformance/test_memory_openmp.py",
+      "storage": "visible",
+      "bytes": 1109,
+      "sha256": "f717850b40efab46c965fa10b8b6947550d282b04845796ed2f7b741699653a1"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-openmp/files/tools/backend_openmp.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-openmp/files/tools/backend_openmp.py",
+      "storage": "visible",
+      "bytes": 2016,
+      "sha256": "d8e14ba16ddfb2225c39aa74b14d272f589e5bdb46c1995a6f609d0032a52154"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-sycl/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-sycl/stage.json",
+      "storage": "visible",
+      "bytes": 1328,
+      "sha256": "fa1a6b394bebad066cd2009a36920abf4d51ab5aa48b08c34431288463052df5"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-sycl/files/docs/conformance/tool-memory-sycl.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-sycl/files/docs/conformance/tool-memory-sycl.md",
+      "storage": "visible",
+      "bytes": 791,
+      "sha256": "a49d2b4a8665ba7413c2fb1e66d9d686e3b6a41129984566c519f368b76c8c3d"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-sycl/files/test/conformance/test_memory_sycl.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-sycl/files/test/conformance/test_memory_sycl.py",
+      "storage": "visible",
+      "bytes": 1133,
+      "sha256": "59786898c96835a1d4f45a94a077482d012cbdfba9fa3c4d69ebbbbaf39641a8"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-memory-sycl/files/tools/backend_sycl.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-memory-sycl/files/tools/backend_sycl.py",
+      "storage": "visible",
+      "bytes": 2155,
+      "sha256": "d3daa45cd74bb277f4d29ad2ad5d3c39dadc917a429e93fc2b7632e6c7e6943d"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-negative/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-negative/stage.json",
+      "storage": "visible",
+      "bytes": 1195,
+      "sha256": "a7935a6e60437b5afec31eaab174edf69a371255f998af32407a70e6167ec472"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-negative/files/Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-negative/files/Makefile",
+      "storage": "visible",
+      "bytes": 13871,
+      "sha256": "c2c22f6544bf1f90d9d0f73d5d8db38366fe76ec7968fe7e7732260627095e18"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-negative/files/docs/conformance/tool-negative.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-negative/files/docs/conformance/tool-negative.md",
+      "storage": "visible",
+      "bytes": 843,
+      "sha256": "1e2c4a6d26d5cd836513365324684ea184a22c616841ad4160ed41a7f995b56e"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-negative/files/test/conformance/test_negative_driver.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-negative/files/test/conformance/test_negative_driver.py",
+      "storage": "visible",
+      "bytes": 1506,
+      "sha256": "fc2ee18939e401fc74e4b3f3dd03a4afab063588a875396a5c91ebc5fa982424"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-negative/files/tools/compile_diagnostics.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-negative/files/tools/compile_diagnostics.py",
+      "storage": "visible",
+      "bytes": 906,
+      "sha256": "f91fc22287ade2789c983240e4627e7eadd6789574cea2a4aade13470a8cc861"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-negative/files/tools/negative.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-negative/files/tools/negative.py",
+      "storage": "visible",
+      "bytes": 2502,
+      "sha256": "db5c636d3e6202941428dfe9a855cee506a9097d54ed033a25ad819f85691cd5"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/stage.json",
+      "storage": "visible",
+      "bytes": 1644,
+      "sha256": "6ae621e5bf916c8bb4d25f5e7ba353945c8216691486b071a73352cbce5ff503"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/files/docs/conformance/tool-numeric-memory.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/files/docs/conformance/tool-numeric-memory.md",
+      "storage": "visible",
+      "bytes": 1089,
+      "sha256": "44c318ca3649c69daaba73bf5b725a0be5473447c28b1270360c70a2dae0c773"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/files/test/conformance/numeric_memory.cpp.in",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/files/test/conformance/numeric_memory.cpp.in",
+      "storage": "visible",
+      "bytes": 3316,
+      "sha256": "fd21d30b5da4eea9651587857bfe16574c2b15f0affe2149ad5c418c76edd6c3"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/files/test/conformance/test_auxiliary_evidence.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/files/test/conformance/test_auxiliary_evidence.py",
+      "storage": "visible",
+      "bytes": 5329,
+      "sha256": "5ce3c9a25366592415417dece4910dd117dd1bf31a52dd32232528c3d2c9ddd1"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/files/test/conformance/test_numeric_memory.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/files/test/conformance/test_numeric_memory.py",
+      "storage": "visible",
+      "bytes": 1531,
+      "sha256": "4b36ca17110ade3bc671b18ba3ff10cdc72dcc0d9a06d054993c86d19066bcbd"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/files/tools/backend_host.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/files/tools/backend_host.py",
+      "storage": "visible",
+      "bytes": 904,
+      "sha256": "539832cdaa9e4788505761192673863faed7ed8d643562e2bcd384adf83da3cc"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/files/tools/conformance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/files/tools/conformance.py",
+      "storage": "visible",
+      "bytes": 23761,
+      "sha256": "481f6a92c283d8a1bf94d17ea86814ea040d78723586b994049ffcc2a94b4448"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-numeric-memory/files/tools/numeric_memory.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-numeric-memory/files/tools/numeric_memory.py",
+      "storage": "visible",
+      "bytes": 2692,
+      "sha256": "51daafa863267957997e18712b2c5159df96bdbd7b17160cc6219e49446a4177"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-openmp/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-openmp/stage.json",
+      "storage": "visible",
+      "bytes": 1348,
+      "sha256": "765c0326bf9442657bc1489553b88b69c7c7d5e22fa98a5381b89872003480ad"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-openmp/files/docs/conformance/tool-openmp.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-openmp/files/docs/conformance/tool-openmp.md",
+      "storage": "visible",
+      "bytes": 709,
+      "sha256": "b64f7bb9d1d6bf1218a563631169fa7000940db232b025b380d8eaa1652e9eac"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-openmp/files/test/conformance/test_adapter_openmp.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-openmp/files/test/conformance/test_adapter_openmp.py",
+      "storage": "visible",
+      "bytes": 1729,
+      "sha256": "7723b0830b70fc3c8a26d3734854aa496f10ef80d7b458680341f29df02b1981"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-openmp/files/tools/backend_openmp.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-openmp/files/tools/backend_openmp.py",
+      "storage": "visible",
+      "bytes": 1356,
+      "sha256": "ea23fa007e5d79173e22a323a2958e7c284fa2e19e44500e88a29863b768ac73"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-oracle-negatives/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-oracle-negatives/stage.json",
+      "storage": "visible",
+      "bytes": 1156,
+      "sha256": "6b84c9ab7bb54b8167fc197f3476947aedb448e3cbdb4e7857d2f62cde23061c"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-oracle-negatives/files/docs/conformance/tool-oracle-negatives.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-oracle-negatives/files/docs/conformance/tool-oracle-negatives.md",
+      "storage": "visible",
+      "bytes": 824,
+      "sha256": "f7991fc4c63c6558c81c65ae3905adefbf02105fc64250e52b66b47debc5e622"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-oracle-negatives/files/tools/conformance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-oracle-negatives/files/tools/conformance.py",
+      "storage": "visible",
+      "bytes": 20981,
+      "sha256": "959bdcd78dbe3b2250090c14f74f0094092e87e8b741476e67a27c89f6baeed6"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-process/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-process/stage.json",
+      "storage": "visible",
+      "bytes": 1203,
+      "sha256": "a2341518661b3a66c5944b6755e378633e207bc3c34db73eb9e4d7af870f3872"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-process/files/docs/conformance/tool-process.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-process/files/docs/conformance/tool-process.md",
+      "storage": "visible",
+      "bytes": 817,
+      "sha256": "cd3ded36886bce585035930786a5465c12e00925d0c08a856ffb1d9f4e6d4565"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-process/files/test/conformance/test_output.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-process/files/test/conformance/test_output.py",
+      "storage": "visible",
+      "bytes": 1944,
+      "sha256": "61d23dbefe5dfaf6c584d08d296e563278e6fa465832bd779fac1a8c672b5fac"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-process/files/test/conformance/test_process.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-process/files/test/conformance/test_process.py",
+      "storage": "visible",
+      "bytes": 5270,
+      "sha256": "79b4c27e4a3c2c2213ea56603329f881cc2f2cce36ee2ed3e241f46cdedfb52e"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-process/files/tools/process_evidence.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-process/files/tools/process_evidence.py",
+      "storage": "visible",
+      "bytes": 2560,
+      "sha256": "15f63e6996bd29b3ec1906cda30bdced68fe31835d7e615f7fcf284f598694d7"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-snapshots/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-snapshots/stage.json",
+      "storage": "visible",
+      "bytes": 1363,
+      "sha256": "2a875346f584dab1a4f2fa31966df7a456677e0da809f6b7d719934074b7ff7f"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-snapshots/files/docs/conformance/tool-snapshots.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-snapshots/files/docs/conformance/tool-snapshots.md",
+      "storage": "visible",
+      "bytes": 992,
+      "sha256": "a32ef92ed334d00852b36e970c89aeb48c33c5685abde3303f304a1572b4f7b8"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-snapshots/files/test/conformance/test_snapshots.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-snapshots/files/test/conformance/test_snapshots.py",
+      "storage": "visible",
+      "bytes": 3085,
+      "sha256": "e6e3371dfa7dad75413977ca45ac2a9a216003de21e3d6ea630487e7cc1df329"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-snapshots/files/tools/conformance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-snapshots/files/tools/conformance.py",
+      "storage": "visible",
+      "bytes": 14982,
+      "sha256": "540f77b366faa79c2468ff0602de61b58180fb84a80f4df576dcd431835cb0d1"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-sycl/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-sycl/stage.json",
+      "storage": "visible",
+      "bytes": 1337,
+      "sha256": "e8e02ef545d633b2fdbf1fbf9c418f6f6e224ba0d9342ab5f996cba1924d2201"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-sycl/files/docs/conformance/tool-sycl.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-sycl/files/docs/conformance/tool-sycl.md",
+      "storage": "visible",
+      "bytes": 679,
+      "sha256": "d0bec2822be525a9749c4d75583df5932cb63996b4107f40b6d06e88d6c1c5df"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-sycl/files/test/conformance/test_adapter_sycl.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-sycl/files/test/conformance/test_adapter_sycl.py",
+      "storage": "visible",
+      "bytes": 1500,
+      "sha256": "cca312159163c667f45ae9fb5ab6ce14c2c88ccc32e5fba65db7aceb770edbdf"
+    },
+    {
+      "relative_path": "stage-inputs/tool-stages/tool-sycl/files/tools/backend_sycl.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/tool-sycl/files/tools/backend_sycl.py",
+      "storage": "visible",
+      "bytes": 1052,
+      "sha256": "1905dbab94ecf75e1bb2e4291376c389adab3540c79b5173a5f09bbb80130004"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/export_remaining.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/export_remaining.py",
+      "storage": "visible",
+      "bytes": 34169,
+      "sha256": "198ddb5ab3d07ca4f9a188f40570825d41977198029cc0464103be5b2c2a6932"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/late-static-audit.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/late-static-audit.json",
+      "storage": "visible",
+      "bytes": 2643,
+      "sha256": "de0c450097c26c84bf6f2d9877b5bdb298e46d87ed892c50596061e65a766fcd"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/quad-test-portability.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/quad-test-portability.json",
+      "storage": "visible",
+      "bytes": 440,
+      "sha256": "9dcce12b98ea01a1962e7232ab13c499547bf28ecd8621f584f3bdacec613830"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/remaining-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/remaining-index.json",
+      "storage": "visible",
+      "bytes": 1113,
+      "sha256": "0ada1e0bef4930ec5b3f25ddb202c31445b0f8780c93e8af939b9533d1e2979c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/reproducer-relocation-proof.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/reproducer-relocation-proof.json",
+      "storage": "visible",
+      "bytes": 655,
+      "sha256": "11b5b88c1b1ff457bd052b07e45e2d0cfa5b74bd6a760bef6f2b6d3694b61f7f"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/api-index/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/api-index/stage.json",
+      "storage": "visible",
+      "bytes": 1936,
+      "sha256": "76f16c9b0ffb9bcd0b44ca694677d97673b80a2e1fe7debbf889eb7ef640c034"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/api-index/files/README.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/api-index/files/README.md",
+      "storage": "visible",
+      "bytes": 1856,
+      "sha256": "7853f7cb4e7733cfe46aea6dc59e620bee9a116116dadde78f40f9b17aa63a08"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/api-index/files/docs/API.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/api-index/files/docs/API.md",
+      "storage": "visible",
+      "bytes": 4998,
+      "sha256": "afaf53fa1baa365b3f4e804ef3a65e0e93d40a9f3e508b91169434b36b5696a8"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/api-index/files/docs/BACKENDS.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/api-index/files/docs/BACKENDS.md",
+      "storage": "visible",
+      "bytes": 3160,
+      "sha256": "0fa03c4b5e764c01e70f21621aa4990f084aa28146c769a5b60db15c40f85d1c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/api-index/files/docs/CONFORMANCE.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/api-index/files/docs/CONFORMANCE.md",
+      "storage": "visible",
+      "bytes": 5003,
+      "sha256": "6184fe30c5b247fce10e304f47cb9b7a1ff9b2597ec77af2b335ea30e3b0aa36"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/backend-regression-selection/changes.patch",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/backend-regression-selection/changes.patch",
+      "storage": "visible",
+      "bytes": 1344,
+      "sha256": "45469bd3b968f4f5e51f71c3b5cbddfd9eb89a308510f5e93954564786c27727"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/backend-regression-selection/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/backend-regression-selection/stage.json",
+      "storage": "visible",
+      "bytes": 980,
+      "sha256": "f742fae077a64bdd6cbf8146a1ced6b2ed820242639ace28b4ec57c3d473b63d"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/backend-regression-selection/files/docs/contributing/INTEL_REGRESSIONS.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/backend-regression-selection/files/docs/contributing/INTEL_REGRESSIONS.md",
+      "storage": "visible",
+      "bytes": 388,
+      "sha256": "67a1ba10b2c982ab23f185214c489593f801d357cca6e6b5ab337fc170e2b39d"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-compiler-selection/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-compiler-selection/stage.json",
+      "storage": "visible",
+      "bytes": 911,
+      "sha256": "2b0009ec0adef9cb780e653181f8fff25d0f0e2b4cfd00a16d474c181891760d"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-compiler-selection/files/Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-compiler-selection/files/Makefile",
+      "storage": "visible",
+      "bytes": 15589,
+      "sha256": "ea9690e9521422893e25b6bd9a86b424ce378c12980dabef137f019c13585e83"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-compiler-selection/files/docs/contributing/COMPILER_SELECTION.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-compiler-selection/files/docs/contributing/COMPILER_SELECTION.md",
+      "storage": "visible",
+      "bytes": 396,
+      "sha256": "72ca6b462869f97e43786f80a3f783b563347caa6d64208994ba591b373911d2"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-header-dependencies/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-header-dependencies/stage.json",
+      "storage": "visible",
+      "bytes": 1105,
+      "sha256": "7d010b58e47c00891da964d927389c83092c4919f9b4f5a69192283edd3a8af3"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-header-dependencies/files/Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-header-dependencies/files/Makefile",
+      "storage": "visible",
+      "bytes": 15709,
+      "sha256": "2d19c4767aefa0bde9cd8d6636b94d4b2df3ac595c9e6427d56f016fe2314fc9"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-header-dependencies/files/docs/contributing/HEADER_DEPENDENCIES.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-header-dependencies/files/docs/contributing/HEADER_DEPENDENCIES.md",
+      "storage": "visible",
+      "bytes": 361,
+      "sha256": "b96e5dcb684cfe38b09fcc50f8ea6fd5e5ce6340db28d8470e240edf35e71669"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-header-dependencies/files/test/conformance/test_make_header_dependencies.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-header-dependencies/files/test/conformance/test_make_header_dependencies.py",
+      "storage": "visible",
+      "bytes": 1675,
+      "sha256": "a636de41bdf5c20b73af3d7be25983f05e5e9ae2019748997cbaf87b859e3c4f"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-registration/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration/stage.json",
+      "storage": "visible",
+      "bytes": 1101,
+      "sha256": "f1a6b855d931b80bb6f47236ac8a27cf75f952da153d59fa8b8d9060b9459dca"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-registration/files/Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration/files/Makefile",
+      "storage": "visible",
+      "bytes": 15648,
+      "sha256": "4d424fe92fc257e94ccf418fec8f96023b4f5b8c732df648747c327e03a30b43"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-registration/files/.github/workflows/host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration/files/.github/workflows/host.yml",
+      "storage": "visible",
+      "bytes": 6274,
+      "sha256": "af134894b077f47d244005ca6308eec2e656120e9356dc3ea27fba6ba8df7fdf"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-registration/files/docs/contributing/TESTS.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration/files/docs/contributing/TESTS.md",
+      "storage": "visible",
+      "bytes": 1083,
+      "sha256": "54c42b102eee0046eb596da353e5d35182f87291e83353287748a7728ae4209e"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-registration/files/mk/portable-tests.mk",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration/files/mk/portable-tests.mk",
+      "storage": "visible",
+      "bytes": 2297,
+      "sha256": "12900140d2452081ec4c21d9d60ab90faef1a40f4e92f2f6d7099c91995fe570"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/build-registration/files/test/conformance/test_build_registration.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration/files/test/conformance/test_build_registration.py",
+      "storage": "visible",
+      "bytes": 3619,
+      "sha256": "78d9cf6fe8639d8037fd1fbc27a75f1a0d1b8c5c36e90a80379667192372fdd7"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-conformance/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-conformance/stage.json",
+      "storage": "visible",
+      "bytes": 2334,
+      "sha256": "08fb1849d64de58db690a6440c7d486f315d2dd1af907a46cb609e9031c55c9c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-conformance/files/.github/workflows/host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-conformance/files/.github/workflows/host.yml",
+      "storage": "visible",
+      "bytes": 6063,
+      "sha256": "d739e043ae03f0a3b5760b92397988abcd1c7ec0dc142abfb54a5bdecb58db19"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-conformance/files/docs/contributing/CONFORMANCE_CI.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-conformance/files/docs/contributing/CONFORMANCE_CI.md",
+      "storage": "visible",
+      "bytes": 1527,
+      "sha256": "873c9ec3e9f97474be57c2cd77451938d9e1832e1c707972e50d88cba4dbb36b"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-resource-bounds/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-resource-bounds/stage.json",
+      "storage": "visible",
+      "bytes": 1018,
+      "sha256": "9c7e7bde0b32614aab9674698629857b2bc40607d7003d7759404b77edd9bc3e"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-resource-bounds/files/.github/workflows/device.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-resource-bounds/files/.github/workflows/device.yml",
+      "storage": "visible",
+      "bytes": 2735,
+      "sha256": "ab6efd9fb36d72f397428c4b55ab974bfec13da0e0b90c018ec4ffceb0094214"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-resource-bounds/files/.github/workflows/host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-resource-bounds/files/.github/workflows/host.yml",
+      "storage": "visible",
+      "bytes": 6198,
+      "sha256": "c657fb5aa49064c1417027171609c3b7d1bcad001b0e5ce78606a998158f8b3a"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-resource-bounds/files/docs/contributing/CI_RESOURCES.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-resource-bounds/files/docs/contributing/CI_RESOURCES.md",
+      "storage": "visible",
+      "bytes": 543,
+      "sha256": "ff9f355a64f1fe43e6e8b2f7f13fba5004a0ead391f9355b9ec23934cfe9a395"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-review-waves/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-review-waves/stage.json",
+      "storage": "visible",
+      "bytes": 1005,
+      "sha256": "4cca388eed78409034b5ad632086dea488f78d435349fd60d939514fcd6f6389"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-review-waves/files/.github/workflows/device.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-review-waves/files/.github/workflows/device.yml",
+      "storage": "visible",
+      "bytes": 2622,
+      "sha256": "826495f79d01fc4437be52116fd5fcca7d280af31698b65bec17486c600ccc4e"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-review-waves/files/.github/workflows/host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-review-waves/files/.github/workflows/host.yml",
+      "storage": "visible",
+      "bytes": 6173,
+      "sha256": "5e0763d9dec11c6f5d43f4f2724b4d89e5f8d44cf00f5746e66a3e8be93f0f65"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-review-waves/files/docs/contributing/CI.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-review-waves/files/docs/contributing/CI.md",
+      "storage": "visible",
+      "bytes": 567,
+      "sha256": "26c78bd51ee0566f25132bfbd40625575106260c3a4cb176acd673cb1edbaabb"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-sanitizers/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-sanitizers/stage.json",
+      "storage": "visible",
+      "bytes": 1490,
+      "sha256": "bb8d685af13500d363ff19bea4b1b8ec9ce182b8604e205385b20a8cbc834808"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-sanitizers/files/.github/workflows/host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-sanitizers/files/.github/workflows/host.yml",
+      "storage": "visible",
+      "bytes": 5571,
+      "sha256": "c940d72f499918b143ace415217884d1b4605bfce33eed84635b6db8e7e4e976"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/ci-sanitizers/files/docs/contributing/SANITIZERS.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-sanitizers/files/docs/contributing/SANITIZERS.md",
+      "storage": "visible",
+      "bytes": 725,
+      "sha256": "8018ec1804f2933dd5eb9ada88d02f0de1c5d22827a6cb085a374a9313ba5abb"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-package/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-package/stage.json",
+      "storage": "visible",
+      "bytes": 2423,
+      "sha256": "885b856d63384db5134239545d9db3825ebd1240224180c81d7855af1fe4a79c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-package/files/CMakeLists.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-package/files/CMakeLists.txt",
+      "storage": "visible",
+      "bytes": 1076,
+      "sha256": "214a4577a447c4324be1988a2af5d57df3c2b044b51b072c9f23ef3d2eb37264"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-package/files/cmake/ffmtConfig.cmake.in",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-package/files/cmake/ffmtConfig.cmake.in",
+      "storage": "visible",
+      "bytes": 102,
+      "sha256": "5507277e40d1930f59e07bd6b1a0e97921381768376c9a2a3d0be29449cf88da"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-package/files/docs/BUILD.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-package/files/docs/BUILD.md",
+      "storage": "visible",
+      "bytes": 1254,
+      "sha256": "ccc181f7d9a8cfa777d1d5760ec70f94de19951df2ba552ff584768beb2d21c9"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-package/files/examples/cmake-consumer/CMakeLists.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-package/files/examples/cmake-consumer/CMakeLists.txt",
+      "storage": "visible",
+      "bytes": 204,
+      "sha256": "05411fec7c98f3edada81518c78f95dd65bb83330b09b10731bcd73c5442ec10"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-package/files/examples/cmake-consumer/main.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-package/files/examples/cmake-consumer/main.cpp",
+      "storage": "visible",
+      "bytes": 239,
+      "sha256": "3567e79e02c17edb19db3e44b6c1f8622215294877a8d6a4c63a9f49ccd9a986"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-tests/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-tests/stage.json",
+      "storage": "visible",
+      "bytes": 2665,
+      "sha256": "c2cead8e6f75f05af27808dc3a33d50d8eef704427fe527bd974de31d7dfd60f"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-tests/files/CMakeLists.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-tests/files/CMakeLists.txt",
+      "storage": "visible",
+      "bytes": 1455,
+      "sha256": "bec49b3f518958c03a434094cdfe18382c13a4cd96cc05f72c98a7cdcc2f034d"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-tests/files/cmake/ffmtTests.cmake",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-tests/files/cmake/ffmtTests.cmake",
+      "storage": "visible",
+      "bytes": 5998,
+      "sha256": "a0a109f709b48ddd8564d8c5d0f261ce7d997a5f9c159d6624678f2ae5398135"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/cmake-tests/files/docs/BUILD.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/cmake-tests/files/docs/BUILD.md",
+      "storage": "visible",
+      "bytes": 2864,
+      "sha256": "8cb1e7d555874e8a62584bb7878657aeb392890c7493c5ded9b78422afd707a6"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/complete/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/complete/stage.json",
+      "storage": "visible",
+      "bytes": 370,
+      "sha256": "c9b0a4d1ad6922f1110019937c1b8d686666622de258204e8dc95e8a3f59edca"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/coverage-policy/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/coverage-policy/stage.json",
+      "storage": "visible",
+      "bytes": 1282,
+      "sha256": "63f0a826aa5c46094e07eb0cff867f28cb7a9283d699f8eaa19431649a0f831e"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/coverage-policy/files/Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/coverage-policy/files/Makefile",
+      "storage": "visible",
+      "bytes": 15645,
+      "sha256": "a1a4770494fc6f3e09b3bbce055594315ef4eb820337534cc3efe98c67f4ce4d"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/coverage-policy/files/.github/workflows/host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/coverage-policy/files/.github/workflows/host.yml",
+      "storage": "visible",
+      "bytes": 6132,
+      "sha256": "0e5a4bd3d3763cac8727eb8ab47e1c9d4eea387936dd863ee681583506a14531"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/coverage-policy/files/docs/contributing/COVERAGE.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/coverage-policy/files/docs/contributing/COVERAGE.md",
+      "storage": "visible",
+      "bytes": 1386,
+      "sha256": "2714e85988d7626f28818d669753f844438ded1a527e2168c60a1a3ddb484ecd"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/coverage-policy/files/mk/portable-coverage.mk",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/coverage-policy/files/mk/portable-coverage.mk",
+      "storage": "visible",
+      "bytes": 830,
+      "sha256": "8213be1a4e70b9f3d2037f81431b93bd09209a24a4dab1969bc35a1c2bb88c1c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/local-ignores/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/local-ignores/stage.json",
+      "storage": "visible",
+      "bytes": 721,
+      "sha256": "49aaa6e8934604ee9123bf200b1dcfd47711c2cb12ea707e17cbf6de166e0b70"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/local-ignores/files/.gitignore",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/local-ignores/files/.gitignore",
+      "storage": "visible",
+      "bytes": 87,
+      "sha256": "c2a2c75f20b39d2300f4fc8670e38e3db6eab45e49facb38cea954d1f161d5a6"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/local-ignores/files/docs/contributing/LOCAL_OUTPUTS.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/local-ignores/files/docs/contributing/LOCAL_OUTPUTS.md",
+      "storage": "visible",
+      "bytes": 301,
+      "sha256": "268f93fee00ed46e33d3a5eee485389b38081080e1ecdd9e056ea46ce45f739e"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/stage.json",
+      "storage": "visible",
+      "bytes": 1995,
+      "sha256": "94576996bb6a57cdb2823d4e1df282956f2bb6c5f6c0004868027270313866f9"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/docs/api/migration.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/docs/api/migration.md",
+      "storage": "visible",
+      "bytes": 510,
+      "sha256": "0c97f91370c8a39f3d68509396bc5e72326833fdfafbd0184e38ced9a45c8f24"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/docs/conformance/tool-engine-cases.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/docs/conformance/tool-engine-cases.md",
+      "storage": "visible",
+      "bytes": 825,
+      "sha256": "f18faa48861918271c71d6d3a1150da6edfbd869e23fcb263a2b28913838379c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/include/ffmt/base.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/include/ffmt/base.hpp",
+      "storage": "visible",
+      "bytes": 145,
+      "sha256": "0b50349f217956d94f2b6b92515c8461d4e0c9f8ce8dd9e2e04649d73a6db18f"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/include/ffmt/core.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/include/ffmt/core.hpp",
+      "storage": "visible",
+      "bytes": 114,
+      "sha256": "86a506dde42bbd3ec34742093c467205a747aae14a44f8d00c2ed57d96045fce"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/include/ffmt/detail/sycl_formatters.hpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/include/ffmt/detail/sycl_formatters.hpp",
+      "storage": "visible",
+      "bytes": 3018,
+      "sha256": "6d2fda4928b449bd3f05238ca5aae30af4e00a7bc1e230e49b33470b383d0c5c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/test_body.inc",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/test_body.inc",
+      "storage": "visible",
+      "bytes": 1690,
+      "sha256": "c6a5f6ecada0786ba25218cc6fd2597604f8e48ef0201b322ea47f40ea0684dc"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/test_body_cuda.inc",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/test_body_cuda.inc",
+      "storage": "visible",
+      "bytes": 2462,
+      "sha256": "088a072bb2a7ae04dfe66d42a61817e834d1d34d36174db2eca78dc3bf1122a8"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/test_body_host.inc",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/test_body_host.inc",
+      "storage": "visible",
+      "bytes": 1667,
+      "sha256": "58588b888d01221cde01d96cbfffbadb48a3b3bab73617e75c172b1c422b84aa"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/test_body_omp.inc",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/test_body_omp.inc",
+      "storage": "visible",
+      "bytes": 3002,
+      "sha256": "153d28452a20212641cf7f6912beca34325463561464ca3b13a3a7768014ac4c"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/test_buffer_path.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/test_buffer_path.cpp",
+      "storage": "visible",
+      "bytes": 19141,
+      "sha256": "948fe3dfed250ebc65b52980413bb1ba386a865539d5a6499e9ac8fab9d100fe"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/test_fast_math.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/test_fast_math.cpp",
+      "storage": "visible",
+      "bytes": 2366,
+      "sha256": "1b7ea998438d512faa3f2c9909dcbd7967130ff265b994798a2bd5c105772937"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/test_floats.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/test_floats.cpp",
+      "storage": "visible",
+      "bytes": 11134,
+      "sha256": "47e76d154e5a702cd479b09e1c575f8e43119829291d5063221e6198f7d300c6"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/conformance/cases_engine.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/conformance/cases_engine.py",
+      "storage": "visible",
+      "bytes": 3573,
+      "sha256": "35623eb4885664ee6521800d0be203c5f8e5ea19c0c968f0355a2105f5c3bfac"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/migration/files/test/conformance/test_core_migration.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/migration/files/test/conformance/test_core_migration.cpp",
+      "storage": "visible",
+      "bytes": 684,
+      "sha256": "cb79a49e37db88c0f5c6d8807eaea545801939ca96729bcf8e982c0bd8280492"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/oracle-pin/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/oracle-pin/stage.json",
+      "storage": "visible",
+      "bytes": 1119,
+      "sha256": "8c5aa6c780d6778f26cfa63f406e0a09452403e18eaf31d4637fc8e268bcf463"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/oracle-pin/files/Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/oracle-pin/files/Makefile",
+      "storage": "visible",
+      "bytes": 15545,
+      "sha256": "21fde0569b40df9a3350b288c4ebc3cad204635335a3598e0a597770e8d1aa51"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/oracle-pin/files/docs/contributing/ORACLE.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/oracle-pin/files/docs/contributing/ORACLE.md",
+      "storage": "visible",
+      "bytes": 708,
+      "sha256": "1ff58d80df02405d7e309986e663939ce2c8c9230c8a1edeff6606bee04f2c9a"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/oracle-pin/files/test/conformance/test_oracle_pin.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/oracle-pin/files/test/conformance/test_oracle_pin.py",
+      "storage": "visible",
+      "bytes": 2313,
+      "sha256": "75aa67b8f49de505e28b1d54dc0f99767f274a18f50e92404c4782c535c123be"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/reproducer-relocation/stage.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/reproducer-relocation/stage.json",
+      "storage": "visible",
+      "bytes": 1506,
+      "sha256": "e078934d1e0082f3ed243de94c0bc38d4c4d2c2f9387c072ca8d2f43dc64702e"
+    },
+    {
+      "relative_path": "stage-inputs/root-stages/reproducer-relocation/files/docs/contributing/REPRODUCERS.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/reproducer-relocation/files/docs/contributing/REPRODUCERS.md",
+      "storage": "visible",
+      "bytes": 1147,
+      "sha256": "f6bdfca40c628c733cfd3a20f68acd602b78d7a41f7bc259ca1daf998d32b059"
+    },
+    {
+      "relative_path": "planning/assembly-index.cache.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/assembly-index.cache.json",
+      "storage": "visible",
+      "bytes": 211631,
+      "sha256": "6588eac8b7b2cc34dc707ced859b1840f7eb735e293a86bf77429c82fffc8a88"
+    },
+    {
+      "relative_path": "planning/assembly-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/assembly-index.json",
+      "storage": "visible",
+      "bytes": 211780,
+      "sha256": "f0841bdcd7725168df78601b8248ad4247920ae0f2496b490db1ead706338def"
+    },
+    {
+      "relative_path": "planning/audit_feature_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/audit_feature_stages.py",
+      "storage": "visible",
+      "bytes": 8347,
+      "sha256": "f2bf0088bb5e2cb7b67a2db6e8b6b81023df0e9e37d4bc241a8b4c3b99cb748c"
+    },
+    {
+      "relative_path": "planning/baseline.Makefile",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/baseline.Makefile",
+      "storage": "visible",
+      "bytes": 14947,
+      "sha256": "cd5365573ff0b7c913428f584d33f0bd01fbeb14a55119698a88ce74ceecaa44"
+    },
+    {
+      "relative_path": "planning/baseline.host.yml",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/baseline.host.yml",
+      "storage": "visible",
+      "bytes": 5851,
+      "sha256": "3dde2092c9203085010953bae00ef28bcead13520a61a585318691717d9322bf"
+    },
+    {
+      "relative_path": "planning/build_core_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/build_core_stages.py",
+      "storage": "visible",
+      "bytes": 42610,
+      "sha256": "ccae66672c44ecb90ace3cc88ec6d4259ca8359481a1b7d67831951b91866f6d"
+    },
+    {
+      "relative_path": "planning/build_feature_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/build_feature_stages.py",
+      "storage": "visible",
+      "bytes": 38596,
+      "sha256": "9d3de409b833894c0164d5f99224b21b2c11bf5adec63db40abb059adddf4137"
+    },
+    {
+      "relative_path": "planning/build_tool_stages.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/build_tool_stages.py",
+      "storage": "visible",
+      "bytes": 85773,
+      "sha256": "22d022f84b7b36777031eced14568c23abf1491d6e62b8c3e0aebaf80e878139"
+    },
+    {
+      "relative_path": "planning/check_core_headers.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/check_core_headers.py",
+      "storage": "visible",
+      "bytes": 1617,
+      "sha256": "30a4daeb98d9f77c1c9ccfb21d9c419738c1c53be675609629a1d1aa044c2cb9"
+    },
+    {
+      "relative_path": "planning/check_tool_prefixes.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/check_tool_prefixes.py",
+      "storage": "visible",
+      "bytes": 2552,
+      "sha256": "482bbe2413d20d646813e2c02e51f5963dd12e12eab5993dbd435298047cee49"
+    },
+    {
+      "relative_path": "planning/export-build-repairs.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/export-build-repairs.py",
+      "storage": "visible",
+      "bytes": 7428,
+      "sha256": "b1ef993cb198021d771b1956084bf312f0a051f9ab1c24af54692a244c593885"
+    },
+    {
+      "relative_path": "planning/feature-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/feature-review.json",
+      "storage": "visible",
+      "bytes": 4653,
+      "sha256": "c772a59f3d4cc1b166ac2293bdf9ed7f030adef59a99cac485e74534d239cb5b"
+    },
+    {
+      "relative_path": "planning/final-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/final-index.json",
+      "storage": "visible",
+      "bytes": 161270,
+      "sha256": "162ca701e0c0d1ab35f740c43b2161781c21b9cb578125b3cce9d2834a0f3f79"
+    },
+    {
+      "relative_path": "planning/foundation-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/foundation-index.json",
+      "storage": "visible",
+      "bytes": 12689,
+      "sha256": "c943ff9e00e2da9f3e1ad64224ab54b10797790d4d9daae6a98b5378e80f64be"
+    },
+    {
+      "relative_path": "planning/intermediates-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "storage": "visible",
+      "bytes": 137645,
+      "sha256": "14c2fea0473397fcd703592f16615fe2f073054e8bb5350f3236714cd048ccac"
+    },
+    {
+      "relative_path": "planning/link-checker-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/link-checker-correction.json",
+      "storage": "visible",
+      "bytes": 289,
+      "sha256": "fd28f18629419b9d76179188719119f014b8e8f93434ad9d4bcf4015768b7d28"
+    },
+    {
+      "relative_path": "planning/original-pr-metadata.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/original-pr-metadata.json",
+      "storage": "visible",
+      "bytes": 246986,
+      "sha256": "adf2eb91f56a24001b732937a7284204ca71b8ab4915d123a7f7ef745dfdb8e9"
+    },
+    {
+      "relative_path": "planning/plan.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/plan.json",
+      "storage": "visible",
+      "bytes": 120638,
+      "sha256": "50a4f939814afedae5774261b2ab78b130c6a9c4eff24e92be4508e1d710b0ab"
+    },
+    {
+      "relative_path": "planning/prepare-plan.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/prepare-plan.py",
+      "storage": "visible",
+      "bytes": 5969,
+      "sha256": "89e81936f29c11aa0f22a511a953a0f029f42982bb956aa33045166bb52275bf"
+    },
+    {
+      "relative_path": "planning/release-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-index.json",
+      "storage": "visible",
+      "bytes": 218100,
+      "sha256": "e31a709be065ce0d773cb692027632a8059002a97c2f25f5e71fc338938fa572"
+    },
+    {
+      "relative_path": "planning/release-validation-partition.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-partition.json",
+      "storage": "visible",
+      "bytes": 14395,
+      "sha256": "b06bf898e23a029710e100ed2e1f4ebd1c8f0f4897c7d0b5da00d5ce82c66c6f"
+    },
+    {
+      "relative_path": "planning/repaired-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/repaired-index.json",
+      "storage": "visible",
+      "bytes": 211472,
+      "sha256": "5cced71b58fb116357e0299b5e583efc9c92a31abb8b84a99cd523861d487d90"
+    },
+    {
+      "relative_path": "planning/submit_remaining.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submit_remaining.py",
+      "storage": "visible",
+      "bytes": 7695,
+      "sha256": "e8f36c1d4838544dab8dfbbb68b47455c3b895c16507cb091f842614375884d6"
+    },
+    {
+      "relative_path": "planning/tool-oracle-change.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-oracle-change.json",
+      "storage": "visible",
+      "bytes": 1480,
+      "sha256": "4139517620c60bb98421fc2eb905d63a780cbc90a7656aef2fb4afba20657999"
+    },
+    {
+      "relative_path": "planning/tool-prefix-python.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-prefix-python.json",
+      "storage": "visible",
+      "bytes": 15625,
+      "sha256": "a8c909f38618dcbc1dbe38b41e8f7b0595c7de73cd552d7d58d1874a27278abb"
+    },
+    {
+      "relative_path": "planning/tool-whitespace-check.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-whitespace-check.json",
+      "storage": "visible",
+      "bytes": 62,
+      "sha256": "c4f7847a964c87f0152f33ecc038e157a9fb0850b70d09b4aac583178d892104"
+    },
+    {
+      "relative_path": "planning/update_core_review.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/update_core_review.py",
+      "storage": "visible",
+      "bytes": 6478,
+      "sha256": "d6686a009df451469345b4e66de8d6ef0c678b13811ab521aa15d4598337135f"
+    },
+    {
+      "relative_path": "planning/validator-preflight-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validator-preflight-index.json",
+      "storage": "visible",
+      "bytes": 454,
+      "sha256": "d9ae62a731a4f45d8ecc3e7fe27ca5429e7151cf1da20045d8f3c6542de22567"
+    },
+    {
+      "relative_path": "planning/whitespace-normalization.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/whitespace-normalization.json",
+      "storage": "visible",
+      "bytes": 1245,
+      "sha256": "9416eeef101e3e3ff107b40bf24a6adb8e0cf893120152d6c90210a215306df6"
+    },
+    {
+      "relative_path": "workflow/README.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/README.md",
+      "storage": "visible",
+      "bytes": 5304,
+      "sha256": "86e03aa0b95b7841ca940ccbac285037d9a86bff87d2d88a5ad30e70f6c870f1"
+    },
+    {
+      "relative_path": "workflow/assemble.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/assemble.py",
+      "storage": "visible",
+      "bytes": 10813,
+      "sha256": "152fa97bccfcce422150ccfcf833044a4a66a08bfc3ec032cefc6b0b9a8e141b"
+    },
+    {
+      "relative_path": "workflow/audit_graph.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/audit_graph.py",
+      "storage": "visible",
+      "bytes": 3090,
+      "sha256": "6f8e39ff2638fb8fa284177a1d1e19c1360754f72fea3c54bcaa825bb41080ee"
+    },
+    {
+      "relative_path": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "storage": "visible",
+      "bytes": 11064,
+      "sha256": "e71187bd88ec9d76359d4839762e3a86cc5b21f5320062b2470bdd7a951a2c99"
+    },
+    {
+      "relative_path": "workflow/check_links.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/check_links.py",
+      "storage": "visible",
+      "bytes": 1352,
+      "sha256": "a42605f1b9699a7fd62085def7af3411eda2119c6b12b3870ff7c9d8d1e21f0e"
+    },
+    {
+      "relative_path": "workflow/overview.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/overview.py",
+      "storage": "visible",
+      "bytes": 9405,
+      "sha256": "f8ac1058636608fd26e4fb20264838bcd8de52ed3144c336a57c23807e569548"
+    },
+    {
+      "relative_path": "workflow/publish.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/publish.py",
+      "storage": "visible",
+      "bytes": 4384,
+      "sha256": "97f9a6bd4a89781a2c28b91036ba6c9ab8e9da6a4a7e15d4bec98ac1ba7cd27a"
+    },
+    {
+      "relative_path": "workflow/render.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/render.py",
+      "storage": "visible",
+      "bytes": 9379,
+      "sha256": "27f233732bd20ba7605e8692021a5f006c24dc75be1441331243e692e84022ce"
+    },
+    {
+      "relative_path": "workflow/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "storage": "visible",
+      "bytes": 3624,
+      "sha256": "83c19484f8396ce0a39c6e36d2dea0906bb7d7bac2894d26355516919c99d8d9"
+    },
+    {
+      "relative_path": "workflow/validate-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate-cobalt.sh",
+      "storage": "visible",
+      "bytes": 1195,
+      "sha256": "8200b0938ddd59bb66510159adbd5e0e181fe31be35e17cf5abc1908b7f01d40"
+    },
+    {
+      "relative_path": "workflow/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate.py",
+      "storage": "visible",
+      "bytes": 22032,
+      "sha256": "24b8d4305ee57551d06bf7004ead7554aa2ad871494484b9877ee8f632d092dd"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ci-sanitizers",
+  "title": "Restore bool validation in the host sanitizer jobs",
+  "dependencies": [
+    "migration",
+    "coverage-policy"
+  ],
+  "change_kind": "ci-policy",
+  "remove": [],
+  "tests": [],
+  "docs": [
+    "docs/contributing/SANITIZERS.md"
+  ],
+  "problem": "The historical blanket bool suppression can hide undefined behavior after the old formatting path has been replaced.",
+  "example": "EXTRA_CXXFLAGS=-fsanitize=address,undefined\n# bool checks are active again",
+  "design": "Remove only the obsolete -fno-sanitize=bool exception and its explanation; preserve the matrix and all commands.",
+  "tradeoffs": "Dependency/toolchain bool defects now fail CI as well. A new suppression would need a demonstrated scoped reason.",
+  "reading_order": [
+    ".github/workflows/host.yml:matrix.env.EXTRA_CXXFLAGS",
+    "docs/contributing/SANITIZERS.md"
+  ],
+  "validation": {
+    "commands": [
+      "make -j2 CXX=\"$CXX\" EXTRA_CXXFLAGS=\"-fsanitize=address,undefined\" test-host test-capabilities conformance-harness",
+      "make -j2 CXX=\"$CXX\" EXTRA_CXXFLAGS=\"-fsanitize=address,undefined\" test-negative"
+    ],
+    "results": "Pending independent review and assembled portable validation.",
+    "limitations": "Validate sanitizers with GCC and Clang after migration. This stage does not change hosted readiness, coverage policy or corpus selection."
+  },
+  "source_changes": "Build integration and documentation only; no formatter implementation changes."
+}

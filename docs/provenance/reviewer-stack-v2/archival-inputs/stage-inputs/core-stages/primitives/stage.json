@@ -1,0 +1,25 @@
+{
+  "id": "primitives",
+  "title": "Format primitive values into bounded memory",
+  "dependencies": [
+    "parsing"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_primitives"
+  ],
+  "docs": [
+    "docs/api/primitives.md"
+  ],
+  "problem": "The old print-only interface cannot safely target caller-owned memory or report the full required size.",
+  "example": "#include <ffmt/detail/checked.hpp> // public base.hpp migrates later\nchar buffer[2];\nauto result = ffmt::format_to_n(buffer, sizeof buffer, \"{:04x}\", 42);\n// buffer == {'0', '0'}; result.written == 2; result.required == 4",
+  "design": "Builtin formatters share one parser and counted sink. Signs, base prefixes, padding and digits have separate output responsibilities.",
+  "tradeoffs": "Floating, Unicode display rules and customization protocols are introduced separately.",
+  "reading_order": [
+    "include/ffmt/detail/integer.hpp",
+    "include/ffmt/detail/memory.hpp",
+    "include/ffmt/detail/execution.hpp",
+    "test/conformance/test_core_primitives.cpp"
+  ]
+}

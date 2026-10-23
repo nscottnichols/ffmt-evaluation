@@ -1,0 +1,100 @@
+{
+  "started": "2026-10-23T22:37:01.354545+00:00",
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "rome_7742",
+    "-n",
+    "1",
+    "-t",
+    "120",
+    "--cwd",
+    "/home/nnichols",
+    "-O",
+    "/home/nnichols/.cache/ffmt-cobalt/review-foundations-20261023T223701Z",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate-cobalt.sh",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/foundation-index.json",
+    "--repo",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+    "--fmt-dir",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "--output",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z"
+  ],
+  "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/foundation-index.json",
+  "index_sha256": "c943ff9e00e2da9f3e1ad64224ab54b10797790d4d9daae6a98b5378e80f64be",
+  "wrapper": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate-cobalt.sh",
+  "wrapper_sha256": "840c47f10dc265a12b891cd499a31d90a3ccac48b205f1bd83364cf45a3cda4f",
+  "output": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z",
+  "cobalt_output_prefix": "/home/nnichols/.cache/ffmt-cobalt/review-foundations-20261023T223701Z",
+  "purpose": "CPU-only first six foundational intermediate commits; no GPU campaign",
+  "qsub.stdout_sha256": "e73e6dce29f322f65b890971413afcd6c495e738da6918a5626863a494ceea24",
+  "qsub.stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "returncode": 0,
+  "stdout": "1011365\n",
+  "stderr": "",
+  "finished": "2026-10-23T22:37:01.522108+00:00",
+  "jobid": "1011365",
+  "completion": {
+    "captured": "2026-10-23T22:40:32.734201+00:00",
+    "status": "pass",
+    "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+    "manifest_sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826",
+    "logs": [
+      {
+        "original": "/home/nnichols/.cache/ffmt-cobalt/review-foundations-20261023T223701Z.cobaltlog",
+        "copy": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/review-foundations-20261023T223701Z.cobaltlog",
+        "sha256": "d138a608dace72c761af84150d2c4780735eddb416304962196b671cd80bc371"
+      },
+      {
+        "original": "/home/nnichols/.cache/ffmt-cobalt/review-foundations-20261023T223701Z.error",
+        "copy": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/review-foundations-20261023T223701Z.error",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "original": "/home/nnichols/.cache/ffmt-cobalt/review-foundations-20261023T223701Z.output",
+        "copy": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/review-foundations-20261023T223701Z.output",
+        "sha256": "33b93e2d390e7a17fbf9e590c0b724c17803a8d77ee3ec46894f42b0543935b3"
+      }
+    ],
+    "counts": {
+      "pass": 34,
+      "not_applicable": 12
+    },
+    "stages": [
+      {
+        "id": "ci-review-waves",
+        "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+        "status": "pass"
+      },
+      {
+        "id": "ci-resource-bounds",
+        "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+        "status": "pass"
+      },
+      {
+        "id": "oracle-pin",
+        "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+        "status": "pass"
+      },
+      {
+        "id": "build-registration",
+        "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+        "status": "pass"
+      },
+      {
+        "id": "coverage-metrics",
+        "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+        "status": "pass"
+      },
+      {
+        "id": "coverage-policy",
+        "commit": "124eb4a049b3e08070e75e674d22290c982697c5",
+        "status": "pass"
+      }
+    ]
+  }
+}

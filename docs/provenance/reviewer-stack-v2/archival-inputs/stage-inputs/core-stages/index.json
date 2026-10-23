@@ -1,0 +1,19 @@
+[
+  "core-prepare",
+  "checked-config",
+  "accounting",
+  "parsing",
+  "primitives",
+  "conversion-preparation",
+  "floating-conversion",
+  "floating-formatting",
+  "extended-integers",
+  "extended-floats",
+  "unicode",
+  "formatter-compatibility",
+  "format-as",
+  "legacy-compatibility",
+  "transport",
+  "migration",
+  "obsolete-deletion"
+]

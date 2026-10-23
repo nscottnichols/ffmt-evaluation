@@ -1,0 +1,49 @@
+{
+  "id": "chrono",
+  "title": "Format durations, calendar values and time points",
+  "dependencies": [
+    "shared-family"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "chrono"
+    ],
+    "commands": [
+      "make build/focused_chrono CXX=\"$CXX\" && ./build/focused_chrono"
+    ]
+  },
+  "problem": "Format chrono values without host locale, timezone-database or strftime services.",
+  "example": "#include <ffmt/chrono.hpp>\nffmt::println(\"{:%T}\", std::chrono::milliseconds{-123456}); // -00:02:03.456\nffmt::println(\"{:%G-W%V-%u}\", std::chrono::year{2021}/1/1); // 2020-W53-5",
+  "design": "Civil-date arithmetic and explicit tokens preserve device callability; locale/timezone queries remain unsupported.",
+  "tradeoffs": "The header supports durations, C++20 calendar values, `std::tm`, system time\npoints and local time points using civil-date arithmetic and explicit tokens.\nFractional precision, negative timestamps and ISO week years follow the pinned\nfmt reference. This implementation provides locale-independent formatting; it\ndoes not query clocks, a timezone database or locale services. Local time points\ntherefore reject zone/offset tokens. Device use requires the involved standard\nchrono operations to be available on that device.",
+  "reading_order": [
+    "include/ffmt/chrono.hpp",
+    "test/conformance/test_chrono.cpp"
+  ],
+  "docs": [
+    "docs/features/chrono.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Conventional header layout; duration/calendar/token/wide/rejection tests grouped, oracle calendar wrappers kept local. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "chrono"
+    ],
+    "fixture_modules": [
+      "cases_chrono.py"
+    ]
+  },
+  "before": "A std::chrono::milliseconds value has no formatter, so the %T token cannot produce a duration.",
+  "after": "#include <ffmt/chrono.hpp>\nffmt::println(\"{:%T}\", std::chrono::milliseconds{-123456}); // -00:02:03.456\nffmt::println(\"{:%G-W%V-%u}\", std::chrono::year{2021}/1/1); // 2020-W53-5",
+  "validation": {
+    "commands": [
+      "make build/focused_chrono CXX=\"$CXX\" && ./build/focused_chrono"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

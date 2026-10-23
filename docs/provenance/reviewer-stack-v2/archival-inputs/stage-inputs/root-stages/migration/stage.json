@@ -1,0 +1,49 @@
+{
+  "id": "migration",
+  "title": "Select the checked engine through the public header",
+  "dependencies": [
+    "transport",
+    "extended-floats",
+    "tool-oracle-negatives"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "legacy-host",
+    "core-all",
+    "test_core_migration",
+    "negative",
+    "fast-math",
+    "python3 tools/conformance.py --route host-buffer --route host-specifiers --opt 2 --no-memory",
+    [
+      "make",
+      "-j2",
+      "CXX={cxx}",
+      "FMT_DIR={fmt_dir}",
+      "HOST_OPT=-O0",
+      "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+      "test-host",
+      "test-fast-math"
+    ]
+  ],
+  "docs": [
+    "docs/api/migration.md"
+  ],
+  "problem": "The separately qualified engine must replace both old output paths while preserving API spellings.",
+  "example": "#include <ffmt/base.hpp>\nauto result = ffmt::try_print(\"{:04x}\", 42);",
+  "design": "The public wrapper selects the same engine tested throughout this stack. Existing macros, static formatters and built-in SYCL formatters remain available.",
+  "tradeoffs": "Void compatibility calls discard checked status. Host checks do not replace preserved accelerator campaign evidence.",
+  "reading_order": [
+    "include/ffmt/base.hpp",
+    "include/ffmt/detail/checked.hpp",
+    "include/ffmt/detail/sycl_formatters.hpp",
+    "test/conformance/cases_engine.py",
+    "test/conformance/cases_baseline.py",
+    "test/test_body_host.inc:complete independent oracle output",
+    "test/test_buffer_path.cpp:null-string rejection",
+    "test/test_floats.cpp:shortest formatting on both routes",
+    "test/test_fast_math.cpp:subnormals on both routes"
+  ],
+  "wave": 4,
+  "source_changes": "Restore all aeff historical suite migrations: oracle output is no longer truncated to staging capacity; null strings are checked for rejection; both compatibility routes test shortest floats and fast-math subnormals. These are restored qualified test behaviors, not new formatter algorithms."
+}

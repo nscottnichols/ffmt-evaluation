@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "jobid": "1011212",
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "rome_7742",
+    "-n",
+    "1",
+    "-t",
+    "10",
+    "--cwd",
+    "/home/nnichols",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.sh",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/manifest.json"
+  ],
+  "command_shell": "qsub --mode script -q rome_7742 -n 1 -t 10 --cwd /home/nnichols /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.sh /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/manifest.json",
+  "submission_cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+  "scheduler": {
+    "kind": "Cobalt",
+    "queue": "rome_7742",
+    "nodes": 1,
+    "walltime_minutes": 10,
+    "job_cwd": "/home/nnichols",
+    "mode": "script"
+  },
+  "submission": {
+    "exit_code": 0,
+    "stdout": "1011212\n",
+    "stderr": ""
+  }
+}

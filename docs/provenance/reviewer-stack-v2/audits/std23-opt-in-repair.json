@@ -1,0 +1,12 @@
+{
+  "feature-stages/std23/files/mk/portable-tests.mk": "b31e1965657e6b624d971654942d1c0667d2ae8e09e52144547dc21b6095cdd2",
+  "feature-stages/std23/files/test/conformance/test_cxx23_opt_in.py": "7c3dc56c583281f37b1fdbd09a3f22488b7e638e99466e25c4b22be8bd3cd0be",
+  "feature-stages/std23/stage.json": "e69b9fac9b30d36bfdc8eaec19cecdf9e8cd4d18067de22353b05af16c75cc9a",
+  "feature-stages/std23/files/docs/features/std23.md": "0a4a1ed40eabff097e109babec4b72ab16e713b95e19c1162c42f6472c01b98c",
+  "validation": {
+    "command": "python3 -B -m unittest discover -s test/conformance -p test_cxx23_opt_in.py -v",
+    "materialization": "isolated temporary portable-tests.mk and test file",
+    "result": "PASS (2 tests; real make -n; no compiler execution)",
+    "whitespace": "PASS for six repaired export files"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "reviewer": "independent feature worker review of tooling snapshots",
+  "scope": "human readability and one-decision scope; source-only buildability/dependency inspection",
+  "reviewed_stage_ids": [
+    "benchmark-driver",
+    "benchmark-primitives",
+    "benchmark-resources",
+    "coverage-metrics",
+    "tool-adapter-support",
+    "tool-cuda",
+    "tool-engine-cases",
+    "tool-hip",
+    "tool-host-oracle",
+    "tool-isolation",
+    "tool-kokkos",
+    "tool-memory-cuda",
+    "tool-memory-hip",
+    "tool-memory-kokkos",
+    "tool-memory-openmp",
+    "tool-memory-sycl",
+    "tool-negative",
+    "tool-numeric-memory",
+    "tool-openmp",
+    "tool-oracle-negatives",
+    "tool-process",
+    "tool-snapshots",
+    "tool-sycl"
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "status": "addressed; updated snapshots independently inspected",
+      "topic": "backend adapter regressions",
+      "detail": "Generic marker-only source assertions do not distinguish real backend execution from host fallback. Add backend-specific launcher/guard/flag assertions and remove copied unused imports."
+    },
+    {
+      "severity": "low",
+      "status": "addressed; updated snapshots independently inspected",
+      "topic": "mechanical extraction classification",
+      "detail": "Target-selection helper extraction should explicitly identify mechanically moved behavior and test explicit override/fallback paths rather than py_compile alone."
+    },
+    {
+      "severity": "low",
+      "status": "addressed; updated snapshots independently inspected",
+      "topic": "maintainer descriptions",
+      "detail": "Use backend-specific route/compiler/guard examples instead of identical generic adapter descriptions."
+    },
+    {
+      "severity": "medium",
+      "status": "addressed; updated snapshots independently inspected",
+      "topic": "numeric backend tests",
+      "detail": "The memory backend stages must add tests invoking numeric_memory.source/numeric_launcher; current declared adapter tests only generate stdout code and do not exercise added behavior."
+    },
+    {
+      "severity": "medium",
+      "status": "addressed; updated snapshots independently inspected",
+      "topic": "snapshot hygiene",
+      "detail": "Python execution created __pycache__ inside stage files/. Remove caches before assembly or exclude them explicitly."
+    },
+    {
+      "severity": "low",
+      "status": "addressed; updated snapshots independently inspected",
+      "topic": "benchmark driver intermediate help",
+      "detail": "Driver error recommends --resource-presentation before the resource stage introduces that option."
+    },
+    {
+      "severity": "medium",
+      "status": "addressed; benchmark-primitives now exports explicit compiler and verify-mode execution argv",
+      "topic": "benchmark primitive intermediate validation",
+      "detail": "A g++ string test command is omitted by assembly argv extraction, and benchmark sources are not test_*.cpp capabilities. Convert stage smoke compilation/execution to explicit argv arrays so this intermediate builds before publication."
+    }
+  ],
+  "assessment": "Capability boundaries are coherent. Process byte capture, independent host oracle, immutable snapshots, negative diagnostics and batch isolation each support one reviewer decision. Registry discovers only present feature fixtures/adapters; handwritten templates stay visible. No dependency blocker found in current sources. Numeric host records, separate memory launchers, benchmark primitives, verified timing driver and compile-only resource reporting each form coherent follow-on decisions. Numeric template is conventionally formatted handwritten source and receives a runner-input hash. Final source review has no remaining scope/readability blocker. Runtime/build readiness remains contingent on the assembled-prefix validation run.",
+  "validation_limitations": "No hardware or duplicate compiler run. Root validates actual assembled intermediate commits; portable adapter source checks do not establish runtime support.",
+  "resolution": "Inspected concrete CUDA numeric allocation/copy/kernel/synchronization tests, mocked architecture override/query/fallback tests, removed future benchmark option advice and absence of __pycache__ in exports. Tooling owner reports 45 final Python tests passing; root retains actual intermediate execution evidence."
+}

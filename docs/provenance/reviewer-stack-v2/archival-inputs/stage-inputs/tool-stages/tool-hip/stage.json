@@ -1,0 +1,21 @@
+{
+  "id": "tool-hip",
+  "title": "Add independent HIP differential execution adapter",
+  "dependencies": [
+    "tool-adapter-support"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_adapter_hip.py"
+  ],
+  "problem": "HIP and chipStar share a launch API but need different compiler flag choices; a failed launch must not be mistaken for a formatting mismatch.",
+  "example": "--route hip uses hipcc with the selected ROCm offload architecture.\n--route chipstar uses the externally selected HIP runtime.\nBoth check hipLaunchKernelGGL, the last launch error and device synchronization.",
+  "design": "Use one handwritten HIP runtime adapter for the two compiler routes. Keep architecture selection on the native HIP route, and retain device properties and launch failures as separate evidence.",
+  "tradeoffs": "The caller supplies the appropriate hipcc/runtime environment. Portable tests check source generation and flag overrides; they do not execute a HIP or chipStar kernel.",
+  "reading_order": [
+    "tools/backend_hip.py",
+    "test/conformance/test_adapter_hip.py"
+  ],
+  "docs": "Run the same case through a HIP kernel without a fmt device build. Execution requires the selected HIP or chipStar runtime and a device."
+}

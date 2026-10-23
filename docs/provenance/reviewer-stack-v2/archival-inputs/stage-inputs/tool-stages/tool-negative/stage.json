@@ -1,0 +1,23 @@
+{
+  "id": "tool-negative",
+  "title": "Require intended diagnostics in negative compilation tests",
+  "dependencies": [
+    "tool-process"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_negative_driver.py",
+    "make test-negative CXX=g++"
+  ],
+  "problem": "Treating every failed compilation as a rejected format lets missing headers and compiler crashes pass.",
+  "example": "A consteval invalid-format diagnostic passes; \"fmt/format.h: No such file or directory\" is an infrastructure failure.",
+  "design": "Compile a positive control and syntax-only fixture before testing both ffmt paths and fmt. Classify diagnostics independently of the differential runner.",
+  "tradeoffs": "Compiler diagnostic recognition is a conservative heuristic, not a compiler-independent proof; unfamiliar wording fails visibly.",
+  "reading_order": [
+    "tools/compile_diagnostics.py",
+    "tools/negative.py",
+    "test/conformance/test_negative_driver.py"
+  ],
+  "docs": "Negative compilation requires the intended format diagnostic. Infrastructure failures, unrelated errors and unexpected acceptance fail the check."
+}

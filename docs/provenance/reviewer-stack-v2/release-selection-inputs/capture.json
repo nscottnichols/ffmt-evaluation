@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "56cdf4f451269d34a4daaf42cd03f8ef04494fd203f16b8dff135971911f4f4c",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/reviewer-stack-v2/release-selection-inputs",
+      "--input",
+      "release-validation-summary.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-summary.json",
+      "--input",
+      "release-validation-partition.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-partition.json",
+      "--input",
+      "release-index.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-index.json",
+      "--input",
+      "collect_release_validation.py=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/collect_release_validation.py"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "release-validation-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-summary.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "release-validation-partition.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-partition.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "release-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-index.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "collect_release_validation.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/collect_release_validation.py",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "release-validation-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-summary.json",
+      "storage": "visible",
+      "bytes": 36816,
+      "sha256": "376cfbc1d6068716b89ebbb6490c60cd411e7f58070e3b6ba5712abeb4ecbcf4"
+    },
+    {
+      "relative_path": "release-validation-partition.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-validation-partition.json",
+      "storage": "visible",
+      "bytes": 14395,
+      "sha256": "b06bf898e23a029710e100ed2e1f4ebd1c8f0f4897c7d0b5da00d5ce82c66c6f"
+    },
+    {
+      "relative_path": "release-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-index.json",
+      "storage": "visible",
+      "bytes": 218100,
+      "sha256": "e31a709be065ce0d773cb692027632a8059002a97c2f25f5e71fc338938fa572"
+    },
+    {
+      "relative_path": "collect_release_validation.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/collect_release_validation.py",
+      "storage": "visible",
+      "bytes": 6557,
+      "sha256": "e773e7eeb0ecb8cdb76633d9fefd3bf2f69a563a04ccaf1715bb68739b96c63a"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

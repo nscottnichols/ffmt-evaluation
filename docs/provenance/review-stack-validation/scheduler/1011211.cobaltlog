@@ -1,0 +1,24 @@
+Jobid: 1011211
+qsub --mode script -q rome_7742 -n 1 -t 240 --cwd /home/nnichols /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validate.sh /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/stack-index.json
+Thu Oct 22 22:07:59 2026 +0000 (UTC) submitted with cwd set to: /home/nnichols
+Thu Oct 22 22:08:22 2026 +0000 (UTC) 
+Thu Oct 22 22:08:22 2026 +0000 (UTC) Command: '/usr/bin/ssh' 'rome00' '/usr/libexec/cobalt/cobalt-launcher.py' '--nf' '/var/tmp/cobalt.1011211' '--jobid' '1011211' '--cwd' '/home/nnichols' '--env' 'COBALT_JOBID=1011211' '/bin/bash' '/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validate.sh' '/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/stack-index.json'
+Thu Oct 22 22:08:22 2026 +0000 (UTC) 
+Thu Oct 22 22:08:22 2026 +0000 (UTC) Environment:
+Thu Oct 22 22:08:22 2026 +0000 (UTC) SHELL=/bin/bash
+Thu Oct 22 22:08:22 2026 +0000 (UTC) COBALT_NODEFILE=/tmp/tmpgnJltT
+Thu Oct 22 22:08:22 2026 +0000 (UTC) COBALT_PARTNAME=rome00
+Thu Oct 22 22:08:22 2026 +0000 (UTC) COBALT_JOBID=1011211
+Thu Oct 22 22:08:22 2026 +0000 (UTC) COBALT_STARTTIME=1792706884
+Thu Oct 22 22:08:22 2026 +0000 (UTC) LOGNAME=nnichols
+Thu Oct 22 22:08:22 2026 +0000 (UTC) USER=nnichols
+Thu Oct 22 22:08:22 2026 +0000 (UTC) COBALT_ENDTIME=1792721284
+Thu Oct 22 22:08:22 2026 +0000 (UTC) COBALT_PARTSIZE=1
+Thu Oct 22 22:08:22 2026 +0000 (UTC) HOME=/home/nnichols
+Thu Oct 22 22:08:22 2026 +0000 (UTC) COBALT_JOBSIZE=1
+Thu Oct 22 22:08:22 2026 +0000 (UTC) 
+Thu Oct 22 22:08:22 2026 +0000 (UTC) Info: stdin received from /dev/null
+Thu Oct 22 22:08:22 2026 +0000 (UTC) Info: stdout sent to /home/nnichols/1011211.output
+Thu Oct 22 22:08:22 2026 +0000 (UTC) Info: stderr sent to /home/nnichols/1011211.error
+Thu Oct 22 22:08:22 2026 +0000 (UTC) 
+Thu Oct 22 22:23:30 2026 +0000 (UTC) Info: task completed normally with an exit code of 1; initiating job cleanup and removal

@@ -1,0 +1,55 @@
+{
+  "checked_utc": "2026-10-23T23:45:02.001998+00:00",
+  "checks": [
+    {
+      "ref": "refs/tags/archive/jlse-campaign-20261022",
+      "expected": "52da08a40ec414528ee002163992d77259c54776",
+      "actual": "52da08a40ec414528ee002163992d77259c54776",
+      "matches": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-baseline",
+      "expected": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "actual": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "matches": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-primary",
+      "expected": "21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8",
+      "actual": "21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8",
+      "matches": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-postfix",
+      "expected": "98dba67cdb2dc4686cc512736ad92fdeaebeb63a",
+      "actual": "98dba67cdb2dc4686cc512736ad92fdeaebeb63a",
+      "matches": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-final",
+      "expected": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "actual": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "matches": true
+    },
+    {
+      "ref": "refs/tags/archive/library-portable-20261022",
+      "expected": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "actual": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "matches": true
+    },
+    {
+      "ref": "refs/tags/archive/review-stack-v1-20261023",
+      "expected": "aeff043614725d58d383c8add086f548d77d05eb",
+      "actual": "aeff043614725d58d383c8add086f548d77d05eb",
+      "matches": true
+    }
+  ],
+  "evaluation_library_pin": {
+    "schema_version": 1,
+    "repository": "https://github.com/nscottnichols/ffmt.git",
+    "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "source_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+  },
+  "evaluation_pin_matches_frozen_split": true,
+  "fmt_pin": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f"
+}

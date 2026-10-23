@@ -1,0 +1,14 @@
+{
+  "scratch": "/tmp/ffmt-publication-review-vl56y8zh",
+  "rendered": 64,
+  "ready": 4,
+  "draft": 60,
+  "raw_log_files_verified": 1246,
+  "publication_preflight_exit": 0,
+  "body_word_counts": {
+    "minimum": 218,
+    "maximum": 347
+  },
+  "problems": [],
+  "preflight_stderr": ""
+}

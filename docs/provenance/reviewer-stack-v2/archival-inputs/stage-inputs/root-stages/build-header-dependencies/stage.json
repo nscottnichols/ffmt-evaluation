@@ -1,0 +1,29 @@
+{
+  "id": "build-header-dependencies",
+  "title": "Rebuild legacy test objects after any library header edit",
+  "dependencies": [
+    "build-registration"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [
+    [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "test/conformance",
+      "-p",
+      "test_make_header_dependencies.py"
+    ]
+  ],
+  "problem": "Legacy test rules watched only base.hpp, so changing an internal header could silently rerun a stale binary.",
+  "example": "touch include/ffmt/detail/parse.hpp\nmake test-host # recompiles affected objects",
+  "design": "Use the complete installed header list in the existing shared prerequisite variable; exercise an unchanged object and a subsequent internal-header edit with real Make timestamp decisions.",
+  "tradeoffs": "This conservative dependency list rebuilds some tests that do not instantiate the edited header, in exchange for reliable incremental checks.",
+  "reading_order": [
+    "Makefile:FFMT_HDRS and DEPS",
+    "test/conformance/test_make_header_dependencies.py"
+  ]
+}

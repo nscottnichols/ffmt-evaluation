@@ -1,0 +1,832 @@
+{
+  "created": "2026-10-23T23:39:12.589468+00:00",
+  "status": "qualified",
+  "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-index.json",
+  "index_sha256": "e31a709be065ce0d773cb692027632a8059002a97c2f25f5e71fc338938fa572",
+  "counts": {
+    "total": 65,
+    "qualified": 65,
+    "reused": 17,
+    "fresh": 48
+  },
+  "jobs": [
+    {
+      "system": "rome",
+      "jobid": "1011375",
+      "active": false,
+      "submission": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-rome-20261023T231555Z/submission.json",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "status": "pass_with_skips"
+    },
+    {
+      "system": "cpl",
+      "jobid": "1011376",
+      "active": false,
+      "submission": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-cpl-20261023T231608Z/submission.json",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "system": "skylake",
+      "jobid": "1011377",
+      "active": false,
+      "submission": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-skylake-20261023T231621Z/submission.json",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "status": "pass_with_skips"
+    }
+  ],
+  "stages": [
+    {
+      "id": "ci-review-waves",
+      "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826"
+    },
+    {
+      "id": "ci-resource-bounds",
+      "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826"
+    },
+    {
+      "id": "oracle-pin",
+      "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826"
+    },
+    {
+      "id": "build-registration",
+      "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826"
+    },
+    {
+      "id": "coverage-metrics",
+      "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826"
+    },
+    {
+      "id": "coverage-policy",
+      "commit": "465cc67d7769713b36e3789919edafb86a0c0d71",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "tool-process",
+      "commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "tool-negative",
+      "commit": "c5b81a4d5288e7be393d83ea28332510285b765e",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "tool-host-oracle",
+      "commit": "4f2b6d380f3b03e453bf0d80a7ab2d26ec480c46",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "core-prepare",
+      "commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "checked-config",
+      "commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "accounting",
+      "commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "parsing",
+      "commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "primitives",
+      "commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "unicode",
+      "commit": "e285726a33a1d1fc0e3870a6e58589f25cd53c83",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "formatter-compatibility",
+      "commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "format-as",
+      "commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "legacy-compatibility",
+      "commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "conversion-preparation",
+      "commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "floating-conversion",
+      "commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "floating-formatting",
+      "commit": "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "transport",
+      "commit": "105c853df03ef06ff29b6de819e78f6b23dd4dcb",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "extended-integers",
+      "commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "reused": true,
+      "status": "pass_with_skips",
+      "host": "rome00",
+      "manifest_sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420"
+    },
+    {
+      "id": "extended-floats",
+      "commit": "e44145c128c8cafcc061ada1de8553fcbb79e179",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "tool-snapshots",
+      "commit": "4436d6208ed94795ee5ba9376aa76b0d00b5fe11",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "tool-isolation",
+      "commit": "1d0552f3961a9a7cecf415b444c258e218f60e86",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "tool-oracle-negatives",
+      "commit": "661db66d492a18c308ae55358a59372bd7bf541e",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "migration",
+      "commit": "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass_with_skips",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "benchmark-primitives",
+      "commit": "75353cc601c85b52dc066f724bfd4a56fbf37a6e",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "benchmark-driver",
+      "commit": "d50fe860d0424ceb002ab69cef6a9e5b4c65e83d",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "benchmark-resources",
+      "commit": "cf70347b467f436447b41ea74a493e74cdc2a3e7",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "tool-adapter-support",
+      "commit": "160bd04b3657bf2d33167f342bb0b360429f3c0b",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-cuda",
+      "commit": "fe65f6fcdc7443a587986283387848303809eb1c",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-hip",
+      "commit": "f50afd9c6852f5d60d9eabdb45ff094281bab2b6",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-kokkos",
+      "commit": "8c25ab61e046087f5330127cd479befcadbe8cb4",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-numeric-memory",
+      "commit": "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-memory-cuda",
+      "commit": "17288fc322f07956b78999bf438f10b7f3a4086b",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-memory-hip",
+      "commit": "fd5eeb4d4be89c45c2765713d133c264a3c00687",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-memory-kokkos",
+      "commit": "50540f30832e14ee0a67ee5bfbed173ecb694c83",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-openmp",
+      "commit": "93f6cb1ff2af9a3d0488dfd73a38c3e2eb8f1cfc",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-memory-openmp",
+      "commit": "a0d74e7370ddf6aa612fd5c368c0a86d46ae30f3",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-sycl",
+      "commit": "d7aecfab035ffe7ff0963149ae7f25745cc0b365",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "tool-memory-sycl",
+      "commit": "2ce97b23c175321e92dc4b700d24927033911f88",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "obsolete-deletion",
+      "commit": "cd7fcfd406baf316271d8b88dc03f712fd157d6a",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "reused": false,
+      "jobid": "1011375",
+      "status": "pass",
+      "host": "rome00",
+      "manifest_sha256": "d3b0978fba73b6d448388dfd54f5aea65ab085f87cd729ce3d0d9c6873a91af7"
+    },
+    {
+      "id": "shared-family",
+      "commit": "c325e8408f512f38861f56983a7ec9b748290118",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "chrono",
+      "commit": "862369f1856e7174106cacace253671be59e7271",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "enum-helpers",
+      "commit": "bdcea2b2afb856a364e14b7578af9e4199bb7745",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "named-arguments",
+      "commit": "26f1a22c34b885d9b982a5856ae976ef8742510d",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "ranges",
+      "commit": "241df53a29ac8cf096aacd20542c87b33540c0bf",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "standard-types",
+      "commit": "98a1c1e67fba095bd678e0a1769a2ab89efa5084",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "feature-integration",
+      "commit": "dd407fc38b596fcda23152a122f12bf69829c18d",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "std23",
+      "commit": "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "styling",
+      "commit": "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "typed-printf",
+      "commit": "aa36d84aaa2a050e56fbca8d7df5085e92040e48",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-cpl-20261023T231608Z/manifest.json",
+      "reused": false,
+      "jobid": "1011376",
+      "status": "pass",
+      "host": "cpl00",
+      "manifest_sha256": "28ec89e491632e2b5e14c47f4af3cd21b9e1e8873c867756d17a94669447fa32"
+    },
+    {
+      "id": "cmake-package",
+      "commit": "58472a3e12d68fd7941be8998456916d1fffd412",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass_with_skips",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "cmake-tests",
+      "commit": "6498c0c38449019200b962f978ef3dbef0511003",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass_with_skips",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "ci-sanitizers",
+      "commit": "584253ca2c158308def053f80e2537d34e052120",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "ci-conformance",
+      "commit": "493137b96467eaefe225f5c423dcc354db1dd4d4",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "reproducer-relocation",
+      "commit": "36b45e924da8da7312408f6f948ff63f6ea22594",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "api-index",
+      "commit": "77df1adccd0448a46e73af6be2af9c5a2efbc1ee",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "backend-regression-selection",
+      "commit": "baaea496731052b4d53657b8498708a7848e0d80",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "build-compiler-selection",
+      "commit": "91ebaec92fa783b997f07bebff0d19c9bfc56564",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "build-header-dependencies",
+      "commit": "9fa6e8fa26c13f78962ad4ff0447a60a3f5cafa5",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "local-ignores",
+      "commit": "c90c80e02ea7e070211693d329a7aaed21f7c089",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    },
+    {
+      "id": "complete",
+      "commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "qualified": true,
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "reused": false,
+      "jobid": "1011377",
+      "status": "pass_with_skips",
+      "host": "skylake10",
+      "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e"
+    }
+  ],
+  "explicit_optional_exit77": [
+    {
+      "stage": "extended-integers",
+      "commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "compiler": "gcc13",
+      "step": "run-engine_bitint",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "exit_code": 77,
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/extended-integers/gcc13/run-engine_bitint.stdout",
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/extended-integers/gcc13/run-engine_bitint.stderr"
+    },
+    {
+      "stage": "migration",
+      "commit": "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+      "compiler": "gcc13",
+      "step": "run-engine_bitint",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/manifest.json",
+      "exit_code": 77,
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/migration/gcc13/run-engine_bitint.stdout",
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-rome-20261023T231555Z/migration/gcc13/run-engine_bitint.stderr"
+    },
+    {
+      "stage": "complete",
+      "commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "compiler": "gcc13",
+      "step": "run-engine_bitint",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "exit_code": 77,
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/gcc13/run-engine_bitint.stdout",
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/gcc13/run-engine_bitint.stderr"
+    }
+  ],
+  "output_skip_markers": [
+    {
+      "stage": "cmake-package",
+      "commit": "58472a3e12d68fd7941be8998456916d1fffd412",
+      "compiler": "driver",
+      "step": "command-01",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "lines": [
+        "-- Check for working CXX compiler: /soft/compilers/llvm/release-22.1.8/bin/clang++ - skipped"
+      ]
+    },
+    {
+      "stage": "cmake-package",
+      "commit": "58472a3e12d68fd7941be8998456916d1fffd412",
+      "compiler": "driver",
+      "step": "command-03",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "lines": [
+        "-- Check for working CXX compiler: /soft/compilers/llvm/release-22.1.8/bin/clang++ - skipped"
+      ]
+    },
+    {
+      "stage": "cmake-tests",
+      "commit": "6498c0c38449019200b962f978ef3dbef0511003",
+      "compiler": "driver",
+      "step": "command-01",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "lines": [
+        "-- Check for working CXX compiler: /soft/compilers/llvm/release-22.1.8/bin/clang++ - skipped"
+      ]
+    },
+    {
+      "stage": "complete",
+      "commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "compiler": "driver",
+      "step": "cmake-configure",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "lines": [
+        "-- Check for working CXX compiler: /soft/compilers/llvm/release-22.1.8/bin/clang++ - skipped"
+      ]
+    },
+    {
+      "stage": "complete",
+      "commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "compiler": "driver",
+      "step": "consumer-configure",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+      "lines": [
+        "-- Check for working CXX compiler: /soft/compilers/llvm/release-22.1.8/bin/clang++ - skipped"
+      ]
+    }
+  ],
+  "marker_limitation": "Raw runner matches broad SKIP words, including incidental CMake compiler-probe skipped text. Output markers are not evidence of an exit77 capability gap.",
+  "cancelled_job": {
+    "id": "1011368",
+    "qualified_stages": 0,
+    "reason": "Cancelled before execution for known invalid legacy fixtures; preserved submission/cancellation evidence."
+  },
+  "prior_failed_run": {
+    "jobid": "1011366",
+    "qualification": "Only exact passed stage+commit rows reused; failed migration/obsolete revisions remain failed and preserved."
+  }
+}

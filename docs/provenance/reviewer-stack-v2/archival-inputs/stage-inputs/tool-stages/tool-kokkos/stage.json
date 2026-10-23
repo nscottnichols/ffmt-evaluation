@@ -1,0 +1,21 @@
+{
+  "id": "tool-kokkos",
+  "title": "Add independent KOKKOS differential execution adapter",
+  "dependencies": [
+    "tool-isolation"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_adapter_kokkos.py"
+  ],
+  "problem": "A Kokkos installation can select a different DefaultExecutionSpace from the route requested by a test, producing a misleading backend result.",
+  "example": "--route kokkos-cuda requires DefaultExecutionSpace::name() == \"Cuda\".\nA Serial installation returns 77 before formatting, rather than being reported\nas a successful CUDA comparison.",
+  "design": "Wrap the existing base compiler adapter with Kokkos includes/link flags, require the requested execution space, run one parallel_for, and fence before finalization. Advertise an accelerator wrapper only when its base adapter is present.",
+  "tradeoffs": "Kokkos must be installed externally with the requested execution space. Source-generation tests cover the guard, launch and lifecycle, while runtime/device availability remains unqualified here.",
+  "reading_order": [
+    "tools/backend_kokkos.py",
+    "test/conformance/test_adapter_kokkos.py"
+  ],
+  "docs": "Only advertise kokkos-cuda when the CUDA base adapter is present. Kokkos must be installed externally with the selected execution space; no site profiles are included."
+}
