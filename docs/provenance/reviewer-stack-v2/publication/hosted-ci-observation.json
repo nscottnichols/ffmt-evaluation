@@ -1,0 +1,294 @@
+{
+  "observed_at": "2026-10-23T23:45:32.624791+00:00",
+  "qualification": "Hosted CI observation only. Queued/in-progress/skipped checks are not passes; exact local CPU qualification is recorded separately.",
+  "prs": [
+    {
+      "number": 17,
+      "checks": [
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103664/job/120712136957",
+          "name": "icpx OpenMP offload -O2 (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103708/job/120712137362",
+          "name": "clang++ -O2",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103664/job/120712136761",
+          "name": "clang OpenMP offload NVPTX -O0 -- compile only",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103708/job/120712137284",
+          "name": "g++ -O2",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103664/job/120712136888",
+          "name": "clang OpenMP offload NVPTX -O2 -- compile only",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103708/job/120712137289",
+          "name": "clang++ -O0",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103664/job/120712136883",
+          "name": "clang CUDA -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103664/job/120712136897",
+          "name": "icpx SYCL (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103708/job/120712137271",
+          "name": "plain ubuntu-24.04",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103664/job/120712136907",
+          "name": "icpx OpenMP offload -O0 (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103708/job/120712137421",
+          "name": "plain macos-latest",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103708/job/120712137258",
+          "name": "g++ -O0",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041103708/job/120712137172",
+          "name": "coverage non-regression",
+          "state": "SUCCESS"
+        }
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "number": 18,
+      "checks": [
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104276/job/120712139830",
+          "name": "clang++ -O0",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104276/job/120712139330",
+          "name": "g++ -O0",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104276/job/120712139311",
+          "name": "plain ubuntu-24.04",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104276/job/120712139310",
+          "name": "coverage non-regression",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104276/job/120712139240",
+          "name": "clang++ -O2",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104276/job/120712139123",
+          "name": "plain macos-latest",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104327/job/120712139370",
+          "name": "icpx OpenMP offload -O0 (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104327/job/120712139045",
+          "name": "icpx SYCL (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104327/job/120712139244",
+          "name": "clang OpenMP offload NVPTX -O2 -- compile only",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104327/job/120712139379",
+          "name": "clang CUDA -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104327/job/120712139241",
+          "name": "clang OpenMP offload NVPTX -O0 -- compile only",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104276/job/120712139189",
+          "name": "g++ -O2",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041104327/job/120712139232",
+          "name": "icpx OpenMP offload -O2 (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        }
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "number": 19,
+      "checks": [
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108813/job/120712153668",
+          "name": "icpx OpenMP offload -O0 (AOT pvc) -- compile and link",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108813/job/120712153726",
+          "name": "icpx OpenMP offload -O2 (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108813/job/120712153622",
+          "name": "icpx SYCL (AOT pvc) -- compile and link",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108813/job/120712153612",
+          "name": "clang OpenMP offload NVPTX -O0 -- compile only",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108813/job/120712153632",
+          "name": "clang OpenMP offload NVPTX -O2 -- compile only",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108794/job/120712153318",
+          "name": "g++ -O2",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108794/job/120712153315",
+          "name": "coverage non-regression",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108794/job/120712153268",
+          "name": "plain macos-latest",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108794/job/120712153161",
+          "name": "clang++ -O2",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108813/job/120712153312",
+          "name": "clang CUDA -- compile and link",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108794/job/120712152925",
+          "name": "plain ubuntu-24.04",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108794/job/120712153160",
+          "name": "clang++ -O0",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041108794/job/120712153115",
+          "name": "g++ -O0",
+          "state": "SUCCESS"
+        }
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "number": 20,
+      "checks": [
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110642/job/120712158983",
+          "name": "clang CUDA -- compile and link",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110642/job/120712158747",
+          "name": "icpx SYCL (AOT pvc) -- compile and link",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110642/job/120712158957",
+          "name": "clang OpenMP offload NVPTX -O2 -- compile only",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110642/job/120712158947",
+          "name": "icpx OpenMP offload -O2 (AOT pvc) -- compile and link",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110596/job/120712158669",
+          "name": "clang++ -O2",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110596/job/120712158601",
+          "name": "g++ -O0",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110596/job/120712158580",
+          "name": "coverage non-regression",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110596/job/120712158585",
+          "name": "clang++ -O0",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110596/job/120712158578",
+          "name": "g++ -O2",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110596/job/120712158310",
+          "name": "plain ubuntu-24.04",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110642/job/120712158892",
+          "name": "clang OpenMP offload NVPTX -O0 -- compile only",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110642/job/120712158826",
+          "name": "icpx OpenMP offload -O0 (AOT pvc) -- compile and link",
+          "state": "SUCCESS"
+        },
+        {
+          "link": "https://github.com/nscottnichols/ffmt/actions/runs/40041110596/job/120712158572",
+          "name": "plain macos-latest",
+          "state": "SUCCESS"
+        }
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ]
+}

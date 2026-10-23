@@ -1,0 +1,386 @@
+[
+  {
+    "id": "ci-review-waves",
+    "head": "review-v2/ci-review-waves",
+    "base": "main",
+    "draft": false
+  },
+  {
+    "id": "ci-resource-bounds",
+    "head": "review-v2/ci-resource-bounds",
+    "base": "review-v2/ci-review-waves",
+    "draft": false
+  },
+  {
+    "id": "oracle-pin",
+    "head": "review-v2/oracle-pin",
+    "base": "review-v2/ci-resource-bounds",
+    "draft": false
+  },
+  {
+    "id": "build-registration",
+    "head": "review-v2/build-registration",
+    "base": "review-v2/oracle-pin",
+    "draft": false
+  },
+  {
+    "id": "coverage-metrics",
+    "head": "review-v2/coverage-metrics",
+    "base": "review-v2/build-registration",
+    "draft": true
+  },
+  {
+    "id": "coverage-policy",
+    "head": "review-v2/coverage-policy",
+    "base": "review-v2/coverage-metrics",
+    "draft": true
+  },
+  {
+    "id": "tool-process",
+    "head": "review-v2/tool-process",
+    "base": "review-v2/build-registration",
+    "draft": true
+  },
+  {
+    "id": "tool-negative",
+    "head": "review-v2/tool-negative",
+    "base": "review-v2/tool-process",
+    "draft": true
+  },
+  {
+    "id": "tool-host-oracle",
+    "head": "review-v2/tool-host-oracle",
+    "base": "review-v2/tool-process",
+    "draft": true
+  },
+  {
+    "id": "core-prepare",
+    "head": "review-v2/core-prepare",
+    "base": "review-v2/build-registration",
+    "draft": true
+  },
+  {
+    "id": "checked-config",
+    "head": "review-v2/checked-config",
+    "base": "review-v2/core-prepare",
+    "draft": true
+  },
+  {
+    "id": "accounting",
+    "head": "review-v2/accounting",
+    "base": "review-v2/checked-config",
+    "draft": true
+  },
+  {
+    "id": "parsing",
+    "head": "review-v2/parsing",
+    "base": "review-v2/accounting",
+    "draft": true
+  },
+  {
+    "id": "primitives",
+    "head": "review-v2/primitives",
+    "base": "review-v2/parsing",
+    "draft": true
+  },
+  {
+    "id": "unicode",
+    "head": "review-v2/unicode",
+    "base": "review-v2/primitives",
+    "draft": true
+  },
+  {
+    "id": "formatter-compatibility",
+    "head": "review-v2/formatter-compatibility",
+    "base": "review-v2/primitives",
+    "draft": true
+  },
+  {
+    "id": "format-as",
+    "head": "review-v2/format-as",
+    "base": "review-v2/formatter-compatibility",
+    "draft": true
+  },
+  {
+    "id": "legacy-compatibility",
+    "head": "review-v2/legacy-compatibility",
+    "base": "review-v2/format-as",
+    "draft": true
+  },
+  {
+    "id": "conversion-preparation",
+    "head": "review-v2/conversion-preparation",
+    "base": "review-v2/primitives",
+    "draft": true
+  },
+  {
+    "id": "floating-conversion",
+    "head": "review-v2/floating-conversion",
+    "base": "review-v2/conversion-preparation",
+    "draft": true
+  },
+  {
+    "id": "floating-formatting",
+    "head": "review-v2/floating-formatting",
+    "base": "review-v2/floating-conversion",
+    "draft": true
+  },
+  {
+    "id": "transport",
+    "head": "review-v2/transport",
+    "base": "review-v2/base-transport",
+    "draft": true
+  },
+  {
+    "id": "extended-integers",
+    "head": "review-v2/extended-integers",
+    "base": "review-v2/primitives",
+    "draft": true
+  },
+  {
+    "id": "extended-floats",
+    "head": "review-v2/extended-floats",
+    "base": "review-v2/base-extended-floats",
+    "draft": true
+  },
+  {
+    "id": "tool-snapshots",
+    "head": "review-v2/tool-snapshots",
+    "base": "review-v2/tool-host-oracle",
+    "draft": true
+  },
+  {
+    "id": "tool-isolation",
+    "head": "review-v2/tool-isolation",
+    "base": "review-v2/base-tool-isolation",
+    "draft": true
+  },
+  {
+    "id": "tool-oracle-negatives",
+    "head": "review-v2/tool-oracle-negatives",
+    "base": "review-v2/tool-isolation",
+    "draft": true
+  },
+  {
+    "id": "migration",
+    "head": "review-v2/migration",
+    "base": "review-v2/base-migration",
+    "draft": true
+  },
+  {
+    "id": "benchmark-primitives",
+    "head": "review-v2/benchmark-primitives",
+    "base": "review-v2/migration",
+    "draft": true
+  },
+  {
+    "id": "benchmark-driver",
+    "head": "review-v2/benchmark-driver",
+    "base": "review-v2/benchmark-primitives",
+    "draft": true
+  },
+  {
+    "id": "benchmark-resources",
+    "head": "review-v2/benchmark-resources",
+    "base": "review-v2/benchmark-driver",
+    "draft": true
+  },
+  {
+    "id": "tool-adapter-support",
+    "head": "review-v2/tool-adapter-support",
+    "base": "review-v2/tool-isolation",
+    "draft": true
+  },
+  {
+    "id": "tool-cuda",
+    "head": "review-v2/tool-cuda",
+    "base": "review-v2/tool-adapter-support",
+    "draft": true
+  },
+  {
+    "id": "tool-hip",
+    "head": "review-v2/tool-hip",
+    "base": "review-v2/tool-adapter-support",
+    "draft": true
+  },
+  {
+    "id": "tool-kokkos",
+    "head": "review-v2/tool-kokkos",
+    "base": "review-v2/tool-isolation",
+    "draft": true
+  },
+  {
+    "id": "tool-numeric-memory",
+    "head": "review-v2/tool-numeric-memory",
+    "base": "review-v2/migration",
+    "draft": true
+  },
+  {
+    "id": "tool-memory-cuda",
+    "head": "review-v2/tool-memory-cuda",
+    "base": "review-v2/base-tool-memory-cuda",
+    "draft": true
+  },
+  {
+    "id": "tool-memory-hip",
+    "head": "review-v2/tool-memory-hip",
+    "base": "review-v2/base-tool-memory-hip",
+    "draft": true
+  },
+  {
+    "id": "tool-memory-kokkos",
+    "head": "review-v2/tool-memory-kokkos",
+    "base": "review-v2/base-tool-memory-kokkos",
+    "draft": true
+  },
+  {
+    "id": "tool-openmp",
+    "head": "review-v2/tool-openmp",
+    "base": "review-v2/tool-adapter-support",
+    "draft": true
+  },
+  {
+    "id": "tool-memory-openmp",
+    "head": "review-v2/tool-memory-openmp",
+    "base": "review-v2/base-tool-memory-openmp",
+    "draft": true
+  },
+  {
+    "id": "tool-sycl",
+    "head": "review-v2/tool-sycl",
+    "base": "review-v2/tool-isolation",
+    "draft": true
+  },
+  {
+    "id": "tool-memory-sycl",
+    "head": "review-v2/tool-memory-sycl",
+    "base": "review-v2/base-tool-memory-sycl",
+    "draft": true
+  },
+  {
+    "id": "obsolete-deletion",
+    "head": "review-v2/obsolete-deletion",
+    "base": "review-v2/migration",
+    "draft": true
+  },
+  {
+    "id": "shared-family",
+    "head": "review-v2/shared-family",
+    "base": "review-v2/migration",
+    "draft": true
+  },
+  {
+    "id": "chrono",
+    "head": "review-v2/chrono",
+    "base": "review-v2/shared-family",
+    "draft": true
+  },
+  {
+    "id": "enum-helpers",
+    "head": "review-v2/enum-helpers",
+    "base": "review-v2/migration",
+    "draft": true
+  },
+  {
+    "id": "named-arguments",
+    "head": "review-v2/named-arguments",
+    "base": "review-v2/migration",
+    "draft": true
+  },
+  {
+    "id": "ranges",
+    "head": "review-v2/ranges",
+    "base": "review-v2/shared-family",
+    "draft": true
+  },
+  {
+    "id": "standard-types",
+    "head": "review-v2/standard-types",
+    "base": "review-v2/shared-family",
+    "draft": true
+  },
+  {
+    "id": "feature-integration",
+    "head": "review-v2/feature-integration",
+    "base": "review-v2/base-feature-integration",
+    "draft": true
+  },
+  {
+    "id": "std23",
+    "head": "review-v2/std23",
+    "base": "review-v2/standard-types",
+    "draft": true
+  },
+  {
+    "id": "styling",
+    "head": "review-v2/styling",
+    "base": "review-v2/shared-family",
+    "draft": true
+  },
+  {
+    "id": "typed-printf",
+    "head": "review-v2/typed-printf",
+    "base": "review-v2/shared-family",
+    "draft": true
+  },
+  {
+    "id": "cmake-package",
+    "head": "review-v2/cmake-package",
+    "base": "review-v2/obsolete-deletion",
+    "draft": true
+  },
+  {
+    "id": "cmake-tests",
+    "head": "review-v2/cmake-tests",
+    "base": "review-v2/base-cmake-tests",
+    "draft": true
+  },
+  {
+    "id": "ci-sanitizers",
+    "head": "review-v2/ci-sanitizers",
+    "base": "review-v2/base-ci-sanitizers",
+    "draft": true
+  },
+  {
+    "id": "ci-conformance",
+    "head": "review-v2/ci-conformance",
+    "base": "review-v2/base-ci-conformance",
+    "draft": true
+  },
+  {
+    "id": "reproducer-relocation",
+    "head": "review-v2/reproducer-relocation",
+    "base": "review-v2/build-registration",
+    "draft": true
+  },
+  {
+    "id": "api-index",
+    "head": "review-v2/api-index",
+    "base": "review-v2/base-api-index",
+    "draft": true
+  },
+  {
+    "id": "backend-regression-selection",
+    "head": "review-v2/backend-regression-selection",
+    "base": "review-v2/migration",
+    "draft": true
+  },
+  {
+    "id": "build-compiler-selection",
+    "head": "review-v2/build-compiler-selection",
+    "base": "review-v2/build-registration",
+    "draft": true
+  },
+  {
+    "id": "build-header-dependencies",
+    "head": "review-v2/build-header-dependencies",
+    "base": "review-v2/build-registration",
+    "draft": true
+  },
+  {
+    "id": "local-ignores",
+    "head": "review-v2/local-ignores",
+    "base": "review-v2/build-registration",
+    "draft": true
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "number": 9,
+    "action": "closed_without_merge",
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request nscottnichols/ffmt#9 ([7/7] Package the library and document portable APIs and backends)\n"
+  },
+  {
+    "number": 10,
+    "action": "closed_without_merge",
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request nscottnichols/ffmt#10 ([1/7] Add independent portable fmt conformance tooling)\n"
+  },
+  {
+    "number": 11,
+    "action": "closed_without_merge",
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request nscottnichols/ffmt#11 ([2/7] Unify checked formatting and bounded device output)\n"
+  },
+  {
+    "number": 12,
+    "action": "closed_without_merge",
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request nscottnichols/ffmt#12 ([3/7] Add named arguments, range formatting and forwarding)\n"
+  },
+  {
+    "number": 13,
+    "action": "closed_without_merge",
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request nscottnichols/ffmt#13 ([4/7] Add chrono, standard type and styling adapters)\n"
+  },
+  {
+    "number": 14,
+    "action": "closed_without_merge",
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request nscottnichols/ffmt#14 ([5/7] Add checked typed printf formatting)\n"
+  },
+  {
+    "number": 15,
+    "action": "closed_without_merge",
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request nscottnichols/ffmt#15 ([6/7] Add verified portable formatting benchmark primitives)\n"
+  }
+]
