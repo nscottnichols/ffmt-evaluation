@@ -101,9 +101,14 @@ orchestration and worker guidance for this evaluation repository.
 
 The [split validation](docs/provenance/validation.json) records passing standalone
 library checks and an evaluation smoke against an archived source revision.
-The former mixed PR stack is closed as superseded by the
-[portable library review stack](docs/provenance/review-stack.md) and
-[evaluation PR1](https://github.com/nscottnichols/ffmt-evaluation/pull/1).
-The library stack starts at [PR10](https://github.com/nscottnichols/ffmt/pull/10)
-and ends at the focused [PR9](https://github.com/nscottnichols/ffmt/pull/9).
-Evaluation pins and historical evidence remain unchanged.
+The active library review graph is the
+[reviewer-oriented stack](docs/provenance/reviewer-stack-v2.md). Its single
+overview contains all PRs, prerequisite relationships, exact source revisions,
+validation evidence and old-to-new snapshot mappings. Only the four foundation
+PRs form the initial ready wave; later PRs stay draft and all remain unmerged.
+The former [seven-part stack](docs/provenance/review-stack.md) is retained as a
+historical ledger. Evaluation pins and original hardware evidence remain unchanged.
+
+The [review-stack skill](skills/ffmt-review-stack/SKILL.md) and
+[review workflow scripts](tools/review_stack/README.md) cover source assembly,
+intermediate CPU qualification, evidence preservation and staged publication.

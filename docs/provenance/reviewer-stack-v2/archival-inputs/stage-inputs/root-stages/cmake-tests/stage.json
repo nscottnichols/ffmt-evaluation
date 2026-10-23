@@ -1,0 +1,76 @@
+{
+  "id": "cmake-tests",
+  "title": "Register every split portable suite explicitly in CTest",
+  "dependencies": [
+    "cmake-package",
+    "migration",
+    "named-arguments",
+    "ranges",
+    "chrono",
+    "standard-types",
+    "std23",
+    "styling",
+    "enum-helpers",
+    "typed-printf",
+    "feature-integration",
+    "tool-numeric-memory"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [
+    [
+      "cmake",
+      "-S",
+      "{source}",
+      "-B",
+      "{output}/cmake",
+      "-DFFMT_BUILD_TESTS=ON",
+      "-DFFMT_BUILD_CXX23_TESTS=ON",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_CXX_COMPILER={cxx}",
+      "-DFFMT_FMT_DIR={fmt_dir}"
+    ],
+    [
+      "cmake",
+      "--build",
+      "{output}/cmake",
+      "-j2"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "{output}/cmake",
+      "-N"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "{output}/cmake",
+      "--output-on-failure"
+    ]
+  ],
+  "docs": [
+    "docs/BUILD.md"
+  ],
+  "problem": "The previous test list used combined source files and existence guards, which can turn a missing regression into an apparently successful configure.",
+  "example": "cmake -S . -B build/cmake -DFFMT_BUILD_TESTS=ON\ncmake --build build/cmake -j2\nctest --test-dir build/cmake --output-on-failure",
+  "design": "Explicit source registrations preserve the decomposed suites, while Python discovers all capability unit tests. Configure verifies a clean pinned oracle; only tests discover Python and Git.",
+  "tradeoffs": "Full tests require the complete feature checkout and independent oracle. Optional extension skips remain visible, and C++23 stays opt-in. This is host validation, not accelerator runtime qualification.",
+  "reading_order": [
+    "cmake/ffmtTests.cmake:ffmt_add_regression and source list",
+    "cmake/ffmtTests.cmake:extension flags and Python discovery",
+    "CMakeLists.txt:test options",
+    "docs/BUILD.md"
+  ],
+  "validation": {
+    "commands": [
+      "cmake -S . -B build/cmake -DFFMT_BUILD_TESTS=ON -DFFMT_BUILD_CXX23_TESTS=ON -DCMAKE_CXX_COMPILER=\"$CXX\" -DFFMT_FMT_DIR=\"$FFMT_FMT_DIR\"",
+      "cmake --build build/cmake -j2",
+      "ctest --test-dir build/cmake --output-on-failure",
+      "ctest --test-dir build/cmake -N"
+    ],
+    "results": "Pending independent review and assembled portable validation.",
+    "limitations": "Run on the assembled complete-feature commit. Inspect skip counts; an extension skip is not a pass. Missing declared C++ sources must fail configuration. No hosted/device result is implied."
+  },
+  "source_changes": "Build integration and documentation only; no formatter implementation changes."
+}

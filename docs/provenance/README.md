@@ -12,9 +12,10 @@ documentation remain in [ffmt](https://github.com/nscottnichols/ffmt).
 
 [split.json](split.json) records all seven original PR tips, their replacement
 targets, the original source snapshots, source hashes and preserved file hashes.
-The replacement library change is now a [seven-part review stack](review-stack.md),
-from [PR10](https://github.com/nscottnichols/ffmt/pull/10) through the focused
-[PR9](https://github.com/nscottnichols/ffmt/pull/9). The evaluation change remains
+The former [seven-part review stack](review-stack.md), PRs #9–15, is preserved
+as a historical stage. The active [reviewer-oriented stack](reviewer-stack-v2.md)
+contains the complete current PR graph, its single snapshot mapping and actual
+portable qualification records. The evaluation change remains
 [evaluation PR1](https://github.com/nscottnichols/ffmt-evaluation/pull/1).
 The original split ledger identifies the first portable library commit, initial
 companion import and validated evaluation implementation. The supplemental
@@ -61,8 +62,11 @@ git -C ../ffmt worktree add --detach ../ffmt-qualified-primary \
   qualified/20261022-primary
 ```
 
-The replacement library's 17 headers and `test/conformance/cases.py` are byte
-identical to final snapshot `0c2cb76`. The canonical header-map SHA-256 is
+The original split snapshot `4b8cf257fc68c5b20c0c493e34d1d90269e76fd9` has
+17 headers and `test/conformance/cases.py` byte-identical to final snapshot
+`0c2cb76`. The current review restructuring changes that file layout and some
+source/test/build code; its hashes and limitations are recorded separately in the
+[active overview](reviewer-stack-v2.md). The canonical header-map SHA-256 is
 `14438e1c9faf6bf2e170e13b371c12a87df42d3f1b5ce597abc22bcbc30ab817`;
 the corpus SHA-256 is
 `b50ecda885148c5fef472f44593781140dc1bfdd9d1700d1d109a78141c54342`.
@@ -79,13 +83,19 @@ justify repeating hardware campaigns.
 
 ## Verify preserved bytes locally
 
-The verifier requires Python's standard library and local source files. Its
-default check works without Git history, compilers, a scheduler or network
-access:
+The verifier requires Python's standard library and local source files. From the
+current review checkout, select the historical split by its full immutable commit.
+This reads local Git objects without changing the checkout and needs no compiler,
+scheduler or network:
 
 ```sh
-python3 tools/verify_provenance.py --ffmt-checkout ../ffmt
+python3 tools/verify_provenance.py --ffmt-checkout ../ffmt \
+  --library-revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9
 ```
+
+Omit `--library-revision` when verifying the original snapshot working files
+without Git history. A changed review tree correctly fails the old byte-equivalence
+claim; it must not be relabeled as the historical qualification.
 
 This verifies the frozen JSON exports, baseline/qualification reports, paper
 source/PDF/outline, independent reproducers, historical profile/dependency
@@ -101,6 +111,7 @@ PR/recorded-commit ancestry, and every archived snapshot's header bytes:
 
 ```sh
 python3 tools/verify_provenance.py --ffmt-checkout ../ffmt \
+  --library-revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9 \
   --check-source-refs
 ```
 

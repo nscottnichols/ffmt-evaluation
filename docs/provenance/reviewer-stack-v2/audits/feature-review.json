@@ -1,0 +1,60 @@
+{
+  "reviewer": "review_architecture",
+  "independence": "Reviewer authored core decomposition; did not author feature stages. Read-only feature review; fixes made by feature author.",
+  "scope": "Feature scope, reviewer readability, header/test dependency boundaries, shared-family padding/delegation, and named argument borrowing.",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocking",
+      "status": "resolved",
+      "file": "ranges/files/test/conformance/test_ranges.cpp",
+      "finding": "Missing closing }; after fmt::formatter<legacy_point> left following namespaces inside a class.",
+      "resolution": "Feature author corrected extraction boundary and reformatted; reviewer re-inspected closing specialization and top-level namespaces."
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "status": "resolved",
+      "finding": "Named docs explain runtime validation, but direct suite initially covered only successful name lookup/mutability.",
+      "resolution": "Author added missing-name, incompatible named spec, negative named width, and nonintegral named width tests, checking status and untouched output."
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "status": "resolved",
+      "finding": "Shared-family direct suite tested one-pass pointer output and streaming rejection but omitted replayable streaming success.",
+      "resolution": "Author added right/center replayable streaming tests with exact output/counts and two invocations."
+    },
+    {
+      "id": "F4",
+      "severity": "low",
+      "status": "resolved",
+      "finding": "Every stage source-provenance field repeated an unrelated family lambda rename.",
+      "resolution": "Author narrowed provenance statements to actual per-feature changes."
+    }
+  ],
+  "assessment": {
+    "scope": "Independent named/ranges/chrono/std/styling branches now make coherent family decisions; cross-feature named ranges/std fixtures live in integration stage.",
+    "readability": "Headers use conventional formatting. Tests have named behavior functions and explicit expected output/error assertions. Shared helper imports only base + fmt support, without optional families.",
+    "lifetime": "args.hpp and docs correctly state borrowed name characters/value references, with temporaries safe only through the formatting full expression.",
+    "padding": "Shared-family PR includes its required bounded pointer padding/delegation hooks and documents the replay tradeoff. Pointer prefix reordering has explicit capacity/overflow checks.",
+    "blockers_remaining": []
+  },
+  "validation_limitations": "This is independent static source review, not compiler/runtime validation. Root CPU validation must run the assembled intermediate commits before publication. No new algorithm defect is asserted.",
+  "reviewed_sha256": {
+    "shared-family/files/include/ffmt/detail/family.hpp": "9a6ee375496a0bd334a0efc01d1a1ed1600719a786abfd0b78976d4c1fa3787d",
+    "shared-family/files/include/ffmt/detail/output.hpp": "6929c4d1446bf93b0b565eef63c2151ed4728e7981640c89de77a31e3e1c6a63",
+    "shared-family/files/test/conformance/test_family_support.cpp": "b1b5d8c04499af727d30a9923c2eaf2126c9784ba455c33cffda454fb660e133",
+    "named-arguments/files/include/ffmt/args.hpp": "287471a083535503df852ee3a3e6166e672e5f0f062366e82754b26152b786a8",
+    "named-arguments/files/test/conformance/test_named_arguments.cpp": "20bc4effe148a4da251828962a623e2da90e2c2229e337bbe5c7a0b163446db6",
+    "named-arguments/files/docs/features/named-arguments.md": "f1be6aab67bc2240955689d08a5f083c34eb8af67649821556fe6a8dca31cd5c",
+    "ranges/files/test/conformance/test_ranges.cpp": "7f65bb70a818292d46368dcb7440ec58da65392d8832872d96a3e4c6c6c47b20",
+    "ranges/files/test/conformance/test_ranges_iterators.cpp": "bfe22f206be3e06e1365bc3211ac12ceb853d1f6ff863a7825b80f65e48bb430",
+    "ranges/files/test/conformance/test_ranges_forwarding.cpp": "da85a38fa8c1fbfc05470cdad2f8849c46c870b47da2dc89e46c1d1606e3fbde",
+    "standard-types/files/test/conformance/test_std.cpp": "a0feb3908988311afe1becbd82e60b2620122b5c7cc153433dfd7fa701c1a0bb",
+    "chrono/files/test/conformance/test_chrono.cpp": "9ca09ed16ead927f402ccab2a3d42ec1cdca5a9a1325798c6cb4808a65fb32ac",
+    "feature-integration/files/test/conformance/test_feature_integration.cpp": "b4f3adbe5017ac5e73f996c884655a447114aeb093fa6a2dae2a5fa1c4afacfb",
+    "styling/files/test/conformance/test_style.cpp": "29792bc502ad4101a1fe318f5d9bd78a43253d5be857f4d0003100d66940bbb9",
+    "typed-printf/files/test/conformance/test_printf.cpp": "2ca1ff3aeca8bebcd359dd2c8222dcd4525dd475b2ce31701af1483aae58c6cb"
+  }
+}

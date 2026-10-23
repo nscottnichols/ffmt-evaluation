@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "captures": [
+    {
+      "path": "archival-inputs/capture.json",
+      "sha256": "740b8e1fdf989448ce6e1ebb6b17489ad160215a9b1617ec92b19ba31ac5aefa",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 416,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "attempts/cancelled-1011368/capture.json",
+      "sha256": "b3f2cd9725a8b22cb53cc3168ab06eb361dbab927ceefe68a3cefd803f5baf23",
+      "status": "cancelled_before_execution",
+      "cobalt_jobid": "1011368",
+      "files": 14,
+      "stage_status_counts": {},
+      "archive_sha256": "fd88ee74b6fb9d4462cdad62b78d883d0f03092b2cf2c046ac4c4c21c1d237d5"
+    },
+    {
+      "path": "attempts/foundations-1011365/capture.json",
+      "sha256": "0f9c7231c5960404582221e565fbef3e39da3be56bdafe6f9e07a991967b8b0a",
+      "status": "pass",
+      "cobalt_jobid": "1011365",
+      "files": 93,
+      "stage_status_counts": {
+        "pass": 6
+      },
+      "archive_sha256": "6f6e841c98cfd910d3a6373685e4e40ca92f51c8419ab3218ba93113fa81129c"
+    },
+    {
+      "path": "attempts/intermediates-1011366/capture.json",
+      "sha256": "944940d50629475b4d5de7ba0c46f63fc4cbca9557e0daa8ff284e662241d6b0",
+      "status": "failure",
+      "cobalt_jobid": "1011366",
+      "files": 3164,
+      "stage_status_counts": {
+        "not_selected": 6,
+        "pass": 45,
+        "pass_with_skips": 1,
+        "failure": 2
+      },
+      "archive_sha256": "984fc2712f94bea78a2d6c5878fd728b3e69bd95bc5f40f19eb24e774749848e"
+    },
+    {
+      "path": "attempts/release-cpl-1011376/capture.json",
+      "sha256": "61ed7ea131b93dad283dd92e84b5806ddf613d326c43a6d6416f0deb4f156dac",
+      "status": "pass",
+      "cobalt_jobid": "1011376",
+      "files": 1924,
+      "stage_status_counts": {
+        "not_selected": 43,
+        "pass": 22
+      },
+      "archive_sha256": "a4721fe00703bbacb0d163bc36201dae1d39c5a71d4c91112547b9aea654626d"
+    },
+    {
+      "path": "attempts/release-rome-1011375/capture.json",
+      "sha256": "4738682d5a8a007dce55116a21e6eba98931c6588cf8e42e3ab0bdbfc06685e1",
+      "status": "pass_with_skips",
+      "cobalt_jobid": "1011375",
+      "files": 925,
+      "stage_status_counts": {
+        "not_selected": 53,
+        "pass": 11,
+        "pass_with_skips": 1
+      },
+      "archive_sha256": "aee323cece4bb16a608265b7c3c44826e8f9f395e8745b44781d86f25302687e"
+    },
+    {
+      "path": "attempts/release-skylake-1011377/capture.json",
+      "sha256": "41d34243c9f0b7ed523ce06f02af39673f7689c2a64861b93c9611ff538e955b",
+      "status": "pass_with_skips",
+      "cobalt_jobid": "1011377",
+      "files": 2105,
+      "stage_status_counts": {
+        "not_selected": 51,
+        "pass": 11,
+        "pass_with_skips": 3
+      },
+      "archive_sha256": "84ab3d1a844e48ce95bb4117b86b801e7c3edcfd44743106ce04149906ab2d32"
+    },
+    {
+      "path": "audits/capture.json",
+      "sha256": "3b68e7e049787f95ebc23794806e0bf9cb8e6d2145efe73943eafc2257c78c14",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 86,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "capture-tool-review/capture.json",
+      "sha256": "dac764f39b0600d18f4cbbf7169b7f8cb4f4955355f8e89cd6073322bf1cfcb9",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 4,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "evaluation-final-checks/capture.json",
+      "sha256": "ab4bb6d9332f2719e85864a64266595efa4c4798a8b4d272041ec7ac51edd0c0",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 9,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "packaging-followup-inputs/capture.json",
+      "sha256": "8f1211fd71e8bfa783aaeadef2d303d77b82603ae586974d298855d1070a3a34",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 3,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "provenance-verifier-review/capture.json",
+      "sha256": "208e901085decca0de0ff6186aec0ae0af19a217dcdcd7244fb13cb092eab50e",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 11,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "publication-independent-review/capture.json",
+      "sha256": "4a4c86e3bf88fb2d5a01c69df12817ed398fa82c707764f48b16f69682e86a82",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 1,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "release-selection-inputs/capture.json",
+      "sha256": "149b313a71acbf422585d1b82ee88174caff9c717f4eaf4c49a12e6345026bfa",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 4,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    },
+    {
+      "path": "release-source-audit/capture.json",
+      "sha256": "23c8450a2d7268f444fa4f5cf8c92183f15c6fcd0e86ed38fc536dd9331fcc57",
+      "status": "inputs_only",
+      "cobalt_jobid": null,
+      "files": 1,
+      "stage_status_counts": {},
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+    }
+  ],
+  "preservation": "Original source files, ignored evidence, installations and pins are unchanged."
+}

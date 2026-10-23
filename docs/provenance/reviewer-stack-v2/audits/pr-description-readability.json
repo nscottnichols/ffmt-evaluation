@@ -1,0 +1,80 @@
+{
+  "reviewer": "/root/review_tooling",
+  "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/repaired-index.json",
+  "index_sha256": "5cced71b58fb116357e0299b5e583efc9c92a31abb8b84a99cd523861d487d90",
+  "reviewed_library_stage_count": 64,
+  "collection_only_count": 1,
+  "renderer": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/render.py",
+  "renderer_sha256": "b7300f1d88aa5e9a5ecb2e6ebb9e677454406018790bc5de43bcd875d0f2b6c0",
+  "status": "metadata accepted after description-only edits; renderer findings sent to root",
+  "scope_assessment": "The 64 library changes each ask one coherent decision. Mechanical implementation preservation, conversion-helper extraction and obsolete deletion are explicit separate changes. Optional families and backend launchers branch independently from shared prerequisites. Migration is the intentional public-selector/integration boundary; CMake registration and API navigation are build/documentation changes rather than hidden formatter implementations. No new omnibus scope blocker identified.",
+  "metadata_checks": {
+    "required_description_fields_present": true,
+    "missing_fields": [],
+    "all_reading_order_paths_exist_at_exact_commits": true,
+    "missing_reading_paths": []
+  },
+  "description_edits": {
+    "count": 27,
+    "record": "description-metadata-changes.json",
+    "classification": "Only problem/example/design/tradeoffs/reading_order in stage.json; no source, Make, test or evidence mutation. Core internal snippets are explicitly pre-migration; backend contracts and smoke limitations made concrete."
+  },
+  "findings": [
+    {
+      "id": "PRD-1",
+      "severity": "blocking_before_publication",
+      "path": "ffmt-evaluation/tools/review_stack/render.py:validation command substitution",
+      "problem": "Renderer leaves {repo}, {revision} and {python} unresolved; api-index would publish a literal {repo}/../ffmt-evaluation/... command.",
+      "requested_resolution": "Handle every command placeholder accepted by the validator, including a documented REPO/REVISION/PYTHON variable or exact resolved value. Reject remaining unknown placeholders.",
+      "status": "reported_to_root"
+    },
+    {
+      "id": "PRD-2",
+      "severity": "validation_reproducibility",
+      "path": "ffmt-evaluation/tools/review_stack/render.py:selected_environment exports",
+      "problem": "Actual standalone differential commands inherit FFMT_FLAGS_HOST_BUFFER and FFMT_FLAGS_HOST_SPECIFIERS from validation; body only exports Make EXTRA_CXXFLAGS. Copying the representative command therefore drops the actual standalone instrumentation flags. Text correctly avoids a universal sanitizer claim.",
+      "requested_resolution": "Export the recorded host-route flag environment in the representative command block or explicitly label the shown command as a distinct uninstrumented reproduction.",
+      "status": "reported_to_root"
+    },
+    {
+      "id": "PRD-3",
+      "severity": "readability",
+      "path": "ffmt-evaluation/tools/review_stack/render.py:observed pass count",
+      "problem": "Displayed check count includes successful git worktree checkout operations. The CI-readiness foundation shows four passing checks although only two are header compilation probes.",
+      "requested_resolution": "Say recorded steps rather than checks, or exclude setup/checkout from the displayed validation-check count.",
+      "status": "reported_to_root"
+    },
+    {
+      "id": "PRD-4",
+      "severity": "example_correctness",
+      "path": "core-stages/parsing and formatter-compatibility stage.json",
+      "problem": "Parsing snippet omitted required <char> and used the handler type as an expression; formatter example was an undeclared placeholder specialization rather than demonstrating delegation.",
+      "resolution": "Updated to a test-derived walk_format<char> handler example and concrete ffmt::formatter specialization inheriting the integer parser and delegating format.",
+      "status": "resolved_metadata_only"
+    },
+    {
+      "id": "PRD-5",
+      "severity": "reviewability",
+      "path": "tool-stages/tool-{cuda,hip,kokkos,openmp,sycl} and tool-memory-* stage.json",
+      "problem": "Repeated generic adapter wording obscured each compiler route, execution guard, synchronization/copy choice and actual source-only validation limit.",
+      "resolution": "Descriptions now name actual compiler/runtime routes, mandatory device controls, launch/wait operations and per-backend memory transfer decisions. Generation regressions are included in reading order.",
+      "status": "resolved_metadata_only"
+    }
+  ],
+  "validation_honesty": {
+    "coverage_policy": "Explicitly replaces automatic blocking percentage regressions with reporting and says automatic detection of real regressions is lost. Invalid/empty measurement remains blocking.",
+    "adapter_limits": "Portable generation tests are explicitly separated from accelerator execution. No hardware results or new campaign measurements claimed.",
+    "renderer_guard": "Exact stage id+commit must match a pass/pass_with_skips row; a recorded failure rejects rendering. Unknown/unexecuted statuses and log hash verification remain a possible hardening concern if supplied evidence is not independently audited.",
+    "sampled_bodies": "Reviewed six foundation bodies produced from existing real foundation qualification. No passing rows, full-stack results or fresh measurement claims were synthesized by this reviewer.",
+    "pending": "Root CPU requalification and renderer corrections must complete before publication."
+  },
+  "independent_spot_review": {
+    "reviewer": "/root/review_features",
+    "scope": [
+      "parsing/formatter/transport snippets",
+      "CUDA/SYCL/OpenMP/Kokkos adapter and memory descriptions"
+    ],
+    "result": "No inaccurate API or behavior claims found; parsing snippet matches its exact test.",
+    "source": "collaboration message received after metadata freeze"
+  }
+}

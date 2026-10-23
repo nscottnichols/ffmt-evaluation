@@ -1,0 +1,29 @@
+{
+  "id": "migration",
+  "title": "Select the checked engine through the public header",
+  "dependencies": [
+    "transport",
+    "extended-floats"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "legacy-host",
+    "core-all",
+    "test_core_migration",
+    "negative",
+    "fast-math"
+  ],
+  "docs": [
+    "docs/api/migration.md"
+  ],
+  "problem": "The separately qualified engine must replace both old output paths while preserving API spellings.",
+  "example": "#include <ffmt/base.hpp>\nauto result = ffmt::try_print(\"{:04x}\", 42);",
+  "design": "The public wrapper selects the same engine tested throughout this stack. Existing macros, static formatters and built-in SYCL formatters remain available.",
+  "tradeoffs": "Void compatibility calls discard checked status. Host checks do not replace preserved accelerator campaign evidence.",
+  "reading_order": [
+    "include/ffmt/base.hpp",
+    "include/ffmt/detail/checked.hpp",
+    "include/ffmt/detail/sycl_formatters.hpp"
+  ]
+}

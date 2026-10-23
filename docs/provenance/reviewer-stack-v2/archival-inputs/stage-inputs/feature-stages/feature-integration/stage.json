@@ -1,0 +1,48 @@
+{
+  "id": "feature-integration",
+  "title": "Test names with independent range and standard adapters",
+  "dependencies": [
+    "named-arguments",
+    "ranges",
+    "standard-types"
+  ],
+  "change_kind": "integration-tests",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "feature_integration"
+    ],
+    "commands": [
+      "make build/focused_feature_integration CXX=\"$CXX\" && ./build/focused_feature_integration"
+    ]
+  },
+  "problem": "Verify cross-feature composition without making optional adapters depend on each other.",
+  "example": "#include <ffmt/args.hpp>\n#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{values:*>{width}:03}\", ffmt::arg(\"values\", values), ffmt::arg(\"width\", 25));",
+  "design": "Integration-only fixtures sit above independent feature branches.",
+  "tradeoffs": "Named argument wrappers preserve the referenced family's mutability and provide\nruntime names for outer width fields. The interaction tests combine names with\nranges and standard-type adapters. Each family and named arguments also has an\nindependent test suite, so this integration adds no prerequisite between those\nfeatures.",
+  "reading_order": [
+    "test/conformance/test_feature_integration.cpp"
+  ],
+  "docs": [
+    "docs/features/feature-integration.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Only existing named-range, named-complex and mutable named-range interaction tests moved into a dedicated suite. No library implementation source."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "feature_integration"
+    ],
+    "fixture_modules": []
+  },
+  "before": "Independent names/ranges/std suites do not verify named widths on optional adapters or mutable named ranges.",
+  "after": "#include <ffmt/args.hpp>\n#include <ffmt/ranges.hpp>\nstd::array<int, 3> values{1, -2, 33};\nffmt::println(\"{values:*>{width}:03}\", ffmt::arg(\"values\", values), ffmt::arg(\"width\", 25));",
+  "validation": {
+    "commands": [
+      "make build/focused_feature_integration CXX=\"$CXX\" && ./build/focused_feature_integration"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

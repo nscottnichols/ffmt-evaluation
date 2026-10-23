@@ -1,0 +1,7 @@
+{
+  "legacy_byte_identical": true,
+  "config_body_byte_identical": true,
+  "dragonbox_body_byte_identical": true,
+  "exact_decimal_body_byte_identical": true,
+  "normalization_note": "Root normalized extra EOF newlines in extracted config.hpp, numeric.hpp and sycl_formatters.hpp after these byte comparisons. Config remains byte-equivalent modulo recorded EOF newline normalization; see whitespace-normalization.json."
+}

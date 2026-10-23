@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "56cdf4f451269d34a4daaf42cd03f8ef04494fd203f16b8dff135971911f4f4c",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/reviewer-stack-v2/evaluation-final-checks",
+      "--input",
+      "unittest.stdout=artifacts/reviewer-v2-evaluation-final-unittest.stdout",
+      "--input",
+      "unittest.stderr=artifacts/reviewer-v2-evaluation-final-unittest.stderr",
+      "--input",
+      "provenance.stdout=artifacts/reviewer-v2-evaluation-final-provenance.stdout",
+      "--input",
+      "provenance.stderr=artifacts/reviewer-v2-evaluation-final-provenance.stderr",
+      "--input",
+      "workflow/verify_provenance.py=tools/verify_provenance.py",
+      "--input",
+      "test/test_verify_provenance.py=test/test_verify_provenance.py",
+      "--input",
+      "workflow/capture.py=tools/review_stack/capture.py",
+      "--input",
+      "test/test_capture.py=tools/review_stack/test_capture.py",
+      "--input",
+      "workflow/README.md=tools/review_stack/README.md"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "unittest.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-unittest.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "unittest.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-unittest.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "provenance.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-provenance.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "provenance.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-provenance.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/verify_provenance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/verify_provenance.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "test/test_verify_provenance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/test/test_verify_provenance.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "test/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/README.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/README.md",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "unittest.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-unittest.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "unittest.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-unittest.stderr",
+      "storage": "visible",
+      "bytes": 3045,
+      "sha256": "ee3b230dfdd0ff67178de4e973276076379011a8557f0648433deb43315124fe"
+    },
+    {
+      "relative_path": "provenance.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-provenance.stdout",
+      "storage": "visible",
+      "bytes": 360,
+      "sha256": "9b8417b9e16682b12388d80cdf70fcef6a7e85aaffa88a0f571e56208b99b970"
+    },
+    {
+      "relative_path": "provenance.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2-evaluation-final-provenance.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "workflow/verify_provenance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/verify_provenance.py",
+      "storage": "visible",
+      "bytes": 10471,
+      "sha256": "210b1ab3c35cbbd5cd03724db5628542db3b0030ad1a106419a544430330dadc"
+    },
+    {
+      "relative_path": "test/test_verify_provenance.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/test/test_verify_provenance.py",
+      "storage": "visible",
+      "bytes": 6417,
+      "sha256": "bfbd26c5b51b44bb317702fcac7efcb155ed08ab4b388e1b2157e31096d1f537"
+    },
+    {
+      "relative_path": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "storage": "visible",
+      "bytes": 11441,
+      "sha256": "56cdf4f451269d34a4daaf42cd03f8ef04494fd203f16b8dff135971911f4f4c"
+    },
+    {
+      "relative_path": "test/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "storage": "visible",
+      "bytes": 4480,
+      "sha256": "5b23deabb3f6dfb48eb7a74662b288515665279c20d24d9b15492b0efe8978e0"
+    },
+    {
+      "relative_path": "workflow/README.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/README.md",
+      "storage": "visible",
+      "bytes": 6612,
+      "sha256": "4e3dac164e4a68d58b3e7f046af10cd1783ee8c8bcf10ff08a7ed55d95acf8d4"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

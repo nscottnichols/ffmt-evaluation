@@ -1,0 +1,246 @@
+{
+  "configurations": [
+    {
+      "cases": [
+        {
+          "actual_bytes": 16,
+          "build": {
+            "command": [
+              "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+              "-std=c++20",
+              "-O2",
+              "-fno-fast-math",
+              "-DFFMT_BUFFER_PATH=1",
+              "-fsanitize=address,undefined",
+              "-fno-sanitize-recover=all",
+              "-fno-omit-frame-pointer",
+              "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/source/include",
+              "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/cases-0-0.cpp",
+              "-o",
+              "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/cases-0-0"
+            ],
+            "exit_code": 0,
+            "seconds": 0.8112890339689329,
+            "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/cases-0-0-build.stderr",
+            "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/cases-0-0-build.stdout"
+          },
+          "execution": {
+            "command": [
+              "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/cases-0-0",
+              "0"
+            ],
+            "exit_code": 0,
+            "seconds": 0.018803708953782916,
+            "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/literal.stderr",
+            "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/literal.stdout"
+          },
+          "expected_bytes": 16,
+          "family": "literal",
+          "id": "literal",
+          "source_sha256": "ffb364b6296831e8c1ead248c4088a1782e127953a726022223c53756bd1edf3",
+          "status": "pass"
+        }
+      ],
+      "command_prefix": [
+        "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-DFFMT_BUFFER_PATH=1",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-fno-omit-frame-pointer",
+        "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/source/include"
+      ],
+      "compiler_version": {
+        "command": [
+          "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+          "--version"
+        ],
+        "exit_code": 0,
+        "seconds": 0.010321908979676664,
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/compiler-version.stderr",
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/compiler-version.stdout"
+      },
+      "control_build": {
+        "command": [
+          "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+          "-std=c++20",
+          "-O2",
+          "-fno-fast-math",
+          "-DFFMT_BUFFER_PATH=1",
+          "-fsanitize=address,undefined",
+          "-fno-sanitize-recover=all",
+          "-fno-omit-frame-pointer",
+          "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/source/include",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/control.cpp",
+          "-o",
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/control"
+        ],
+        "exit_code": 0,
+        "seconds": 1.3437272239243612,
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/control-build.stderr",
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/control-build.stdout"
+      },
+      "control_run": {
+        "command": [
+          "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/control",
+          "0"
+        ],
+        "exit_code": 0,
+        "seconds": 0.019749743049032986,
+        "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/control-run.stderr",
+        "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/host-buffer-O2/control-run.stdout"
+      },
+      "device": "host",
+      "execution_timeout": 30,
+      "negative_cases": [],
+      "optimization": 2,
+      "route": "host-buffer",
+      "status": "completed",
+      "stdout_status": "completed"
+    }
+  ],
+  "corpus_sha256": "b50ecda885148c5fef472f44593781140dc1bfdd9d1700d1d109a78141c54342",
+  "counts": {
+    "pass": 1
+  },
+  "environment": {
+    "LC_ALL": "C",
+    "OMP_TARGET_OFFLOAD": "MANDATORY"
+  },
+  "finished": "2026-10-23T23:35:10.682438+00:00",
+  "host": {
+    "architecture": "x86_64",
+    "name": "skylake10",
+    "os": "Linux-6.4.0-150600.23.103-default-x86_64-with-glibc2.38"
+  },
+  "invocation": [
+    "/home/nnichols/.local/bin/python3",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/software/local/ffmt-checkouts/833013da4905/4b8cf257fc68c5b20c0c493e34d1d90269e76fd9/tools/conformance.py",
+    "--profiles",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/platforms/profiles.json",
+    "--profile",
+    "local",
+    "--source-root",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+    "--revision",
+    "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "--fmt-dir",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "--output",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke",
+    "--route",
+    "host-buffer",
+    "--opt",
+    "2",
+    "--case",
+    "literal",
+    "--no-memory",
+    "--no-negative",
+    "--host-cxx",
+    "/soft/compilers/llvm/release-22.1.8/bin/clang++"
+  ],
+  "label": "head",
+  "oracle": {
+    "build": {
+      "command": [
+        "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "-c",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/src/format.cc",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/fmt.o"
+      ],
+      "exit_code": 0,
+      "seconds": 3.7676352720009163,
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/fmt-build.stderr",
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/fmt-build.stdout"
+    },
+    "cases_build": {
+      "command": [
+        "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/cases.cpp",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/fmt.o",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/cases"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7707389879506081,
+      "stderr_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/oracle-build.stderr",
+      "stdout_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/complete/commands/evaluation-smoke/oracle/oracle-build.stdout"
+    },
+    "cases_source_sha256": "d771a1300e94f319a8604c1a9eb7173017d10adad860b4952a6e5abec1b235a9",
+    "commit": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+    "repository": "https://github.com/fmtlib/fmt"
+  },
+  "profile": "local",
+  "profiles": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/platforms/profiles.json",
+    "sha256": "c96e8e74e10c89f11cc6db3bfd493abb7c380f0118cdfddac0f056d75e06cfb4"
+  },
+  "runner": {
+    "checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/software/local/ffmt-checkouts/833013da4905/4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+  },
+  "runner_files": {
+    "test/conformance/cases.py": "b50ecda885148c5fef472f44593781140dc1bfdd9d1700d1d109a78141c54342",
+    "tools/conformance.py": "f766111da6e510f803e9be2c8eaeee0b809859d942d98111e8a21f24de6d7881",
+    "tools/numeric_memory.py": "66d9ad86020da124ae4588ece16e2e3c318b52d71280e665eeea18713dd822e1"
+  },
+  "schema_version": 1,
+  "selection": {
+    "case_ids": [
+      "literal"
+    ],
+    "memory": false,
+    "negative": false,
+    "numeric_samples": 4096,
+    "optimizations": [
+      2
+    ],
+    "routes": [
+      "host-buffer"
+    ],
+    "shard_size": 16
+  },
+  "source": {
+    "checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+    "commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "dirty": false,
+    "files": {
+      "include/ffmt/args.hpp": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+      "include/ffmt/base.hpp": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+      "include/ffmt/chrono.hpp": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+      "include/ffmt/color.hpp": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+      "include/ffmt/core.hpp": "54abfadff1d1a5d8ab4f9f1bdd10342142516032257fbe517f048239833e686c",
+      "include/ffmt/detail/extended.hpp": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+      "include/ffmt/detail/family.hpp": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+      "include/ffmt/detail/floating.hpp": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+      "include/ffmt/detail/numeric.hpp": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+      "include/ffmt/detail/text.hpp": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+      "include/ffmt/detail/transport.hpp": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+      "include/ffmt/detail/unicode.hpp": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+      "include/ffmt/enum.hpp": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+      "include/ffmt/printf.hpp": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+      "include/ffmt/ranges.hpp": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+      "include/ffmt/std.hpp": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+      "include/ffmt/std23.hpp": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d"
+    },
+    "worktree": false
+  },
+  "started": "20261023T233503258602Z",
+  "timeouts": {
+    "cold_jit": 600,
+    "compile": 180,
+    "execution": 30
+  },
+  "workspace": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+}

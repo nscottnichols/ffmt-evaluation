@@ -1,0 +1,6 @@
+{
+  "purpose": "Authorized test portability correction; no formatter algorithm change",
+  "file": "test/conformance/test_engine_quad.cpp",
+  "change": "After checked.hpp but before fmt/format.h, enable FMT_USE_FLOAT128 only when FFMT_HAS_FLOAT128 is true and the user has not defined it. Unsupported builds return77 without requesting fmt float128 aliases.",
+  "sha256": "f57045a05e1e5e301e52ebab4d785f85ead3e47e646cf18a2e359d39ba16a62a"
+}

@@ -1,0 +1,1 @@
+Core test fragments extracted from old forwarding and omnibus families tests. No optional family dependencies. Include checked.hpp as requested by core owner. Add formatter_composition and core_forwarding to formatter-compatibility; legacy_forwarding to legacy-compatibility; transport_forwarding to transport.

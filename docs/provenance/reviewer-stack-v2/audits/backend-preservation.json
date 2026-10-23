@@ -1,0 +1,164 @@
+{
+  "original_revision": "aeff043614725d58d383c8add086f548d77d05eb",
+  "restructured_revision": "34ded72e14e7756938a3e1cd885f3afdf158b57e",
+  "routes": [
+    "host-buffer",
+    "host-specifiers",
+    "cuda",
+    "nvcc",
+    "hip",
+    "omp-cuda",
+    "omp-hip",
+    "omp-spirv",
+    "sycl",
+    "acpp",
+    "chipstar",
+    "kokkos-serial",
+    "kokkos-cuda",
+    "kokkos-hip",
+    "kokkos-sycl"
+  ],
+  "probe": "One integer stdout fixture and numeric corpus sample_count=8; forced GPU arch audit_arch prevents hardware probing; clang-format normalization only",
+  "differences": [
+    {
+      "route": "host-buffer",
+      "kind": "numeric"
+    },
+    {
+      "route": "host-specifiers",
+      "kind": "numeric"
+    },
+    {
+      "route": "cuda",
+      "kind": "stdout"
+    },
+    {
+      "route": "cuda",
+      "kind": "numeric"
+    },
+    {
+      "route": "nvcc",
+      "kind": "stdout"
+    },
+    {
+      "route": "nvcc",
+      "kind": "numeric"
+    },
+    {
+      "route": "hip",
+      "kind": "stdout"
+    },
+    {
+      "route": "hip",
+      "kind": "numeric"
+    },
+    {
+      "route": "omp-cuda",
+      "kind": "stdout"
+    },
+    {
+      "route": "omp-cuda",
+      "kind": "numeric"
+    },
+    {
+      "route": "omp-hip",
+      "kind": "stdout"
+    },
+    {
+      "route": "omp-hip",
+      "kind": "numeric"
+    },
+    {
+      "route": "omp-spirv",
+      "kind": "stdout"
+    },
+    {
+      "route": "omp-spirv",
+      "kind": "numeric"
+    },
+    {
+      "route": "sycl",
+      "kind": "stdout"
+    },
+    {
+      "route": "sycl",
+      "kind": "numeric"
+    },
+    {
+      "route": "acpp",
+      "kind": "stdout"
+    },
+    {
+      "route": "acpp",
+      "kind": "numeric"
+    },
+    {
+      "route": "chipstar",
+      "kind": "stdout"
+    },
+    {
+      "route": "chipstar",
+      "kind": "numeric"
+    },
+    {
+      "route": "kokkos-serial",
+      "kind": "stdout"
+    },
+    {
+      "route": "kokkos-serial",
+      "kind": "numeric"
+    },
+    {
+      "route": "kokkos-serial",
+      "kind": "flags"
+    },
+    {
+      "route": "kokkos-cuda",
+      "kind": "stdout"
+    },
+    {
+      "route": "kokkos-cuda",
+      "kind": "numeric"
+    },
+    {
+      "route": "kokkos-cuda",
+      "kind": "flags"
+    },
+    {
+      "route": "kokkos-hip",
+      "kind": "stdout"
+    },
+    {
+      "route": "kokkos-hip",
+      "kind": "numeric"
+    },
+    {
+      "route": "kokkos-hip",
+      "kind": "flags"
+    },
+    {
+      "route": "kokkos-sycl",
+      "kind": "stdout"
+    },
+    {
+      "route": "kokkos-sycl",
+      "kind": "numeric"
+    },
+    {
+      "route": "kokkos-sycl",
+      "kind": "flags"
+    }
+  ],
+  "algorithm_checks": {
+    "parse_records": true,
+    "compare_records": true,
+    "numeric_corpus_exact_after_clang_format": true
+  },
+  "manual_difference_review": {
+    "stdout": "CUDA/HIP device count/property locals renamed; SYCL queue/device/error locals renamed; OpenMP initial-device local renamed; Kokkos prelude define/include order and blank line only. Same guards, launch, synchronization, stderr and exits retained.",
+    "numeric": "Common numeric C++ corpus is exactly equal after formatting; only launcher local names/formatting changed. Copies, memset, launches, synchronization, serialization, exceptions and exits retained.",
+    "flags": "All route flags and compiler argv equal, except Kokkos include paths necessarily point at different temporary materialization roots.",
+    "classification": "Handwritten launcher readability edits are source changes with equivalent intended behavior; historical evidence remains attached to the exact original hashes. No hardware run performed by this audit.",
+    "blocking_findings": []
+  }
+}

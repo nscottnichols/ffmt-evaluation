@@ -1,0 +1,24 @@
+{
+  "id": "parsing",
+  "title": "Parse and validate counted format strings",
+  "dependencies": [
+    "accounting"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_accounting",
+    "test_core_parsing"
+  ],
+  "docs": [
+    "docs/api/parsing.md"
+  ],
+  "problem": "Runtime execution and literal validation need a single grammar.",
+  "example": "Given the handler in test_core_parsing.cpp:\nffmt::detail::walk_format<char>(\"{{{:04x}}}\", events);\n// Receives two literal braces and one argument with width 4/type x.\n// \"{0} {}\" instead returns invalid_format for mixed index modes.",
+  "design": "A handler receives parsed fields; parse context tracks index modes and checks dynamic references without producing output.",
+  "tradeoffs": "This prefix supports ASCII fill; counted Unicode decoding is introduced with its tests.",
+  "reading_order": [
+    "include/ffmt/detail/parse.hpp",
+    "test/conformance/test_core_parsing.cpp"
+  ]
+}

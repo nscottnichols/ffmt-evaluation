@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
 import subprocess
 import sys
 
@@ -42,6 +43,52 @@ def verify_file(root, name, expected, failures, label):
 
 def git(directory, *arguments):
     return subprocess.check_output(["git", "-C", str(directory), *arguments], stderr=subprocess.PIPE, text=True).strip()
+
+
+def immutable_revision(value):
+    """Require an explicit commit identity rather than a movable Git name."""
+    if not re.fullmatch(r"[0-9a-fA-F]{40}", value):
+        raise argparse.ArgumentTypeError("--library-revision requires a full 40-character commit SHA")
+    return value.lower()
+
+
+def verify_library(checkout, equivalent, failures, revision=None):
+    """Compare live files, or read immutable Git blobs without a checkout."""
+    expected = equivalent["header_files"]
+    corpus = equivalent["corpus"]
+    if revision is None:
+        actual_names = {item.relative_to(checkout).as_posix()
+                        for item in (checkout / "include").rglob("*") if item.is_file()}
+    else:
+        try:
+            resolved = git(checkout, "rev-parse", "--verify", revision + "^{commit}")
+            if resolved != revision:
+                raise ValueError("--library-revision must identify a commit object directly")
+            actual_names = set(filter(None, git(checkout, "ls-tree", "-r", "-z",
+                                                 "--name-only", revision, "--", "include").split("\0")))
+        except (OSError, ValueError, subprocess.CalledProcessError) as error:
+            failures.append("Cannot inspect pinned library revision " + revision + ": " + str(error))
+            return
+    if actual_names != set(expected):
+        failures.append("Library header inventory differs (missing=" + str(sorted(set(expected) - actual_names)) +
+                        ", additional=" + str(sorted(actual_names - set(expected))) + ")")
+    sources = [(name, sha, "library source") for name, sha in expected.items()]
+    sources.append((corpus["path"], corpus["sha256"], "conformance corpus"))
+    for name, expected_hash, label in sources:
+        if revision is None:
+            verify_file(checkout, name, expected_hash, failures, label)
+            continue
+        try:
+            contained(checkout, name)
+            data = subprocess.check_output(["git", "-C", str(checkout), "cat-file", "blob",
+                                            revision + ":" + name], stderr=subprocess.PIPE)
+            actual_hash = hashlib.sha256(data).hexdigest()
+        except (OSError, ValueError, subprocess.CalledProcessError) as error:
+            failures.append(label + ": cannot read " + name + " at " + revision + ": " + str(error))
+            continue
+        if actual_hash != expected_hash:
+            failures.append(label + ": SHA-256 differs for " + name + " (expected " + expected_hash +
+                            ", got " + actual_hash + ")")
 
 
 def source_refs(manifest, checkout, failures):
@@ -86,6 +133,9 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ffmt-checkout", required=True, type=Path,
                         help="Library checkout or source directory to compare with final qualified headers")
+    parser.add_argument("--library-revision", type=immutable_revision,
+                        help="Read this full commit SHA from local Git objects instead of live files; "
+                             "omit to verify WORKTREE bytes, including source directories without Git history")
     parser.add_argument("--evaluation-root", type=Path, default=ROOT,
                         help="Relocated evaluation tree; defaults to this script's repository")
     parser.add_argument("--manifest", type=Path,
@@ -118,15 +168,7 @@ def main(argv=None):
     expected = equivalent["header_files"]
     if canonical_digest(expected) != equivalent["canonical_header_sha256"]:
         failures.append("Header hash map does not match its canonical digest in split ledger")
-    include = checkout / "include"
-    actual_names = {item.relative_to(checkout).as_posix() for item in include.rglob("*") if item.is_file()}
-    if actual_names != set(expected):
-        failures.append("Library header inventory differs (missing=" + str(sorted(set(expected) - actual_names)) +
-                        ", additional=" + str(sorted(actual_names - set(expected))) + ")")
-    for name, sha256 in expected.items():
-        verify_file(checkout, name, sha256, failures, "library source")
-    corpus = equivalent["corpus"]
-    verify_file(checkout, corpus["path"], corpus["sha256"], failures, "conformance corpus")
+    verify_library(checkout, equivalent, failures, args.library_revision)
     for snapshot in manifest["qualified_snapshots"]:
         if canonical_digest(snapshot["header_files"]) != snapshot["canonical_header_sha256"]:
             failures.append("Archived snapshot hash map is inconsistent: " + snapshot["id"])
@@ -140,6 +182,8 @@ def main(argv=None):
     print("PASS: " + str(len(manifest["preserved_evidence"])) + " preserved evidence files, " +
           str(len(manifest.get("preserved_campaign_configuration", []))) + " historical configuration files, " +
           str(len(expected)) + " library headers, and conformance corpus")
+    print("Library source: " + (args.library_revision + " (local Git objects)"
+                                if args.library_revision else "WORKTREE " + str(checkout)))
     if args.check_source_refs:
         print("PASS: " + str(refs) + " archive/qualified refs and " + str(commits) + " reachable original commits")
     if args.check_raw_inputs:

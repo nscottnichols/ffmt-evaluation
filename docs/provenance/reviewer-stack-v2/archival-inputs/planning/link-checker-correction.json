@@ -1,0 +1,7 @@
+{
+  "attempt": 1,
+  "status": "failure",
+  "kind": "checker false positive",
+  "message": "family-support.md C++ lambda [](auto& body) was parsed as a Markdown destination",
+  "correction": "Ignore fenced and inline code while checking local file destinations; no library source change"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tool-memory-kokkos",
+  "title": "Execute numeric memory records through the KOKKOS adapter",
+  "dependencies": [
+    "tool-numeric-memory",
+    "tool-kokkos"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_memory_kokkos.py"
+  ],
+  "problem": "Kokkos stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+  "example": "host mirror -> deep_copy(device_input) -> parallel_for(format_record)\n-> create_mirror_view_and_copy(HostSpace, device_output) -> serialize",
+  "design": "Require the requested DefaultExecutionSpace, deep-copy input through a host mirror, format into a device View with parallel_for, and copy a HostSpace mirror back before serialization and finalization.",
+  "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+  "reading_order": [
+    "tools/backend_kokkos.py:numeric_launcher",
+    "test/conformance/numeric_memory.cpp.in",
+    "test/conformance/test_memory_kokkos.py"
+  ],
+  "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes."
+}

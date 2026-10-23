@@ -1,0 +1,40 @@
+{
+  "id": "transport",
+  "title": "Deliver counted bytes through host and accelerator stdout",
+  "dependencies": [
+    "unicode",
+    "legacy-compatibility",
+    "floating-formatting"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_engine_transport",
+    "test_engine_legacy_hook",
+    "test_transport_forwarding",
+    [
+      "make",
+      "-j2",
+      "CXX={cxx}",
+      "FMT_DIR={fmt_dir}",
+      "HOST_OPT=-O0",
+      "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+      "test-host"
+    ]
+  ],
+  "docs": [
+    "docs/api/transport.md"
+  ],
+  "problem": "Long output and percent signs must reach stdout without reinterpretation as format syntax.",
+  "example": "#include <ffmt/detail/checked.hpp> // base.hpp switches in the migration PR\nauto result = ffmt::try_print(\"a{}b\", char(0));\n// The default host counted transport emits all three bytes: a, NUL, b.\n// A transport without counted-byte support reports its limitation.",
+  "design": "A bounded sink emits counted chunks. Backend printf uses fixed conversion formats; compatibility hooks receive safe escaped pieces.",
+  "tradeoffs": "Some backend or legacy transports cannot preserve embedded NULs and report errors. Host captures validate contracts, not accelerator runtime behavior.",
+  "reading_order": [
+    "include/ffmt/detail/transport.hpp",
+    "include/ffmt/detail/legacy_emit.hpp",
+    "test/conformance/test_engine_transport.cpp",
+    "test/conformance/test_engine_legacy_hook.cpp",
+    "test/capture.hpp:raw stream equality after parsed diagnostics"
+  ],
+  "source_changes": "Preserve original byte-counted transport and restore aeff raw stdout equality regression in the legacy capture helper. Portable legacy-host checks ensure this stricter harness remains valid before migration."
+}

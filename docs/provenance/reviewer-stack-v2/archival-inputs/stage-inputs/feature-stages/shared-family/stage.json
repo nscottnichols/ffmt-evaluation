@@ -1,0 +1,48 @@
+{
+  "id": "shared-family",
+  "title": "Share nested output accounting and family alignment",
+  "dependencies": [
+    "migration"
+  ],
+  "change_kind": "preparatory-refactor",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "family_support"
+    ],
+    "commands": [
+      "make build/focused_family_support CXX=\"$CXX\" && ./build/focused_family_support"
+    ]
+  },
+  "problem": "Optional formatters need consistent nested alignment without buffering or replaying mutations.",
+  "example": "// Internal support, used by optional formatter headers:\nreturn ffmt::detail::family_padded(ctx, spec, [&](auto& body) {\n  ffmt::detail::family_ascii(body, \"body\");\n}, /* replayable = */ false);",
+  "design": "Extend bounded sink iterators with padding marks/reordering and delegate hooks, then share family outer parsing and one-pass accounting. Streaming destinations explicitly require replayable values for right/center alignment.",
+  "tradeoffs": "The internal helpers share outer alignment parsing, display-column accounting,\ndebug defaults and nested formatting. Left-aligned output renders once on any\niterator. Bounded writable pointer buffers also support right/center alignment\nin one pass by inserting padding while retaining the exact truncated prefix.\nOther iterators require replayable values for right/center alignment; unknown\ncustom formatters and consuming ranges return `unsupported_type` before invoking\nthe formatter. These helpers are implementation details, not a public extension\nAPI. Optional formatters should document which input operations are device callable.",
+  "reading_order": [
+    "include/ffmt/detail/output.hpp:bounded padding and sink delegation hooks",
+    "include/ffmt/detail/family.hpp",
+    "test/conformance/test_family_support.cpp"
+  ],
+  "docs": [
+    "docs/features/family-support.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Original qualified sink padding/delegation hooks restored as their own header step; family whitespace/comments and once -> render_and_measure lambda rename. Direct tests cover one-pass bounded alignment, nonreplayable stream rejection and replayable stream success. No intended behavior change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "family_support"
+    ],
+    "fixture_modules": []
+  },
+  "before": "Each optional formatter would otherwise duplicate alignment parsing and counting, risking replay of mutating values.",
+  "after": "// Internal support, used by optional formatter headers:\nreturn ffmt::detail::family_padded(ctx, spec, [&](auto& body) {\n  ffmt::detail::family_ascii(body, \"body\");\n}, /* replayable = */ false);",
+  "validation": {
+    "commands": [
+      "make build/focused_family_support CXX=\"$CXX\" && ./build/focused_family_support"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

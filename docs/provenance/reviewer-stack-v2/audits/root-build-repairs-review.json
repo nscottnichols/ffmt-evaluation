@@ -1,0 +1,35 @@
+{
+  "reviewer": "review_architecture",
+  "independence": "Independent review of root-authored four build-repair stages; author of render/publish review corrections disclosed separately.",
+  "stages": [
+    {
+      "id": "local-ignores",
+      "decision": "Keep local installations/output/profile/cache files untracked. Exact original ignore patterns restored without moving/deleting content.",
+      "assessment": "Focused; rationale/example/tradeoff and short reading order are adequate."
+    },
+    {
+      "id": "build-header-dependencies",
+      "decision": "Invalidate legacy object builds after any library header edit.",
+      "assessment": "Focused conservative dependency correction; real Make timestamp regression exercises both unchanged and edited-header states without compiling.",
+      "validation": "Passed in an isolated overlay of build-registration + build-header-dependencies, using actual Make dry-run timestamp decisions."
+    },
+    {
+      "id": "build-compiler-selection",
+      "decision": "Use caller compiler PATH instead of a developer-specific AdaptiveCpp path.",
+      "assessment": "Focused behavior preservation; clarified docs that CXX override must be a Make command-line variable because existing backend := overrides environment-only assignments.",
+      "source_change": "Documentation clarification only; no additional Make behavior change."
+    },
+    {
+      "id": "backend-regression-selection",
+      "decision": "After migration include buffer-path regressions in Intel SYCL and icpx OpenMP source lists.",
+      "assessment": "Focused two-list update with correct migration dependency; docs explicitly avoid accelerator-runtime qualification claims."
+    }
+  ],
+  "readiness": "No remaining source/scope/readability blocker found; root owns immutable assembled-prefix CPU validation.",
+  "stage_json_sha256": {
+    "local-ignores": "49aaa6e8934604ee9123bf200b1dcfd47711c2cb12ea707e17cbf6de166e0b70",
+    "build-header-dependencies": "7d010b58e47c00891da964d927389c83092c4919f9b4f5a69192283edd3a8af3",
+    "build-compiler-selection": "2b0009ec0adef9cb780e653181f8fff25d0f0e2b4cfd00a16d474c181891760d",
+    "backend-regression-selection": "f742fae077a64bdd6cbf8146a1ced6b2ed820242639ace28b4ec57c3d473b63d"
+  }
+}

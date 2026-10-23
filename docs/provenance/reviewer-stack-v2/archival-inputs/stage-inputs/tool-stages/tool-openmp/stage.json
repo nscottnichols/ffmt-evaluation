@@ -1,0 +1,21 @@
+{
+  "id": "tool-openmp",
+  "title": "Add independent OPENMP differential execution adapter",
+  "dependencies": [
+    "tool-adapter-support"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_adapter_openmp.py"
+  ],
+  "problem": "OpenMP target regions can silently run on the initial host device, allowing a host result to masquerade as accelerator conformance.",
+  "example": "--route omp-cuda / omp-hip use Clang NVPTX / AMDGPU offload flags.\n--route omp-spirv uses icpx -fiopenmp -fopenmp-targets=spir64.\nAn initial-device control returns 77 before any output case is judged.",
+  "design": "Share one target-region launcher across the three compiler routes, require omp_is_initial_device() to be false, record the device number, and keep route-specific flags beside the launcher.",
+  "tradeoffs": "Host fallback becomes a failed execution control, not a formatting pass. Portable tests inspect source generation and flags; they do not establish an available OpenMP device runtime.",
+  "reading_order": [
+    "tools/backend_openmp.py",
+    "test/conformance/test_adapter_openmp.py"
+  ],
+  "docs": "Reject an OpenMP target region that executes on the initial host device. Execution requires a working offload toolchain and accelerator; host fallback is failure."
+}

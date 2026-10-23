@@ -1,0 +1,21 @@
+{
+  "id": "core-prepare",
+  "title": "Preserve the existing implementation behind a wrapper",
+  "dependencies": [],
+  "change_kind": "mechanical-move",
+  "remove": [],
+  "tests": [
+    "legacy-host"
+  ],
+  "docs": [
+    "docs/api/core-prepare.md"
+  ],
+  "problem": "The replacement engine needs independent qualification while current callers remain usable.",
+  "example": "#include <ffmt/base.hpp> // still selects the original implementation",
+  "design": "The legacy header is copied byte for byte from upstream 3fe258a; the public wrapper only selects it.",
+  "tradeoffs": "The temporary extra include is removed once migration is validated.",
+  "reading_order": [
+    "include/ffmt/base.hpp",
+    "include/ffmt/detail/legacy_base.hpp"
+  ]
+}

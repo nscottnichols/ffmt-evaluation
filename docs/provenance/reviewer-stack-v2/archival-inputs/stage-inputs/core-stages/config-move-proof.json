@@ -1,0 +1,7 @@
+{
+  "source_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "source_file": "include/ffmt/base.hpp",
+  "destination_file": "include/ffmt/detail/config.hpp",
+  "body_sha256": "938d4df836983356462a5ad2b111f05a404b7a54e5d1a4a0ff79f5dadb4441cc",
+  "comparison": "destination after pragma once is byte-identical to the selected source span"
+}

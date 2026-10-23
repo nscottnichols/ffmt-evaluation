@@ -1,0 +1,25 @@
+{
+  "id": "obsolete-deletion",
+  "title": "Delete the retired formatter implementation",
+  "dependencies": [
+    "migration"
+  ],
+  "change_kind": "obsolete-code-deletion",
+  "remove": [
+    "include/ffmt/detail/legacy_base.hpp"
+  ],
+  "tests": [
+    "legacy-host",
+    "core-all"
+  ],
+  "docs": [
+    "docs/api/obsolete-deletion.md"
+  ],
+  "problem": "The public header no longer references the old implementation after migration.",
+  "example": "#include <ffmt/base.hpp> // unchanged for callers",
+  "design": "Only the unused legacy implementation is deleted; archived snapshots retain it for comparison.",
+  "tradeoffs": "The static formatter protocol and legacy emit-hook adapter remain supported by the new implementation.",
+  "reading_order": [
+    "include/ffmt/base.hpp"
+  ]
+}

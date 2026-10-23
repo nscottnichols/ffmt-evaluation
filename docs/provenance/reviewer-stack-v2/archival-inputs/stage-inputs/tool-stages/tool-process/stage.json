@@ -1,0 +1,22 @@
+{
+  "id": "tool-process",
+  "title": "Capture exact subprocess bytes and terminate timed-out children",
+  "dependencies": [],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_process.py",
+    "python3 -m unittest discover -s test/conformance -p test_output.py"
+  ],
+  "problem": "Compiler drivers can spawn children that outlive a timeout; text decoding can erase output distinctions.",
+  "example": "compare_bytes(b\"value\\n\", b\"value\") reports a mismatch; an embedded NUL remains observable.",
+  "design": "Keep byte capture, process lifetime and evidence-path handling in one small reusable module; save both streams before returning.",
+  "tradeoffs": "Timeout cleanup uses POSIX process groups; its regression is explicitly skipped where killpg is unavailable.",
+  "reading_order": [
+    "tools/process_evidence.py:run",
+    "tools/process_evidence.py:compare_bytes",
+    "test/conformance/test_process.py",
+    "test/conformance/test_output.py"
+  ],
+  "docs": "Process results preserve raw stdout/stderr, exit status, command arguments and elapsed time. Timeout cleanup kills the complete compiler process group."
+}

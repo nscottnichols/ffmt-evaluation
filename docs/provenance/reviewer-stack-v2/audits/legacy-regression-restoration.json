@@ -1,0 +1,60 @@
+{
+  "original_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "records": [
+    {
+      "path": "test/test_body.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "c6a5f6ecada0786ba25218cc6fd2597604f8e48ef0201b322ea47f40ea0684dc",
+      "classification": "restored original regression behavior byte-for-byte"
+    },
+    {
+      "path": "test/test_body_cuda.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "088a072bb2a7ae04dfe66d42a61817e834d1d34d36174db2eca78dc3bf1122a8",
+      "classification": "restored original regression behavior byte-for-byte"
+    },
+    {
+      "path": "test/test_body_host.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "58588b888d01221cde01d96cbfffbadb48a3b3bab73617e75c172b1c422b84aa",
+      "classification": "restored original regression behavior byte-for-byte"
+    },
+    {
+      "path": "test/test_body_omp.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "153d28452a20212641cf7f6912beca34325463561464ca3b13a3a7768014ac4c",
+      "classification": "restored original regression behavior byte-for-byte"
+    },
+    {
+      "path": "test/test_buffer_path.cpp",
+      "stage": "migration",
+      "qualified_source_sha256": "948fe3dfed250ebc65b52980413bb1ba386a865539d5a6499e9ac8fab9d100fe",
+      "classification": "restored original regression behavior byte-for-byte"
+    },
+    {
+      "path": "test/test_fast_math.cpp",
+      "stage": "migration",
+      "qualified_source_sha256": "1b7ea998438d512faa3f2c9909dcbd7967130ff265b994798a2bd5c105772937",
+      "classification": "restored original regression behavior byte-for-byte"
+    },
+    {
+      "path": "test/test_floats.cpp",
+      "stage": "migration",
+      "qualified_source_sha256": "47e76d154e5a702cd479b09e1c575f8e43119829291d5063221e6198f7d300c6",
+      "classification": "restored original regression behavior byte-for-byte"
+    },
+    {
+      "path": "test/capture.hpp",
+      "stage": "transport",
+      "qualified_source_sha256": "c406ebce772daa3cb8f574bd59db0486d74dc1082c4314a6a45b97319cc5a0af",
+      "classification": "restored full raw-stream equality check byte-for-byte"
+    },
+    {
+      "path": ".gitignore",
+      "stage": "local-ignores",
+      "qualified_source_sha256": "c2a2c75f20b39d2300f4fc8670e38e3db6eab45e49facb38cea954d1f161d5a6",
+      "classification": "restored original ignore patterns byte-for-byte"
+    }
+  ],
+  "formatter_algorithm_changes": false
+}

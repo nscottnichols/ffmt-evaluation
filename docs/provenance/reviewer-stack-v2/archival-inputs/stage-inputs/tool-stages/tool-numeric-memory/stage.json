@@ -1,0 +1,25 @@
+{
+  "id": "tool-numeric-memory",
+  "title": "Compare bounded numeric memory records with host fmt output",
+  "dependencies": [
+    "tool-oracle-negatives",
+    "migration"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_numeric_memory.py",
+    "python3 tools/conformance.py --route host-buffer --opt 2 --numeric-samples 32"
+  ],
+  "problem": "Printf transport can hide whether floating-point conversion and bounded output accounting produced the correct memory bytes.",
+  "example": "A record for a subnormal double checks the input encoding, output bytes, written/required counts and error status against independent fmt.",
+  "design": "Use explicit binary framing and a fixed seed. Keep numeric operations in a conventionally formatted handwritten C++ template that is hashed with runner inputs.",
+  "tradeoffs": "The default corpus has 4096 seeded float encodings, 4096 seeded double encodings, and 24 boundary/special encodings. This is representative sampling, not exhaustive floating-point proof. The portable smoke command reduces the seed count to 32 per type and executes host memory only.",
+  "reading_order": [
+    "test/conformance/numeric_memory.cpp.in",
+    "tools/numeric_memory.py:parse_records",
+    "tools/conformance.py:memory_suite",
+    "test/conformance/test_numeric_memory.py"
+  ],
+  "docs": "The numeric memory suite checks byte payloads, framing, input bits, written and required sizes, and error status. The template is handwritten source, not excluded generated material. Raw record framing is unchanged from the preserved suite."
+}

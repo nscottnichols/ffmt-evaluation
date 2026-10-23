@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root/review_tooling",
+  "status": "approved_after_empty-object_guard_fix",
+  "reviewed_files": {
+    "ffmt-evaluation/tools/review_stack/capture.py": "ded07e3fe7652698c5280276891b2d118f5b61182bc79746ffcaf0cda5a2bfb1",
+    "ffmt-evaluation/tools/review_stack/test_capture.py": "bc049d8639dff6f8c6ebde61fdaa77f2f7090614ca5d63163757750962a4d834"
+  },
+  "scope": "Read-only evidence-packager source review plus portable tests and independent existing-capture/inventory audits; no library source changes or hardware execution.",
+  "findings": [
+    {
+      "id": "CAP-1",
+      "severity": "blocking",
+      "problem": "Truthy manifest/submission guards accepted an empty parsed JSON object as absent, bypassing required terminal status/completion records.",
+      "resolution": "Changed presence checks to is not None; portable rejection test now covers empty validation and submission objects as well as running state.",
+      "status": "resolved"
+    }
+  ],
+  "preservation_checks": [
+    "Original evidence is opened read-only. New output is built in a temporary sibling and atomically renamed; existing captures are verified rather than overwritten.",
+    "Raw bytes use tar members without text decoding; gzip metadata and tar member metadata are deterministic. Inventory retains original path, length, source SHA256 and storage location.",
+    "Generated C++ probes and raw stdout/stderr are archived; scripts, manifests, indices and handwritten template/explicit --input files remain visible.",
+    "Source worktrees, CMake builds and compiler products are deliberately pruned. Exact immutable revisions/source hashes remain visible in validation manifests and assembly snapshots; original ignored products remain untouched.",
+    "Completed validation status/finished record or explicit cancellation receipt is required. Attempt manifests are hashed before and after capture.",
+    "Directory traversal does not follow symlinks. Label traversal/absolute paths and duplicate/reserved members are rejected; verification checks archive inventory, regular-file safety, lengths and hashes."
+  ],
+  "validation": {
+    "portable_tests": "python3 -B -m unittest discover -s tools/review_stack -p test_capture.py -v: PASS (2 tests, 0.803 seconds)",
+    "existing_captures": "capture.py --verify PASS for cancelled-1011368 (14 files), foundations-1011365 (93 files), intermediates-1011366 (3164 files)",
+    "top_level_manifest_references": "All 1104 stdout/stderr references present with matching SHA256 (68 foundation + 1036 intermediate). See capture-reference-audit.json.",
+    "visible_input_inventory": "No missing visible files and no .py/.sh/.md/.json/.in/.yml/.yaml files unexpectedly stored only in archives."
+  },
+  "limitations": [
+    "No assumption that a preserved failed/cancelled attempt passed; those statuses remain unchanged.",
+    "Verification reads and hashes archives, and never extracts members into the filesystem.",
+    "The packaging audit establishes byte preservation, not successful formatter or hardware qualification."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "tooling-source-change",
+  "original_qualified_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "description": "Standalone conformance and benchmark drivers reject mismatched or dirty fmt checkouts without altering them, and retain format.h/format.cc SHA-256 identities. This is stricter oracle-input validation, not history-only restructuring.",
+  "formatter_source_changes": false,
+  "old_evidence": "Existing snapshots, pins, campaign records, checkouts and installations were not changed.",
+  "validation": [
+    "54 Python tests pass, including real temporary Git repositories showing non-mutating dirty, untracked and wrong-revision oracle rejection.",
+    "81 exported text files pass git diff --no-index --check."
+  ],
+  "affected_exports": [
+    "tool-host-oracle",
+    "tool-snapshots",
+    "tool-isolation",
+    "tool-oracle-negatives",
+    "tool-numeric-memory",
+    "benchmark-driver",
+    "benchmark-resources"
+  ],
+  "source_files": {
+    "tools/oracle.py": {
+      "sha256": "ef6128a4e1cb1fa9101fbcea34ee3d5902314f928bfb0e4bbfea2b42e2a61042"
+    },
+    "tools/conformance.py": {
+      "sha256": "481f6a92c283d8a1bf94d17ea86814ea040d78723586b994049ffcc2a94b4448"
+    },
+    "tools/benchmark.py": {
+      "sha256": "3d3e203c9913413f4d8b22d6bdbf4e33a1693133c4106fed2f074c898680f0f6"
+    },
+    "test/conformance/test_oracle.py": {
+      "sha256": "903c74eec655d871e28d1ca1b5c56722088acbc251bf8c5943fd8afef4c21aa0"
+    }
+  }
+}

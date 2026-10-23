@@ -1,0 +1,23 @@
+{
+  "id": "tool-memory-cuda",
+  "title": "Execute numeric memory records through the CUDA adapter",
+  "dependencies": [
+    "tool-numeric-memory",
+    "tool-cuda"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_memory_cuda.py"
+  ],
+  "problem": "CUDA stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+  "example": "cudaMemcpyHostToDevice -> memory_kernel -> cudaDeviceSynchronize\n-> cudaMemcpyDeviceToHost -> serialize(input, output)",
+  "design": "Allocate CUDA input/output buffers, copy input encodings, zero output, launch memory_kernel, check errors/synchronize, and copy framed results back. The numeric formatting body remains the shared handwritten template.",
+  "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+  "reading_order": [
+    "tools/backend_cuda.py:numeric_launcher",
+    "test/conformance/numeric_memory.cpp.in",
+    "test/conformance/test_memory_cuda.py"
+  ],
+  "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes."
+}

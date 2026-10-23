@@ -1,0 +1,310 @@
+{
+  "schema_version": 2,
+  "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+  "original_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "stages": [
+    {
+      "id": "ci-review-waves",
+      "title": "Run hosted compiler CI when a review wave becomes ready",
+      "dependencies": [],
+      "change_kind": "ci-policy",
+      "remove": [],
+      "tests": [],
+      "problem": "Publishing many complete draft prerequisites can launch every expensive compiler matrix simultaneously.",
+      "example": "A draft PR keeps its captured local validation; marking it ready triggers the host and device compiler jobs through ready_for_review.",
+      "design": "Keep normal push and PR checks, but skip compiler jobs while the PR is draft and explicitly listen for ready_for_review.",
+      "tradeoffs": "Drafts have no hosted compiler result; skipped jobs must not be described as passing. Local intermediate checks remain required before publication.",
+      "reading_order": [
+        ".github/workflows/host.yml:pull_request and job conditions",
+        ".github/workflows/device.yml:pull_request and job conditions",
+        "docs/contributing/CI.md"
+      ],
+      "docs": [
+        "docs/contributing/CI.md"
+      ],
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-review-waves",
+      "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "tree": "70df9d0e8b43dc77832efda757af9e0b02615dc1",
+      "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "base_branch": "main",
+      "branch": "review-v2/ci-review-waves",
+      "suites": [],
+      "validation_commands": [],
+      "stage_input_sha256": "4cca388eed78409034b5ad632086dea488f78d435349fd60d939514fcd6f6389"
+    },
+    {
+      "id": "ci-resource-bounds",
+      "title": "Bound template-build concurrency and cancel stale CI revisions",
+      "dependencies": [
+        "ci-review-waves"
+      ],
+      "change_kind": "ci-policy",
+      "remove": [],
+      "tests": [],
+      "problem": "Launching one compiler per hosted CPU can exhaust memory once formatting templates grow; stale runs consume the same runner quota.",
+      "example": "On a runner with many CPUs, make -j2 bounds compiler processes while a newer PR commit cancels the superseded workflow.",
+      "design": "Set a consistent two-job compile bound and a workflow/PR concurrency key without reducing the compiler matrix.",
+      "tradeoffs": "Less parallelism may increase wall time. Cancelled stale runs are incomplete evidence, not passing checks.",
+      "reading_order": [
+        ".github/workflows/host.yml:concurrency and Make commands",
+        ".github/workflows/device.yml:concurrency and Make commands",
+        "docs/contributing/CI_RESOURCES.md"
+      ],
+      "docs": [
+        "docs/contributing/CI_RESOURCES.md"
+      ],
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/ci-resource-bounds",
+      "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "tree": "a155052841c6310dc2315f3b1d28672693f81b4c",
+      "base_commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "base_branch": "review-v2/ci-review-waves",
+      "branch": "review-v2/ci-resource-bounds",
+      "suites": [],
+      "validation_commands": [],
+      "stage_input_sha256": "9c7e7bde0b32614aab9674698629857b2bc40607d7003d7759404b77edd9bc3e"
+    },
+    {
+      "id": "oracle-pin",
+      "title": "Pin the shared fmt oracle to an immutable revision",
+      "dependencies": [
+        "ci-resource-bounds"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_oracle_pin.py"
+        ],
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+          "test-host",
+          "test-fast-math"
+        ]
+      ],
+      "problem": "System format implementations and moving oracle revisions can disagree about expected output.",
+      "example": "For a subnormal double, every portable test compares the same ffmt bytes with the same fmt revision on every compiler.",
+      "design": "Pin the Make reference before introducing the independent oracle and new focused comparisons; retain an explicit external FMT_DIR override.",
+      "tradeoffs": "Expected behavior follows this fixed fmt revision rather than the installed standard library; updating it requires an explicit compatibility review.",
+      "reading_order": [
+        "Makefile:FMT_REF",
+        "docs/contributing/ORACLE.md"
+      ],
+      "docs": "docs/contributing/ORACLE.md",
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/oracle-pin",
+      "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "tree": "c98d82d711692f15aace88cdf9829fba6db247b5",
+      "base_commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "base_branch": "review-v2/ci-resource-bounds",
+      "branch": "review-v2/oracle-pin",
+      "suites": [],
+      "validation_commands": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_oracle_pin.py"
+        ],
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+          "test-host",
+          "test-fast-math"
+        ]
+      ],
+      "stage_input_sha256": "8c5aa6c780d6778f26cfa63f406e0a09452403e18eaf31d4637fc8e268bcf463"
+    },
+    {
+      "id": "build-registration",
+      "title": "Register portable capability tests without silently omitting sources",
+      "dependencies": [
+        "oracle-pin"
+      ],
+      "change_kind": "build-integration",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_build_registration.py"
+        ]
+      ],
+      "problem": "Discovering test source files with a wildcard can silently omit a declared test when its file is missing.",
+      "example": "A registration naming test/conformance/test_output.cpp is a required Make prerequisite; deleting that source fails the build rather than shrinking the test suite.",
+      "design": "Each capability adds a small explicit registration. A shared Make fragment provides compiler, reference-library, C++ standard and optional-extension handling.",
+      "tradeoffs": "Registrations are additional build metadata, but independent feature branches add separate files and do not edit one combined test source or suite list.",
+      "reading_order": [
+        "mk/portable-tests.mk",
+        "docs/contributing/TESTS.md"
+      ],
+      "docs": "docs/contributing/TESTS.md",
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/build-registration",
+      "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "tree": "d2b6c116f651a7ae349023cca0835f6d188b57fb",
+      "base_commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "base_branch": "review-v2/oracle-pin",
+      "branch": "review-v2/build-registration",
+      "suites": [],
+      "validation_commands": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_build_registration.py"
+        ]
+      ],
+      "stage_input_sha256": "f1a6b855d931b80bb6f47236ac8a27cf75f952da153d59fa8b8d9060b9459dca"
+    },
+    {
+      "id": "coverage-metrics",
+      "title": "Report source-file region, executable-line and branch coverage",
+      "dependencies": [
+        "build-registration"
+      ],
+      "change_kind": "source-refactor",
+      "remove": [],
+      "tests": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_coverage_metrics.py"
+        ],
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "coverage"
+        ]
+      ],
+      "problem": "One-header region percentages omit new headers and cannot describe executable-line or branch-edge coverage.",
+      "example": "Two headers with a region at the same coordinates remain two regions; an unexecuted branch side stays uncovered.",
+      "design": "Include source filenames in union keys, preserve any-instantiation coverage, and read executable lines from LLVM LCOV export rather than estimating spans.",
+      "tradeoffs": "Only instantiated runtime code is measured. Device-only code, compile-time evaluation and uninstantiated templates remain outside the denominator. This PR preserves the blocking policy.",
+      "reading_order": [
+        ".github/scripts/coverage_union.py:regions",
+        ".github/scripts/coverage_union.py:metrics",
+        "test/conformance/test_coverage_metrics.py"
+      ],
+      "docs": "Coverage metrics can accept a file or header directory. This measurement extension does not relax the existing regression gate; policy is reviewed separately.",
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/tool-stages/coverage-metrics",
+      "wave": 1,
+      "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "tree": "9ec34bfe6f13f5bebaa4281ad8002d0305053995",
+      "base_commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "base_branch": "review-v2/build-registration",
+      "branch": "review-v2/coverage-metrics",
+      "suites": [],
+      "validation_commands": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "test/conformance",
+          "-p",
+          "test_coverage_metrics.py"
+        ],
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "coverage"
+        ]
+      ],
+      "stage_input_sha256": "fc923e429bba9aaa5d5dbe09857460a37218df1ca5819aab0dcd621f63d7da59"
+    },
+    {
+      "id": "coverage-policy",
+      "title": "Replace the blocking coverage regression gate with reporting",
+      "dependencies": [
+        "coverage-metrics"
+      ],
+      "change_kind": "coverage-policy",
+      "remove": [],
+      "tests": [
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "coverage"
+        ]
+      ],
+      "problem": "Header movement and template instantiation alter the coverage denominator, so aggregate percentage decreases can block a behavior-preserving change.",
+      "example": "Before: a 0.02 percentage-point drop fails CI. After: valid per-file base/head JSON is uploaded and the same drop is visible but does not block merging.",
+      "design": "Keep invalid or empty measurement blocking, report region/line/branch metrics across all library headers, and make per-file regression assessment a human review decision.",
+      "tradeoffs": "This deliberately loses automatic detection of real percentage regressions. Passing CI no longer guarantees nondecreasing coverage; correctness and sanitizer checks remain independent blocking checks.",
+      "reading_order": [
+        "docs/contributing/COVERAGE.md",
+        ".github/workflows/host.yml:coverage",
+        "Makefile:coverage"
+      ],
+      "docs": [
+        "docs/contributing/COVERAGE.md"
+      ],
+      "wave": 1,
+      "directory": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/root-stages/coverage-policy",
+      "commit": "124eb4a049b3e08070e75e674d22290c982697c5",
+      "tree": "3573a750dbb631afe4e33e739b2740de204a092d",
+      "base_commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "base_branch": "review-v2/coverage-metrics",
+      "branch": "review-v2/coverage-policy",
+      "suites": [],
+      "validation_commands": [
+        [
+          "make",
+          "-j2",
+          "CXX={cxx}",
+          "FMT_DIR={fmt_dir}",
+          "HOST_OPT=-O0",
+          "coverage"
+        ]
+      ],
+      "stage_input_sha256": "63f0a826aa5c46094e07eb0cff867f28cb7a9283d699f8eaa19431649a0f831e"
+    }
+  ],
+  "assembly_bases": []
+}

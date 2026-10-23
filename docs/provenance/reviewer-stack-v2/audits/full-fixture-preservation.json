@@ -1,0 +1,20 @@
+{
+  "original_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "assembled_commit": "10b1280a5b9498aeca3a78833fb728d4a8b20f4c",
+  "comparison": {
+    "CASES": {
+      "original_count": 54,
+      "new_count": 54,
+      "missing": [],
+      "added": [],
+      "changed": {}
+    },
+    "NEGATIVE_CASES": {
+      "original_count": 9,
+      "new_count": 9,
+      "missing": [],
+      "added": [],
+      "changed": {}
+    }
+  }
+}

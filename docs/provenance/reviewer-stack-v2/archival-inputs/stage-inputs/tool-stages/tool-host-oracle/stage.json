@@ -1,0 +1,26 @@
+{
+  "id": "tool-host-oracle",
+  "title": "Compare host output with an independently compiled fmt oracle",
+  "dependencies": [
+    "tool-process"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_*.py",
+    "python3 tools/conformance.py --route host-buffer --opt 2 --no-memory --no-negative --fmt-dir third_party/fmt"
+  ],
+  "problem": "The legacy test harness can share assumptions with the implementation; expected bytes need an independent formatting implementation.",
+  "example": "A standalone fmt process formats INT64_MIN; a separate ffmt process must produce the identical bytes.",
+  "design": "Compile fmt only into host reference executables, and compile ffmt targets without fmt headers. Require a clean checkout at the exact oracle pin without modifying it, and record format.h/format.cc hashes. Begin with four baseline cases supported before engine migration.",
+  "tradeoffs": "Separate reference and target compilation reduces shared assumptions but costs compile time. Dirty or differently pinned oracle checkouts fail visibly. Accelerator routes and later feature cases arrive in independent changes.",
+  "reading_order": [
+    "test/conformance/cases_baseline.py",
+    "tools/oracle.py:oracle_identity",
+    "tools/conformance.py:build_oracle and configuration",
+    "tools/backend_host.py",
+    "test/conformance/test_oracle.py",
+    "test/conformance/test_fixture_registry.py"
+  ],
+  "docs": "The host differential runner compiles the pinned fmt oracle independently. The reference checkout must be clean, and exact format.h/format.cc hashes are retained; verification never changes the caller checkout. Feature fixture modules are introduced with implementations; every loaded fixture file receives a source hash."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "oracle-pin",
+  "title": "Pin the shared fmt oracle to an immutable revision",
+  "dependencies": [
+    "ci-resource-bounds"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [
+    [
+      "make",
+      "-j2",
+      "CXX={cxx}",
+      "FMT_DIR={fmt_dir}",
+      "HOST_OPT=-O0",
+      "EXTRA_CXXFLAGS=-fsanitize=address,undefined",
+      "test-host",
+      "test-fast-math"
+    ]
+  ],
+  "problem": "System format implementations and moving oracle revisions can disagree about expected output.",
+  "example": "For a subnormal double, every portable test compares the same ffmt bytes with the same fmt revision on every compiler.",
+  "design": "Pin the Make reference before introducing the independent oracle and new focused comparisons; retain an explicit external FMT_DIR override.",
+  "tradeoffs": "Expected behavior follows this fixed fmt revision rather than the installed standard library; updating it requires an explicit compatibility review.",
+  "reading_order": [
+    "Makefile:FMT_REF",
+    "docs/contributing/ORACLE.md"
+  ],
+  "docs": "docs/contributing/ORACLE.md",
+  "wave": 1
+}

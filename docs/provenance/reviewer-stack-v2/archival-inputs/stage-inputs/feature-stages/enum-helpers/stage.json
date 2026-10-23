@@ -1,0 +1,47 @@
+{
+  "id": "enum-helpers",
+  "title": "Opt enums into integer formatting",
+  "dependencies": [
+    "migration"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "enum"
+    ],
+    "commands": [
+      "make build/focused_enum CXX=\"$CXX\" && ./build/focused_enum"
+    ]
+  },
+  "problem": "Expose enum underlying values without globally accepting every enum.",
+  "example": "#include <ffmt/enum.hpp>\nnamespace status_example {\nusing ffmt::enums::format_as;\nenum class status : int { warning = -3 };\n}\nffmt::println(\"{:+05}\", status_example::status::warning); // -0003",
+  "design": "Small ADL opt-in shares the integer parser and avoids symbolic-name reflection.",
+  "tradeoffs": "`ffmt::underlying(value)` explicitly exposes an enum's underlying integer.\nOpting into `ffmt::enums::format_as` in the enum's namespace enables ADL mapping\nwith the integer formatter's specifications. This prints integer values rather\nthan discovering symbolic names. The opt-in avoids globally making every enum\nformattable.",
+  "reading_order": [
+    "include/ffmt/enum.hpp",
+    "test/conformance/test_enum.cpp"
+  ],
+  "docs": [
+    "docs/features/enums.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Conventional header layout; enum-specific tests/docs extracted from omnibus. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "enum"
+    ],
+    "fixture_modules": []
+  },
+  "before": "An enum with no formatter or ADL mapping cannot be passed directly to checked formatting.",
+  "after": "#include <ffmt/enum.hpp>\nnamespace status_example {\nusing ffmt::enums::format_as;\nenum class status : int { warning = -3 };\n}\nffmt::println(\"{:+05}\", status_example::status::warning); // -0003",
+  "validation": {
+    "commands": [
+      "make build/focused_enum CXX=\"$CXX\" && ./build/focused_enum"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}
