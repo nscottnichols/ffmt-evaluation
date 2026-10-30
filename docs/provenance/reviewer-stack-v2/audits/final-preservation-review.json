@@ -1,0 +1,38 @@
+{
+  "reviewer": "/root/review_tooling",
+  "original_qualified_revision": "aeff043614725d58d383c8add086f548d77d05eb",
+  "reviewed_restructured_revision": "34ded72e14e7756938a3e1cd885f3afdf158b57e",
+  "status": "no_open_static_preservation_blockers; actual_portable_requalification_owned_by_root",
+  "checks": {
+    "test/capture.hpp": true,
+    "test/test_buffer_path.cpp": true,
+    "test/test_body.inc": true,
+    "test/test_body_host.inc": true,
+    "test/test_body_cuda.inc": true,
+    "test/test_body_omp.inc": true,
+    "test/test_floats.cpp": true,
+    "test/test_fast_math.cpp": true,
+    ".gitignore": true,
+    "negative_diagnostic_driver": true,
+    "conformance_wrapper_and_pin": true,
+    "header_prerequisites": true,
+    "no_site_acpp_install_path": true,
+    "all_default_device_suites_include_buffer": true,
+    "forced_portable_floating_suite": true,
+    "cxx23_declared_standard_opt_in": true,
+    "focused_coverage_retained": true
+  },
+  "related_reviews": [
+    "final-fixture-preservation.json",
+    "python-regression-preservation.json",
+    "backend-preservation.json",
+    "late-stages-review.json"
+  ],
+  "limits": [
+    "Read-only/static review and two Make -n unit cases; no compiler or hardware run by this reviewer.",
+    "Historical evidence remains attached to original source hashes; this review does not convert old campaign results into new measurements."
+  ],
+  "nonblocking_nits": [
+    "Main Makefile coverage comment still describes a base.hpp percentage CI gate although reporting now covers all included mandatory suites."
+  ]
+}

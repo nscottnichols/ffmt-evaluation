@@ -1,0 +1,116 @@
+{
+  "review": "Release source preservation audit",
+  "original_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "release_commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "release_tree": "b2be548c7571f009bdcab254c4434b4ca240ebcd",
+  "tree_identical_to_original": false,
+  "restorations": [
+    {
+      "path": "test/test_body.inc",
+      "sha256": "c6a5f6ecada0786ba25218cc6fd2597604f8e48ef0201b322ea47f40ea0684dc",
+      "release_bytes_identical": true,
+      "stage": "migration"
+    },
+    {
+      "path": "test/test_body_cuda.inc",
+      "sha256": "088a072bb2a7ae04dfe66d42a61817e834d1d34d36174db2eca78dc3bf1122a8",
+      "release_bytes_identical": true,
+      "stage": "migration"
+    },
+    {
+      "path": "test/test_body_host.inc",
+      "sha256": "58588b888d01221cde01d96cbfffbadb48a3b3bab73617e75c172b1c422b84aa",
+      "release_bytes_identical": true,
+      "stage": "migration"
+    },
+    {
+      "path": "test/test_body_omp.inc",
+      "sha256": "153d28452a20212641cf7f6912beca34325463561464ca3b13a3a7768014ac4c",
+      "release_bytes_identical": true,
+      "stage": "migration"
+    },
+    {
+      "path": "test/test_buffer_path.cpp",
+      "sha256": "948fe3dfed250ebc65b52980413bb1ba386a865539d5a6499e9ac8fab9d100fe",
+      "release_bytes_identical": true,
+      "stage": "migration"
+    },
+    {
+      "path": "test/test_fast_math.cpp",
+      "sha256": "1b7ea998438d512faa3f2c9909dcbd7967130ff265b994798a2bd5c105772937",
+      "release_bytes_identical": true,
+      "stage": "migration"
+    },
+    {
+      "path": "test/test_floats.cpp",
+      "sha256": "47e76d154e5a702cd479b09e1c575f8e43119829291d5063221e6198f7d300c6",
+      "release_bytes_identical": true,
+      "stage": "migration"
+    },
+    {
+      "path": "test/capture.hpp",
+      "sha256": "c406ebce772daa3cb8f574bd59db0486d74dc1082c4314a6a45b97319cc5a0af",
+      "release_bytes_identical": true,
+      "stage": "transport"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c2a2c75f20b39d2300f4fc8670e38e3db6eab45e49facb38cea954d1f161d5a6",
+      "release_bytes_identical": true,
+      "stage": "local-ignores"
+    }
+  ],
+  "fixtures": {
+    "CASES": {
+      "count": 54,
+      "dictionaries_unchanged": true,
+      "missing": []
+    },
+    "NEGATIVE_CASES": {
+      "count": 9,
+      "dictionaries_unchanged": true,
+      "missing": []
+    }
+  },
+  "source_classification": [
+    {
+      "kind": "history-only restructuring",
+      "content": "Buildable DAG stages, prerequisite collection bases, branch/commit changes and reading-order descriptions do not by themselves change formatter behavior. Full stack/snapshot table belongs to one evaluation overview."
+    },
+    {
+      "kind": "mechanical extraction",
+      "content": "Old baseline engine, checked configuration, Dragonbox conversion and exact decimal helpers extracted separately before use/migration. Mechanical body proofs are byte comparisons; configuration proof is qualified by recorded EOF newline normalization. Public base migrates only after internal checked features qualify."
+    },
+    {
+      "kind": "library source layout",
+      "content": "Qualified checked engine is split into output accounting, parse/validation, primitives, floating conversion/formatting, extension traits, Unicode, modern/ADL/static formatter protocols, and transport headers. Include composition, helper placement, comments and spelling/layout change; no new numeric-formatting algorithm is intended. OpenMP declare-target wrappers were explicitly retained/restored. Obsolete legacy implementation and unused old UTF-8 helper deletion are separate from migration."
+    },
+    {
+      "kind": "optional header readability",
+      "content": "Named/range/chrono/standard/style/printf/enum header C++ tokens and include sets match the qualified source after whitespace/comments/include-order normalization; shared-family lambda rename once\u2192render_and_measure is documented. Required output padding hooks live with shared-family support.",
+      "proof": "feature-stages/source-audit.json"
+    },
+    {
+      "kind": "test source changes",
+      "content": "Split mixed omnibus files without dropping original assertions. New direct accounting/parsing/conversion/family/named tests, empty-output oracle helper correction and native-extension unsupported=77 handling are real test changes. Quad oracle extension is now enabled before fmt inclusion only on supported hosts. These are not claimed to be history-only."
+    },
+    {
+      "kind": "restored legacy regressions",
+      "content": "Exact eight aeff files restore full-stream comparison, complete fmt oracle strings on all four execution wrappers, runtime null-string rejection, specifier-path subnormal checks and shortest float expectations. Hashes and destination stages are below."
+    },
+    {
+      "kind": "portable tooling source changes",
+      "content": "Case registry modules, separate pinned oracle/process/evidence/adapter implementations, typed numeric-memory templates and focused unit tests replace combined scripts. Preserve their actual captured source hashes; this restructuring does not retroactively qualify old hardware evidence against new harness source."
+    },
+    {
+      "kind": "build and policy source changes",
+      "content": "Explicit suite registrations, no silent CMake omissions, installable header-only target, dependency tracking/compiler lookup/backend regression selection, optional extension skips and bounded CI resources are meaningful build changes. Coverage policy deliberately replaces percentage blocking with reporting; readiness-wave gating and sanitizer correction are distinct decisions."
+    },
+    {
+      "kind": "documentation and relocation",
+      "content": "API/backend/build/conformance navigation expanded; campaign material remains in evaluation. Two independent compiler reproducers preserved byte-for-byte in evaluation; their library deletion is a separate decision from obsolete-engine deletion."
+    }
+  ],
+  "source_review_history": "The earlier final-source-review.json captured pre-repair 10b1280 and explicitly left restoration/requalification pending. This supplemental audit verifies restored bytes in the frozen release without rewriting that earlier capture.",
+  "limitations": "Exact byte/fixture comparisons and classified static source review. It does not prove universal semantic equivalence. CPU qualifications name their exact stage commits; historical hardware measurements retain original source hashes and pins."
+}

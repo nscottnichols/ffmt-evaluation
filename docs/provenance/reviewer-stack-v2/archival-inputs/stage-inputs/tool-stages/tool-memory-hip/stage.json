@@ -1,0 +1,23 @@
+{
+  "id": "tool-memory-hip",
+  "title": "Execute numeric memory records through the HIP adapter",
+  "dependencies": [
+    "tool-numeric-memory",
+    "tool-hip"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_memory_hip.py"
+  ],
+  "problem": "HIP stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+  "example": "hipMemcpyHostToDevice -> hipLaunchKernelGGL -> hipDeviceSynchronize\n-> hipMemcpyDeviceToHost -> serialize(input, output)",
+  "design": "Allocate HIP input/output buffers, copy input encodings, zero output, launch with hipLaunchKernelGGL, check errors/synchronize, and copy framed results back. The same adapter also serves the chipStar route.",
+  "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+  "reading_order": [
+    "tools/backend_hip.py:numeric_launcher",
+    "test/conformance/numeric_memory.cpp.in",
+    "test/conformance/test_memory_hip.py"
+  ],
+  "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes."
+}

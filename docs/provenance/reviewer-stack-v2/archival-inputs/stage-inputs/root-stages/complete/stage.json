@@ -1,0 +1,16 @@
+{
+  "id": "complete",
+  "title": "Collect the independently reviewed library graph",
+  "dependencies": [
+    "api-index",
+    "backend-regression-selection",
+    "benchmark-resources",
+    "build-compiler-selection",
+    "build-header-dependencies",
+    "local-ignores"
+  ],
+  "change_kind": "collection-only",
+  "collection_only": true,
+  "remove": [],
+  "tests": []
+}

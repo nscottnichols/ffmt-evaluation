@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.19)
+project(consumer LANGUAGES CXX)
+find_package(ffmt CONFIG REQUIRED)
+add_executable(consumer main.cpp)
+target_link_libraries(consumer PRIVATE ffmt::ffmt)

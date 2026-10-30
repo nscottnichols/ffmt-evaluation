@@ -1,0 +1,22 @@
+{
+  "original_revision": "aeff043614725d58d383c8add086f548d77d05eb",
+  "restructured_revision": "34ded72e14e7756938a3e1cd885f3afdf158b57e",
+  "positive_before": 54,
+  "positive_after": 54,
+  "changed_or_missing_positive_ids": [],
+  "negative_exact_ordered_equality": true,
+  "negative_before": 9,
+  "negative_after": 9,
+  "source_files": {
+    "case_support.py": "a0943576cb728f0294860a97e68ad3c966e442131a8b7b20a73facbf32a684cd",
+    "cases.py": "d9508f95e4beb86108b8e769b9d6956cd6dcb7b24c1e94c8e4cd39a0955872d2",
+    "cases_baseline.py": "58a6ff11d707689ada9905c3336fa2df7a9a3bf68c0a0b3c88eb2ae72944e188",
+    "cases_chrono.py": "85ce823b3bd06a76d651b8c88bf2d6c64a826f51e7a236934bf7926cd86863bb",
+    "cases_engine.py": "35623eb4885664ee6521800d0be203c5f8e5ea19c0c968f0355a2105f5c3bfac",
+    "cases_named.py": "4b10e481879aac1707eb8954403d26638deacad12aa947667a7f31c536d3ed36",
+    "cases_printf.py": "40b14ecd8fd61744fc3ecc23f1779ba5a4ebe1605e2fa7e48dbd4d0b1b2c1c1c",
+    "cases_ranges.py": "a6c24329ee67b199bccd9d36e214e7bb29643382ddc579061c580e31501f8e3d",
+    "cases_std.py": "57095dd5277f2098a44f824288be53649ef106fb8c273071f005e53110bf4be0",
+    "cases_style.py": "f55e8539f2af310758988b35a524291ee03c017202a0e9615568eafc268d9d94"
+  }
+}

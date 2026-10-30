@@ -1,0 +1,1482 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "merge_replays": [
+    {
+      "commit": "f53ed014cbf252ec8dd52bef86d29fb8fe2d3cc5",
+      "parents": [
+        "9b82ac2d3ca4a1137a957804e54d3602401cfda5",
+        "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8"
+      ],
+      "tree": "e6c7ff94aef18775e16ee1a5f6d18b1764b4afef"
+    },
+    {
+      "commit": "9b82ac2d3ca4a1137a957804e54d3602401cfda5",
+      "parents": [
+        "e285726a33a1d1fc0e3870a6e58589f25cd53c83",
+        "083601f4aca62444539571ae9eac03ddde1545a0"
+      ],
+      "tree": "942be50a2a65503b262d75a904d7f5c385dd4594"
+    },
+    {
+      "commit": "14f5fd6093390f9fbfeff075b204c7a20a3ec137",
+      "parents": [
+        "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8",
+        "61c59c73c12bfaa9f413b71cb40596c98e3961ef"
+      ],
+      "tree": "321801306029de61125d902406be3b125bff9e26"
+    },
+    {
+      "commit": "923c35e806d4efdf3382f334fe944938d46fe0c7",
+      "parents": [
+        "4436d6208ed94795ee5ba9376aa76b0d00b5fe11",
+        "c5b81a4d5288e7be393d83ea28332510285b765e"
+      ],
+      "tree": "08602fb870b96dc6c266ce837565edd81efccf4b"
+    },
+    {
+      "commit": "138abf8736b7557bcc4e86addb5bb568546dcf2d",
+      "parents": [
+        "4b05109fb333f27414a0440d2cf096d8904fbff0",
+        "661db66d492a18c308ae55358a59372bd7bf541e"
+      ],
+      "tree": "d4850106d0c31597ae8fdce51fdd4f240b397f72"
+    },
+    {
+      "commit": "4b05109fb333f27414a0440d2cf096d8904fbff0",
+      "parents": [
+        "105c853df03ef06ff29b6de819e78f6b23dd4dcb",
+        "e44145c128c8cafcc061ada1de8553fcbb79e179"
+      ],
+      "tree": "9e6237d6590269392ee1c9769f05d51c9a521176"
+    },
+    {
+      "commit": "b5c9b7c97490563dd542a670ae0a547b82367246",
+      "parents": [
+        "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+        "fe65f6fcdc7443a587986283387848303809eb1c"
+      ],
+      "tree": "3f77ed06e6237badd74c6c9991c4005c8e7497ec"
+    },
+    {
+      "commit": "42d2adceb71e25cf1c5c7cfdc7d9a6a5bab2bc51",
+      "parents": [
+        "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+        "f50afd9c6852f5d60d9eabdb45ff094281bab2b6"
+      ],
+      "tree": "5114b805bb1820ee3e7215a8cf29f7883140ddaa"
+    },
+    {
+      "commit": "696c2a17db900b8bd280234e16fe6ed72ac5567a",
+      "parents": [
+        "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+        "8c25ab61e046087f5330127cd479befcadbe8cb4"
+      ],
+      "tree": "069fad041760fc4d968379d0a1c7a15e7ff5d3a8"
+    },
+    {
+      "commit": "50f4dbf5859427940a43b250ee4cae8430596846",
+      "parents": [
+        "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+        "93f6cb1ff2af9a3d0488dfd73a38c3e2eb8f1cfc"
+      ],
+      "tree": "f6d7f79ef8bfef2d0a71c98ec69caec17b803a26"
+    },
+    {
+      "commit": "d1366ecfb76dfa76b7abedf345cc03d1a0e0e3c5",
+      "parents": [
+        "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+        "d7aecfab035ffe7ff0963149ae7f25745cc0b365"
+      ],
+      "tree": "ec49b75c187ee79278dacbdb6598b0c4ceebc976"
+    },
+    {
+      "commit": "f01e027fc830f033a370df985a3bd60f1a50b78d",
+      "parents": [
+        "b9db13b214cfb120423b1980e42b066bd6492b21",
+        "98a1c1e67fba095bd678e0a1769a2ab89efa5084"
+      ],
+      "tree": "c96210f9f8a3fe33647a15d7f4248fa58b1e0043"
+    },
+    {
+      "commit": "b9db13b214cfb120423b1980e42b066bd6492b21",
+      "parents": [
+        "26f1a22c34b885d9b982a5856ae976ef8742510d",
+        "241df53a29ac8cf096aacd20542c87b33540c0bf"
+      ],
+      "tree": "6f0bf8a9b7e002f324195fbcc3075308149c4493"
+    },
+    {
+      "commit": "3c1c891f53557897049cae5fc1042365f36f6427",
+      "parents": [
+        "a0c5ef80626feb823d20a83f44e1d224508209d0",
+        "d729ba7b56c07ec711eb9a24e9e91553f661a69a"
+      ],
+      "tree": "025bf5a71074ae037cf2b6805c3b8ccd2c0be182"
+    },
+    {
+      "commit": "a0c5ef80626feb823d20a83f44e1d224508209d0",
+      "parents": [
+        "1eb907da217add109885848a5715b7475f20ccaf",
+        "dd407fc38b596fcda23152a122f12bf69829c18d"
+      ],
+      "tree": "0dc119bf2d8f4512fc1e03184717fc00f851055a"
+    },
+    {
+      "commit": "1eb907da217add109885848a5715b7475f20ccaf",
+      "parents": [
+        "9bd066f47dc6ab1154be247a68758a15f6984ffb",
+        "aa36d84aaa2a050e56fbca8d7df5085e92040e48"
+      ],
+      "tree": "2a9b58c11ef17e80221104b071bc118fc6cba388"
+    },
+    {
+      "commit": "9bd066f47dc6ab1154be247a68758a15f6984ffb",
+      "parents": [
+        "fa265f900d04ad786a189f94091339fe37bfdf91",
+        "bdcea2b2afb856a364e14b7578af9e4199bb7745"
+      ],
+      "tree": "e2a4a3290e815badae9dc7a60a58fa26ab8c4fbe"
+    },
+    {
+      "commit": "fa265f900d04ad786a189f94091339fe37bfdf91",
+      "parents": [
+        "90693f79972dec2debfdac01fe75009fe2372998",
+        "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb"
+      ],
+      "tree": "2412f82279ff38ff79d764273a9364dd77a60e17"
+    },
+    {
+      "commit": "90693f79972dec2debfdac01fe75009fe2372998",
+      "parents": [
+        "3100b450a26c95ba59769f68da45d98d8f9f9c5d",
+        "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3"
+      ],
+      "tree": "8cd0ddb3938ab08055dcaaf0d7e0c385f1710483"
+    },
+    {
+      "commit": "3100b450a26c95ba59769f68da45d98d8f9f9c5d",
+      "parents": [
+        "58472a3e12d68fd7941be8998456916d1fffd412",
+        "862369f1856e7174106cacace253671be59e7271"
+      ],
+      "tree": "d4efd95c3f84ea37463f5ea759da89c03940a75c"
+    },
+    {
+      "commit": "0de166f452c258390f02c3f0b7036983b4b255ce",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+        "465cc67d7769713b36e3789919edafb86a0c0d71"
+      ],
+      "tree": "e69b40b43917a2088731ae6410fbce2b02fd0f3e"
+    },
+    {
+      "commit": "7720ff1ea455ea24ed6a181b9de34f5b31abf763",
+      "parents": [
+        "ffdbe5689e43472a7e07d2ad06bac0f8a9f1d262",
+        "dd407fc38b596fcda23152a122f12bf69829c18d"
+      ],
+      "tree": "6af97461f672c03474283b2be506bc0e307ab13d"
+    },
+    {
+      "commit": "ffdbe5689e43472a7e07d2ad06bac0f8a9f1d262",
+      "parents": [
+        "748e523dc5b3f329a7c833227eca3de1286fef66",
+        "aa36d84aaa2a050e56fbca8d7df5085e92040e48"
+      ],
+      "tree": "219573b6e3e4d6c28b87b4759ae9f609d444376f"
+    },
+    {
+      "commit": "748e523dc5b3f329a7c833227eca3de1286fef66",
+      "parents": [
+        "ca3461ef0518398792f797977e189297ef29ec6e",
+        "bdcea2b2afb856a364e14b7578af9e4199bb7745"
+      ],
+      "tree": "447eb224aa8abd4b6a99b7db5e656cd900c3849b"
+    },
+    {
+      "commit": "ca3461ef0518398792f797977e189297ef29ec6e",
+      "parents": [
+        "000c84a1ff56e090fd9b0f62758198bdbc9cb7a1",
+        "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb"
+      ],
+      "tree": "758d6c35ec33e42aaa8432f77ee473b3385076aa"
+    },
+    {
+      "commit": "000c84a1ff56e090fd9b0f62758198bdbc9cb7a1",
+      "parents": [
+        "f554838379a0afa70244c3d77d0ec7fb81643cf4",
+        "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3"
+      ],
+      "tree": "ec221978dfa8e00bdaf96f0a71068fd80a48e6ab"
+    },
+    {
+      "commit": "f554838379a0afa70244c3d77d0ec7fb81643cf4",
+      "parents": [
+        "de6cc2f0eeee7bfabf7a82412097860ad8beec91",
+        "862369f1856e7174106cacace253671be59e7271"
+      ],
+      "tree": "a27db017f62c0cf2a1b00852837a5f24a158da31"
+    },
+    {
+      "commit": "de6cc2f0eeee7bfabf7a82412097860ad8beec91",
+      "parents": [
+        "584253ca2c158308def053f80e2537d34e052120",
+        "d729ba7b56c07ec711eb9a24e9e91553f661a69a"
+      ],
+      "tree": "75a21874c3767b2353d6339ce22f72602f9cc49b"
+    },
+    {
+      "commit": "1c67328facf29f55e2b538d66315a042478403df",
+      "parents": [
+        "9a6247fdfa739730041ce999bd1ea2acc735a1ce",
+        "50540f30832e14ee0a67ee5bfbed173ecb694c83"
+      ],
+      "tree": "9a57866d3c305a33a5c4c9b99289f5f27806a553"
+    },
+    {
+      "commit": "9a6247fdfa739730041ce999bd1ea2acc735a1ce",
+      "parents": [
+        "d3c48f67ef9817085f07e238d5cb32af35e5d7b0",
+        "2ce97b23c175321e92dc4b700d24927033911f88"
+      ],
+      "tree": "c817fb0af886c2df952827bfaa3b058b33aef565"
+    },
+    {
+      "commit": "d3c48f67ef9817085f07e238d5cb32af35e5d7b0",
+      "parents": [
+        "d49982e36e15dfbb3b52c6813216c93bca168d7e",
+        "a0d74e7370ddf6aa612fd5c368c0a86d46ae30f3"
+      ],
+      "tree": "10415b4fe5354a2bb87c531f64b72ef82e49a054"
+    },
+    {
+      "commit": "d49982e36e15dfbb3b52c6813216c93bca168d7e",
+      "parents": [
+        "7890d6146896953c93244d15d11d451dc3907da9",
+        "fd5eeb4d4be89c45c2765713d133c264a3c00687"
+      ],
+      "tree": "c32911538dc7e6f4ed5e81464e233ca5873ea525"
+    },
+    {
+      "commit": "7890d6146896953c93244d15d11d451dc3907da9",
+      "parents": [
+        "34dd186b26cb658db666ef4731163722c62d8abb",
+        "17288fc322f07956b78999bf438f10b7f3a4086b"
+      ],
+      "tree": "eadf364e78de636ae7f330865856970cf6abbe8c"
+    },
+    {
+      "commit": "34dd186b26cb658db666ef4731163722c62d8abb",
+      "parents": [
+        "76795fec192750b09c9a37da64c091c2041c7fbb",
+        "d50fe860d0424ceb002ab69cef6a9e5b4c65e83d"
+      ],
+      "tree": "0a32e6497f02cbfef61dee6fb3394f926f5ce4dc"
+    },
+    {
+      "commit": "76795fec192750b09c9a37da64c091c2041c7fbb",
+      "parents": [
+        "e955246c225129793cf0a3a46a72bdbbdedfad7e",
+        "36b45e924da8da7312408f6f948ff63f6ea22594"
+      ],
+      "tree": "790b049c8dbc4624a9efcc564fa8b0b12350a68c"
+    },
+    {
+      "commit": "e955246c225129793cf0a3a46a72bdbbdedfad7e",
+      "parents": [
+        "6498c0c38449019200b962f978ef3dbef0511003",
+        "493137b96467eaefe225f5c423dcc354db1dd4d4"
+      ],
+      "tree": "703b8127db15c88388d7e0fe217b60da6b9284cf"
+    },
+    {
+      "commit": "d28fbd5c555529f35019a491fed38170e87591f1",
+      "parents": [
+        "e8d76197383f19d122bafcc78877dd415664dfce",
+        "c90c80e02ea7e070211693d329a7aaed21f7c089"
+      ],
+      "tree": "b2be548c7571f009bdcab254c4434b4ca240ebcd"
+    },
+    {
+      "commit": "e8d76197383f19d122bafcc78877dd415664dfce",
+      "parents": [
+        "03f622ca3b6cbe7f63f87e7fa2e76b42362783ac",
+        "9fa6e8fa26c13f78962ad4ff0447a60a3f5cafa5"
+      ],
+      "tree": "16c435ba05f32989e4c71cf8c771b67f0d161861"
+    },
+    {
+      "commit": "03f622ca3b6cbe7f63f87e7fa2e76b42362783ac",
+      "parents": [
+        "99698f48b71211fa0f4b9263570219af8a6e4c33",
+        "91ebaec92fa783b997f07bebff0d19c9bfc56564"
+      ],
+      "tree": "e4bbab8964c01e4f35981b66def93611bd13b84f"
+    },
+    {
+      "commit": "99698f48b71211fa0f4b9263570219af8a6e4c33",
+      "parents": [
+        "fb78242077a4b0f923e7930c29aab38cff4581d3",
+        "cf70347b467f436447b41ea74a493e74cdc2a3e7"
+      ],
+      "tree": "780adcf9e51bca641d2a1676426beb395863c9ab"
+    },
+    {
+      "commit": "fb78242077a4b0f923e7930c29aab38cff4581d3",
+      "parents": [
+        "77df1adccd0448a46e73af6be2af9c5a2efbc1ee",
+        "baaea496731052b4d53657b8498708a7848e0d80"
+      ],
+      "tree": "f25795a6ee616141a8345ce3253de2064db033f6"
+    }
+  ],
+  "stages": [
+    {
+      "id": "ci-review-waves",
+      "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "parents": [
+        "3fe258a87675c997667c899c2b0f0cad405aad5a"
+      ],
+      "added_or_modified_paths": [
+        ".github/workflows/device.yml",
+        ".github/workflows/host.yml",
+        "docs/contributing/CI.md"
+      ]
+    },
+    {
+      "id": "ci-resource-bounds",
+      "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "parents": [
+        "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a"
+      ],
+      "added_or_modified_paths": [
+        ".github/workflows/device.yml",
+        ".github/workflows/host.yml",
+        "docs/contributing/CI_RESOURCES.md"
+      ]
+    },
+    {
+      "id": "oracle-pin",
+      "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "parents": [
+        "7974eb6762e6a15d67afba53a32b19996e3926e8"
+      ],
+      "added_or_modified_paths": [
+        "Makefile",
+        "docs/contributing/ORACLE.md",
+        "test/conformance/test_oracle_pin.py"
+      ]
+    },
+    {
+      "id": "build-registration",
+      "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "parents": [
+        "4667a850a000fae69a7fd6a04888ee41df908c2d"
+      ],
+      "added_or_modified_paths": [
+        ".github/workflows/host.yml",
+        "Makefile",
+        "docs/contributing/TESTS.md",
+        "mk/portable-tests.mk",
+        "test/conformance/test_build_registration.py"
+      ]
+    },
+    {
+      "id": "coverage-metrics",
+      "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "parents": [
+        "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1"
+      ],
+      "added_or_modified_paths": [
+        ".github/scripts/coverage_union.py",
+        "docs/conformance/coverage-metrics.md",
+        "test/conformance/test_coverage_metrics.py"
+      ]
+    },
+    {
+      "id": "coverage-policy",
+      "commit": "465cc67d7769713b36e3789919edafb86a0c0d71",
+      "parents": [
+        "5739add3e1f03dff8deca692a0a75675be2c806f"
+      ],
+      "added_or_modified_paths": [
+        ".github/workflows/host.yml",
+        "Makefile",
+        "docs/contributing/COVERAGE.md",
+        "mk/portable-coverage.mk"
+      ]
+    },
+    {
+      "id": "tool-process",
+      "commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "parents": [
+        "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-process.md",
+        "test/conformance/test_output.py",
+        "test/conformance/test_process.py",
+        "tools/process_evidence.py"
+      ]
+    },
+    {
+      "id": "tool-negative",
+      "commit": "c5b81a4d5288e7be393d83ea28332510285b765e",
+      "parents": [
+        "575165ea7f1623a5b06b9d666a769676d3e21c07"
+      ],
+      "added_or_modified_paths": [
+        "Makefile",
+        "docs/conformance/tool-negative.md",
+        "test/conformance/test_negative_driver.py",
+        "tools/compile_diagnostics.py",
+        "tools/negative.py"
+      ]
+    },
+    {
+      "id": "tool-host-oracle",
+      "commit": "4f2b6d380f3b03e453bf0d80a7ab2d26ec480c46",
+      "parents": [
+        "575165ea7f1623a5b06b9d666a769676d3e21c07"
+      ],
+      "added_or_modified_paths": [
+        "Makefile",
+        "docs/conformance/tool-host-oracle.md",
+        "test/conformance/case_support.py",
+        "test/conformance/cases.py",
+        "test/conformance/cases_baseline.py",
+        "test/conformance/test_fixture_registry.py",
+        "test/conformance/test_oracle.py",
+        "tools/backend_host.py",
+        "tools/backends.py",
+        "tools/conformance.py",
+        "tools/oracle.py"
+      ]
+    },
+    {
+      "id": "core-prepare",
+      "commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "parents": [
+        "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/core-prepare.md",
+        "include/ffmt/base.hpp",
+        "include/ffmt/detail/legacy_base.hpp"
+      ]
+    },
+    {
+      "id": "checked-config",
+      "commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "parents": [
+        "99bc52ec468208a16956aa19a5d1e00819ebfefe"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/checked-config.md",
+        "include/ffmt/detail/config.hpp"
+      ]
+    },
+    {
+      "id": "accounting",
+      "commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "parents": [
+        "954454c422b816fd8296074cd7852dc923396f6c"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/accounting.md",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/output.hpp",
+        "include/ffmt/detail/result.hpp",
+        "test/conformance/suites/core_accounting.mk",
+        "test/conformance/test_core_accounting.cpp"
+      ]
+    },
+    {
+      "id": "parsing",
+      "commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "parents": [
+        "5e9a2cc28f453419f2555b49894ff347c80a8670"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/parsing.md",
+        "include/ffmt/detail/arguments.hpp",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/parse.hpp",
+        "test/conformance/suites/core_parsing.mk",
+        "test/conformance/test_core_parsing.cpp"
+      ]
+    },
+    {
+      "id": "primitives",
+      "commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "parents": [
+        "11199fa8fd88f5278e8d17040b9313dee604290b"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/primitives.md",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/context.hpp",
+        "include/ffmt/detail/execution.hpp",
+        "include/ffmt/detail/formatters.hpp",
+        "include/ffmt/detail/integer.hpp",
+        "include/ffmt/detail/memory.hpp",
+        "include/ffmt/detail/text.hpp",
+        "include/ffmt/detail/type_categories.hpp",
+        "include/ffmt/detail/type_traits.hpp",
+        "include/ffmt/detail/validation.hpp",
+        "include/ffmt/detail/value.hpp",
+        "test/conformance/core_compare.hpp",
+        "test/conformance/suites/core_primitives.mk",
+        "test/conformance/test_core_primitives.cpp"
+      ]
+    },
+    {
+      "id": "unicode",
+      "commit": "e285726a33a1d1fc0e3870a6e58589f25cd53c83",
+      "parents": [
+        "5d7e0af475a3da5b8217842a02998229f7dc8536"
+      ],
+      "added_or_modified_paths": [
+        "LICENSES/dragonbox-Boost.txt",
+        "LICENSES/fmt.txt",
+        "NOTICE",
+        "docs/api/unicode.md",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/parse.hpp",
+        "include/ffmt/detail/text.hpp",
+        "include/ffmt/detail/type_categories.hpp",
+        "include/ffmt/detail/unicode.hpp",
+        "include/ffmt/detail/unicode_width.hpp",
+        "test/conformance/suites/core_unicode.mk",
+        "test/conformance/test_core_unicode.cpp"
+      ]
+    },
+    {
+      "id": "formatter-compatibility",
+      "commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "parents": [
+        "5d7e0af475a3da5b8217842a02998229f7dc8536"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/formatter-compatibility.md",
+        "include/ffmt/detail/context.hpp",
+        "test/conformance/suites/core_formatters.mk",
+        "test/conformance/suites/core_forwarding.mk",
+        "test/conformance/suites/formatter_composition.mk",
+        "test/conformance/test_core_formatters.cpp",
+        "test/conformance/test_core_forwarding.cpp",
+        "test/conformance/test_formatter_composition.cpp"
+      ]
+    },
+    {
+      "id": "format-as",
+      "commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "parents": [
+        "7ee21c2a808b38744643cbeaad9517436f6281a2"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/format-as.md",
+        "include/ffmt/detail/type_traits.hpp",
+        "test/conformance/suites/core_format_as.mk",
+        "test/conformance/test_core_format_as.cpp"
+      ]
+    },
+    {
+      "id": "legacy-compatibility",
+      "commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "parents": [
+        "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/legacy-compatibility.md",
+        "include/ffmt/detail/execution.hpp",
+        "include/ffmt/detail/formatters.hpp",
+        "include/ffmt/detail/type_traits.hpp",
+        "include/ffmt/detail/validation.hpp",
+        "test/conformance/suites/core_legacy.mk",
+        "test/conformance/suites/legacy_forwarding.mk",
+        "test/conformance/test_core_legacy.cpp",
+        "test/conformance/test_legacy_forwarding.cpp"
+      ]
+    },
+    {
+      "id": "conversion-preparation",
+      "commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "parents": [
+        "5d7e0af475a3da5b8217842a02998229f7dc8536"
+      ],
+      "added_or_modified_paths": [
+        "LICENSES/dragonbox-Boost.txt",
+        "LICENSES/fmt.txt",
+        "NOTICE",
+        "docs/api/conversion-preparation.md",
+        "include/ffmt/detail/dragonbox.hpp",
+        "include/ffmt/detail/exact_decimal.hpp"
+      ]
+    },
+    {
+      "id": "floating-conversion",
+      "commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "parents": [
+        "543f6913b4ada63547df28004d7ca0273b617f09"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/floating-conversion.md",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/floating.hpp",
+        "test/conformance/suites/core_conversion.mk",
+        "test/conformance/test_core_conversion.cpp"
+      ]
+    },
+    {
+      "id": "floating-formatting",
+      "commit": "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8",
+      "parents": [
+        "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/floating-formatting.md",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/numeric.hpp",
+        "include/ffmt/detail/type_categories.hpp",
+        "include/ffmt/detail/value.hpp",
+        "test/conformance/suites/core_floating.mk",
+        "test/conformance/suites/core_floating_portable.mk",
+        "test/conformance/suites/engine_fast_math.mk",
+        "test/conformance/test_core_floating.cpp",
+        "test/conformance/test_engine_fast_math.cpp"
+      ]
+    },
+    {
+      "id": "transport",
+      "commit": "105c853df03ef06ff29b6de819e78f6b23dd4dcb",
+      "parents": [
+        "f53ed014cbf252ec8dd52bef86d29fb8fe2d3cc5"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/transport.md",
+        "include/ffmt/detail/checked.hpp",
+        "include/ffmt/detail/legacy_emit.hpp",
+        "include/ffmt/detail/print_macros.hpp",
+        "include/ffmt/detail/transport.hpp",
+        "test/capture.hpp",
+        "test/conformance/suites/engine_legacy_hook.mk",
+        "test/conformance/suites/engine_transport.mk",
+        "test/conformance/suites/transport_forwarding.mk",
+        "test/conformance/test_engine_legacy_hook.cpp",
+        "test/conformance/test_engine_transport.cpp",
+        "test/conformance/test_transport_forwarding.cpp"
+      ]
+    },
+    {
+      "id": "extended-integers",
+      "commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "parents": [
+        "5d7e0af475a3da5b8217842a02998229f7dc8536"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/extended-integers.md",
+        "include/ffmt/detail/arguments.hpp",
+        "test/conformance/suites/core_int128.mk",
+        "test/conformance/suites/engine_bitint.mk",
+        "test/conformance/test_core_int128.cpp",
+        "test/conformance/test_engine_bitint.cpp"
+      ]
+    },
+    {
+      "id": "extended-floats",
+      "commit": "e44145c128c8cafcc061ada1de8553fcbb79e179",
+      "parents": [
+        "14f5fd6093390f9fbfeff075b204c7a20a3ec137"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/extended-floats.md",
+        "include/ffmt/detail/arguments.hpp",
+        "include/ffmt/detail/extended.hpp",
+        "include/ffmt/detail/floating.hpp",
+        "include/ffmt/detail/numeric.hpp",
+        "test/conformance/suites/engine_extended.mk",
+        "test/conformance/suites/engine_quad.mk",
+        "test/conformance/test_engine_extended.cpp",
+        "test/conformance/test_engine_quad.cpp"
+      ]
+    },
+    {
+      "id": "tool-snapshots",
+      "commit": "4436d6208ed94795ee5ba9376aa76b0d00b5fe11",
+      "parents": [
+        "4f2b6d380f3b03e453bf0d80a7ab2d26ec480c46"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-snapshots.md",
+        "test/conformance/test_snapshots.py",
+        "tools/conformance.py"
+      ]
+    },
+    {
+      "id": "tool-isolation",
+      "commit": "1d0552f3961a9a7cecf415b444c258e218f60e86",
+      "parents": [
+        "923c35e806d4efdf3382f334fe944938d46fe0c7"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-isolation.md",
+        "test/conformance/test_runner.py",
+        "tools/conformance.py"
+      ]
+    },
+    {
+      "id": "tool-oracle-negatives",
+      "commit": "661db66d492a18c308ae55358a59372bd7bf541e",
+      "parents": [
+        "1d0552f3961a9a7cecf415b444c258e218f60e86"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-oracle-negatives.md",
+        "tools/conformance.py"
+      ]
+    },
+    {
+      "id": "migration",
+      "commit": "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+      "parents": [
+        "138abf8736b7557bcc4e86addb5bb568546dcf2d"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/migration.md",
+        "docs/conformance/tool-engine-cases.md",
+        "include/ffmt/base.hpp",
+        "include/ffmt/core.hpp",
+        "include/ffmt/detail/sycl_formatters.hpp",
+        "test/conformance/cases_engine.py",
+        "test/conformance/suites/core_migration.mk",
+        "test/conformance/test_core_migration.cpp",
+        "test/test_body.inc",
+        "test/test_body_cuda.inc",
+        "test/test_body_host.inc",
+        "test/test_body_omp.inc",
+        "test/test_buffer_path.cpp",
+        "test/test_fast_math.cpp",
+        "test/test_floats.cpp"
+      ]
+    },
+    {
+      "id": "benchmark-primitives",
+      "commit": "75353cc601c85b52dc066f724bfd4a56fbf37a6e",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/benchmark-primitives.md",
+        "test/conformance/benchmark.cpp",
+        "test/conformance/benchmark_calls.hpp",
+        "test/conformance/benchmark_extra.cpp"
+      ]
+    },
+    {
+      "id": "benchmark-driver",
+      "commit": "d50fe860d0424ceb002ab69cef6a9e5b4c65e83d",
+      "parents": [
+        "75353cc601c85b52dc066f724bfd4a56fbf37a6e"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/benchmark-driver.md",
+        "test/conformance/test_benchmark.py",
+        "tools/benchmark.py"
+      ]
+    },
+    {
+      "id": "benchmark-resources",
+      "commit": "cf70347b467f436447b41ea74a493e74cdc2a3e7",
+      "parents": [
+        "d50fe860d0424ceb002ab69cef6a9e5b4c65e83d"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/benchmark-resources.md",
+        "test/conformance/benchmark_resource.cpp",
+        "tools/benchmark.py"
+      ]
+    },
+    {
+      "id": "tool-adapter-support",
+      "commit": "160bd04b3657bf2d33167f342bb0b360429f3c0b",
+      "parents": [
+        "1d0552f3961a9a7cecf415b444c258e218f60e86"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-adapter-support.md",
+        "test/conformance/test_device_arch.py",
+        "tools/device_arch.py"
+      ]
+    },
+    {
+      "id": "tool-cuda",
+      "commit": "fe65f6fcdc7443a587986283387848303809eb1c",
+      "parents": [
+        "160bd04b3657bf2d33167f342bb0b360429f3c0b"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-cuda.md",
+        "test/conformance/test_adapter_cuda.py",
+        "tools/backend_cuda.py"
+      ]
+    },
+    {
+      "id": "tool-hip",
+      "commit": "f50afd9c6852f5d60d9eabdb45ff094281bab2b6",
+      "parents": [
+        "160bd04b3657bf2d33167f342bb0b360429f3c0b"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-hip.md",
+        "test/conformance/test_adapter_hip.py",
+        "tools/backend_hip.py"
+      ]
+    },
+    {
+      "id": "tool-kokkos",
+      "commit": "8c25ab61e046087f5330127cd479befcadbe8cb4",
+      "parents": [
+        "1d0552f3961a9a7cecf415b444c258e218f60e86"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-kokkos.md",
+        "test/conformance/test_adapter_kokkos.py",
+        "tools/backend_kokkos.py"
+      ]
+    },
+    {
+      "id": "tool-numeric-memory",
+      "commit": "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-numeric-memory.md",
+        "test/conformance/numeric_memory.cpp.in",
+        "test/conformance/test_auxiliary_evidence.py",
+        "test/conformance/test_numeric_memory.py",
+        "tools/backend_host.py",
+        "tools/conformance.py",
+        "tools/numeric_memory.py"
+      ]
+    },
+    {
+      "id": "tool-memory-cuda",
+      "commit": "17288fc322f07956b78999bf438f10b7f3a4086b",
+      "parents": [
+        "b5c9b7c97490563dd542a670ae0a547b82367246"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-memory-cuda.md",
+        "test/conformance/test_memory_cuda.py",
+        "tools/backend_cuda.py"
+      ]
+    },
+    {
+      "id": "tool-memory-hip",
+      "commit": "fd5eeb4d4be89c45c2765713d133c264a3c00687",
+      "parents": [
+        "42d2adceb71e25cf1c5c7cfdc7d9a6a5bab2bc51"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-memory-hip.md",
+        "test/conformance/test_memory_hip.py",
+        "tools/backend_hip.py"
+      ]
+    },
+    {
+      "id": "tool-memory-kokkos",
+      "commit": "50540f30832e14ee0a67ee5bfbed173ecb694c83",
+      "parents": [
+        "696c2a17db900b8bd280234e16fe6ed72ac5567a"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-memory-kokkos.md",
+        "test/conformance/test_memory_kokkos.py",
+        "tools/backend_kokkos.py"
+      ]
+    },
+    {
+      "id": "tool-openmp",
+      "commit": "93f6cb1ff2af9a3d0488dfd73a38c3e2eb8f1cfc",
+      "parents": [
+        "160bd04b3657bf2d33167f342bb0b360429f3c0b"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-openmp.md",
+        "test/conformance/test_adapter_openmp.py",
+        "tools/backend_openmp.py"
+      ]
+    },
+    {
+      "id": "tool-memory-openmp",
+      "commit": "a0d74e7370ddf6aa612fd5c368c0a86d46ae30f3",
+      "parents": [
+        "50f4dbf5859427940a43b250ee4cae8430596846"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-memory-openmp.md",
+        "test/conformance/test_memory_openmp.py",
+        "tools/backend_openmp.py"
+      ]
+    },
+    {
+      "id": "tool-sycl",
+      "commit": "d7aecfab035ffe7ff0963149ae7f25745cc0b365",
+      "parents": [
+        "1d0552f3961a9a7cecf415b444c258e218f60e86"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-sycl.md",
+        "test/conformance/test_adapter_sycl.py",
+        "tools/backend_sycl.py"
+      ]
+    },
+    {
+      "id": "tool-memory-sycl",
+      "commit": "2ce97b23c175321e92dc4b700d24927033911f88",
+      "parents": [
+        "d1366ecfb76dfa76b7abedf345cc03d1a0e0e3c5"
+      ],
+      "added_or_modified_paths": [
+        "docs/conformance/tool-memory-sycl.md",
+        "test/conformance/test_memory_sycl.py",
+        "tools/backend_sycl.py"
+      ]
+    },
+    {
+      "id": "obsolete-deletion",
+      "commit": "cd7fcfd406baf316271d8b88dc03f712fd157d6a",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e"
+      ],
+      "added_or_modified_paths": [
+        "docs/api/obsolete-deletion.md"
+      ]
+    },
+    {
+      "id": "shared-family",
+      "commit": "c325e8408f512f38861f56983a7ec9b748290118",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/family-support.md",
+        "include/ffmt/detail/family.hpp",
+        "include/ffmt/detail/output.hpp",
+        "test/conformance/family_test_support.hpp",
+        "test/conformance/suites/family_support.mk",
+        "test/conformance/test_family_support.cpp"
+      ]
+    },
+    {
+      "id": "chrono",
+      "commit": "862369f1856e7174106cacace253671be59e7271",
+      "parents": [
+        "c325e8408f512f38861f56983a7ec9b748290118"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/chrono.md",
+        "include/ffmt/chrono.hpp",
+        "test/conformance/cases_chrono.py",
+        "test/conformance/suites/chrono.mk",
+        "test/conformance/test_chrono.cpp"
+      ]
+    },
+    {
+      "id": "enum-helpers",
+      "commit": "bdcea2b2afb856a364e14b7578af9e4199bb7745",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/enums.md",
+        "include/ffmt/enum.hpp",
+        "test/conformance/suites/enum.mk",
+        "test/conformance/test_enum.cpp"
+      ]
+    },
+    {
+      "id": "named-arguments",
+      "commit": "26f1a22c34b885d9b982a5856ae976ef8742510d",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/named-arguments.md",
+        "include/ffmt/args.hpp",
+        "test/conformance/cases_named.py",
+        "test/conformance/suites/named_arguments.mk",
+        "test/conformance/test_named_arguments.cpp"
+      ]
+    },
+    {
+      "id": "ranges",
+      "commit": "241df53a29ac8cf096aacd20542c87b33540c0bf",
+      "parents": [
+        "c325e8408f512f38861f56983a7ec9b748290118"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/ranges.md",
+        "include/ffmt/ranges.hpp",
+        "test/conformance/cases_ranges.py",
+        "test/conformance/suites/ranges.mk",
+        "test/conformance/suites/ranges_forwarding.mk",
+        "test/conformance/suites/ranges_iterators.mk",
+        "test/conformance/test_ranges.cpp",
+        "test/conformance/test_ranges_forwarding.cpp",
+        "test/conformance/test_ranges_iterators.cpp"
+      ]
+    },
+    {
+      "id": "standard-types",
+      "commit": "98a1c1e67fba095bd678e0a1769a2ab89efa5084",
+      "parents": [
+        "c325e8408f512f38861f56983a7ec9b748290118"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/standard-types.md",
+        "include/ffmt/std.hpp",
+        "test/conformance/cases_std.py",
+        "test/conformance/suites/std.mk",
+        "test/conformance/test_std.cpp"
+      ]
+    },
+    {
+      "id": "feature-integration",
+      "commit": "dd407fc38b596fcda23152a122f12bf69829c18d",
+      "parents": [
+        "f01e027fc830f033a370df985a3bd60f1a50b78d"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/feature-integration.md",
+        "test/conformance/suites/feature_integration.mk",
+        "test/conformance/test_feature_integration.cpp"
+      ]
+    },
+    {
+      "id": "std23",
+      "commit": "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3",
+      "parents": [
+        "98a1c1e67fba095bd678e0a1769a2ab89efa5084"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/std23.md",
+        "include/ffmt/std23.hpp",
+        "mk/portable-tests.mk",
+        "test/conformance/suites/std23.mk",
+        "test/conformance/test_cxx23_opt_in.py",
+        "test/conformance/test_std23.cpp"
+      ]
+    },
+    {
+      "id": "styling",
+      "commit": "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb",
+      "parents": [
+        "c325e8408f512f38861f56983a7ec9b748290118"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/styling.md",
+        "include/ffmt/color.hpp",
+        "test/conformance/cases_style.py",
+        "test/conformance/suites/style.mk",
+        "test/conformance/test_style.cpp"
+      ]
+    },
+    {
+      "id": "typed-printf",
+      "commit": "aa36d84aaa2a050e56fbca8d7df5085e92040e48",
+      "parents": [
+        "c325e8408f512f38861f56983a7ec9b748290118"
+      ],
+      "added_or_modified_paths": [
+        "docs/features/printf.md",
+        "include/ffmt/printf.hpp",
+        "test/conformance/cases_printf.py",
+        "test/conformance/suites/printf.mk",
+        "test/conformance/test_printf.cpp"
+      ]
+    },
+    {
+      "id": "cmake-package",
+      "commit": "58472a3e12d68fd7941be8998456916d1fffd412",
+      "parents": [
+        "cd7fcfd406baf316271d8b88dc03f712fd157d6a"
+      ],
+      "added_or_modified_paths": [
+        "CMakeLists.txt",
+        "cmake/ffmtConfig.cmake.in",
+        "docs/BUILD.md",
+        "examples/cmake-consumer/CMakeLists.txt",
+        "examples/cmake-consumer/main.cpp"
+      ]
+    },
+    {
+      "id": "cmake-tests",
+      "commit": "6498c0c38449019200b962f978ef3dbef0511003",
+      "parents": [
+        "3c1c891f53557897049cae5fc1042365f36f6427"
+      ],
+      "added_or_modified_paths": [
+        "CMakeLists.txt",
+        "cmake/ffmtTests.cmake",
+        "docs/BUILD.md"
+      ]
+    },
+    {
+      "id": "ci-sanitizers",
+      "commit": "584253ca2c158308def053f80e2537d34e052120",
+      "parents": [
+        "0de166f452c258390f02c3f0b7036983b4b255ce"
+      ],
+      "added_or_modified_paths": [
+        ".github/workflows/host.yml",
+        "docs/contributing/SANITIZERS.md"
+      ]
+    },
+    {
+      "id": "ci-conformance",
+      "commit": "493137b96467eaefe225f5c423dcc354db1dd4d4",
+      "parents": [
+        "7720ff1ea455ea24ed6a181b9de34f5b31abf763"
+      ],
+      "added_or_modified_paths": [
+        ".github/workflows/host.yml",
+        "docs/contributing/CONFORMANCE_CI.md"
+      ]
+    },
+    {
+      "id": "reproducer-relocation",
+      "commit": "36b45e924da8da7312408f6f948ff63f6ea22594",
+      "parents": [
+        "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1"
+      ],
+      "added_or_modified_paths": [
+        "docs/contributing/REPRODUCERS.md"
+      ]
+    },
+    {
+      "id": "api-index",
+      "commit": "77df1adccd0448a46e73af6be2af9c5a2efbc1ee",
+      "parents": [
+        "1c67328facf29f55e2b538d66315a042478403df"
+      ],
+      "added_or_modified_paths": [
+        "README.md",
+        "docs/API.md",
+        "docs/BACKENDS.md",
+        "docs/CONFORMANCE.md"
+      ]
+    },
+    {
+      "id": "backend-regression-selection",
+      "commit": "baaea496731052b4d53657b8498708a7848e0d80",
+      "parents": [
+        "f50f24930fb7875c6381e16cbb5db50ddec1eb1e"
+      ],
+      "added_or_modified_paths": [
+        "Makefile",
+        "docs/contributing/INTEL_REGRESSIONS.md"
+      ]
+    },
+    {
+      "id": "build-compiler-selection",
+      "commit": "91ebaec92fa783b997f07bebff0d19c9bfc56564",
+      "parents": [
+        "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1"
+      ],
+      "added_or_modified_paths": [
+        "Makefile",
+        "docs/contributing/COMPILER_SELECTION.md"
+      ]
+    },
+    {
+      "id": "build-header-dependencies",
+      "commit": "9fa6e8fa26c13f78962ad4ff0447a60a3f5cafa5",
+      "parents": [
+        "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1"
+      ],
+      "added_or_modified_paths": [
+        "Makefile",
+        "docs/contributing/HEADER_DEPENDENCIES.md",
+        "test/conformance/test_make_header_dependencies.py"
+      ]
+    },
+    {
+      "id": "local-ignores",
+      "commit": "c90c80e02ea7e070211693d329a7aaed21f7c089",
+      "parents": [
+        "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1"
+      ],
+      "added_or_modified_paths": [
+        ".gitignore",
+        "docs/contributing/LOCAL_OUTPUTS.md"
+      ]
+    },
+    {
+      "id": "complete",
+      "commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "parents": [
+        "d28fbd5c555529f35019a491fed38170e87591f1"
+      ],
+      "added_or_modified_paths": []
+    }
+  ],
+  "source_additions": [
+    ".github/scripts/coverage_union.py",
+    ".github/workflows/device.yml",
+    ".github/workflows/host.yml",
+    ".gitignore",
+    "CMakeLists.txt",
+    "LICENSES/dragonbox-Boost.txt",
+    "LICENSES/fmt.txt",
+    "Makefile",
+    "NOTICE",
+    "README.md",
+    "cmake/ffmtConfig.cmake.in",
+    "cmake/ffmtTests.cmake",
+    "docs/API.md",
+    "docs/BACKENDS.md",
+    "docs/BUILD.md",
+    "docs/CONFORMANCE.md",
+    "docs/api/accounting.md",
+    "docs/api/checked-config.md",
+    "docs/api/conversion-preparation.md",
+    "docs/api/core-prepare.md",
+    "docs/api/extended-floats.md",
+    "docs/api/extended-integers.md",
+    "docs/api/floating-conversion.md",
+    "docs/api/floating-formatting.md",
+    "docs/api/format-as.md",
+    "docs/api/formatter-compatibility.md",
+    "docs/api/legacy-compatibility.md",
+    "docs/api/migration.md",
+    "docs/api/obsolete-deletion.md",
+    "docs/api/parsing.md",
+    "docs/api/primitives.md",
+    "docs/api/transport.md",
+    "docs/api/unicode.md",
+    "docs/conformance/benchmark-driver.md",
+    "docs/conformance/benchmark-primitives.md",
+    "docs/conformance/benchmark-resources.md",
+    "docs/conformance/coverage-metrics.md",
+    "docs/conformance/tool-adapter-support.md",
+    "docs/conformance/tool-cuda.md",
+    "docs/conformance/tool-engine-cases.md",
+    "docs/conformance/tool-hip.md",
+    "docs/conformance/tool-host-oracle.md",
+    "docs/conformance/tool-isolation.md",
+    "docs/conformance/tool-kokkos.md",
+    "docs/conformance/tool-memory-cuda.md",
+    "docs/conformance/tool-memory-hip.md",
+    "docs/conformance/tool-memory-kokkos.md",
+    "docs/conformance/tool-memory-openmp.md",
+    "docs/conformance/tool-memory-sycl.md",
+    "docs/conformance/tool-negative.md",
+    "docs/conformance/tool-numeric-memory.md",
+    "docs/conformance/tool-openmp.md",
+    "docs/conformance/tool-oracle-negatives.md",
+    "docs/conformance/tool-process.md",
+    "docs/conformance/tool-snapshots.md",
+    "docs/conformance/tool-sycl.md",
+    "docs/contributing/CI.md",
+    "docs/contributing/CI_RESOURCES.md",
+    "docs/contributing/COMPILER_SELECTION.md",
+    "docs/contributing/CONFORMANCE_CI.md",
+    "docs/contributing/COVERAGE.md",
+    "docs/contributing/HEADER_DEPENDENCIES.md",
+    "docs/contributing/INTEL_REGRESSIONS.md",
+    "docs/contributing/LOCAL_OUTPUTS.md",
+    "docs/contributing/ORACLE.md",
+    "docs/contributing/REPRODUCERS.md",
+    "docs/contributing/SANITIZERS.md",
+    "docs/contributing/TESTS.md",
+    "docs/features/chrono.md",
+    "docs/features/enums.md",
+    "docs/features/family-support.md",
+    "docs/features/feature-integration.md",
+    "docs/features/named-arguments.md",
+    "docs/features/printf.md",
+    "docs/features/ranges.md",
+    "docs/features/standard-types.md",
+    "docs/features/std23.md",
+    "docs/features/styling.md",
+    "examples/cmake-consumer/CMakeLists.txt",
+    "examples/cmake-consumer/main.cpp",
+    "include/ffmt/args.hpp",
+    "include/ffmt/base.hpp",
+    "include/ffmt/chrono.hpp",
+    "include/ffmt/color.hpp",
+    "include/ffmt/core.hpp",
+    "include/ffmt/detail/arguments.hpp",
+    "include/ffmt/detail/checked.hpp",
+    "include/ffmt/detail/config.hpp",
+    "include/ffmt/detail/context.hpp",
+    "include/ffmt/detail/dragonbox.hpp",
+    "include/ffmt/detail/exact_decimal.hpp",
+    "include/ffmt/detail/execution.hpp",
+    "include/ffmt/detail/extended.hpp",
+    "include/ffmt/detail/family.hpp",
+    "include/ffmt/detail/floating.hpp",
+    "include/ffmt/detail/formatters.hpp",
+    "include/ffmt/detail/integer.hpp",
+    "include/ffmt/detail/legacy_emit.hpp",
+    "include/ffmt/detail/memory.hpp",
+    "include/ffmt/detail/numeric.hpp",
+    "include/ffmt/detail/output.hpp",
+    "include/ffmt/detail/parse.hpp",
+    "include/ffmt/detail/print_macros.hpp",
+    "include/ffmt/detail/result.hpp",
+    "include/ffmt/detail/sycl_formatters.hpp",
+    "include/ffmt/detail/text.hpp",
+    "include/ffmt/detail/transport.hpp",
+    "include/ffmt/detail/type_categories.hpp",
+    "include/ffmt/detail/type_traits.hpp",
+    "include/ffmt/detail/unicode.hpp",
+    "include/ffmt/detail/unicode_width.hpp",
+    "include/ffmt/detail/validation.hpp",
+    "include/ffmt/detail/value.hpp",
+    "include/ffmt/enum.hpp",
+    "include/ffmt/printf.hpp",
+    "include/ffmt/ranges.hpp",
+    "include/ffmt/std.hpp",
+    "include/ffmt/std23.hpp",
+    "mk/portable-coverage.mk",
+    "mk/portable-tests.mk",
+    "test/capture.hpp",
+    "test/conformance/benchmark.cpp",
+    "test/conformance/benchmark_calls.hpp",
+    "test/conformance/benchmark_extra.cpp",
+    "test/conformance/benchmark_resource.cpp",
+    "test/conformance/case_support.py",
+    "test/conformance/cases.py",
+    "test/conformance/cases_baseline.py",
+    "test/conformance/cases_chrono.py",
+    "test/conformance/cases_engine.py",
+    "test/conformance/cases_named.py",
+    "test/conformance/cases_printf.py",
+    "test/conformance/cases_ranges.py",
+    "test/conformance/cases_std.py",
+    "test/conformance/cases_style.py",
+    "test/conformance/core_compare.hpp",
+    "test/conformance/family_test_support.hpp",
+    "test/conformance/numeric_memory.cpp.in",
+    "test/conformance/suites/chrono.mk",
+    "test/conformance/suites/core_accounting.mk",
+    "test/conformance/suites/core_conversion.mk",
+    "test/conformance/suites/core_floating.mk",
+    "test/conformance/suites/core_floating_portable.mk",
+    "test/conformance/suites/core_format_as.mk",
+    "test/conformance/suites/core_formatters.mk",
+    "test/conformance/suites/core_forwarding.mk",
+    "test/conformance/suites/core_int128.mk",
+    "test/conformance/suites/core_legacy.mk",
+    "test/conformance/suites/core_migration.mk",
+    "test/conformance/suites/core_parsing.mk",
+    "test/conformance/suites/core_primitives.mk",
+    "test/conformance/suites/core_unicode.mk",
+    "test/conformance/suites/engine_bitint.mk",
+    "test/conformance/suites/engine_extended.mk",
+    "test/conformance/suites/engine_fast_math.mk",
+    "test/conformance/suites/engine_legacy_hook.mk",
+    "test/conformance/suites/engine_quad.mk",
+    "test/conformance/suites/engine_transport.mk",
+    "test/conformance/suites/enum.mk",
+    "test/conformance/suites/family_support.mk",
+    "test/conformance/suites/feature_integration.mk",
+    "test/conformance/suites/formatter_composition.mk",
+    "test/conformance/suites/legacy_forwarding.mk",
+    "test/conformance/suites/named_arguments.mk",
+    "test/conformance/suites/printf.mk",
+    "test/conformance/suites/ranges.mk",
+    "test/conformance/suites/ranges_forwarding.mk",
+    "test/conformance/suites/ranges_iterators.mk",
+    "test/conformance/suites/std.mk",
+    "test/conformance/suites/std23.mk",
+    "test/conformance/suites/style.mk",
+    "test/conformance/suites/transport_forwarding.mk",
+    "test/conformance/test_adapter_cuda.py",
+    "test/conformance/test_adapter_hip.py",
+    "test/conformance/test_adapter_kokkos.py",
+    "test/conformance/test_adapter_openmp.py",
+    "test/conformance/test_adapter_sycl.py",
+    "test/conformance/test_auxiliary_evidence.py",
+    "test/conformance/test_benchmark.py",
+    "test/conformance/test_build_registration.py",
+    "test/conformance/test_chrono.cpp",
+    "test/conformance/test_core_accounting.cpp",
+    "test/conformance/test_core_conversion.cpp",
+    "test/conformance/test_core_floating.cpp",
+    "test/conformance/test_core_format_as.cpp",
+    "test/conformance/test_core_formatters.cpp",
+    "test/conformance/test_core_forwarding.cpp",
+    "test/conformance/test_core_int128.cpp",
+    "test/conformance/test_core_legacy.cpp",
+    "test/conformance/test_core_migration.cpp",
+    "test/conformance/test_core_parsing.cpp",
+    "test/conformance/test_core_primitives.cpp",
+    "test/conformance/test_core_unicode.cpp",
+    "test/conformance/test_coverage_metrics.py",
+    "test/conformance/test_cxx23_opt_in.py",
+    "test/conformance/test_device_arch.py",
+    "test/conformance/test_engine_bitint.cpp",
+    "test/conformance/test_engine_extended.cpp",
+    "test/conformance/test_engine_fast_math.cpp",
+    "test/conformance/test_engine_legacy_hook.cpp",
+    "test/conformance/test_engine_quad.cpp",
+    "test/conformance/test_engine_transport.cpp",
+    "test/conformance/test_enum.cpp",
+    "test/conformance/test_family_support.cpp",
+    "test/conformance/test_feature_integration.cpp",
+    "test/conformance/test_fixture_registry.py",
+    "test/conformance/test_formatter_composition.cpp",
+    "test/conformance/test_legacy_forwarding.cpp",
+    "test/conformance/test_make_header_dependencies.py",
+    "test/conformance/test_memory_cuda.py",
+    "test/conformance/test_memory_hip.py",
+    "test/conformance/test_memory_kokkos.py",
+    "test/conformance/test_memory_openmp.py",
+    "test/conformance/test_memory_sycl.py",
+    "test/conformance/test_named_arguments.cpp",
+    "test/conformance/test_negative_driver.py",
+    "test/conformance/test_numeric_memory.py",
+    "test/conformance/test_oracle.py",
+    "test/conformance/test_oracle_pin.py",
+    "test/conformance/test_output.py",
+    "test/conformance/test_printf.cpp",
+    "test/conformance/test_process.py",
+    "test/conformance/test_ranges.cpp",
+    "test/conformance/test_ranges_forwarding.cpp",
+    "test/conformance/test_ranges_iterators.cpp",
+    "test/conformance/test_runner.py",
+    "test/conformance/test_snapshots.py",
+    "test/conformance/test_std.cpp",
+    "test/conformance/test_std23.cpp",
+    "test/conformance/test_style.cpp",
+    "test/conformance/test_transport_forwarding.cpp",
+    "test/test_body.inc",
+    "test/test_body_cuda.inc",
+    "test/test_body_host.inc",
+    "test/test_body_omp.inc",
+    "test/test_buffer_path.cpp",
+    "test/test_fast_math.cpp",
+    "test/test_floats.cpp",
+    "tools/backend_cuda.py",
+    "tools/backend_hip.py",
+    "tools/backend_host.py",
+    "tools/backend_kokkos.py",
+    "tools/backend_openmp.py",
+    "tools/backend_sycl.py",
+    "tools/backends.py",
+    "tools/benchmark.py",
+    "tools/compile_diagnostics.py",
+    "tools/conformance.py",
+    "tools/device_arch.py",
+    "tools/negative.py",
+    "tools/numeric_memory.py",
+    "tools/oracle.py",
+    "tools/process_evidence.py"
+  ]
+}

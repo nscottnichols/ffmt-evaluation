@@ -1,0 +1,11 @@
+# Captured records and raw output are generated; handwritten scripts and fixtures
+# stay visible even when preserved as inputs to an earlier validation attempt.
+docs/provenance/review-stack-validation/**/*.json linguist-generated=true
+docs/provenance/review-stack-validation/**/*.stdout linguist-generated=true
+docs/provenance/review-stack-validation/**/*.stderr linguist-generated=true
+# Preserve scheduler output byte for byte, including timestamp trailing spaces.
+docs/provenance/review-stack-validation/**/*.cobaltlog -whitespace
+# Preserve these two captured inputs exactly; their historical whitespace is
+# included in capture hashes. This does not hide handwritten files from review.
+docs/provenance/reviewer-stack-v2/archival-inputs/planning/build_tool_stages.py -whitespace
+docs/provenance/reviewer-stack-v2/archival-inputs/stage-inputs/root-stages/backend-regression-selection/changes.patch -whitespace

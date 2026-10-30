@@ -1,0 +1,3 @@
+PASS: 25 preserved evidence files, 2 historical configuration files, 17 library headers, and conformance corpus
+Library source: 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9 (local Git objects)
+Source equivalence concerns recorded bytes; it does not qualify changed runners or repeat hardware tests.

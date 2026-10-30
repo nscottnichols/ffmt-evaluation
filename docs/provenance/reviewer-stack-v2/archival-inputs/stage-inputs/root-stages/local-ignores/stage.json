@@ -1,0 +1,18 @@
+{
+  "id": "local-ignores",
+  "title": "Keep local outputs and installations untracked",
+  "dependencies": [
+    "build-registration"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [],
+  "problem": "Portable runner output, profile data and local installations must not be added accidentally when editing the library.",
+  "example": "python3 tools/conformance.py ... # artifacts/ stays untracked",
+  "design": "Restore the narrow directory and suffix ignores from the retained library snapshot.",
+  "tradeoffs": "Ignored output must be captured deliberately by an evaluation workflow when it serves as evidence.",
+  "reading_order": [
+    ".gitignore",
+    "docs/contributing/LOCAL_OUTPUTS.md"
+  ]
+}

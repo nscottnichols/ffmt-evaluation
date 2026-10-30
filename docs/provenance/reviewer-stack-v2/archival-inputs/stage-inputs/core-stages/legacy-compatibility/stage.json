@@ -1,0 +1,25 @@
+{
+  "id": "legacy-compatibility",
+  "title": "Adapt the existing static formatter protocol",
+  "dependencies": [
+    "format-as"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_legacy",
+    "test_legacy_forwarding"
+  ],
+  "docs": [
+    "docs/api/legacy-compatibility.md"
+  ],
+  "problem": "Existing ffmt formatters return a literal and a tuple from static format functions.",
+  "example": "Inside an existing ffmt::formatter<point> specialization:\nstatic constexpr auto format(point p) {\n  return ffmt::formatted<\"({}, {})\", int, int>{{p.x, p.y}};\n}\n// Formatting point{2, 7} with \"{}\" continues to write \"(2, 7)\".\n// test_core_legacy.cpp checks the corresponding narrow and wide output.",
+  "design": "Legacy values expand through the counted engine. Narrow nested literals are converted for wide destinations without allocating.",
+  "tradeoffs": "Legacy custom formatters accept empty specs; modern parse/context formatters remain the spec-aware interface.",
+  "reading_order": [
+    "include/ffmt/detail/execution.hpp",
+    "test/conformance/test_core_legacy.cpp",
+    "test/conformance/test_legacy_forwarding.cpp"
+  ]
+}

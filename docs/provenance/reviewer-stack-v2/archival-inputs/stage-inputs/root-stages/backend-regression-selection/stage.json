@@ -1,0 +1,30 @@
+{
+  "id": "backend-regression-selection",
+  "title": "Exercise the migrated buffer cases in Intel backend builds",
+  "dependencies": [
+    "migration"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [
+    [
+      "make",
+      "-n",
+      "USE_OMP_ICPX=1",
+      "compile-omp",
+      "CXX={cxx}",
+      "FMT_DIR={fmt_dir}"
+    ]
+  ],
+  "problem": "Intel SYCL and icpx OpenMP build targets still omitted buffer-specific regression cases after both API paths gained the shared engine.",
+  "example": "make USE_OMP_ICPX=1 compile-omp # includes test_buffer_path.cpp",
+  "design": "Add BUFFER_TESTS to these two source lists only after migration makes their grammar valid.",
+  "tradeoffs": "This increases accelerator compile work and does not establish accelerator runtime qualification.",
+  "reading_order": [
+    "Makefile:USE_OMP_ICPX and default SYCL source lists",
+    "docs/contributing/INTEL_REGRESSIONS.md"
+  ],
+  "patches": [
+    "changes.patch"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "original_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+  "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+  "original_tree": "f3cc9d33e0443dc9f1e1a1941c19843401988b19",
+  "stages": [
+    {
+      "stage": "infra",
+      "branch": "review/conformance",
+      "title": "Add independent portable fmt conformance tooling",
+      "commit": "3845e997e481c7f3a29b472d7f5edb331ba708b6",
+      "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a"
+    },
+    {
+      "stage": "core",
+      "branch": "review/core",
+      "title": "Unify checked formatting and bounded device output",
+      "commit": "2f7508c4fa2a2032eb9d7ce77a3d687ac34bb557",
+      "base_commit": "3845e997e481c7f3a29b472d7f5edb331ba708b6"
+    },
+    {
+      "stage": "ranges",
+      "branch": "review/ranges",
+      "title": "Add named arguments, range formatting and forwarding",
+      "commit": "3e5ae22ba1a3dd84cd4dc539eb67e788bec69dfd",
+      "base_commit": "2f7508c4fa2a2032eb9d7ce77a3d687ac34bb557"
+    },
+    {
+      "stage": "families",
+      "branch": "review/families",
+      "title": "Add chrono, standard type and styling adapters",
+      "commit": "7bccd77f4bf5517c6657c7960b73c40802c42620",
+      "base_commit": "3e5ae22ba1a3dd84cd4dc539eb67e788bec69dfd"
+    },
+    {
+      "stage": "printf",
+      "branch": "review/printf",
+      "title": "Add checked typed printf formatting",
+      "commit": "745088a005daea7abc9414916d4accb384c17bc3",
+      "base_commit": "7bccd77f4bf5517c6657c7960b73c40802c42620"
+    },
+    {
+      "stage": "bench",
+      "branch": "review/benchmarks",
+      "title": "Add verified portable formatting benchmark primitives",
+      "commit": "159fdf2a4ca1378ed38cf4c79dbddc5aba3a6f63",
+      "base_commit": "745088a005daea7abc9414916d4accb384c17bc3"
+    },
+    {
+      "stage": "integration",
+      "branch": "review/integration",
+      "title": "Package the library and document portable APIs and backends",
+      "commit": "aeff043614725d58d383c8add086f548d77d05eb",
+      "base_commit": "159fdf2a4ca1378ed38cf4c79dbddc5aba3a6f63"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+name: device
+
+# Does it compile for every device? One job per supported GPU route in the
+# README table, building every test and example of that route. Compile and
+# link only: there is no GPU to run on. clang OpenMP NVPTX compiles without
+# linking: apt.llvm.org ships no NVPTX OpenMP device runtime (only the host
+# libomptarget), so only LLVM's own runtime goes unlinked.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  nvptx:
+    if: ${{ github.event_name != 'pull_request' || !github.event.pull_request.draft }}
+    name: ${{ matrix.name }} -- ${{ matrix.mode }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: clang CUDA
+            mode: compile and link
+            targets: build/test_main_cuda examples
+            make-args: USE_CUDA_CLANG=1
+          - name: clang OpenMP offload NVPTX -O0
+            mode: compile only
+            targets: compile-omp
+            make-args: USE_OMP_CLANG=1 OMP_OPT=-O0
+          - name: clang OpenMP offload NVPTX -O2
+            mode: compile only
+            targets: compile-omp
+            make-args: USE_OMP_CLANG=1 OMP_OPT=-O2
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-clang
+      - uses: ./.github/actions/setup-cuda
+      - name: Build
+        run: make -j$(nproc) CXX=clang++-22 ${{ matrix.make-args }} ${{ matrix.targets }}
+
+  intel:
+    if: ${{ github.event_name != 'pull_request' || !github.event.pull_request.draft }}
+    # Ahead-of-time for PVC: icpx emits SPIR-V and ocloc (IGC) compiles it
+    # to the device's ISA at build time, so IGC's codegen is checked too.
+    name: ${{ matrix.name }} (AOT pvc) -- ${{ matrix.mode }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: icpx SYCL
+            mode: compile and link
+            targets: build examples
+            make-args: OPT_LEVELS="O0 O2"
+          - name: icpx OpenMP offload -O0
+            mode: compile and link
+            targets: build/test_main_omp examples
+            make-args: USE_OMP_ICPX=1 OMP_OPT=-O0
+          - name: icpx OpenMP offload -O2
+            mode: compile and link
+            targets: build/test_main_omp examples
+            make-args: USE_OMP_ICPX=1 OMP_OPT=-O2
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-oneapi
+      - name: Build
+        run: |
+          source /opt/intel/oneapi/setvars.sh
+          make -j$(nproc) CXX=icpx AOT_DEVICE=pvc ${{ matrix.make-args }} ${{ matrix.targets }}

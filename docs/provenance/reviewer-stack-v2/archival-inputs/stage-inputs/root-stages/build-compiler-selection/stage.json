@@ -1,0 +1,27 @@
+{
+  "id": "build-compiler-selection",
+  "title": "Resolve AdaptiveCpp through the caller environment",
+  "dependencies": [
+    "build-registration"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [
+    [
+      "make",
+      "-n",
+      "USE_ACPP=1",
+      "compile-omp",
+      "CXX={cxx}",
+      "FMT_DIR={fmt_dir}"
+    ]
+  ],
+  "problem": "The AdaptiveCpp branch prepended a path from a developer machine and could select an unintended installation.",
+  "example": "PATH=/my/compiler/bin:$PATH make USE_ACPP=1 compile-omp",
+  "design": "Remove the site-specific PATH assignment and retain the existing backend flags and explicit CXX override behavior.",
+  "tradeoffs": "Callers must load or provide their own compiler environment; this check does not claim an AdaptiveCpp runtime result.",
+  "reading_order": [
+    "Makefile:USE_ACPP",
+    "docs/contributing/COMPILER_SELECTION.md"
+  ]
+}

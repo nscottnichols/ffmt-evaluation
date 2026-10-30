@@ -1,0 +1,49 @@
+{
+  "id": "named-arguments",
+  "title": "Add referenced named arguments",
+  "dependencies": [
+    "migration"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "named_arguments"
+    ],
+    "commands": [
+      "make build/focused_named_arguments CXX=\"$CXX\" && ./build/focused_named_arguments"
+    ]
+  },
+  "problem": "Resolve human-readable field names while retaining typed value references.",
+  "example": "#include <ffmt/args.hpp>\nchar out[16];\nauto result = ffmt::format_to_n(out, sizeof out, \"{value:04x}\", ffmt::arg(\"value\", 42));\n// out contains \"002a\"; result.written == result.required == 4.",
+  "design": "Name lookup is runtime; wrappers do not allocate or own their referents.",
+  "tradeoffs": "`ffmt::arg(name, value)` stores a name view and a value reference. The name\ncharacters and value must outlive use of the wrapper; temporary values remain\nvalid through the formatting expression. Names and named width/precision fields\nare resolved at runtime. Literal parsing checks structural syntax, but cannot\nfully validate a named field's type/specification because names are runtime data.\nUse checked results to observe unresolved names or incompatible specifications.",
+  "reading_order": [
+    "include/ffmt/args.hpp",
+    "test/conformance/test_named_arguments.cpp"
+  ],
+  "docs": [
+    "docs/features/named-arguments.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Borrowing/lifetime comments and conventional header layout; decomposed named tests plus direct missing-name, incompatible-spec and invalid-width status regressions. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "named_arguments"
+    ],
+    "fixture_modules": [
+      "cases_named.py"
+    ]
+  },
+  "before": "A checked core call with {value:04x} has no name wrapper to bind value; use positional indices instead.",
+  "after": "#include <ffmt/args.hpp>\nchar out[16];\nauto result = ffmt::format_to_n(out, sizeof out, \"{value:04x}\", ffmt::arg(\"value\", 42));\n// out contains \"002a\"; result.written == result.required == 4.",
+  "validation": {
+    "commands": [
+      "make build/focused_named_arguments CXX=\"$CXX\" && ./build/focused_named_arguments"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tool-memory-sycl",
+  "title": "Execute numeric memory records through the SYCL adapter",
+  "dependencies": [
+    "tool-numeric-memory",
+    "tool-sycl"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_memory_sycl.py"
+  ],
+  "problem": "SYCL stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+  "example": "GPU queue: memcpy(input) -> memset(output) -> parallel_for(format_record)\n-> memcpy(output) -> serialize(input, output); every stage waits and reports exceptions",
+  "design": "Use a GPU queue and explicit device USM allocations. Wait on input copies, zeroing, parallel_for and output copies with wait_and_throw before freeing memory and serializing results.",
+  "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+  "reading_order": [
+    "tools/backend_sycl.py:numeric_launcher",
+    "test/conformance/numeric_memory.cpp.in",
+    "test/conformance/test_memory_sycl.py"
+  ],
+  "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes."
+}

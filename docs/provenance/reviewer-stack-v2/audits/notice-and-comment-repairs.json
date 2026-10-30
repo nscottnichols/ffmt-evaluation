@@ -1,0 +1,4 @@
+{
+  "unicode": "Identical retained NOTICE and licenses accompany the independent Unicode branch, without a conversion dependency. Final integration license contents are unchanged.",
+  "coverage_policy": "Correct stale comments that still described percentage gating after its deliberate removal. No executable formatting source change."
+}

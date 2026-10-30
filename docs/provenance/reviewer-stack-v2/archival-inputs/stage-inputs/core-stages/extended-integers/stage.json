@@ -1,0 +1,26 @@
+{
+  "id": "extended-integers",
+  "title": "Format native 128-bit and bit-precise integers",
+  "dependencies": [
+    "primitives"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_int128",
+    "test_engine_bitint"
+  ],
+  "docs": [
+    "docs/api/extended-integers.md"
+  ],
+  "problem": "Standard type traits do not consistently recognize native extended integers.",
+  "example": "#include <ffmt/detail/checked.hpp>\nusing U = unsigned __int128; // when the compiler supplies this type\nchar buffer[64];\nauto result = ffmt::format_to(buffer, \"{:#x}\", U(1) << 100);\n// Writes the full native value, \"0x10000000000000000000000000\".",
+  "design": "Explicit signed and unsigned traits preserve the native width. _BitInt support follows the oracle surface through 64 bits.",
+  "tradeoffs": "Compiler extensions are conditional. Wider _BitInt values report unsupported rather than narrowing.",
+  "reading_order": [
+    "include/ffmt/detail/arguments.hpp",
+    "test/conformance/test_core_int128.cpp",
+    "test/conformance/test_engine_bitint.cpp"
+  ],
+  "source_changes": "Native extension test now returns77 when int128 is unavailable, so absence is recorded as skip rather than a passing empty test. Formatter logic is unchanged."
+}

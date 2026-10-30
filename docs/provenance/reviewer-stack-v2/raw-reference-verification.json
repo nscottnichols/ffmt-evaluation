@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "attempt": "cancelled-1011368",
+      "referenced_raw_streams_verified": 0,
+      "status": "pass"
+    },
+    {
+      "attempt": "foundations-1011365",
+      "referenced_raw_streams_verified": 68,
+      "status": "pass"
+    },
+    {
+      "attempt": "intermediates-1011366",
+      "referenced_raw_streams_verified": 1036,
+      "status": "pass"
+    },
+    {
+      "attempt": "release-cpl-1011376",
+      "referenced_raw_streams_verified": 388,
+      "status": "pass"
+    },
+    {
+      "attempt": "release-rome-1011375",
+      "referenced_raw_streams_verified": 414,
+      "status": "pass"
+    },
+    {
+      "attempt": "release-skylake-1011377",
+      "referenced_raw_streams_verified": 498,
+      "status": "pass"
+    }
+  ],
+  "scope": "Every stdout_file/stderr_file referenced by each captured top-level validation manifest is present in its per-file inventory with the exact recorded SHA-256."
+}

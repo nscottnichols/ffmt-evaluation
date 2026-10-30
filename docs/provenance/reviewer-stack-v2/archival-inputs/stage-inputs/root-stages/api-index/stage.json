@@ -1,0 +1,43 @@
+{
+  "id": "api-index",
+  "title": "Make library contracts and portable guides easy to navigate",
+  "dependencies": [
+    "cmake-tests",
+    "ci-conformance",
+    "reproducer-relocation",
+    "benchmark-driver",
+    "tool-memory-cuda",
+    "tool-memory-hip",
+    "tool-memory-openmp",
+    "tool-memory-sycl",
+    "tool-memory-kokkos"
+  ],
+  "change_kind": "documentation",
+  "remove": [],
+  "tests": [],
+  "docs": [
+    "docs/API.md",
+    "docs/BACKENDS.md",
+    "docs/CONFORMANCE.md"
+  ],
+  "problem": "The top-level README combines setup, output contracts, all optional families and research links in one dense page.",
+  "example": "#include <ffmt/base.hpp>\nffmt::println(\"value = {:04x}\", 42);\n// Follow API/build/backend/conformance guides for the corresponding detail.",
+  "design": "Keep one short entry page and move detailed output/customization/configuration contracts into a linked API guide. Feature guides remain with their implementations; build and conformance pages use the actual split test names.",
+  "tradeoffs": "Readers follow focused pages for detail. Documentation describes supported contracts and sampled tests rather than implying universal backend or fmt conformance.",
+  "reading_order": [
+    "README.md",
+    "docs/API.md",
+    "docs/BUILD.md",
+    "docs/BACKENDS.md",
+    "docs/CONFORMANCE.md"
+  ],
+  "validation": {
+    "commands": [
+      "Check all repository-relative Markdown links against the assembled checkout.",
+      "Review examples against the public base and optional-header interfaces; formatter implementation is unchanged."
+    ],
+    "results": "Pending independent review and assembled portable validation.",
+    "limitations": "Documentation/link checks are read-only. Existing portable tests substantiate examples; no hardware campaign rerun follows this navigation change."
+  },
+  "source_changes": "Build integration and documentation only; no formatter implementation changes."
+}

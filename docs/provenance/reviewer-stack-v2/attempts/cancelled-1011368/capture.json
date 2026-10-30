@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "status": "cancelled_before_execution",
+  "cobalt_jobid": "1011368",
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "submission",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z",
+      "handwritten_visible": false
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "submission/assembly-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/assembly-index.json",
+      "storage": "visible",
+      "bytes": 161270,
+      "sha256": "162ca701e0c0d1ab35f740c43b2161781c21b9cb578125b3cce9d2834a0f3f79"
+    },
+    {
+      "relative_path": "submission/preflight.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/preflight.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "submission/preflight.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/preflight.stdout",
+      "storage": "archive",
+      "bytes": 76,
+      "sha256": "3e8b379c09c9b0ae812b9378db6fe04bb61d58d72fc4a00611dfb74b42dd2ed6"
+    },
+    {
+      "relative_path": "submission/qdel.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/qdel.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "submission/qdel.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/qdel.stdout",
+      "storage": "archive",
+      "bytes": 79,
+      "sha256": "eb8e5a21de0d33d25defb957914c87dbb0ed7b9a39571091dad1c227a19bc79b"
+    },
+    {
+      "relative_path": "submission/qstat-before-cancel.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/qstat-before-cancel.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "submission/qstat-before-cancel.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/qstat-before-cancel.stdout",
+      "storage": "archive",
+      "bytes": 165,
+      "sha256": "0c9693abbdf12abadea5e835838faa83b1326304b6ac0cbc8e92e2ce6696cdd6"
+    },
+    {
+      "relative_path": "submission/qsub.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/qsub.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "submission/qsub.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/qsub.stdout",
+      "storage": "archive",
+      "bytes": 8,
+      "sha256": "f4fb3af75410a228b9a7998453d8b86ab32f4ed9cc72cdfdaeb0ae0201babbc0"
+    },
+    {
+      "relative_path": "submission/review-final-20261023T225506Z.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/review-final-20261023T225506Z.cobaltlog",
+      "storage": "archive",
+      "bytes": 1481,
+      "sha256": "92477605d90657643ba00fbf10ccc5bc8d9a259e0f9aa057818578f70dcd7537"
+    },
+    {
+      "relative_path": "submission/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/submission.json",
+      "storage": "visible",
+      "bytes": 16000,
+      "sha256": "c313941b0a34499da8f4fa68faedea1b14f84109a9d29004aa20cef56012a450"
+    },
+    {
+      "relative_path": "submission/submit_remaining.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/submit_remaining.py",
+      "storage": "visible",
+      "bytes": 7098,
+      "sha256": "e6dbc392275a7630018c4010cf34c3a44e03567716788eb416b201168abcac75"
+    },
+    {
+      "relative_path": "submission/validate-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/validate-cobalt.sh",
+      "storage": "visible",
+      "bytes": 1083,
+      "sha256": "840c47f10dc265a12b891cd499a31d90a3ccac48b205f1bd83364cf45a3cda4f"
+    },
+    {
+      "relative_path": "submission/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/validate.py",
+      "storage": "visible",
+      "bytes": 21592,
+      "sha256": "28b818689466d20ec4b1fbea8a8f930a248ff28691fbd450756146e6d206b9bf"
+    }
+  ],
+  "archive_sha256": "fd88ee74b6fb9d4462cdad62b78d883d0f03092b2cf2c046ac4c4c21c1d237d5"
+}

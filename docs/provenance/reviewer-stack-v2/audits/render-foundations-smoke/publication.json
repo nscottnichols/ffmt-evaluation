@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "github_repository": "nscottnichols/ffmt",
+  "prs": [
+    {
+      "id": "ci-review-waves",
+      "title": "Run hosted compiler CI when a review wave becomes ready",
+      "head": "review-v2/ci-review-waves",
+      "base": "main",
+      "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "wave": 1,
+      "draft": false,
+      "qualified": true,
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/ci-review-waves.md",
+      "body_sha256": "ea51fe649e004c2f9a3492d88aa79a64fecba8a3f3c724877a496cddfb2a6587",
+      "qualification_manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "qualification_job": "1011365",
+      "result_counts": {
+        "pass": 4,
+        "not_applicable": 2
+      }
+    },
+    {
+      "id": "ci-resource-bounds",
+      "title": "Bound template-build concurrency and cancel stale CI revisions",
+      "head": "review-v2/ci-resource-bounds",
+      "base": "review-v2/ci-review-waves",
+      "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "base_commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "wave": 1,
+      "draft": false,
+      "qualified": true,
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/ci-resource-bounds.md",
+      "body_sha256": "74fe9ce7722e7941d901269537020d42b66c50394d8892fbe3353722f9229626",
+      "qualification_manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "qualification_job": "1011365",
+      "result_counts": {
+        "pass": 4,
+        "not_applicable": 2
+      }
+    },
+    {
+      "id": "oracle-pin",
+      "title": "Pin the shared fmt oracle to an immutable revision",
+      "head": "review-v2/oracle-pin",
+      "base": "review-v2/ci-resource-bounds",
+      "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "base_commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "wave": 1,
+      "draft": false,
+      "qualified": true,
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/oracle-pin.md",
+      "body_sha256": "623b659e8a863bddb64e7ffde7c7a4de3ab751a60f873a96b204b9e933f730b3",
+      "qualification_manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "qualification_job": "1011365",
+      "result_counts": {
+        "pass": 6,
+        "not_applicable": 2
+      }
+    },
+    {
+      "id": "build-registration",
+      "title": "Register portable capability tests without silently omitting sources",
+      "head": "review-v2/build-registration",
+      "base": "review-v2/oracle-pin",
+      "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "base_commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "wave": 1,
+      "draft": false,
+      "qualified": true,
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/build-registration.md",
+      "body_sha256": "5f1a3a0121bd70f08e941b99ee9fca07ce93a1791e7780916d76f3e5cd7f8b8e",
+      "qualification_manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "qualification_job": "1011365",
+      "result_counts": {
+        "pass": 5,
+        "not_applicable": 2
+      }
+    },
+    {
+      "id": "coverage-metrics",
+      "title": "Report source-file region, executable-line and branch coverage",
+      "head": "review-v2/coverage-metrics",
+      "base": "review-v2/build-registration",
+      "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "base_commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "wave": 1,
+      "draft": false,
+      "qualified": true,
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/coverage-metrics.md",
+      "body_sha256": "db4338cc751c3efffcf961e4a49e56d01d34e857ca1f3a3e53dd36f404681902",
+      "qualification_manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "qualification_job": "1011365",
+      "result_counts": {
+        "pass": 6,
+        "not_applicable": 2
+      }
+    },
+    {
+      "id": "coverage-policy",
+      "title": "Replace the blocking coverage regression gate with reporting",
+      "head": "review-v2/coverage-policy",
+      "base": "review-v2/coverage-metrics",
+      "commit": "124eb4a049b3e08070e75e674d22290c982697c5",
+      "base_commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "wave": 1,
+      "draft": false,
+      "qualified": true,
+      "body_file": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/render-foundations-smoke/coverage-policy.md",
+      "body_sha256": "7f533cd815c5b5ec9ee3c2a6e2aa82f32c238f3fd6b6b1caeb508781fdac973b",
+      "qualification_manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "qualification_job": "1011365",
+      "result_counts": {
+        "pass": 5,
+        "not_applicable": 2
+      }
+    }
+  ]
+}

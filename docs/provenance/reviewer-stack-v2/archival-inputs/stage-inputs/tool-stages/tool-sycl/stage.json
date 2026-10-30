@@ -1,0 +1,21 @@
+{
+  "id": "tool-sycl",
+  "title": "Add independent SYCL differential execution adapter",
+  "dependencies": [
+    "tool-isolation"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_adapter_sycl.py"
+  ],
+  "problem": "SYCL implementations may select different devices, and asynchronous kernel errors need to be observed before stdout comparison.",
+  "example": "--route sycl uses icpx -fsycl; --route acpp uses AdaptiveCpp generic targets.\nThe launcher requests sycl::gpu_selector_v, records the device name/fp64 support,\nand waits with wait_and_throw() before judging output.",
+  "design": "Keep Intel SYCL and AdaptiveCpp compiler flags in one handwritten SYCL adapter. A mandatory GPU selector and explicit exception-aware wait prevent CPU fallback or pending errors from looking like a formatting pass.",
+  "tradeoffs": "The caller supplies a working SYCL GPU runtime. Python tests check selection, launch/wait structure and flag overrides; accelerator execution is not qualified here.",
+  "reading_order": [
+    "tools/backend_sycl.py",
+    "test/conformance/test_adapter_sycl.py"
+  ],
+  "docs": "Use a GPU selector, launch one SYCL task, and retain its device name. Execution requires SYCL or AdaptiveCpp GPU support; a CPU fallback cannot pass."
+}

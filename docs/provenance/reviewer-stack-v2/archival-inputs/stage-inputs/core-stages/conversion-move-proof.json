@@ -1,0 +1,12 @@
+{
+  "dragonbox.hpp": {
+    "source_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_file": "include/ffmt/base.hpp",
+    "body_sha256": "ff4feac86fe969836835ac2d8e51a3c5debc95428f41c6586bac92bfc8894bf2"
+  },
+  "exact_decimal.hpp": {
+    "source_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_file": "include/ffmt/base.hpp",
+    "body_sha256": "61e4913d18d342d577d93a763f93afd74e5db5da754f4413db1ebe9a00e18c5b"
+  }
+}

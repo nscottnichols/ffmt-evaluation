@@ -1,0 +1,645 @@
+[
+  {
+    "stage": "tool-process",
+    "dependencies": [
+      "tool-process"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-xtjb4bak/test/conformance",
+          "-p",
+          "test_output.py"
+        ],
+        "exit_code": 0,
+        "output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-xtjb4bak/test/conformance",
+          "-p",
+          "test_process.py"
+        ],
+        "exit_code": 0,
+        "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 3.059s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-negative",
+    "dependencies": [
+      "tool-process",
+      "tool-negative"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-hxia7kg7/test/conformance",
+          "-p",
+          "test_negative_driver.py"
+        ],
+        "exit_code": 0,
+        "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-host-oracle",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-7ha86toj/test/conformance",
+          "-p",
+          "test_fixture_registry.py"
+        ],
+        "exit_code": 0,
+        "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.002s\n\nOK\n"
+      },
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-7ha86toj/test/conformance",
+          "-p",
+          "test_oracle.py"
+        ],
+        "exit_code": 0,
+        "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.135s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-snapshots",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-lsgzfhii/test/conformance",
+          "-p",
+          "test_snapshots.py"
+        ],
+        "exit_code": 0,
+        "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.033s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-isolation",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-vlovk9el/test/conformance",
+          "-p",
+          "test_runner.py"
+        ],
+        "exit_code": 0,
+        "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.010s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-adapter-support",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-adapter-support"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-qs4bzgy4/test/conformance",
+          "-p",
+          "test_device_arch.py"
+        ],
+        "exit_code": 0,
+        "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.003s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-cuda",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-adapter-support",
+      "tool-cuda"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-5kt_5q2e/test/conformance",
+          "-p",
+          "test_adapter_cuda.py"
+        ],
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-hip",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-adapter-support",
+      "tool-hip"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-f2zyert2/test/conformance",
+          "-p",
+          "test_adapter_hip.py"
+        ],
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-sycl",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-sycl"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-vk8bha64/test/conformance",
+          "-p",
+          "test_adapter_sycl.py"
+        ],
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-openmp",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-adapter-support",
+      "tool-openmp"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-iuoa3ton/test/conformance",
+          "-p",
+          "test_adapter_openmp.py"
+        ],
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-kokkos",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-kokkos"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-16uzdy5h/test/conformance",
+          "-p",
+          "test_adapter_kokkos.py"
+        ],
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-oracle-negatives",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives"
+    ],
+    "pass_": true,
+    "tests": []
+  },
+  {
+    "stage": "tool-engine-cases",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives",
+      "tool-engine-cases"
+    ],
+    "pass_": true,
+    "tests": []
+  },
+  {
+    "stage": "tool-numeric-memory",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives",
+      "tool-numeric-memory"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-5r04172n/test/conformance",
+          "-p",
+          "test_auxiliary_evidence.py"
+        ],
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.011s\n\nOK\n"
+      },
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-5r04172n/test/conformance",
+          "-p",
+          "test_numeric_memory.py"
+        ],
+        "exit_code": 0,
+        "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-memory-cuda",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives",
+      "tool-numeric-memory",
+      "tool-adapter-support",
+      "tool-cuda",
+      "tool-memory-cuda"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-3samomh2/test/conformance",
+          "-p",
+          "test_memory_cuda.py"
+        ],
+        "exit_code": 0,
+        "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-memory-hip",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives",
+      "tool-numeric-memory",
+      "tool-adapter-support",
+      "tool-hip",
+      "tool-memory-hip"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-lvasf6w_/test/conformance",
+          "-p",
+          "test_memory_hip.py"
+        ],
+        "exit_code": 0,
+        "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-memory-sycl",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives",
+      "tool-numeric-memory",
+      "tool-sycl",
+      "tool-memory-sycl"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-olas85au/test/conformance",
+          "-p",
+          "test_memory_sycl.py"
+        ],
+        "exit_code": 0,
+        "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-memory-openmp",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives",
+      "tool-numeric-memory",
+      "tool-adapter-support",
+      "tool-openmp",
+      "tool-memory-openmp"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-8m98pfj2/test/conformance",
+          "-p",
+          "test_memory_openmp.py"
+        ],
+        "exit_code": 0,
+        "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "tool-memory-kokkos",
+    "dependencies": [
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "tool-negative",
+      "tool-isolation",
+      "tool-oracle-negatives",
+      "tool-numeric-memory",
+      "tool-kokkos",
+      "tool-memory-kokkos"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-tssayl8p/test/conformance",
+          "-p",
+          "test_memory_kokkos.py"
+        ],
+        "exit_code": 0,
+        "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "coverage-metrics",
+    "dependencies": [
+      "coverage-metrics"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-767_8pa5/test/conformance",
+          "-p",
+          "test_coverage_metrics.py"
+        ],
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.002s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "benchmark-primitives",
+    "dependencies": [
+      "benchmark-primitives"
+    ],
+    "pass_": true,
+    "tests": []
+  },
+  {
+    "stage": "benchmark-driver",
+    "dependencies": [
+      "benchmark-primitives",
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "benchmark-driver"
+    ],
+    "pass_": true,
+    "tests": [
+      {
+        "command": [
+          "/home/nnichols/.local/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/tmp/ffmt-tool-prefix-9m02uov8/test/conformance",
+          "-p",
+          "test_benchmark.py"
+        ],
+        "exit_code": 0,
+        "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "stage": "benchmark-resources",
+    "dependencies": [
+      "benchmark-primitives",
+      "tool-process",
+      "tool-host-oracle",
+      "tool-snapshots",
+      "benchmark-driver",
+      "benchmark-resources"
+    ],
+    "pass_": true,
+    "tests": []
+  }
+]

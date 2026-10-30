@@ -1,0 +1,310 @@
+[
+  {
+    "stage": "core-prepare",
+    "dependencies": [],
+    "entry": "ffmt/base.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "checked-config",
+    "dependencies": [
+      "core-prepare"
+    ],
+    "entry": "ffmt/detail/config.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "accounting",
+    "dependencies": [
+      "checked-config"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "parsing",
+    "dependencies": [
+      "accounting"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "primitives",
+    "dependencies": [
+      "parsing"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "conversion-preparation",
+    "dependencies": [
+      "primitives"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "floating-conversion",
+    "dependencies": [
+      "conversion-preparation"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "floating-formatting",
+    "dependencies": [
+      "floating-conversion"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "extended-integers",
+    "dependencies": [
+      "primitives"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "extended-floats",
+    "dependencies": [
+      "floating-formatting",
+      "extended-integers"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "unicode",
+    "dependencies": [
+      "primitives"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "formatter-compatibility",
+    "dependencies": [
+      "primitives"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "format-as",
+    "dependencies": [
+      "formatter-compatibility"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "legacy-compatibility",
+    "dependencies": [
+      "format-as"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "transport",
+    "dependencies": [
+      "unicode",
+      "legacy-compatibility",
+      "floating-formatting"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "migration",
+    "dependencies": [
+      "transport",
+      "extended-floats"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "stage": "obsolete-deletion",
+    "dependencies": [
+      "migration"
+    ],
+    "entry": "ffmt/detail/checked.hpp",
+    "command": [
+      "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+      "-std=c++20",
+      "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/core-header-check/include",
+      "-x",
+      "c++",
+      "-fsyntax-only",
+      "-"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  }
+]

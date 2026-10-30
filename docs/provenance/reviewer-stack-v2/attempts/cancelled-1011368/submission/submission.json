@@ -1,0 +1,376 @@
+{
+  "started": "2026-10-23T22:55:17.624115+00:00",
+  "source_index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/final-index.json",
+  "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/assembly-index.json",
+  "index_sha256": "162ca701e0c0d1ab35f740c43b2161781c21b9cb578125b3cce9d2834a0f3f79",
+  "validated_manifests": [
+    {
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826",
+      "status": "pass"
+    }
+  ],
+  "selected_stages": [
+    "extended-floats",
+    "migration",
+    "benchmark-primitives",
+    "benchmark-driver",
+    "benchmark-resources",
+    "tool-numeric-memory",
+    "tool-memory-cuda",
+    "tool-memory-hip",
+    "tool-memory-kokkos",
+    "tool-memory-openmp",
+    "tool-memory-sycl",
+    "obsolete-deletion",
+    "shared-family",
+    "chrono",
+    "enum-helpers",
+    "named-arguments",
+    "ranges",
+    "standard-types",
+    "feature-integration",
+    "std23",
+    "styling",
+    "typed-printf",
+    "cmake-package",
+    "cmake-tests",
+    "ci-sanitizers",
+    "ci-conformance",
+    "reproducer-relocation",
+    "api-index",
+    "complete"
+  ],
+  "reused_validation": [
+    {
+      "id": "ci-review-waves",
+      "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "ci-resource-bounds",
+      "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "oracle-pin",
+      "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "build-registration",
+      "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "coverage-metrics",
+      "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "coverage-policy",
+      "commit": "124eb4a049b3e08070e75e674d22290c982697c5",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    }
+  ],
+  "pending_indices": [
+    {
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "sha256": "14c2fea0473397fcd703592f16615fe2f073054e8bb5350f3236714cd048ccac"
+    }
+  ],
+  "pending_validation": [
+    {
+      "id": "tool-process",
+      "commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-negative",
+      "commit": "29dc72cd6626176a54841f92c832638ffdd02f43",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-host-oracle",
+      "commit": "493587da8d2c3ba1849dc41dc731f602f0609d24",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "core-prepare",
+      "commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "checked-config",
+      "commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "accounting",
+      "commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "parsing",
+      "commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "primitives",
+      "commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "unicode",
+      "commit": "228f1238e343389a0a40f828e32946e3fef3b7bc",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "formatter-compatibility",
+      "commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "format-as",
+      "commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "legacy-compatibility",
+      "commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "conversion-preparation",
+      "commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "floating-conversion",
+      "commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "floating-formatting",
+      "commit": "d5babb57d946351ed7ded793196f2bce83f3ebdf",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "transport",
+      "commit": "c8ba4d2a4bab3ab873bb3137113518afb0fbda7a",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "extended-integers",
+      "commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-snapshots",
+      "commit": "7ab4278dd949876f2eaaf811f3249e7cb105ad01",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-isolation",
+      "commit": "7969be714ab1eb8b295b7e88cba102e9e9177b67",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-oracle-negatives",
+      "commit": "fb67604a9640a7deb77385322cbecd691d73c50e",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-adapter-support",
+      "commit": "8947fbdca119ee796c7ee4634bc6b76dfd35ae68",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-cuda",
+      "commit": "de9fd69aa93547316d26f7e54ed0b5c45dd23360",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-hip",
+      "commit": "bc6fc34ba65f31a82086f812d0b1f2a06bb5fe9f",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-kokkos",
+      "commit": "5e4d4c0d04eb08853d462a2b9cec9760151d8134",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-openmp",
+      "commit": "2805f3bbeef5a1eab3ca8b243c8abbedf04cef05",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    },
+    {
+      "id": "tool-sycl",
+      "commit": "797b726cb5ebd0d3b460920940eaf7ad9d6da25a",
+      "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/intermediates-index.json",
+      "reason": "Exact commit is in a prior submitted run; qualification remains pending"
+    }
+  ],
+  "not_selected": [],
+  "output": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-final-20261023T225506Z",
+  "runner_sha256": "28b818689466d20ec4b1fbea8a8f930a248ff28691fbd450756146e6d206b9bf",
+  "wrapper_sha256": "840c47f10dc265a12b891cd499a31d90a3ccac48b205f1bd83364cf45a3cda4f",
+  "preflight": {
+    "command": [
+      "/home/nnichols/.local/bin/python3",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate.py",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/assembly-index.json",
+      "--repo",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+      "--preflight"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "3e8b379c09c9b0ae812b9378db6fe04bb61d58d72fc4a00611dfb74b42dd2ed6",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "purpose": "CPU-only immutable review intermediates; no GPU campaigns",
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "rome_7742",
+    "-n",
+    "1",
+    "-t",
+    "240",
+    "--cwd",
+    "/home/nnichols",
+    "-O",
+    "/home/nnichols/.cache/ffmt-cobalt/review-final-20261023T225506Z",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate-cobalt.sh",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/assembly-index.json",
+    "--repo",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+    "--fmt-dir",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "--output",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-final-20261023T225506Z",
+    "--stage",
+    "extended-floats",
+    "--stage",
+    "migration",
+    "--stage",
+    "benchmark-primitives",
+    "--stage",
+    "benchmark-driver",
+    "--stage",
+    "benchmark-resources",
+    "--stage",
+    "tool-numeric-memory",
+    "--stage",
+    "tool-memory-cuda",
+    "--stage",
+    "tool-memory-hip",
+    "--stage",
+    "tool-memory-kokkos",
+    "--stage",
+    "tool-memory-openmp",
+    "--stage",
+    "tool-memory-sycl",
+    "--stage",
+    "obsolete-deletion",
+    "--stage",
+    "shared-family",
+    "--stage",
+    "chrono",
+    "--stage",
+    "enum-helpers",
+    "--stage",
+    "named-arguments",
+    "--stage",
+    "ranges",
+    "--stage",
+    "standard-types",
+    "--stage",
+    "feature-integration",
+    "--stage",
+    "std23",
+    "--stage",
+    "styling",
+    "--stage",
+    "typed-printf",
+    "--stage",
+    "cmake-package",
+    "--stage",
+    "cmake-tests",
+    "--stage",
+    "ci-sanitizers",
+    "--stage",
+    "ci-conformance",
+    "--stage",
+    "reproducer-relocation",
+    "--stage",
+    "api-index",
+    "--stage",
+    "complete"
+  ],
+  "cobalt_output_prefix": "/home/nnichols/.cache/ffmt-cobalt/review-final-20261023T225506Z",
+  "qsub.stdout_sha256": "f4fb3af75410a228b9a7998453d8b86ab32f4ed9cc72cdfdaeb0ae0201babbc0",
+  "qsub.stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "returncode": 0,
+  "stdout": "1011368\n",
+  "stderr": "",
+  "finished": "2026-10-23T22:55:17.791126+00:00",
+  "jobid": "1011368",
+  "cancellation": {
+    "time": "2026-10-23T22:56:28.097962+00:00",
+    "command": [
+      "qdel",
+      "1011368"
+    ],
+    "returncode": 0,
+    "reason": "Parent explicitly requested cancellation while queued: known missing qualified legacy-test/reference fixtures and pending exact baseline Make/backend restoration make the frozen snapshot unsuitable for qualification. Existing intermediate job1011366 preserves actual migration failures and still qualifies unaffected commits.",
+    "status": "cancelled_before_execution",
+    "stdout_sha256": "eb8e5a21de0d33d25defb957914c87dbb0ed7b9a39571091dad1c227a19bc79b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "      Deleted Jobs\nJobID    User      \n===================\n1011368  nnichols  \n",
+    "stderr": "",
+    "scheduler_logs": [
+      {
+        "original": "/home/nnichols/.cache/ffmt-cobalt/review-final-20261023T225506Z.cobaltlog",
+        "copy": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/final-20261023T225506Z/review-final-20261023T225506Z.cobaltlog",
+        "sha256": "92477605d90657643ba00fbf10ccc5bc8d9a259e0f9aa057818578f70dcd7537"
+      }
+    ],
+    "validation_output_exists": false
+  }
+}

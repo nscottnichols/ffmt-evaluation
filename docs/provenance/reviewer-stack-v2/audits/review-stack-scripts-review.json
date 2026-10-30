@@ -1,0 +1,57 @@
+{
+  "reviewer": "review_architecture",
+  "scope": [
+    "render.py",
+    "publish.py",
+    "assemble.py"
+  ],
+  "findings": [
+    {
+      "id": "R1",
+      "status": "resolved",
+      "finding": "Dense footer repeated every logical dependency including large collection bases.",
+      "fix": "Actual base branch link plus logical prerequisite count; full table/mapping only in overview."
+    },
+    {
+      "id": "R2",
+      "status": "resolved",
+      "finding": "Renderer hardcoded Rome/ASan claims across commands with different profiles.",
+      "fix": "Derive CPU host and compiler profiles from qualification evidence; scope sanitizer claim to header and affected C++ Make suites; additional standalone/CMake/rejection commands retain their recorded flags. Show profile variables and Make flag forwarding."
+    },
+    {
+      "id": "R3",
+      "status": "resolved",
+      "finding": "Qualified local refs alone do not establish pushed PR inputs.",
+      "fix": "Publisher validates all remote head/base full SHAs with one read-only ls-remote before any GitHub write."
+    },
+    {
+      "id": "R4",
+      "status": "resolved-by-root",
+      "finding": "Partial assembly failure could lose reusable later stage cache entries.",
+      "fix": "Root added separate cache sidecar; input file hashes and explicit additional-suite metadata improve provenance."
+    },
+    {
+      "id": "R5",
+      "status": "documented-limitation",
+      "finding": "Cached multi-parent collection bases are reused from locally generated prerequisite/commit metadata; unlike stage reuse they are not replayed to re-prove tree equality on every run.",
+      "assessment": "Current root-generated cache and earlier clean-merge assembly are the provenance; no hidden resolution is introduced. A future replay/tree compare would strengthen independent reproducibility. No cache data or refs modified by this review."
+    }
+  ],
+  "readiness_semantics": "Only wave1 renders ready; later waves remain drafts. Publisher preserves existing readiness and refuses a mismatch instead of automatically promoting; never merges or pushes.",
+  "validation": [
+    "Compiled all three Python sources with compile()",
+    "Rendered six immutable passing foundation rows into scratch review bodies",
+    "Mocked matching/missing/moved remote head/base snapshots; unsafe states rejected"
+  ],
+  "not_performed": [
+    "No GitHub mutation",
+    "No ref mutation",
+    "No compiler/hardware job",
+    "No strict validation-plan matching; deferred to root until normalized commands are final"
+  ],
+  "script_sha256": {
+    "render.py": "066628a7adc83c2b4cec8104203016ef28327cdf3356f18224c8d6498c2c281f",
+    "publish.py": "97f9a6bd4a89781a2c28b91036ba6c9ab8e9da6a4a7e15d4bec98ac1ba7cd27a",
+    "assemble.py": "152fa97bccfcce422150ccfcf833044a4a66a08bfc3ec032cefc6b0b9a8e141b"
+  }
+}

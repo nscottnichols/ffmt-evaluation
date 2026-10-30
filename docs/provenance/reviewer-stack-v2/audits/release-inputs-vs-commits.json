@@ -1,0 +1,1923 @@
+{
+  "status": "pass",
+  "files": [
+    {
+      "stage": "ci-review-waves",
+      "path": ".github/workflows/device.yml",
+      "expected": "6619802134c23c118bf5d8ab30a83a7fb7bdcb2c",
+      "actual": "6619802134c23c118bf5d8ab30a83a7fb7bdcb2c",
+      "match": true
+    },
+    {
+      "stage": "ci-review-waves",
+      "path": ".github/workflows/host.yml",
+      "expected": "955feab6f180fd1c34693ef69fdef7d0a8f36098",
+      "actual": "955feab6f180fd1c34693ef69fdef7d0a8f36098",
+      "match": true
+    },
+    {
+      "stage": "ci-review-waves",
+      "path": "docs/contributing/CI.md",
+      "expected": "b5a8d61dd03d5e2a1fe1a4f0047526f2a711c777",
+      "actual": "b5a8d61dd03d5e2a1fe1a4f0047526f2a711c777",
+      "match": true
+    },
+    {
+      "stage": "ci-resource-bounds",
+      "path": ".github/workflows/device.yml",
+      "expected": "2ac9d401e95e1ed76c20936895c51761b3b821be",
+      "actual": "2ac9d401e95e1ed76c20936895c51761b3b821be",
+      "match": true
+    },
+    {
+      "stage": "ci-resource-bounds",
+      "path": ".github/workflows/host.yml",
+      "expected": "bb9610c9a2e92d0913f3477cb90cca2f6ab369d1",
+      "actual": "bb9610c9a2e92d0913f3477cb90cca2f6ab369d1",
+      "match": true
+    },
+    {
+      "stage": "ci-resource-bounds",
+      "path": "docs/contributing/CI_RESOURCES.md",
+      "expected": "f4c50afb10a38ea12798e226212699e53e213583",
+      "actual": "f4c50afb10a38ea12798e226212699e53e213583",
+      "match": true
+    },
+    {
+      "stage": "oracle-pin",
+      "path": "Makefile",
+      "expected": "53031f6caa1a9d2171f767bc735245086525b261",
+      "actual": "53031f6caa1a9d2171f767bc735245086525b261",
+      "match": true
+    },
+    {
+      "stage": "oracle-pin",
+      "path": "docs/contributing/ORACLE.md",
+      "expected": "8d9f19197b2e24a34f7243b0ba350cf07afa5a7b",
+      "actual": "8d9f19197b2e24a34f7243b0ba350cf07afa5a7b",
+      "match": true
+    },
+    {
+      "stage": "oracle-pin",
+      "path": "test/conformance/test_oracle_pin.py",
+      "expected": "17e2741c9dd3c37a865e73d0898577fc66ddc249",
+      "actual": "17e2741c9dd3c37a865e73d0898577fc66ddc249",
+      "match": true
+    },
+    {
+      "stage": "build-registration",
+      "path": ".github/workflows/host.yml",
+      "expected": "226dd3cb3bba85b76c35e0f4eaefcaf5d5345f49",
+      "actual": "226dd3cb3bba85b76c35e0f4eaefcaf5d5345f49",
+      "match": true
+    },
+    {
+      "stage": "build-registration",
+      "path": "Makefile",
+      "expected": "cad7b47d2637cd990582a67a834209505b362d04",
+      "actual": "cad7b47d2637cd990582a67a834209505b362d04",
+      "match": true
+    },
+    {
+      "stage": "build-registration",
+      "path": "docs/contributing/TESTS.md",
+      "expected": "88291a98eea58c96703e83ed10e9587970979f9c",
+      "actual": "88291a98eea58c96703e83ed10e9587970979f9c",
+      "match": true
+    },
+    {
+      "stage": "build-registration",
+      "path": "mk/portable-tests.mk",
+      "expected": "31c6a5a1036d2cc0adedab91b7158f7b8580253f",
+      "actual": "31c6a5a1036d2cc0adedab91b7158f7b8580253f",
+      "match": true
+    },
+    {
+      "stage": "build-registration",
+      "path": "test/conformance/test_build_registration.py",
+      "expected": "b1a9efba27e1bc263a099c47d9ed7204268146f6",
+      "actual": "b1a9efba27e1bc263a099c47d9ed7204268146f6",
+      "match": true
+    },
+    {
+      "stage": "coverage-metrics",
+      "path": ".github/scripts/coverage_union.py",
+      "expected": "a2f6b4923b5b967d9eb2e5087a1509997c39ec22",
+      "actual": "a2f6b4923b5b967d9eb2e5087a1509997c39ec22",
+      "match": true
+    },
+    {
+      "stage": "coverage-metrics",
+      "path": "docs/conformance/coverage-metrics.md",
+      "expected": "4d063ccc9263d4ba27ead1d94ff4ac81dba9e322",
+      "actual": "4d063ccc9263d4ba27ead1d94ff4ac81dba9e322",
+      "match": true
+    },
+    {
+      "stage": "coverage-metrics",
+      "path": "test/conformance/test_coverage_metrics.py",
+      "expected": "3b975037d304b2f5cfae116cac31b275b9b50935",
+      "actual": "3b975037d304b2f5cfae116cac31b275b9b50935",
+      "match": true
+    },
+    {
+      "stage": "coverage-policy",
+      "path": ".github/workflows/host.yml",
+      "expected": "799ffd477086cd34c6ca26b74661e642c640389e",
+      "actual": "799ffd477086cd34c6ca26b74661e642c640389e",
+      "match": true
+    },
+    {
+      "stage": "coverage-policy",
+      "path": "Makefile",
+      "expected": "e135a94f8dc6fd519746fa9b9151e387689e78b5",
+      "actual": "e135a94f8dc6fd519746fa9b9151e387689e78b5",
+      "match": true
+    },
+    {
+      "stage": "coverage-policy",
+      "path": "docs/contributing/COVERAGE.md",
+      "expected": "cfc3ebc9abecd094fce3036d3f36c69f16b208ad",
+      "actual": "cfc3ebc9abecd094fce3036d3f36c69f16b208ad",
+      "match": true
+    },
+    {
+      "stage": "coverage-policy",
+      "path": "mk/portable-coverage.mk",
+      "expected": "a52c2f0649aa0f43d66ce1469c9f79374d2101eb",
+      "actual": "a52c2f0649aa0f43d66ce1469c9f79374d2101eb",
+      "match": true
+    },
+    {
+      "stage": "tool-process",
+      "path": "docs/conformance/tool-process.md",
+      "expected": "44e415e155e3403bbd512728dcc93f30527cd752",
+      "actual": "44e415e155e3403bbd512728dcc93f30527cd752",
+      "match": true
+    },
+    {
+      "stage": "tool-process",
+      "path": "test/conformance/test_output.py",
+      "expected": "1aa4e76d84ecb91da645a9fbb0acd8b7b8fa101b",
+      "actual": "1aa4e76d84ecb91da645a9fbb0acd8b7b8fa101b",
+      "match": true
+    },
+    {
+      "stage": "tool-process",
+      "path": "test/conformance/test_process.py",
+      "expected": "8d4b3b4567ff740c4564f8f56056488703864830",
+      "actual": "8d4b3b4567ff740c4564f8f56056488703864830",
+      "match": true
+    },
+    {
+      "stage": "tool-process",
+      "path": "tools/process_evidence.py",
+      "expected": "c2719527b3f66a9dc03f2193063dcffe6f0bbd15",
+      "actual": "c2719527b3f66a9dc03f2193063dcffe6f0bbd15",
+      "match": true
+    },
+    {
+      "stage": "tool-negative",
+      "path": "Makefile",
+      "expected": "5c9b38de4cfe53840445ae9147705aa2ff46608b",
+      "actual": "5c9b38de4cfe53840445ae9147705aa2ff46608b",
+      "match": true
+    },
+    {
+      "stage": "tool-negative",
+      "path": "docs/conformance/tool-negative.md",
+      "expected": "9acc373916bf1af8e19ab00656fbcd83d7367f50",
+      "actual": "9acc373916bf1af8e19ab00656fbcd83d7367f50",
+      "match": true
+    },
+    {
+      "stage": "tool-negative",
+      "path": "test/conformance/test_negative_driver.py",
+      "expected": "014b21b921e8967ba55b59b8675919b5b659c706",
+      "actual": "014b21b921e8967ba55b59b8675919b5b659c706",
+      "match": true
+    },
+    {
+      "stage": "tool-negative",
+      "path": "tools/compile_diagnostics.py",
+      "expected": "e87030ca6b04f2b88c09f1a04c254466fc0dfe70",
+      "actual": "e87030ca6b04f2b88c09f1a04c254466fc0dfe70",
+      "match": true
+    },
+    {
+      "stage": "tool-negative",
+      "path": "tools/negative.py",
+      "expected": "26d2747d6af900fa301661afac9b9cdaf80eb50b",
+      "actual": "26d2747d6af900fa301661afac9b9cdaf80eb50b",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "Makefile",
+      "expected": "75c8971c454ef6af02585e1863778dbbd669f627",
+      "actual": "75c8971c454ef6af02585e1863778dbbd669f627",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "docs/conformance/tool-host-oracle.md",
+      "expected": "69e615b429c815cb6032811f398b0ce741d07724",
+      "actual": "69e615b429c815cb6032811f398b0ce741d07724",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "test/conformance/case_support.py",
+      "expected": "a2f91fa91be53975c202900895aa81b330bef110",
+      "actual": "a2f91fa91be53975c202900895aa81b330bef110",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "test/conformance/cases.py",
+      "expected": "776ddb8ab2f4905b5d34d1e60a13548e47c98805",
+      "actual": "776ddb8ab2f4905b5d34d1e60a13548e47c98805",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "test/conformance/cases_baseline.py",
+      "expected": "ceb4f19b871b5776b03cbea438aeb9af65ea1a1b",
+      "actual": "ceb4f19b871b5776b03cbea438aeb9af65ea1a1b",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "test/conformance/test_fixture_registry.py",
+      "expected": "31faefaeac87b0449cb2b04aca7416ac88c4cde6",
+      "actual": "31faefaeac87b0449cb2b04aca7416ac88c4cde6",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "test/conformance/test_oracle.py",
+      "expected": "d6692443f69885f6abe01dbd6c8c2a0d6b0fcf4f",
+      "actual": "d6692443f69885f6abe01dbd6c8c2a0d6b0fcf4f",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "tools/backend_host.py",
+      "expected": "783b1b58ed4c86a7dc77ca4c4216f74ff8dac8b4",
+      "actual": "783b1b58ed4c86a7dc77ca4c4216f74ff8dac8b4",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "tools/backends.py",
+      "expected": "431b6e87060f7e4142b627d6cc1826a1cfa8bf19",
+      "actual": "431b6e87060f7e4142b627d6cc1826a1cfa8bf19",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "tools/conformance.py",
+      "expected": "b41cbaf3d30d80ad822794aa0c7d28b88f760420",
+      "actual": "b41cbaf3d30d80ad822794aa0c7d28b88f760420",
+      "match": true
+    },
+    {
+      "stage": "tool-host-oracle",
+      "path": "tools/oracle.py",
+      "expected": "73d0dbb8542a259cfd1e7c78d31c1338ece2c2d1",
+      "actual": "73d0dbb8542a259cfd1e7c78d31c1338ece2c2d1",
+      "match": true
+    },
+    {
+      "stage": "core-prepare",
+      "path": "docs/api/core-prepare.md",
+      "expected": "5ae24385ecb2f16169f240c4ae28669556404ff2",
+      "actual": "5ae24385ecb2f16169f240c4ae28669556404ff2",
+      "match": true
+    },
+    {
+      "stage": "core-prepare",
+      "path": "include/ffmt/base.hpp",
+      "expected": "972e333e7beeb25d405a94b9a4f5329cdfa401d6",
+      "actual": "972e333e7beeb25d405a94b9a4f5329cdfa401d6",
+      "match": true
+    },
+    {
+      "stage": "core-prepare",
+      "path": "include/ffmt/detail/legacy_base.hpp",
+      "expected": "811eee001eccf146ae513be490bf33b2747e7588",
+      "actual": "811eee001eccf146ae513be490bf33b2747e7588",
+      "match": true
+    },
+    {
+      "stage": "checked-config",
+      "path": "docs/api/checked-config.md",
+      "expected": "fb1a1670fd389c3e3b6b9c0fed82c777c6c2262e",
+      "actual": "fb1a1670fd389c3e3b6b9c0fed82c777c6c2262e",
+      "match": true
+    },
+    {
+      "stage": "checked-config",
+      "path": "include/ffmt/detail/config.hpp",
+      "expected": "f85224ed38cb0028ed8a0cabf908185a7d572f9b",
+      "actual": "f85224ed38cb0028ed8a0cabf908185a7d572f9b",
+      "match": true
+    },
+    {
+      "stage": "accounting",
+      "path": "docs/api/accounting.md",
+      "expected": "8ffbd526a95cd778408dde6631378c0259736cd6",
+      "actual": "8ffbd526a95cd778408dde6631378c0259736cd6",
+      "match": true
+    },
+    {
+      "stage": "accounting",
+      "path": "include/ffmt/detail/checked.hpp",
+      "expected": "5e2124d85108ac8fc8ae6959381a8582c8f1865c",
+      "actual": "5e2124d85108ac8fc8ae6959381a8582c8f1865c",
+      "match": true
+    },
+    {
+      "stage": "accounting",
+      "path": "include/ffmt/detail/output.hpp",
+      "expected": "f1d0ab9d862414e0ab9772c2a94a45c4649e974d",
+      "actual": "f1d0ab9d862414e0ab9772c2a94a45c4649e974d",
+      "match": true
+    },
+    {
+      "stage": "accounting",
+      "path": "include/ffmt/detail/result.hpp",
+      "expected": "9f23485c782ee2b77199d596b51659adcb703fc4",
+      "actual": "9f23485c782ee2b77199d596b51659adcb703fc4",
+      "match": true
+    },
+    {
+      "stage": "accounting",
+      "path": "test/conformance/test_core_accounting.cpp",
+      "expected": "8c4386bd6848f93fed1b9dde825bfdbf65fe41f5",
+      "actual": "8c4386bd6848f93fed1b9dde825bfdbf65fe41f5",
+      "match": true
+    },
+    {
+      "stage": "parsing",
+      "path": "docs/api/parsing.md",
+      "expected": "40a528e4512d9a9b45f5e9e0e47a305f71dabfea",
+      "actual": "40a528e4512d9a9b45f5e9e0e47a305f71dabfea",
+      "match": true
+    },
+    {
+      "stage": "parsing",
+      "path": "include/ffmt/detail/arguments.hpp",
+      "expected": "cd25ce03d1a7c8e03c990ccb2d382b31d0dd0818",
+      "actual": "cd25ce03d1a7c8e03c990ccb2d382b31d0dd0818",
+      "match": true
+    },
+    {
+      "stage": "parsing",
+      "path": "include/ffmt/detail/checked.hpp",
+      "expected": "13f5b758da9ae3fd8eb82f99c1d669b25c908698",
+      "actual": "13f5b758da9ae3fd8eb82f99c1d669b25c908698",
+      "match": true
+    },
+    {
+      "stage": "parsing",
+      "path": "include/ffmt/detail/parse.hpp",
+      "expected": "3f25385fc12abe8358fcc411d35f1ee36f69ed87",
+      "actual": "3f25385fc12abe8358fcc411d35f1ee36f69ed87",
+      "match": true
+    },
+    {
+      "stage": "parsing",
+      "path": "test/conformance/test_core_parsing.cpp",
+      "expected": "efa431b32259e068a14ffa9ae44dbbe5a3f8def0",
+      "actual": "efa431b32259e068a14ffa9ae44dbbe5a3f8def0",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "docs/api/primitives.md",
+      "expected": "ab15594be3a44ef8e1cc1ccd61cf1c73e32c367a",
+      "actual": "ab15594be3a44ef8e1cc1ccd61cf1c73e32c367a",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/checked.hpp",
+      "expected": "3f33931f48b406aacd3a6332f9e3efa42b66b91e",
+      "actual": "3f33931f48b406aacd3a6332f9e3efa42b66b91e",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/context.hpp",
+      "expected": "86cf9bf25ea2eb0eac2254696d4cf12a4b24802e",
+      "actual": "86cf9bf25ea2eb0eac2254696d4cf12a4b24802e",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/execution.hpp",
+      "expected": "46a8d2463e4bac0df1db9b64b2bda629f9d4caf2",
+      "actual": "46a8d2463e4bac0df1db9b64b2bda629f9d4caf2",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/formatters.hpp",
+      "expected": "9903f0480b3450623816c41b765f30001811b161",
+      "actual": "9903f0480b3450623816c41b765f30001811b161",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/integer.hpp",
+      "expected": "cbe54113bd85521fdbc9f72431c630f5ab8e5a81",
+      "actual": "cbe54113bd85521fdbc9f72431c630f5ab8e5a81",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/memory.hpp",
+      "expected": "2219d93b2d32f7aae994e389070c01b8419d2318",
+      "actual": "2219d93b2d32f7aae994e389070c01b8419d2318",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/text.hpp",
+      "expected": "cfae15909860f43b2c5006f8eee40809d5b638fe",
+      "actual": "cfae15909860f43b2c5006f8eee40809d5b638fe",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/type_categories.hpp",
+      "expected": "54f316421313fea1fb94ba3c35d1dc146efc83ee",
+      "actual": "54f316421313fea1fb94ba3c35d1dc146efc83ee",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/type_traits.hpp",
+      "expected": "405030314558501bdf452a0abcae2cb07c941cf7",
+      "actual": "405030314558501bdf452a0abcae2cb07c941cf7",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/validation.hpp",
+      "expected": "184d0748a33ac1707e1bd04f7ed5d7579df4daec",
+      "actual": "184d0748a33ac1707e1bd04f7ed5d7579df4daec",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "include/ffmt/detail/value.hpp",
+      "expected": "eb73c80e31a52e86caa947c677c033ac309295c8",
+      "actual": "eb73c80e31a52e86caa947c677c033ac309295c8",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "test/conformance/core_compare.hpp",
+      "expected": "ebb99b1bf134a624d0c5d5308ec575577f3ac247",
+      "actual": "ebb99b1bf134a624d0c5d5308ec575577f3ac247",
+      "match": true
+    },
+    {
+      "stage": "primitives",
+      "path": "test/conformance/test_core_primitives.cpp",
+      "expected": "b73963cea77a170f7ebe0e33318836bb108c9a2e",
+      "actual": "b73963cea77a170f7ebe0e33318836bb108c9a2e",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "LICENSES/dragonbox-Boost.txt",
+      "expected": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "actual": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "LICENSES/fmt.txt",
+      "expected": "795fdaec8f2ce6fcc97bbb15d1a6ac073af7bd17",
+      "actual": "795fdaec8f2ce6fcc97bbb15d1a6ac073af7bd17",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "NOTICE",
+      "expected": "0ece453b79e521dea5b2ccd8d330de620b823066",
+      "actual": "0ece453b79e521dea5b2ccd8d330de620b823066",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "docs/api/unicode.md",
+      "expected": "e85c5376fdfc96ea62e5742bf992dbfbbd88c0f0",
+      "actual": "e85c5376fdfc96ea62e5742bf992dbfbbd88c0f0",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "include/ffmt/detail/checked.hpp",
+      "expected": "3a09d01154230b9b2e4bedfd938c8ff3ac386ea2",
+      "actual": "3a09d01154230b9b2e4bedfd938c8ff3ac386ea2",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "include/ffmt/detail/parse.hpp",
+      "expected": "4b1624277ec556784dc018284a4bde9ee5062262",
+      "actual": "4b1624277ec556784dc018284a4bde9ee5062262",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "include/ffmt/detail/text.hpp",
+      "expected": "351451d7eed6a1fe7ebd741c72d0002bb0e289b9",
+      "actual": "351451d7eed6a1fe7ebd741c72d0002bb0e289b9",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "include/ffmt/detail/type_categories.hpp",
+      "expected": "f1cda9398376edc1bbce63e09609fa127c367227",
+      "actual": "f1cda9398376edc1bbce63e09609fa127c367227",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "include/ffmt/detail/unicode.hpp",
+      "expected": "ed648b8ab7608a91512f656b3b324d1ecf1b581a",
+      "actual": "ed648b8ab7608a91512f656b3b324d1ecf1b581a",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "include/ffmt/detail/unicode_width.hpp",
+      "expected": "f9e6bc7b14d564fe3d887ff98ea79d60143fc549",
+      "actual": "f9e6bc7b14d564fe3d887ff98ea79d60143fc549",
+      "match": true
+    },
+    {
+      "stage": "unicode",
+      "path": "test/conformance/test_core_unicode.cpp",
+      "expected": "549077bd4e00dbf2feab1fd222bca2b1a2062684",
+      "actual": "549077bd4e00dbf2feab1fd222bca2b1a2062684",
+      "match": true
+    },
+    {
+      "stage": "formatter-compatibility",
+      "path": "docs/api/formatter-compatibility.md",
+      "expected": "cfeb57b7a55036ab97723406e12e49f441985ec1",
+      "actual": "cfeb57b7a55036ab97723406e12e49f441985ec1",
+      "match": true
+    },
+    {
+      "stage": "formatter-compatibility",
+      "path": "include/ffmt/detail/context.hpp",
+      "expected": "5a2ff8c91275af8334e65e4daf1d699f3c94435b",
+      "actual": "5a2ff8c91275af8334e65e4daf1d699f3c94435b",
+      "match": true
+    },
+    {
+      "stage": "formatter-compatibility",
+      "path": "test/conformance/test_core_formatters.cpp",
+      "expected": "ea0cf3792ea9b706c408315265c8e09e11b01594",
+      "actual": "ea0cf3792ea9b706c408315265c8e09e11b01594",
+      "match": true
+    },
+    {
+      "stage": "formatter-compatibility",
+      "path": "test/conformance/test_core_forwarding.cpp",
+      "expected": "4381d1d4a204fa52abf526f2930b2a243babfdbd",
+      "actual": "4381d1d4a204fa52abf526f2930b2a243babfdbd",
+      "match": true
+    },
+    {
+      "stage": "formatter-compatibility",
+      "path": "test/conformance/test_formatter_composition.cpp",
+      "expected": "c7c3a5451e18b2cdc50ee3b33b73dc1bc91abf8a",
+      "actual": "c7c3a5451e18b2cdc50ee3b33b73dc1bc91abf8a",
+      "match": true
+    },
+    {
+      "stage": "format-as",
+      "path": "docs/api/format-as.md",
+      "expected": "a3da536a1fc933ae2af537a420badb7c4991883d",
+      "actual": "a3da536a1fc933ae2af537a420badb7c4991883d",
+      "match": true
+    },
+    {
+      "stage": "format-as",
+      "path": "include/ffmt/detail/type_traits.hpp",
+      "expected": "1d56d28b90e716f0c3f25dd2f56f84d52c0c67a5",
+      "actual": "1d56d28b90e716f0c3f25dd2f56f84d52c0c67a5",
+      "match": true
+    },
+    {
+      "stage": "format-as",
+      "path": "test/conformance/test_core_format_as.cpp",
+      "expected": "8f360aaa49afdf873a3565777782b53277df1122",
+      "actual": "8f360aaa49afdf873a3565777782b53277df1122",
+      "match": true
+    },
+    {
+      "stage": "legacy-compatibility",
+      "path": "docs/api/legacy-compatibility.md",
+      "expected": "eb725e87a13a3ba9f766b6d540cac41fbd459857",
+      "actual": "eb725e87a13a3ba9f766b6d540cac41fbd459857",
+      "match": true
+    },
+    {
+      "stage": "legacy-compatibility",
+      "path": "include/ffmt/detail/execution.hpp",
+      "expected": "8e0a9310b3823d1a5e4e5de75b00207bf2ae6403",
+      "actual": "8e0a9310b3823d1a5e4e5de75b00207bf2ae6403",
+      "match": true
+    },
+    {
+      "stage": "legacy-compatibility",
+      "path": "include/ffmt/detail/formatters.hpp",
+      "expected": "cd1d8fa7d847fe7dcdf78eeb90241134ab389419",
+      "actual": "cd1d8fa7d847fe7dcdf78eeb90241134ab389419",
+      "match": true
+    },
+    {
+      "stage": "legacy-compatibility",
+      "path": "include/ffmt/detail/type_traits.hpp",
+      "expected": "d0597b7191198b1933b7d45d843ad1f9ca1aa33c",
+      "actual": "d0597b7191198b1933b7d45d843ad1f9ca1aa33c",
+      "match": true
+    },
+    {
+      "stage": "legacy-compatibility",
+      "path": "include/ffmt/detail/validation.hpp",
+      "expected": "cc6aa4d46c7190704af51f63eb5e277c0cbb94dc",
+      "actual": "cc6aa4d46c7190704af51f63eb5e277c0cbb94dc",
+      "match": true
+    },
+    {
+      "stage": "legacy-compatibility",
+      "path": "test/conformance/test_core_legacy.cpp",
+      "expected": "2cdeba1b99a71bdd7a80831a8f52eb6307982588",
+      "actual": "2cdeba1b99a71bdd7a80831a8f52eb6307982588",
+      "match": true
+    },
+    {
+      "stage": "legacy-compatibility",
+      "path": "test/conformance/test_legacy_forwarding.cpp",
+      "expected": "405cc58711152b332d851350dba9f9327a2b7f5b",
+      "actual": "405cc58711152b332d851350dba9f9327a2b7f5b",
+      "match": true
+    },
+    {
+      "stage": "conversion-preparation",
+      "path": "LICENSES/dragonbox-Boost.txt",
+      "expected": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "actual": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "match": true
+    },
+    {
+      "stage": "conversion-preparation",
+      "path": "LICENSES/fmt.txt",
+      "expected": "795fdaec8f2ce6fcc97bbb15d1a6ac073af7bd17",
+      "actual": "795fdaec8f2ce6fcc97bbb15d1a6ac073af7bd17",
+      "match": true
+    },
+    {
+      "stage": "conversion-preparation",
+      "path": "NOTICE",
+      "expected": "0ece453b79e521dea5b2ccd8d330de620b823066",
+      "actual": "0ece453b79e521dea5b2ccd8d330de620b823066",
+      "match": true
+    },
+    {
+      "stage": "conversion-preparation",
+      "path": "docs/api/conversion-preparation.md",
+      "expected": "c69db2160742341cd57d52b0f8efcf0e744a9260",
+      "actual": "c69db2160742341cd57d52b0f8efcf0e744a9260",
+      "match": true
+    },
+    {
+      "stage": "conversion-preparation",
+      "path": "include/ffmt/detail/dragonbox.hpp",
+      "expected": "89eba12268e234bc776ea01a1981f34f70687900",
+      "actual": "89eba12268e234bc776ea01a1981f34f70687900",
+      "match": true
+    },
+    {
+      "stage": "conversion-preparation",
+      "path": "include/ffmt/detail/exact_decimal.hpp",
+      "expected": "a5acd00153180671803b8198e6b3b3d525668970",
+      "actual": "a5acd00153180671803b8198e6b3b3d525668970",
+      "match": true
+    },
+    {
+      "stage": "floating-conversion",
+      "path": "docs/api/floating-conversion.md",
+      "expected": "edcbcd6f4ab9013caba3a240e46ba7ec218dd85f",
+      "actual": "edcbcd6f4ab9013caba3a240e46ba7ec218dd85f",
+      "match": true
+    },
+    {
+      "stage": "floating-conversion",
+      "path": "include/ffmt/detail/checked.hpp",
+      "expected": "fd70dabf685d1ada5972477feb30f873e153ed16",
+      "actual": "fd70dabf685d1ada5972477feb30f873e153ed16",
+      "match": true
+    },
+    {
+      "stage": "floating-conversion",
+      "path": "include/ffmt/detail/floating.hpp",
+      "expected": "4df67411aeb2b468ff6807e9c96b7923b7b8809e",
+      "actual": "4df67411aeb2b468ff6807e9c96b7923b7b8809e",
+      "match": true
+    },
+    {
+      "stage": "floating-conversion",
+      "path": "test/conformance/test_core_conversion.cpp",
+      "expected": "445e737c49fd2570e7111dd85a13571bbd088d73",
+      "actual": "445e737c49fd2570e7111dd85a13571bbd088d73",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "docs/api/floating-formatting.md",
+      "expected": "d3448da100aa63321407e8690806f0292c39cc40",
+      "actual": "d3448da100aa63321407e8690806f0292c39cc40",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "include/ffmt/detail/checked.hpp",
+      "expected": "0ffcf71c20486898d5bf3886f32234dabb9c8c9e",
+      "actual": "0ffcf71c20486898d5bf3886f32234dabb9c8c9e",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "include/ffmt/detail/numeric.hpp",
+      "expected": "b58aa926ade6a9622c12cb37e8d6bf4aae10a07a",
+      "actual": "b58aa926ade6a9622c12cb37e8d6bf4aae10a07a",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "include/ffmt/detail/type_categories.hpp",
+      "expected": "3d39f713f2932b6c3d5426e27b69728bbbc6503c",
+      "actual": "3d39f713f2932b6c3d5426e27b69728bbbc6503c",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "include/ffmt/detail/value.hpp",
+      "expected": "b52e636af6f865ddeac55cf176260250e6130bd7",
+      "actual": "b52e636af6f865ddeac55cf176260250e6130bd7",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "test/conformance/suites/core_floating_portable.mk",
+      "expected": "0ac5215b83e73fe524babb7dd31c0448139e0241",
+      "actual": "0ac5215b83e73fe524babb7dd31c0448139e0241",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "test/conformance/test_core_floating.cpp",
+      "expected": "aa0caead751726478c0ff42baa0dec83c9df425b",
+      "actual": "aa0caead751726478c0ff42baa0dec83c9df425b",
+      "match": true
+    },
+    {
+      "stage": "floating-formatting",
+      "path": "test/conformance/test_engine_fast_math.cpp",
+      "expected": "3568071dff6290e463f2dd924a2bb1732570b45c",
+      "actual": "3568071dff6290e463f2dd924a2bb1732570b45c",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "docs/api/transport.md",
+      "expected": "7c4211ec8a5a3c477cbf9ea8d933f59734e2bc21",
+      "actual": "7c4211ec8a5a3c477cbf9ea8d933f59734e2bc21",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "include/ffmt/detail/checked.hpp",
+      "expected": "fb41a478232eb6c877c8820b2a734d1a85058d15",
+      "actual": "fb41a478232eb6c877c8820b2a734d1a85058d15",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "include/ffmt/detail/legacy_emit.hpp",
+      "expected": "f7167c8e5c3f2235904b8a9fe25364c83d1d3d1d",
+      "actual": "f7167c8e5c3f2235904b8a9fe25364c83d1d3d1d",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "include/ffmt/detail/print_macros.hpp",
+      "expected": "d4522295d745d1c0e0f73c77d29a2ce5a783df9d",
+      "actual": "d4522295d745d1c0e0f73c77d29a2ce5a783df9d",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "include/ffmt/detail/transport.hpp",
+      "expected": "1d5b36ff21d9f21659ee927f6b7347823073f9a8",
+      "actual": "1d5b36ff21d9f21659ee927f6b7347823073f9a8",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "include/ffmt/detail/type_categories.hpp",
+      "expected": "2d95251dd6b968d1d2d0c1bc4fc3092ee13d6e75",
+      "actual": "2d95251dd6b968d1d2d0c1bc4fc3092ee13d6e75",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "test/capture.hpp",
+      "expected": "e86ad57d5beb8fd05854632fa289ba68c20b2e53",
+      "actual": "e86ad57d5beb8fd05854632fa289ba68c20b2e53",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "test/conformance/test_engine_legacy_hook.cpp",
+      "expected": "703fba28328af51adeb9c1614718a38a9b414e98",
+      "actual": "703fba28328af51adeb9c1614718a38a9b414e98",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "test/conformance/test_engine_transport.cpp",
+      "expected": "7b2b17aaa6ea2921d75309f8eddf55f529df179b",
+      "actual": "7b2b17aaa6ea2921d75309f8eddf55f529df179b",
+      "match": true
+    },
+    {
+      "stage": "transport",
+      "path": "test/conformance/test_transport_forwarding.cpp",
+      "expected": "7e8617d535d067fedc7db0fc3cffa68a7fcb3cc7",
+      "actual": "7e8617d535d067fedc7db0fc3cffa68a7fcb3cc7",
+      "match": true
+    },
+    {
+      "stage": "extended-integers",
+      "path": "docs/api/extended-integers.md",
+      "expected": "ebae9d154cbe9d0f8ac22426a3ed2a6261164624",
+      "actual": "ebae9d154cbe9d0f8ac22426a3ed2a6261164624",
+      "match": true
+    },
+    {
+      "stage": "extended-integers",
+      "path": "include/ffmt/detail/arguments.hpp",
+      "expected": "245c9fcdd56243c56df136f77ad25891872b3552",
+      "actual": "245c9fcdd56243c56df136f77ad25891872b3552",
+      "match": true
+    },
+    {
+      "stage": "extended-integers",
+      "path": "test/conformance/test_core_int128.cpp",
+      "expected": "b2363bbc4a746a0c01c6ab6154261e23954d563c",
+      "actual": "b2363bbc4a746a0c01c6ab6154261e23954d563c",
+      "match": true
+    },
+    {
+      "stage": "extended-integers",
+      "path": "test/conformance/test_engine_bitint.cpp",
+      "expected": "ebe61644026a2d5e2aac4eda5ecef61cf341e95c",
+      "actual": "ebe61644026a2d5e2aac4eda5ecef61cf341e95c",
+      "match": true
+    },
+    {
+      "stage": "extended-floats",
+      "path": "docs/api/extended-floats.md",
+      "expected": "e9298443a13d662e861dbcb69bd928526a698d18",
+      "actual": "e9298443a13d662e861dbcb69bd928526a698d18",
+      "match": true
+    },
+    {
+      "stage": "extended-floats",
+      "path": "include/ffmt/detail/arguments.hpp",
+      "expected": "de6696c3ad491763715ea90e062ecc367a6e0fc0",
+      "actual": "de6696c3ad491763715ea90e062ecc367a6e0fc0",
+      "match": true
+    },
+    {
+      "stage": "extended-floats",
+      "path": "include/ffmt/detail/extended.hpp",
+      "expected": "6aa829501f28461340c08bf2affe9f3e56b3855a",
+      "actual": "6aa829501f28461340c08bf2affe9f3e56b3855a",
+      "match": true
+    },
+    {
+      "stage": "extended-floats",
+      "path": "include/ffmt/detail/floating.hpp",
+      "expected": "da5cc6f89ade81d70e376a08aacc540d41f896f4",
+      "actual": "da5cc6f89ade81d70e376a08aacc540d41f896f4",
+      "match": true
+    },
+    {
+      "stage": "extended-floats",
+      "path": "include/ffmt/detail/numeric.hpp",
+      "expected": "21093268ffb5c381382dee5d2ea3257cb7aa0f36",
+      "actual": "21093268ffb5c381382dee5d2ea3257cb7aa0f36",
+      "match": true
+    },
+    {
+      "stage": "extended-floats",
+      "path": "test/conformance/test_engine_extended.cpp",
+      "expected": "7de4afbc112fa301d90688181b682e638bd383fb",
+      "actual": "7de4afbc112fa301d90688181b682e638bd383fb",
+      "match": true
+    },
+    {
+      "stage": "extended-floats",
+      "path": "test/conformance/test_engine_quad.cpp",
+      "expected": "0bd43c4dadd0433944363e5f7d3629e1f1cc54f1",
+      "actual": "0bd43c4dadd0433944363e5f7d3629e1f1cc54f1",
+      "match": true
+    },
+    {
+      "stage": "tool-snapshots",
+      "path": "docs/conformance/tool-snapshots.md",
+      "expected": "6e7ac57dc05634be44edb87a5c9ae29fb6673858",
+      "actual": "6e7ac57dc05634be44edb87a5c9ae29fb6673858",
+      "match": true
+    },
+    {
+      "stage": "tool-snapshots",
+      "path": "test/conformance/test_snapshots.py",
+      "expected": "7494071d082dfd0ce846b4574afa73afd996ec83",
+      "actual": "7494071d082dfd0ce846b4574afa73afd996ec83",
+      "match": true
+    },
+    {
+      "stage": "tool-snapshots",
+      "path": "tools/conformance.py",
+      "expected": "6376f7652c63157ac8d74d3a7584158174f316dc",
+      "actual": "6376f7652c63157ac8d74d3a7584158174f316dc",
+      "match": true
+    },
+    {
+      "stage": "tool-isolation",
+      "path": "docs/conformance/tool-isolation.md",
+      "expected": "33ea99e234b3fd044f6f3a9e2587be2b309279c2",
+      "actual": "33ea99e234b3fd044f6f3a9e2587be2b309279c2",
+      "match": true
+    },
+    {
+      "stage": "tool-isolation",
+      "path": "test/conformance/test_runner.py",
+      "expected": "11b164024063f699ffcda76331db0471d54903a0",
+      "actual": "11b164024063f699ffcda76331db0471d54903a0",
+      "match": true
+    },
+    {
+      "stage": "tool-isolation",
+      "path": "tools/conformance.py",
+      "expected": "a1aa9a207f9175a7fe6c40330f1a7b0633793a71",
+      "actual": "a1aa9a207f9175a7fe6c40330f1a7b0633793a71",
+      "match": true
+    },
+    {
+      "stage": "tool-oracle-negatives",
+      "path": "docs/conformance/tool-oracle-negatives.md",
+      "expected": "176e03563a18a2c031098b53f89890739a51bef9",
+      "actual": "176e03563a18a2c031098b53f89890739a51bef9",
+      "match": true
+    },
+    {
+      "stage": "tool-oracle-negatives",
+      "path": "tools/conformance.py",
+      "expected": "877c6a80aba2682872a1dc771b2c97fee775c67b",
+      "actual": "877c6a80aba2682872a1dc771b2c97fee775c67b",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "docs/api/migration.md",
+      "expected": "045f6cb5bc465c4b07803b5c0f9d754785b69512",
+      "actual": "045f6cb5bc465c4b07803b5c0f9d754785b69512",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "docs/conformance/tool-engine-cases.md",
+      "expected": "57439d6d24a8ca7ac21617c05a25a354025c41bb",
+      "actual": "57439d6d24a8ca7ac21617c05a25a354025c41bb",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "include/ffmt/base.hpp",
+      "expected": "59eb6201542f2936f8420cf3063e0d3b614e9234",
+      "actual": "59eb6201542f2936f8420cf3063e0d3b614e9234",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "include/ffmt/core.hpp",
+      "expected": "325914d134b322879db1a60ae618d8507d98cbbe",
+      "actual": "325914d134b322879db1a60ae618d8507d98cbbe",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "include/ffmt/detail/sycl_formatters.hpp",
+      "expected": "6684dd05d6ed2cabbec8eb88a86753b0b883f251",
+      "actual": "6684dd05d6ed2cabbec8eb88a86753b0b883f251",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/conformance/cases_engine.py",
+      "expected": "8d40a8c712dc4295054eae25b961fc575c55ab3e",
+      "actual": "8d40a8c712dc4295054eae25b961fc575c55ab3e",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/conformance/test_core_migration.cpp",
+      "expected": "fcebdea58fb826e766b64a4b5bb5634b6adc5c62",
+      "actual": "fcebdea58fb826e766b64a4b5bb5634b6adc5c62",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/test_body.inc",
+      "expected": "2a74983afac7e8af1691b7d8b9456d803e255940",
+      "actual": "2a74983afac7e8af1691b7d8b9456d803e255940",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/test_body_cuda.inc",
+      "expected": "e2bb74d5f76529e30060cb0d61d07f80684a9ea2",
+      "actual": "e2bb74d5f76529e30060cb0d61d07f80684a9ea2",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/test_body_host.inc",
+      "expected": "89f45c0653e7d9cc2887d12e74d824fb6ab1ae49",
+      "actual": "89f45c0653e7d9cc2887d12e74d824fb6ab1ae49",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/test_body_omp.inc",
+      "expected": "2eca823c787e9cfaf603926428bdc54a0eda88e2",
+      "actual": "2eca823c787e9cfaf603926428bdc54a0eda88e2",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/test_buffer_path.cpp",
+      "expected": "98208355ee6235e6bc9771e1e03bbc1af0c295e3",
+      "actual": "98208355ee6235e6bc9771e1e03bbc1af0c295e3",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/test_fast_math.cpp",
+      "expected": "efb0867adab6c6631e0f9b87c6127c1b27aea671",
+      "actual": "efb0867adab6c6631e0f9b87c6127c1b27aea671",
+      "match": true
+    },
+    {
+      "stage": "migration",
+      "path": "test/test_floats.cpp",
+      "expected": "ac923abecf62b070fa6dacb10d170679c9c2d4f8",
+      "actual": "ac923abecf62b070fa6dacb10d170679c9c2d4f8",
+      "match": true
+    },
+    {
+      "stage": "benchmark-primitives",
+      "path": "docs/conformance/benchmark-primitives.md",
+      "expected": "8edba5935f7299b9b74914c618a0c71195ffea3d",
+      "actual": "8edba5935f7299b9b74914c618a0c71195ffea3d",
+      "match": true
+    },
+    {
+      "stage": "benchmark-primitives",
+      "path": "test/conformance/benchmark.cpp",
+      "expected": "0508cab92d24b86b0331bb55010895a790929a3a",
+      "actual": "0508cab92d24b86b0331bb55010895a790929a3a",
+      "match": true
+    },
+    {
+      "stage": "benchmark-primitives",
+      "path": "test/conformance/benchmark_calls.hpp",
+      "expected": "5a038dda66933b8c622ea7f7ff6da3b30f556e87",
+      "actual": "5a038dda66933b8c622ea7f7ff6da3b30f556e87",
+      "match": true
+    },
+    {
+      "stage": "benchmark-primitives",
+      "path": "test/conformance/benchmark_extra.cpp",
+      "expected": "d90d3e4db8571ff301411be380db03d70bdb33f8",
+      "actual": "d90d3e4db8571ff301411be380db03d70bdb33f8",
+      "match": true
+    },
+    {
+      "stage": "benchmark-driver",
+      "path": "docs/conformance/benchmark-driver.md",
+      "expected": "c9266cd9e57ddbe1d724058d7938a5ffcaa1fe18",
+      "actual": "c9266cd9e57ddbe1d724058d7938a5ffcaa1fe18",
+      "match": true
+    },
+    {
+      "stage": "benchmark-driver",
+      "path": "test/conformance/test_benchmark.py",
+      "expected": "63c222a9fb7c146ba31ae458bdac27de916c544a",
+      "actual": "63c222a9fb7c146ba31ae458bdac27de916c544a",
+      "match": true
+    },
+    {
+      "stage": "benchmark-driver",
+      "path": "tools/benchmark.py",
+      "expected": "afb1d06a8534ab337a4df00bd4c3ccd4f14a1f87",
+      "actual": "afb1d06a8534ab337a4df00bd4c3ccd4f14a1f87",
+      "match": true
+    },
+    {
+      "stage": "benchmark-resources",
+      "path": "docs/conformance/benchmark-resources.md",
+      "expected": "6cf5b952aef9d6b9bb9e79f50d1f9cc7d985a286",
+      "actual": "6cf5b952aef9d6b9bb9e79f50d1f9cc7d985a286",
+      "match": true
+    },
+    {
+      "stage": "benchmark-resources",
+      "path": "test/conformance/benchmark_resource.cpp",
+      "expected": "88af8c4a42cb632c63c5458d577dcdf6ef2190e7",
+      "actual": "88af8c4a42cb632c63c5458d577dcdf6ef2190e7",
+      "match": true
+    },
+    {
+      "stage": "benchmark-resources",
+      "path": "tools/benchmark.py",
+      "expected": "2c81e6e6c962a0bc3692d4c4ab0fb8a3d5a99bb8",
+      "actual": "2c81e6e6c962a0bc3692d4c4ab0fb8a3d5a99bb8",
+      "match": true
+    },
+    {
+      "stage": "tool-adapter-support",
+      "path": "docs/conformance/tool-adapter-support.md",
+      "expected": "1f2485da3b0ba609ac8bd4276ee8eebdaa3521dc",
+      "actual": "1f2485da3b0ba609ac8bd4276ee8eebdaa3521dc",
+      "match": true
+    },
+    {
+      "stage": "tool-adapter-support",
+      "path": "test/conformance/test_device_arch.py",
+      "expected": "c60d2d149b6230aea364c01880cbf7dd34cf5f72",
+      "actual": "c60d2d149b6230aea364c01880cbf7dd34cf5f72",
+      "match": true
+    },
+    {
+      "stage": "tool-adapter-support",
+      "path": "tools/device_arch.py",
+      "expected": "2d570273dc31cfd0fee080af7978ea5d388e8d3c",
+      "actual": "2d570273dc31cfd0fee080af7978ea5d388e8d3c",
+      "match": true
+    },
+    {
+      "stage": "tool-cuda",
+      "path": "docs/conformance/tool-cuda.md",
+      "expected": "1566447bb3e52bb2baaa0142922ee93974861fc3",
+      "actual": "1566447bb3e52bb2baaa0142922ee93974861fc3",
+      "match": true
+    },
+    {
+      "stage": "tool-cuda",
+      "path": "test/conformance/test_adapter_cuda.py",
+      "expected": "283ec268c3b33f8f24ee80ce2fd046e7ba4d90ec",
+      "actual": "283ec268c3b33f8f24ee80ce2fd046e7ba4d90ec",
+      "match": true
+    },
+    {
+      "stage": "tool-cuda",
+      "path": "tools/backend_cuda.py",
+      "expected": "53fadfae3e1bf2cc93761626d8f2f1268932e619",
+      "actual": "53fadfae3e1bf2cc93761626d8f2f1268932e619",
+      "match": true
+    },
+    {
+      "stage": "tool-hip",
+      "path": "docs/conformance/tool-hip.md",
+      "expected": "06d5580077a2c53835d407dbe38cc1fae7718f23",
+      "actual": "06d5580077a2c53835d407dbe38cc1fae7718f23",
+      "match": true
+    },
+    {
+      "stage": "tool-hip",
+      "path": "test/conformance/test_adapter_hip.py",
+      "expected": "d05a4d5824d47aa86fa8c7754fbcb7fea1cf642a",
+      "actual": "d05a4d5824d47aa86fa8c7754fbcb7fea1cf642a",
+      "match": true
+    },
+    {
+      "stage": "tool-hip",
+      "path": "tools/backend_hip.py",
+      "expected": "8ce3810b11f15326221f74dab7dcc816a9203f38",
+      "actual": "8ce3810b11f15326221f74dab7dcc816a9203f38",
+      "match": true
+    },
+    {
+      "stage": "tool-kokkos",
+      "path": "docs/conformance/tool-kokkos.md",
+      "expected": "ce00f6b33fb510cc9a999e9cc7a15d646130131c",
+      "actual": "ce00f6b33fb510cc9a999e9cc7a15d646130131c",
+      "match": true
+    },
+    {
+      "stage": "tool-kokkos",
+      "path": "test/conformance/test_adapter_kokkos.py",
+      "expected": "cb4c7b0e64ed44f8743662c8019de4783f8c2823",
+      "actual": "cb4c7b0e64ed44f8743662c8019de4783f8c2823",
+      "match": true
+    },
+    {
+      "stage": "tool-kokkos",
+      "path": "tools/backend_kokkos.py",
+      "expected": "cf2ad4a2b5c7f85e9e126b05172a55368db667ab",
+      "actual": "cf2ad4a2b5c7f85e9e126b05172a55368db667ab",
+      "match": true
+    },
+    {
+      "stage": "tool-numeric-memory",
+      "path": "docs/conformance/tool-numeric-memory.md",
+      "expected": "1cd609701e32e29f8757eb5184ee9f883beb284f",
+      "actual": "1cd609701e32e29f8757eb5184ee9f883beb284f",
+      "match": true
+    },
+    {
+      "stage": "tool-numeric-memory",
+      "path": "test/conformance/numeric_memory.cpp.in",
+      "expected": "19703964648ac856ed66adb3ed2131080d9d8f3e",
+      "actual": "19703964648ac856ed66adb3ed2131080d9d8f3e",
+      "match": true
+    },
+    {
+      "stage": "tool-numeric-memory",
+      "path": "test/conformance/test_auxiliary_evidence.py",
+      "expected": "61d967559e944b778f018fbdc0d423a91916f200",
+      "actual": "61d967559e944b778f018fbdc0d423a91916f200",
+      "match": true
+    },
+    {
+      "stage": "tool-numeric-memory",
+      "path": "test/conformance/test_numeric_memory.py",
+      "expected": "283c88f79618f304f7fbe419b051c8def59346da",
+      "actual": "283c88f79618f304f7fbe419b051c8def59346da",
+      "match": true
+    },
+    {
+      "stage": "tool-numeric-memory",
+      "path": "tools/backend_host.py",
+      "expected": "21107c3a9783174c6ffa1c884608af806d743a04",
+      "actual": "21107c3a9783174c6ffa1c884608af806d743a04",
+      "match": true
+    },
+    {
+      "stage": "tool-numeric-memory",
+      "path": "tools/conformance.py",
+      "expected": "9a08568696b3a4a9d12c65dfacf3ed7e8f6b792a",
+      "actual": "9a08568696b3a4a9d12c65dfacf3ed7e8f6b792a",
+      "match": true
+    },
+    {
+      "stage": "tool-numeric-memory",
+      "path": "tools/numeric_memory.py",
+      "expected": "9f28e4108a4f853bb6a9651e1d81b4b576d031c1",
+      "actual": "9f28e4108a4f853bb6a9651e1d81b4b576d031c1",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-cuda",
+      "path": "docs/conformance/tool-memory-cuda.md",
+      "expected": "10ac5183b7dae94ab3566f1c33566e560ffb4bd0",
+      "actual": "10ac5183b7dae94ab3566f1c33566e560ffb4bd0",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-cuda",
+      "path": "test/conformance/test_memory_cuda.py",
+      "expected": "bcb3796ead334ade5e3b509db0505725e2de8453",
+      "actual": "bcb3796ead334ade5e3b509db0505725e2de8453",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-cuda",
+      "path": "tools/backend_cuda.py",
+      "expected": "20cbe83bd156a8f6f261d987d43c6442ad65bed7",
+      "actual": "20cbe83bd156a8f6f261d987d43c6442ad65bed7",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-hip",
+      "path": "docs/conformance/tool-memory-hip.md",
+      "expected": "bc13e80d92b701fe3826b493ee3cd1fcb253b0eb",
+      "actual": "bc13e80d92b701fe3826b493ee3cd1fcb253b0eb",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-hip",
+      "path": "test/conformance/test_memory_hip.py",
+      "expected": "d2bfe4c70c63d904355e61921f23a203c1c72d3d",
+      "actual": "d2bfe4c70c63d904355e61921f23a203c1c72d3d",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-hip",
+      "path": "tools/backend_hip.py",
+      "expected": "f8cfb5682989b95405095cfb285e1aa905c30d36",
+      "actual": "f8cfb5682989b95405095cfb285e1aa905c30d36",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-kokkos",
+      "path": "docs/conformance/tool-memory-kokkos.md",
+      "expected": "196c764a974e1aed9cd9feec1435cbf1cc0c58e5",
+      "actual": "196c764a974e1aed9cd9feec1435cbf1cc0c58e5",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-kokkos",
+      "path": "test/conformance/test_memory_kokkos.py",
+      "expected": "472dc3b9c2b9a48e11759a1c9022fabde603d32b",
+      "actual": "472dc3b9c2b9a48e11759a1c9022fabde603d32b",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-kokkos",
+      "path": "tools/backend_kokkos.py",
+      "expected": "8a27b4d26760a5176a64783f001852d8c076b75c",
+      "actual": "8a27b4d26760a5176a64783f001852d8c076b75c",
+      "match": true
+    },
+    {
+      "stage": "tool-openmp",
+      "path": "docs/conformance/tool-openmp.md",
+      "expected": "d7ba52362637d433c4aa55b63b7bd2a0fa221a3d",
+      "actual": "d7ba52362637d433c4aa55b63b7bd2a0fa221a3d",
+      "match": true
+    },
+    {
+      "stage": "tool-openmp",
+      "path": "test/conformance/test_adapter_openmp.py",
+      "expected": "11fc4f9c2df07d49036693938e848117eedea71e",
+      "actual": "11fc4f9c2df07d49036693938e848117eedea71e",
+      "match": true
+    },
+    {
+      "stage": "tool-openmp",
+      "path": "tools/backend_openmp.py",
+      "expected": "ada9fbe0aae781ac4dd762e923e5a5be5de979d5",
+      "actual": "ada9fbe0aae781ac4dd762e923e5a5be5de979d5",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-openmp",
+      "path": "docs/conformance/tool-memory-openmp.md",
+      "expected": "5c127b84bd25c32eb7480e8ae3a6eaf20978c37b",
+      "actual": "5c127b84bd25c32eb7480e8ae3a6eaf20978c37b",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-openmp",
+      "path": "test/conformance/test_memory_openmp.py",
+      "expected": "4936d166fa78520af23b139d9482639434b0d668",
+      "actual": "4936d166fa78520af23b139d9482639434b0d668",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-openmp",
+      "path": "tools/backend_openmp.py",
+      "expected": "5b144bc4529a69a3e3d4ef2ecc9503e034ed17c8",
+      "actual": "5b144bc4529a69a3e3d4ef2ecc9503e034ed17c8",
+      "match": true
+    },
+    {
+      "stage": "tool-sycl",
+      "path": "docs/conformance/tool-sycl.md",
+      "expected": "0c22d3d86306006d24e8de03d8b9bdc51596c75e",
+      "actual": "0c22d3d86306006d24e8de03d8b9bdc51596c75e",
+      "match": true
+    },
+    {
+      "stage": "tool-sycl",
+      "path": "test/conformance/test_adapter_sycl.py",
+      "expected": "33639c9f68b9d296832b4b7a53fb169d279b6c6d",
+      "actual": "33639c9f68b9d296832b4b7a53fb169d279b6c6d",
+      "match": true
+    },
+    {
+      "stage": "tool-sycl",
+      "path": "tools/backend_sycl.py",
+      "expected": "0bb16bf5461bfad2d46725d948b49bcea3aadbb8",
+      "actual": "0bb16bf5461bfad2d46725d948b49bcea3aadbb8",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-sycl",
+      "path": "docs/conformance/tool-memory-sycl.md",
+      "expected": "e240109c868688ef0030a90fd68a8d25800a0d93",
+      "actual": "e240109c868688ef0030a90fd68a8d25800a0d93",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-sycl",
+      "path": "test/conformance/test_memory_sycl.py",
+      "expected": "fc728286a4b26b10785d308af91856e7a2dcee40",
+      "actual": "fc728286a4b26b10785d308af91856e7a2dcee40",
+      "match": true
+    },
+    {
+      "stage": "tool-memory-sycl",
+      "path": "tools/backend_sycl.py",
+      "expected": "a95f9a6d849a52d2942c997fdae76addd9f2c761",
+      "actual": "a95f9a6d849a52d2942c997fdae76addd9f2c761",
+      "match": true
+    },
+    {
+      "stage": "obsolete-deletion",
+      "path": "docs/api/obsolete-deletion.md",
+      "expected": "c4c6af65ed07839270e55dd36598dd68a5ae2d54",
+      "actual": "c4c6af65ed07839270e55dd36598dd68a5ae2d54",
+      "match": true
+    },
+    {
+      "stage": "shared-family",
+      "path": "docs/features/family-support.md",
+      "expected": "82207b0e88d506052051087ff02f96a3eaa98877",
+      "actual": "82207b0e88d506052051087ff02f96a3eaa98877",
+      "match": true
+    },
+    {
+      "stage": "shared-family",
+      "path": "include/ffmt/detail/family.hpp",
+      "expected": "9a8d1c4cbc622e91c05461b0c17868d5344bff9a",
+      "actual": "9a8d1c4cbc622e91c05461b0c17868d5344bff9a",
+      "match": true
+    },
+    {
+      "stage": "shared-family",
+      "path": "include/ffmt/detail/output.hpp",
+      "expected": "e3e37bc99cb90a967ee0034b8039a5cdd30b58c8",
+      "actual": "e3e37bc99cb90a967ee0034b8039a5cdd30b58c8",
+      "match": true
+    },
+    {
+      "stage": "shared-family",
+      "path": "test/conformance/family_test_support.hpp",
+      "expected": "c53a56e13e287cac6e6e4a0bf2f72c744fd245a2",
+      "actual": "c53a56e13e287cac6e6e4a0bf2f72c744fd245a2",
+      "match": true
+    },
+    {
+      "stage": "shared-family",
+      "path": "test/conformance/test_family_support.cpp",
+      "expected": "1a83c2625c72466036425d95d2811bc5bc218454",
+      "actual": "1a83c2625c72466036425d95d2811bc5bc218454",
+      "match": true
+    },
+    {
+      "stage": "chrono",
+      "path": "docs/features/chrono.md",
+      "expected": "6e8383435e3a7822031399a3546b9224ada46da9",
+      "actual": "6e8383435e3a7822031399a3546b9224ada46da9",
+      "match": true
+    },
+    {
+      "stage": "chrono",
+      "path": "include/ffmt/chrono.hpp",
+      "expected": "4c5dc7f4acb8e24b8711dc4f26b731028a716ff0",
+      "actual": "4c5dc7f4acb8e24b8711dc4f26b731028a716ff0",
+      "match": true
+    },
+    {
+      "stage": "chrono",
+      "path": "test/conformance/cases_chrono.py",
+      "expected": "3a2a37528da609a57609231ad1d5bda0ba04834a",
+      "actual": "3a2a37528da609a57609231ad1d5bda0ba04834a",
+      "match": true
+    },
+    {
+      "stage": "chrono",
+      "path": "test/conformance/test_chrono.cpp",
+      "expected": "b79ac43d6615da91c240c5e2cbfb2d7a3a96a483",
+      "actual": "b79ac43d6615da91c240c5e2cbfb2d7a3a96a483",
+      "match": true
+    },
+    {
+      "stage": "enum-helpers",
+      "path": "docs/features/enums.md",
+      "expected": "21517f9676d20be92f30ff34347320f12a94563c",
+      "actual": "21517f9676d20be92f30ff34347320f12a94563c",
+      "match": true
+    },
+    {
+      "stage": "enum-helpers",
+      "path": "include/ffmt/enum.hpp",
+      "expected": "60bbe1b5a1503d9b2082399d1ae45242bddfba40",
+      "actual": "60bbe1b5a1503d9b2082399d1ae45242bddfba40",
+      "match": true
+    },
+    {
+      "stage": "enum-helpers",
+      "path": "test/conformance/test_enum.cpp",
+      "expected": "2b2df066d88c07a6d35090ed715a461f518a284c",
+      "actual": "2b2df066d88c07a6d35090ed715a461f518a284c",
+      "match": true
+    },
+    {
+      "stage": "named-arguments",
+      "path": "docs/features/named-arguments.md",
+      "expected": "b70fc453ca746d6bbb7d858454604d1687f64747",
+      "actual": "b70fc453ca746d6bbb7d858454604d1687f64747",
+      "match": true
+    },
+    {
+      "stage": "named-arguments",
+      "path": "include/ffmt/args.hpp",
+      "expected": "c5a037d39fc1c555e1aa5dd94f855675aa9f6b4d",
+      "actual": "c5a037d39fc1c555e1aa5dd94f855675aa9f6b4d",
+      "match": true
+    },
+    {
+      "stage": "named-arguments",
+      "path": "test/conformance/cases_named.py",
+      "expected": "2e7c80c542a88aa3fc9636e9763bfc74efa39d77",
+      "actual": "2e7c80c542a88aa3fc9636e9763bfc74efa39d77",
+      "match": true
+    },
+    {
+      "stage": "named-arguments",
+      "path": "test/conformance/test_named_arguments.cpp",
+      "expected": "d53d878c3cefd1582e3731224b6679f91453130e",
+      "actual": "d53d878c3cefd1582e3731224b6679f91453130e",
+      "match": true
+    },
+    {
+      "stage": "ranges",
+      "path": "docs/features/ranges.md",
+      "expected": "4611d49ef4d9828c3a53839ec3ba81611f904cf0",
+      "actual": "4611d49ef4d9828c3a53839ec3ba81611f904cf0",
+      "match": true
+    },
+    {
+      "stage": "ranges",
+      "path": "include/ffmt/ranges.hpp",
+      "expected": "146e07cc0717fcef97c1614bf0344bebc2e6835f",
+      "actual": "146e07cc0717fcef97c1614bf0344bebc2e6835f",
+      "match": true
+    },
+    {
+      "stage": "ranges",
+      "path": "test/conformance/cases_ranges.py",
+      "expected": "897b6862cfb9a02891956f4c36938871263e901d",
+      "actual": "897b6862cfb9a02891956f4c36938871263e901d",
+      "match": true
+    },
+    {
+      "stage": "ranges",
+      "path": "test/conformance/test_ranges.cpp",
+      "expected": "60b1a7f039b4d1a7dcece81d61508cbc8322ec85",
+      "actual": "60b1a7f039b4d1a7dcece81d61508cbc8322ec85",
+      "match": true
+    },
+    {
+      "stage": "ranges",
+      "path": "test/conformance/test_ranges_forwarding.cpp",
+      "expected": "92583c63f509440c83738b530ee19afd9e403a86",
+      "actual": "92583c63f509440c83738b530ee19afd9e403a86",
+      "match": true
+    },
+    {
+      "stage": "ranges",
+      "path": "test/conformance/test_ranges_iterators.cpp",
+      "expected": "9eae0defcdb9386faf8528ca323220d14de5c099",
+      "actual": "9eae0defcdb9386faf8528ca323220d14de5c099",
+      "match": true
+    },
+    {
+      "stage": "standard-types",
+      "path": "docs/features/standard-types.md",
+      "expected": "f6040696e9a069349c4994d40529594bf09e887a",
+      "actual": "f6040696e9a069349c4994d40529594bf09e887a",
+      "match": true
+    },
+    {
+      "stage": "standard-types",
+      "path": "include/ffmt/std.hpp",
+      "expected": "02accc99d71c5307529ba6706c9ea330b658049e",
+      "actual": "02accc99d71c5307529ba6706c9ea330b658049e",
+      "match": true
+    },
+    {
+      "stage": "standard-types",
+      "path": "test/conformance/cases_std.py",
+      "expected": "9a7f5b1174cc2db72fc41b9ff9c9d9898884c8be",
+      "actual": "9a7f5b1174cc2db72fc41b9ff9c9d9898884c8be",
+      "match": true
+    },
+    {
+      "stage": "standard-types",
+      "path": "test/conformance/test_std.cpp",
+      "expected": "b8251487a36a158af69c5c919803b59686c0c3da",
+      "actual": "b8251487a36a158af69c5c919803b59686c0c3da",
+      "match": true
+    },
+    {
+      "stage": "feature-integration",
+      "path": "docs/features/feature-integration.md",
+      "expected": "c3c63697e7b7485212abd4bc64d7be1d73b46ad6",
+      "actual": "c3c63697e7b7485212abd4bc64d7be1d73b46ad6",
+      "match": true
+    },
+    {
+      "stage": "feature-integration",
+      "path": "test/conformance/test_feature_integration.cpp",
+      "expected": "7e6c0793b8b84ba53db5cbeb7060ce66a66648ca",
+      "actual": "7e6c0793b8b84ba53db5cbeb7060ce66a66648ca",
+      "match": true
+    },
+    {
+      "stage": "std23",
+      "path": "docs/features/std23.md",
+      "expected": "ac0dca24136f546cfe2c3aa36897de60db78f5bd",
+      "actual": "ac0dca24136f546cfe2c3aa36897de60db78f5bd",
+      "match": true
+    },
+    {
+      "stage": "std23",
+      "path": "include/ffmt/std23.hpp",
+      "expected": "7d0839914e9ed7236248f9f89afbc669b67e5690",
+      "actual": "7d0839914e9ed7236248f9f89afbc669b67e5690",
+      "match": true
+    },
+    {
+      "stage": "std23",
+      "path": "mk/portable-tests.mk",
+      "expected": "167a610f42f74b72ce6e0a8d301ba445af488491",
+      "actual": "167a610f42f74b72ce6e0a8d301ba445af488491",
+      "match": true
+    },
+    {
+      "stage": "std23",
+      "path": "test/conformance/test_cxx23_opt_in.py",
+      "expected": "e600f024f819cf28f7b29ee206ddfa474766f9d3",
+      "actual": "e600f024f819cf28f7b29ee206ddfa474766f9d3",
+      "match": true
+    },
+    {
+      "stage": "std23",
+      "path": "test/conformance/test_std23.cpp",
+      "expected": "da5630218c1a5ecdf2dcd767915b0171284e039e",
+      "actual": "da5630218c1a5ecdf2dcd767915b0171284e039e",
+      "match": true
+    },
+    {
+      "stage": "styling",
+      "path": "docs/features/styling.md",
+      "expected": "aaf6b1b749000b2b16a7f7007e52a9e90ed21f0c",
+      "actual": "aaf6b1b749000b2b16a7f7007e52a9e90ed21f0c",
+      "match": true
+    },
+    {
+      "stage": "styling",
+      "path": "include/ffmt/color.hpp",
+      "expected": "b7d5256ff7033fca28ef1970aa931650ed4f2ada",
+      "actual": "b7d5256ff7033fca28ef1970aa931650ed4f2ada",
+      "match": true
+    },
+    {
+      "stage": "styling",
+      "path": "test/conformance/cases_style.py",
+      "expected": "0829a339a7cadfe38a4e8823d1678512bc83e659",
+      "actual": "0829a339a7cadfe38a4e8823d1678512bc83e659",
+      "match": true
+    },
+    {
+      "stage": "styling",
+      "path": "test/conformance/test_style.cpp",
+      "expected": "ef25c711fd25c25dd4a03a99433dcc06406666cf",
+      "actual": "ef25c711fd25c25dd4a03a99433dcc06406666cf",
+      "match": true
+    },
+    {
+      "stage": "typed-printf",
+      "path": "docs/features/printf.md",
+      "expected": "7a2bc48c836cc9313287f8265e00e3f230794102",
+      "actual": "7a2bc48c836cc9313287f8265e00e3f230794102",
+      "match": true
+    },
+    {
+      "stage": "typed-printf",
+      "path": "include/ffmt/printf.hpp",
+      "expected": "58fe48c30eddacab4c645a9820be7da144ae4c9b",
+      "actual": "58fe48c30eddacab4c645a9820be7da144ae4c9b",
+      "match": true
+    },
+    {
+      "stage": "typed-printf",
+      "path": "test/conformance/cases_printf.py",
+      "expected": "3304449c03fa957428729115d7c1591a45de8844",
+      "actual": "3304449c03fa957428729115d7c1591a45de8844",
+      "match": true
+    },
+    {
+      "stage": "typed-printf",
+      "path": "test/conformance/test_printf.cpp",
+      "expected": "70022f53291dd53561df11a75242bf9414ea18f5",
+      "actual": "70022f53291dd53561df11a75242bf9414ea18f5",
+      "match": true
+    },
+    {
+      "stage": "cmake-package",
+      "path": "CMakeLists.txt",
+      "expected": "076fcc414da4bec84a1fcb88d24e1fa721a663f1",
+      "actual": "076fcc414da4bec84a1fcb88d24e1fa721a663f1",
+      "match": true
+    },
+    {
+      "stage": "cmake-package",
+      "path": "cmake/ffmtConfig.cmake.in",
+      "expected": "1f4cffb7393955c10cd413c32941f10be3926ff2",
+      "actual": "1f4cffb7393955c10cd413c32941f10be3926ff2",
+      "match": true
+    },
+    {
+      "stage": "cmake-package",
+      "path": "docs/BUILD.md",
+      "expected": "06b2c0a9f342dc4a0964f8e5f2efaf1ca7200720",
+      "actual": "06b2c0a9f342dc4a0964f8e5f2efaf1ca7200720",
+      "match": true
+    },
+    {
+      "stage": "cmake-package",
+      "path": "examples/cmake-consumer/CMakeLists.txt",
+      "expected": "c486568a111b55296bad6a832fdceb44662ec0a1",
+      "actual": "c486568a111b55296bad6a832fdceb44662ec0a1",
+      "match": true
+    },
+    {
+      "stage": "cmake-package",
+      "path": "examples/cmake-consumer/main.cpp",
+      "expected": "830abd01abf868ac43b8569800252356b057fd30",
+      "actual": "830abd01abf868ac43b8569800252356b057fd30",
+      "match": true
+    },
+    {
+      "stage": "cmake-tests",
+      "path": "CMakeLists.txt",
+      "expected": "69e5e1325245a404be469c3c59a01b5cc9d54fe3",
+      "actual": "69e5e1325245a404be469c3c59a01b5cc9d54fe3",
+      "match": true
+    },
+    {
+      "stage": "cmake-tests",
+      "path": "cmake/ffmtTests.cmake",
+      "expected": "3e5fa3e0759288d2004504c082d354d31fa406bd",
+      "actual": "3e5fa3e0759288d2004504c082d354d31fa406bd",
+      "match": true
+    },
+    {
+      "stage": "cmake-tests",
+      "path": "docs/BUILD.md",
+      "expected": "3f7028b050c93ce6c75d71bdfe9c9c768f46cb0b",
+      "actual": "3f7028b050c93ce6c75d71bdfe9c9c768f46cb0b",
+      "match": true
+    },
+    {
+      "stage": "ci-sanitizers",
+      "path": ".github/workflows/host.yml",
+      "expected": "abcf54338eb76c3a02a0bd7e6a6b6b186faa50c1",
+      "actual": "abcf54338eb76c3a02a0bd7e6a6b6b186faa50c1",
+      "match": true
+    },
+    {
+      "stage": "ci-sanitizers",
+      "path": "docs/contributing/SANITIZERS.md",
+      "expected": "f9f40d09f2e89b15b5a0963a8cf070a523f17a50",
+      "actual": "f9f40d09f2e89b15b5a0963a8cf070a523f17a50",
+      "match": true
+    },
+    {
+      "stage": "ci-conformance",
+      "path": ".github/workflows/host.yml",
+      "expected": "f40fe724cb6ed755dfcc781bf63918e215a7d054",
+      "actual": "f40fe724cb6ed755dfcc781bf63918e215a7d054",
+      "match": true
+    },
+    {
+      "stage": "ci-conformance",
+      "path": "docs/contributing/CONFORMANCE_CI.md",
+      "expected": "24b4ae0ecf14d73d6fed912109cee72f6718796b",
+      "actual": "24b4ae0ecf14d73d6fed912109cee72f6718796b",
+      "match": true
+    },
+    {
+      "stage": "reproducer-relocation",
+      "path": "docs/contributing/REPRODUCERS.md",
+      "expected": "d1836679bb4122f4e657b76446c53a218fc2bf2d",
+      "actual": "d1836679bb4122f4e657b76446c53a218fc2bf2d",
+      "match": true
+    },
+    {
+      "stage": "api-index",
+      "path": "README.md",
+      "expected": "0e00be2ecc2476a94e93495edefb78a92b35e667",
+      "actual": "0e00be2ecc2476a94e93495edefb78a92b35e667",
+      "match": true
+    },
+    {
+      "stage": "api-index",
+      "path": "docs/API.md",
+      "expected": "ec3cef42e0387eab88cd9b8b9d4a97611e2fe046",
+      "actual": "ec3cef42e0387eab88cd9b8b9d4a97611e2fe046",
+      "match": true
+    },
+    {
+      "stage": "api-index",
+      "path": "docs/BACKENDS.md",
+      "expected": "fcea389b603c3b6d12c556d8ed6efaa04f59b413",
+      "actual": "fcea389b603c3b6d12c556d8ed6efaa04f59b413",
+      "match": true
+    },
+    {
+      "stage": "api-index",
+      "path": "docs/CONFORMANCE.md",
+      "expected": "fcb39951fb57aa2cde3e5cb695c2b2b268c29a67",
+      "actual": "fcb39951fb57aa2cde3e5cb695c2b2b268c29a67",
+      "match": true
+    },
+    {
+      "stage": "backend-regression-selection",
+      "path": "docs/contributing/INTEL_REGRESSIONS.md",
+      "expected": "6f8ba6660e95b29c703cc92087180ab3e523abf3",
+      "actual": "6f8ba6660e95b29c703cc92087180ab3e523abf3",
+      "match": true
+    },
+    {
+      "stage": "build-compiler-selection",
+      "path": "Makefile",
+      "expected": "58f5cd614f8ed312e9aab86f92e6c2f62aeab883",
+      "actual": "58f5cd614f8ed312e9aab86f92e6c2f62aeab883",
+      "match": true
+    },
+    {
+      "stage": "build-compiler-selection",
+      "path": "docs/contributing/COMPILER_SELECTION.md",
+      "expected": "ae91d1e623e8d46b83130af6cbf531f3d397f392",
+      "actual": "ae91d1e623e8d46b83130af6cbf531f3d397f392",
+      "match": true
+    },
+    {
+      "stage": "build-header-dependencies",
+      "path": "Makefile",
+      "expected": "4b4df5515a950143fac54d2c3d713dea28369f69",
+      "actual": "4b4df5515a950143fac54d2c3d713dea28369f69",
+      "match": true
+    },
+    {
+      "stage": "build-header-dependencies",
+      "path": "docs/contributing/HEADER_DEPENDENCIES.md",
+      "expected": "9b946ce1847a26c7943eca35252d281421f86f40",
+      "actual": "9b946ce1847a26c7943eca35252d281421f86f40",
+      "match": true
+    },
+    {
+      "stage": "build-header-dependencies",
+      "path": "test/conformance/test_make_header_dependencies.py",
+      "expected": "0bc95b57fa3d751be23df735b9ea1c085e883d6c",
+      "actual": "0bc95b57fa3d751be23df735b9ea1c085e883d6c",
+      "match": true
+    },
+    {
+      "stage": "local-ignores",
+      "path": ".gitignore",
+      "expected": "883d298b8eea5a6aca9215b47a5deab974bdbc30",
+      "actual": "883d298b8eea5a6aca9215b47a5deab974bdbc30",
+      "match": true
+    },
+    {
+      "stage": "local-ignores",
+      "path": "docs/contributing/LOCAL_OUTPUTS.md",
+      "expected": "8af7823ee2b8a0e9621d354080c5c36284ab1b88",
+      "actual": "8af7823ee2b8a0e9621d354080c5c36284ab1b88",
+      "match": true
+    }
+  ]
+}

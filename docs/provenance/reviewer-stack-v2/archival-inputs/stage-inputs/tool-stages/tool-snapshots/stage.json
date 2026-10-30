@@ -1,0 +1,23 @@
+{
+  "id": "tool-snapshots",
+  "title": "Qualify immutable headers from an independent source checkout",
+  "dependencies": [
+    "tool-host-oracle"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_snapshots.py",
+    "python3 tools/conformance.py --revision HEAD --case literal --route host-buffer --opt 2 --no-memory --no-negative"
+  ],
+  "problem": "Re-running a comparison against a moving worktree can silently change the source under test.",
+  "example": "--source-root ../ffmt --revision COMMIT snapshots that commit even when its working headers have subsequent edits.",
+  "design": "Snapshot include/ through git archive for pinned revisions, or copy current headers for WORKTREE; identify runner checkout separately from library checkout.",
+  "tradeoffs": "Only headers belong to the library snapshot. Exact runner/fixture hashes and compiler commands remain separate evidence, not an assertion of a clean worktree.",
+  "reading_order": [
+    "tools/conformance.py:snapshot",
+    "tools/conformance.py:Campaign.__init__",
+    "test/conformance/test_snapshots.py"
+  ],
+  "docs": "--revision COMMIT snapshots immutable headers. --source-root CHECKOUT separates the tested library checkout from the portable runner; manifests retain both revisions and all captured hashes."
+}

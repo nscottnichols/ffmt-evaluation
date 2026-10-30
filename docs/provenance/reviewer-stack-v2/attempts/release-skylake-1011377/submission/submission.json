@@ -1,0 +1,751 @@
+{
+  "started": "2026-10-23T23:16:35.355055+00:00",
+  "source_index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/release-index.json",
+  "index": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-skylake-20261023T231621Z/assembly-index.json",
+  "index_sha256": "e31a709be065ce0d773cb692027632a8059002a97c2f25f5e71fc338938fa572",
+  "validated_manifests": [
+    {
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "snapshot": "qualified-manifest-1.json",
+      "sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826",
+      "status": "pass"
+    },
+    {
+      "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "snapshot": "qualified-manifest-2.json",
+      "sha256": "9ec16206653302d5c1211c9c8adb44926bea42edd664f27057bea202e1722420",
+      "status": "failure"
+    }
+  ],
+  "selected_stages": [
+    "benchmark-primitives",
+    "benchmark-driver",
+    "benchmark-resources",
+    "cmake-package",
+    "cmake-tests",
+    "ci-sanitizers",
+    "ci-conformance",
+    "reproducer-relocation",
+    "api-index",
+    "backend-regression-selection",
+    "build-compiler-selection",
+    "build-header-dependencies",
+    "local-ignores",
+    "complete"
+  ],
+  "reused_validation": [
+    {
+      "id": "ci-review-waves",
+      "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "ci-resource-bounds",
+      "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "oracle-pin",
+      "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "build-registration",
+      "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "coverage-metrics",
+      "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "tool-process",
+      "commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "core-prepare",
+      "commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "checked-config",
+      "commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "accounting",
+      "commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "parsing",
+      "commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "primitives",
+      "commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "formatter-compatibility",
+      "commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "format-as",
+      "commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "legacy-compatibility",
+      "commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "conversion-preparation",
+      "commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "floating-conversion",
+      "commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass"
+    },
+    {
+      "id": "extended-integers",
+      "commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-intermediates-20261023T224434Z/manifest.json",
+      "status": "pass_with_skips"
+    }
+  ],
+  "pending_indices": [],
+  "pending_validation": [],
+  "not_selected": [
+    {
+      "id": "coverage-policy",
+      "commit": "465cc67d7769713b36e3789919edafb86a0c0d71",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-negative",
+      "commit": "c5b81a4d5288e7be393d83ea28332510285b765e",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-host-oracle",
+      "commit": "4f2b6d380f3b03e453bf0d80a7ab2d26ec480c46",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "unicode",
+      "commit": "e285726a33a1d1fc0e3870a6e58589f25cd53c83",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "floating-formatting",
+      "commit": "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "transport",
+      "commit": "105c853df03ef06ff29b6de819e78f6b23dd4dcb",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "extended-floats",
+      "commit": "e44145c128c8cafcc061ada1de8553fcbb79e179",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-snapshots",
+      "commit": "4436d6208ed94795ee5ba9376aa76b0d00b5fe11",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-isolation",
+      "commit": "1d0552f3961a9a7cecf415b444c258e218f60e86",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-oracle-negatives",
+      "commit": "661db66d492a18c308ae55358a59372bd7bf541e",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "migration",
+      "commit": "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-adapter-support",
+      "commit": "160bd04b3657bf2d33167f342bb0b360429f3c0b",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-cuda",
+      "commit": "fe65f6fcdc7443a587986283387848303809eb1c",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-hip",
+      "commit": "f50afd9c6852f5d60d9eabdb45ff094281bab2b6",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-kokkos",
+      "commit": "8c25ab61e046087f5330127cd479befcadbe8cb4",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-numeric-memory",
+      "commit": "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-memory-cuda",
+      "commit": "17288fc322f07956b78999bf438f10b7f3a4086b",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-memory-hip",
+      "commit": "fd5eeb4d4be89c45c2765713d133c264a3c00687",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-memory-kokkos",
+      "commit": "50540f30832e14ee0a67ee5bfbed173ecb694c83",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-openmp",
+      "commit": "93f6cb1ff2af9a3d0488dfd73a38c3e2eb8f1cfc",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-memory-openmp",
+      "commit": "a0d74e7370ddf6aa612fd5c368c0a86d46ae30f3",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-sycl",
+      "commit": "d7aecfab035ffe7ff0963149ae7f25745cc0b365",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "tool-memory-sycl",
+      "commit": "2ce97b23c175321e92dc4b700d24927033911f88",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "obsolete-deletion",
+      "commit": "cd7fcfd406baf316271d8b88dc03f712fd157d6a",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "shared-family",
+      "commit": "c325e8408f512f38861f56983a7ec9b748290118",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "chrono",
+      "commit": "862369f1856e7174106cacace253671be59e7271",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "enum-helpers",
+      "commit": "bdcea2b2afb856a364e14b7578af9e4199bb7745",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "named-arguments",
+      "commit": "26f1a22c34b885d9b982a5856ae976ef8742510d",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "ranges",
+      "commit": "241df53a29ac8cf096aacd20542c87b33540c0bf",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "standard-types",
+      "commit": "98a1c1e67fba095bd678e0a1769a2ab89efa5084",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "feature-integration",
+      "commit": "dd407fc38b596fcda23152a122f12bf69829c18d",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "std23",
+      "commit": "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "styling",
+      "commit": "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb",
+      "reason": "Outside explicit stage selection"
+    },
+    {
+      "id": "typed-printf",
+      "commit": "aa36d84aaa2a050e56fbca8d7df5085e92040e48",
+      "reason": "Outside explicit stage selection"
+    }
+  ],
+  "output": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z",
+  "runner_sha256": "24b8d4305ee57551d06bf7004ead7554aa2ad871494484b9877ee8f632d092dd",
+  "wrapper_sha256": "8200b0938ddd59bb66510159adbd5e0e181fe31be35e17cf5abc1908b7f01d40",
+  "preflight": {
+    "command": [
+      "/home/nnichols/.local/bin/python3",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate.py",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-skylake-20261023T231621Z/assembly-index.json",
+      "--repo",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+      "--preflight"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "a9b08e8d454dc4f50ab4b0528e63f60906d9213fb956c40b82b8e6819eedcd9f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "system": "skylake",
+  "purpose": "CPU-only immutable review intermediates; no GPU campaigns",
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "skylake_8180",
+    "-n",
+    "1",
+    "-t",
+    "240",
+    "--env",
+    "FFMT_REVIEW_SYSTEM=skylake",
+    "--cwd",
+    "/home/nnichols",
+    "-O",
+    "/home/nnichols/.cache/ffmt-cobalt/review-release-skylake-20261023T231621Z",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/validate-cobalt.sh",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-skylake-20261023T231621Z/assembly-index.json",
+    "--repo",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+    "--fmt-dir",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "--output",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z",
+    "--stage",
+    "benchmark-primitives",
+    "--stage",
+    "benchmark-driver",
+    "--stage",
+    "benchmark-resources",
+    "--stage",
+    "cmake-package",
+    "--stage",
+    "cmake-tests",
+    "--stage",
+    "ci-sanitizers",
+    "--stage",
+    "ci-conformance",
+    "--stage",
+    "reproducer-relocation",
+    "--stage",
+    "api-index",
+    "--stage",
+    "backend-regression-selection",
+    "--stage",
+    "build-compiler-selection",
+    "--stage",
+    "build-header-dependencies",
+    "--stage",
+    "local-ignores",
+    "--stage",
+    "complete"
+  ],
+  "cobalt_output_prefix": "/home/nnichols/.cache/ffmt-cobalt/review-release-skylake-20261023T231621Z",
+  "qsub.stdout_sha256": "45de5e12784fd9aedd65dbac57fd5d359ed18676628ecd72fce921250f348ca0",
+  "qsub.stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "returncode": 0,
+  "stdout": "1011377\n",
+  "stderr": "",
+  "finished": "2026-10-23T23:16:35.525854+00:00",
+  "jobid": "1011377",
+  "completion": {
+    "captured": "2026-10-23T23:39:12.274931+00:00",
+    "status": "pass_with_skips",
+    "manifest": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-release-skylake-20261023T231621Z/manifest.json",
+    "manifest_sha256": "35cfd216eb52c989b417e7e82d3c625fc38e4724a8226932fd4f178d9abedc8e",
+    "logs": [
+      {
+        "original": "/home/nnichols/.cache/ffmt-cobalt/review-release-skylake-20261023T231621Z.cobaltlog",
+        "copy": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-skylake-20261023T231621Z/review-release-skylake-20261023T231621Z.cobaltlog",
+        "sha256": "543f98dfb55e73faf96e472a382442c4da2d22a23aec024e62ca55014ad14784"
+      },
+      {
+        "original": "/home/nnichols/.cache/ffmt-cobalt/review-release-skylake-20261023T231621Z.error",
+        "copy": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-skylake-20261023T231621Z/review-release-skylake-20261023T231621Z.error",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "original": "/home/nnichols/.cache/ffmt-cobalt/review-release-skylake-20261023T231621Z.output",
+        "copy": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/release-skylake-20261023T231621Z/review-release-skylake-20261023T231621Z.output",
+        "sha256": "7b96c70183d4f4c6600f80b5d0b7debdc018eed431effff92c26ca273067f1b2"
+      }
+    ],
+    "counts": {
+      "pass": 248,
+      "not_applicable": 8,
+      "skip": 1
+    },
+    "failures": [],
+    "runner_matches_submitted": true,
+    "stages": [
+      {
+        "id": "ci-review-waves",
+        "commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+        "status": "not_selected"
+      },
+      {
+        "id": "ci-resource-bounds",
+        "commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+        "status": "not_selected"
+      },
+      {
+        "id": "oracle-pin",
+        "commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+        "status": "not_selected"
+      },
+      {
+        "id": "build-registration",
+        "commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+        "status": "not_selected"
+      },
+      {
+        "id": "coverage-metrics",
+        "commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+        "status": "not_selected"
+      },
+      {
+        "id": "coverage-policy",
+        "commit": "465cc67d7769713b36e3789919edafb86a0c0d71",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-process",
+        "commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-negative",
+        "commit": "c5b81a4d5288e7be393d83ea28332510285b765e",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-host-oracle",
+        "commit": "4f2b6d380f3b03e453bf0d80a7ab2d26ec480c46",
+        "status": "not_selected"
+      },
+      {
+        "id": "core-prepare",
+        "commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+        "status": "not_selected"
+      },
+      {
+        "id": "checked-config",
+        "commit": "954454c422b816fd8296074cd7852dc923396f6c",
+        "status": "not_selected"
+      },
+      {
+        "id": "accounting",
+        "commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+        "status": "not_selected"
+      },
+      {
+        "id": "parsing",
+        "commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+        "status": "not_selected"
+      },
+      {
+        "id": "primitives",
+        "commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+        "status": "not_selected"
+      },
+      {
+        "id": "unicode",
+        "commit": "e285726a33a1d1fc0e3870a6e58589f25cd53c83",
+        "status": "not_selected"
+      },
+      {
+        "id": "formatter-compatibility",
+        "commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+        "status": "not_selected"
+      },
+      {
+        "id": "format-as",
+        "commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+        "status": "not_selected"
+      },
+      {
+        "id": "legacy-compatibility",
+        "commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+        "status": "not_selected"
+      },
+      {
+        "id": "conversion-preparation",
+        "commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+        "status": "not_selected"
+      },
+      {
+        "id": "floating-conversion",
+        "commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+        "status": "not_selected"
+      },
+      {
+        "id": "floating-formatting",
+        "commit": "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8",
+        "status": "not_selected"
+      },
+      {
+        "id": "transport",
+        "commit": "105c853df03ef06ff29b6de819e78f6b23dd4dcb",
+        "status": "not_selected"
+      },
+      {
+        "id": "extended-integers",
+        "commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+        "status": "not_selected"
+      },
+      {
+        "id": "extended-floats",
+        "commit": "e44145c128c8cafcc061ada1de8553fcbb79e179",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-snapshots",
+        "commit": "4436d6208ed94795ee5ba9376aa76b0d00b5fe11",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-isolation",
+        "commit": "1d0552f3961a9a7cecf415b444c258e218f60e86",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-oracle-negatives",
+        "commit": "661db66d492a18c308ae55358a59372bd7bf541e",
+        "status": "not_selected"
+      },
+      {
+        "id": "migration",
+        "commit": "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+        "status": "not_selected"
+      },
+      {
+        "id": "benchmark-primitives",
+        "commit": "75353cc601c85b52dc066f724bfd4a56fbf37a6e",
+        "status": "pass"
+      },
+      {
+        "id": "benchmark-driver",
+        "commit": "d50fe860d0424ceb002ab69cef6a9e5b4c65e83d",
+        "status": "pass"
+      },
+      {
+        "id": "benchmark-resources",
+        "commit": "cf70347b467f436447b41ea74a493e74cdc2a3e7",
+        "status": "pass"
+      },
+      {
+        "id": "tool-adapter-support",
+        "commit": "160bd04b3657bf2d33167f342bb0b360429f3c0b",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-cuda",
+        "commit": "fe65f6fcdc7443a587986283387848303809eb1c",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-hip",
+        "commit": "f50afd9c6852f5d60d9eabdb45ff094281bab2b6",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-kokkos",
+        "commit": "8c25ab61e046087f5330127cd479befcadbe8cb4",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-numeric-memory",
+        "commit": "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-memory-cuda",
+        "commit": "17288fc322f07956b78999bf438f10b7f3a4086b",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-memory-hip",
+        "commit": "fd5eeb4d4be89c45c2765713d133c264a3c00687",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-memory-kokkos",
+        "commit": "50540f30832e14ee0a67ee5bfbed173ecb694c83",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-openmp",
+        "commit": "93f6cb1ff2af9a3d0488dfd73a38c3e2eb8f1cfc",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-memory-openmp",
+        "commit": "a0d74e7370ddf6aa612fd5c368c0a86d46ae30f3",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-sycl",
+        "commit": "d7aecfab035ffe7ff0963149ae7f25745cc0b365",
+        "status": "not_selected"
+      },
+      {
+        "id": "tool-memory-sycl",
+        "commit": "2ce97b23c175321e92dc4b700d24927033911f88",
+        "status": "not_selected"
+      },
+      {
+        "id": "obsolete-deletion",
+        "commit": "cd7fcfd406baf316271d8b88dc03f712fd157d6a",
+        "status": "not_selected"
+      },
+      {
+        "id": "shared-family",
+        "commit": "c325e8408f512f38861f56983a7ec9b748290118",
+        "status": "not_selected"
+      },
+      {
+        "id": "chrono",
+        "commit": "862369f1856e7174106cacace253671be59e7271",
+        "status": "not_selected"
+      },
+      {
+        "id": "enum-helpers",
+        "commit": "bdcea2b2afb856a364e14b7578af9e4199bb7745",
+        "status": "not_selected"
+      },
+      {
+        "id": "named-arguments",
+        "commit": "26f1a22c34b885d9b982a5856ae976ef8742510d",
+        "status": "not_selected"
+      },
+      {
+        "id": "ranges",
+        "commit": "241df53a29ac8cf096aacd20542c87b33540c0bf",
+        "status": "not_selected"
+      },
+      {
+        "id": "standard-types",
+        "commit": "98a1c1e67fba095bd678e0a1769a2ab89efa5084",
+        "status": "not_selected"
+      },
+      {
+        "id": "feature-integration",
+        "commit": "dd407fc38b596fcda23152a122f12bf69829c18d",
+        "status": "not_selected"
+      },
+      {
+        "id": "std23",
+        "commit": "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3",
+        "status": "not_selected"
+      },
+      {
+        "id": "styling",
+        "commit": "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb",
+        "status": "not_selected"
+      },
+      {
+        "id": "typed-printf",
+        "commit": "aa36d84aaa2a050e56fbca8d7df5085e92040e48",
+        "status": "not_selected"
+      },
+      {
+        "id": "cmake-package",
+        "commit": "58472a3e12d68fd7941be8998456916d1fffd412",
+        "status": "pass_with_skips"
+      },
+      {
+        "id": "cmake-tests",
+        "commit": "6498c0c38449019200b962f978ef3dbef0511003",
+        "status": "pass_with_skips"
+      },
+      {
+        "id": "ci-sanitizers",
+        "commit": "584253ca2c158308def053f80e2537d34e052120",
+        "status": "pass"
+      },
+      {
+        "id": "ci-conformance",
+        "commit": "493137b96467eaefe225f5c423dcc354db1dd4d4",
+        "status": "pass"
+      },
+      {
+        "id": "reproducer-relocation",
+        "commit": "36b45e924da8da7312408f6f948ff63f6ea22594",
+        "status": "pass"
+      },
+      {
+        "id": "api-index",
+        "commit": "77df1adccd0448a46e73af6be2af9c5a2efbc1ee",
+        "status": "pass"
+      },
+      {
+        "id": "backend-regression-selection",
+        "commit": "baaea496731052b4d53657b8498708a7848e0d80",
+        "status": "pass"
+      },
+      {
+        "id": "build-compiler-selection",
+        "commit": "91ebaec92fa783b997f07bebff0d19c9bfc56564",
+        "status": "pass"
+      },
+      {
+        "id": "build-header-dependencies",
+        "commit": "9fa6e8fa26c13f78962ad4ff0447a60a3f5cafa5",
+        "status": "pass"
+      },
+      {
+        "id": "local-ignores",
+        "commit": "c90c80e02ea7e070211693d329a7aaed21f7c089",
+        "status": "pass"
+      },
+      {
+        "id": "complete",
+        "commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+        "status": "pass_with_skips"
+      }
+    ]
+  }
+}

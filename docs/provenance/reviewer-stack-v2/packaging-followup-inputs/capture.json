@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "9570718a7e4b3fc6eeaa44fad03fe85a5b4cf11ba1584e759dd2f0d5f978c93f",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/reviewer-stack-v2/packaging-followup-inputs",
+      "--input",
+      "workflow/capture.py=tools/review_stack/capture.py",
+      "--input",
+      "workflow/test_capture.py=tools/review_stack/test_capture.py",
+      "--input",
+      "audits/make-preservation-independent.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/make-preservation-independent.json"
+    ]
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "audits/make-preservation-independent.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/make-preservation-independent.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "storage": "visible",
+      "bytes": 11313,
+      "sha256": "9570718a7e4b3fc6eeaa44fad03fe85a5b4cf11ba1584e759dd2f0d5f978c93f"
+    },
+    {
+      "relative_path": "workflow/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "storage": "visible",
+      "bytes": 3671,
+      "sha256": "fc57ca2739db7c0ed97c4ad17b6dd97dc4fec5e14dc051fc10f83b26204f00ba"
+    },
+    {
+      "relative_path": "audits/make-preservation-independent.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/make-preservation-independent.json",
+      "storage": "visible",
+      "bytes": 1416,
+      "sha256": "27dee488fcafe4fb4e6e7e747f29c22ada3334a781737d823a5dc0272f56d539"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

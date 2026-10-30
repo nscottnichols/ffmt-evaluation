@@ -1,0 +1,23 @@
+{
+  "id": "ci-resource-bounds",
+  "title": "Bound template-build concurrency and cancel stale CI revisions",
+  "dependencies": [
+    "ci-review-waves"
+  ],
+  "change_kind": "ci-policy",
+  "remove": [],
+  "tests": [],
+  "problem": "Launching one compiler per hosted CPU can exhaust memory once formatting templates grow; stale runs consume the same runner quota.",
+  "example": "On a runner with many CPUs, make -j2 bounds compiler processes while a newer PR commit cancels the superseded workflow.",
+  "design": "Set a consistent two-job compile bound and a workflow/PR concurrency key without reducing the compiler matrix.",
+  "tradeoffs": "Less parallelism may increase wall time. Cancelled stale runs are incomplete evidence, not passing checks.",
+  "reading_order": [
+    ".github/workflows/host.yml:concurrency and Make commands",
+    ".github/workflows/device.yml:concurrency and Make commands",
+    "docs/contributing/CI_RESOURCES.md"
+  ],
+  "docs": [
+    "docs/contributing/CI_RESOURCES.md"
+  ],
+  "wave": 1
+}

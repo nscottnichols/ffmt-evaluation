@@ -1,0 +1,70 @@
+{
+  "id": "cmake-package",
+  "title": "Install a header-only CMake interface target",
+  "dependencies": [
+    "obsolete-deletion"
+  ],
+  "change_kind": "build-integration",
+  "remove": [],
+  "tests": [
+    [
+      "cmake",
+      "-S",
+      "{source}",
+      "-B",
+      "{output}/package",
+      "-DCMAKE_CXX_COMPILER={cxx}",
+      "-DCMAKE_INSTALL_PREFIX={output}/install",
+      "-DCMAKE_DISABLE_FIND_PACKAGE_Python3=ON",
+      "-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON",
+      "-DFFMT_FMT_DIR=/unavailable"
+    ],
+    [
+      "cmake",
+      "--install",
+      "{output}/package"
+    ],
+    [
+      "cmake",
+      "-S",
+      "{source}/examples/cmake-consumer",
+      "-B",
+      "{output}/consumer",
+      "-DCMAKE_CXX_COMPILER={cxx}",
+      "-DCMAKE_PREFIX_PATH={output}/install"
+    ],
+    [
+      "cmake",
+      "--build",
+      "{output}/consumer",
+      "-j2"
+    ],
+    [
+      "{output}/consumer/ffmt_consumer"
+    ]
+  ],
+  "docs": [
+    "docs/BUILD.md"
+  ],
+  "problem": "Applications need a reusable CMake target and an installed package without inheriting oracle or test dependencies.",
+  "example": "find_package(ffmt CONFIG REQUIRED)\ntarget_link_libraries(my_program PRIVATE ffmt::ffmt)",
+  "design": "An INTERFACE target carries headers and C++20 requirements. Standard package helpers export relocatable target metadata; a small independent consumer checks the installed contract.",
+  "tradeoffs": "The target does not configure accelerator runtimes or backend flags. CMake 3.20 is required; direct header consumers do not need CMake.",
+  "reading_order": [
+    "CMakeLists.txt",
+    "cmake/ffmtConfig.cmake.in",
+    "examples/cmake-consumer/main.cpp",
+    "docs/BUILD.md"
+  ],
+  "validation": {
+    "commands": [
+      "cmake -S . -B build/package -DCMAKE_INSTALL_PREFIX=\"$PWD/build/install\" -DCMAKE_DISABLE_FIND_PACKAGE_Python3=ON -DFFMT_FMT_DIR=/unavailable",
+      "cmake --install build/package",
+      "cmake -S examples/cmake-consumer -B build/consumer -DCMAKE_PREFIX_PATH=\"$PWD/build/install\"",
+      "cmake --build build/consumer -j2 && ./build/consumer/ffmt_consumer"
+    ],
+    "results": "Pending independent review and assembled portable validation.",
+    "limitations": "Portable validation is pending on the assembled commit; root records commands and outcomes before publication."
+  },
+  "source_changes": "Build integration and documentation only; no formatter implementation changes."
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "ded07e3fe7652698c5280276891b2d118f5b61182bc79746ffcaf0cda5a2bfb1",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/reviewer-stack-v2/capture-tool-review",
+      "--input",
+      "workflow/capture.py=tools/review_stack/capture.py",
+      "--input",
+      "workflow/test_capture.py=tools/review_stack/test_capture.py",
+      "--input",
+      "audits/capture-independent-review.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/capture-independent-review.json",
+      "--input",
+      "audits/capture-reference-audit.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/capture-reference-audit.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "workflow/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "audits/capture-independent-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/capture-independent-review.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "audits/capture-reference-audit.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/capture-reference-audit.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "workflow/capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "storage": "visible",
+      "bytes": 11384,
+      "sha256": "ded07e3fe7652698c5280276891b2d118f5b61182bc79746ffcaf0cda5a2bfb1"
+    },
+    {
+      "relative_path": "workflow/test_capture.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/test_capture.py",
+      "storage": "visible",
+      "bytes": 4182,
+      "sha256": "bc049d8639dff6f8c6ebde61fdaa77f2f7090614ca5d63163757750962a4d834"
+    },
+    {
+      "relative_path": "audits/capture-independent-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/capture-independent-review.json",
+      "storage": "visible",
+      "bytes": 3071,
+      "sha256": "5489a3fc54d8730e53b22111eb1e175a8820732ef6a13253e5a19a16a477caac"
+    },
+    {
+      "relative_path": "audits/capture-reference-audit.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/reviews/capture-reference-audit.json",
+      "storage": "visible",
+      "bytes": 271,
+      "sha256": "7defc4a2fb6e426f74836a0986faf76bf31bc79b0ce87e7246c5fbcf572a2084"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

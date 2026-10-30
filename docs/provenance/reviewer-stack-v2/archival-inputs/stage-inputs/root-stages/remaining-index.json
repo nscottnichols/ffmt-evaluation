@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cmake-package",
+    "files": [
+      "CMakeLists.txt",
+      "cmake/ffmtConfig.cmake.in",
+      "docs/BUILD.md",
+      "examples/cmake-consumer/CMakeLists.txt",
+      "examples/cmake-consumer/main.cpp"
+    ],
+    "remove": []
+  },
+  {
+    "id": "cmake-tests",
+    "files": [
+      "CMakeLists.txt",
+      "cmake/ffmtTests.cmake",
+      "docs/BUILD.md"
+    ],
+    "remove": []
+  },
+  {
+    "id": "ci-sanitizers",
+    "files": [
+      ".github/workflows/host.yml",
+      "docs/contributing/SANITIZERS.md"
+    ],
+    "remove": []
+  },
+  {
+    "id": "ci-conformance",
+    "files": [
+      ".github/workflows/host.yml",
+      "docs/contributing/CONFORMANCE_CI.md"
+    ],
+    "remove": []
+  },
+  {
+    "id": "reproducer-relocation",
+    "files": [
+      "docs/contributing/REPRODUCERS.md"
+    ],
+    "remove": [
+      "implementation_limitation/dpcpp_O0.cpp",
+      "implementation_limitation/icpx_omp_pragma_in_dowhile.cpp"
+    ]
+  },
+  {
+    "id": "api-index",
+    "files": [
+      "README.md",
+      "docs/API.md",
+      "docs/BACKENDS.md",
+      "docs/CONFORMANCE.md"
+    ],
+    "remove": []
+  }
+]

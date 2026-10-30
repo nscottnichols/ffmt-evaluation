@@ -1,0 +1,24 @@
+Jobid: 1011212
+qsub --mode script -q rome_7742 -n 1 -t 10 --cwd /home/nnichols /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.sh /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/manifest.json
+Thu Oct 22 22:24:57 2026 +0000 (UTC) submitted with cwd set to: /home/nnichols
+Thu Oct 22 22:25:09 2026 +0000 (UTC) 
+Thu Oct 22 22:25:09 2026 +0000 (UTC) Command: '/usr/bin/ssh' 'rome00' '/usr/libexec/cobalt/cobalt-launcher.py' '--nf' '/var/tmp/cobalt.1011212' '--jobid' '1011212' '--cwd' '/home/nnichols' '--env' 'COBALT_JOBID=1011212' '/bin/bash' '/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/consumer.sh' '/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validation-20261022T220825395012Z/manifest.json'
+Thu Oct 22 22:25:09 2026 +0000 (UTC) 
+Thu Oct 22 22:25:09 2026 +0000 (UTC) Environment:
+Thu Oct 22 22:25:09 2026 +0000 (UTC) SHELL=/bin/bash
+Thu Oct 22 22:25:09 2026 +0000 (UTC) COBALT_NODEFILE=/tmp/tmpwmCT6b
+Thu Oct 22 22:25:09 2026 +0000 (UTC) COBALT_PARTNAME=rome00
+Thu Oct 22 22:25:09 2026 +0000 (UTC) COBALT_JOBID=1011212
+Thu Oct 22 22:25:09 2026 +0000 (UTC) COBALT_STARTTIME=1792707896
+Thu Oct 22 22:25:09 2026 +0000 (UTC) LOGNAME=nnichols
+Thu Oct 22 22:25:09 2026 +0000 (UTC) USER=nnichols
+Thu Oct 22 22:25:09 2026 +0000 (UTC) COBALT_ENDTIME=1792708496
+Thu Oct 22 22:25:09 2026 +0000 (UTC) COBALT_PARTSIZE=1
+Thu Oct 22 22:25:09 2026 +0000 (UTC) HOME=/home/nnichols
+Thu Oct 22 22:25:09 2026 +0000 (UTC) COBALT_JOBSIZE=1
+Thu Oct 22 22:25:09 2026 +0000 (UTC) 
+Thu Oct 22 22:25:09 2026 +0000 (UTC) Info: stdin received from /dev/null
+Thu Oct 22 22:25:09 2026 +0000 (UTC) Info: stdout sent to /home/nnichols/1011212.output
+Thu Oct 22 22:25:09 2026 +0000 (UTC) Info: stderr sent to /home/nnichols/1011212.error
+Thu Oct 22 22:25:09 2026 +0000 (UTC) 
+Thu Oct 22 22:25:21 2026 +0000 (UTC) Info: task completed normally with an exit code of 0; initiating job cleanup and removal

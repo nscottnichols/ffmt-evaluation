@@ -1,0 +1,49 @@
+{
+  "id": "styling",
+  "title": "Add explicit ANSI color and emphasis wrappers",
+  "dependencies": [
+    "shared-family"
+  ],
+  "change_kind": "feature",
+  "remove": [],
+  "tests": {
+    "suites": [
+      "style"
+    ],
+    "commands": [
+      "make build/focused_style CXX=\"$CXX\" && ./build/focused_style"
+    ]
+  },
+  "problem": "Request ANSI styling explicitly around an existing formattable value.",
+  "example": "#include <ffmt/color.hpp>\nffmt::println(\"{}\", ffmt::styled(42, ffmt::fg(ffmt::rgb(255,20,30)) | ffmt::emphasis::bold));",
+  "design": "Typed composition emits deterministic bytes without terminal detection.",
+  "tradeoffs": "Styles explicitly emit ANSI escape bytes around the formatted value and reset\nwhen a nonempty style ends. There is no terminal detection; captured output also\ncontains those bytes. RGB, terminal palette colors and emphasis flags compose\nwith `operator|`. Incompatible repeated terminal colors report `invalid_format`.\nThe wrapped formatter still owns ordinary value parsing and width semantics.",
+  "reading_order": [
+    "include/ffmt/color.hpp",
+    "test/conformance/test_style.cpp"
+  ],
+  "docs": [
+    "docs/features/styling.md"
+  ],
+  "source_provenance": {
+    "snapshot": "aeff043614725d58d383c8add086f548d77d05eb",
+    "source_changes": "Conventional header layout and standalone explicit-style tests/docs. No implementation token change."
+  },
+  "minimal_wiring": {
+    "focused_suites": [
+      "style"
+    ],
+    "fixture_modules": [
+      "cases_style.py"
+    ]
+  },
+  "before": "There is no typed style wrapper to emit ANSI foreground and emphasis around a value.",
+  "after": "#include <ffmt/color.hpp>\nffmt::println(\"{}\", ffmt::styled(42, ffmt::fg(ffmt::rgb(255,20,30)) | ffmt::emphasis::bold));",
+  "validation": {
+    "commands": [
+      "make build/focused_style CXX=\"$CXX\" && ./build/focused_style"
+    ],
+    "results": "Pending validation of the assembled intermediate commit; root records exact commands and outcomes.",
+    "limitations": "Portable checks do not establish accelerator runtime availability. No hardware campaign rerun is warranted by whitespace/comments, helper renaming and test decomposition alone."
+  }
+}

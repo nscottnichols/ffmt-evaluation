@@ -1,0 +1,700 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "cobalt_jobid": "1011365",
+  "stage_status_counts": {
+    "pass": 6
+  },
+  "roots": [
+    {
+      "label": "validation",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z",
+      "handwritten_visible": false
+    },
+    {
+      "label": "submission",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z",
+      "handwritten_visible": false
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {
+    "compiler_or_runtime_product": 12
+  },
+  "files": [
+    {
+      "relative_path": "validation/assembly-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/assembly-index.json",
+      "storage": "visible",
+      "bytes": 12689,
+      "sha256": "c943ff9e00e2da9f3e1ad64224ab54b10797790d4d9daae6a98b5378e80f64be"
+    },
+    {
+      "relative_path": "validation/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/manifest.json",
+      "storage": "visible",
+      "bytes": 235280,
+      "sha256": "7b9848f4d39082d2ea5dea0b8758155600ab5978a9ab3254fadcd24862bbe826"
+    },
+    {
+      "relative_path": "validation/validate-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/validate-cobalt.sh",
+      "storage": "visible",
+      "bytes": 1083,
+      "sha256": "840c47f10dc265a12b891cd499a31d90a3ccac48b205f1bd83364cf45a3cda4f"
+    },
+    {
+      "relative_path": "validation/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/validate.py",
+      "storage": "visible",
+      "bytes": 21592,
+      "sha256": "28b818689466d20ec4b1fbea8a8f930a248ff28691fbd450756146e6d206b9bf"
+    },
+    {
+      "relative_path": "validation/build-registration/clang22/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/clang22/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/build-registration/clang22/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/clang22/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "d46632ded5a0294038bd5ca577cd297c1dc57a27a393eab785c59e60507a5ff8"
+    },
+    {
+      "relative_path": "validation/build-registration/clang22/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/clang22/checkout.stdout",
+      "storage": "archive",
+      "bytes": 92,
+      "sha256": "e2848387f4c5c45409dcc048dd196665b115b26257dd22821148b7c283d90fe1"
+    },
+    {
+      "relative_path": "validation/build-registration/clang22/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/clang22/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/build-registration/clang22/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/clang22/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/build-registration/commands/command-01.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/commands/command-01.stderr",
+      "storage": "archive",
+      "bytes": 103,
+      "sha256": "5351d8b7e65a8d85c4880e591308f2bb3688d7b47579022df0d5e5b7ea070ed9"
+    },
+    {
+      "relative_path": "validation/build-registration/commands/command-01.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/commands/command-01.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/build-registration/gcc13/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/gcc13/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/build-registration/gcc13/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/gcc13/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "d46632ded5a0294038bd5ca577cd297c1dc57a27a393eab785c59e60507a5ff8"
+    },
+    {
+      "relative_path": "validation/build-registration/gcc13/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/gcc13/checkout.stdout",
+      "storage": "archive",
+      "bytes": 92,
+      "sha256": "e2848387f4c5c45409dcc048dd196665b115b26257dd22821148b7c283d90fe1"
+    },
+    {
+      "relative_path": "validation/build-registration/gcc13/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/gcc13/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/build-registration/gcc13/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/build-registration/gcc13/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/clang22/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/clang22/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/clang22/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/clang22/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "48aba2f72cbb835fa1249f2001632ec303e53f110f018c49b9ab357f1695398e"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/clang22/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/clang22/checkout.stdout",
+      "storage": "archive",
+      "bytes": 86,
+      "sha256": "479036ad983bfe20e71765b6233e697b54c542680f9b294aaaaa1caa2922a547"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/clang22/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/clang22/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/clang22/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/clang22/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/gcc13/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/gcc13/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/gcc13/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/gcc13/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "48aba2f72cbb835fa1249f2001632ec303e53f110f018c49b9ab357f1695398e"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/gcc13/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/gcc13/checkout.stdout",
+      "storage": "archive",
+      "bytes": 86,
+      "sha256": "479036ad983bfe20e71765b6233e697b54c542680f9b294aaaaa1caa2922a547"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/gcc13/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/gcc13/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-resource-bounds/gcc13/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-resource-bounds/gcc13/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/clang22/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/clang22/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/clang22/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/clang22/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "91c0eaefd97d6c4d48c8a465a3d9395794345d02ebb7eba85afaeb2cd54eeb4f"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/clang22/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/clang22/checkout.stdout",
+      "storage": "archive",
+      "bytes": 79,
+      "sha256": "c3182a4643be83fa9ce6f48754805b0c877fb58f3494789f88e5c72874fc42ee"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/clang22/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/clang22/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/clang22/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/clang22/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/gcc13/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/gcc13/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/gcc13/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/gcc13/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "91c0eaefd97d6c4d48c8a465a3d9395794345d02ebb7eba85afaeb2cd54eeb4f"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/gcc13/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/gcc13/checkout.stdout",
+      "storage": "archive",
+      "bytes": 79,
+      "sha256": "c3182a4643be83fa9ce6f48754805b0c877fb58f3494789f88e5c72874fc42ee"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/gcc13/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/gcc13/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/ci-review-waves/gcc13/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/ci-review-waves/gcc13/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/clang22/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/clang22/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/clang22/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/clang22/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "f1dc95571b5b955dfd1d3d34409a5ab4b6919384ea9eeea8a73902ef62ce289b"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/clang22/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/clang22/checkout.stdout",
+      "storage": "archive",
+      "bytes": 86,
+      "sha256": "11b9f276c04345e4b317d2a9f8374a8b009d79f9d20adb76c030088a43350b49"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/clang22/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/clang22/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/clang22/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/clang22/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/commands/command-01.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/commands/command-01.stderr",
+      "storage": "archive",
+      "bytes": 100,
+      "sha256": "6f283ee6225d2cef4c0127d95456a6f954c45141c92b97dd89016cb1c630e8f4"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/commands/command-01.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/commands/command-01.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/commands/command-02.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/commands/command-02.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/commands/command-02.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/commands/command-02.stdout",
+      "storage": "archive",
+      "bytes": 8455,
+      "sha256": "e4e066bd58d6e7a0be0d850223bf5ffa76b75100990d5cc419f0273da00ea6a7"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/gcc13/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/gcc13/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/gcc13/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/gcc13/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "f1dc95571b5b955dfd1d3d34409a5ab4b6919384ea9eeea8a73902ef62ce289b"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/gcc13/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/gcc13/checkout.stdout",
+      "storage": "archive",
+      "bytes": 86,
+      "sha256": "11b9f276c04345e4b317d2a9f8374a8b009d79f9d20adb76c030088a43350b49"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/gcc13/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/gcc13/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-metrics/gcc13/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-metrics/gcc13/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-policy/clang22/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/clang22/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/coverage-policy/clang22/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/clang22/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "d63289298efa54b83d2b68d7657ba675e15b19c1ef3d2e645e0cd683cea5935c"
+    },
+    {
+      "relative_path": "validation/coverage-policy/clang22/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/clang22/checkout.stdout",
+      "storage": "archive",
+      "bytes": 84,
+      "sha256": "29f780c3cfd1d0564b8f35395ab59199f55ae0ddbb124046b7e6752ac841e39c"
+    },
+    {
+      "relative_path": "validation/coverage-policy/clang22/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/clang22/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-policy/clang22/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/clang22/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-policy/commands/command-01.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/commands/command-01.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-policy/commands/command-01.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/commands/command-01.stdout",
+      "storage": "archive",
+      "bytes": 8437,
+      "sha256": "fe59d5597e812d8ab0c005be48d34addf7e95b69d782b15380b910f7cbe9aa8a"
+    },
+    {
+      "relative_path": "validation/coverage-policy/gcc13/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/gcc13/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/coverage-policy/gcc13/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/gcc13/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "d63289298efa54b83d2b68d7657ba675e15b19c1ef3d2e645e0cd683cea5935c"
+    },
+    {
+      "relative_path": "validation/coverage-policy/gcc13/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/gcc13/checkout.stdout",
+      "storage": "archive",
+      "bytes": 84,
+      "sha256": "29f780c3cfd1d0564b8f35395ab59199f55ae0ddbb124046b7e6752ac841e39c"
+    },
+    {
+      "relative_path": "validation/coverage-policy/gcc13/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/gcc13/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/coverage-policy/gcc13/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/coverage-policy/gcc13/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/oracle-pin/clang22/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/clang22/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/oracle-pin/clang22/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/clang22/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "0a6ef1220a105578f744ef302b375f7764ee69f41408fca5223ce603b111d5e6"
+    },
+    {
+      "relative_path": "validation/oracle-pin/clang22/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/clang22/checkout.stdout",
+      "storage": "archive",
+      "bytes": 74,
+      "sha256": "a360c6498299f835b01ab7f666627e9e558b176e6d2784a094098610e3a9fcdb"
+    },
+    {
+      "relative_path": "validation/oracle-pin/clang22/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/clang22/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/oracle-pin/clang22/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/clang22/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/oracle-pin/commands/command-01.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/commands/command-01.stderr",
+      "storage": "archive",
+      "bytes": 101,
+      "sha256": "bc9f37e652115d067f2e886307ac0d1b7f12e2a405bbee2445e6bb91a7fa4392"
+    },
+    {
+      "relative_path": "validation/oracle-pin/commands/command-01.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/commands/command-01.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/oracle-pin/commands/command-02.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/commands/command-02.stderr",
+      "storage": "archive",
+      "bytes": 23108,
+      "sha256": "e23de4aa1eeec091c3c5d599ed65c6a182a51f3595730a200ab775fa55dbf1e2"
+    },
+    {
+      "relative_path": "validation/oracle-pin/commands/command-02.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/commands/command-02.stdout",
+      "storage": "archive",
+      "bytes": 7077,
+      "sha256": "7508735e2d6406e5d5ba18cf9cd4e750bc127071d83f1689e2ea7febdd60f472"
+    },
+    {
+      "relative_path": "validation/oracle-pin/gcc13/base-hpp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/gcc13/base-hpp.cpp",
+      "storage": "archive",
+      "bytes": 50,
+      "sha256": "d0492b6cf5b251683720e1396b2db196f2a6e2f57d70b44e277c65f2603aa2cb"
+    },
+    {
+      "relative_path": "validation/oracle-pin/gcc13/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/gcc13/checkout.stderr",
+      "storage": "archive",
+      "bytes": 43,
+      "sha256": "0a6ef1220a105578f744ef302b375f7764ee69f41408fca5223ce603b111d5e6"
+    },
+    {
+      "relative_path": "validation/oracle-pin/gcc13/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/gcc13/checkout.stdout",
+      "storage": "archive",
+      "bytes": 74,
+      "sha256": "a360c6498299f835b01ab7f666627e9e558b176e6d2784a094098610e3a9fcdb"
+    },
+    {
+      "relative_path": "validation/oracle-pin/gcc13/header-base-hpp.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/gcc13/header-base-hpp.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/oracle-pin/gcc13/header-base-hpp.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/oracle-pin/gcc13/header-base-hpp.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/setup/clang22-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/clang22-version.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/setup/clang22-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/clang22-version.stdout",
+      "storage": "archive",
+      "bytes": 334,
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "relative_path": "validation/setup/cmake-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/cmake-version.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/setup/cmake-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/cmake-version.stdout",
+      "storage": "archive",
+      "bytes": 91,
+      "sha256": "d3d5b682f3f5ef5b24a79ed8cf4b8c5868fc950dad48cab1be0e3c060a77f8ee"
+    },
+    {
+      "relative_path": "validation/setup/cpu.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/cpu.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/setup/cpu.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/cpu.stdout",
+      "storage": "archive",
+      "bytes": 3464,
+      "sha256": "fa0ea69f390c958e235e5209d4eace6014a5ff1de2b34e50689894769fa89098"
+    },
+    {
+      "relative_path": "validation/setup/gcc13-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/gcc13-version.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/setup/gcc13-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/validation-foundations-20261023T223701Z/setup/gcc13-version.stdout",
+      "storage": "archive",
+      "bytes": 219,
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "relative_path": "submission/foundation-index.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/foundation-index.json",
+      "storage": "visible",
+      "bytes": 12689,
+      "sha256": "c943ff9e00e2da9f3e1ad64224ab54b10797790d4d9daae6a98b5378e80f64be"
+    },
+    {
+      "relative_path": "submission/qsub.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/qsub.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "submission/qsub.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/qsub.stdout",
+      "storage": "archive",
+      "bytes": 8,
+      "sha256": "e73e6dce29f322f65b890971413afcd6c495e738da6918a5626863a494ceea24"
+    },
+    {
+      "relative_path": "submission/review-foundations-20261023T223701Z.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/review-foundations-20261023T223701Z.cobaltlog",
+      "storage": "archive",
+      "bytes": 2732,
+      "sha256": "d138a608dace72c761af84150d2c4780735eddb416304962196b671cd80bc371"
+    },
+    {
+      "relative_path": "submission/review-foundations-20261023T223701Z.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/review-foundations-20261023T223701Z.error",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "submission/review-foundations-20261023T223701Z.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/review-foundations-20261023T223701Z.output",
+      "storage": "archive",
+      "bytes": 769,
+      "sha256": "33b93e2d390e7a17fbf9e590c0b724c17803a8d77ee3ec46894f42b0543935b3"
+    },
+    {
+      "relative_path": "submission/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/submission.json",
+      "storage": "visible",
+      "bytes": 4294,
+      "sha256": "eba978443e6dace8656aa22aecfb90fbdc909e85711e313d1a3556c03c0b5655"
+    },
+    {
+      "relative_path": "submission/validate-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/validate-cobalt.sh",
+      "storage": "visible",
+      "bytes": 1083,
+      "sha256": "840c47f10dc265a12b891cd499a31d90a3ccac48b205f1bd83364cf45a3cda4f"
+    },
+    {
+      "relative_path": "submission/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/reviewer-v2/submissions/foundations-20261023T223701Z/validate.py",
+      "storage": "visible",
+      "bytes": 21592,
+      "sha256": "28b818689466d20ec4b1fbea8a8f930a248ff28691fbd450756146e6d206b9bf"
+    }
+  ],
+  "archive_sha256": "6f6e841c98cfd910d3a6373685e4e40ca92f51c8419ab3218ba93113fa81129c"
+}

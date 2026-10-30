@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "purpose": "Review-only decomposition of the portable library change; existing evaluation source and runner pins remain unchanged.",
+  "repository": "https://github.com/nscottnichols/ffmt",
+  "retained_portable_snapshot": {
+    "preservation_ref": "refs/tags/archive/library-portable-20261022",
+    "commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "tree": "f3cc9d33e0443dc9f1e1a1941c19843401988b19",
+    "original_pull_request": "https://github.com/nscottnichols/ffmt/pull/9",
+    "scope": "Portable repository split implementation, retained for unchanged evaluation source/runner pins and original split-validation provenance."
+  },
+  "review_stack": {
+    "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+    "final_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+    "final_tree": "f3cc9d33e0443dc9f1e1a1941c19843401988b19",
+    "source_tree_equivalence": "The final stack tree is byte-identical to the retained portable snapshot, including headers, fixtures, runners, build integration, CI, benchmark primitives and documentation.",
+    "stages": [
+      {
+        "part": 1,
+        "stage": "infra",
+        "title": "Add independent portable fmt conformance tooling",
+        "branch": "review/conformance",
+        "base_branch": "main",
+        "commit": "3845e997e481c7f3a29b472d7f5edb331ba708b6",
+        "base_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+        "pr": 10,
+        "url": "https://github.com/nscottnichols/ffmt/pull/10"
+      },
+      {
+        "part": 2,
+        "stage": "core",
+        "title": "Unify checked formatting and bounded device output",
+        "branch": "review/core",
+        "base_branch": "review/conformance",
+        "commit": "2f7508c4fa2a2032eb9d7ce77a3d687ac34bb557",
+        "base_commit": "3845e997e481c7f3a29b472d7f5edb331ba708b6",
+        "pr": 11,
+        "url": "https://github.com/nscottnichols/ffmt/pull/11"
+      },
+      {
+        "part": 3,
+        "stage": "ranges",
+        "title": "Add named arguments, range formatting and forwarding",
+        "branch": "review/ranges",
+        "base_branch": "review/core",
+        "commit": "3e5ae22ba1a3dd84cd4dc539eb67e788bec69dfd",
+        "base_commit": "2f7508c4fa2a2032eb9d7ce77a3d687ac34bb557",
+        "pr": 12,
+        "url": "https://github.com/nscottnichols/ffmt/pull/12"
+      },
+      {
+        "part": 4,
+        "stage": "families",
+        "title": "Add chrono, standard type and styling adapters",
+        "branch": "review/families",
+        "base_branch": "review/ranges",
+        "commit": "7bccd77f4bf5517c6657c7960b73c40802c42620",
+        "base_commit": "3e5ae22ba1a3dd84cd4dc539eb67e788bec69dfd",
+        "pr": 13,
+        "url": "https://github.com/nscottnichols/ffmt/pull/13"
+      },
+      {
+        "part": 5,
+        "stage": "printf",
+        "title": "Add checked typed printf formatting",
+        "branch": "review/printf",
+        "base_branch": "review/families",
+        "commit": "745088a005daea7abc9414916d4accb384c17bc3",
+        "base_commit": "7bccd77f4bf5517c6657c7960b73c40802c42620",
+        "pr": 14,
+        "url": "https://github.com/nscottnichols/ffmt/pull/14"
+      },
+      {
+        "part": 6,
+        "stage": "bench",
+        "title": "Add verified portable formatting benchmark primitives",
+        "branch": "review/benchmarks",
+        "base_branch": "review/printf",
+        "commit": "159fdf2a4ca1378ed38cf4c79dbddc5aba3a6f63",
+        "base_commit": "745088a005daea7abc9414916d4accb384c17bc3",
+        "pr": 15,
+        "url": "https://github.com/nscottnichols/ffmt/pull/15"
+      },
+      {
+        "part": 7,
+        "stage": "integration",
+        "title": "Package the library and document portable APIs and backends",
+        "branch": "library-portable",
+        "base_branch": "review/benchmarks",
+        "commit": "aeff043614725d58d383c8add086f548d77d05eb",
+        "base_commit": "159fdf2a4ca1378ed38cf4c79dbddc5aba3a6f63",
+        "pr": 9,
+        "url": "https://github.com/nscottnichols/ffmt/pull/9"
+      }
+    ]
+  },
+  "evaluation_defaults": {
+    "path": "platforms/library.json",
+    "sha256": "39639531241ee2d506f94d07d5339d04f213c24258312a6c847d7d9442ffcf1c",
+    "source_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "status": "unchanged"
+  },
+  "historical_provenance": {
+    "split_ledger": "docs/provenance/split.json",
+    "split_validation": "docs/provenance/validation.json",
+    "status": "Existing split ledger, validation, captured evidence, failures, commands, source hashes and measurement provenance are unchanged."
+  },
+  "validation": {
+    "status": "pass_after_consumer_fixture_correction",
+    "policy": "CPU-only validation of immutable stack prefixes; original failure is preserved, only the documented public consumer include was corrected, and no library source/history or hardware campaign changed.",
+    "captured_inputs": [
+      {
+        "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validate.py",
+        "evaluation_path": "docs/provenance/review-stack-validation/validate.py",
+        "sha256": "81fe42d7aad64272efba0f31cf0a5396ea63db6c33defb2cae5140433c082f42",
+        "bytes": 11925
+      },
+      {
+        "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/validate.sh",
+        "evaluation_path": "docs/provenance/review-stack-validation/validate.sh",
+        "sha256": "53376a4f0c010f99ed98770d9c2c751a71a1b3e1c7ccc58d0f0b6b667749a0aa",
+        "bytes": 1077
+      },
+      {
+        "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/stack-index.json",
+        "evaluation_path": "docs/provenance/review-stack-validation/stack-index.json",
+        "sha256": "c401440979b1d3c35d93e5d8e58461f7122fd52db612ab577f16ca916cb0f6f2",
+        "bytes": 2068
+      },
+      {
+        "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/published-stack.json",
+        "evaluation_path": "docs/provenance/review-stack-validation/published-stack.json",
+        "sha256": "fa1e000b601b80b4b8352e09b8454f817ca3eb9cfd1c60b7bd4a10a31b350780",
+        "bytes": 4283
+      },
+      {
+        "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/capture_evaluation_validation.py",
+        "evaluation_path": "docs/provenance/review-stack-validation/capture_evaluation_validation.py",
+        "sha256": "012681dc11563ec298ff5de9c1792ff666f23dfcefc76dc8c8a8ef7b672c349b",
+        "bytes": 2632
+      },
+      {
+        "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/review-stack/finalize_evaluation_capture.py",
+        "evaluation_path": "docs/provenance/review-stack-validation/finalize_evaluation_capture.py",
+        "sha256": "6e5d7575bdc366313d3bd44446d34b66655752a051ca9dd9a21a83c45c9c4131",
+        "bytes": 5401
+      }
+    ],
+    "original_attempt": {
+      "evaluation_path": "docs/provenance/review-stack-validation/manifest.json",
+      "sha256": "805e0f547bbc75a2101c7f4fb614f3a16f31adfa66808558c7241dc226f9a22e",
+      "bytes": 140015,
+      "status": "failure",
+      "cobalt_jobid": "1011211",
+      "failed_step": "package-consumer-build",
+      "failure_classification": "validation_fixture_included_internal_core_header",
+      "explanation": "The generated fixture directly included internal ffmt/core.hpp rather than documented public ffmt/base.hpp. All six earlier prefixes, 15 final CTest entries/full host conformance, and install passed. The original overall failure remains unchanged.",
+      "stages": [
+        {
+          "stage": "infra",
+          "commit": "3845e997e481c7f3a29b472d7f5edb331ba708b6",
+          "status": "pass",
+          "steps": [
+            {
+              "name": "checkout",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "harness",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "legacy-host-sanity",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "negative-sanity",
+              "status": "pass",
+              "reported_skips": []
+            }
+          ]
+        },
+        {
+          "stage": "core",
+          "commit": "2f7508c4fa2a2032eb9d7ce77a3d687ac34bb557",
+          "status": "pass",
+          "steps": [
+            {
+              "name": "checkout",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "focused-sanitized-O0",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "legacy-host-sanitized-O0",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "negative-sanitized",
+              "status": "pass",
+              "reported_skips": []
+            }
+          ]
+        },
+        {
+          "stage": "ranges",
+          "commit": "3e5ae22ba1a3dd84cd4dc539eb67e788bec69dfd",
+          "status": "pass",
+          "steps": [
+            {
+              "name": "checkout",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "focused-sanitized-O0",
+              "status": "pass",
+              "reported_skips": []
+            }
+          ]
+        },
+        {
+          "stage": "families",
+          "commit": "7bccd77f4bf5517c6657c7960b73c40802c42620",
+          "status": "pass",
+          "steps": [
+            {
+              "name": "checkout",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "focused-sanitized-O0",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "optional-cxx23-sanitized-O0",
+              "status": "pass",
+              "reported_skips": []
+            }
+          ]
+        },
+        {
+          "stage": "printf",
+          "commit": "745088a005daea7abc9414916d4accb384c17bc3",
+          "status": "pass",
+          "steps": [
+            {
+              "name": "checkout",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "focused-sanitized-O0",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "optional-cxx23-sanitized-O0",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "negative-final-families",
+              "status": "pass",
+              "reported_skips": []
+            }
+          ]
+        },
+        {
+          "stage": "bench",
+          "commit": "159fdf2a4ca1378ed38cf4c79dbddc5aba3a6f63",
+          "status": "pass",
+          "steps": [
+            {
+              "name": "checkout",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "host-memory-benchmark-smoke",
+              "status": "pass",
+              "reported_skips": []
+            }
+          ]
+        },
+        {
+          "stage": "integration",
+          "commit": "aeff043614725d58d383c8add086f548d77d05eb",
+          "status": "failure",
+          "steps": [
+            {
+              "name": "checkout",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "cmake-configure",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "cmake-build",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "ctest-full-host-conformance",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "cmake-install",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "package-consumer-configure",
+              "status": "pass",
+              "reported_skips": []
+            },
+            {
+              "name": "package-consumer-build",
+              "status": "failure",
+              "reported_skips": []
+            }
+          ]
+        }
+      ],
+      "submission": {
+        "evaluation_path": "docs/provenance/review-stack-validation/submission.json",
+        "sha256": "9a39d50176bedf1a0d7619ce71aa990fb25a4125c759b53bfd11463991f0b107",
+        "bytes": 1280
+      },
+      "file_inventory": {
+        "evaluation_path": "docs/provenance/review-stack-validation/captured-files.json",
+        "sha256": "049a64869df7248e344b4585a8409dca08794641c7c54777ed92ed9738777c46",
+        "bytes": 995375
+      },
+      "raw_logs": {
+        "evaluation_path": "docs/provenance/review-stack-validation/raw-logs.tar.gz",
+        "sha256": "dcc2b034316a5e18f5d8aa774734e9ae28a36a3b822add6dda4ac0630bfa943d",
+        "bytes": 1654159,
+        "members": 1528,
+        "scope": "Lossless original command logs and child manifests; file hashes refer to decompressed member bytes."
+      }
+    },
+    "consumer_followup": {
+      "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/manifest.json",
+      "sha256": "806f12811bf46a2d59b15a0b17061d432fa2e2b033ffea6c19acb3cb117af072",
+      "bytes": 11375,
+      "status": "pass",
+      "cobalt_jobid": "1011212",
+      "source_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+      "source_tree": "f3cc9d33e0443dc9f1e1a1941c19843401988b19",
+      "original_attempt_sha256": "805e0f547bbc75a2101c7f4fb614f3a16f31adfa66808558c7241dc226f9a22e",
+      "installed_headers_matched": 17,
+      "submission": {
+        "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/submission.json",
+        "sha256": "6a10b7947e01215b9aa77fd73e41118f190cc2decdd1d90776733a200f3e1144",
+        "bytes": 1095
+      },
+      "file_inventory": {
+        "evaluation_path": "docs/provenance/review-stack-validation/consumer-followup/captured-files.json",
+        "sha256": "0f7d3fcf6e99f0497ada70a195d3fa751d1211867484e67ae15d11e464a9f264",
+        "bytes": 6157
+      }
+    },
+    "optimization_and_optional_types": {
+      "legacy_and_focused": "Clang22 ASan/UBSan with explicit HOST_OPT=-O0.",
+      "negative_compilations": "Recorded CXXFLAGS include sanitizers but Make does not forward HOST_OPT; negative subprocesses use compiler-default optimization.",
+      "cmake": "Release build with assertions enabled and optional C++23 tests enabled.",
+      "reported_skips": [],
+      "scope": "No optional extension-type or C++23 skip was reported in this Clang22 run; this does not imply availability on every compiler."
+    }
+  }
+}

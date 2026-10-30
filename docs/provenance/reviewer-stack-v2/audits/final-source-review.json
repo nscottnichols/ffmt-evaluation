@@ -1,0 +1,548 @@
+{
+  "reviewer": "review_architecture",
+  "scope": "Audit all original tracked paths and original qualified logical fixtures against the rebuilt complete tree; classify actual source changes and restore regressions accidentally left at upstream baseline.",
+  "independence": "Reviewer authored core/packaging exports and independently reviewed feature/tool/root build repairs. Independent tooling-agent core review is recorded separately in root-core-review.json. This is not presented as an independent review of every authored function.",
+  "baseline_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+  "qualified_original_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+  "audited_complete_commit": "10b1280a5b9498aeca3a78833fb728d4a8b20f4c",
+  "tree_identical": false,
+  "assembly_status": "Eight exact regression restorations and root Make/build repair stages are exported; final assembled descendant and CPU requalification remain root responsibilities. Do not apply older complete validation to a changed descendant.",
+  "summary": {
+    "original_paths": 124,
+    "unchanged_original_paths": 72,
+    "changed_original_paths": 52,
+    "new_paths": 193,
+    "legacy_regression_files_restored": 8
+  },
+  "qualified_original_access": {
+    "branches": [
+      "library-portable",
+      "review/integration"
+    ],
+    "tag": "archive/review-stack-v1-20261023",
+    "policy": "Keep original snapshots and evaluation pins; history-only staging and source/test changes below are distinguished."
+  },
+  "classification": [
+    {
+      "kind": "history-only restructuring",
+      "content": "Buildable DAG stages, prerequisite collection bases, branch/commit changes and reading-order descriptions do not by themselves change formatter behavior. Full stack/snapshot table belongs to one evaluation overview."
+    },
+    {
+      "kind": "mechanical extraction",
+      "content": "Old baseline engine, checked configuration, Dragonbox conversion and exact decimal helpers extracted separately before use/migration. Mechanical body proofs are byte comparisons; configuration proof is qualified by recorded EOF newline normalization. Public base migrates only after internal checked features qualify."
+    },
+    {
+      "kind": "library source layout",
+      "content": "Qualified checked engine is split into output accounting, parse/validation, primitives, floating conversion/formatting, extension traits, Unicode, modern/ADL/static formatter protocols, and transport headers. Include composition, helper placement, comments and spelling/layout change; no new numeric-formatting algorithm is intended. OpenMP declare-target wrappers were explicitly retained/restored. Obsolete legacy implementation and unused old UTF-8 helper deletion are separate from migration."
+    },
+    {
+      "kind": "optional header readability",
+      "content": "Named/range/chrono/standard/style/printf/enum header C++ tokens and include sets match the qualified source after whitespace/comments/include-order normalization; shared-family lambda rename once\u2192render_and_measure is documented. Required output padding hooks live with shared-family support.",
+      "proof": "feature-stages/source-audit.json"
+    },
+    {
+      "kind": "test source changes",
+      "content": "Split mixed omnibus files without dropping original assertions. New direct accounting/parsing/conversion/family/named tests, empty-output oracle helper correction and native-extension unsupported=77 handling are real test changes. Quad oracle extension is now enabled before fmt inclusion only on supported hosts. These are not claimed to be history-only."
+    },
+    {
+      "kind": "restored legacy regressions",
+      "content": "Exact eight aeff files restore full-stream comparison, complete fmt oracle strings on all four execution wrappers, runtime null-string rejection, specifier-path subnormal checks and shortest float expectations. Hashes and destination stages are below."
+    },
+    {
+      "kind": "portable tooling source changes",
+      "content": "Case registry modules, separate pinned oracle/process/evidence/adapter implementations, typed numeric-memory templates and focused unit tests replace combined scripts. Preserve their actual captured source hashes; this restructuring does not retroactively qualify old hardware evidence against new harness source."
+    },
+    {
+      "kind": "build and policy source changes",
+      "content": "Explicit suite registrations, no silent CMake omissions, installable header-only target, dependency tracking/compiler lookup/backend regression selection, optional extension skips and bounded CI resources are meaningful build changes. Coverage policy deliberately replaces percentage blocking with reporting; readiness-wave gating and sanitizer correction are distinct decisions."
+    },
+    {
+      "kind": "documentation and relocation",
+      "content": "API/backend/build/conformance navigation expanded; campaign material remains in evaluation. Two independent compiler reproducers preserved byte-for-byte in evaluation; their library deletion is a separate decision from obsolete-engine deletion."
+    }
+  ],
+  "full_fixture_preservation": {
+    "CASES": {
+      "original_count": 54,
+      "new_count": 54,
+      "missing": [],
+      "added": [],
+      "changed": {}
+    },
+    "NEGATIVE_CASES": {
+      "original_count": 9,
+      "new_count": 9,
+      "missing": [],
+      "added": [],
+      "changed": {}
+    }
+  },
+  "restorations": [
+    {
+      "path": "test/test_body.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "c6a5f6ecada0786ba25218cc6fd2597604f8e48ef0201b322ea47f40ea0684dc",
+      "classification": "restored original regression behavior byte-for-byte",
+      "export_sha256": "c6a5f6ecada0786ba25218cc6fd2597604f8e48ef0201b322ea47f40ea0684dc",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": "test/test_body_cuda.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "088a072bb2a7ae04dfe66d42a61817e834d1d34d36174db2eca78dc3bf1122a8",
+      "classification": "restored original regression behavior byte-for-byte",
+      "export_sha256": "088a072bb2a7ae04dfe66d42a61817e834d1d34d36174db2eca78dc3bf1122a8",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": "test/test_body_host.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "58588b888d01221cde01d96cbfffbadb48a3b3bab73617e75c172b1c422b84aa",
+      "classification": "restored original regression behavior byte-for-byte",
+      "export_sha256": "58588b888d01221cde01d96cbfffbadb48a3b3bab73617e75c172b1c422b84aa",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": "test/test_body_omp.inc",
+      "stage": "migration",
+      "qualified_source_sha256": "153d28452a20212641cf7f6912beca34325463561464ca3b13a3a7768014ac4c",
+      "classification": "restored original regression behavior byte-for-byte",
+      "export_sha256": "153d28452a20212641cf7f6912beca34325463561464ca3b13a3a7768014ac4c",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": "test/test_buffer_path.cpp",
+      "stage": "migration",
+      "qualified_source_sha256": "948fe3dfed250ebc65b52980413bb1ba386a865539d5a6499e9ac8fab9d100fe",
+      "classification": "restored original regression behavior byte-for-byte",
+      "export_sha256": "948fe3dfed250ebc65b52980413bb1ba386a865539d5a6499e9ac8fab9d100fe",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": "test/test_fast_math.cpp",
+      "stage": "migration",
+      "qualified_source_sha256": "1b7ea998438d512faa3f2c9909dcbd7967130ff265b994798a2bd5c105772937",
+      "classification": "restored original regression behavior byte-for-byte",
+      "export_sha256": "1b7ea998438d512faa3f2c9909dcbd7967130ff265b994798a2bd5c105772937",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": "test/test_floats.cpp",
+      "stage": "migration",
+      "qualified_source_sha256": "47e76d154e5a702cd479b09e1c575f8e43119829291d5063221e6198f7d300c6",
+      "classification": "restored original regression behavior byte-for-byte",
+      "export_sha256": "47e76d154e5a702cd479b09e1c575f8e43119829291d5063221e6198f7d300c6",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": "test/capture.hpp",
+      "stage": "transport",
+      "qualified_source_sha256": "c406ebce772daa3cb8f574bd59db0486d74dc1082c4314a6a45b97319cc5a0af",
+      "classification": "restored full raw-stream equality check byte-for-byte",
+      "export_sha256": "c406ebce772daa3cb8f574bd59db0486d74dc1082c4314a6a45b97319cc5a0af",
+      "present_in_audited_complete": false
+    },
+    {
+      "path": ".gitignore",
+      "stage": "local-ignores",
+      "qualified_source_sha256": "c2a2c75f20b39d2300f4fc8670e38e3db6eab45e49facb38cea954d1f161d5a6",
+      "classification": "restored original ignore patterns byte-for-byte",
+      "export_sha256": "c2a2c75f20b39d2300f4fc8670e38e3db6eab45e49facb38cea954d1f161d5a6",
+      "present_in_audited_complete": false
+    }
+  ],
+  "test_mapping_proofs": [
+    "core-stages/core-test-mapping.json",
+    "feature-stages/source-audit.json"
+  ],
+  "mechanical_proofs": [
+    "core-stages/mechanical-checks.json",
+    "core-stages/config-move-proof.json",
+    "core-stages/conversion-move-proof.json",
+    "whitespace-normalization.json"
+  ],
+  "review_findings": [
+    "reviews/root-core-review.json",
+    "feature-review.json",
+    "core-stages/review-resolutions.json",
+    "reviews/make-preservation-repairs.json",
+    "root-stages/quad-test-portability.json"
+  ],
+  "exact_original_material": [
+    ".github/scripts/coverage_union.py",
+    "LICENSES/dragonbox-Boost.txt",
+    "LICENSES/fmt.txt",
+    "NOTICE",
+    "include/ffmt/detail/extended.hpp",
+    "include/ffmt/detail/transport.hpp",
+    "include/ffmt/detail/unicode.hpp"
+  ],
+  "additional_lost_behaviors_found": [],
+  "limits": "Source/fixture/static review only. CPU checks must qualify final changed commits; no hardware job, compiler installation, preserved evidence or evaluation pin was modified. No tree-identical or full semantic-equivalence claim is made.",
+  "changed_original_paths": [
+    {
+      "path": ".github/workflows/device.yml",
+      "classification": "portable build/packaging/CI integration and explicit policies",
+      "old_sha256": "dcfc378646f700daffa14eb6f7bdbd32500189a48105426ebb7bb7f76a9f5333",
+      "audited_complete_sha256": "ab6efd9fb36d72f397428c4b55ab974bfec13da0e0b90c018ec4ffceb0094214",
+      "status": "modified"
+    },
+    {
+      "path": ".github/workflows/host.yml",
+      "classification": "portable build/packaging/CI integration and explicit policies",
+      "old_sha256": "8b30653640fcf2b6136d9fe5d3db5995bac02b3acc82c4359b4464e0c69b09b1",
+      "audited_complete_sha256": "95c7e3a499c92586ae4885c9612477c009aeeeeb61730ccab13da6b8bb02d53a",
+      "status": "modified"
+    },
+    {
+      "path": ".gitignore",
+      "classification": "portable build/packaging/CI integration and explicit policies",
+      "old_sha256": "c2a2c75f20b39d2300f4fc8670e38e3db6eab45e49facb38cea954d1f161d5a6",
+      "audited_complete_sha256": "8489c917982bdeac724241de347c1c34fb1f063d131a5a4017b100e2f25d9666",
+      "status": "modified"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "classification": "portable build/packaging/CI integration and explicit policies",
+      "old_sha256": "54912c66a4c467b9e9a62c27028db088b438e85704100c728e64f73a7103218b",
+      "audited_complete_sha256": "bec49b3f518958c03a434094cdfe18382c13a4cd96cc05f72c98a7cdcc2f034d",
+      "status": "modified"
+    },
+    {
+      "path": "Makefile",
+      "classification": "portable build/packaging/CI integration and explicit policies",
+      "old_sha256": "0488ba18724919bb3ec37cc5adbbc079f342f62852917157f2e0d60eb9df0ec5",
+      "audited_complete_sha256": "a68349e1ddbdb72a4c1bb9bcfbefd9348242332fd2350a89475e4421c32f288f",
+      "status": "modified"
+    },
+    {
+      "path": "README.md",
+      "classification": "API/backend/conformance documentation and navigation",
+      "old_sha256": "2ca59bb0dfada65aea2aa798bc0dde1254788fa8c173722301184af8aaac1e14",
+      "audited_complete_sha256": "7853f7cb4e7733cfe46aea6dc59e620bee9a116116dadde78f40f9b17aa63a08",
+      "status": "modified"
+    },
+    {
+      "path": "docs/BACKENDS.md",
+      "classification": "API/backend/conformance documentation and navigation",
+      "old_sha256": "c9d9ec968dcbd0a0fbb8734020944ea43c6655bd2375a5377649bac05a8a306a",
+      "audited_complete_sha256": "0fa03c4b5e764c01e70f21621aa4990f084aa28146c769a5b60db15c40f85d1c",
+      "status": "modified"
+    },
+    {
+      "path": "docs/CONFORMANCE.md",
+      "classification": "API/backend/conformance documentation and navigation",
+      "old_sha256": "95eab2d49ac5fabbd78c45daa692b53eff1085a5467f1ecee2a01b52768e2fce",
+      "audited_complete_sha256": "6184fe30c5b247fce10e304f47cb9b7a1ff9b2597ec77af2b335ea30e3b0aa36",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/args.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "9deedd4a976d06cb6b7a6ab3a74ffb4b2f70e53c92563851d58922ac20c3a680",
+      "audited_complete_sha256": "287471a083535503df852ee3a3e6166e672e5f0f062366e82754b26152b786a8",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/base.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "bfed30cc7038744a909624af737d0412818e864379a4cee8cdbef9eddb5d8d8a",
+      "audited_complete_sha256": "0b50349f217956d94f2b6b92515c8461d4e0c9f8ce8dd9e2e04649d73a6db18f",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/chrono.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "d46a0095117a89471540964a54826c006b1268f2a07a7ca5078cfe63f8fe05a3",
+      "audited_complete_sha256": "5fdbb0bdcf019fad442694676cf25c47c574c6b833bdf22687a4d2ac9e72e0f7",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/color.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "9031c793805ba169037bcf8f0690403ee2ee267551323f69da893675b662dbf7",
+      "audited_complete_sha256": "2e640a0714f3e3784befa308a3a78c85a1654f700b6f36b80c0516873c419934",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/core.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "54abfadff1d1a5d8ab4f9f1bdd10342142516032257fbe517f048239833e686c",
+      "audited_complete_sha256": "86a506dde42bbd3ec34742093c467205a747aae14a44f8d00c2ed57d96045fce",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/detail/family.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "6c736f81a6ff1c465ee2e21eb6d74fd2381e778fcebde2bb21b042b0ab59ea3f",
+      "audited_complete_sha256": "9a6ee375496a0bd334a0efc01d1a1ed1600719a786abfd0b78976d4c1fa3787d",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/detail/floating.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "6abfce405bc268b9b6029ec8434b45f3c920be3b1f4a96d73d8636517b9fc097",
+      "audited_complete_sha256": "02ed51afeb2f088cc2a7033e09b1a4d76095a0189ac98764a8e2e2d78a9aba32",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/detail/numeric.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "e44f4bf0c899ef801b15b3bc1547077a8cb88f47c3a48c73dc6bc87322c3433e",
+      "audited_complete_sha256": "2ee4f48f1f32955a48809145a44928bcbaf80e53864453704c4fc1895120fcdd",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/detail/text.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "27572505436e750c3438ac845ebd25fbedb9da132bd42795dde8fa9cc3719e4d",
+      "audited_complete_sha256": "13c43714687606eb3e369e4d014df480296443d5f04e0a216f77000140214024",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/enum.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "578b3c8b8b2ed8894e3f1c8fc4ac00172696851c1460ece9301619f9a9f24a17",
+      "audited_complete_sha256": "a2980b8f23cc09d0b120e686c5e7e75f629fa801bbcd9265a162f128d28d59a6",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/printf.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "9e8688bd89a1db1aa19eddcd691fa851910a2e0163d4c523320f3ecee2470d2e",
+      "audited_complete_sha256": "fcdc9232a3466f2328ead0925e438e0c06ee4e4c19bde7c1f56e88cce95da436",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/ranges.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "a12a658aef99c0f6f47032ab9285e189b19ff0d3c5971b8af70610671ef3f829",
+      "audited_complete_sha256": "8bf1661d22ef27449093a835aa96f7260af1c5c83db34886b77ba2f9455f03a6",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/std.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "fea3d9675d2199d74e47c57d19a6882b0909657d330edaf5f0bfadc0b8bb3175",
+      "audited_complete_sha256": "5eadf79fa1ed7459fe2bb38d471630de926a5174c4f24f79f0e16bc5de74d8c3",
+      "status": "modified"
+    },
+    {
+      "path": "include/ffmt/std23.hpp",
+      "classification": "library header decomposition/readability (see mechanical and feature proofs)",
+      "old_sha256": "151430d643119e04e9d577053094273a6cc39c323c7fc941b1076118faf7466d",
+      "audited_complete_sha256": "c97e7a914dae904089eef809523b0c58963393a0a6f49b154fed13073fbf407d",
+      "status": "modified"
+    },
+    {
+      "path": "test/capture.hpp",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "c406ebce772daa3cb8f574bd59db0486d74dc1082c4314a6a45b97319cc5a0af",
+      "audited_complete_sha256": "63ccdad0121d44769f13c689f02defda41a652b2a97f733e7c7df19e395cdf43",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/benchmark.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "607be05afcd5cda738b310d39cd821ecc096139cf5b42ca50fa102dd785e672c",
+      "audited_complete_sha256": "c2d5e2306994470df3c2f4ddbfc1a0d55d5c04408d6d06af6b5d74dd8821d4ac",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/benchmark_calls.hpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "fdcc3b262d77659ed22393945a380cfa9c0dfc2e94031a579a6e11cd73ddb8b7",
+      "audited_complete_sha256": "ea2a00e20fc6a1448ee63c4d009713659515af1093a63afdb1751839e39e8db3",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/benchmark_extra.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "37292eb97df496a9ea23bed922acc225e17d15b6bef22419ec85014a95ad3199",
+      "audited_complete_sha256": "603235a564b05df3b9f6746c409a683308f3fc76362dee5dfbce127de2694bf4",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/benchmark_resource.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "a652363ea299ac1966d968a6752c7de3eb4535d2382ab050a4f2f1e4b5903bb6",
+      "audited_complete_sha256": "658e11f8bb5d7523dc72246bf81534971a1ed8ee1d041a3348cfb14920b404a2",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/cases.py",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "b50ecda885148c5fef472f44593781140dc1bfdd9d1700d1d109a78141c54342",
+      "audited_complete_sha256": "d9508f95e4beb86108b8e769b9d6956cd6dcb7b24c1e94c8e4cd39a0955872d2",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/test_engine.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "298a7fa8a9940768147a3814d106715afabf23f63329543e119a2426c6c4bf23",
+      "audited_complete_sha256": null,
+      "status": "deleted"
+    },
+    {
+      "path": "test/conformance/test_engine_bitint.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "36c0104d5981a6254abcbb4340199ae4998b10428142f42c26d1a9d9c3f7ee79",
+      "audited_complete_sha256": "adda291e1a012ac222bd7b2d4e1656ab9db3fc9f970a5369e81ad376b8759bd8",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/test_engine_extended.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "3a791aa5223c697e60e4e5c2bc942c6890d5c4f31f3e6a2b916fa3b481796f34",
+      "audited_complete_sha256": "7974b709418d531fca9efb4da15120a89f2674a3abe1b067370a00fb40cd991c",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/test_engine_fast_math.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "b6e4fcd394eca46c33bab7a2537fad35b7399e14d2ba463c2f8e86e9752dbb6b",
+      "audited_complete_sha256": "1e4a4905191bfd80471aed50b2f0f1858d935083e74d29730c023619f2fa6f8c",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/test_engine_forwarding.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "da7c221eb1865824f1e2092b7275444baca9e761280d3435319eee9d8233deff",
+      "audited_complete_sha256": null,
+      "status": "deleted"
+    },
+    {
+      "path": "test/conformance/test_engine_legacy_hook.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "dc50d96ce0575ad5cdfea1b26b3d4b7b6f1889956daaa6d731a215b35c8ff0bc",
+      "audited_complete_sha256": "229a5a3534f40db645562083e7d88608bf8c315d3e46b0ead4f46060e35be3be",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/test_engine_quad.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "731088977fbae0a647964c9a6672db74da481b7a9646371e4b3c4be5234ffad1",
+      "audited_complete_sha256": "f57045a05e1e5e301e52ebab4d785f85ead3e47e646cf18a2e359d39ba16a62a",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/test_engine_transport.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "f2a6fc4b7ba8b0bddeee565dd9e66d724e4a617d2b78ea90e4b4170d1b6b016a",
+      "audited_complete_sha256": "060f222a50c2663ccadf2e0b26c86d39fafdcb30bd479ed017133c68ecfaa8d6",
+      "status": "modified"
+    },
+    {
+      "path": "test/conformance/test_families.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "926914fef1a0de4a02f6ff09a85c65cda12d701f3bd83588ecd68ad08d6ef48b",
+      "audited_complete_sha256": null,
+      "status": "deleted"
+    },
+    {
+      "path": "test/conformance/test_families_printf.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "fe73c7f31fe639d407cb1f0a54a8551bdb78b85c2a56e6ba64e7c864afa3ecc9",
+      "audited_complete_sha256": null,
+      "status": "deleted"
+    },
+    {
+      "path": "test/conformance/test_families_ranges.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "d4268d5c9c14bf78a89ab82acca17b2a8f192932ca840e761be4e63ca331feda",
+      "audited_complete_sha256": null,
+      "status": "deleted"
+    },
+    {
+      "path": "test/conformance/test_families_std23.cpp",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "0d84eab7d44e23c86b2eddffb90eb20b6a4b3592421cc89521a6dbbb962723f6",
+      "audited_complete_sha256": null,
+      "status": "deleted"
+    },
+    {
+      "path": "test/conformance/test_runner.py",
+      "classification": "focused-suite decomposition or portable tool/test capability",
+      "old_sha256": "35ee8d14272c6c33ae843ee9a1e83406402f2cfd4151a0269f312e0926e6a7fe",
+      "audited_complete_sha256": "bf0bcee225561d67a19f93e69d4a8601c40096dad431366b1b5b18801f543fbe",
+      "status": "modified"
+    },
+    {
+      "path": "test/test_body.inc",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "c6a5f6ecada0786ba25218cc6fd2597604f8e48ef0201b322ea47f40ea0684dc",
+      "audited_complete_sha256": "b681dcd1ab0d9e7a50467f2dcff80e51c179bbdedf40fc240b5b162734aa1f72",
+      "status": "modified"
+    },
+    {
+      "path": "test/test_body_cuda.inc",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "088a072bb2a7ae04dfe66d42a61817e834d1d34d36174db2eca78dc3bf1122a8",
+      "audited_complete_sha256": "4f189fa8c40bb923e43aa462ef73c54fe4a0a2d76c1b109d96b254c14012ce49",
+      "status": "modified"
+    },
+    {
+      "path": "test/test_body_host.inc",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "58588b888d01221cde01d96cbfffbadb48a3b3bab73617e75c172b1c422b84aa",
+      "audited_complete_sha256": "ed7d3adcc173508905a6a03b5c2dad3a0a163c524a1eb63306e4464057ab6222",
+      "status": "modified"
+    },
+    {
+      "path": "test/test_body_omp.inc",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "153d28452a20212641cf7f6912beca34325463561464ca3b13a3a7768014ac4c",
+      "audited_complete_sha256": "dbb0352f52f692d0b45fd5a2756fbd4b8b16ccfcba09205071ef85202190718c",
+      "status": "modified"
+    },
+    {
+      "path": "test/test_buffer_path.cpp",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "948fe3dfed250ebc65b52980413bb1ba386a865539d5a6499e9ac8fab9d100fe",
+      "audited_complete_sha256": "b4c42cf67b5f726a35e8304db75841c195469be68ce7203faf069daf5f5f1470",
+      "status": "modified"
+    },
+    {
+      "path": "test/test_fast_math.cpp",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "1b7ea998438d512faa3f2c9909dcbd7967130ff265b994798a2bd5c105772937",
+      "audited_complete_sha256": "c0ac9127454ca4f1c5f03d3c7d3480f5e432d2bc3f754e2a10f94b08d5637c98",
+      "status": "modified"
+    },
+    {
+      "path": "test/test_floats.cpp",
+      "classification": "qualified regression restoration pending assembly",
+      "old_sha256": "47e76d154e5a702cd479b09e1c575f8e43119829291d5063221e6198f7d300c6",
+      "audited_complete_sha256": "ea640450fa964a0c5381c5b1e7ce744b2eedd441380483ab4820b294b4023864",
+      "status": "modified"
+    },
+    {
+      "path": "tools/benchmark.py",
+      "classification": "portable capability decomposition and evidence/tool safeguards",
+      "old_sha256": "15eb2102318888463db7dbd0e8d41d654bb7afa7d4d78fe0eba6f19793b8485b",
+      "audited_complete_sha256": "3d3e203c9913413f4d8b22d6bdbf4e33a1693133c4106fed2f074c898680f0f6",
+      "status": "modified"
+    },
+    {
+      "path": "tools/conformance.py",
+      "classification": "portable capability decomposition and evidence/tool safeguards",
+      "old_sha256": "f766111da6e510f803e9be2c8eaeee0b809859d942d98111e8a21f24de6d7881",
+      "audited_complete_sha256": "481f6a92c283d8a1bf94d17ea86814ea040d78723586b994049ffcc2a94b4448",
+      "status": "modified"
+    },
+    {
+      "path": "tools/negative.py",
+      "classification": "portable capability decomposition and evidence/tool safeguards",
+      "old_sha256": "b69904cbb35ba494dda1f77ee972d2b09ee75aab89ace4668ef19ee7d3fc09b2",
+      "audited_complete_sha256": "db5c636d3e6202941428dfe9a855cee506a9097d54ed033a25ad819f85691cd5",
+      "status": "modified"
+    },
+    {
+      "path": "tools/numeric_memory.py",
+      "classification": "portable capability decomposition and evidence/tool safeguards",
+      "old_sha256": "66d9ad86020da124ae4588ece16e2e3c318b52d71280e665eeea18713dd822e1",
+      "audited_complete_sha256": "51daafa863267957997e18712b2c5159df96bdbd7b17160cc6219e49446a4177",
+      "status": "modified"
+    }
+  ]
+}

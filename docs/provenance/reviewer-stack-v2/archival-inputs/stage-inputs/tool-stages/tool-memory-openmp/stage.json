@@ -1,0 +1,23 @@
+{
+  "id": "tool-memory-openmp",
+  "title": "Execute numeric memory records through the OPENMP adapter",
+  "dependencies": [
+    "tool-numeric-memory",
+    "tool-openmp"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_memory_openmp.py"
+  ],
+  "problem": "OpenMP stdout can succeed while numeric conversion or bounded output counts in accelerator memory are wrong.",
+  "example": "omp_is_initial_device() must be false\nmap(to: input[0:count]) + map(from: output[0:count])\n-> format_record on the target -> serialize copied records",
+  "design": "Require non-initial-device execution, map input encodings to the target and output records from it, then format each record in a target teams distribute parallel for region.",
+  "tradeoffs": "Runtime execution remains hardware-dependent; source-generation and host record tests validate structure but do not establish accelerator execution.",
+  "reading_order": [
+    "tools/backend_openmp.py:numeric_launcher",
+    "test/conformance/numeric_memory.cpp.in",
+    "test/conformance/test_memory_openmp.py"
+  ],
+  "docs": "The memory launcher formats on the selected backend and copies records to the host for byte-exact oracle comparison. Stdout control failure does not hide memory outcomes."
+}

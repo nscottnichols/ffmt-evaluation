@@ -1,0 +1,26 @@
+[
+  {
+    "file": "core-stages/checked-config/files/include/ffmt/detail/config.hpp",
+    "before": "feaca26576652ac70715697df3eff344b84de05998bd4cdb586bb0d60a46983e",
+    "after": "bcddb4507b308d983cedb1174ad47eea6fb7f97e66affd2de3078eba1f4b3821",
+    "change": "normalize extra empty lines at EOF only"
+  },
+  {
+    "file": "core-stages/floating-formatting/files/include/ffmt/detail/numeric.hpp",
+    "before": "2fe81c43d4db17242abf71bfdce0f650d727e0cf33a2e23606e412f1a04afadf",
+    "after": "30e438513f03ea163946b74c6a5c8290603283d2ac91531c0b2dd07bc994de1c",
+    "change": "normalize extra empty lines at EOF only"
+  },
+  {
+    "file": "core-stages/migration/files/include/ffmt/detail/sycl_formatters.hpp",
+    "before": "908f797e17fbce290bf0a75c5006062fa1554f87e81a7b12ff131cea52eac890",
+    "after": "6d2fda4928b449bd3f05238ca5aae30af4e00a7bc1e230e49b33470b383d0c5c",
+    "change": "normalize extra empty lines at EOF only"
+  },
+  {
+    "file": "root-stages/migration/files/include/ffmt/detail/sycl_formatters.hpp",
+    "before": "908f797e17fbce290bf0a75c5006062fa1554f87e81a7b12ff131cea52eac890",
+    "after": "6d2fda4928b449bd3f05238ca5aae30af4e00a7bc1e230e49b33470b383d0c5c",
+    "change": "normalize extra empty lines at EOF only"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "id": "unicode",
+  "title": "Apply counted Unicode decoding and display rules",
+  "dependencies": [
+    "primitives"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "test_core_unicode"
+  ],
+  "docs": [
+    "docs/api/unicode.md"
+  ],
+  "problem": "Byte counts alone misalign multibyte text, and decoding must respect counted boundaries.",
+  "example": "#include <ffmt/detail/checked.hpp>\nchar buffer[32];\nauto result = ffmt::format_to(buffer, \"{:\u2500^9}\", \"\u00e9\");\n// Bytes encode \"\u2500\u2500\u2500\u2500\u00e9\u2500\u2500\u2500\u2500\": display width 9, rather than padding by UTF-8 byte count.",
+  "design": "Counted UTF-8 decoding, display-width tables and printability tables govern fill, alignment, precision and debug escapes. Wide output follows code-unit semantics.",
+  "tradeoffs": "These are qualified fmt semantics, not terminal-specific grapheme measurement. Unicode can still be disabled explicitly.",
+  "reading_order": [
+    "include/ffmt/detail/parse.hpp",
+    "include/ffmt/detail/unicode_width.hpp",
+    "include/ffmt/detail/text.hpp",
+    "test/conformance/test_core_unicode.cpp"
+  ]
+}

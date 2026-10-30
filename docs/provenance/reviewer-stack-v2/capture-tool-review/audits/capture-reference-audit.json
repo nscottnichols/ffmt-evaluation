@@ -1,0 +1,14 @@
+{
+  "captures": [
+    {
+      "capture": "foundations-1011365",
+      "top_level_stdout_stderr_references": 68,
+      "problems": []
+    },
+    {
+      "capture": "intermediates-1011366",
+      "top_level_stdout_stderr_references": 1036,
+      "problems": []
+    }
+  ]
+}

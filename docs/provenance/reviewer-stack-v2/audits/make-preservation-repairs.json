@@ -1,0 +1,11 @@
+{
+  "kind": "qualified-wiring-restoration",
+  "description": "Restore diagnostic negative Make driver, standalone conformance Make wrapper and forced-portable floating Make coverage, preserving independent branch changes and the all default goal.",
+  "files": {
+    "tool-stages/tool-negative/files/Makefile": "c2c22f6544bf1f90d9d0f73d5d8db38366fe76ec7968fe7e7732260627095e18",
+    "tool-stages/tool-host-oracle/files/Makefile": "06258344861b006f1b7fa2391ec22b5e3746521850f945aee049a08be2990c59",
+    "core-stages/floating-formatting/files/test/conformance/suites/core_floating_portable.mk": "a1607d0d3bd2b1f6d481f2ae4e42b876f353e679490aad3b72ec3e1913e7dae2",
+    "core-stages/floating-formatting/stage.json": "2e57536ef588ee06a3fd17b416fd1d2ea2da082376b86881d0c9769728d63b57"
+  },
+  "validation": "Static minimal insertion/removal checks only; root owns assembled intermediate Make/CPU validation. No export generator rerun."
+}

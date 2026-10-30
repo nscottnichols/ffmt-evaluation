@@ -1,0 +1,21 @@
+{
+  "id": "tool-cuda",
+  "title": "Add independent CUDA differential execution adapter",
+  "dependencies": [
+    "tool-adapter-support"
+  ],
+  "change_kind": "source-refactor",
+  "remove": [],
+  "tests": [
+    "python3 -m unittest discover -s test/conformance -p test_adapter_cuda.py"
+  ],
+  "problem": "CUDA source compilation needs compiler-specific language and architecture flags, and successful compilation alone cannot establish that a kernel executed.",
+  "example": "--route cuda selects Clang CUDA; --route nvcc selects NVIDIA nvcc.\nBoth launch one execute_case(index) kernel, check launch/synchronization errors,\nand require FFMT_DEVICE metadata before comparing stdout bytes.",
+  "design": "Keep both CUDA compiler routes in one handwritten runtime adapter. Probe device availability, record the selected device, launch one thread, and synchronize before the process exits.",
+  "tradeoffs": "The common fixture stays free of fmt device code. These Python tests inspect the generated source and flags; a CUDA device/runtime is still required to establish execution.",
+  "reading_order": [
+    "tools/backend_cuda.py",
+    "test/conformance/test_adapter_cuda.py"
+  ],
+  "docs": "Run a literal case in a one-thread CUDA kernel through nvcc or Clang. Execution requires a CUDA device and runtime; Python checks only source generation here."
+}

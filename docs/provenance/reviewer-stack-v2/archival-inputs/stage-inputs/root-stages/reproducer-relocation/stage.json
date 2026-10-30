@@ -1,0 +1,31 @@
+{
+  "id": "reproducer-relocation",
+  "title": "Remove preserved independent compiler controls from the library",
+  "dependencies": [
+    "build-registration"
+  ],
+  "change_kind": "reproducer-relocation",
+  "remove": [
+    "implementation_limitation/dpcpp_O0.cpp",
+    "implementation_limitation/icpx_omp_pragma_in_dowhile.cpp"
+  ],
+  "tests": [],
+  "docs": [
+    "docs/contributing/REPRODUCERS.md"
+  ],
+  "problem": "Two inherited compiler/runtime controls live in the library tree despite having no ffmt dependency.",
+  "example": "// The controls include SYCL/stdio, not ffmt; their preserved sources are linked in docs/contributing/REPRODUCERS.md.",
+  "design": "Delete only the redundant library copies and link fixed evaluation commits that retain the exact source bytes and provenance.",
+  "tradeoffs": "Readers follow the companion repository for independent compiler investigations; library regressions stay in this checkout.",
+  "reading_order": [
+    "docs/contributing/REPRODUCERS.md"
+  ],
+  "validation": {
+    "commands": [
+      "Verify both removed paths match the preserved evaluation source hashes; no compiler campaign rerun is required."
+    ],
+    "results": "Pending independent review and assembled portable validation.",
+    "limitations": "Read-only byte/hash verification is sufficient for relocation; original sources and captured failures stay unchanged in evaluation."
+  },
+  "source_changes": "Build integration and documentation only; no formatter implementation changes."
+}

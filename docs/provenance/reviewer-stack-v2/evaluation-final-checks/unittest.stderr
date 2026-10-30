@@ -1,0 +1,24 @@
+test_ctest_and_make_children_use_detached_revision (test_build_checks.ImmutableBuildSourceTests.test_ctest_and_make_children_use_detached_revision) ... ok
+test_failed_child_preserves_requested_identity_and_restores_environment (test_build_checks.ImmutableBuildSourceTests.test_failed_child_preserves_requested_identity_and_restores_environment) ... ok
+test_accelerator_campaign_requires_allocation_before_resolving_sources (test_evaluation.ExternalCheckoutTests.test_accelerator_campaign_requires_allocation_before_resolving_sources) ... ok
+test_direct_shell_bridge_uses_external_source_head (test_evaluation.ExternalCheckoutTests.test_direct_shell_bridge_uses_external_source_head) ... ok
+test_dry_run_does_not_create_evidence_or_submit (test_evaluation.ExternalCheckoutTests.test_dry_run_does_not_create_evidence_or_submit) ... ok
+test_explicit_pin_bootstraps_once_and_preserves_source_identity (test_evaluation.ExternalCheckoutTests.test_explicit_pin_bootstraps_once_and_preserves_source_identity) ... warning: --filter is ignored in local clones; use file:// instead.
+warning: filtering not recognized by server, ignoring
+ok
+test_missing_checkout_requires_an_immutable_pin (test_evaluation.ExternalCheckoutTests.test_missing_checkout_requires_an_immutable_pin) ... ok
+test_runner_source_and_workspace_are_separate (test_evaluation.ExternalCheckoutTests.test_runner_source_and_workspace_are_separate) ... ok
+test_scheduler_defaults_pin_source_head_and_keep_explicit_revisions (test_evaluation.ExternalCheckoutTests.test_scheduler_defaults_pin_source_head_and_keep_explicit_revisions) ... ok
+test_auxiliary_fatal_error_cannot_publish_a_completed_config (test_evaluation.ReportEvidenceTests.test_auxiliary_fatal_error_cannot_publish_a_completed_config) ... ok
+test_compact_exports_preserve_separate_source_runner_and_invocation (test_evaluation.ReportEvidenceTests.test_compact_exports_preserve_separate_source_runner_and_invocation) ... ok
+test_symlinked_evidence_storage_preserves_logical_paths (test_evaluation.ReportEvidenceTests.test_symlinked_evidence_storage_preserves_logical_paths) ... ok
+test_terminal_selection_retains_failed_controls (test_evaluation.ReportEvidenceTests.test_terminal_selection_retains_failed_controls) ... ok
+test_default_worktree_verification_needs_no_git_history (test_verify_provenance.HistoricalLibraryTests.test_default_worktree_verification_needs_no_git_history) ... ok
+test_historical_headers_and_corpus_pass_while_head_and_worktree_differ (test_verify_provenance.HistoricalLibraryTests.test_historical_headers_and_corpus_pass_while_head_and_worktree_differ) ... ok
+test_missing_commit_and_tag_object_are_not_silently_substituted (test_verify_provenance.HistoricalLibraryTests.test_missing_commit_and_tag_object_are_not_silently_substituted) ... ok
+test_mutable_and_abbreviated_revisions_are_rejected (test_verify_provenance.HistoricalLibraryTests.test_mutable_and_abbreviated_revisions_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 2.023s
+
+OK
