@@ -1,0 +1,22 @@
+The simplified library no longer owns campaign launchers, source-snapshot management or evidence collection. Move their exact dependency closure here, while the library keeps one implementation header and the original portable test harness.
+
+For example, `python3 tools/conformance.py --ffmt-checkout /path/to/modern/ffmt --revision FULL_SOURCE_SHA --profile local --route host-buffer --case literal --numeric-samples 1 --no-negative` now uses `tools/campaign_runner` when the library has no campaign script. Source, runner, evaluator, commands and hashes remain separately identified. An explicit historical `--runner-revision` must contain its runner; missing scripts fail instead of silently changing that selection.
+
+Preserve 57 exact old runner/fixture files, original campaigns, failures, pins and installations. A separately pinned new source is cached independently of the historical runner. Historical monolithic host-test recipes now reject missing fixtures before compilation and explain the archived runner/current portable alternatives. Reusable benchmark workloads remain in the library. This keeps old studies reproducible at the cost of retaining their old fixture dependencies; old results do not qualify the new header.
+
+Read in this order:
+
+1. `tools/evaluation.py`, `test/test_evaluation.py`: owned/historical runner selection and independent immutable source bootstrap.
+2. `tools/campaign_runner/README.md`, `relocation.json`: exact moved files and current test ownership.
+3. `tools/jlse/host_tests.py`, `test/test_historical_host_recipe.py`: historical-fixture preflight.
+4. `docs/provenance/single-header-followup.md`: source/history mapping, actual validation, limitations and independent reviews.
+5. `docs/provenance/single-header-followup/capture-index.json`: lossless attempts, including failures and corrected controls.
+
+Validation: `python3 -m unittest discover -s test -v` passes 76 tests; the existing capture helper passes both safety tests. The historical verifier checks 25 preserved files, two configs, 17 historical headers/corpus, five refs and 19 commits using the unchanged `4b8cf257…` snapshot. Fresh allocated checks qualify the new library: full portable Make suites with Clang22 strict ASan/UBSan and GCC13, 123 expected negative variants per compiler, 41/41 CTest entries, installed and isolated single-header consumers, seven backend compilation routes, and two stdout plus 26 numeric smoke records. The benchmark relocation passes 12 byte comparisons. Captured records identify the exact revisions behind each result; no accelerator execution or timing campaign was repeated.
+
+Invalid initial NVCC host-mode invocations are excluded from CUDA qualification; corrected forced-CUDA commands pass. ROCm7's optimized gfx90a failure reproduces on both old and new headers, while gfx942 passes `-O0`/`-O2`. Optional GCC BitInt skips remain explicit. Raw failures, scheduler receipts and source hashes are preserved rather than relabeled.
+
+The original evaluation import has since merged into `main`. This follow-up merges that current base without rebasing previous commits. The immutable `evaluation-campaign` tag retains old PR provenance URLs after branch deletion; `provenance/single-header-20261030` freezes this follow-up's evidence. Historical source/runner/fmt pins remain unchanged.
+
+---
+Base: `main` at `b087713`. Library follow-up: [ffmt #81](https://github.com/nscottnichols/ffmt/pull/81), based on unchanged stack collection `471627c`. [Source mapping, independent reviews and exact evidence](https://github.com/nscottnichols/ffmt-evaluation/blob/provenance/single-header-20261030/docs/provenance/single-header-followup.md). Leave both follow-ups unmerged.

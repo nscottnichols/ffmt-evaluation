@@ -120,7 +120,9 @@ The [review-stack skill](skills/ffmt-review-stack/SKILL.md) and
 [review workflow scripts](tools/review_stack/README.md) cover source assembly,
 intermediate CPU qualification, evidence preservation and staged publication.
 
-The [single-header follow-up](docs/provenance/single-header-followup.md) records
+The [single-header library PR81](https://github.com/nscottnichols/ffmt/pull/81)
+and [evaluation PR2](https://github.com/nscottnichols/ffmt-evaluation/pull/2) stay
+draft and unmerged. The [follow-up provenance](docs/provenance/single-header-followup.md) records
 the new library source, test migration/inventory, relocated runner hashes,
 independent reviews and fresh validation. Existing source/runner pins and
 historical measurements remain unchanged. `python3 -m unittest discover -s test -v`

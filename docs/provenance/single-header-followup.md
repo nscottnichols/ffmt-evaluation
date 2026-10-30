@@ -1,6 +1,8 @@
 # Single implementation header and original-harness follow-up
 
-The library follow-up is based on unchanged stack tip
+The [library follow-up PR81](https://github.com/nscottnichols/ffmt/pull/81) and
+[evaluation companion PR2](https://github.com/nscottnichols/ffmt-evaluation/pull/2)
+are draft and unmerged. The library follow-up is based on unchanged stack tip
 `471627c31cd1e09a2d4587c0369ec662251f7356`. Its head is
 `3649622374b8beb29f2a1a1086031aba6a07c3e4`; all prior PR branches and commit
 objects remain intact. The [maintenance inventory](https://github.com/nscottnichols/ffmt/blob/3649622374b8beb29f2a1a1086031aba6a07c3e4/docs/MAINTENANCE.md)
@@ -112,3 +114,8 @@ Their raw audit attempts, corrected audit scope, findings and passing follow-ups
 remain visible in the captures. There is no handwritten implementation hidden as
 generated material, and the library needs none of these evaluation captures to
 build or test.
+
+[Publication metadata and exact PR bodies](single-header-followup/publication/record.json)
+record the published heads/bases/readiness. The immutable evidence tag retains
+the complete qualification snapshot; subsequent publication-only documentation
+does not alter the qualified library or evaluator tools.
