@@ -1,0 +1,287 @@
+{
+  "reviewer": "harness_cleanup (independent of production implementation and build registration)",
+  "reviewed_source_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+  "comparison_revision": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "implementation_path": "include/ffmt/base.hpp",
+  "implementation_sha256": "44879d64c728da492f2b5e09279ebf0fade807db8b3328d1d4d231379f0f3c7f",
+  "verdict": "pass:35 exact implementation body sections;37 self-contained compatibility wrappers;34 registered direct variants over33 source files",
+  "exact_section_checks": [
+    {
+      "old_source": "include/ffmt/args.hpp",
+      "body_sha256": "bf078b096adfff6e2539097bf9a3d41dd71a7164ef1416c15c4dc82660d3f57e",
+      "body_exact_in_base": true,
+      "new_line": 4008,
+      "body_bytes": 902
+    },
+    {
+      "old_source": "include/ffmt/chrono.hpp",
+      "body_sha256": "3706dc44408728fb968d94a38a999f7ba79b16cb674b73f114127ff2a035c824",
+      "body_exact_in_base": true,
+      "new_line": 5064,
+      "body_bytes": 33876
+    },
+    {
+      "old_source": "include/ffmt/color.hpp",
+      "body_sha256": "f1ab8081c85cd5700916e143c6c4260c20fd7d7e28ecf6b1c7f191a15b38d711",
+      "body_exact_in_base": true,
+      "new_line": 6347,
+      "body_bytes": 14846
+    },
+    {
+      "old_source": "include/ffmt/detail/arguments.hpp",
+      "body_sha256": "95b19fb31ab6fab9b6214e6774237758bc261fe4f69704a9d3bb42a1c1d99dc4",
+      "body_exact_in_base": true,
+      "new_line": 182,
+      "body_bytes": 3775
+    },
+    {
+      "old_source": "include/ffmt/detail/config.hpp",
+      "body_sha256": "6dd241491cb762a540be260b88fc43487c04de9c5bd4e447638124c2b911d1a8",
+      "body_exact_in_base": true,
+      "new_line": 65,
+      "body_bytes": 1180
+    },
+    {
+      "old_source": "include/ffmt/detail/context.hpp",
+      "body_sha256": "5ebc248160fe3cda2e1a5450198f574906dd1468eebb7417d9a08cfe2812e67e",
+      "body_exact_in_base": true,
+      "new_line": 888,
+      "body_bytes": 5951
+    },
+    {
+      "old_source": "include/ffmt/detail/dragonbox.hpp",
+      "body_sha256": "26f4bd59d8c89efbaa7b5214c5e6d62a3109230daf865f5897af1992ce2bb891",
+      "body_exact_in_base": true,
+      "new_line": 1536,
+      "body_bytes": 22322
+    },
+    {
+      "old_source": "include/ffmt/detail/exact_decimal.hpp",
+      "body_sha256": "e2254da12d8af7dffe5bec65f4d69b65cd747fceef57cc91f9a96488df7b3015",
+      "body_exact_in_base": true,
+      "new_line": 2190,
+      "body_bytes": 3491
+    },
+    {
+      "old_source": "include/ffmt/detail/execution.hpp",
+      "body_sha256": "919f69689bc64f1ad1acd0ebc7d5b766e4f44b27406088298d9338888e052430",
+      "body_exact_in_base": true,
+      "new_line": 1264,
+      "body_bytes": 4981
+    },
+    {
+      "old_source": "include/ffmt/detail/extended.hpp",
+      "body_sha256": "c055d5b54319dd050c9fe4e664abe26562508c74c676e1283cd92afca02ba366",
+      "body_exact_in_base": true,
+      "new_line": 3020,
+      "body_bytes": 4840
+    },
+    {
+      "old_source": "include/ffmt/detail/family.hpp",
+      "body_sha256": "e842e8f759097ab6f1369a3a2279eb77a1709f21e6d0557d528f336cc1e43194",
+      "body_exact_in_base": true,
+      "new_line": 4062,
+      "body_bytes": 12585
+    },
+    {
+      "old_source": "include/ffmt/detail/floating.hpp",
+      "body_sha256": "b4551eb8124e6c46ace415563721d5ceb31d8bc6a5fea27cff3cf880358c8025",
+      "body_exact_in_base": true,
+      "new_line": 2314,
+      "body_bytes": 12324
+    },
+    {
+      "old_source": "include/ffmt/detail/formatters.hpp",
+      "body_sha256": "b6339c0957064d25d7c658f7e67ff232e57b8ca5bb5ef5d01b69414393c943c6",
+      "body_exact_in_base": true,
+      "new_line": 764,
+      "body_bytes": 4264
+    },
+    {
+      "old_source": "include/ffmt/detail/integer.hpp",
+      "body_sha256": "f7287387c4c707285e0f0db30059921ccee2ef0b4a831f4ab3d347b39e9ecd3e",
+      "body_exact_in_base": true,
+      "new_line": 1462,
+      "body_bytes": 2433
+    },
+    {
+      "old_source": "include/ffmt/detail/legacy_emit.hpp",
+      "body_sha256": "859450cb1104aafcbe552bd2590fbbe04e44b571b0e1274962c92b4975389cd4",
+      "body_exact_in_base": true,
+      "new_line": 3562,
+      "body_bytes": 973
+    },
+    {
+      "old_source": "include/ffmt/detail/memory.hpp",
+      "body_sha256": "406010718e0a885c3a65ca018ef97058ae1aed2b7c5af52cbac5eac8d5bffeb5",
+      "body_exact_in_base": true,
+      "new_line": 1399,
+      "body_bytes": 2717
+    },
+    {
+      "old_source": "include/ffmt/detail/numeric.hpp",
+      "body_sha256": "522e3a7f0a1fd0593d9bd893bc3440f62df008fa2b692ba27fdc0e5fcb3cca29",
+      "body_exact_in_base": true,
+      "new_line": 2702,
+      "body_bytes": 11362
+    },
+    {
+      "old_source": "include/ffmt/detail/output.hpp",
+      "body_sha256": "0fff2affd087b268dc96c32c2b0d9d0bb8bcb48c7bde3584bda20142eb8a1f35",
+      "body_exact_in_base": true,
+      "new_line": 1061,
+      "body_bytes": 3969
+    },
+    {
+      "old_source": "include/ffmt/detail/parse.hpp",
+      "body_sha256": "16622add68b6c38a58763ce5f9ad9bc5df2c30f799ed293e9b7f4add0a7294ae",
+      "body_exact_in_base": true,
+      "new_line": 363,
+      "body_bytes": 10243
+    },
+    {
+      "old_source": "include/ffmt/detail/print_macros.hpp",
+      "body_sha256": "47be60c81562ed745f9471af9afe9f13338293a0428e0eaf626261d53d20cd5a",
+      "body_exact_in_base": true,
+      "new_line": 3899,
+      "body_bytes": 574
+    },
+    {
+      "old_source": "include/ffmt/detail/result.hpp",
+      "body_sha256": "bfd7e1d2784c8fec700cfa6739da403833917eb2793969edcac2b74843610427",
+      "body_exact_in_base": true,
+      "new_line": 114,
+      "body_bytes": 1942
+    },
+    {
+      "old_source": "include/ffmt/detail/sycl_formatters.hpp",
+      "body_sha256": "cfe0b5532a08bd50c0f80da8700d452633b102f34d232a8b2935c632d547f86b",
+      "body_exact_in_base": true,
+      "new_line": 3913,
+      "body_bytes": 3004
+    },
+    {
+      "old_source": "include/ffmt/detail/text.hpp",
+      "body_sha256": "22aae76af6f0e8a0e7ee0c9c7d48bdd7e75ce6cdd4984b44c8be74998e9623e5",
+      "body_exact_in_base": true,
+      "new_line": 3357,
+      "body_bytes": 3840
+    },
+    {
+      "old_source": "include/ffmt/detail/transport.hpp",
+      "body_sha256": "67cde465d51c777f56bbe47a80902c28a04438a999afde31b7a548be200760d0",
+      "body_exact_in_base": true,
+      "new_line": 3598,
+      "body_bytes": 11267
+    },
+    {
+      "old_source": "include/ffmt/detail/type_categories.hpp",
+      "body_sha256": "7aa3804f13323ae55987c092067e8639f6d3e58066e96cbb57b389b994553902",
+      "body_exact_in_base": true,
+      "new_line": 682,
+      "body_bytes": 2131
+    },
+    {
+      "old_source": "include/ffmt/detail/type_traits.hpp",
+      "body_sha256": "1b18e3e786fa8e4af733a54796fe45e4dd2c4b0a2a5a7f2dc3672970a0c4e8a6",
+      "body_exact_in_base": true,
+      "new_line": 738,
+      "body_bytes": 802
+    },
+    {
+      "old_source": "include/ffmt/detail/unicode.hpp",
+      "body_sha256": "47ff0dc431bbb63f3565dd87dc7e3c1b1d2cece42a61a150b5443909db589194",
+      "body_exact_in_base": true,
+      "new_line": 3153,
+      "body_bytes": 12137
+    },
+    {
+      "old_source": "include/ffmt/detail/unicode_width.hpp",
+      "body_sha256": "d1e4fd8e7ea542dd9a23b66634401852306b4a16c0eab7c263a941e3c3b782f6",
+      "body_exact_in_base": true,
+      "new_line": 291,
+      "body_bytes": 2875
+    },
+    {
+      "old_source": "include/ffmt/detail/validation.hpp",
+      "body_sha256": "aecaa4e5c9aab75ea6fb59aba4d3180637f3c055ef0abb5f13b22adc06048b8c",
+      "body_exact_in_base": true,
+      "new_line": 1178,
+      "body_bytes": 2947
+    },
+    {
+      "old_source": "include/ffmt/detail/value.hpp",
+      "body_sha256": "dd29e5770e83055759739f4f6707df3b82762614d56b870a3798d14cceafd641",
+      "body_exact_in_base": true,
+      "new_line": 3483,
+      "body_bytes": 2705
+    },
+    {
+      "old_source": "include/ffmt/enum.hpp",
+      "body_sha256": "0fd3d2c3ab537f3ac59d56db8e6462569ec4b8ad63b25ba5a46c5b725f225e8f",
+      "body_exact_in_base": true,
+      "new_line": 4038,
+      "body_bytes": 691
+    },
+    {
+      "old_source": "include/ffmt/printf.hpp",
+      "body_sha256": "029dd6c04322cb962b7fbf6bcadd7ea3e1440ed35c67ff91c525fc5696e19514",
+      "body_exact_in_base": true,
+      "new_line": 6700,
+      "body_bytes": 16820
+    },
+    {
+      "old_source": "include/ffmt/ranges.hpp",
+      "body_sha256": "5463bf8c56e164ca711eceeae647c211b223f6ac140fe16303cdf3d2a80365f3",
+      "body_exact_in_base": true,
+      "new_line": 4414,
+      "body_bytes": 23249
+    },
+    {
+      "old_source": "include/ffmt/std.hpp",
+      "body_sha256": "e39f02162c2222387afd4e8620e764f39ca1eb13f238445089dc74bfde456afd",
+      "body_exact_in_base": true,
+      "new_line": 6014,
+      "body_bytes": 9923
+    },
+    {
+      "old_source": "include/ffmt/std23.hpp",
+      "body_sha256": "aecf974e32d665a0f577d5c52e7e51037c869d8759b2ba8e9d99a2d755b555b6",
+      "body_exact_in_base": true,
+      "new_line": 6288,
+      "body_bytes": 2033
+    }
+  ],
+  "scope_of_exactness": "Each old implementation body remains a contiguous byte-identical section after removing pragma once and local ffmt include directives. Added section banners, standalone licensing prologue, the overall include graph, and wrapper files are intentionally different. This is not a whole-file equality claim.",
+  "prior_audit_records": [
+    {
+      "path": "independent-production-review-attempt1.json",
+      "meaning": "Preserved unsuccessful audit attempt. Its filter erroneously retained <ffmt/...> directives and inserted a duplicate already-existing expected include guard. The false whole-body matches diagnose that audit filter, not lost production implementation; this file must not be summarized as a passing check."
+    },
+    {
+      "path": "independent-production-review.json",
+      "meaning": "Corrected independent section checks all pass; includes37 wrapper resolutions and test registry review."
+    }
+  ],
+  "language_and_backend_review": [
+    "C++20 target remains declared by CMake and -std=c++20 Make defaults",
+    "Existing C++23 expected header guard and feature-test macro guard are byte-identical",
+    "Original macro guards for SYCL, ACPP, CUDA, HIP, OpenMP/SPIR-V and portable-shortest retained within exact body blocks",
+    "Optional family specializations follow dispatch/transport prerequisite definitions as former include graph",
+    "All37 legacy include paths are one include only and resolve to pragma-once base.hpp",
+    "Direct test flags, reference object linkage, optional77 handling and explicit C++23 opt-in match old registry",
+    "Make and CMake read one source inventory, and run the same tests rather than maintain a second fixture registry",
+    "Make and CMake isolate single-header consumer include path from wrappers and fmt oracle"
+  ],
+  "new_backend_test_guard_review": [
+    "SYCL original test mains use shared explicit GPU selector and rethrow asynchronous device errors through event.wait_and_throw.",
+    "SYCL shared case body rejects a supplied non-GPU queue before executing output comparisons.",
+    "OpenMP original shared body checks omp_is_initial_device in a mapped target region once per test function and fails explicit host fallback.",
+    "Existing OpenMP RUN and SKIP_IF compiler workaround macro shapes are unchanged.",
+    "capture_stdout restores the original stdout descriptor and closes its tempfile if a test callback throws."
+  ],
+  "limitations": [
+    "Static review; allocated compiler/runtime validation is recorded separately by root.",
+    "The production exact-section check does not establish runtime device behavior or imply that old hardware measurements qualify the new source snapshot."
+  ]
+}

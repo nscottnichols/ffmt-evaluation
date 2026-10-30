@@ -1,0 +1,759 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/attempts/backend-controls-20261030T213849Z",
+      "--input",
+      "attempt/header-only-gpu.cpp=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-gpu.cpp",
+      "--input",
+      "attempt/header-only-openmp.cpp=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-openmp.cpp",
+      "--input",
+      "attempt/header-only-sycl.cpp=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-sycl.cpp",
+      "--input",
+      "attempt/manifest.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/manifest.json",
+      "--input",
+      "attempt/run-cobalt.sh=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/run-cobalt.sh",
+      "--input",
+      "attempt/run.py=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/run.py",
+      "--input",
+      "attempt/scheduler-receipts.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler-receipts.json",
+      "--input",
+      "attempt/submission.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/submission.json",
+      "--input",
+      "attempt/hip/compiler-version.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.json",
+      "--input",
+      "attempt/hip/compiler-version.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.stderr",
+      "--input",
+      "attempt/hip/compiler-version.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.stdout",
+      "--input",
+      "attempt/hip/header-only-device-consumer.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.json",
+      "--input",
+      "attempt/hip/header-only-device-consumer.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.stderr",
+      "--input",
+      "attempt/hip/header-only-device-consumer.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.stdout",
+      "--input",
+      "attempt/hip/make-backend.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.json",
+      "--input",
+      "attempt/hip/make-backend.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.stderr",
+      "--input",
+      "attempt/hip/make-backend.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.stdout",
+      "--input",
+      "attempt/hip/manifest.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/manifest.json",
+      "--input",
+      "attempt/nvcc/compile-buffer_path.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.json",
+      "--input",
+      "attempt/nvcc/compile-buffer_path.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.stderr",
+      "--input",
+      "attempt/nvcc/compile-buffer_path.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.stdout",
+      "--input",
+      "attempt/nvcc/compile-floats.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.json",
+      "--input",
+      "attempt/nvcc/compile-floats.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.stderr",
+      "--input",
+      "attempt/nvcc/compile-floats.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.stdout",
+      "--input",
+      "attempt/nvcc/compile-formatter.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.json",
+      "--input",
+      "attempt/nvcc/compile-formatter.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.stderr",
+      "--input",
+      "attempt/nvcc/compile-formatter.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.stdout",
+      "--input",
+      "attempt/nvcc/compile-integers.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.json",
+      "--input",
+      "attempt/nvcc/compile-integers.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.stderr",
+      "--input",
+      "attempt/nvcc/compile-integers.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.stdout",
+      "--input",
+      "attempt/nvcc/compile-layout.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.json",
+      "--input",
+      "attempt/nvcc/compile-layout.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.stderr",
+      "--input",
+      "attempt/nvcc/compile-layout.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.stdout",
+      "--input",
+      "attempt/nvcc/compile-misc.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.json",
+      "--input",
+      "attempt/nvcc/compile-misc.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.stderr",
+      "--input",
+      "attempt/nvcc/compile-misc.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.stdout",
+      "--input",
+      "attempt/nvcc/compile-strings.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.json",
+      "--input",
+      "attempt/nvcc/compile-strings.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.stderr",
+      "--input",
+      "attempt/nvcc/compile-strings.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.stdout",
+      "--input",
+      "attempt/nvcc/compiler-version.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.json",
+      "--input",
+      "attempt/nvcc/compiler-version.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.stderr",
+      "--input",
+      "attempt/nvcc/compiler-version.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.stdout",
+      "--input",
+      "attempt/nvcc/header-only-device-consumer.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.json",
+      "--input",
+      "attempt/nvcc/header-only-device-consumer.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.stderr",
+      "--input",
+      "attempt/nvcc/header-only-device-consumer.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.stdout",
+      "--input",
+      "attempt/nvcc/manifest.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/manifest.json",
+      "--input",
+      "attempt/scheduler/1012529.cobaltlog=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.cobaltlog",
+      "--input",
+      "attempt/scheduler/1012529.error=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.error",
+      "--input",
+      "attempt/scheduler/1012529.output=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.output",
+      "--input",
+      "attempt/scheduler/qstat.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/qstat.stderr",
+      "--input",
+      "attempt/scheduler/qstat.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/qstat.stdout"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "attempt/header-only-gpu.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-gpu.cpp",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/header-only-openmp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-openmp.cpp",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/header-only-sycl.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-sycl.cpp",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/manifest.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/run-cobalt.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/run.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler-receipts.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/submission.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/compiler-version.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/header-only-device-consumer.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/header-only-device-consumer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/header-only-device-consumer.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/make-backend.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/make-backend.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/make-backend.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/hip/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/manifest.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-buffer_path.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-buffer_path.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-buffer_path.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-floats.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-floats.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-floats.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-formatter.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-formatter.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-formatter.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-integers.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-integers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-integers.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-layout.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-layout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-layout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-misc.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-misc.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-misc.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-strings.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-strings.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compile-strings.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compiler-version.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/header-only-device-consumer.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/header-only-device-consumer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/header-only-device-consumer.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/nvcc/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/manifest.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.cobaltlog",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.error",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.output",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/qstat.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/qstat.stdout",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "attempt/header-only-gpu.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-gpu.cpp",
+      "storage": "visible",
+      "bytes": 248,
+      "sha256": "481899012ffbc7285f53a0ffeca770d4ccf6f68722dc8e559fad35b6ca722653"
+    },
+    {
+      "relative_path": "attempt/header-only-openmp.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-openmp.cpp",
+      "storage": "visible",
+      "bytes": 186,
+      "sha256": "141ac481abf9111d099e9c51bf04705abb6f1746ef269016c8530b3a18a81a58"
+    },
+    {
+      "relative_path": "attempt/header-only-sycl.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-sycl.cpp",
+      "storage": "visible",
+      "bytes": 189,
+      "sha256": "fc0aa1f3613af1e8b92d436f7adfbe04fbe21b4497a65f978de7c310cd2efac3"
+    },
+    {
+      "relative_path": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/manifest.json",
+      "storage": "visible",
+      "bytes": 730,
+      "sha256": "7958f2856f96574712248050f5efee180db9e99c7ff574cdd3c55860719bdc6f"
+    },
+    {
+      "relative_path": "attempt/run-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/run-cobalt.sh",
+      "storage": "visible",
+      "bytes": 317,
+      "sha256": "490adae4cbbc01919ebf4c676e22961031950e8f9dd94e6e07d61d0b46e9606e"
+    },
+    {
+      "relative_path": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/run.py",
+      "storage": "visible",
+      "bytes": 9174,
+      "sha256": "cb86c07a97512cf23f680e11dab889c98cf4dda6126ef5117ec4cbdd11736d7b"
+    },
+    {
+      "relative_path": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler-receipts.json",
+      "storage": "visible",
+      "bytes": 541,
+      "sha256": "a883baf0602bc8af24cc7d8eefaf35635b90b9d6ab10ccacfd5f52fa36cd8cf9"
+    },
+    {
+      "relative_path": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/submission.json",
+      "storage": "visible",
+      "bytes": 813,
+      "sha256": "e03857a5f713e62e48dc25d209dcc8178344f2bccc142c6c8394375a0af84974"
+    },
+    {
+      "relative_path": "attempt/hip/compiler-version.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.json",
+      "storage": "visible",
+      "bytes": 727,
+      "sha256": "63f8991341c4f11ce73371ac211bd0808fd48790e4bae64f770f8ba07e833568"
+    },
+    {
+      "relative_path": "attempt/hip/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/hip/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/compiler-version.stdout",
+      "storage": "visible",
+      "bytes": 359,
+      "sha256": "1ea4b187ec6c59cbe6aa5c7bee782c22e5acf4046363de0c26d15029dc5db021"
+    },
+    {
+      "relative_path": "attempt/hip/header-only-device-consumer.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.json",
+      "storage": "visible",
+      "bytes": 1903,
+      "sha256": "a6525f4c4e2cff63ddaae113b2ede759eb18a25eaaa2c03bb8c2fe833ac31eef"
+    },
+    {
+      "relative_path": "attempt/hip/header-only-device-consumer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/hip/header-only-device-consumer.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only-device-consumer.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/hip/make-backend.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.json",
+      "storage": "visible",
+      "bytes": 1215,
+      "sha256": "49b8579cebda87154e8e9741ac3bb6ad077ed0143b72cab0895fe7f120be62a7"
+    },
+    {
+      "relative_path": "attempt/hip/make-backend.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/hip/make-backend.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/make-backend.stdout",
+      "storage": "visible",
+      "bytes": 2726,
+      "sha256": "1bf07f67cee37075be7a9eccd3f7fe177507797999c090854ee8b940da54c052"
+    },
+    {
+      "relative_path": "attempt/hip/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/manifest.json",
+      "storage": "visible",
+      "bytes": 22448,
+      "sha256": "4fcd7d7e26897db451af96b230b5ebff390dcc543a0924453c0415d4e9048dc5"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-buffer_path.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.json",
+      "storage": "visible",
+      "bytes": 1762,
+      "sha256": "cb3ecc46a7535efac293637eda17c1e0c78924faed9ebbede01232b2b61f6c26"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-buffer_path.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.stderr",
+      "storage": "visible",
+      "bytes": 2498,
+      "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-buffer_path.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-buffer_path.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-floats.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.json",
+      "storage": "visible",
+      "bytes": 1727,
+      "sha256": "121881544b725ee4371d0ee33161bb4b466e9653f31fd366413803aa0290da49"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-floats.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.stderr",
+      "storage": "visible",
+      "bytes": 2498,
+      "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-floats.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-floats.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-formatter.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.json",
+      "storage": "visible",
+      "bytes": 1747,
+      "sha256": "455fec195ef998d9da777f1190d2ec3d3b26a7363fe88ed87972d9a2e6fe9e59"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-formatter.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.stderr",
+      "storage": "visible",
+      "bytes": 2498,
+      "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-formatter.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-formatter.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-integers.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.json",
+      "storage": "visible",
+      "bytes": 1740,
+      "sha256": "21da2a7cabf02fad761de2c2b91dc14c9b05561564ec7adca24e40e5af69163d"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-integers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.stderr",
+      "storage": "visible",
+      "bytes": 2498,
+      "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-integers.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-integers.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-layout.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.json",
+      "storage": "visible",
+      "bytes": 1726,
+      "sha256": "bccf58622d56dc6e068c2e337e164fecbc66e246e10bcfd54a6a613dafaa57c4"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-layout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.stderr",
+      "storage": "visible",
+      "bytes": 2498,
+      "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-layout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-layout.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-misc.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.json",
+      "storage": "visible",
+      "bytes": 1712,
+      "sha256": "764fe0d208480294e1902ffee911a05055f41702815619f6b2d037682d6434dc"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-misc.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.stderr",
+      "storage": "visible",
+      "bytes": 2498,
+      "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-misc.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-misc.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-strings.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.json",
+      "storage": "visible",
+      "bytes": 1733,
+      "sha256": "3a818623330c1b92895890d624e03ad97e7cfb2f446b409e795bfb08116e6147"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-strings.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.stderr",
+      "storage": "visible",
+      "bytes": 2498,
+      "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+    },
+    {
+      "relative_path": "attempt/nvcc/compile-strings.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compile-strings.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compiler-version.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.json",
+      "storage": "visible",
+      "bytes": 730,
+      "sha256": "5dafbbcb07e49f30e76c27d468b052b5672c86af9f54e5cf4862457da2f8baf1"
+    },
+    {
+      "relative_path": "attempt/nvcc/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/compiler-version.stdout",
+      "storage": "visible",
+      "bytes": 208,
+      "sha256": "77d7ef23109cd2437a8b9cf5efbc4e89996b816276077edb86143ee04f6d5269"
+    },
+    {
+      "relative_path": "attempt/nvcc/header-only-device-consumer.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.json",
+      "storage": "visible",
+      "bytes": 2015,
+      "sha256": "2ef1c10bc159aa06d6e4b943dc361ede5a5f8e8fe78c12813d7406eaea3d4220"
+    },
+    {
+      "relative_path": "attempt/nvcc/header-only-device-consumer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.stderr",
+      "storage": "visible",
+      "bytes": 3514,
+      "sha256": "8be8fc7440c9216daf3c70c458cafccf4079a762181f613afe025eb0d4439558"
+    },
+    {
+      "relative_path": "attempt/nvcc/header-only-device-consumer.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only-device-consumer.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/nvcc/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/manifest.json",
+      "storage": "visible",
+      "bytes": 34428,
+      "sha256": "36622c51719d530f7929eb6c61d50d5b00ed22f0635483fd9201585b04428c38"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.cobaltlog",
+      "storage": "visible",
+      "bytes": 2053,
+      "sha256": "e1daf506748f3fc947e05217d3e2e48ef8c98075d7085bcef1b87afa32413f64"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.error",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/1012529.output",
+      "storage": "visible",
+      "bytes": 1088,
+      "sha256": "c26a2de2c9990989c33f3eefe1839c64966fd3714e18f23c15497d8f15a6dbc6"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/qstat.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/scheduler/qstat.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

@@ -1,0 +1,22 @@
+{
+  "qsub_argv": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "skylake_8180",
+    "-n",
+    "1",
+    "-t",
+    "30",
+    "--cwd",
+    "/home/nnichols",
+    "-O",
+    "/home/nnichols/ffmt-followup-hip-differential-20261030T214027Z",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/run-cobalt.sh"
+  ],
+  "qsub_exit_code": 0,
+  "qsub_stdout": "1012532\n",
+  "qsub_stderr": ""
+}

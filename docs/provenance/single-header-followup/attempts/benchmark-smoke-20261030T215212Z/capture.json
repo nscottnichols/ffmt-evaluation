@@ -1,0 +1,1095 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/attempts/benchmark-smoke-20261030T215212Z",
+      "--input",
+      "attempt/allocation-qstat.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/allocation-qstat.stdout",
+      "--input",
+      "attempt/compile-fmt.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-fmt.stderr",
+      "--input",
+      "attempt/compile-fmt.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-fmt.stdout",
+      "--input",
+      "attempt/compile-library-multi.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-multi.stderr",
+      "--input",
+      "attempt/compile-library-multi.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-multi.stdout",
+      "--input",
+      "attempt/compile-library-single.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-single.stderr",
+      "--input",
+      "attempt/compile-library-single.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-single.stdout",
+      "--input",
+      "attempt/compile-reference-multi.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-multi.stderr",
+      "--input",
+      "attempt/compile-reference-multi.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-multi.stdout",
+      "--input",
+      "attempt/compile-reference-single.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-single.stderr",
+      "--input",
+      "attempt/compile-reference-single.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-single.stdout",
+      "--input",
+      "attempt/compile-resource.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-resource.stderr",
+      "--input",
+      "attempt/compile-resource.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-resource.stdout",
+      "--input",
+      "attempt/compiler-version.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compiler-version.stderr",
+      "--input",
+      "attempt/compiler-version.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compiler-version.stdout",
+      "--input",
+      "attempt/driver.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/driver.stderr",
+      "--input",
+      "attempt/driver.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/driver.stdout",
+      "--input",
+      "attempt/library-multi-f0-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p0-n0.stderr",
+      "--input",
+      "attempt/library-multi-f0-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p0-n0.stdout",
+      "--input",
+      "attempt/library-multi-f0-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n0.stderr",
+      "--input",
+      "attempt/library-multi-f0-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n0.stdout",
+      "--input",
+      "attempt/library-multi-f0-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n1.stderr",
+      "--input",
+      "attempt/library-multi-f0-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n1.stdout",
+      "--input",
+      "attempt/library-multi-f1-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p0-n0.stderr",
+      "--input",
+      "attempt/library-multi-f1-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p0-n0.stdout",
+      "--input",
+      "attempt/library-multi-f1-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n0.stderr",
+      "--input",
+      "attempt/library-multi-f1-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n0.stdout",
+      "--input",
+      "attempt/library-multi-f1-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n1.stderr",
+      "--input",
+      "attempt/library-multi-f1-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n1.stdout",
+      "--input",
+      "attempt/library-single-f0-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p0-n0.stderr",
+      "--input",
+      "attempt/library-single-f0-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p0-n0.stdout",
+      "--input",
+      "attempt/library-single-f0-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n0.stderr",
+      "--input",
+      "attempt/library-single-f0-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n0.stdout",
+      "--input",
+      "attempt/library-single-f0-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n1.stderr",
+      "--input",
+      "attempt/library-single-f0-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n1.stdout",
+      "--input",
+      "attempt/library-single-f1-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p0-n0.stderr",
+      "--input",
+      "attempt/library-single-f1-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p0-n0.stdout",
+      "--input",
+      "attempt/library-single-f1-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n0.stderr",
+      "--input",
+      "attempt/library-single-f1-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n0.stdout",
+      "--input",
+      "attempt/library-single-f1-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n1.stderr",
+      "--input",
+      "attempt/library-single-f1-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n1.stdout",
+      "--input",
+      "attempt/manifest.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/manifest.json",
+      "--input",
+      "attempt/reference-multi-f0-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p0-n0.stderr",
+      "--input",
+      "attempt/reference-multi-f0-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p0-n0.stdout",
+      "--input",
+      "attempt/reference-multi-f0-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n0.stderr",
+      "--input",
+      "attempt/reference-multi-f0-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n0.stdout",
+      "--input",
+      "attempt/reference-multi-f0-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n1.stderr",
+      "--input",
+      "attempt/reference-multi-f0-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n1.stdout",
+      "--input",
+      "attempt/reference-multi-f1-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p0-n0.stderr",
+      "--input",
+      "attempt/reference-multi-f1-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p0-n0.stdout",
+      "--input",
+      "attempt/reference-multi-f1-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n0.stderr",
+      "--input",
+      "attempt/reference-multi-f1-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n0.stdout",
+      "--input",
+      "attempt/reference-multi-f1-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n1.stderr",
+      "--input",
+      "attempt/reference-multi-f1-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n1.stdout",
+      "--input",
+      "attempt/reference-single-f0-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p0-n0.stderr",
+      "--input",
+      "attempt/reference-single-f0-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p0-n0.stdout",
+      "--input",
+      "attempt/reference-single-f0-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n0.stderr",
+      "--input",
+      "attempt/reference-single-f0-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n0.stdout",
+      "--input",
+      "attempt/reference-single-f0-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n1.stderr",
+      "--input",
+      "attempt/reference-single-f0-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n1.stdout",
+      "--input",
+      "attempt/reference-single-f1-p0-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p0-n0.stderr",
+      "--input",
+      "attempt/reference-single-f1-p0-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p0-n0.stdout",
+      "--input",
+      "attempt/reference-single-f1-p1-n0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n0.stderr",
+      "--input",
+      "attempt/reference-single-f1-p1-n0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n0.stdout",
+      "--input",
+      "attempt/reference-single-f1-p1-n1.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n1.stderr",
+      "--input",
+      "attempt/reference-single-f1-p1-n1.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n1.stdout",
+      "--input",
+      "attempt/run-allocated.sh=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/run-allocated.sh",
+      "--input",
+      "attempt/run.py=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/run.py",
+      "--input",
+      "attempt/scheduler-receipts.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler-receipts.json",
+      "--input",
+      "attempt/submission.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/submission.json",
+      "--input",
+      "attempt/scheduler/1012529.cobaltlog=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.cobaltlog",
+      "--input",
+      "attempt/scheduler/1012529.error=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.error",
+      "--input",
+      "attempt/scheduler/1012529.output=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.output",
+      "--input",
+      "attempt/scheduler/qstat.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/qstat.stderr",
+      "--input",
+      "attempt/scheduler/qstat.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/qstat.stdout"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "attempt/allocation-qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/allocation-qstat.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-fmt.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-fmt.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-fmt.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-library-multi.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-multi.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-library-multi.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-multi.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-library-single.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-single.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-library-single.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-single.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-reference-multi.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-multi.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-reference-multi.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-multi.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-reference-single.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-single.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-reference-single.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-single.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-resource.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-resource.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compile-resource.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-resource.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compiler-version.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compiler-version.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/driver.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/driver.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/driver.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/driver.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-multi-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/library-single-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/manifest.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-multi-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p0-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p0-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n1.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/reference-single-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n1.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run-allocated.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/run-allocated.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/run.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler-receipts.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/submission.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.cobaltlog",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.error",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.output",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/qstat.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/qstat.stdout",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "attempt/allocation-qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/allocation-qstat.stdout",
+      "storage": "visible",
+      "bytes": 2531,
+      "sha256": "88a14d03b22027beefc5675015085f966fdf0a9abe39ba478e1806cfac5b3d69"
+    },
+    {
+      "relative_path": "attempt/compile-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-fmt.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compile-fmt.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-fmt.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compile-library-multi.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-multi.stderr",
+      "storage": "visible",
+      "bytes": 235,
+      "sha256": "d05d86f6f1d1071d006fe1e94fe83b365c1417cbea46a2a55f4c688857e62666"
+    },
+    {
+      "relative_path": "attempt/compile-library-multi.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-multi.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compile-library-single.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-single.stderr",
+      "storage": "visible",
+      "bytes": 235,
+      "sha256": "d05d86f6f1d1071d006fe1e94fe83b365c1417cbea46a2a55f4c688857e62666"
+    },
+    {
+      "relative_path": "attempt/compile-library-single.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-library-single.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compile-reference-multi.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-multi.stderr",
+      "storage": "visible",
+      "bytes": 235,
+      "sha256": "d05d86f6f1d1071d006fe1e94fe83b365c1417cbea46a2a55f4c688857e62666"
+    },
+    {
+      "relative_path": "attempt/compile-reference-multi.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-multi.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compile-reference-single.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-single.stderr",
+      "storage": "visible",
+      "bytes": 235,
+      "sha256": "d05d86f6f1d1071d006fe1e94fe83b365c1417cbea46a2a55f4c688857e62666"
+    },
+    {
+      "relative_path": "attempt/compile-reference-single.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-reference-single.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compile-resource.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-resource.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compile-resource.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compile-resource.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compiler-version.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/compiler-version.stdout",
+      "storage": "visible",
+      "bytes": 219,
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "relative_path": "attempt/driver.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/driver.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/driver.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/driver.stdout",
+      "storage": "visible",
+      "bytes": 28532,
+      "sha256": "e3d74ab905a7e53e705ee7f1b7b2334071d584ef7ff7897e7b233187663bed01"
+    },
+    {
+      "relative_path": "attempt/library-multi-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 221,
+      "sha256": "2defe32419ffa8695dec44aa208e8a11382a883e76bbbc28742358aafa6ec498"
+    },
+    {
+      "relative_path": "attempt/library-multi-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "relative_path": "attempt/library-multi-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "f4d1cd6754f194f73fb6f6c766731281c1b93b3e0e170bb80828a05cfe419274"
+    },
+    {
+      "relative_path": "attempt/library-multi-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "relative_path": "attempt/library-multi-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "7d7e02e33fe87e3aa199197599ae848142dad60c428f5d753ea3291ffceabca8"
+    },
+    {
+      "relative_path": "attempt/library-multi-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f0-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "relative_path": "attempt/library-multi-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "21eec881c5fd741624fd770f6252a09310c300087c44d6b5bbb6f98ad6a4eb7d"
+    },
+    {
+      "relative_path": "attempt/library-multi-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "relative_path": "attempt/library-multi-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "956d4425ca123764bfe50de44484987080854471d6caa594e91d63ec4d0f7e2d"
+    },
+    {
+      "relative_path": "attempt/library-multi-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "relative_path": "attempt/library-multi-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "e28be5b1dce4668a393c9fe76cb92fb08d346b0c821da15585069467c6b30694"
+    },
+    {
+      "relative_path": "attempt/library-multi-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi-f1-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "relative_path": "attempt/library-single-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 221,
+      "sha256": "541e2bbb916b2517458cd7bf794f078f37e212527ed13cbf592db02f9fe037eb"
+    },
+    {
+      "relative_path": "attempt/library-single-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "relative_path": "attempt/library-single-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "7b0b1a0384bab502902727d03ec521c425b52db6d12939cf8b1e7eeebf8afa47"
+    },
+    {
+      "relative_path": "attempt/library-single-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "relative_path": "attempt/library-single-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "013d6f9a02d27a7013fa6b730ae248a59d583fe9cff8518c5a7af23dd626de83"
+    },
+    {
+      "relative_path": "attempt/library-single-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f0-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "relative_path": "attempt/library-single-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 221,
+      "sha256": "a613a814a37f99ce5fe5f8c778033ea053eb456da48597e2ab9d6d83e2cfae02"
+    },
+    {
+      "relative_path": "attempt/library-single-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "relative_path": "attempt/library-single-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "6b977808c99d9f9ad88f32a22f13f535cb35e9e3c44f557ccfa4db0d38ceb316"
+    },
+    {
+      "relative_path": "attempt/library-single-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "relative_path": "attempt/library-single-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "624dfa9d6c57d3526e2bbafaf4488424f6be6ddf328ec1a73e57c11495766c53"
+    },
+    {
+      "relative_path": "attempt/library-single-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single-f1-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "relative_path": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/manifest.json",
+      "storage": "visible",
+      "bytes": 27649,
+      "sha256": "a5af55131252c5c31924b40369fe88f537b80ad61c87a812a370e60b632cf6f6"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 221,
+      "sha256": "9fd8e3a642ef5d5ba443ba1adf84814184041edd2ffc9c61e74f10c2ee7eb314"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "3ca466dbefb49e4af07346006f254a3af3bbabf8160bc15a3edf58500239ca85"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "4eb238ef3f7cac964af9fc8f9fd8f79b8d6c20d06184fa0302a193d8cf7dc8b0"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f0-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "7168f4f2b77f9421641e8b124041e8b83909b82cdb63901f0c1194f763e4769a"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "e59b4b71e31777294d450abb2e89bfbcd9eb1a985474e84786be85883820d935"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "78a11f57f95d1b6a6ecafd0bb7687a5557be6bb4d1c7a94d98cbefbb61dda001"
+    },
+    {
+      "relative_path": "attempt/reference-multi-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi-f1-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "relative_path": "attempt/reference-single-f0-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 221,
+      "sha256": "60881b7073779758cb9c2bbe3208b4fa5eca1a14f3a796b8a094098b8d731082"
+    },
+    {
+      "relative_path": "attempt/reference-single-f0-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "relative_path": "attempt/reference-single-f0-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "008315c3cc2071e2bb5b4a199848d8e13641c5e24cc888ad063d9ea5b730e9b9"
+    },
+    {
+      "relative_path": "attempt/reference-single-f0-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "relative_path": "attempt/reference-single-f0-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "c1004daee142bdd4d41fcc874df39ec8deadcb4664b3ec05dfad9a7abf75cf52"
+    },
+    {
+      "relative_path": "attempt/reference-single-f0-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f0-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "relative_path": "attempt/reference-single-f1-p0-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p0-n0.stderr",
+      "storage": "visible",
+      "bytes": 221,
+      "sha256": "db7dc30e680680bb786183233711a2401d2209c4a25c2bd290b1ba2efc2eb1d7"
+    },
+    {
+      "relative_path": "attempt/reference-single-f1-p0-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p0-n0.stdout",
+      "storage": "visible",
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "relative_path": "attempt/reference-single-f1-p1-n0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n0.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "11957171e71091fb05bdef577911024f1023f714cb296ef1bf7f50c1a99d3a70"
+    },
+    {
+      "relative_path": "attempt/reference-single-f1-p1-n0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n0.stdout",
+      "storage": "visible",
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "relative_path": "attempt/reference-single-f1-p1-n1.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n1.stderr",
+      "storage": "visible",
+      "bytes": 222,
+      "sha256": "11b2500d4cc4c9c8a9f8326eee3aa707b23295275aa7d697b3a854bbb2762b62"
+    },
+    {
+      "relative_path": "attempt/reference-single-f1-p1-n1.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single-f1-p1-n1.stdout",
+      "storage": "visible",
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "relative_path": "attempt/run-allocated.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/run-allocated.sh",
+      "storage": "visible",
+      "bytes": 311,
+      "sha256": "8afdec65bba14dcee82e30e3acf7123e83457df0f13f29a3622cba63e9b7092c"
+    },
+    {
+      "relative_path": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/run.py",
+      "storage": "visible",
+      "bytes": 3677,
+      "sha256": "b04f177368706cb937f7facf26817a5d0d622607fc55bf0878dbaece28770a25"
+    },
+    {
+      "relative_path": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler-receipts.json",
+      "storage": "visible",
+      "bytes": 541,
+      "sha256": "a883baf0602bc8af24cc7d8eefaf35635b90b9d6ab10ccacfd5f52fa36cd8cf9"
+    },
+    {
+      "relative_path": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/submission.json",
+      "storage": "visible",
+      "bytes": 410,
+      "sha256": "02676391e50afc476e07de4a707bd18ee22c517b2c10b01202a3e1477509afff"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.cobaltlog",
+      "storage": "visible",
+      "bytes": 2053,
+      "sha256": "e1daf506748f3fc947e05217d3e2e48ef8c98075d7085bcef1b87afa32413f64"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.error",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/1012529.output",
+      "storage": "visible",
+      "bytes": 1088,
+      "sha256": "c26a2de2c9990989c33f3eefe1839c64966fd3714e18f23c15497d8f15a6dbc6"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/qstat.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/scheduler/qstat.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

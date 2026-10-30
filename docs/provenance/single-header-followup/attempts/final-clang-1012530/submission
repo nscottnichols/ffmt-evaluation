@@ -1,0 +1,25 @@
+{
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "skylake_8180",
+    "-n",
+    "1",
+    "-t",
+    "120",
+    "--cwd",
+    "/home/nnichols",
+    "--env",
+    "FFMT_VALIDATION_SYSTEM=skylake",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate-final.sh",
+    "clang",
+    "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497"
+  ],
+  "returncode": 0,
+  "stdout": "1012530\n",
+  "stderr": "",
+  "submitted": "2026-10-30T21:40:03.423069+00:00"
+}

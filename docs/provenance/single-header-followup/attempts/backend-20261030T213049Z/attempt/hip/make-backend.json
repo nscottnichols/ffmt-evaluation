@@ -1,0 +1,28 @@
+{
+  "name": "make-backend",
+  "argv": [
+    "make",
+    "--no-print-directory",
+    "-j2",
+    "CXX=/soft/compilers/rocm/rocm-7.0.2/bin/hipcc",
+    "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "USE_HIP=1",
+    "OFFLOAD_ARCH=gfx90a",
+    "compile-hip"
+  ],
+  "command": "make --no-print-directory -j2 CXX=/soft/compilers/rocm/rocm-7.0.2/bin/hipcc FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux USE_HIP=1 OFFLOAD_ARCH=gfx90a compile-hip",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213049Z/worktrees/hip",
+  "started_utc": "2026-10-30T21:31:13.072014+00:00",
+  "exit_code": 2,
+  "status": "failure",
+  "seconds": 6.339,
+  "stdout": {
+    "path": "hip/make-backend.stdout",
+    "sha256": "23b8b54d7a4e864feca7f4a7e014d7c50901b0484e187dd063f06618d2fba2d5"
+  },
+  "stderr": {
+    "path": "hip/make-backend.stderr",
+    "sha256": "e6b80c7527aaf5daca60fa8910f7a0e45f5d677ec08c094161140918ae8a5320"
+  }
+}

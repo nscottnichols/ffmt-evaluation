@@ -1,0 +1,31 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_zero_on_char.cpp:5:23: error: call to consteval function 'fmt::fstring<char>::fstring<6UL>' is not a constant expression
+    5 |   NEG_EXPECT_REJECTED("{:05}", 'c');
+      |                       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1671:5: note: non-constexpr function 'report_error' cannot be used in a constant expression
+ 1671 |     report_error("invalid format specifier for char");
+      |     ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2378:50: note: in call to 'check_char_specs(formatter<formatted_type, char>().native_formatter::specs_)'
+ 2378 |     if FMT_CONSTEXPR20 (TYPE == type::char_type) check_char_specs(specs_);
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1687:10: note: in call to 'formatter<formatted_type, char>().parse(checker(this->str, arg_pack()).context_)'
+ 1687 |   return formatter<formatted_type, Char>().parse(ctx);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1738:42: note: in call to 'invoke_parse<char, char>(checker(this->str, arg_pack()).context_)'
+ 1738 |     if (id >= 0 && id < NUM_ARGS) return parse_funcs_[id](context_);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1636:11: note: in call to 'handler.on_format_specs(0, &"{:05}"[2], &"{:05}"[5])'
+ 1636 |   begin = handler.on_format_specs(arg_id, begin + 1, end);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1651:19: note: in call to 'parse_replacement_field<char, fmt::detail::format_string_checker<char, 1, 0, false> &>(&"{:05}"[1], &"{:05}"[5], checker(this->str, arg_pack()))'
+ 1651 |       begin = p = parse_replacement_field(p - 1, end, handler);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2722:7: note: in call to 'parse_format_string<char, fmt::detail::format_string_checker<char, 1, 0, false>>({&"{:05}"[0], 5}, checker(this->str, arg_pack()))'
+ 2722 |       parse_format_string<char>(str, checker(str, arg_pack()));
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_zero_on_char.cpp:5:23: note: in call to 'fstring<6UL>("{:05}")'
+    5 |   NEG_EXPECT_REJECTED("{:05}", 'c');
+      |                       ^~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:653:27: note: declared here
+  653 | FMT_NORETURN FMT_API void report_error(const char* message);
+      |                           ^
+1 error generated.

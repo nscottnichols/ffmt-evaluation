@@ -1,0 +1,5 @@
+clang++: error: argument unused during compilation: '--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux' [-Werror,-Wunused-command-line-argument]
+clang++: error: argument unused during compilation: '--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux' [-Werror,-Wunused-command-line-argument]
+make: *** [Makefile:257: build/omp_main_omp.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Makefile:257: build/omp_integers.o] Error 1

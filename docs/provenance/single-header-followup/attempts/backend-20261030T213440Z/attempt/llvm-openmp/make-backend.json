@@ -1,0 +1,29 @@
+{
+  "name": "make-backend",
+  "argv": [
+    "make",
+    "--no-print-directory",
+    "-j2",
+    "CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++",
+    "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux --cuda-path=/soft/compilers/cuda/cuda-12.9.1 -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument",
+    "USE_OMP_CLANG=1",
+    "OFFLOAD_ARCH=sm_80",
+    "OMP_OPT=-O0",
+    "compile-omp"
+  ],
+  "command": "make --no-print-directory -j2 CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt 'EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux --cuda-path=/soft/compilers/cuda/cuda-12.9.1 -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument' USE_OMP_CLANG=1 OFFLOAD_ARCH=sm_80 OMP_OPT=-O0 compile-omp",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/llvm-openmp",
+  "started_utc": "2026-10-30T21:39:51.799060+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 52.858,
+  "stdout": {
+    "path": "llvm-openmp/make-backend.stdout",
+    "sha256": "d96b401e21d33fc0ed0592f8c9c0ce56d3093e0cc50d57de9e2bdad013339f29"
+  },
+  "stderr": {
+    "path": "llvm-openmp/make-backend.stderr",
+    "sha256": "8e7f89fec7b090a123a97ae7fd58d8a6b418bd33bbccfe5dbf46b9d7a2c6d5dc"
+  }
+}

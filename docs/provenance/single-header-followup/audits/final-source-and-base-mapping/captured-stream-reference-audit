@@ -1,0 +1,1702 @@
+{
+  "schema_version": 1,
+  "captures_checked": 16,
+  "inventory_records": 1151,
+  "raw_stream_records": 942,
+  "referenced_streams_verified": 282,
+  "issues": [],
+  "references": [
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/compiler-version.json",
+      "reference": "cuda-clang/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/compiler-version.json",
+      "reference": "cuda-clang/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/make-backend.json",
+      "reference": "cuda-clang/make-backend.stdout",
+      "sha256": "e4485d89f329218b6741770cfd5c3a9683ebceca3fd0e088f89a146156930634"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/make-backend.json",
+      "reference": "cuda-clang/make-backend.stderr",
+      "sha256": "0d4d447f88f4b06f1368c7d28b3d311414114927b6dc39c1b3b627f5854b4874"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/make-backend.stdout",
+      "sha256": "e4485d89f329218b6741770cfd5c3a9683ebceca3fd0e088f89a146156930634"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/make-backend.stderr",
+      "sha256": "0d4d447f88f4b06f1368c7d28b3d311414114927b6dc39c1b3b627f5854b4874"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/compiler-version.json",
+      "reference": "hip/compiler-version.stdout",
+      "sha256": "1ea4b187ec6c59cbe6aa5c7bee782c22e5acf4046363de0c26d15029dc5db021"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/compiler-version.json",
+      "reference": "hip/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/make-backend.json",
+      "reference": "hip/make-backend.stdout",
+      "sha256": "23b8b54d7a4e864feca7f4a7e014d7c50901b0484e187dd063f06618d2fba2d5"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/make-backend.json",
+      "reference": "hip/make-backend.stderr",
+      "sha256": "e6b80c7527aaf5daca60fa8910f7a0e45f5d677ec08c094161140918ae8a5320"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/compiler-version.stdout",
+      "sha256": "1ea4b187ec6c59cbe6aa5c7bee782c22e5acf4046363de0c26d15029dc5db021"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/make-backend.stdout",
+      "sha256": "23b8b54d7a4e864feca7f4a7e014d7c50901b0484e187dd063f06618d2fba2d5"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/make-backend.stderr",
+      "sha256": "e6b80c7527aaf5daca60fa8910f7a0e45f5d677ec08c094161140918ae8a5320"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/compiler-version.json",
+      "reference": "intel-openmp/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/compiler-version.json",
+      "reference": "intel-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/make-backend.json",
+      "reference": "intel-openmp/make-backend.stdout",
+      "sha256": "cdaab8a61071d3142ec2ff0c4eeae3cda48ab7af87cbe3b098ab0c06e59d3a53"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/make-backend.json",
+      "reference": "intel-openmp/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/make-backend.stdout",
+      "sha256": "cdaab8a61071d3142ec2ff0c4eeae3cda48ab7af87cbe3b098ab0c06e59d3a53"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/compiler-version.json",
+      "reference": "intel-sycl/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/compiler-version.json",
+      "reference": "intel-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/make-backend.json",
+      "reference": "intel-sycl/make-backend.stdout",
+      "sha256": "c344d31eb82ea8d45be9d23164d9411efe784c54679bc76dc24d776536c229df"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/make-backend.json",
+      "reference": "intel-sycl/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/make-backend.stdout",
+      "sha256": "c344d31eb82ea8d45be9d23164d9411efe784c54679bc76dc24d776536c229df"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/compiler-version.json",
+      "reference": "llvm-openmp/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/compiler-version.json",
+      "reference": "llvm-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/make-backend.json",
+      "reference": "llvm-openmp/make-backend.stdout",
+      "sha256": "c0bd2da48bb287146aabef9a1366fd171042f8f3d696fcc8293bac54b7a7ed00"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/make-backend.json",
+      "reference": "llvm-openmp/make-backend.stderr",
+      "sha256": "08a5bbd408c293b2a1498722a960da6cbccc788717634a7e48960e63a073ddc3"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/make-backend.stdout",
+      "sha256": "c0bd2da48bb287146aabef9a1366fd171042f8f3d696fcc8293bac54b7a7ed00"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/make-backend.stderr",
+      "sha256": "08a5bbd408c293b2a1498722a960da6cbccc788717634a7e48960e63a073ddc3"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/compiler-version.json",
+      "reference": "local-sycl/compiler-version.stdout",
+      "sha256": "33fb568bedb56c4951c7a03d1103e198233172e7f93eb39fa952462cd20a235f"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/compiler-version.json",
+      "reference": "local-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/make-backend.json",
+      "reference": "local-sycl/make-backend.stdout",
+      "sha256": "3e55bd521194fa3208b63078719e2d7a37f48424de41b3d0f568dfa2658d6286"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/make-backend.json",
+      "reference": "local-sycl/make-backend.stderr",
+      "sha256": "0e521766629b56bb8e9b40e74857e5aadf16cc522fd3ddc5898777558ca6f067"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/compiler-version.stdout",
+      "sha256": "33fb568bedb56c4951c7a03d1103e198233172e7f93eb39fa952462cd20a235f"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/make-backend.stdout",
+      "sha256": "3e55bd521194fa3208b63078719e2d7a37f48424de41b3d0f568dfa2658d6286"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/make-backend.stderr",
+      "sha256": "0e521766629b56bb8e9b40e74857e5aadf16cc522fd3ddc5898777558ca6f067"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-buffer_path.json",
+      "reference": "nvcc/compile-buffer_path.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-buffer_path.json",
+      "reference": "nvcc/compile-buffer_path.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-floats.json",
+      "reference": "nvcc/compile-floats.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-floats.json",
+      "reference": "nvcc/compile-floats.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-formatter.json",
+      "reference": "nvcc/compile-formatter.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-formatter.json",
+      "reference": "nvcc/compile-formatter.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-integers.json",
+      "reference": "nvcc/compile-integers.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-integers.json",
+      "reference": "nvcc/compile-integers.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-layout.json",
+      "reference": "nvcc/compile-layout.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-layout.json",
+      "reference": "nvcc/compile-layout.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-misc.json",
+      "reference": "nvcc/compile-misc.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-misc.json",
+      "reference": "nvcc/compile-misc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-strings.json",
+      "reference": "nvcc/compile-strings.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compile-strings.json",
+      "reference": "nvcc/compile-strings.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compiler-version.json",
+      "reference": "nvcc/compiler-version.stdout",
+      "sha256": "77d7ef23109cd2437a8b9cf5efbc4e89996b816276077edb86143ee04f6d5269"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/compiler-version.json",
+      "reference": "nvcc/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compiler-version.stdout",
+      "sha256": "77d7ef23109cd2437a8b9cf5efbc4e89996b816276077edb86143ee04f6d5269"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-integers.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-integers.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-floats.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-floats.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-strings.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-strings.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-layout.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-layout.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-misc.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-misc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-formatter.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-formatter.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-buffer_path.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213049Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-buffer_path.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/compiler-version.json",
+      "reference": "cuda-clang/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/compiler-version.json",
+      "reference": "cuda-clang/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/header-only-device-consumer.json",
+      "reference": "cuda-clang/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/header-only-device-consumer.json",
+      "reference": "cuda-clang/header-only-device-consumer.stderr",
+      "sha256": "4c867886ddb77c6db7803f23a155589b44ac01174d8958014aa9b07e256666f0"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/make-backend.json",
+      "reference": "cuda-clang/make-backend.stdout",
+      "sha256": "50f7b09239e823db8275cef294bae9588db2155b6bbdb7011720d2fef683212d"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/make-backend.json",
+      "reference": "cuda-clang/make-backend.stderr",
+      "sha256": "f20038ba50814665a55c722e33c36efb6c27fe218835e4e55828a01411e1ac56"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/make-backend.stdout",
+      "sha256": "50f7b09239e823db8275cef294bae9588db2155b6bbdb7011720d2fef683212d"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/make-backend.stderr",
+      "sha256": "f20038ba50814665a55c722e33c36efb6c27fe218835e4e55828a01411e1ac56"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/cuda-clang/manifest.json",
+      "reference": "cuda-clang/header-only-device-consumer.stderr",
+      "sha256": "4c867886ddb77c6db7803f23a155589b44ac01174d8958014aa9b07e256666f0"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/compiler-version.json",
+      "reference": "hip/compiler-version.stdout",
+      "sha256": "1ea4b187ec6c59cbe6aa5c7bee782c22e5acf4046363de0c26d15029dc5db021"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/compiler-version.json",
+      "reference": "hip/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/header-only-device-consumer.json",
+      "reference": "hip/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/header-only-device-consumer.json",
+      "reference": "hip/header-only-device-consumer.stderr",
+      "sha256": "0a4e074ebb4afca1b3c87e3773ea8bccc77bc3c1b5bf478edf3024ecf376cb14"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/make-backend.json",
+      "reference": "hip/make-backend.stdout",
+      "sha256": "157c4ea6f2a461b78e6ec5bc5303a86f6959e3bd0a1229261c6381f52a325b70"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/make-backend.json",
+      "reference": "hip/make-backend.stderr",
+      "sha256": "d1f2a076cc10f84f5b08ac0d66b16d552ca7c01b7b5dc4f0a3efe98ec9813b98"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/compiler-version.stdout",
+      "sha256": "1ea4b187ec6c59cbe6aa5c7bee782c22e5acf4046363de0c26d15029dc5db021"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/make-backend.stdout",
+      "sha256": "157c4ea6f2a461b78e6ec5bc5303a86f6959e3bd0a1229261c6381f52a325b70"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/make-backend.stderr",
+      "sha256": "d1f2a076cc10f84f5b08ac0d66b16d552ca7c01b7b5dc4f0a3efe98ec9813b98"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/hip/manifest.json",
+      "reference": "hip/header-only-device-consumer.stderr",
+      "sha256": "0a4e074ebb4afca1b3c87e3773ea8bccc77bc3c1b5bf478edf3024ecf376cb14"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/compiler-version.json",
+      "reference": "intel-openmp/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/compiler-version.json",
+      "reference": "intel-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/header-only-device-consumer.json",
+      "reference": "intel-openmp/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/header-only-device-consumer.json",
+      "reference": "intel-openmp/header-only-device-consumer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/make-backend.json",
+      "reference": "intel-openmp/make-backend.stdout",
+      "sha256": "cdaab8a61071d3142ec2ff0c4eeae3cda48ab7af87cbe3b098ab0c06e59d3a53"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/make-backend.json",
+      "reference": "intel-openmp/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/make-backend.stdout",
+      "sha256": "cdaab8a61071d3142ec2ff0c4eeae3cda48ab7af87cbe3b098ab0c06e59d3a53"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-openmp/manifest.json",
+      "reference": "intel-openmp/header-only-device-consumer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/compiler-version.json",
+      "reference": "intel-sycl/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/compiler-version.json",
+      "reference": "intel-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/header-only-device-consumer.json",
+      "reference": "intel-sycl/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/header-only-device-consumer.json",
+      "reference": "intel-sycl/header-only-device-consumer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/make-backend.json",
+      "reference": "intel-sycl/make-backend.stdout",
+      "sha256": "c344d31eb82ea8d45be9d23164d9411efe784c54679bc76dc24d776536c229df"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/make-backend.json",
+      "reference": "intel-sycl/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/compiler-version.stdout",
+      "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/make-backend.stdout",
+      "sha256": "c344d31eb82ea8d45be9d23164d9411efe784c54679bc76dc24d776536c229df"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/intel-sycl/manifest.json",
+      "reference": "intel-sycl/header-only-device-consumer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/compiler-version.json",
+      "reference": "llvm-openmp/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/compiler-version.json",
+      "reference": "llvm-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/header-only-device-consumer.json",
+      "reference": "llvm-openmp/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/header-only-device-consumer.json",
+      "reference": "llvm-openmp/header-only-device-consumer.stderr",
+      "sha256": "bdf3171d1005291dc31c3688ba3328c35ef343199fe9561b0a0ff7495df539f4"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/make-backend.json",
+      "reference": "llvm-openmp/make-backend.stdout",
+      "sha256": "d96b401e21d33fc0ed0592f8c9c0ce56d3093e0cc50d57de9e2bdad013339f29"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/make-backend.json",
+      "reference": "llvm-openmp/make-backend.stderr",
+      "sha256": "8e7f89fec7b090a123a97ae7fd58d8a6b418bd33bbccfe5dbf46b9d7a2c6d5dc"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/compiler-version.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/make-backend.stdout",
+      "sha256": "d96b401e21d33fc0ed0592f8c9c0ce56d3093e0cc50d57de9e2bdad013339f29"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/make-backend.stderr",
+      "sha256": "8e7f89fec7b090a123a97ae7fd58d8a6b418bd33bbccfe5dbf46b9d7a2c6d5dc"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/llvm-openmp/manifest.json",
+      "reference": "llvm-openmp/header-only-device-consumer.stderr",
+      "sha256": "bdf3171d1005291dc31c3688ba3328c35ef343199fe9561b0a0ff7495df539f4"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/compiler-version.json",
+      "reference": "local-sycl/compiler-version.stdout",
+      "sha256": "33fb568bedb56c4951c7a03d1103e198233172e7f93eb39fa952462cd20a235f"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/compiler-version.json",
+      "reference": "local-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/header-only-device-consumer.json",
+      "reference": "local-sycl/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/header-only-device-consumer.json",
+      "reference": "local-sycl/header-only-device-consumer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/make-backend.json",
+      "reference": "local-sycl/make-backend.stdout",
+      "sha256": "d7e5a385643ad440641ae0fecd81f57e4e1db49d64a54f5e1bfa59dc7c4cd9b5"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/make-backend.json",
+      "reference": "local-sycl/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/compiler-version.stdout",
+      "sha256": "33fb568bedb56c4951c7a03d1103e198233172e7f93eb39fa952462cd20a235f"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/make-backend.stdout",
+      "sha256": "d7e5a385643ad440641ae0fecd81f57e4e1db49d64a54f5e1bfa59dc7c4cd9b5"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/make-backend.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/local-sycl/manifest.json",
+      "reference": "local-sycl/header-only-device-consumer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-buffer_path.json",
+      "reference": "nvcc/compile-buffer_path.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-buffer_path.json",
+      "reference": "nvcc/compile-buffer_path.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-floats.json",
+      "reference": "nvcc/compile-floats.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-floats.json",
+      "reference": "nvcc/compile-floats.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-formatter.json",
+      "reference": "nvcc/compile-formatter.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-formatter.json",
+      "reference": "nvcc/compile-formatter.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-integers.json",
+      "reference": "nvcc/compile-integers.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-integers.json",
+      "reference": "nvcc/compile-integers.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-layout.json",
+      "reference": "nvcc/compile-layout.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-layout.json",
+      "reference": "nvcc/compile-layout.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-misc.json",
+      "reference": "nvcc/compile-misc.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-misc.json",
+      "reference": "nvcc/compile-misc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-strings.json",
+      "reference": "nvcc/compile-strings.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compile-strings.json",
+      "reference": "nvcc/compile-strings.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compiler-version.json",
+      "reference": "nvcc/compiler-version.stdout",
+      "sha256": "77d7ef23109cd2437a8b9cf5efbc4e89996b816276077edb86143ee04f6d5269"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/compiler-version.json",
+      "reference": "nvcc/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/header-only-device-consumer.json",
+      "reference": "nvcc/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/header-only-device-consumer.json",
+      "reference": "nvcc/header-only-device-consumer.stderr",
+      "sha256": "37dedfddbf13ed873b074c71b9f4e0c639483b70eb925302db29901df2727045"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compiler-version.stdout",
+      "sha256": "77d7ef23109cd2437a8b9cf5efbc4e89996b816276077edb86143ee04f6d5269"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-integers.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-integers.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-floats.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-floats.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-strings.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-strings.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-layout.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-layout.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-misc.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-misc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-formatter.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-formatter.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-buffer_path.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/compile-buffer_path.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/header-only-device-consumer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/backend-20261030T213440Z",
+      "manifest": "attempt/nvcc/manifest.json",
+      "reference": "nvcc/header-only-device-consumer.stderr",
+      "sha256": "37dedfddbf13ed873b074c71b9f4e0c639483b70eb925302db29901df2727045"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/checkout.stdout",
+      "sha256": "f2d0c54c78c3a3c74c5ccdf75c43b35447cb9d3bd61d708b3abad3513f8c85b1"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/checkout.stderr",
+      "sha256": "afe898f20d5942cd4a30abd00e195eafed67f3da159b52a8a9d0bdc340bec566"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/compiler.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/compiler.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/make-portable.stdout",
+      "sha256": "e0d5973e3796bbb48be5d428b8e961c68017392ee60ff2bb1aa8105b5d747a5d"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/make-portable.stderr",
+      "sha256": "9931f64f99a7775b8da14488c2dbdc519f6134cde72cb888678165ddbf7c3f94"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/cmake-configure.stdout",
+      "sha256": "ca2e8471bc32b1538a1e7a5d66e7c6344e331d5fea87c6bb58bcb54167ea4f29"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/cmake-configure.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/cmake-build.stdout",
+      "sha256": "2da24597f5e26a60f0440469b738edbb6ef608c27e3342f6281843125128819f"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/cmake-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/ctest.stdout",
+      "sha256": "ea5311ed4237a4e0638211e6275746d647d0a3a2f37940c24f1d3c2648e815dd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/ctest.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/install.stdout",
+      "sha256": "6288be2abefd1129f612ca218d17497fa6e92a72966894f31fc36fec1b0588e1"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/install.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/consumer-configure.stdout",
+      "sha256": "ce809a394a8e9c1d1740dc288b81b9c3f62febb035bb15a248ea9a217d8b1089"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/consumer-configure.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/consumer-build.stdout",
+      "sha256": "a9dfd9c392d7c52f49d6dff859adb278ca33fe22050e4594f3dfc042780f9ee7"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/consumer-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/consumer-run.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/clang-1012525",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/consumer-run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-clang-1012530",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/checkout.stdout",
+      "sha256": "06167442213f2f288be80e5684454037432dd3fc2118f5c4149cd4db936638f7"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-clang-1012530",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/checkout.stderr",
+      "sha256": "ac3afd4709f386535a5333aafc2324c7bf6995c69d5c7e40ce0158b0a270bf35"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-clang-1012530",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/compiler.stdout",
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-clang-1012530",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/compiler.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-clang-1012530",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/make-portable.stdout",
+      "sha256": "4fd7cdd5a78c40d3a556cf8e7869b51a3f47990d4676a6513d363bfc7a74dbc4"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-clang-1012530",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/make-portable.stderr",
+      "sha256": "ed7ae208412d5cc19b1cd8ea3e2f91487195be37a225fb986a47c66ebc53ccb9"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/checkout.stdout",
+      "sha256": "06167442213f2f288be80e5684454037432dd3fc2118f5c4149cd4db936638f7"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/checkout.stderr",
+      "sha256": "9ccee6fa99fc6ae9f74e0361661a379bf96c6946ea38cc403d5f9efc5f7a10bb"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/compiler.stdout",
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/compiler.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/make-portable.stdout",
+      "sha256": "afbb634c6ec0caf326e749b515402d5828f2ae198b108a2f6908d0e4d9727fd0"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/make-portable.stderr",
+      "sha256": "c8b811a4d2d40d63e2b0f57728e403d19601a364deeea595f1b99b9d5cf91e4a"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke.stdout",
+      "sha256": "29103959f5dfca18ed990fe4af88a8daf1e59e4f0c2c6664c7dc3ae9f4d8f802"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/cases-0-1-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/cases-0-1-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/literal.stderr",
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/literal.stdout",
+      "sha256": "831fdd374094b747120bebee8a234630c7dec952cb56a2672206caa2cec7dfad"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/cases-0-1-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/cases-0-1-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/long-padding.stderr",
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/long-padding.stdout",
+      "sha256": "964f4a3632bacb042011a76e871722a3c3f436fcebcecdd74aee60703dcac8a6"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/compiler-version.stdout",
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/control-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/control-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/control-run.stderr",
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/control-run.stdout",
+      "sha256": "fd55d107298af4befdc0f39c71ca8d578862b7b83b637abdf45b7766fc8fa7a3"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/numeric-memory-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/numeric-memory-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/numeric-memory-run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/host-buffer-O2/numeric-memory-run.stdout",
+      "sha256": "4fb6c98f722dba85007a6037a9be7a6836d3463447856105314076d4275bc1b6"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/fmt-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/fmt-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/oracle-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/oracle-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/numeric-memory-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/numeric-memory-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/numeric-memory-run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/final-gcc-1012531",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/evaluation-smoke/oracle/numeric-memory-run.stdout",
+      "sha256": "4fb6c98f722dba85007a6037a9be7a6836d3463447856105314076d4275bc1b6"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/checkout.stdout",
+      "sha256": "f2d0c54c78c3a3c74c5ccdf75c43b35447cb9d3bd61d708b3abad3513f8c85b1"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/checkout.stderr",
+      "sha256": "0064ceacd9df969b9ff9e70a5aca2b2c0c1f49c1dce6d18effe7b7e64bf4dbbd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/compiler.stdout",
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/compiler.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/make-portable.stdout",
+      "sha256": "3dd54a38aeb8d4412f6d3f11da8e69b48b12f86c3bcaea980ed1b728f1435379"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/make-portable.stderr",
+      "sha256": "2f374a1e504c24aa27f9abce2199e04fa1d000cd5a18fdbbd570b80d8f526f5c"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke.stdout",
+      "sha256": "f5ff3f80ebc307a73ba00928097f115fdccf8e4a87b341e78b0defa544f44fd0"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/cases-0-1-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/cases-0-1-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/literal.stderr",
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/literal.stdout",
+      "sha256": "831fdd374094b747120bebee8a234630c7dec952cb56a2672206caa2cec7dfad"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/cases-0-1-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/cases-0-1-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/long-padding.stderr",
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/long-padding.stdout",
+      "sha256": "964f4a3632bacb042011a76e871722a3c3f436fcebcecdd74aee60703dcac8a6"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/compiler-version.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/compiler-version.stdout",
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-run.stderr",
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-run.stdout",
+      "sha256": "fd55d107298af4befdc0f39c71ca8d578862b7b83b637abdf45b7766fc8fa7a3"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-run.stdout",
+      "sha256": "4fb6c98f722dba85007a6037a9be7a6836d3463447856105314076d4275bc1b6"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/fmt-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/fmt-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/oracle-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/oracle-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "capture": "docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "manifest": "validation/evaluation-smoke/manifest.json",
+      "reference": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-run.stdout",
+      "sha256": "4fb6c98f722dba85007a6037a9be7a6836d3463447856105314076d4275bc1b6"
+    }
+  ]
+}

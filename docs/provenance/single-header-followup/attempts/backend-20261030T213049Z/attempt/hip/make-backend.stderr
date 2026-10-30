@@ -1,0 +1,69 @@
+In file included from test/test_integers.cpp:4:
+In file included from test/test_select_body.inc:10:
+In file included from test/test_body_cuda.inc:1:
+In file included from test/capture.hpp:20:
+include/ffmt/base.hpp:3698:9: error: reference to __host__ function 'printf' in __host__ __device__ function
+ 3698 |     if (FFMT_DETAIL_PRINTF(FFMT_DETAIL_EIGHT_FORMAT,
+      |         ^
+include/ffmt/base.hpp:3616:35: note: expanded from macro 'FFMT_DETAIL_PRINTF'
+ 3616 | #define FFMT_DETAIL_PRINTF(...) ::printf(__VA_ARGS__)
+      |                                   ^
+include/ffmt/base.hpp:3733:11: note: called by 'flush'
+ 3733 |       if (emit_chunk(data, used))
+      |           ^
+include/ffmt/base.hpp:3743:7: note: called by 'byte'
+ 3743 |       flush();
+      |       ^
+include/ffmt/base.hpp:3750:7: note: called by 'push'
+ 3750 |       byte(static_cast<char>(c));
+      |       ^
+include/ffmt/base.hpp:1075:11: note: called by 'operator='
+ 1075 |     sink->push(c);
+      |           ^
+include/ffmt/base.hpp:995:9: note: called by 'put<ffmt::basic_format_context<ffmt::detail::sink_iterator<ffmt::detail::stdout_sink<char>>, char, std::tuple<int &>>>'
+  995 |   *it++ = c;
+      |         ^
+include/ffmt/base.hpp:1347:7: note: called by 'literal'
+ 1347 |       put(ctx, c);
+      |       ^
+include/ffmt/base.hpp:608:14: note: called by 'walk_format<char, ffmt::detail::execution_handler<ffmt::basic_format_context<ffmt::detail::sink_iterator<ffmt::detail::stdout_sink<char>>, char, std::tuple<int &>>, std::tuple<int &>> &>'
+  608 |       handle.literal(*p++);
+      |              ^
+include/ffmt/base.hpp:1388:16: note: called by 'run_format<ffmt::detail::stdout_sink<char>, char, int>'
+ 1388 |   auto error = walk_format(text, handler);
+      |                ^
+include/ffmt/base.hpp:3808:11: note: called by 'try_print<char, int>'
+ 3808 |   detail::run_format(sink, pattern.str, static_cast<Args &&>(args)...);
+      |           ^
+include/ffmt/base.hpp:3825:10: note: called by 'try_print<int>'
+ 3825 |   return try_print(runtime(pattern.str), static_cast<Args &&>(args)...);
+      |          ^
+include/ffmt/base.hpp:3852:9: note: called by 'print<int>'
+ 3852 |   (void)try_print(pattern, static_cast<Args &&>(args)...);
+      |         ^
+test/test_integers.cpp:7:5: note: called by 'operator()'
+    7 | RUN(PRINT("{}\n", 42));
+      |     ^
+test/test_body_cuda.inc:50:29: note: expanded from macro 'PRINT'
+   50 | #define PRINT(fmt_str, ...) FFMT_PRINT(fmt_str __VA_OPT__(,) __VA_ARGS__)
+      |                             ^
+include/ffmt/base.hpp:3901:41: note: expanded from macro 'FFMT_PRINT'
+ 3901 | #define FFMT_PRINT(fmtstr, ...) ::ffmt::print(fmtstr __VA_OPT__(, ) __VA_ARGS__)
+      |                                         ^
+test/test_body_cuda.inc:39:41: note: called by '_ffmt_run_kernel<(lambda at test/test_integers.cpp:7:1)>'
+   39 | __global__ void _ffmt_run_kernel(F f) { f(); }
+      |                                         ^
+In file included from test/test_integers.cpp:4:
+In file included from test/test_select_body.inc:10:
+In file included from test/test_body_cuda.inc:1:
+In file included from test/capture.hpp:20:
+include/ffmt/base.hpp:3709:9: error: reference to __host__ function 'printf' in __host__ __device__ function
+ 3709 |     if (FFMT_DETAIL_PRINTF(FFMT_DETAIL_CHAR_FORMAT,
+      |         ^
+include/ffmt/base.hpp:3616:35: note: expanded from macro 'FFMT_DETAIL_PRINTF'
+ 3616 | #define FFMT_DETAIL_PRINTF(...) ::printf(__VA_ARGS__)
+      |                                   ^
+2 errors generated when compiling for gfx90a.
+failed to execute:/soft/compilers/rocm/rocm-7.0.2/llvm/bin/clang++  --offload-arch=gfx90a -O3  -std=c++20 -Wall -Werror -fno-fast-math -Iinclude --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -x hip -DTEST_NO_MAIN -c test/test_integers.cpp -o "build/hip_integers.o"
+make: *** [Makefile:245: build/hip_integers.o] Error 1
+make: *** Waiting for unfinished jobs....

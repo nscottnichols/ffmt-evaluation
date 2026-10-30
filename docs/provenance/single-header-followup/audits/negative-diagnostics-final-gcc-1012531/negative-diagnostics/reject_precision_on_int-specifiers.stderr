@@ -1,0 +1,11 @@
+In file included from /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/source/test/negative/negative.hpp:22,
+                 from /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/source/test/negative/reject_precision_on_int.cpp:3:
+include/ffmt/base.hpp: In function 'int main()':
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/source/test/negative/reject_precision_on_int.cpp:5:3:   in 'constexpr' expansion of 'ffmt::basic_format_string<char, int>("{:.3}")'
+include/ffmt/base.hpp:1249:44:   in 'constexpr' expansion of 'ffmt::detail::validate_literal<char, int>(((ffmt::basic_format_string<char, int>*)this)->ffmt::basic_format_string<char, int>::str)'
+include/ffmt/base.hpp:1241:41: error: call to non-'constexpr' function 'void ffmt::detail::consteval_error::invalid_format_spec()'
+ 1241 |     consteval_error::invalid_format_spec();
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+include/ffmt/base.hpp:1235:33: note: 'void ffmt::detail::consteval_error::invalid_format_spec()' declared here
+ 1235 | [[noreturn]] FMT_HD inline void invalid_format_spec() { __builtin_trap(); }
+      |                                 ^~~~~~~~~~~~~~~~~~~

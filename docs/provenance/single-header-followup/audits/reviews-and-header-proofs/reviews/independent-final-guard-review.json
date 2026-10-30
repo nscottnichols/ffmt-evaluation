@@ -1,0 +1,48 @@
+{
+  "reviewer": "single_header (independent of harness and build authors)",
+  "revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+  "infrastructure_tests": {
+    "command": [
+      "/home/nnichols/.local/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "test",
+      "-p",
+      "test_infrastructure.py",
+      "-v"
+    ],
+    "passed": 16,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "reviewed_changes": [
+    {
+      "path": "test/test_infrastructure.py",
+      "assessment": "Seven added contracts exercise the real Make rules using isolated temporary registration entries, timestamp ordering and executable shell fixtures. They preserve missing-source failure, registration/header invalidation, explicit C++23 selection, and mandatory versus optional exit 77."
+    },
+    {
+      "path": "Makefile",
+      "assessment": "The CUDA route now passes the selected CUDA_PATH to Clang with --cuda-path, in addition to the existing runtime link search path. Other backend flags are unchanged."
+    },
+    {
+      "path": "test/capture.hpp",
+      "assessment": "SYCL queue construction explicitly selects a GPU and rethrows asynchronous exceptions. Stdout capture restores the descriptor and closes its temporary stream before propagating failures."
+    },
+    {
+      "path": "test/test_body.inc and test/test_main_sycl.cpp",
+      "assessment": "GPU fallback is rejected and submitted work is waited on with wait_and_throw. Exception paths return failure with a diagnostic."
+    },
+    {
+      "path": "test/test_body_omp.inc",
+      "assessment": "An explicit mapped target preflight rejects execution on the initial device before comparing output. Host fallback can no longer produce a misleading accelerator success."
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "This supplement reviews source and runs compiler-free infrastructure checks. The allocated backend job records actual compiler results separately.",
+    "No hardware execution is implied by this review."
+  ]
+}

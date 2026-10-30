@@ -1,0 +1,28 @@
+{
+  "name": "make-backend",
+  "argv": [
+    "make",
+    "--no-print-directory",
+    "-j2",
+    "CXX=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++",
+    "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "BACKEND_FLAGS=-fsycl -fsycl-targets=spir64",
+    "OPT_LEVELS=O2",
+    "build"
+  ],
+  "command": "make --no-print-directory -j2 CXX=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux 'BACKEND_FLAGS=-fsycl -fsycl-targets=spir64' OPT_LEVELS=O2 build",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/local-sycl",
+  "started_utc": "2026-10-30T21:40:55.943018+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 78.681,
+  "stdout": {
+    "path": "local-sycl/make-backend.stdout",
+    "sha256": "d7e5a385643ad440641ae0fecd81f57e4e1db49d64a54f5e1bfa59dc7c4cd9b5"
+  },
+  "stderr": {
+    "path": "local-sycl/make-backend.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

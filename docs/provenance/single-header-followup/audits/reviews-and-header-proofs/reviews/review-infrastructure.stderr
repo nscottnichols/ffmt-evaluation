@@ -1,0 +1,14 @@
+test_empty_coverage_is_explicit_instead_of_perfect (test_infrastructure.CoverageMetricsTests.test_empty_coverage_is_explicit_instead_of_perfect) ... ok
+test_file_identity_and_real_executable_lines_are_preserved (test_infrastructure.CoverageMetricsTests.test_file_identity_and_real_executable_lines_are_preserved) ... ok
+test_acceptance_is_a_failure (test_infrastructure.NegativeEvidenceTests.test_acceptance_is_a_failure) ... ok
+test_format_rejection_is_recognized (test_infrastructure.NegativeEvidenceTests.test_format_rejection_is_recognized) ... ok
+test_missing_header_and_compiler_crashes_are_not_rejections (test_infrastructure.NegativeEvidenceTests.test_missing_header_and_compiler_crashes_are_not_rejections) ... ok
+test_unrelated_error_is_not_format_rejection (test_infrastructure.NegativeEvidenceTests.test_unrelated_error_is_not_format_rejection) ... ok
+test_clean_matching_checkout_is_accepted (test_infrastructure.OraclePinTests.test_clean_matching_checkout_is_accepted) ... ok
+test_local_changes_are_preserved_and_rejected (test_infrastructure.OraclePinTests.test_local_changes_are_preserved_and_rejected) ... ok
+test_unavailable_revision_fails_without_checkout (test_infrastructure.OraclePinTests.test_unavailable_revision_fails_without_checkout) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.173s
+
+OK

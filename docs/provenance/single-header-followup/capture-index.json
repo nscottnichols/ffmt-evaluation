@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-30T21:56:28.720563+00:00",
+  "freeze_policy": "Append-only frozen captures. Existing originals and captures are never overwritten. New evidence requires a new capture/index supplement.",
+  "capture_status_policy": "pass/failure on CPU captures repeats the compatible original validation manifest. inputs_only describes packaging of frozen backend/audit inputs; it does not relabel their recorded pass/failure/complete status. Qualification and limitations follow original manifests and explicit backend classification.",
+  "source_library_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497",
+  "evaluation_source_commit": "596c67243e5f9dc1eb886ef578c593e4acd0d955",
+  "evaluation_merge_commit": "0d347a5d5436bf68d6ab1e54747d597852a08c3d",
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "capture_count": 22,
+  "inventory_records": 1302,
+  "raw_stream_records": 1052,
+  "backend_classification": {
+    "summary": "audits/backend-qualification-classification/backend-validation-summary.json",
+    "limitations": "Compilation/link checks only. No accelerator execution. Invalid early NVCC language mode and pre-existing optimized gfx90a failure remain explicit."
+  },
+  "integrity_audit": "audits/final-captured-stream-integrity/audit",
+  "capture_integrity": {
+    "status": "pass",
+    "checked_before_final_audit_capture": 21,
+    "inventory_records_checked": 1301,
+    "manifest_stream_references_checked": 330,
+    "raw_stream_records_checked": 1052,
+    "issues": 0
+  },
+  "captures": [
+    {
+      "path": "attempts/backend-20261030T212917Z",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "448f711616a847f645207e317d135d7b252201523b0cf15f176b94da9b316408",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 11,
+      "visible_files": 11,
+      "archived_files": 0,
+      "raw_stream_records": 5,
+      "recorded_manifest": "attempts/backend-20261030T212917Z/attempt/launch-failure.json",
+      "recorded_status": "infrastructure_failure",
+      "job_id": "1012524",
+      "source_revisions": {
+        "source_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410"
+      }
+    },
+    {
+      "path": "attempts/backend-20261030T213049Z",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "7fae9518913cd2f94c48028bbbc4eab7a32d70813f033a2edd3d048a250eaf7e",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 77,
+      "visible_files": 77,
+      "archived_files": 0,
+      "raw_stream_records": 43,
+      "recorded_manifest": "attempts/backend-20261030T213049Z/attempt/manifest.json",
+      "recorded_status": "failure",
+      "job_id": "1012527",
+      "source_revisions": {
+        "source_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410"
+      },
+      "classification_note": "Original failure/mixed route statuses retained. NVCC entries without explicit CUDA language are ineligible device qualification; see backend classification sidecars."
+    },
+    {
+      "path": "attempts/backend-20261030T213440Z",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "137317271add3bd32d85ef6df106f5840871e145199e07b2b0fd0a30b74d00e8",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 103,
+      "visible_files": 103,
+      "archived_files": 0,
+      "raw_stream_records": 59,
+      "recorded_manifest": "attempts/backend-20261030T213440Z/attempt/manifest.json",
+      "recorded_status": "failure",
+      "job_id": "1012528",
+      "source_revisions": {
+        "source_revision": "f3170f07df7774fb086849b077422e3330166aec"
+      },
+      "classification_note": "Original failure/mixed route statuses retained. NVCC entries without explicit CUDA language are ineligible device qualification; see backend classification sidecars."
+    },
+    {
+      "path": "attempts/backend-controls-20261030T213849Z",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "1727b85f0a61c96d55e5a25ab14eb12d15f04a8c8db8cd5108409b446b02091a",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 51,
+      "visible_files": 51,
+      "archived_files": 0,
+      "raw_stream_records": 29,
+      "recorded_manifest": "attempts/backend-controls-20261030T213849Z/attempt/manifest.json",
+      "recorded_status": "pass",
+      "job_id": "1012529",
+      "source_revisions": {
+        "source_revision": "f3170f07df7774fb086849b077422e3330166aec"
+      }
+    },
+    {
+      "path": "attempts/benchmark-smoke-20261030T215212Z",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "349abf44576a5dbb2cd5eb6b7c12adc7ca336feb3eb6b6a4b23be02d564b654b",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 75,
+      "visible_files": 75,
+      "archived_files": 0,
+      "raw_stream_records": 70,
+      "recorded_manifest": "attempts/benchmark-smoke-20261030T215212Z/attempt/manifest.json",
+      "recorded_status": "pass",
+      "job_id": "1012529",
+      "source_revisions": {
+        "source_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497"
+      },
+      "classification_note": "Relocation/linkage verification and12byte comparisons only; no performance campaign or timing conclusion."
+    },
+    {
+      "path": "attempts/clang-1012525",
+      "capture_status": "pass",
+      "capture_json_sha256": "db76dfffc8d28010c1deb35e5fcd07f80727c1aba7cc5614a49235ce9e303ded",
+      "archive_sha256": "66f3cc2455ff0b40de322a82a36aa4cf09e08875b87b175f32d7bac80baea310",
+      "files": 70,
+      "visible_files": 45,
+      "archived_files": 25,
+      "raw_stream_records": 23,
+      "recorded_manifest": "attempts/clang-1012525/validation/manifest.json",
+      "recorded_status": "pass",
+      "job_id": "1012525",
+      "source_revisions": {
+        "source_commit": "0111b73a1fc55b5ebbdade261b0c194d6c83a410"
+      }
+    },
+    {
+      "path": "attempts/failed-launch-1012522",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "a86b2d00cab920ea80907d0cce8e3049a54767dd5dd5f5cbc346e65aac58d021",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 5,
+      "visible_files": 5,
+      "archived_files": 0,
+      "raw_stream_records": 3,
+      "job_id": "1012522",
+      "recorded_status": "infrastructure_failure_before_validation",
+      "source_revisions": {},
+      "limitation": "Cobalt SSH launcher failed before any compiler or test execution; submission and raw scheduler diagnostics retained."
+    },
+    {
+      "path": "attempts/failed-launch-1012523",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "cff668139a34795c089c221e88c92983bcf18569a788b954c8d081bcae2d3504",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 5,
+      "visible_files": 5,
+      "archived_files": 0,
+      "raw_stream_records": 3,
+      "job_id": "1012523",
+      "recorded_status": "infrastructure_failure_before_validation",
+      "source_revisions": {},
+      "limitation": "Cobalt SSH launcher failed before any compiler or test execution; submission and raw scheduler diagnostics retained."
+    },
+    {
+      "path": "attempts/final-clang-1012530",
+      "capture_status": "pass",
+      "capture_json_sha256": "5a17e00eaa4e3545aecd896b2462511765c1fa1726e742c559411b6e7f36bbde",
+      "archive_sha256": "b368223407312140350f598017c1e37908a73c0a7edac2e89b8da17f44657972",
+      "files": 13,
+      "visible_files": 7,
+      "archived_files": 6,
+      "raw_stream_records": 9,
+      "recorded_manifest": "attempts/final-clang-1012530/validation/manifest.json",
+      "recorded_status": "pass",
+      "job_id": "1012530",
+      "source_revisions": {
+        "source_commit": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497"
+      }
+    },
+    {
+      "path": "attempts/final-gcc-1012531",
+      "capture_status": "pass",
+      "capture_json_sha256": "b991bc44247f2ce63da85f92478b25966fadcb5d019afbe2a8737d6fa7886364",
+      "archive_sha256": "cfb58fb45da1b049448e41b9dde24dd51902afc23c6b616910bbfb833b36b3f9",
+      "files": 49,
+      "visible_files": 8,
+      "archived_files": 41,
+      "raw_stream_records": 39,
+      "recorded_manifest": "attempts/final-gcc-1012531/validation/manifest.json",
+      "recorded_status": "pass",
+      "job_id": "1012531",
+      "source_revisions": {
+        "source_commit": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497"
+      }
+    },
+    {
+      "path": "attempts/gcc-1012526",
+      "capture_status": "pass",
+      "capture_json_sha256": "84b8e4e2f7868443f5556a86a04a1e019069ea6441e2f830674743f0242aaea7",
+      "archive_sha256": "ccc4399016da7bf02883786e82844c9c163dcae38440ad39125f290f09bbae8f",
+      "files": 49,
+      "visible_files": 8,
+      "archived_files": 41,
+      "raw_stream_records": 39,
+      "recorded_manifest": "attempts/gcc-1012526/validation/manifest.json",
+      "recorded_status": "pass",
+      "job_id": "1012526",
+      "source_revisions": {
+        "source_commit": "0111b73a1fc55b5ebbdade261b0c194d6c83a410"
+      }
+    },
+    {
+      "path": "attempts/hip-differential-20261030T214027Z",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "a44b240f8deb2e2eeeace4389647652040d6aecf735895c6b76f1557c4a383cf",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 53,
+      "visible_files": 53,
+      "archived_files": 0,
+      "raw_stream_records": 31,
+      "recorded_manifest": "attempts/hip-differential-20261030T214027Z/attempt/manifest.json",
+      "recorded_status": "complete",
+      "job_id": "1012532",
+      "source_revisions": {
+        "baseline_revision": "471627c31cd1e09a2d4587c0369ec662251f7356",
+        "final_revision": "f3170f07df7774fb086849b077422e3330166aec"
+      },
+      "classification_note": "Controlled baseline/final outcomes match, including the preserved optimized gfx90a failure. Complete describes completion, not universal success."
+    },
+    {
+      "path": "attempts/hip-full-o2-20261030T214415Z",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "e0187e427854cf5549a1926b1ccd05316208ba5a741b00b981fc213e0cd42d31",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 16,
+      "visible_files": 16,
+      "archived_files": 0,
+      "raw_stream_records": 11,
+      "recorded_manifest": "attempts/hip-full-o2-20261030T214415Z/attempt/manifest.json",
+      "recorded_status": "pass",
+      "job_id": "1012529",
+      "source_revisions": {
+        "source_revision": "f3170f07df7774fb086849b077422e3330166aec"
+      }
+    },
+    {
+      "path": "audits/backend-qualification-classification",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "5b0f2cdfedf6c9847ef4a2df6dd54bb121f4e498d89b1ddcc159fea043c192b4",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 5,
+      "visible_files": 5,
+      "archived_files": 0,
+      "raw_stream_records": 0
+    },
+    {
+      "path": "audits/final-captured-stream-integrity",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "ddefcae0e077face889ce457e78a35f73ca736c1b246e73774162941056b86ae",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 1,
+      "visible_files": 1,
+      "archived_files": 0,
+      "raw_stream_records": 0
+    },
+    {
+      "path": "audits/final-remote-provenance-code-596c672",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "ece2b4053033bf6a459b162f5ce6c79bc60a2497d5a053fdd08c070f18489368",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 7,
+      "visible_files": 7,
+      "archived_files": 0,
+      "raw_stream_records": 0
+    },
+    {
+      "path": "audits/final-source-and-base-mapping",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "44304fe7cf3868ddf054259d5a5e836916a4b136262e4d725f9b607d42b2154e",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 3,
+      "visible_files": 3,
+      "archived_files": 0,
+      "raw_stream_records": 0
+    },
+    {
+      "path": "audits/negative-diagnostics-clang-1012525",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "1cb1edc60f1e3b437ddc557877942d0f2764f8b713cc563e34941364cb5237e9",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 167,
+      "visible_files": 167,
+      "archived_files": 0,
+      "raw_stream_records": 167
+    },
+    {
+      "path": "audits/negative-diagnostics-final-clang-1012530",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "3b934ab87a650f7d0ac528c011cb938f7c56a3eaaaa44271dec7481b4b7f1922",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 167,
+      "visible_files": 167,
+      "archived_files": 0,
+      "raw_stream_records": 167
+    },
+    {
+      "path": "audits/negative-diagnostics-final-gcc-1012531",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "99ff4fa1a4a0d40e16535821523d5426f971b5577135190fcbd9a64bd3a3d812",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 167,
+      "visible_files": 167,
+      "archived_files": 0,
+      "raw_stream_records": 167
+    },
+    {
+      "path": "audits/negative-diagnostics-gcc-1012526",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "3e61ffe3cefab3a66b5349a1bd5e603314144c82334147fc9f2765e18939357f",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 167,
+      "visible_files": 167,
+      "archived_files": 0,
+      "raw_stream_records": 167
+    },
+    {
+      "path": "audits/reviews-and-header-proofs",
+      "capture_status": "inputs_only",
+      "capture_json_sha256": "bdfe6eaa64d077ba4351216b884e38120967f25d6be982035d6d5eab0619cbd5",
+      "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402",
+      "files": 41,
+      "visible_files": 41,
+      "archived_files": 0,
+      "raw_stream_records": 20
+    }
+  ]
+}

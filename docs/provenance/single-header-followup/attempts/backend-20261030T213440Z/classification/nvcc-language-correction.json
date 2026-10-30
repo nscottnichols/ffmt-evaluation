@@ -1,0 +1,14 @@
+{
+  "reviewer": "single_header",
+  "correction": "The initial NVCC commands omitted -x cu for .cpp sources. NVCC compiled the host branch. Exit zero from those commands does not qualify CUDA device compilation. The isolated __global__ consumer exposed this invocation mistake. Attempt1012529 explicitly forces -x cu for all shared cases and its isolated consumer.",
+  "affected_attempts": [
+    "1012527",
+    "1012528"
+  ],
+  "qualification_eligible": false,
+  "evidence": [
+    "backend-20261030T213049Z/nvcc/manifest.json",
+    "backend-20261030T213440Z/nvcc/header-only-device-consumer.stderr"
+  ],
+  "replacement_attempt": "1012529"
+}

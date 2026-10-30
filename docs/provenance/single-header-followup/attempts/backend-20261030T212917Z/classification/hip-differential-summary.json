@@ -1,0 +1,43 @@
+{
+  "baseline_revision": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "final_revision": "f3170f07df7774fb086849b077422e3330166aec",
+  "job_id": "1012532",
+  "compiler": "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc",
+  "probe_sha256": "4bb85f142816b57ec19a7ef1e0f534ed61a97a231594f02b37f7bbef7c27852c",
+  "comparison": [
+    {
+      "architecture": "gfx90a",
+      "optimization": "O0",
+      "baseline": "pass",
+      "final": "pass",
+      "matching": true,
+      "printf_control": "pass"
+    },
+    {
+      "architecture": "gfx90a",
+      "optimization": "O2",
+      "baseline": "failure",
+      "final": "failure",
+      "matching": true,
+      "printf_control": "pass"
+    },
+    {
+      "architecture": "gfx942",
+      "optimization": "O0",
+      "baseline": "pass",
+      "final": "pass",
+      "matching": true,
+      "printf_control": "pass"
+    },
+    {
+      "architecture": "gfx942",
+      "optimization": "O2",
+      "baseline": "pass",
+      "final": "pass",
+      "matching": true,
+      "printf_control": "pass"
+    }
+  ],
+  "interpretation": "Baseline and final outcomes match for every controlled combination. Optimized gfx90a rejects the ffmt print/format probe in both snapshots; this is a pre-existing compiler/transport interaction. Optimized gfx942 and unoptimized gfx90a/gfx942 compile successfully. The direct printf control passes throughout, so no general claim that HIP printf is unsupported is warranted.",
+  "limitations": "Compilation only. No device execution or hardware measurement. These probes do not qualify every formatter case."
+}

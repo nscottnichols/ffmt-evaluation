@@ -1,0 +1,7 @@
+{
+  "action": "restored_original_bytes_after_all_allocations_completed",
+  "sha256": "6eb97d89311fdf487a6a844c9d5b795c2f750d865bbcbc075e176ce3a4375733",
+  "original_sha256": "6eb97d89311fdf487a6a844c9d5b795c2f750d865bbcbc075e176ce3a4375733",
+  "time": "2026-10-30T21:54:44.862849+00:00",
+  "private_backup": "/home/nnichols/.ssh/config.ffmt-before-cobalt-20261030"
+}

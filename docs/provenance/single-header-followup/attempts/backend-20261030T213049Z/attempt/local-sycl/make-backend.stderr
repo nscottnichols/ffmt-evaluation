@@ -1,0 +1,61 @@
+In file included from test/test_integers.cpp:4:
+In file included from test/test_select_body.inc:6:
+In file included from test/test_body.inc:1:
+In file included from test/capture.hpp:20:
+include/ffmt/base.hpp:3959:43: error: no member named 'range' in namespace 'sycl'
+ 3959 | template <int N> struct formatter<::sycl::range<N>> {
+      |                                           ^~~~~
+include/ffmt/base.hpp:3959:51: error: expected unqualified-id
+ 3959 | template <int N> struct formatter<::sycl::range<N>> {
+      |                                                   ^
+include/ffmt/base.hpp:3969:43: error: no member named 'id' in namespace 'sycl'
+ 3969 | template <int N> struct formatter<::sycl::id<N>> {
+      |                                           ^~
+include/ffmt/base.hpp:3969:48: error: expected unqualified-id
+ 3969 | template <int N> struct formatter<::sycl::id<N>> {
+      |                                                ^
+include/ffmt/base.hpp:3983:26: error: no member named 'item' in namespace 'sycl'
+ 3983 | struct formatter<::sycl::item<N, WithOffset>> {
+      |                          ^~~~
+include/ffmt/base.hpp:3983:45: error: expected unqualified-id
+ 3983 | struct formatter<::sycl::item<N, WithOffset>> {
+      |                                             ^
+include/ffmt/base.hpp:3992:43: error: no member named 'nd_item' in namespace 'sycl'
+ 3992 | template <int N> struct formatter<::sycl::nd_item<N>> {
+      |                                           ^~~~~~~
+include/ffmt/base.hpp:3992:53: error: expected unqualified-id
+ 3992 | template <int N> struct formatter<::sycl::nd_item<N>> {
+      |                                                     ^
+In file included from test/test_floats.cpp:4:
+In file included from test/test_select_body.inc:6:
+In file included from test/test_body.inc:1:
+In file included from test/capture.hpp:20:
+include/ffmt/base.hpp:3959:43: error: no member named 'range' in namespace 'sycl'
+ 3959 | template <int N> struct formatter<::sycl::range<N>> {
+      |                                           ^~~~~
+include/ffmt/base.hpp:3959:51: error: expected unqualified-id
+ 3959 | template <int N> struct formatter<::sycl::range<N>> {
+      |                                                   ^
+include/ffmt/base.hpp:3969:43: error: no member named 'id' in namespace 'sycl'
+ 3969 | template <int N> struct formatter<::sycl::id<N>> {
+      |                                           ^~
+include/ffmt/base.hpp:3969:48: error: expected unqualified-id
+ 3969 | template <int N> struct formatter<::sycl::id<N>> {
+      |                                                ^
+include/ffmt/base.hpp:3983:26: error: no member named 'item' in namespace 'sycl'
+ 3983 | struct formatter<::sycl::item<N, WithOffset>> {
+      |                          ^~~~
+include/ffmt/base.hpp:3983:45: error: expected unqualified-id
+ 3983 | struct formatter<::sycl::item<N, WithOffset>> {
+      |                                             ^
+include/ffmt/base.hpp:3992:43: error: no member named 'nd_item' in namespace 'sycl'
+ 3992 | template <int N> struct formatter<::sycl::nd_item<N>> {
+      |                                           ^~~~~~~
+include/ffmt/base.hpp:3992:53: error: expected unqualified-id
+ 3992 | template <int N> struct formatter<::sycl::nd_item<N>> {
+      |                                                     ^
+8 errors generated.
+make: *** [Makefile:213: build/test_integers_O2] Error 1
+make: *** Waiting for unfinished jobs....
+8 errors generated.
+make: *** [Makefile:213: build/test_floats_O2] Error 1

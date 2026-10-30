@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "created_utc": "2026-10-30T21:53:55.306266+00:00",
+  "code_revision": "f3170f07df7774fb086849b077422e3330166aec",
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "implementation_header_sha256": "a2e57ecf15f21cbdb4a7ee64e38f42c022617cedb1acee9bcc5bede1a210ecec",
+  "routes": [
+    {
+      "route": "cuda-clang",
+      "compiler_label": "Clang22 CUDA",
+      "status": "pass",
+      "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+      "job_id": "1012528",
+      "manifest": "backend-20261030T213440Z/cuda-clang/manifest.json",
+      "full_shared_make_command": "make --no-print-directory -j2 CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt 'EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument' USE_CUDA_CLANG=1 CUDA_ARCH=sm_80 CUDA_PATH=/soft/compilers/cuda/cuda-12.9.1 build/test_main_cuda",
+      "isolated_header_command": "/soft/compilers/llvm/release-22.1.8/bin/clang++ -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -x cuda --cuda-path=/soft/compilers/cuda/cuda-12.9.1 --cuda-gpu-arch=sm_80 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-gpu.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/cuda-clang/header-only.o",
+      "scope": "Original shared cases, compiler/link checks and isolated base.hpp-only device consumer. No device execution."
+    },
+    {
+      "route": "intel-sycl",
+      "compiler_label": "Intel2025 SYCL/SPIR-V",
+      "status": "pass",
+      "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+      "job_id": "1012528",
+      "manifest": "backend-20261030T213440Z/intel-sycl/manifest.json",
+      "full_shared_make_command": "make --no-print-directory -j2 CXX=/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux 'BACKEND_FLAGS=-fsycl -fsycl-targets=spir64' OPT_LEVELS=O2 build",
+      "isolated_header_command": "/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -fsycl -fsycl-targets=spir64 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-sycl.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/intel-sycl/header-only.o",
+      "scope": "Original shared cases, compiler/link checks and isolated base.hpp-only device consumer. No device execution."
+    },
+    {
+      "route": "intel-openmp",
+      "compiler_label": "Intel2025 OpenMP/SPIR-V",
+      "status": "pass",
+      "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+      "job_id": "1012528",
+      "manifest": "backend-20261030T213440Z/intel-openmp/manifest.json",
+      "full_shared_make_command": "make --no-print-directory -j2 CXX=/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux USE_OMP_ICPX=1 OMP_OPT=-O0 build/test_main_omp",
+      "isolated_header_command": "/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -fiopenmp -fopenmp-targets=spir64 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-openmp.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/intel-openmp/header-only.o",
+      "scope": "Original shared cases, compiler/link checks and isolated base.hpp-only device consumer. No device execution."
+    },
+    {
+      "route": "llvm-openmp",
+      "compiler_label": "LLVM22 OpenMP/NVPTX",
+      "status": "pass",
+      "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+      "job_id": "1012528",
+      "manifest": "backend-20261030T213440Z/llvm-openmp/manifest.json",
+      "full_shared_make_command": "make --no-print-directory -j2 CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt 'EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux --cuda-path=/soft/compilers/cuda/cuda-12.9.1 -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument' USE_OMP_CLANG=1 OFFLOAD_ARCH=sm_80 OMP_OPT=-O0 compile-omp",
+      "isolated_header_command": "/soft/compilers/llvm/release-22.1.8/bin/clang++ -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header --cuda-path=/soft/compilers/cuda/cuda-12.9.1 -fopenmp --offload-arch=sm_80 -foffload-lto -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-openmp.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/llvm-openmp/header-only.o",
+      "scope": "Original shared cases, compiler/link checks and isolated base.hpp-only device consumer. No device execution."
+    },
+    {
+      "route": "local-sycl",
+      "compiler_label": "Retained local Intel LLVM SYCL/SPIR-V",
+      "status": "pass",
+      "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+      "job_id": "1012528",
+      "manifest": "backend-20261030T213440Z/local-sycl/manifest.json",
+      "full_shared_make_command": "make --no-print-directory -j2 CXX=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux 'BACKEND_FLAGS=-fsycl -fsycl-targets=spir64' OPT_LEVELS=O2 build",
+      "isolated_header_command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++ -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -fsycl -fsycl-targets=spir64 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-sycl.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/local-sycl/header-only.o",
+      "scope": "Original shared cases, compiler/link checks and isolated base.hpp-only device consumer. No device execution."
+    },
+    {
+      "route": "nvcc",
+      "compiler_label": "NVCC CUDA12.9.1",
+      "status": "pass",
+      "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+      "job_id": "1012529",
+      "manifest": "backend-controls-20261030T213849Z/nvcc/manifest.json",
+      "shared_translation_units": 7,
+      "forced_cuda_language": true,
+      "isolated_header_command": "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc -std=c++20 -O2 -arch=sm_80 --extended-lambda --expt-relaxed-constexpr -ccbin /soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -Xcompiler=-fno-fast-math -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/single-header -x cu -dc /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-gpu.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only.o",
+      "scope": "Seven original shared-case translation units compiled with -x cu and -dc. No final executable link or device execution. NVCC annotation warnings remain captured."
+    },
+    {
+      "route": "hip",
+      "compiler_label": "ROCm7 native HIP",
+      "status": "pass",
+      "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+      "job_id": "1012529",
+      "full_shared_manifest": "hip-full-o2-20261030T214415Z/manifest.json",
+      "full_shared_make_command": "make --no-print-directory -j2 CXX=/soft/compilers/rocm/rocm-7.0.2/bin/hipcc FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt 'EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -O2' USE_HIP=1 OFFLOAD_ARCH=gfx942 compile-hip",
+      "full_shared_architecture": "gfx942",
+      "full_shared_optimization": "-O2",
+      "supplemental_o0_manifest": "backend-controls-20261030T213849Z/hip/manifest.json",
+      "isolated_header_command": "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc -std=c++20 -O0 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/single-header -x hip --offload-arch=gfx942 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-gpu.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/hip/header-only.o",
+      "isolated_header_optimization": "-O0",
+      "optimized_header_probe": "hip-differential-20261030T214027Z/final-gfx942-O2.json",
+      "scope": "Full original shared cases compile at -O0 and -O2 for gfx942; base-only device consumer passes at -O0, controlled runtime-first probe also passes at -O2. No device execution."
+    }
+  ],
+  "preserved_failures": [
+    {
+      "job_id": "1012524",
+      "kind": "Scheduler launch failure",
+      "evidence": "backend-20261030T212917Z/launch-failure.json",
+      "qualification": "No compiler execution."
+    },
+    {
+      "job_id": "1012527",
+      "kind": "Initial backend attempts",
+      "evidence": "backend-20261030T213049Z/manifest.json",
+      "qualification": "HIP/SYCL preamble problems and LLVM warning compatibility failures retained. Initial NVCC host-branch passes are invalid as CUDA qualification; see correction."
+    },
+    {
+      "job_id": "1012528",
+      "kind": "Optimized gfx90a HIP failure and invalid initial NVCC language selection",
+      "evidence": "backend-20261030T213440Z/manifest.json",
+      "qualification": "Only the five genuine route passes are reused above. Failed HIP diagnostics are preserved and compared with baseline."
+    }
+  ],
+  "nvcc_correction": "nvcc-language-correction.json",
+  "hip_baseline_comparison": "hip-differential-summary.json",
+  "hip_baseline_conclusion": "Baseline471 and finalf317 match at O0/O2 for gfx90a/gfx942. Only gfx90a O2 rejects the controlled formatting/print probe in both snapshots. The direct printf control passes throughout.",
+  "benchmark_smoke": {
+    "status": "pass",
+    "manifest": "benchmark-smoke-20261030T215212Z/manifest.json",
+    "source_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497",
+    "byte_equality_cases": 12,
+    "measurement_campaign": false
+  },
+  "limitations": [
+    "Compilation and selected executable linking only; no accelerator execution or new hardware performance/conformance campaign.",
+    "Original historical measurements, source/runner pins and installed toolchains are unchanged.",
+    "LLVM22/CUDA12.9 compilation used explicit -Wno-error overrides for partial-toolkit-support and unused-toolchain warnings. Those warnings remain visible.",
+    "The optimized gfx90a HIP failure is pre-existing, demonstrated with identical baseline/final probes. gfx942 validation does not establish optimized gfx90a support.",
+    "The NVCC route validates device compilation with forced CUDA mode; its seven shared objects were not linked into a final runnable executable."
+  ]
+}

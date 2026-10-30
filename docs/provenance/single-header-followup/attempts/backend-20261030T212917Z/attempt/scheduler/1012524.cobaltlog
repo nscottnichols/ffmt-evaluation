@@ -1,0 +1,24 @@
+Jobid: 1012524
+qsub --mode script -q skylake_8180 -n 1 -t 120 --cwd /home/nnichols -O /home/nnichols/ffmt-followup-backend-20261030T212917Z /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/run-cobalt.sh
+Fri Oct 30 21:29:45 2026 +0000 (UTC) submitted with cwd set to: /home/nnichols
+Fri Oct 30 21:30:03 2026 +0000 (UTC) 
+Fri Oct 30 21:30:03 2026 +0000 (UTC) Command: '/usr/bin/ssh' 'skylake10' '/usr/libexec/cobalt/cobalt-launcher.py' '--nf' '/var/tmp/cobalt.1012524' '--jobid' '1012524' '--cwd' '/home/nnichols' '--env' 'COBALT_JOBID=1012524' '/bin/bash' '/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/run-cobalt.sh'
+Fri Oct 30 21:30:03 2026 +0000 (UTC) 
+Fri Oct 30 21:30:03 2026 +0000 (UTC) Environment:
+Fri Oct 30 21:30:03 2026 +0000 (UTC) SHELL=/bin/bash
+Fri Oct 30 21:30:03 2026 +0000 (UTC) COBALT_NODEFILE=/tmp/tmppVMsws
+Fri Oct 30 21:30:03 2026 +0000 (UTC) COBALT_PARTNAME=skylake10
+Fri Oct 30 21:30:03 2026 +0000 (UTC) COBALT_JOBID=1012524
+Fri Oct 30 21:30:03 2026 +0000 (UTC) COBALT_STARTTIME=1793395791
+Fri Oct 30 21:30:03 2026 +0000 (UTC) LOGNAME=nnichols
+Fri Oct 30 21:30:03 2026 +0000 (UTC) USER=nnichols
+Fri Oct 30 21:30:03 2026 +0000 (UTC) COBALT_ENDTIME=1793402991
+Fri Oct 30 21:30:03 2026 +0000 (UTC) COBALT_PARTSIZE=1
+Fri Oct 30 21:30:03 2026 +0000 (UTC) HOME=/home/nnichols
+Fri Oct 30 21:30:03 2026 +0000 (UTC) COBALT_JOBSIZE=1
+Fri Oct 30 21:30:03 2026 +0000 (UTC) 
+Fri Oct 30 21:30:03 2026 +0000 (UTC) Info: stdin received from /dev/null
+Fri Oct 30 21:30:03 2026 +0000 (UTC) Info: stdout sent to /home/nnichols/ffmt-followup-backend-20261030T212917Z.output
+Fri Oct 30 21:30:03 2026 +0000 (UTC) Info: stderr sent to /home/nnichols/ffmt-followup-backend-20261030T212917Z.error
+Fri Oct 30 21:30:03 2026 +0000 (UTC) 
+Fri Oct 30 21:30:16 2026 +0000 (UTC) Info: task completed normally with an exit code of 255; initiating job cleanup and removal

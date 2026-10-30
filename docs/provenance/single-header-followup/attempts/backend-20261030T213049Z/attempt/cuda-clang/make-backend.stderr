@@ -1,0 +1,3 @@
+clang++: warning: argument unused during compilation: '--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux' [-Wunused-command-line-argument]
+clang++: error: CUDA version 12.9 is only partially supported [-Werror,-Wunknown-cuda-version]
+make: *** [Makefile:231: build/test_main_cuda] Error 1

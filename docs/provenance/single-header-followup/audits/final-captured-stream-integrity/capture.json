@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/single-header-followup/audits/final-captured-stream-integrity",
+      "--input",
+      "audit=../ffmt/artifacts/simplify-followup/capture-stream-reference-audit-final.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/capture-stream-reference-audit-final.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/capture-stream-reference-audit-final.json",
+      "storage": "visible",
+      "bytes": 109066,
+      "sha256": "80525dfdf9c0115b5cd3a9629ee59d927b761f3d1277b20f3c30c4ea90688f2a"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

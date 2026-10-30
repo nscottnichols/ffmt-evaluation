@@ -1,0 +1,13 @@
+{
+  "allocation_job_id": "1012529",
+  "allocation_verification": "allocation-qstat.stdout",
+  "argv": [
+    "/usr/bin/ssh",
+    "-o",
+    "BatchMode=yes",
+    "cpl00",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/run-allocated.sh"
+  ],
+  "source_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497"
+}

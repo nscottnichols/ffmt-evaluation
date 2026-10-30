@@ -1,0 +1,1223 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/audits/negative-diagnostics-gcc-1012526",
+      "--input",
+      "negative-diagnostics=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "negative-diagnostics",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {
+    "compiler_or_runtime_product": 1
+  },
+  "files": [
+    {
+      "relative_path": "negative-diagnostics/control-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/control-buffer.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/control-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/control-fmt.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/control-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/control-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_pointer-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_pointer-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "0081bcab985188716a24fd1c7337deb237ef0efc55b930bcdf85c278b96bf979"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_pointer-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_pointer-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4091,
+      "sha256": "b9d947cbe8867527bd0d02c96c044296ea76c93ab84f5a8f3c5cf1bb189443a2"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_pointer-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_pointer-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "0081bcab985188716a24fd1c7337deb237ef0efc55b930bcdf85c278b96bf979"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_pointer-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_pointer-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_string-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_string-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1372,
+      "sha256": "cb8fa84a949557e5222c36dd5e97e2365a585d3041038ce94cd85d03c45de1c4"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_string-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_string-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4173,
+      "sha256": "5c929628e49d9820200980ef8b4d018ac00bc9e2f31108b5dd614cee02644a27"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_string-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_string-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1372,
+      "sha256": "cb8fa84a949557e5222c36dd5e97e2365a585d3041038ce94cd85d03c45de1c4"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_alt_on_string-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_alt_on_string-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_dynamic_in_manual-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_dynamic_in_manual-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1356,
+      "sha256": "d5c6a7ce4cc25220bcdb20e999071133e6afb18997113f3db8154f47f5b6979a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_dynamic_in_manual-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_dynamic_in_manual-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4486,
+      "sha256": "200915138f8b98425eaaec9020afed94068d81c6c69812c7e929c48508642d8b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_dynamic_in_manual-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_dynamic_in_manual-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1356,
+      "sha256": "d5c6a7ce4cc25220bcdb20e999071133e6afb18997113f3db8154f47f5b6979a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_dynamic_in_manual-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_dynamic_in_manual-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_then_manual_index-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_then_manual_index-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1336,
+      "sha256": "732a704e82beb81733b3420085cf4ec64c05d8a3db19c0f069f2245967591dad"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_then_manual_index-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_then_manual_index-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4051,
+      "sha256": "76c1bf2b47e73f162dbe65331b48bba1d36186551e4f643a016d137955a92f5b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_then_manual_index-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_then_manual_index-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1336,
+      "sha256": "732a704e82beb81733b3420085cf4ec64c05d8a3db19c0f069f2245967591dad"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_auto_then_manual_index-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_auto_then_manual_index-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_brace_as_fill-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_brace_as_fill-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1318,
+      "sha256": "ba7f0a81da5a95513cc43db5895b0ebc479dcf77ae2b4a6b1b56cfbe1ccd8f17"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_brace_as_fill-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_brace_as_fill-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3635,
+      "sha256": "a34c1cbab29ff6a9b97babc9c15876b9c519a0f368df8a2189e6d5b61ef80589"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_brace_as_fill-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_brace_as_fill-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1318,
+      "sha256": "ba7f0a81da5a95513cc43db5895b0ebc479dcf77ae2b4a6b1b56cfbe1ccd8f17"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_brace_as_fill-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_brace_as_fill-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_bool-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_bool-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1316,
+      "sha256": "0233c8838ce9b3ff4a613b28823f2ff9f98c4ad1e59d590c2e20d049d37d9292"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_bool-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_bool-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3703,
+      "sha256": "a1a6378ba7dff9561caeeb4773051e1c12997e1a4b507e54d3543bfd0c484237"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_bool-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_bool-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1316,
+      "sha256": "0233c8838ce9b3ff4a613b28823f2ff9f98c4ad1e59d590c2e20d049d37d9292"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_bool-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_bool-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_float-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_float-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "e6b0f638cfe4eda4c712956c9b41fb8ea4544241d5639c6318980d7771677285"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_float-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_float-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4090,
+      "sha256": "505eca0a8e951aa4f4d8ddc794032d88a5f896c268117ac81c808b391a989799"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_float-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_float-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "e6b0f638cfe4eda4c712956c9b41fb8ea4544241d5639c6318980d7771677285"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_c_on_float-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_c_on_float-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_precision-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_precision-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1382,
+      "sha256": "00b0c99c7941f22df39074222cb00524b0a784dbd33d1a917464299667c550d9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_precision-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_precision-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4825,
+      "sha256": "376fd96cf66c6e95594ad757b235df34832e0f3710a06daa2918401585d58a6f"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_precision-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_precision-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1382,
+      "sha256": "00b0c99c7941f22df39074222cb00524b0a784dbd33d1a917464299667c550d9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_precision-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_precision-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_width-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_width-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1361,
+      "sha256": "8797f8b6a759861a1dcd8d07c921b37502d64f978986dfacb540994c64045ff1"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_width-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_width-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4752,
+      "sha256": "958a7f6cf20c3de7b71e5de67b13b7fe8ac267628dfd2b640ae1604a1875bc0c"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_width-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_width-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1361,
+      "sha256": "8797f8b6a759861a1dcd8d07c921b37502d64f978986dfacb540994c64045ff1"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_dynamic_width-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_dynamic_width-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_spec_on_int-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_spec_on_int-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1328,
+      "sha256": "9cdca05b1dc4a1f3e255c90b15fb6bda88aae00d804f0537677d19ee01a4b7aa"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_spec_on_int-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_spec_on_int-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4073,
+      "sha256": "6673f7d95d83e62c7fc39fc98f219bc10af56668c7f4d82eeb15da761ffdc13a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_spec_on_int-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_spec_on_int-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1328,
+      "sha256": "9cdca05b1dc4a1f3e255c90b15fb6bda88aae00d804f0537677d19ee01a4b7aa"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_float_spec_on_int-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_float_spec_on_int-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_arg_id-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_arg_id-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1330,
+      "sha256": "5612ea640b438f2e67be353837022b527f0f3b55057c3439f66a0d67adfae148"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_arg_id-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_arg_id-fmt.stderr",
+      "storage": "visible",
+      "bytes": 2448,
+      "sha256": "08c111d57dc27b9bb28df3b446f11691681174e03a9a1103cf59066fab9c2374"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_arg_id-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_arg_id-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1330,
+      "sha256": "5612ea640b438f2e67be353837022b527f0f3b55057c3439f66a0d67adfae148"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_arg_id-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_arg_id-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_width-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_width-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1330,
+      "sha256": "b8f36885c4bc8b3efc6aaf3d01b2adb7e5feed012c28cb851d76640461efd922"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_width-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_width-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3049,
+      "sha256": "b9f783c04cd712e22d58efd7910bb8b569cd9d7c3a610ba4e7142074874dac6d"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_width-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_width-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1330,
+      "sha256": "b8f36885c4bc8b3efc6aaf3d01b2adb7e5feed012c28cb851d76640461efd922"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_garbage_after_width-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_garbage_after_width-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_int_spec_on_float-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_int_spec_on_float-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1340,
+      "sha256": "01871e58705f250ada427c12ec57e89367db09e1b0e2efb1655f0f9a4fffb7c9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_int_spec_on_float-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_int_spec_on_float-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4104,
+      "sha256": "44a9cfe5b2b0a20dfaa03ab6253f1e4bf320ae811af57b38aa98e4e8bd27b7bf"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_int_spec_on_float-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_int_spec_on_float-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1340,
+      "sha256": "01871e58705f250ada427c12ec57e89367db09e1b0e2efb1655f0f9a4fffb7c9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_int_spec_on_float-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_int_spec_on_float-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_invalid_utf8_fill-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_invalid_utf8_fill-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1337,
+      "sha256": "e9d4eebf54a79b8ae5c548082f2af7d9226b14040752afa9e51aa9f404105851"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_invalid_utf8_fill-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_invalid_utf8_fill-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4024,
+      "sha256": "217112dc8b1bf0b14e17b759ac4f57707d6336b62e3b7834b68e03c0e6b14a04"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_invalid_utf8_fill-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_invalid_utf8_fill-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1337,
+      "sha256": "e9d4eebf54a79b8ae5c548082f2af7d9226b14040752afa9e51aa9f404105851"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_invalid_utf8_fill-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_invalid_utf8_fill-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_dynamic_in_auto-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_dynamic_in_auto-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1356,
+      "sha256": "a73ba83283d0649cb8b2e830b0b6a3e9437bde0decc30a47b291eac99149d226"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_dynamic_in_auto-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_dynamic_in_auto-fmt.stderr",
+      "storage": "visible",
+      "bytes": 5076,
+      "sha256": "52f6f43327bd43fe6029e14ff9af1b0fb374b764beed4a661648058f7499c6a9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_dynamic_in_auto-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_dynamic_in_auto-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1356,
+      "sha256": "a73ba83283d0649cb8b2e830b0b6a3e9437bde0decc30a47b291eac99149d226"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_dynamic_in_auto-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_dynamic_in_auto-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_then_auto_index-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_then_auto_index-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1336,
+      "sha256": "647684ea852e603f57098d78fba493190a7ee72d89cefc7de4cdcd408525a3ca"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_then_auto_index-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_then_auto_index-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3013,
+      "sha256": "31b1dcf2804bced25553cb6d3ad5e367847a4377c2cdccc45962550977b84921"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_then_auto_index-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_then_auto_index-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1336,
+      "sha256": "647684ea852e603f57098d78fba493190a7ee72d89cefc7de4cdcd408525a3ca"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_manual_then_auto_index-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_manual_then_auto_index-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_non_numeric_arg_id-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_non_numeric_arg_id-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1325,
+      "sha256": "b2b6b0cdd7656fccaa969e4e405f98a02483a89ad0db8a8adbf5e948355cec10"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_non_numeric_arg_id-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_non_numeric_arg_id-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4396,
+      "sha256": "09ac6223293d4da1ee9e26904529d15864803cf668238204c125ede82f8e805a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_non_numeric_arg_id-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_non_numeric_arg_id-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1325,
+      "sha256": "b2b6b0cdd7656fccaa969e4e405f98a02483a89ad0db8a8adbf5e948355cec10"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_non_numeric_arg_id-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_non_numeric_arg_id-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_bool-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_bool-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1329,
+      "sha256": "6145a309bd2c2f0ba50840f859b180bb8c0099f5473c8f10c57999e3bf3e225b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_bool-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_bool-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4150,
+      "sha256": "dc404f3ac2123151f8f1cf803185474cc47801c2cd9c9f62a21b05291c817c56"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_bool-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_bool-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1329,
+      "sha256": "6145a309bd2c2f0ba50840f859b180bb8c0099f5473c8f10c57999e3bf3e225b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_bool-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_bool-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_char-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_char-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1329,
+      "sha256": "03211f49bf5ee0aaaf785af3bd265752c6c7a7d3177ac659194d97f46a8b6518"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_char-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_char-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4150,
+      "sha256": "136f6d4827a3f36b5101186cf749ac10c7cc294cab1cdcd08b83f1868aa448f8"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_char-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_char-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1329,
+      "sha256": "03211f49bf5ee0aaaf785af3bd265752c6c7a7d3177ac659194d97f46a8b6518"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_char-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_char-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_int-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_int-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1323,
+      "sha256": "0c7b10e658869155b172fad40065cd94b84f7b5041f4e192a7e1e317aecc3522"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_int-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_int-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4132,
+      "sha256": "1622bdd7702aafb6225bc85fc67a872146fd495348b1536b77c5bf95ae9719ff"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_int-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_int-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1323,
+      "sha256": "0c7b10e658869155b172fad40065cd94b84f7b5041f4e192a7e1e317aecc3522"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_int-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_int-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_pointer-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_pointer-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1339,
+      "sha256": "29028055ed83354379c9c0a3050aef30db3be2a7200c774de2f72ac9ddfce1da"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_pointer-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_pointer-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4210,
+      "sha256": "76261d387954a8a2111ec8353944ce2bb41ba6e6f69c5afde3e05238db6f9f2d"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_pointer-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_pointer-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1339,
+      "sha256": "29028055ed83354379c9c0a3050aef30db3be2a7200c774de2f72ac9ddfce1da"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_precision_on_pointer-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_precision_on_pointer-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_float-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_float-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "e6e3995001c60c553321de3665cd209167621fe3194db4045fe1946de6b74413"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_float-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_float-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4188,
+      "sha256": "b3cb859e606ac0634aec9e4f98cf0b43d2890b9f5164b46fc1d8adddfd18575b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_float-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_float-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "e6e3995001c60c553321de3665cd209167621fe3194db4045fe1946de6b74413"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_float-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_float-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_int-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_int-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1310,
+      "sha256": "022200e65a77d89579001adc68cb92fb2739148c6182a839cd94b8c5d2ac3479"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_int-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_int-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4136,
+      "sha256": "ee13b03104ab1de878d8b770802ef8ca02492b80fafde951a3467a2461319c5a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_int-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_int-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1310,
+      "sha256": "022200e65a77d89579001adc68cb92fb2739148c6182a839cd94b8c5d2ac3479"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_s_on_int-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_s_on_int-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_char-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_char-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1318,
+      "sha256": "58c233bea7875d97f91b17864c3c2f539121011d4f2b7d9968ef43515627fc83"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_char-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_char-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4091,
+      "sha256": "70eb306f948c10fe12a01b4159243a1f270da064de76ae18e7c3fcb17284614b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_char-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_char-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1318,
+      "sha256": "58c233bea7875d97f91b17864c3c2f539121011d4f2b7d9968ef43515627fc83"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_char-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_char-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_pointer-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_pointer-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1328,
+      "sha256": "64ce6c4d54d4a10c8de54295538417f65c2d54f94a58571ba60056f99fd9534b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_pointer-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_pointer-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4151,
+      "sha256": "6f99223c52fcf52a3e82218f5674d0dbeb6ec46543bc78c5a06c14b048debfc3"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_pointer-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_pointer-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1328,
+      "sha256": "64ce6c4d54d4a10c8de54295538417f65c2d54f94a58571ba60056f99fd9534b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_pointer-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_pointer-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_string-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_string-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1374,
+      "sha256": "a46bf8872d1228fe76868f4481a3f4415f0902f64e4f07a63ba484b051e7ab3f"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_string-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_string-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4233,
+      "sha256": "f83df2025ccd1c0f386abd987b3221058f973f99969b24c16344fb0d3463a9aa"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_string-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_string-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1374,
+      "sha256": "a46bf8872d1228fe76868f4481a3f4415f0902f64e4f07a63ba484b051e7ab3f"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_string-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_string-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_minus-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_minus-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1374,
+      "sha256": "d9caa85c9a674cc1182e7f91bb8b53385c2b201eddf8a66701202da767c42b25"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_minus-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_minus-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4211,
+      "sha256": "418f0277f81bc51b9c0dccee5e47882a201c9fb470bee74ed6aae4d00c43e7d5"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_minus-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_minus-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1374,
+      "sha256": "d9caa85c9a674cc1182e7f91bb8b53385c2b201eddf8a66701202da767c42b25"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_minus-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_minus-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1372,
+      "sha256": "90f15ed845474e5ae7b1b78d49a645d39594bdef02a5b59f62d277ddc7db0d69"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4209,
+      "sha256": "2a23886579c5566b6507ad1f63015d0aaa50a43b3f6c60baec5743b6809fd908"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1372,
+      "sha256": "90f15ed845474e5ae7b1b78d49a645d39594bdef02a5b59f62d277ddc7db0d69"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus_bool-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus_bool-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1350,
+      "sha256": "01f762efc4b880bcfbc82ba653a884965a06891b11f01c48c5d2da83fe7ad7f0"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus_bool-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus_bool-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4123,
+      "sha256": "56d60d790d4a4fe869d2fc0c5c888801548920e36e95e0d643693b8bfd5017a9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus_bool-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus_bool-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1350,
+      "sha256": "01f762efc4b880bcfbc82ba653a884965a06891b11f01c48c5d2da83fe7ad7f0"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_plus_bool-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_plus_bool-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_space-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_space-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1414,
+      "sha256": "e415ced9799612dc74362e059f7cfabbd34b951bbc9de238e0b87b2736cb93d3"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_space-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_space-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4355,
+      "sha256": "0d052df57e8e048058d9cc46854b89e6629ebed95aa7cdcc74b01a5dfb06272b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_space-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_space-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1414,
+      "sha256": "e415ced9799612dc74362e059f7cfabbd34b951bbc9de238e0b87b2736cb93d3"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_sign_on_unsigned_space-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_sign_on_unsigned_space-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_spec_on_custom_formatter-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_spec_on_custom_formatter-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1341,
+      "sha256": "604bf9298a8afd4a70498b8a3ab8e14ec74c1fdf2de761c45481c5b35d8589fa"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_spec_on_custom_formatter-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_spec_on_custom_formatter-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3057,
+      "sha256": "9515db233bab66a3ae40b31d980c54c3ed6e502c1d15f3420a44aebcc4cfd01b"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_spec_on_custom_formatter-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_spec_on_custom_formatter-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1341,
+      "sha256": "604bf9298a8afd4a70498b8a3ab8e14ec74c1fdf2de761c45481c5b35d8589fa"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_spec_on_custom_formatter-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_spec_on_custom_formatter-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_stray_closing_brace-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_stray_closing_brace-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1305,
+      "sha256": "8badd8d6ae32606f759e83b5a88c17c214856100c88b668ebbd37cd5237990ee"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_stray_closing_brace-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_stray_closing_brace-fmt.stderr",
+      "storage": "visible",
+      "bytes": 2787,
+      "sha256": "d0b5856c135c00b0bb84ce813c13bd63aa24a007c151405a50e58520b5986bae"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_stray_closing_brace-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_stray_closing_brace-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1305,
+      "sha256": "8badd8d6ae32606f759e83b5a88c17c214856100c88b668ebbd37cd5237990ee"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_stray_closing_brace-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_stray_closing_brace-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1319,
+      "sha256": "76c2a9287e9e7ccd9de26b32c1025ed28016c368ecf298415f6eecd8320d0c14"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3199,
+      "sha256": "707d3ffcab72d73789120f6e676bd2f3fe04be37e75457c2fe1bf55251b1675a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1319,
+      "sha256": "76c2a9287e9e7ccd9de26b32c1025ed28016c368ecf298415f6eecd8320d0c14"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args_custom_formatter-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args_custom_formatter-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1350,
+      "sha256": "88037b74e39e3b651085da8fa987ae41636703f35692d57ebae68fddfec13cf9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args_custom_formatter-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args_custom_formatter-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3227,
+      "sha256": "29ba4ce2d375dfa7d109993d503f676cf22910e9fada6fcb1402ba8036991de1"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args_custom_formatter-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args_custom_formatter-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1350,
+      "sha256": "88037b74e39e3b651085da8fa987ae41636703f35692d57ebae68fddfec13cf9"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_too_few_args_custom_formatter-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_too_few_args_custom_formatter-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_two_types-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_two_types-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1309,
+      "sha256": "52cfeb0525528b4549e69816b4e5ba33835f2cabd4b2ef4c674ad9e76a2a5037"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_two_types-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_two_types-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3028,
+      "sha256": "6cfbc46567b55ebb5878bbb3a71f73283928fd114c25093ab30c84b4575407d7"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_two_types-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_two_types-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1309,
+      "sha256": "52cfeb0525528b4549e69816b4e5ba33835f2cabd4b2ef4c674ad9e76a2a5037"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_two_types-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_two_types-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unclosed_brace-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unclosed_brace-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1295,
+      "sha256": "37b4d2a14b954d15cf8c252af5836c973f093fe810cdaabc0a9d07ccc5cc3e59"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unclosed_brace-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unclosed_brace-fmt.stderr",
+      "storage": "visible",
+      "bytes": 2988,
+      "sha256": "823bb1623fb4dadcd4f81deca2f2d8cf194ead8c6e8c8a39c3c8b4262dbbabf0"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unclosed_brace-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unclosed_brace-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1295,
+      "sha256": "37b4d2a14b954d15cf8c252af5836c973f093fe810cdaabc0a9d07ccc5cc3e59"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unclosed_brace-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unclosed_brace-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unknown_type-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unknown_type-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1314,
+      "sha256": "607ddbe188bae5e23171f3d1b5d99c5b36f4e854c9c4a831e8a5c097c331ab09"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unknown_type-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unknown_type-fmt.stderr",
+      "storage": "visible",
+      "bytes": 4001,
+      "sha256": "c2845a54bc4a5e67ac7443837c78e9f001c3a537b00760a1d4acd10e554500fa"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unknown_type-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unknown_type-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1314,
+      "sha256": "607ddbe188bae5e23171f3d1b5d99c5b36f4e854c9c4a831e8a5c097c331ab09"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unknown_type-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unknown_type-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unterminated_spec-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unterminated_spec-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "71d8618da89c99469999df886052b7a8a7ddf856dda07a3cde4e33bd0059919a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unterminated_spec-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unterminated_spec-fmt.stderr",
+      "storage": "visible",
+      "bytes": 2809,
+      "sha256": "9b4fdd5e82f9d0c64fbee40b1745b3f0db1f2303544adda2b5ec20caaa99d245"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unterminated_spec-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unterminated_spec-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1326,
+      "sha256": "71d8618da89c99469999df886052b7a8a7ddf856dda07a3cde4e33bd0059919a"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_unterminated_spec-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_unterminated_spec-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_char-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_char-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1319,
+      "sha256": "29ad22aa9a2cdcde6e700e0c1af54c6bc114b741360a9aff892ffe9d411d80dc"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_char-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_char-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3558,
+      "sha256": "a348ca087c3285eec51a15587e60f1cf975e7bf03096720deee93605dc009909"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_char-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_char-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1319,
+      "sha256": "29ad22aa9a2cdcde6e700e0c1af54c6bc114b741360a9aff892ffe9d411d80dc"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_char-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_char-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_pointer-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_pointer-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1329,
+      "sha256": "5c09ee158081132b7f354cfdd3652a43b12770c470199cbd9c5fcd766abfd509"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_pointer-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_pointer-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3740,
+      "sha256": "30c7304d75c23a608bb01e809707d190130a4d38852a9eeaf500479471a839a2"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_pointer-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_pointer-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1329,
+      "sha256": "5c09ee158081132b7f354cfdd3652a43b12770c470199cbd9c5fcd766abfd509"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_pointer-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_pointer-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_string-buffer.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_string-buffer.stderr",
+      "storage": "visible",
+      "bytes": 1375,
+      "sha256": "beae8d05de538efb94a037ef52fc8430a0de8664a76cc69ad3e1b1a6bfe684a3"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_string-fmt.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_string-fmt.stderr",
+      "storage": "visible",
+      "bytes": 3822,
+      "sha256": "222ab16f6b1a79b50106aa37225e735354cdd836bf55d142b0578ff8b072aa3e"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_string-specifiers.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_string-specifiers.stderr",
+      "storage": "visible",
+      "bytes": 1375,
+      "sha256": "beae8d05de538efb94a037ef52fc8430a0de8664a76cc69ad3e1b1a6bfe684a3"
+    },
+    {
+      "relative_path": "negative-diagnostics/reject_zero_on_string-syntax.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/source/build/negative/reject_zero_on_string-syntax.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

@@ -1,0 +1,2 @@
+FFMT_BENCH_DEVICE host
+{"schema_version":1,"timer":"host_wall","first_batch_ns":2083,"jit_prepare_ns":0,"warmups":5,"samples_ns":[],"device_kernel_samples_ns":[],"iterations":2,"calls":2,"checksum":"15566537731735619187"}

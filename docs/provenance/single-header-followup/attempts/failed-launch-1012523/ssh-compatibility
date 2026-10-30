@@ -1,0 +1,7 @@
+{
+  "action": "Prepend IgnoreUnknown for SessionType and RemoteCommand for Cobalt older SSH parser; no host, identity or connection settings changed",
+  "before_sha256": "6eb97d89311fdf487a6a844c9d5b795c2f750d865bbcbc075e176ce3a4375733",
+  "after_sha256": "488c41adbcf2e199576c392ae4ec0e336fceb537d6d4c3b1bdebd0860baaf0f1",
+  "private_backup": "/home/nnichols/.ssh/config.ffmt-before-cobalt-20261030",
+  "timestamp": "2026-10-30T21:30:29.276412+00:00"
+}

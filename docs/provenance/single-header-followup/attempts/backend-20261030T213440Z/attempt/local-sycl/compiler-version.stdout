@@ -1,0 +1,5 @@
+DPC++ compiler 7.2.0 build based on:
+clang version 23.1.1 (https://github.com/intel/llvm 5680988bb38bd45f13081394fba43588c5f5e395)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /vast/projects/datascience/nnichols/ffmt_project/ffmt/software/chiatta/install/intel-llvm/bin

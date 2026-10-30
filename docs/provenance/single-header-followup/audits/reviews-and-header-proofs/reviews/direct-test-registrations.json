@@ -1,0 +1,240 @@
+[
+  {
+    "FFMT_SOURCE_chrono": "test/conformance/test_chrono.cpp",
+    "FFMT_STANDARD_chrono": "c++20",
+    "FFMT_FLAGS_chrono": "",
+    "FFMT_REFERENCE_chrono": "1",
+    "FFMT_OPTIONAL_chrono": "0"
+  },
+  {
+    "FFMT_SOURCE_core_accounting": "test/conformance/test_core_accounting.cpp",
+    "FFMT_STANDARD_core_accounting": "c++20",
+    "FFMT_FLAGS_core_accounting": "",
+    "FFMT_REFERENCE_core_accounting": "0",
+    "FFMT_OPTIONAL_core_accounting": "0"
+  },
+  {
+    "FFMT_SOURCE_core_conversion": "test/conformance/test_core_conversion.cpp",
+    "FFMT_STANDARD_core_conversion": "c++20",
+    "FFMT_FLAGS_core_conversion": "",
+    "FFMT_REFERENCE_core_conversion": "1",
+    "FFMT_OPTIONAL_core_conversion": "0"
+  },
+  {
+    "FFMT_SOURCE_core_floating": "test/conformance/test_core_floating.cpp",
+    "FFMT_STANDARD_core_floating": "c++20",
+    "FFMT_FLAGS_core_floating": "",
+    "FFMT_REFERENCE_core_floating": "1",
+    "FFMT_OPTIONAL_core_floating": "0"
+  },
+  {
+    "FFMT_SOURCE_core_floating_portable": "test/conformance/test_core_floating.cpp",
+    "FFMT_STANDARD_core_floating_portable": "c++20",
+    "FFMT_FLAGS_core_floating_portable": "-DFFMT_PORTABLE_SHORTEST=1",
+    "FFMT_REFERENCE_core_floating_portable": "1",
+    "FFMT_OPTIONAL_core_floating_portable": "0"
+  },
+  {
+    "FFMT_SOURCE_core_format_as": "test/conformance/test_core_format_as.cpp",
+    "FFMT_STANDARD_core_format_as": "c++20",
+    "FFMT_FLAGS_core_format_as": "",
+    "FFMT_REFERENCE_core_format_as": "1",
+    "FFMT_OPTIONAL_core_format_as": "0"
+  },
+  {
+    "FFMT_SOURCE_core_formatters": "test/conformance/test_core_formatters.cpp",
+    "FFMT_STANDARD_core_formatters": "c++20",
+    "FFMT_FLAGS_core_formatters": "",
+    "FFMT_REFERENCE_core_formatters": "0",
+    "FFMT_OPTIONAL_core_formatters": "0"
+  },
+  {
+    "FFMT_SOURCE_core_forwarding": "test/conformance/test_core_forwarding.cpp",
+    "FFMT_STANDARD_core_forwarding": "c++20",
+    "FFMT_FLAGS_core_forwarding": "",
+    "FFMT_REFERENCE_core_forwarding": "0",
+    "FFMT_OPTIONAL_core_forwarding": "0"
+  },
+  {
+    "FFMT_SOURCE_core_int128": "test/conformance/test_core_int128.cpp",
+    "FFMT_STANDARD_core_int128": "c++20",
+    "FFMT_FLAGS_core_int128": "",
+    "FFMT_REFERENCE_core_int128": "1",
+    "FFMT_OPTIONAL_core_int128": "1"
+  },
+  {
+    "FFMT_SOURCE_core_legacy": "test/conformance/test_core_legacy.cpp",
+    "FFMT_STANDARD_core_legacy": "c++20",
+    "FFMT_FLAGS_core_legacy": "",
+    "FFMT_REFERENCE_core_legacy": "1",
+    "FFMT_OPTIONAL_core_legacy": "0"
+  },
+  {
+    "FFMT_SOURCE_core_migration": "test/conformance/test_core_migration.cpp",
+    "FFMT_STANDARD_core_migration": "c++20",
+    "FFMT_FLAGS_core_migration": "",
+    "FFMT_REFERENCE_core_migration": "1",
+    "FFMT_OPTIONAL_core_migration": "0"
+  },
+  {
+    "FFMT_SOURCE_core_parsing": "test/conformance/test_core_parsing.cpp",
+    "FFMT_STANDARD_core_parsing": "c++20",
+    "FFMT_FLAGS_core_parsing": "",
+    "FFMT_REFERENCE_core_parsing": "0",
+    "FFMT_OPTIONAL_core_parsing": "0"
+  },
+  {
+    "FFMT_SOURCE_core_primitives": "test/conformance/test_core_primitives.cpp",
+    "FFMT_STANDARD_core_primitives": "c++20",
+    "FFMT_FLAGS_core_primitives": "",
+    "FFMT_REFERENCE_core_primitives": "1",
+    "FFMT_OPTIONAL_core_primitives": "0"
+  },
+  {
+    "FFMT_SOURCE_core_unicode": "test/conformance/test_core_unicode.cpp",
+    "FFMT_STANDARD_core_unicode": "c++20",
+    "FFMT_FLAGS_core_unicode": "",
+    "FFMT_REFERENCE_core_unicode": "1",
+    "FFMT_OPTIONAL_core_unicode": "0"
+  },
+  {
+    "FFMT_SOURCE_engine_bitint": "test/conformance/test_engine_bitint.cpp",
+    "FFMT_STANDARD_engine_bitint": "c++20",
+    "FFMT_FLAGS_engine_bitint": "",
+    "FFMT_REFERENCE_engine_bitint": "1",
+    "FFMT_OPTIONAL_engine_bitint": "1"
+  },
+  {
+    "FFMT_SOURCE_engine_extended": "test/conformance/test_engine_extended.cpp",
+    "FFMT_STANDARD_engine_extended": "c++20",
+    "FFMT_FLAGS_engine_extended": "",
+    "FFMT_REFERENCE_engine_extended": "1",
+    "FFMT_OPTIONAL_engine_extended": "0"
+  },
+  {
+    "FFMT_SOURCE_engine_fast_math": "test/conformance/test_engine_fast_math.cpp",
+    "FFMT_STANDARD_engine_fast_math": "c++20",
+    "FFMT_FLAGS_engine_fast_math": "-ffast-math",
+    "FFMT_REFERENCE_engine_fast_math": "0",
+    "FFMT_OPTIONAL_engine_fast_math": "0"
+  },
+  {
+    "FFMT_SOURCE_engine_legacy_hook": "test/conformance/test_engine_legacy_hook.cpp",
+    "FFMT_STANDARD_engine_legacy_hook": "c++20",
+    "FFMT_FLAGS_engine_legacy_hook": "",
+    "FFMT_REFERENCE_engine_legacy_hook": "0",
+    "FFMT_OPTIONAL_engine_legacy_hook": "0"
+  },
+  {
+    "FFMT_SOURCE_engine_quad": "test/conformance/test_engine_quad.cpp",
+    "FFMT_STANDARD_engine_quad": "c++20",
+    "FFMT_FLAGS_engine_quad": "",
+    "FFMT_REFERENCE_engine_quad": "1",
+    "FFMT_OPTIONAL_engine_quad": "1"
+  },
+  {
+    "FFMT_SOURCE_engine_transport": "test/conformance/test_engine_transport.cpp",
+    "FFMT_STANDARD_engine_transport": "c++20",
+    "FFMT_FLAGS_engine_transport": "",
+    "FFMT_REFERENCE_engine_transport": "1",
+    "FFMT_OPTIONAL_engine_transport": "0"
+  },
+  {
+    "FFMT_SOURCE_enum": "test/conformance/test_enum.cpp",
+    "FFMT_STANDARD_enum": "c++20",
+    "FFMT_FLAGS_enum": "",
+    "FFMT_REFERENCE_enum": "1",
+    "FFMT_OPTIONAL_enum": "0"
+  },
+  {
+    "FFMT_SOURCE_family_support": "test/conformance/test_family_support.cpp",
+    "FFMT_STANDARD_family_support": "c++20",
+    "FFMT_FLAGS_family_support": "",
+    "FFMT_REFERENCE_family_support": "0",
+    "FFMT_OPTIONAL_family_support": "0"
+  },
+  {
+    "FFMT_SOURCE_feature_integration": "test/conformance/test_feature_integration.cpp",
+    "FFMT_STANDARD_feature_integration": "c++20",
+    "FFMT_FLAGS_feature_integration": "",
+    "FFMT_REFERENCE_feature_integration": "1",
+    "FFMT_OPTIONAL_feature_integration": "0"
+  },
+  {
+    "FFMT_SOURCE_formatter_composition": "test/conformance/test_formatter_composition.cpp",
+    "FFMT_STANDARD_formatter_composition": "c++20",
+    "FFMT_FLAGS_formatter_composition": "",
+    "FFMT_REFERENCE_formatter_composition": "0",
+    "FFMT_OPTIONAL_formatter_composition": "0"
+  },
+  {
+    "FFMT_SOURCE_legacy_forwarding": "test/conformance/test_legacy_forwarding.cpp",
+    "FFMT_STANDARD_legacy_forwarding": "c++20",
+    "FFMT_FLAGS_legacy_forwarding": "",
+    "FFMT_REFERENCE_legacy_forwarding": "0",
+    "FFMT_OPTIONAL_legacy_forwarding": "0"
+  },
+  {
+    "FFMT_SOURCE_named_arguments": "test/conformance/test_named_arguments.cpp",
+    "FFMT_STANDARD_named_arguments": "c++20",
+    "FFMT_FLAGS_named_arguments": "",
+    "FFMT_REFERENCE_named_arguments": "1",
+    "FFMT_OPTIONAL_named_arguments": "0"
+  },
+  {
+    "FFMT_SOURCE_printf": "test/conformance/test_printf.cpp",
+    "FFMT_STANDARD_printf": "c++20",
+    "FFMT_FLAGS_printf": "",
+    "FFMT_REFERENCE_printf": "1",
+    "FFMT_OPTIONAL_printf": "0"
+  },
+  {
+    "FFMT_SOURCE_ranges": "test/conformance/test_ranges.cpp",
+    "FFMT_STANDARD_ranges": "c++20",
+    "FFMT_FLAGS_ranges": "",
+    "FFMT_REFERENCE_ranges": "1",
+    "FFMT_OPTIONAL_ranges": "0"
+  },
+  {
+    "FFMT_SOURCE_ranges_forwarding": "test/conformance/test_ranges_forwarding.cpp",
+    "FFMT_STANDARD_ranges_forwarding": "c++20",
+    "FFMT_FLAGS_ranges_forwarding": "",
+    "FFMT_REFERENCE_ranges_forwarding": "0",
+    "FFMT_OPTIONAL_ranges_forwarding": "0"
+  },
+  {
+    "FFMT_SOURCE_ranges_iterators": "test/conformance/test_ranges_iterators.cpp",
+    "FFMT_STANDARD_ranges_iterators": "c++20",
+    "FFMT_FLAGS_ranges_iterators": "",
+    "FFMT_REFERENCE_ranges_iterators": "1",
+    "FFMT_OPTIONAL_ranges_iterators": "0"
+  },
+  {
+    "FFMT_SOURCE_std": "test/conformance/test_std.cpp",
+    "FFMT_STANDARD_std": "c++20",
+    "FFMT_FLAGS_std": "",
+    "FFMT_REFERENCE_std": "1",
+    "FFMT_OPTIONAL_std": "0"
+  },
+  {
+    "FFMT_SOURCE_std23": "test/conformance/test_std23.cpp",
+    "FFMT_STANDARD_std23": "c++23",
+    "FFMT_FLAGS_std23": "",
+    "FFMT_REFERENCE_std23": "1",
+    "FFMT_OPTIONAL_std23": "1"
+  },
+  {
+    "FFMT_SOURCE_style": "test/conformance/test_style.cpp",
+    "FFMT_STANDARD_style": "c++20",
+    "FFMT_FLAGS_style": "",
+    "FFMT_REFERENCE_style": "1",
+    "FFMT_OPTIONAL_style": "0"
+  },
+  {
+    "FFMT_SOURCE_transport_forwarding": "test/conformance/test_transport_forwarding.cpp",
+    "FFMT_STANDARD_transport_forwarding": "c++20",
+    "FFMT_FLAGS_transport_forwarding": "",
+    "FFMT_REFERENCE_transport_forwarding": "0",
+    "FFMT_OPTIONAL_transport_forwarding": "0"
+  }
+]

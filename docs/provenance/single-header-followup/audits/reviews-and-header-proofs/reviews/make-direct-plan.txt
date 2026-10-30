@@ -1,0 +1,42 @@
+echo 'g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -fsycl  -O2' | cmp -s - build/.flags || echo 'g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -fsycl  -O2' > build/.flags
+expected=$(git -C "third_party/fmt" rev-parse --verify '0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f^{commit}') && \
+ actual=$(git -C "third_party/fmt" rev-parse HEAD) && \
+ test "$actual" = "$expected" || \
+ { echo 'fmt checkout does not match FMT_REF; supply a clean pinned checkout.' >&2; exit 1; }
+test -z "$(git -C "third_party/fmt" status --porcelain)" || \
+ { echo 'fmt checkout has local changes; preserve it and supply a clean pinned checkout.' >&2; exit 1; }
+g++ -std=c++20 -Wall -fno-fast-math -Iinclude -isystem third_party/fmt/include -O2 -c third_party/fmt/src/format.cc -o build/fmt.o
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_chrono.cpp build/fmt.o -o build/test_chrono
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_accounting.cpp  -o build/test_core_accounting
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_conversion.cpp build/fmt.o -o build/test_core_conversion
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_floating.cpp build/fmt.o -o build/test_core_floating
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2  -DFFMT_PORTABLE_SHORTEST=1 -UNDEBUG test/direct/test_core_floating.cpp build/fmt.o -o build/test_core_floating_portable
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_format_as.cpp build/fmt.o -o build/test_core_format_as
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_formatters.cpp  -o build/test_core_formatters
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_forwarding.cpp  -o build/test_core_forwarding
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_int128.cpp build/fmt.o -o build/test_core_int128
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_legacy.cpp build/fmt.o -o build/test_core_legacy
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_migration.cpp build/fmt.o -o build/test_core_migration
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_parsing.cpp  -o build/test_core_parsing
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_primitives.cpp build/fmt.o -o build/test_core_primitives
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_core_unicode.cpp build/fmt.o -o build/test_core_unicode
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_engine_bitint.cpp build/fmt.o -o build/test_engine_bitint
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_engine_extended.cpp build/fmt.o -o build/test_engine_extended
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2  -ffast-math -UNDEBUG test/direct/test_engine_fast_math.cpp  -o build/test_engine_fast_math
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_engine_legacy_hook.cpp  -o build/test_engine_legacy_hook
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_engine_quad.cpp build/fmt.o -o build/test_engine_quad
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_engine_transport.cpp build/fmt.o -o build/test_engine_transport
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_enum.cpp build/fmt.o -o build/test_enum
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_family_support.cpp  -o build/test_family_support
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_feature_integration.cpp build/fmt.o -o build/test_feature_integration
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_formatter_composition.cpp  -o build/test_formatter_composition
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_legacy_forwarding.cpp  -o build/test_legacy_forwarding
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_named_arguments.cpp build/fmt.o -o build/test_named_arguments
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_printf.cpp build/fmt.o -o build/test_printf
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_ranges.cpp build/fmt.o -o build/test_ranges
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_ranges_forwarding.cpp  -o build/test_ranges_forwarding
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_ranges_iterators.cpp build/fmt.o -o build/test_ranges_iterators
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_std.cpp build/fmt.o -o build/test_std
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_style.cpp build/fmt.o -o build/test_style
+g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -O2   -UNDEBUG test/direct/test_transport_forwarding.cpp  -o build/test_transport_forwarding
+fail=0; for bin in build/test_chrono build/test_core_accounting build/test_core_conversion build/test_core_floating build/test_core_floating_portable build/test_core_format_as build/test_core_formatters build/test_core_forwarding build/test_core_int128 build/test_core_legacy build/test_core_migration build/test_core_parsing build/test_core_primitives build/test_core_unicode build/test_engine_bitint build/test_engine_extended build/test_engine_fast_math build/test_engine_legacy_hook build/test_engine_quad build/test_engine_transport build/test_enum build/test_family_support build/test_feature_integration build/test_formatter_composition build/test_legacy_forwarding build/test_named_arguments build/test_printf build/test_ranges build/test_ranges_forwarding build/test_ranges_iterators build/test_std build/test_style build/test_transport_forwarding; do t0=$(perl -MTime::HiRes=time -e 'printf("%d\n", time() * 1e9)'); ./$bin; rc=$?; ms=$(( ($(perl -MTime::HiRes=time -e 'printf("%d\n", time() * 1e9)') - t0) / 1000000 )); if [ $rc -eq 0 ]; then echo "${bin#build/}: PASS (${ms}ms)"; elif [ $rc -eq 77 ] && [[ "         build/test_core_int128      build/test_engine_bitint    build/test_engine_quad               build/test_std23 " == *" $bin "* ]]; then echo "${bin#build/}: SKIP (optional compiler capability)"; else echo "${bin#build/}: FAIL (${ms}ms)"; fail=1; fi; done; exit $fail

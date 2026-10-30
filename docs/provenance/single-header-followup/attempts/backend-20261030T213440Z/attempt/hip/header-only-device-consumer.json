@@ -1,0 +1,32 @@
+{
+  "name": "header-only-device-consumer",
+  "argv": [
+    "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc",
+    "-std=c++20",
+    "-O2",
+    "-fno-fast-math",
+    "--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header",
+    "-x",
+    "hip",
+    "--offload-arch=gfx90a",
+    "-c",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-gpu.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/hip/header-only.o"
+  ],
+  "command": "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -x hip --offload-arch=gfx90a -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-gpu.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/hip/header-only.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/hip",
+  "started_utc": "2026-10-30T21:36:39.627889+00:00",
+  "exit_code": 1,
+  "status": "failure",
+  "seconds": 4.884,
+  "stdout": {
+    "path": "hip/header-only-device-consumer.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "hip/header-only-device-consumer.stderr",
+    "sha256": "0a4e074ebb4afca1b3c87e3773ea8bccc77bc3c1b5bf478edf3024ecf376cb14"
+  }
+}

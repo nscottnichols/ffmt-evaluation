@@ -1,0 +1,14 @@
+{
+  "job_id": "1012524",
+  "status": "infrastructure_failure",
+  "source_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+  "reason": "Cobalt launcher SSH rejected SessionType and RemoteCommand in user SSH configuration before the validation wrapper ran. No compiler or test execution occurred.",
+  "captured_utc": "2026-10-30T21:30:36.065171+00:00",
+  "files": {
+    "scheduler/1012524.cobaltlog": "649b4764e214c3cc9c8352d6ba4f1364818c7a2876d062f77d3b1fdf28e2729b",
+    "scheduler/1012524.error": "9a8c0de1ad5e950203d1e2ddd18e082491bbe38903fd3ca825fd611f4f41d052",
+    "scheduler/1012524.output": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scheduler/qstat.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scheduler/qstat.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

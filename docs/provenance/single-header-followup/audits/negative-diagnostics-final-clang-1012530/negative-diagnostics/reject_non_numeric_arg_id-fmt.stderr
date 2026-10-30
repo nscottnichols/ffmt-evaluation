@@ -1,0 +1,31 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/source/test/negative/reject_non_numeric_arg_id.cpp:5:23: error: call to consteval function 'fmt::fstring<int>::fstring<4UL>' is not a constant expression
+    5 |   NEG_EXPECT_REJECTED("{x}", 1);
+      |                       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1754:5: note: non-constexpr function 'report_error' cannot be used in a constant expression
+ 1754 |     report_error(message);
+      |     ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1727:25: note: in call to 'this->on_error(&"argument not found"[0])'
+ 1727 |     if (!DYNAMIC_NAMES) on_error("argument not found");
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1619:18: note: in call to 'this->handler.on_arg_id({&"{x}"[1], 1})'
+ 1619 |         arg_id = handler.on_arg_id(id);
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1368:3: note: in call to 'handler.on_name({&"{x}"[1], 1})'
+ 1368 |   handler.on_name({begin, to_unsigned(it - begin)});
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1622:13: note: in call to 'parse_arg_id<char, id_adapter &>(&"{x}"[1], &"{x}"[3], adapter)'
+ 1622 |     begin = parse_arg_id(begin, end, adapter);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1651:19: note: in call to 'parse_replacement_field<char, fmt::detail::format_string_checker<char, 1, 0, false> &>(&"{x}"[1], &"{x}"[3], checker(this->str, arg_pack()))'
+ 1651 |       begin = p = parse_replacement_field(p - 1, end, handler);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2722:7: note: in call to 'parse_format_string<char, fmt::detail::format_string_checker<char, 1, 0, false>>({&"{x}"[0], 3}, checker(this->str, arg_pack()))'
+ 2722 |       parse_format_string<char>(str, checker(str, arg_pack()));
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/source/test/negative/reject_non_numeric_arg_id.cpp:5:23: note: in call to 'fstring<4UL>("{x}")'
+    5 |   NEG_EXPECT_REJECTED("{x}", 1);
+      |                       ^~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:653:27: note: declared here
+  653 | FMT_NORETURN FMT_API void report_error(const char* message);
+      |                           ^
+1 error generated.

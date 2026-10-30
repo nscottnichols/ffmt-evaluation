@@ -1,0 +1,29 @@
+{
+  "name": "make-backend",
+  "argv": [
+    "make",
+    "--no-print-directory",
+    "-j2",
+    "CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++",
+    "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "USE_CUDA_CLANG=1",
+    "CUDA_ARCH=sm_80",
+    "CUDA_PATH=/soft/compilers/cuda/cuda-12.9.1",
+    "build/test_main_cuda"
+  ],
+  "command": "make --no-print-directory -j2 CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux USE_CUDA_CLANG=1 CUDA_ARCH=sm_80 CUDA_PATH=/soft/compilers/cuda/cuda-12.9.1 build/test_main_cuda",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213049Z/worktrees/cuda-clang",
+  "started_utc": "2026-10-30T21:31:08.246527+00:00",
+  "exit_code": 2,
+  "status": "failure",
+  "seconds": 4.181,
+  "stdout": {
+    "path": "cuda-clang/make-backend.stdout",
+    "sha256": "e4485d89f329218b6741770cfd5c3a9683ebceca3fd0e088f89a146156930634"
+  },
+  "stderr": {
+    "path": "cuda-clang/make-backend.stderr",
+    "sha256": "0d4d447f88f4b06f1368c7d28b3d311414114927b6dc39c1b3b627f5854b4874"
+  }
+}

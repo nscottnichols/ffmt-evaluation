@@ -1,0 +1,31 @@
+{
+  "name": "header-only-device-consumer",
+  "argv": [
+    "/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx",
+    "-std=c++20",
+    "-O2",
+    "-fno-fast-math",
+    "--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header",
+    "-fsycl",
+    "-fsycl-targets=spir64",
+    "-c",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-sycl.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/intel-sycl/header-only.o"
+  ],
+  "command": "/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -fsycl -fsycl-targets=spir64 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-sycl.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/intel-sycl/header-only.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/intel-sycl",
+  "started_utc": "2026-10-30T21:39:02.997438+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 7.491,
+  "stdout": {
+    "path": "intel-sycl/header-only-device-consumer.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "intel-sycl/header-only-device-consumer.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

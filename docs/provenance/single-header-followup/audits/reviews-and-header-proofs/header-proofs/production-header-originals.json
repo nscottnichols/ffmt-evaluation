@@ -1,0 +1,154 @@
+{
+  "include/ffmt/args.hpp": {
+    "sha256": "287471a083535503df852ee3a3e6166e672e5f0f062366e82754b26152b786a8",
+    "lines": 28
+  },
+  "include/ffmt/base.hpp": {
+    "sha256": "0b50349f217956d94f2b6b92515c8461d4e0c9f8ce8dd9e2e04649d73a6db18f",
+    "lines": 4
+  },
+  "include/ffmt/chrono.hpp": {
+    "sha256": "5fdbb0bdcf019fad442694676cf25c47c574c6b833bdf22687a4d2ac9e72e0f7",
+    "lines": 948
+  },
+  "include/ffmt/color.hpp": {
+    "sha256": "2e640a0714f3e3784befa308a3a78c85a1654f700b6f36b80c0516873c419934",
+    "lines": 351
+  },
+  "include/ffmt/core.hpp": {
+    "sha256": "86a506dde42bbd3ec34742093c467205a747aae14a44f8d00c2ed57d96045fce",
+    "lines": 3
+  },
+  "include/ffmt/detail/arguments.hpp": {
+    "sha256": "eee5b00bb53459e583f30e8c0a4b609e517ab7b221abb61559f6157b6d766ea5",
+    "lines": 106
+  },
+  "include/ffmt/detail/checked.hpp": {
+    "sha256": "b2a56346937821f9abd93ef463e49d78e4f09728c5360716d73e8948db3f25d7",
+    "lines": 25
+  },
+  "include/ffmt/detail/config.hpp": {
+    "sha256": "bcddb4507b308d983cedb1174ad47eea6fb7f97e66affd2de3078eba1f4b3821",
+    "lines": 46
+  },
+  "include/ffmt/detail/context.hpp": {
+    "sha256": "7b9ed6190cb66862fa0e5e341d5237a5d181c8303be2652a72d66cb837afa36d",
+    "lines": 170
+  },
+  "include/ffmt/detail/dragonbox.hpp": {
+    "sha256": "f9c36d544d3ee5fff6136aa71008a26698a9742cd492b53c7904f3b0037daba4",
+    "lines": 651
+  },
+  "include/ffmt/detail/exact_decimal.hpp": {
+    "sha256": "31fc16be4b87da8d3e4591afa57030f9769209cc430a698e0157161027f34f8c",
+    "lines": 121
+  },
+  "include/ffmt/detail/execution.hpp": {
+    "sha256": "0f2d6f1343a7d67c39baf62bcee6df6674557e290c693aabc32bef36c194fc07",
+    "lines": 132
+  },
+  "include/ffmt/detail/extended.hpp": {
+    "sha256": "9a75ad011a6c8b346255212884de3d51e198f5ae3572df9cec4720e036ac8359",
+    "lines": 130
+  },
+  "include/ffmt/detail/family.hpp": {
+    "sha256": "9a6ee375496a0bd334a0efc01d1a1ed1600719a786abfd0b78976d4c1fa3787d",
+    "lines": 350
+  },
+  "include/ffmt/detail/floating.hpp": {
+    "sha256": "02ed51afeb2f088cc2a7033e09b1a4d76095a0189ac98764a8e2e2d78a9aba32",
+    "lines": 385
+  },
+  "include/ffmt/detail/formatters.hpp": {
+    "sha256": "e271b444f787b44bf2b34bf9ba8d201a04f88f8ca2b89431d7c28eaf138c7191",
+    "lines": 121
+  },
+  "include/ffmt/detail/integer.hpp": {
+    "sha256": "2c6838229e427372fa2537bbda794574f1b60a7f19e1844c02b26844da30a973",
+    "lines": 71
+  },
+  "include/ffmt/detail/legacy_emit.hpp": {
+    "sha256": "80447c17efe12bb7cb5dd8dc75bcab4a474793882ad9dcd7abdba09fd1886637",
+    "lines": 33
+  },
+  "include/ffmt/detail/memory.hpp": {
+    "sha256": "bc2d3d989d88afab5401f08ea681f102bb3c9df8217d0185725088906430283a",
+    "lines": 60
+  },
+  "include/ffmt/detail/numeric.hpp": {
+    "sha256": "2ee4f48f1f32955a48809145a44928bcbaf80e53864453704c4fc1895120fcdd",
+    "lines": 318
+  },
+  "include/ffmt/detail/output.hpp": {
+    "sha256": "6929c4d1446bf93b0b565eef63c2151ed4728e7981640c89de77a31e3e1c6a63",
+    "lines": 114
+  },
+  "include/ffmt/detail/parse.hpp": {
+    "sha256": "4973f9c36fb2d07843e54d8a161f33b072c29c82c3ea9e602d6b668a8714c032",
+    "lines": 316
+  },
+  "include/ffmt/detail/print_macros.hpp": {
+    "sha256": "e89ec90ae9f022efe2bd9cc50618fb62746e5e4acd3683ce31f2d671588f5fc2",
+    "lines": 11
+  },
+  "include/ffmt/detail/result.hpp": {
+    "sha256": "9ec81a5ae558e6aff14d4b06cd074a762651ba7497907adf33e6fdc6de1c60a1",
+    "lines": 65
+  },
+  "include/ffmt/detail/sycl_formatters.hpp": {
+    "sha256": "6d2fda4928b449bd3f05238ca5aae30af4e00a7bc1e230e49b33470b383d0c5c",
+    "lines": 92
+  },
+  "include/ffmt/detail/text.hpp": {
+    "sha256": "13c43714687606eb3e369e4d014df480296443d5f04e0a216f77000140214024",
+    "lines": 124
+  },
+  "include/ffmt/detail/transport.hpp": {
+    "sha256": "a0dfbba5ec9c01b8b3ee124e5799da0092bcd7bf74d8136b3431352ecb695356",
+    "lines": 298
+  },
+  "include/ffmt/detail/type_categories.hpp": {
+    "sha256": "1b0f2aee2c8aed5d2880bd24dd3b05e2cd238c5770df47f25fe54c32f9b709f3",
+    "lines": 53
+  },
+  "include/ffmt/detail/type_traits.hpp": {
+    "sha256": "89834a5fa57f8911471d3a00c52147d823cb3f93eb0677edde9db7eee0371550",
+    "lines": 23
+  },
+  "include/ffmt/detail/unicode.hpp": {
+    "sha256": "4143baab6facf8efe067baa93bf5cbe0428ccd2194a4ca60b9ad1cb0592b8d03",
+    "lines": 201
+  },
+  "include/ffmt/detail/unicode_width.hpp": {
+    "sha256": "9b58225b056fe08f67dcddc365d9a0465d3341e902c67f6483c291a58982265a",
+    "lines": 69
+  },
+  "include/ffmt/detail/validation.hpp": {
+    "sha256": "60ea28f96c33bf1759307a6e0107fda32ce72e26df85b9458f2921ebe3e3412e",
+    "lines": 83
+  },
+  "include/ffmt/detail/value.hpp": {
+    "sha256": "deb69604e63964e5dcb8cdd32c11e6353c416c17fe27e3117b4b63e75c084ef7",
+    "lines": 76
+  },
+  "include/ffmt/enum.hpp": {
+    "sha256": "a2980b8f23cc09d0b120e686c5e7e75f629fa801bbcd9265a162f128d28d59a6",
+    "lines": 22
+  },
+  "include/ffmt/printf.hpp": {
+    "sha256": "fcdc9232a3466f2328ead0925e438e0c06ee4e4c19bde7c1f56e88cce95da436",
+    "lines": 488
+  },
+  "include/ffmt/ranges.hpp": {
+    "sha256": "8bf1661d22ef27449093a835aa96f7260af1c5c83db34886b77ba2f9455f03a6",
+    "lines": 648
+  },
+  "include/ffmt/std.hpp": {
+    "sha256": "5eadf79fa1ed7459fe2bb38d471630de926a5174c4f24f79f0e16bc5de74d8c3",
+    "lines": 272
+  },
+  "include/ffmt/std23.hpp": {
+    "sha256": "c97e7a914dae904089eef809523b0c58963393a0a6f49b154fed13073fbf407d",
+    "lines": 57
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/attempts/backend-20261030T212917Z",
+      "--input",
+      "attempt/launch-failure.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/launch-failure.json",
+      "--input",
+      "attempt/run-cobalt.sh=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/run-cobalt.sh",
+      "--input",
+      "attempt/run.py=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/run.py",
+      "--input",
+      "attempt/submission.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/submission.json",
+      "--input",
+      "attempt/scheduler/1012524.cobaltlog=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.cobaltlog",
+      "--input",
+      "attempt/scheduler/1012524.error=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.error",
+      "--input",
+      "attempt/scheduler/1012524.output=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.output",
+      "--input",
+      "attempt/scheduler/qstat.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/qstat.stderr",
+      "--input",
+      "attempt/scheduler/qstat.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/qstat.stdout",
+      "--input",
+      "classification/nvcc-language-correction.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/nvcc-language-correction.json",
+      "--input",
+      "classification/hip-differential-summary.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-summary.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "attempt/launch-failure.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/launch-failure.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/run-cobalt.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/run.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/submission.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012524.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.cobaltlog",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012524.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.error",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012524.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.output",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/qstat.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/qstat.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "classification/nvcc-language-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/nvcc-language-correction.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "classification/hip-differential-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-summary.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "attempt/launch-failure.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/launch-failure.json",
+      "storage": "visible",
+      "bytes": 873,
+      "sha256": "bf0a0666b33d81aec50ba61d5a559f560a19706912601b51d628135a5cced110"
+    },
+    {
+      "relative_path": "attempt/run-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/run-cobalt.sh",
+      "storage": "visible",
+      "bytes": 308,
+      "sha256": "1e267d6160d9b777e93ec5a60ced8a54b5cbdc8d2034f081e57c48133fcb454f"
+    },
+    {
+      "relative_path": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/run.py",
+      "storage": "visible",
+      "bytes": 6990,
+      "sha256": "67240c0f3580604d0d21711663098b6844bd3e16d905b7231d13979f7f65e1af"
+    },
+    {
+      "relative_path": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/submission.json",
+      "storage": "visible",
+      "bytes": 963,
+      "sha256": "42d633e3546d81a8c4749e75004491d24487889a9dc44554ccf61c633c8b7771"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012524.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.cobaltlog",
+      "storage": "visible",
+      "bytes": 2021,
+      "sha256": "649b4764e214c3cc9c8352d6ba4f1364818c7a2876d062f77d3b1fdf28e2729b"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012524.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.error",
+      "storage": "visible",
+      "bytes": 224,
+      "sha256": "9a8c0de1ad5e950203d1e2ddd18e082491bbe38903fd3ca825fd611f4f41d052"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012524.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/1012524.output",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/qstat.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T212917Z/scheduler/qstat.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "classification/nvcc-language-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/nvcc-language-correction.json",
+      "storage": "visible",
+      "bytes": 640,
+      "sha256": "69bb8c6fb87105470a6d79c71496af97d38b49284add0285715c3cc2ae63965d"
+    },
+    {
+      "relative_path": "classification/hip-differential-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-summary.json",
+      "storage": "visible",
+      "bytes": 1568,
+      "sha256": "274b9d2d9396d61bf9155303484ef866bf0442300e1956627ce2c1888ed30181"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

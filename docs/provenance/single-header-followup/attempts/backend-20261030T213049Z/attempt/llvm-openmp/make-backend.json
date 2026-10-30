@@ -1,0 +1,29 @@
+{
+  "name": "make-backend",
+  "argv": [
+    "make",
+    "--no-print-directory",
+    "-j2",
+    "CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++",
+    "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux --cuda-path=/soft/compilers/cuda/cuda-12.9.1",
+    "USE_OMP_CLANG=1",
+    "OFFLOAD_ARCH=sm_80",
+    "OMP_OPT=-O0",
+    "compile-omp"
+  ],
+  "command": "make --no-print-directory -j2 CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt 'EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux --cuda-path=/soft/compilers/cuda/cuda-12.9.1' USE_OMP_CLANG=1 OFFLOAD_ARCH=sm_80 OMP_OPT=-O0 compile-omp",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213049Z/worktrees/llvm-openmp",
+  "started_utc": "2026-10-30T21:32:32.041844+00:00",
+  "exit_code": 2,
+  "status": "failure",
+  "seconds": 0.121,
+  "stdout": {
+    "path": "llvm-openmp/make-backend.stdout",
+    "sha256": "c0bd2da48bb287146aabef9a1366fd171042f8f3d696fcc8293bac54b7a7ed00"
+  },
+  "stderr": {
+    "path": "llvm-openmp/make-backend.stderr",
+    "sha256": "08a5bbd408c293b2a1498722a960da6cbccc788717634a7e48960e63a073ddc3"
+  }
+}

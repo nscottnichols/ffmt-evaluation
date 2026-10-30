@@ -1,0 +1,75 @@
+nvcc compiler-version pass 0
+cuda-clang compiler-version pass 0
+nvcc compile-integers pass 0
+nvcc compile-floats pass 0
+nvcc compile-strings pass 0
+nvcc compile-layout pass 0
+nvcc compile-misc pass 0
+nvcc compile-formatter pass 0
+nvcc compile-buffer_path pass 0
+nvcc header-only-device-consumer failure 1
+hip compiler-version pass 0
+hip make-backend failure 2
+hip header-only-device-consumer failure 1
+intel-sycl compiler-version pass 0
+intel-sycl make-backend pass 0
+intel-sycl header-only-device-consumer pass 0
+intel-openmp compiler-version pass 0
+intel-openmp make-backend pass 0
+intel-openmp header-only-device-consumer pass 0
+llvm-openmp compiler-version pass 0
+llvm-openmp make-backend pass 0
+llvm-openmp header-only-device-consumer pass 0
+local-sycl compiler-version pass 0
+local-sycl make-backend pass 0
+local-sycl header-only-device-consumer pass 0
+cuda-clang make-backend pass 0
+cuda-clang header-only-device-consumer pass 0
+{
+  "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "job_id": "1012528",
+  "hostname": "skylake10",
+  "machine": "x86_64",
+  "routes": [
+    {
+      "route": "nvcc",
+      "status": "failure",
+      "manifest": "nvcc/manifest.json"
+    },
+    {
+      "route": "hip",
+      "status": "failure",
+      "manifest": "hip/manifest.json"
+    },
+    {
+      "route": "intel-sycl",
+      "status": "pass",
+      "manifest": "intel-sycl/manifest.json"
+    },
+    {
+      "route": "intel-openmp",
+      "status": "pass",
+      "manifest": "intel-openmp/manifest.json"
+    },
+    {
+      "route": "llvm-openmp",
+      "status": "pass",
+      "manifest": "llvm-openmp/manifest.json"
+    },
+    {
+      "route": "local-sycl",
+      "status": "pass",
+      "manifest": "local-sycl/manifest.json"
+    },
+    {
+      "route": "cuda-clang",
+      "status": "pass",
+      "manifest": "cuda-clang/manifest.json"
+    }
+  ],
+  "started_utc": "2026-10-30T21:35:29.933332+00:00",
+  "scope": "Compilation/link only. No accelerator execution. Architecture selections sm_80/gfx90a/spir64 are compilation targets, not measured hardware.",
+  "finished_utc": "2026-10-30T21:42:54.680874+00:00",
+  "status": "failure"
+}

@@ -1,0 +1,321 @@
+{
+  "positive": [
+    {
+      "id": "literal",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "int-min",
+      "new_path": "test/test_integers.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "uint-max",
+      "new_path": "test/test_integers.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "ascii",
+      "new_path": "test/test_strings.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "no-newline",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "empty",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "nul-char",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "marker-text",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "uint-d",
+      "new_path": "test/test_integers.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "signed-hex",
+      "new_path": "test/test_integers.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "binary-max",
+      "new_path": "test/test_integers.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "zero-alt",
+      "new_path": "test/test_integers.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "align-zero",
+      "new_path": "test/test_layout.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "center-fill",
+      "new_path": "test/test_layout.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "repeated",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "dynamic-width",
+      "new_path": "test/test_layout.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "dynamic-precision",
+      "new_path": "test/test_layout.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "bool",
+      "new_path": "test/test_strings.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float-shortest",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float-notation",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float32",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float-fixed",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float-round",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float-hex",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float32-subnormal",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float64-subnormal",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float-large-fixed",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "float-special",
+      "new_path": "test/test_floats.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "unicode-width",
+      "new_path": "test/test_strings.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "unicode-precision",
+      "new_path": "test/test_strings.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "unicode-fill",
+      "new_path": "test/test_strings.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "debug-string",
+      "new_path": "test/test_strings.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "debug-char",
+      "new_path": "test/test_strings.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "null-pointer",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "long-padding",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "large-precision",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "long-literal",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "many-fields",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "percent-capacity",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "println-capacity",
+      "new_path": "test/test_misc.cpp",
+      "coverage": "same pattern, arguments, and newline behavior in original host/device harness"
+    },
+    {
+      "id": "chrono-duration",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "chrono-calendar",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "runtime-format",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "wide-stdout",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "named-fields",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "printf-style",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "range-nested-spec",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "tuple",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "join",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "bounded-family-padding",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "stream-left-family-padding",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "optional",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "complex",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    },
+    {
+      "id": "styled",
+      "new_path": "test/test_features.cpp",
+      "coverage": "same feature expression through original host oracle/stdout harness"
+    }
+  ],
+  "negative": [
+    {
+      "id": "unclosed",
+      "new_path": "test/negative/reject_unclosed_brace.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "stray-close",
+      "new_path": "test/negative/reject_stray_closing_brace.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "missing-arg",
+      "new_path": "test/negative/reject_too_few_args.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "mixed-indices",
+      "new_path": "test/negative/reject_auto_then_manual_index.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "integer-precision",
+      "new_path": "test/negative/reject_precision_on_int.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "string-sign",
+      "new_path": "test/negative/reject_sign_on_string.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "unsigned-sign",
+      "new_path": "test/negative/reject_sign_on_unsigned_plus.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "float-integer-type",
+      "new_path": "test/negative/reject_int_spec_on_float.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    },
+    {
+      "id": "float-width",
+      "new_path": "test/negative/reject_float_dynamic_width.cpp",
+      "coverage": "existing original negative translation unit; now uses one negative driver"
+    }
+  ]
+}

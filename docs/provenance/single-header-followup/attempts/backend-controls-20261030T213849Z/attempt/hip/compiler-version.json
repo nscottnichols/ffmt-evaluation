@@ -1,0 +1,21 @@
+{
+  "name": "compiler-version",
+  "argv": [
+    "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc",
+    "--version"
+  ],
+  "command": "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc --version",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/worktrees/hip",
+  "started_utc": "2026-10-30T21:39:12.885863+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 1.578,
+  "stdout": {
+    "path": "hip/compiler-version.stdout",
+    "sha256": "1ea4b187ec6c59cbe6aa5c7bee782c22e5acf4046363de0c26d15029dc5db021"
+  },
+  "stderr": {
+    "path": "hip/compiler-version.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

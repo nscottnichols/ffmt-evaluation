@@ -1,0 +1,21 @@
+{
+  "name": "compiler-version",
+  "argv": [
+    "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc",
+    "--version"
+  ],
+  "command": "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc --version",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/nvcc",
+  "started_utc": "2026-10-30T21:35:30.633970+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 0.017,
+  "stdout": {
+    "path": "nvcc/compiler-version.stdout",
+    "sha256": "77d7ef23109cd2437a8b9cf5efbc4e89996b816276077edb86143ee04f6d5269"
+  },
+  "stderr": {
+    "path": "nvcc/compiler-version.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

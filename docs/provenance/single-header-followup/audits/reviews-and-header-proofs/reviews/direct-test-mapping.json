@@ -1,0 +1,266 @@
+[
+  {
+    "old_path": "test/conformance/test_chrono.cpp",
+    "new_path": "test/direct/test_chrono.cpp",
+    "original_sha256": "9ca09ed16ead927f402ccab2a3d42ec1cdca5a9a1325798c6cb4808a65fb32ac",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 0,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_accounting.cpp",
+    "new_path": "test/direct/test_core_accounting.cpp",
+    "original_sha256": "d5c20450250dc5c67570eaefa7a2a4f95ba024fee4b78e7084f6e62424ae3899",
+    "change": "byte-identical move",
+    "assert_tokens": 3,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_conversion.cpp",
+    "new_path": "test/direct/test_core_conversion.cpp",
+    "original_sha256": "b3330c7642917c7df30b76b47f5fae3ace085e3c9988efae4dde1c12b9a95f07",
+    "change": "byte-identical move",
+    "assert_tokens": 7,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_floating.cpp",
+    "new_path": "test/direct/test_core_floating.cpp",
+    "original_sha256": "7ebefd4dea4b776e973f9033da269b1b467095c05fa2848b7d3c77e5e923f319",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 1,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_format_as.cpp",
+    "new_path": "test/direct/test_core_format_as.cpp",
+    "original_sha256": "36c06bc66c02327a7b01f903742d39d3d7e9d96dd528197b5044e29080b0ac4f",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 2,
+    "static_assert_tokens": 1
+  },
+  {
+    "old_path": "test/conformance/test_core_formatters.cpp",
+    "new_path": "test/direct/test_core_formatters.cpp",
+    "original_sha256": "e8df358a77317ce134cd96e6c968d9d17a95d35ae562bf1638c410727d36677b",
+    "change": "byte-identical move",
+    "assert_tokens": 1,
+    "static_assert_tokens": 1
+  },
+  {
+    "old_path": "test/conformance/test_core_forwarding.cpp",
+    "new_path": "test/direct/test_core_forwarding.cpp",
+    "original_sha256": "97e05503f9e13820ad068b7e6d01c46962f7301755e1f2ae0720614cc635cc15",
+    "change": "byte-identical move",
+    "assert_tokens": 5,
+    "static_assert_tokens": 2
+  },
+  {
+    "old_path": "test/conformance/test_core_int128.cpp",
+    "new_path": "test/direct/test_core_int128.cpp",
+    "original_sha256": "f2692afc6bcc96ff8782fcdd842eb2b1ec1a2632a0d2d721be419ef7cf2808d2",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 0,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_legacy.cpp",
+    "new_path": "test/direct/test_core_legacy.cpp",
+    "original_sha256": "f104162f5c4b81a35ca9cac9978da95a44708848a00c8eadda7045811970c649",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 2,
+    "static_assert_tokens": 1
+  },
+  {
+    "old_path": "test/conformance/test_core_migration.cpp",
+    "new_path": "test/direct/test_core_migration.cpp",
+    "original_sha256": "cb79a49e37db88c0f5c6d8807eaea545801939ca96729bcf8e982c0bd8280492",
+    "change": "byte-identical move",
+    "assert_tokens": 1,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_parsing.cpp",
+    "new_path": "test/direct/test_core_parsing.cpp",
+    "original_sha256": "e0cced520cf08de32c0de0b0c4cd9cccd68532ae877293f4208f0dd4b2aef4dd",
+    "change": "byte-identical move",
+    "assert_tokens": 6,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_primitives.cpp",
+    "new_path": "test/direct/test_core_primitives.cpp",
+    "original_sha256": "44d1e5272e815655f1f831df4c7784fe3e51c041bc22e9abadd107e8be17d278",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 6,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_core_unicode.cpp",
+    "new_path": "test/direct/test_core_unicode.cpp",
+    "original_sha256": "0120131426ce113e23ad69e2e29e756ca87dc1080eee74192628fa03e57135ad",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 1,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_engine_bitint.cpp",
+    "new_path": "test/direct/test_engine_bitint.cpp",
+    "original_sha256": "adda291e1a012ac222bd7b2d4e1656ab9db3fc9f970a5369e81ad376b8759bd8",
+    "change": "byte-identical move",
+    "assert_tokens": 3,
+    "static_assert_tokens": 1
+  },
+  {
+    "old_path": "test/conformance/test_engine_extended.cpp",
+    "new_path": "test/direct/test_engine_extended.cpp",
+    "original_sha256": "7974b709418d531fca9efb4da15120a89f2674a3abe1b067370a00fb40cd991c",
+    "change": "byte-identical move",
+    "assert_tokens": 3,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_engine_fast_math.cpp",
+    "new_path": "test/direct/test_engine_fast_math.cpp",
+    "original_sha256": "1e4a4905191bfd80471aed50b2f0f1858d935083e74d29730c023619f2fa6f8c",
+    "change": "byte-identical move",
+    "assert_tokens": 1,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_engine_legacy_hook.cpp",
+    "new_path": "test/direct/test_engine_legacy_hook.cpp",
+    "original_sha256": "229a5a3534f40db645562083e7d88608bf8c315d3e46b0ead4f46060e35be3be",
+    "change": "byte-identical move",
+    "assert_tokens": 4,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_engine_quad.cpp",
+    "new_path": "test/direct/test_engine_quad.cpp",
+    "original_sha256": "f57045a05e1e5e301e52ebab4d785f85ead3e47e646cf18a2e359d39ba16a62a",
+    "change": "byte-identical move",
+    "assert_tokens": 0,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_engine_transport.cpp",
+    "new_path": "test/direct/test_engine_transport.cpp",
+    "original_sha256": "060f222a50c2663ccadf2e0b26c86d39fafdcb30bd479ed017133c68ecfaa8d6",
+    "change": "byte-identical move",
+    "assert_tokens": 12,
+    "static_assert_tokens": 3
+  },
+  {
+    "old_path": "test/conformance/test_enum.cpp",
+    "new_path": "test/direct/test_enum.cpp",
+    "original_sha256": "efe53c0bc12f5bb5f740e2c071a0235e365406a4058a8538063c54780749527d",
+    "change": "byte-identical move",
+    "assert_tokens": 2,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_family_support.cpp",
+    "new_path": "test/direct/test_family_support.cpp",
+    "original_sha256": "b1b5d8c04499af727d30a9923c2eaf2126c9784ba455c33cffda454fb660e133",
+    "change": "byte-identical move",
+    "assert_tokens": 14,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_feature_integration.cpp",
+    "new_path": "test/direct/test_feature_integration.cpp",
+    "original_sha256": "b4f3adbe5017ac5e73f996c884655a447114aeb093fa6a2dae2a5fa1c4afacfb",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 2,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_formatter_composition.cpp",
+    "new_path": "test/direct/test_formatter_composition.cpp",
+    "original_sha256": "fde5d08c27a76fe7fadbf5a0849ba7bfc041892dcce0bbe36c43313843b0dfee",
+    "change": "byte-identical move",
+    "assert_tokens": 2,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_legacy_forwarding.cpp",
+    "new_path": "test/direct/test_legacy_forwarding.cpp",
+    "original_sha256": "aaf46b1ab07ef4ab9ac6189c628365dc97f942623748e29eba67f34bbfaa2342",
+    "change": "byte-identical move",
+    "assert_tokens": 2,
+    "static_assert_tokens": 2
+  },
+  {
+    "old_path": "test/conformance/test_named_arguments.cpp",
+    "new_path": "test/direct/test_named_arguments.cpp",
+    "original_sha256": "20bc4effe148a4da251828962a623e2da90e2c2229e337bbe5c7a0b163446db6",
+    "change": "byte-identical move",
+    "assert_tokens": 8,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_printf.cpp",
+    "new_path": "test/direct/test_printf.cpp",
+    "original_sha256": "2ca1ff3aeca8bebcd359dd2c8222dcd4525dd475b2ce31701af1483aae58c6cb",
+    "change": "byte-identical move",
+    "assert_tokens": 11,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_ranges.cpp",
+    "new_path": "test/direct/test_ranges.cpp",
+    "original_sha256": "7f65bb70a818292d46368dcb7440ec58da65392d8832872d96a3e4c6c6c47b20",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 3,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_ranges_forwarding.cpp",
+    "new_path": "test/direct/test_ranges_forwarding.cpp",
+    "original_sha256": "da85a38fa8c1fbfc05470cdad2f8849c46c870b47da2dc89e46c1d1606e3fbde",
+    "change": "byte-identical move",
+    "assert_tokens": 9,
+    "static_assert_tokens": 2
+  },
+  {
+    "old_path": "test/conformance/test_ranges_iterators.cpp",
+    "new_path": "test/direct/test_ranges_iterators.cpp",
+    "original_sha256": "bfe22f206be3e06e1365bc3211ac12ceb853d1f6ff863a7825b80f65e48bb430",
+    "change": "byte-identical move",
+    "assert_tokens": 20,
+    "static_assert_tokens": 4
+  },
+  {
+    "old_path": "test/conformance/test_std.cpp",
+    "new_path": "test/direct/test_std.cpp",
+    "original_sha256": "a0feb3908988311afe1becbd82e60b2620122b5c7cc153433dfd7fa701c1a0bb",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 0,
+    "static_assert_tokens": 3
+  },
+  {
+    "old_path": "test/conformance/test_std23.cpp",
+    "new_path": "test/direct/test_std23.cpp",
+    "original_sha256": "84dacc4b955619f84f8d6403cd2a4dfcfb0e810f1d853c5a3088214f5fa8744e",
+    "change": "byte-identical move",
+    "assert_tokens": 2,
+    "static_assert_tokens": 2
+  },
+  {
+    "old_path": "test/conformance/test_style.cpp",
+    "new_path": "test/direct/test_style.cpp",
+    "original_sha256": "29792bc502ad4101a1fe318f5d9bd78a43253d5be857f4d0003100d66940bbb9",
+    "change": "include shared test/reference.hpp",
+    "assert_tokens": 0,
+    "static_assert_tokens": 0
+  },
+  {
+    "old_path": "test/conformance/test_transport_forwarding.cpp",
+    "new_path": "test/direct/test_transport_forwarding.cpp",
+    "original_sha256": "5dfea8378b1dc64b813e9e6eb6f2a60227475dfb05a3259e8a941496f4af2b88",
+    "change": "byte-identical move",
+    "assert_tokens": 3,
+    "static_assert_tokens": 0
+  }
+]

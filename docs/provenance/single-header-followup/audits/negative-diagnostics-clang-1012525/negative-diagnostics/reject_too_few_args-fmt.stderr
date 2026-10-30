@@ -1,0 +1,31 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_too_few_args.cpp:5:23: error: call to consteval function 'fmt::fstring<int>::fstring<7UL>' is not a constant expression
+    5 |   NEG_EXPECT_REJECTED("{} {}\n", 1);
+      |                       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2432:36: note: non-constexpr function 'report_error' cannot be used in a constant expression
+ 2432 |     if (arg_id >= ctx->num_args()) report_error("argument not found");
+      |                                    ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:880:5: note: in call to 'this->do_check_arg_id(1)'
+  880 |     do_check_arg_id(id);
+      |     ^~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1258:14: note: in call to 'this->next_arg_id()'
+ 1258 |     int id = base::next_arg_id();
+      |              ^~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1718:50: note: in call to 'this->context_.next_arg_id()'
+ 1718 |   FMT_CONSTEXPR auto on_arg_id() -> int { return context_.next_arg_id(); }
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1608:34: note: in call to 'handler.on_arg_id()'
+ 1608 |     handler.on_replacement_field(handler.on_arg_id(), begin);
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1651:19: note: in call to 'parse_replacement_field<char, fmt::detail::format_string_checker<char, 1, 0, false> &>(&"{} {}\n"[4], &"{} {}\n"[6], checker(this->str, arg_pack()))'
+ 1651 |       begin = p = parse_replacement_field(p - 1, end, handler);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2722:7: note: in call to 'parse_format_string<char, fmt::detail::format_string_checker<char, 1, 0, false>>({&"{} {}\n"[0], 6}, checker(this->str, arg_pack()))'
+ 2722 |       parse_format_string<char>(str, checker(str, arg_pack()));
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_too_few_args.cpp:5:23: note: in call to 'fstring<7UL>("{} {}\n")'
+    5 |   NEG_EXPECT_REJECTED("{} {}\n", 1);
+      |                       ^~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:653:27: note: declared here
+  653 | FMT_NORETURN FMT_API void report_error(const char* message);
+      |                           ^
+1 error generated.

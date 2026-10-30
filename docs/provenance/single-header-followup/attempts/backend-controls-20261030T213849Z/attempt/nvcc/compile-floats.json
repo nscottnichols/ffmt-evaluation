@@ -1,0 +1,38 @@
+{
+  "name": "compile-floats",
+  "argv": [
+    "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc",
+    "-std=c++20",
+    "-arch=sm_80",
+    "--extended-lambda",
+    "--expt-relaxed-constexpr",
+    "-ccbin",
+    "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+    "-Xcompiler=-Wall,-Werror,-fno-fast-math",
+    "-Iinclude",
+    "-isystem",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+    "-DTEST_NO_MAIN",
+    "-O2",
+    "-x",
+    "cu",
+    "-dc",
+    "test/test_floats.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/floats.o"
+  ],
+  "command": "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc -std=c++20 -arch=sm_80 --extended-lambda --expt-relaxed-constexpr -ccbin /soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -Xcompiler=-Wall,-Werror,-fno-fast-math -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -DTEST_NO_MAIN -O2 -x cu -dc test/test_floats.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/floats.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/worktrees/nvcc",
+  "started_utc": "2026-10-30T21:39:41.729582+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 311.978,
+  "stdout": {
+    "path": "nvcc/compile-floats.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "nvcc/compile-floats.stderr",
+    "sha256": "dea7008d1839a4833e2ae28c98722241dfdf4a633016ba46ba0c35769ac767ed"
+  }
+}

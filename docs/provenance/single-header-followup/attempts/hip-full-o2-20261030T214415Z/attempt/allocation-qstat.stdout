@@ -1,0 +1,41 @@
+JobID: 1012529
+    JobName           : ffmt-followup-backend-controls-20261030T213849Z
+    User              : nnichols
+    WallTime          : 02:00:00
+    QueuedTime        : 00:00:02
+    RunTime           : 00:05:17
+    TimeRemaining     : 01:54:42
+    Nodes             : 1
+    State             : running
+    Location          : cpl00
+    Mode              : script
+    Procs             : 1
+    Preemptable       : False
+    User_Hold         : False
+    Admin_Hold        : False
+    Queue             : cpl_8354H
+    StartTime         : Fri Oct 30 21:38:58 2026 +0000 (UTC)
+    Index             : None
+    SubmitTime        : Fri Oct 30 21:38:55 2026 +0000 (UTC)
+    Path              : /home/nnichols/scratch_atlas-esp/local/the_silver_searcher/the_silver_searcher-2.2.0-login_node/bin:/home/nnichols/scratch_atlas-esp/local/the_silver_searcher/the_silver_searcher-2.2.0-login_node/bin:/home/nnichols/.codex/tmp/arg0/codex-arg01WULYA:/home/nnichols/scratch_atlas-esp/local/the_silver_searcher/the_silver_searcher-2.2.0-login_node/bin:/home/nnichols/scratch_atlas-esp/local/the_silver_searcher/the_silver_searcher-2.2.0-login_node/bin:/home/nnichols/.local/bin:/home/nnichols/scratch_atlas-esp/local/the_silver_searcher/the_silver_searcher-2.2.0-login_node/bin:/gpfs/jlse-fs0/projects/AtlasESP/local/julia/julia-v1.10.1/bin:/home/nnichols/scratch_atlas-esp/local/the_silver_searcher/the_silver_searcher-2.2.0-login_node/bin:/usr/share/Modules/bin:/home/nnichols/.local/bin:/usr/local/bin:/usr/bin:/bin:/home/nnichols/.local/bin:/home/nnichols/bin:/home/nnichols/.local/bin:/home/nnichols/bin:/home/nnichols/.local/bin:/home/nnichols/bin
+    OutputDir         : /home/nnichols
+    ErrorPath         : /home/nnichols/ffmt-followup-backend-controls-20261030T213849Z.error
+    OutputPath        : /home/nnichols/ffmt-followup-backend-controls-20261030T213849Z.output
+    Envs              : COBALT_JOBID=1012529
+    Command           : /bin/bash
+    Args              : /vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/run-cobalt.sh
+    Kernel            : default
+    KernelOptions     : None
+    ION_Kernel        : default
+    ION_KernelOptions : None
+    Project           : None
+    Dependencies      : 
+    S                 : R
+    Notify            : None
+    Score             :   0.1  
+    Maxtasktime       : None
+    attrs             : {}
+    dep_frac          : None
+    user_list         : nnichols
+    Geometry          : Any
+

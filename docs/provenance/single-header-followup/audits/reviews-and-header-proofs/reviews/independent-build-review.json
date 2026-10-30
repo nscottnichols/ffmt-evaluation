@@ -1,0 +1,221 @@
+{
+  "reviewer": "single_header (independent of build cleanup implementation)",
+  "starting_revision": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "current_revision": "859bd2c2df3460212d08c1ed9444673349075921",
+  "registration_checks": [
+    {
+      "suite": "chrono",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_accounting",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_conversion",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_floating",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_floating_portable",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_format_as",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_formatters",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_forwarding",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_int128",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_legacy",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_migration",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_parsing",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_primitives",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "core_unicode",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "engine_bitint",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "engine_extended",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "engine_fast_math",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "engine_legacy_hook",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "engine_quad",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "engine_transport",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "enum",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "family_support",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "feature_integration",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "formatter_composition",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "legacy_forwarding",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "named_arguments",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "printf",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "ranges",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "ranges_forwarding",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "ranges_iterators",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "std",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "std23",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "style",
+      "source_reference_flags_optional_and_standard_preserved": true
+    },
+    {
+      "suite": "transport_forwarding",
+      "source_reference_flags_optional_and_standard_preserved": true
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "make",
+        "--no-print-directory",
+        "-n",
+        "CXX=g++",
+        "test-portable"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "2f05db98e17edcfa0a001904d91bf2c0067194ff8b967049a85a86c06c74c6c3"
+    },
+    {
+      "command": [
+        "make",
+        "--no-print-directory",
+        "-n",
+        "CXX=g++",
+        "test-cxx23"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "046f39641b80d040a83ee12fbe6b6ee8847bbdf412e3bccf4cf44735293ea905"
+    },
+    {
+      "command": [
+        "make",
+        "--no-print-directory",
+        "-n",
+        "CXX=g++",
+        "test-single-header"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "32e8ff6a4097fd89e741b1c81044670212131ef6a831aaf3b3fa165953ad43fb"
+    },
+    {
+      "command": [
+        "make",
+        "--no-print-directory",
+        "-n",
+        "CXX=g++",
+        "USE_HIP=1",
+        "OFFLOAD_ARCH=gfx90a",
+        "compile-hip"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "2aac28613a84361a6223f0d5fea8972f2aeba70317b6419804886d6cf5306f2f"
+    }
+  ],
+  "infrastructure_unit_tests": {
+    "command": [
+      "/home/nnichols/.local/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "test",
+      "-p",
+      "test_infrastructure.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "passed": 9
+  },
+  "manual_checks": [
+    "CMake parses the same explicit inventory as Make. All 34 former registered capabilities remain, with C++23 opted in explicitly.",
+    "The single-header Make command and CMake target receive only the copied base.hpp include directory, without the ffmt interface target or fmt reference linkage.",
+    "The original Make reporter permits exit 77 only for declared optional tests; an unexpected exit 77 fails.",
+    "Make and CMake preserve C++20 as the default. C++23 is selected only when explicitly requested.",
+    "The negative driver retains three positive controls, each syntax control, and three rejection variants. Compiler crashes and missing headers fail.",
+    "Host CI calls the same test-portable target. The device workflow retains its existing compilation routes.",
+    "Coverage uses the retained source inventory and reporting policy. Optional extensions and fast-math exclusions remain separate."
+  ],
+  "findings": [],
+  "limitations": [
+    "No C++ compilation was performed on the login node. Allocated Make, CMake, backend and evaluation results are reported separately by the root agent.",
+    "Static review does not newly qualify hardware execution or historical measurement pins."
+  ]
+}

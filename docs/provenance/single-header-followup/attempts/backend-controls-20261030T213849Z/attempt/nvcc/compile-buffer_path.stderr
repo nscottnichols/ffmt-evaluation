@@ -1,0 +1,36 @@
+include/ffmt/base.hpp(6544): warning #20012-D: __host__ annotation is ignored on a function("text_style") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr text_style() = default;
+                   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+include/ffmt/base.hpp(6544): warning #20012-D: __device__ annotation is ignored on a function("text_style") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr text_style() = default;
+                                         ^
+
+include/ffmt/base.hpp(6550): warning #20012-D: __host__ annotation is ignored on a function("operator==") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr bool operator==(const text_style &) const = default;
+                   ^
+
+include/ffmt/base.hpp(6550): warning #20012-D: __device__ annotation is ignored on a function("operator==") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr bool operator==(const text_style &) const = default;
+                                         ^
+
+include/ffmt/base.hpp(6544): warning #20012-D: __host__ annotation is ignored on a function("text_style") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr text_style() = default;
+                   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+include/ffmt/base.hpp(6544): warning #20012-D: __device__ annotation is ignored on a function("text_style") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr text_style() = default;
+                                         ^
+
+include/ffmt/base.hpp(6550): warning #20012-D: __host__ annotation is ignored on a function("operator==") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr bool operator==(const text_style &) const = default;
+                   ^
+
+include/ffmt/base.hpp(6550): warning #20012-D: __device__ annotation is ignored on a function("operator==") that is explicitly defaulted on its first declaration
+    __attribute__((host)) __attribute__((device)) constexpr bool operator==(const text_style &) const = default;
+                                         ^
+

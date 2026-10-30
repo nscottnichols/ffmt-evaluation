@@ -1,0 +1,13 @@
+{
+  "name": "compiler-version",
+  "argv": [
+    "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc",
+    "--version"
+  ],
+  "command": "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc --version",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z",
+  "started_utc": "2026-10-30T21:41:03.673967+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 2.935
+}

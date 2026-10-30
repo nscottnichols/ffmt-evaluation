@@ -1,0 +1,35 @@
+{
+  "name": "header-only-device-consumer",
+  "argv": [
+    "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+    "-std=c++20",
+    "-O2",
+    "-fno-fast-math",
+    "--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "-Wno-error=unknown-cuda-version",
+    "-Wno-error=unused-command-line-argument",
+    "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header",
+    "--cuda-path=/soft/compilers/cuda/cuda-12.9.1",
+    "-fopenmp",
+    "--offload-arch=sm_80",
+    "-foffload-lto",
+    "-c",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-openmp.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/llvm-openmp/header-only.o"
+  ],
+  "command": "/soft/compilers/llvm/release-22.1.8/bin/clang++ -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header --cuda-path=/soft/compilers/cuda/cuda-12.9.1 -fopenmp --offload-arch=sm_80 -foffload-lto -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-openmp.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/llvm-openmp/header-only.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/llvm-openmp",
+  "started_utc": "2026-10-30T21:40:44.668150+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 10.7,
+  "stdout": {
+    "path": "llvm-openmp/header-only-device-consumer.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "llvm-openmp/header-only-device-consumer.stderr",
+    "sha256": "bdf3171d1005291dc31c3688ba3328c35ef343199fe9561b0a0ff7495df539f4"
+  }
+}

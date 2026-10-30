@@ -1,0 +1,35 @@
+nvcc compiler-version pass 0
+hip compiler-version pass 0
+nvcc compile-integers pass 0
+hip make-backend pass 0
+hip header-only-device-consumer pass 0
+nvcc compile-floats pass 0
+nvcc compile-strings pass 0
+nvcc compile-layout pass 0
+nvcc compile-misc pass 0
+nvcc compile-formatter pass 0
+nvcc compile-buffer_path pass 0
+nvcc header-only-device-consumer pass 0
+{
+  "source_revision": "f3170f07df7774fb086849b077422e3330166aec",
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "job_id": "1012529",
+  "hostname": "cpl00",
+  "machine": "x86_64",
+  "routes": [
+    {
+      "route": "hip",
+      "status": "pass",
+      "manifest": "hip/manifest.json"
+    },
+    {
+      "route": "nvcc",
+      "status": "pass",
+      "manifest": "nvcc/manifest.json"
+    }
+  ],
+  "started_utc": "2026-10-30T21:39:11.474195+00:00",
+  "scope": "Compilation/link only. No accelerator execution. This control attempt forces CUDA language for NVCC and tests HIP at -O0 for gfx942. Neither command executes accelerator code.",
+  "finished_utc": "2026-10-30T21:52:24.219319+00:00",
+  "status": "pass"
+}

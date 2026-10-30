@@ -1,0 +1,43 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/source/test/negative/reject_float_dynamic_width.cpp:5:23: error: call to consteval function 'fmt::fstring<int, double>::fstring<6UL>' is not a constant expression
+    5 |   NEG_EXPECT_REJECTED("{:{}}", 1, 2.0);
+      |                       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1271:7: note: non-constexpr function 'report_error' cannot be used in a constant expression
+ 1271 |       report_error("width/precision is not integer");
+      |       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2440:5: note: in call to 'static_cast<compile_parse_context<char> *>(this)->check_dynamic_spec(1)'
+ 2440 |     static_cast<compile_parse_context<Char>*>(this)->check_dynamic_spec(arg_id);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1416:11: note: in call to 'ctx.check_dynamic_spec(1)'
+ 1416 |           ctx.check_dynamic_spec(id);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1433:17: note: in call to 'parse_dynamic_spec<char>(&"{:{}}"[3], &"{:{}}"[5], formatter<formatted_type, char>().native_formatter::specs_.format_specs::width, formatter<formatted_type, char>().native_formatter::specs_.native_formatter::width_ref, checker(this->str, arg_pack()).context_)'
+ 1433 |   auto result = parse_dynamic_spec(begin, end, specs.width, width_ref, ctx);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1532:15: note: in call to 'parse_width<char>(&"{:{}}"[2], &"{:{}}"[5], formatter<formatted_type, char>().native_formatter::specs_, formatter<formatted_type, char>().native_formatter::specs_.native_formatter::width_ref, checker(this->str, arg_pack()).context_)'
+ 1532 |       begin = parse_width(begin, end, specs, specs.width_ref, ctx);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2377:16: note: in call to 'parse_format_specs<char>(&"{:{}}"[2], &"{:{}}"[5], formatter<formatted_type, char>().native_formatter::specs_, checker(this->str, arg_pack()).context_, 1)'
+ 2377 |     auto end = parse_format_specs(ctx.begin(), ctx.end(), specs_, ctx, TYPE);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1687:10: note: (skipping 1 call in backtrace; use -fconstexpr-backtrace-limit=0 to see all)
+ 1687 |   return formatter<formatted_type, Char>().parse(ctx);
+      |          ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1738:42: note: in call to 'invoke_parse<int, char>(checker(this->str, arg_pack()).context_)'
+ 1738 |     if (id >= 0 && id < NUM_ARGS) return parse_funcs_[id](context_);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1636:11: note: in call to 'handler.on_format_specs(0, &"{:{}}"[2], &"{:{}}"[5])'
+ 1636 |   begin = handler.on_format_specs(arg_id, begin + 1, end);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1651:19: note: in call to 'parse_replacement_field<char, fmt::detail::format_string_checker<char, 2, 0, false> &>(&"{:{}}"[1], &"{:{}}"[5], checker(this->str, arg_pack()))'
+ 1651 |       begin = p = parse_replacement_field(p - 1, end, handler);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2722:7: note: in call to 'parse_format_string<char, fmt::detail::format_string_checker<char, 2, 0, false>>({&"{:{}}"[0], 5}, checker(this->str, arg_pack()))'
+ 2722 |       parse_format_string<char>(str, checker(str, arg_pack()));
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/source/test/negative/reject_float_dynamic_width.cpp:5:23: note: in call to 'fstring<6UL>("{:{}}")'
+    5 |   NEG_EXPECT_REJECTED("{:{}}", 1, 2.0);
+      |                       ^~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:653:27: note: declared here
+  653 | FMT_NORETURN FMT_API void report_error(const char* message);
+      |                           ^
+1 error generated.

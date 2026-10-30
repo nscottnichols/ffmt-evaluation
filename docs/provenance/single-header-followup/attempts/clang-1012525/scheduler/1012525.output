@@ -1,0 +1,11 @@
+checkout 0
+compiler 0
+make-portable 0
+cmake-configure 0
+cmake-build 0
+ctest 0
+install 0
+consumer-configure 0
+consumer-build 0
+consumer-run 0
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/clang-1012525/manifest.json

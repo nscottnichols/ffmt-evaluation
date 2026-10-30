@@ -1,0 +1,16 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_unterminated_spec.cpp:5:23: error: call to consteval function 'ffmt::basic_format_string<char, int>::basic_format_string<7UL>' is not a constant expression
+    5 |   NEG_EXPECT_REJECTED("{:}<5}", 1);
+      |                       ^
+include/ffmt/base.hpp:1237:5: note: non-constexpr function 'invalid_format_spec' cannot be used in a constant expression
+ 1237 |     consteval_error::invalid_format_spec();
+      |     ^
+include/ffmt/base.hpp:1245:5: note: in call to 'validate_literal<char, int>({6, &"{:}<5}"[0]})'
+ 1245 |     detail::validate_literal<Char, Args...>(str);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_unterminated_spec.cpp:5:23: note: in call to 'basic_format_string<7UL>("{:}<5}")'
+    5 |   NEG_EXPECT_REJECTED("{:}<5}", 1);
+      |                       ^~~~~~~~
+include/ffmt/base.hpp:1231:33: note: declared here
+ 1231 | [[noreturn]] FMT_HD inline void invalid_format_spec() { __builtin_trap(); }
+      |                                 ^
+1 error generated.

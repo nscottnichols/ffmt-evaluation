@@ -1,0 +1,29 @@
+{
+  "name": "make-backend",
+  "argv": [
+    "make",
+    "--no-print-directory",
+    "-j2",
+    "CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++",
+    "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument",
+    "USE_CUDA_CLANG=1",
+    "CUDA_ARCH=sm_80",
+    "CUDA_PATH=/soft/compilers/cuda/cuda-12.9.1",
+    "build/test_main_cuda"
+  ],
+  "command": "make --no-print-directory -j2 CXX=/soft/compilers/llvm/release-22.1.8/bin/clang++ FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt 'EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument' USE_CUDA_CLANG=1 CUDA_ARCH=sm_80 CUDA_PATH=/soft/compilers/cuda/cuda-12.9.1 build/test_main_cuda",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/cuda-clang",
+  "started_utc": "2026-10-30T21:35:31.027361+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 435.532,
+  "stdout": {
+    "path": "cuda-clang/make-backend.stdout",
+    "sha256": "50f7b09239e823db8275cef294bae9588db2155b6bbdb7011720d2fef683212d"
+  },
+  "stderr": {
+    "path": "cuda-clang/make-backend.stderr",
+    "sha256": "f20038ba50814665a55c722e33c36efb6c27fe218835e4e55828a01411e1ac56"
+  }
+}
