@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Select external ffmt sources and launch portable library tools on JLSE."""
+"""Select external ffmt sources and launch evaluation-owned or historical runners."""
 import argparse
 import datetime
 import hashlib
@@ -23,11 +23,11 @@ def git(directory, *arguments):
 
 def add_source_arguments(parser, *, revision=True):
     parser.add_argument("--ffmt-checkout", type=Path, default=os.environ.get("FFMT_CHECKOUT"),
-                        help="Existing checkout containing the portable ffmt runners")
+                        help="Existing library checkout; evaluation owns the current campaign runners")
     parser.add_argument("--source-root", type=Path, default=os.environ.get("FFMT_SOURCE_ROOT"),
                         help="Library source repository; defaults to --ffmt-checkout")
     parser.add_argument("--runner-revision", default=os.environ.get("FFMT_RUNNER_REVISION"),
-                        help="Full immutable ffmt commit to bootstrap when no checkout is supplied")
+                        help="Full immutable historical runner commit; leaves the library source selection unchanged")
     parser.add_argument("--ffmt-repository", default=os.environ.get("FFMT_REPOSITORY", DEFAULT_REPOSITORY))
     if revision:
         parser.add_argument("--revision", help="Library revision in --source-root; existing checkouts default to WORKTREE")
@@ -54,20 +54,37 @@ def bootstrap(repository, revision):
 def select_sources(args):
     requested = getattr(args, "revision", None)
     checkout = args.ffmt_checkout
+    pinned_source = None
     if checkout is None:
         if not args.runner_revision and not re.fullmatch(r"[0-9a-fA-F]{40}", requested or ""):
             raise ValueError("Without --ffmt-checkout supply a full 40-character --revision or --runner-revision")
         checkout = bootstrap(args.ffmt_repository, args.runner_revision or LIBRARY_PIN["runner_commit"])
         requested = requested or args.runner_revision
+        # An older cached runner need not contain a newly pinned source object.
+        # Cache that source independently without moving or repinning the runner.
+        if not args.source_root and re.fullmatch(r"[0-9a-fA-F]{40}", requested or ""):
+            runner_pin = args.runner_revision or LIBRARY_PIN["runner_commit"]
+            if requested.lower() != runner_pin.lower():
+                pinned_source = bootstrap(args.ffmt_repository, requested)
     checkout = Path(checkout).expanduser().resolve()
-    source = Path(args.source_root or checkout).expanduser().resolve()
-    for directory in (checkout, source):
-        if not (directory / "include/ffmt").is_dir():
-            raise ValueError("Not an ffmt checkout: " + str(directory))
-        git(directory, "rev-parse", "--show-toplevel")
+    source = Path(args.source_root or pinned_source or checkout).expanduser().resolve()
+    if not (source / "include/ffmt").is_dir():
+        raise ValueError("Not an ffmt source checkout: " + str(source))
+    git(source, "rev-parse", "--show-toplevel")
+    # Older checkouts retain their original runner and fixture identities. New
+    # library checkouts contain only the production header and portable tests;
+    # campaign snapshotting and backend orchestration are owned here.
+    if args.runner_revision and args.ffmt_checkout is not None:
+        checkout = bootstrap(args.ffmt_repository, args.runner_revision)
     runner = checkout / "tools/conformance.py"
+    if not runner.is_file():
+        if args.runner_revision:
+            raise ValueError("Explicit runner revision contains no campaign runner; preserve that pin and select a historical runner revision with tools/conformance.py")
+        checkout = ROOT / "tools/campaign_runner"
+        runner = checkout / "tools/conformance.py"
+    git(checkout, "rev-parse", "--show-toplevel")
     if not runner.is_file() or "FFMT_WORKSPACE" not in runner.read_text() or "FFMT_SOURCE_ROOT" not in runner.read_text():
-        raise ValueError("The runner checkout predates the portable split; supply a current --ffmt-checkout and use --source-root/--revision for historical library code")
+        raise ValueError("Runner lacks the independent source interface; select a full historical --runner-revision or install the evaluation campaign runner")
     revision = requested or "WORKTREE"
     if revision != "WORKTREE":
         revision = git(source, "rev-parse", "--verify", revision + "^{commit}")
@@ -107,7 +124,7 @@ def load_conformance(args):
 
 
 def launch(tool, argv=None):
-    parser = argparse.ArgumentParser(description="Run external ffmt " + tool + " with evaluation profiles", allow_abbrev=False)
+    parser = argparse.ArgumentParser(description="Evaluate external ffmt " + tool + " with evaluation profiles", allow_abbrev=False)
     add_source_arguments(parser)
     parser.add_argument("--profile", default="local")
     parser.add_argument("--output", type=Path)

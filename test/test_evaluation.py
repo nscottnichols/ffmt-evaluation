@@ -106,6 +106,49 @@ out=Path(a.output);out.mkdir(parents=True,exist_ok=False)
                     (workspace / "artifacts/smoke/manifest.json").read_bytes()).hexdigest())
                 self.assertFalse((workspace / "include").exists())
 
+    def test_single_header_checkout_uses_evaluation_owned_runner(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            library = base / "library"
+            self.repository(library)
+            # Model the simplified library: no campaign scripts are installed.
+            for tool in (library / "tools").iterdir():
+                tool.unlink()
+            subprocess.run(["git", "-C", str(library), "add", "-u"], check=True)
+            subprocess.run(["git", "-C", str(library), "-c", "user.name=ffmt test",
+                            "-c", "user.email=test@example.invalid", "-c", "core.hooksPath=/dev/null",
+                            "commit", "--quiet", "--no-gpg-sign", "-m", "portable library only"], check=True)
+            source_commit = evaluation.git(library, "rev-parse", "HEAD")
+            workspace = base / "evaluation"
+            profiles = self.workspace(workspace)
+            historical = base / "historical-runner"
+            self.repository(historical)
+            owned = workspace / "tools/campaign_runner/tools"
+            owned.mkdir(parents=True)
+            for tool in ("conformance", "benchmark"):
+                (owned / (tool + ".py")).write_bytes((historical / "tools" / (tool + ".py")).read_bytes())
+            with mock.patch.object(evaluation, "ROOT", workspace), mock.patch.object(evaluation, "PROFILES", profiles):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(evaluation.launch("conformance", ["--ffmt-checkout", str(library),
+                        "--revision", source_commit, "--output", "artifacts/smoke"]), 0)
+                receipt_path = next((workspace / "artifacts/launchers").glob("*.json"))
+                receipt = json.loads(receipt_path.read_text())
+                self.assertEqual(receipt["sources"]["source_commit"], source_commit)
+                self.assertEqual(receipt["sources"]["runner_checkout"], str(owned.parent))
+                self.assertEqual(receipt["command"][1], str(owned / "conformance.py"))
+                self.assertFalse((owned.parent / "include").exists())
+                self.assertEqual(receipt["sources"]["configured_library_pin"], evaluation.LIBRARY_PIN)
+
+    def test_explicit_runner_pin_is_never_replaced_by_owned_runner(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            library = Path(temporary) / "library"
+            revision = self.repository(library)
+            for tool in (library / "tools").iterdir():
+                tool.unlink()
+            with mock.patch.object(evaluation, "bootstrap", return_value=library), \
+                    self.assertRaisesRegex(ValueError, "Explicit runner revision"):
+                evaluation.select_sources(self.arguments(library, runner_revision=revision))
+
     def test_explicit_pin_bootstraps_once_and_preserves_source_identity(self):
         with tempfile.TemporaryDirectory() as temporary:
             base = Path(temporary)
@@ -123,6 +166,35 @@ out=Path(a.output);out.mkdir(parents=True,exist_ok=False)
                     self.assertEqual(evaluation.bootstrap(str(repository), commit), checkout)
                     self.assertFalse(any("clone" in call.args[0] or "fetch" in call.args[0]
                                          for call in operation.call_args_list))
+
+    def test_new_source_pin_is_cached_separately_from_historical_runner(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            repository = base / "repository"
+            runner_pin = self.repository(repository)
+            for tool in (repository / "tools").iterdir():
+                tool.unlink()
+            (repository / "include/ffmt/core.hpp").write_text("new single implementation source")
+            subprocess.run(["git", "-C", str(repository), "add", "-u"], check=True)
+            subprocess.run(["git", "-C", str(repository), "-c", "user.name=ffmt test",
+                            "-c", "user.email=test@example.invalid", "-c", "core.hooksPath=/dev/null",
+                            "commit", "--quiet", "--no-gpg-sign", "-m", "new library source"], check=True)
+            source_pin = evaluation.git(repository, "rev-parse", "HEAD")
+            workspace = base / "evaluation"
+            profiles = self.workspace(workspace)
+            pin = dict(evaluation.LIBRARY_PIN, runner_commit=runner_pin)
+            with mock.patch.object(evaluation, "ROOT", workspace), \
+                    mock.patch.object(evaluation, "PROFILES", profiles), \
+                    mock.patch.object(evaluation, "LIBRARY_PIN", pin):
+                checkout, source, revision, environment = evaluation.select_sources(
+                    self.arguments(ffmt_repository=str(repository), revision=source_pin))
+                self.assertNotEqual(checkout, source)
+                self.assertEqual(evaluation.git(checkout, "rev-parse", "HEAD"), runner_pin)
+                self.assertEqual(evaluation.git(source, "rev-parse", "HEAD"), source_pin)
+                self.assertEqual(revision, source_pin)
+                self.assertEqual(environment["FFMT_SOURCE_ROOT"], str(source))
+                self.assertTrue((checkout / "tools/conformance.py").is_file())
+                self.assertFalse((source / "tools/conformance.py").exists())
 
     def test_dry_run_does_not_create_evidence_or_submit(self):
         with tempfile.TemporaryDirectory() as temporary:

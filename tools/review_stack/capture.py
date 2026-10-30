@@ -197,7 +197,8 @@ def main():
                       capture_tool=dict(path=str(Path(__file__).resolve()),
                           sha256=sha256(Path(__file__).read_bytes()), invocation=sys.argv,
                           cwd=str(Path.cwd())),
-                      cobalt_jobid=(manifest or {}).get("cobalt_jobid") or (submission or {}).get("jobid"),
+                      cobalt_jobid=(manifest or {}).get("cobalt_jobid") or (manifest or {}).get("jobid")
+                          or (submission or {}).get("jobid"),
                       stage_status_counts=dict(stage_counts),
                       roots=[dict(label=label, original_path=str(path), handwritten_visible=visible)
                              for label, path, visible in roots],

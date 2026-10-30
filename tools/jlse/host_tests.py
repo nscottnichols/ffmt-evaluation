@@ -46,6 +46,19 @@ def main():
         conformance, checkout, source_root = evaluation.load_conformance(a)
     except (ValueError, OSError) as error:
         p.error(str(error))
+    selected_tests = a.test or DEFAULT_TESTS
+    missing_fixtures = sorted({
+        test_options(filename)[0] for filename in selected_tests
+        if not (checkout / "test/conformance" / test_options(filename)[0]).is_file()
+    })
+    if missing_fixtures:
+        p.error(
+            "This historical host recipe requires its original standalone fixtures; "
+            "the selected runner is missing: " + ", ".join(missing_fixtures) + ". "
+            "Select --runner-revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9 "
+            "to retain the original fixture identity, or validate the current library "
+            "with tools/jlse/build_checks.py (its portable Make/CMake tests). "
+            "No compiler or source snapshot was started.")
     output = ROOT / "artifacts" / a.profile / ("host-tests-" + os.environ["COBALT_JOBID"])
     output.mkdir(parents=True, exist_ok=True)
     hashes = conformance.snapshot(output / "source", a.revision)
@@ -67,7 +80,7 @@ def main():
     manifest["fmt_build"] = conformance.record(build)
     failed = bool(build["exit_code"])
     if not failed:
-        for filename in a.test or DEFAULT_TESTS:
+        for filename in selected_tests:
             fixture, standard, defines = test_options(filename)
             # Native Arm long double is tested separately. Do not force fmt's
             # __float128 extension on a compiler that does not expose that type.
