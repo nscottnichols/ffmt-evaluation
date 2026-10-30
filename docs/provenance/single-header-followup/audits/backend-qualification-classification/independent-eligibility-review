@@ -1,0 +1,66 @@
+{
+  "reviewer": "build_cleanup, independent of backend operator",
+  "final_nvcc_status": "pass",
+  "nvcc_steps_checked": [
+    {
+      "step": "compile-integers",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    },
+    {
+      "step": "compile-floats",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    },
+    {
+      "step": "compile-strings",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    },
+    {
+      "step": "compile-layout",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    },
+    {
+      "step": "compile-misc",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    },
+    {
+      "step": "compile-formatter",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    },
+    {
+      "step": "compile-buffer_path",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    },
+    {
+      "step": "header-only-device-consumer",
+      "exit_code": 0,
+      "explicit_cuda_language": true
+    }
+  ],
+  "all_device_compile_steps_successfully_forced_cuda": true,
+  "hip_full_shared_cases_gfx942_O2": {
+    "status": "pass",
+    "exit_code": 0,
+    "command": "make --no-print-directory -j2 CXX=/soft/compilers/rocm/rocm-7.0.2/bin/hipcc FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt 'EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -O2' USE_HIP=1 OFFLOAD_ARCH=gfx942 compile-hip",
+    "source_revision": "f3170f07df7774fb086849b077422e3330166aec"
+  },
+  "hip_baseline_differential": {
+    "all_pairs_match": true,
+    "gfx90a_O2": "Both baseline471627 and finalf317 fail; direct printf control passes. Preserve as pre-existing compiler/transport interaction rather than universal HIP printf failure."
+  },
+  "eligibility": [
+    "NVCC1012527 and1012528 compile exits are ineligible for CUDA qualification because language was not forced; original manifests remain unchanged with correction sidecar.",
+    "Corrected NVCC1012529 explicitly forces -x cu for all7shared cases and isolated header consumer.",
+    "HIP gfx942O0/gfx942O2 full shared cases compile; no device execution or hardware measurements."
+  ],
+  "limitations": [
+    "Compilation/link and source/command review only. No accelerator execution.",
+    "No claim that every formatter family or every compiler/architecture is qualified."
+  ]
+}

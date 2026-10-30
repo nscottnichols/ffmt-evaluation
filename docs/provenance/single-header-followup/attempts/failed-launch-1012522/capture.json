@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/attempts/failed-launch-1012522",
+      "--input",
+      "launch=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/failed-launch-1012522",
+      "--input",
+      "ssh-compatibility=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/cobalt-ssh-compatibility.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "launch",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/failed-launch-1012522",
+      "handwritten_visible": true
+    },
+    {
+      "label": "ssh-compatibility",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/cobalt-ssh-compatibility.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "launch/1012522.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/failed-launch-1012522/1012522.cobaltlog",
+      "storage": "visible",
+      "bytes": 2088,
+      "sha256": "a84c2d22a3d95f27b956b4aaec06bd5f304dc9a033d2032fdab960080dc09da9"
+    },
+    {
+      "relative_path": "launch/1012522.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/failed-launch-1012522/1012522.error",
+      "storage": "visible",
+      "bytes": 224,
+      "sha256": "9a8c0de1ad5e950203d1e2ddd18e082491bbe38903fd3ca825fd611f4f41d052"
+    },
+    {
+      "relative_path": "launch/1012522.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/failed-launch-1012522/1012522.output",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "launch/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/failed-launch-1012522/submission.json",
+      "storage": "visible",
+      "bytes": 525,
+      "sha256": "96cf35cdfc798481fe46d09b14d51b2fc1152bac6da72922c3b7115d627dabd2"
+    },
+    {
+      "relative_path": "ssh-compatibility",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/cobalt-ssh-compatibility.json",
+      "storage": "visible",
+      "bytes": 454,
+      "sha256": "d3db1f1ae5dc42068525586d43c4b9da0a5c80cb389ef9cf91894e20bfee90f3"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

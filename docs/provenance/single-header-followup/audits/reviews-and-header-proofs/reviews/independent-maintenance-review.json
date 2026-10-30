@@ -1,0 +1,166 @@
+{
+  "reviewer": "build_cleanup, independent of production consolidation and C++ case migration",
+  "scope": [
+    "Self-contained production header and compatibility paths",
+    "C++ fixture/direct-regression migration and small comparison helper"
+  ],
+  "production": {
+    "self_includes": [],
+    "directly_maintained_header": true,
+    "compatibility_wrapper_count": 37,
+    "all_wrappers_three_lines": true,
+    "Cxx23_expected_guard_retained": true
+  },
+  "direct_assertions": {
+    "source_count": 33,
+    "all_noninclude_lines_preserved": true,
+    "sources": [
+      {
+        "source": "test/direct/test_chrono.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_accounting.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_conversion.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_floating.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_format_as.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_formatters.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_forwarding.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_int128.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_legacy.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_migration.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_parsing.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_primitives.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_core_unicode.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_engine_bitint.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_engine_extended.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_engine_fast_math.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_engine_legacy_hook.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_engine_quad.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_engine_transport.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_enum.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_family_support.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_feature_integration.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_formatter_composition.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_legacy_forwarding.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_named_arguments.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_printf.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_ranges.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_ranges_forwarding.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_ranges_iterators.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_std.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_std23.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_style.cpp",
+        "noninclude_lines_preserved": true
+      },
+      {
+        "source": "test/direct/test_transport_forwarding.cpp",
+        "noninclude_lines_preserved": true
+      }
+    ]
+  },
+  "manual_review": [
+    "base.hpp presents dependency-ordered backend configuration, accounting, parsing, conversion, formatting, transport and adapters with section comments; no generated implementation, local include dependency or amalgamation step exists.",
+    "Only the original capture.hpp/shared-body infrastructure launches and compares backend stdout. The extracted test_reference_body.inc removes four copies of the host oracle block.",
+    "The 126-line reference.hpp helper serves direct in-memory checks and has no backend launcher, fixture discovery, source snapshots, scheduler or evidence manager.",
+    "Direct comparison helper preserves required/written sizes, zero/one/half truncation and complete sentinel suffix; runtime negative comparison first verifies pinned fmt rejects the same pattern.",
+    "Native CUDA/HIP test wrapper synchronizes and checks launch/execution errors before accepting matching stdout.",
+    "Existing host/device body guards and C++23 expected guards remain visible in directly maintained code. C++20 remains the supported base language version.",
+    "Standalone consumer is intentionally isolated from both compatibility wrapper tree and fmt oracle; it checks named formatting, required size/truncation/sentinels, range formatting and error status."
+  ],
+  "findings": [],
+  "limitations": [
+    "No C++ compilation or accelerator execution on login node. Allocated runtime, negative compilation and backend checks must be reported separately.",
+    "Larger optional standard-library parse surface from one implementation header requires actual backend compiler checks; static review cannot establish compiler compatibility."
+  ]
+}

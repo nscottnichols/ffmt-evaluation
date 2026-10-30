@@ -1,0 +1,35 @@
+{
+  "name": "header-only-device-consumer",
+  "argv": [
+    "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc",
+    "-std=c++20",
+    "-O2",
+    "-arch=sm_80",
+    "--extended-lambda",
+    "--expt-relaxed-constexpr",
+    "-ccbin",
+    "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+    "-Xcompiler=-fno-fast-math",
+    "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/single-header",
+    "-x",
+    "cu",
+    "-dc",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-gpu.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only.o"
+  ],
+  "command": "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc -std=c++20 -O2 -arch=sm_80 --extended-lambda --expt-relaxed-constexpr -ccbin /soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -Xcompiler=-fno-fast-math -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/single-header -x cu -dc /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/header-only-gpu.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/nvcc/header-only.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-controls-20261030T213849Z/worktrees/nvcc",
+  "started_utc": "2026-10-30T21:52:19.117418+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 5.083,
+  "stdout": {
+    "path": "nvcc/header-only-device-consumer.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "nvcc/header-only-device-consumer.stderr",
+    "sha256": "8be8fc7440c9216daf3c70c458cafccf4079a762181f613afe025eb0d4439558"
+  }
+}

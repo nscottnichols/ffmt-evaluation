@@ -1,0 +1,3 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-gpu.cpp:2:1: error: '__global__' does not name a type
+    2 | __global__ void only_header(char *output) {
+      | ^~~~~~~~~~

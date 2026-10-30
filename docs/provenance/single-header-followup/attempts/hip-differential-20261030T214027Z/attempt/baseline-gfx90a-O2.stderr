@@ -1,0 +1,6 @@
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+2 errors generated when compiling for gfx90a.
+failed to execute:/soft/compilers/rocm/rocm-7.0.2/llvm/bin/clang++  --offload-arch=gfx90a  -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -x hip -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline/include -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/probe.cpp -o "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.o"

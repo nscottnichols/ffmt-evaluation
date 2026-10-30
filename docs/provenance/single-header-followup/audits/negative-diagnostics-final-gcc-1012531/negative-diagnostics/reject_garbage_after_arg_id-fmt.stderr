@@ -1,0 +1,14 @@
+In file included from /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include/fmt/format.h:41,
+                 from /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/source/test/negative/negative.hpp:18,
+                 from /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/source/test/negative/reject_garbage_after_arg_id.cpp:3:
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include/fmt/core.h: In function 'int main()':
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-gcc-1012531/source/test/negative/reject_garbage_after_arg_id.cpp:5:3:   in 'constexpr' expansion of 'fmt::v12::fstring<int>("{0x}")'
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include/fmt/core.h:2722:32:   in 'constexpr' expansion of 'fmt::v12::detail::parse_format_string<char, format_string_checker<char, 1, 0, false> >(((fmt::v12::fstring<int>*)this)->fmt::v12::fstring<int>::str, fmt::v12::detail::format_string_checker<char, 1, 0, false>(((fmt::v12::fstring<int>*)this)->fmt::v12::fstring<int>::str, (fmt::v12::fstring<int>::arg_pack(), fmt::v12::fstring<int>::arg_pack())))'
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include/fmt/core.h:1651:42:   in 'constexpr' expansion of 'fmt::v12::detail::parse_replacement_field<char, format_string_checker<char, 1, 0, false>&>((p + -1), end, (* & handler))'
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include/fmt/core.h:1622:25:   in 'constexpr' expansion of 'fmt::v12::detail::parse_arg_id<char, parse_replacement_field<char, format_string_checker<char, 1, 0, false>&>(const char*, const char*, format_string_checker<char, 1, 0, false>&)::id_adapter&>(begin, end, adapter)'
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include/fmt/core.h:1355:19: error: call to non-'constexpr' function 'void fmt::v12::report_error(const char*)'
+ 1355 |       report_error("invalid format string");
+      |       ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include/fmt/core.h:653:27: note: 'void fmt::v12::report_error(const char*)' declared here
+  653 | FMT_NORETURN FMT_API void report_error(const char* message);
+      |                           ^~~~~~~~~~~~

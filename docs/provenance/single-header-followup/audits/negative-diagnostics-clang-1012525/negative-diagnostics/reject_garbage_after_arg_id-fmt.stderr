@@ -1,0 +1,22 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_garbage_after_arg_id.cpp:5:23: error: call to consteval function 'fmt::fstring<int>::fstring<5UL>' is not a constant expression
+    5 |   NEG_EXPECT_REJECTED("{0x}", 1);
+      |                       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1355:7: note: non-constexpr function 'report_error' cannot be used in a constant expression
+ 1355 |       report_error("invalid format string");
+      |       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1622:13: note: in call to 'parse_arg_id<char, id_adapter &>(&"{0x}"[2], &"{0x}"[4], adapter)'
+ 1622 |     begin = parse_arg_id(begin, end, adapter);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1651:19: note: in call to 'parse_replacement_field<char, fmt::detail::format_string_checker<char, 1, 0, false> &>(&"{0x}"[1], &"{0x}"[4], checker(this->str, arg_pack()))'
+ 1651 |       begin = p = parse_replacement_field(p - 1, end, handler);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2722:7: note: in call to 'parse_format_string<char, fmt::detail::format_string_checker<char, 1, 0, false>>({&"{0x}"[0], 4}, checker(this->str, arg_pack()))'
+ 2722 |       parse_format_string<char>(str, checker(str, arg_pack()));
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_garbage_after_arg_id.cpp:5:23: note: in call to 'fstring<5UL>("{0x}")'
+    5 |   NEG_EXPECT_REJECTED("{0x}", 1);
+      |                       ^~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:653:27: note: declared here
+  653 | FMT_NORETURN FMT_API void report_error(const char* message);
+      |                           ^
+1 error generated.

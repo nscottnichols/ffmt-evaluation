@@ -1,0 +1,25 @@
+{
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "rome_7742",
+    "-n",
+    "1",
+    "-t",
+    "120",
+    "--cwd",
+    "/home/nnichols",
+    "--env",
+    "FFMT_VALIDATION_SYSTEM=rome",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate-portable.sh",
+    "clang",
+    "0111b73a1fc55b5ebbdade261b0c194d6c83a410"
+  ],
+  "stdout": "1012522\n",
+  "stderr": "",
+  "returncode": 0,
+  "submitted": "2026-10-30T21:29:07.085950+00:00"
+}

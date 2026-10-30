@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "evaluation_commit": "596c67243e5f9dc1eb886ef578c593e4acd0d955",
+  "checks": [
+    {
+      "ref": "refs/tags/archive/jlse-campaign-20261022",
+      "expected_commit": "52da08a40ec414528ee002163992d77259c54776",
+      "actual_commit": "52da08a40ec414528ee002163992d77259c54776",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/library-portable-20261022",
+      "expected_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "actual_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-stack-v1-20261023",
+      "expected_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+      "actual_commit": "aeff043614725d58d383c8add086f548d77d05eb",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-baseline",
+      "expected_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "actual_commit": "3fe258a87675c997667c899c2b0f0cad405aad5a",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-final",
+      "expected_commit": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "actual_commit": "0c2cb764d8ee436bc0221e88cefe417dcbb8d678",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-postfix",
+      "expected_commit": "98dba67cdb2dc4686cc512736ad92fdeaebeb63a",
+      "actual_commit": "98dba67cdb2dc4686cc512736ad92fdeaebeb63a",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/qualified/20261022-primary",
+      "expected_commit": "21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8",
+      "actual_commit": "21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/ci-review-waves",
+      "expected_commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "actual_commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/ci-resource-bounds",
+      "expected_commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "actual_commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/oracle-pin",
+      "expected_commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "actual_commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/build-registration",
+      "expected_commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "actual_commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/coverage-metrics",
+      "expected_commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "actual_commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/coverage-policy",
+      "expected_commit": "124eb4a049b3e08070e75e674d22290c982697c5",
+      "actual_commit": "124eb4a049b3e08070e75e674d22290c982697c5",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-process",
+      "expected_commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "actual_commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-negative",
+      "expected_commit": "29dc72cd6626176a54841f92c832638ffdd02f43",
+      "actual_commit": "29dc72cd6626176a54841f92c832638ffdd02f43",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-host-oracle",
+      "expected_commit": "493587da8d2c3ba1849dc41dc731f602f0609d24",
+      "actual_commit": "493587da8d2c3ba1849dc41dc731f602f0609d24",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/core-prepare",
+      "expected_commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "actual_commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/checked-config",
+      "expected_commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "actual_commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/accounting",
+      "expected_commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "actual_commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/parsing",
+      "expected_commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "actual_commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/primitives",
+      "expected_commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "actual_commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/unicode",
+      "expected_commit": "228f1238e343389a0a40f828e32946e3fef3b7bc",
+      "actual_commit": "228f1238e343389a0a40f828e32946e3fef3b7bc",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/formatter-compatibility",
+      "expected_commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "actual_commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/format-as",
+      "expected_commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "actual_commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/legacy-compatibility",
+      "expected_commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "actual_commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/conversion-preparation",
+      "expected_commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "actual_commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/floating-conversion",
+      "expected_commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "actual_commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/floating-formatting",
+      "expected_commit": "d5babb57d946351ed7ded793196f2bce83f3ebdf",
+      "actual_commit": "d5babb57d946351ed7ded793196f2bce83f3ebdf",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/transport",
+      "expected_commit": "c8ba4d2a4bab3ab873bb3137113518afb0fbda7a",
+      "actual_commit": "c8ba4d2a4bab3ab873bb3137113518afb0fbda7a",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/extended-integers",
+      "expected_commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "actual_commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/extended-floats",
+      "expected_commit": "85edaeac55d8e4634279381d81af9dc16b296b0e",
+      "actual_commit": "85edaeac55d8e4634279381d81af9dc16b296b0e",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-snapshots",
+      "expected_commit": "7ab4278dd949876f2eaaf811f3249e7cb105ad01",
+      "actual_commit": "7ab4278dd949876f2eaaf811f3249e7cb105ad01",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-isolation",
+      "expected_commit": "7969be714ab1eb8b295b7e88cba102e9e9177b67",
+      "actual_commit": "7969be714ab1eb8b295b7e88cba102e9e9177b67",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-oracle-negatives",
+      "expected_commit": "fb67604a9640a7deb77385322cbecd691d73c50e",
+      "actual_commit": "fb67604a9640a7deb77385322cbecd691d73c50e",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/migration",
+      "expected_commit": "0a478dbd84d0cde3df20e1ab28c8d706d0320b29",
+      "actual_commit": "0a478dbd84d0cde3df20e1ab28c8d706d0320b29",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/benchmark-primitives",
+      "expected_commit": "ed833e07cfffa4f8512939c30c9741b10d3ceb23",
+      "actual_commit": "ed833e07cfffa4f8512939c30c9741b10d3ceb23",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/benchmark-driver",
+      "expected_commit": "982e599a4492db2981bddaa0cfc00559145dbc5a",
+      "actual_commit": "982e599a4492db2981bddaa0cfc00559145dbc5a",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/benchmark-resources",
+      "expected_commit": "475436576cfe7c9bb2271b7ab4b10c90c7e48aa9",
+      "actual_commit": "475436576cfe7c9bb2271b7ab4b10c90c7e48aa9",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-adapter-support",
+      "expected_commit": "8947fbdca119ee796c7ee4634bc6b76dfd35ae68",
+      "actual_commit": "8947fbdca119ee796c7ee4634bc6b76dfd35ae68",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-cuda",
+      "expected_commit": "de9fd69aa93547316d26f7e54ed0b5c45dd23360",
+      "actual_commit": "de9fd69aa93547316d26f7e54ed0b5c45dd23360",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-hip",
+      "expected_commit": "bc6fc34ba65f31a82086f812d0b1f2a06bb5fe9f",
+      "actual_commit": "bc6fc34ba65f31a82086f812d0b1f2a06bb5fe9f",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-kokkos",
+      "expected_commit": "5e4d4c0d04eb08853d462a2b9cec9760151d8134",
+      "actual_commit": "5e4d4c0d04eb08853d462a2b9cec9760151d8134",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-numeric-memory",
+      "expected_commit": "00e2e06fd77f4491bfa8581243d51a36cc6f3399",
+      "actual_commit": "00e2e06fd77f4491bfa8581243d51a36cc6f3399",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-memory-cuda",
+      "expected_commit": "b67e460f5fdbfddb6f8cdb79080277eb69770c6c",
+      "actual_commit": "b67e460f5fdbfddb6f8cdb79080277eb69770c6c",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-memory-hip",
+      "expected_commit": "6448b4c1881ce339b6fed4cf45ed9015deca2bdf",
+      "actual_commit": "6448b4c1881ce339b6fed4cf45ed9015deca2bdf",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-memory-kokkos",
+      "expected_commit": "afd170b16db7655f1e8ecf3d4c31331b1b2ba64d",
+      "actual_commit": "afd170b16db7655f1e8ecf3d4c31331b1b2ba64d",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-openmp",
+      "expected_commit": "2805f3bbeef5a1eab3ca8b243c8abbedf04cef05",
+      "actual_commit": "2805f3bbeef5a1eab3ca8b243c8abbedf04cef05",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-memory-openmp",
+      "expected_commit": "51048b84a1b2ff4768d4508ef0b7208058be29f5",
+      "actual_commit": "51048b84a1b2ff4768d4508ef0b7208058be29f5",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-sycl",
+      "expected_commit": "797b726cb5ebd0d3b460920940eaf7ad9d6da25a",
+      "actual_commit": "797b726cb5ebd0d3b460920940eaf7ad9d6da25a",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/tool-memory-sycl",
+      "expected_commit": "73461de125a16ab0187ccbc78066d765e2b33d12",
+      "actual_commit": "73461de125a16ab0187ccbc78066d765e2b33d12",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/obsolete-deletion",
+      "expected_commit": "73738f95af68ab93513a92e7a80d40b7f83711ce",
+      "actual_commit": "73738f95af68ab93513a92e7a80d40b7f83711ce",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/shared-family",
+      "expected_commit": "b9999f8d758a0167785c0125f54e20bddd3d415b",
+      "actual_commit": "b9999f8d758a0167785c0125f54e20bddd3d415b",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/chrono",
+      "expected_commit": "e197c28903f613df82af2d78d4feea04cec4f0db",
+      "actual_commit": "e197c28903f613df82af2d78d4feea04cec4f0db",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/enum-helpers",
+      "expected_commit": "4c24fe81f8fb4c5f17d46ff6570a95daecf60ac0",
+      "actual_commit": "4c24fe81f8fb4c5f17d46ff6570a95daecf60ac0",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/named-arguments",
+      "expected_commit": "4ebeb584c8eedd61aab838919aaa365df34e51fe",
+      "actual_commit": "4ebeb584c8eedd61aab838919aaa365df34e51fe",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/ranges",
+      "expected_commit": "d7e676c5165baa660240462a6a720e3864ff21df",
+      "actual_commit": "d7e676c5165baa660240462a6a720e3864ff21df",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/standard-types",
+      "expected_commit": "7ad952af61534f17955bf3b441527ca07b08b6ba",
+      "actual_commit": "7ad952af61534f17955bf3b441527ca07b08b6ba",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/feature-integration",
+      "expected_commit": "b4c392fa553f42e3ff83f56ae5273ef1719bf7a4",
+      "actual_commit": "b4c392fa553f42e3ff83f56ae5273ef1719bf7a4",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/std23",
+      "expected_commit": "d1fbdef3723080f278b205f75e0f38017bf4cedc",
+      "actual_commit": "d1fbdef3723080f278b205f75e0f38017bf4cedc",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/styling",
+      "expected_commit": "25c7b8ebd9abeb03291624eda871b3bc5a2f2339",
+      "actual_commit": "25c7b8ebd9abeb03291624eda871b3bc5a2f2339",
+      "match": true
+    },
+    {
+      "ref": "refs/tags/archive/review-v2-attempt-20261023/typed-printf",
+      "expected_commit": "f3336f845900cedb14b91aeb1822a2793b132fa9",
+      "actual_commit": "f3336f845900cedb14b91aeb1822a2793b132fa9",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/ci-review-waves",
+      "expected_commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "actual_commit": "0ed1cb08f13eaeabfcba22ab078bed28a46eed5a",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/ci-resource-bounds",
+      "expected_commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "actual_commit": "7974eb6762e6a15d67afba53a32b19996e3926e8",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/oracle-pin",
+      "expected_commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "actual_commit": "4667a850a000fae69a7fd6a04888ee41df908c2d",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/build-registration",
+      "expected_commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "actual_commit": "d1e8f0e8e1eba7c47829d1d410362f8cc73041d1",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/coverage-metrics",
+      "expected_commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "actual_commit": "5739add3e1f03dff8deca692a0a75675be2c806f",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/coverage-policy",
+      "expected_commit": "465cc67d7769713b36e3789919edafb86a0c0d71",
+      "actual_commit": "465cc67d7769713b36e3789919edafb86a0c0d71",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-process",
+      "expected_commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "actual_commit": "575165ea7f1623a5b06b9d666a769676d3e21c07",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-negative",
+      "expected_commit": "c5b81a4d5288e7be393d83ea28332510285b765e",
+      "actual_commit": "c5b81a4d5288e7be393d83ea28332510285b765e",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-host-oracle",
+      "expected_commit": "4f2b6d380f3b03e453bf0d80a7ab2d26ec480c46",
+      "actual_commit": "4f2b6d380f3b03e453bf0d80a7ab2d26ec480c46",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/core-prepare",
+      "expected_commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "actual_commit": "99bc52ec468208a16956aa19a5d1e00819ebfefe",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/checked-config",
+      "expected_commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "actual_commit": "954454c422b816fd8296074cd7852dc923396f6c",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/accounting",
+      "expected_commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "actual_commit": "5e9a2cc28f453419f2555b49894ff347c80a8670",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/parsing",
+      "expected_commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "actual_commit": "11199fa8fd88f5278e8d17040b9313dee604290b",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/primitives",
+      "expected_commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "actual_commit": "5d7e0af475a3da5b8217842a02998229f7dc8536",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/unicode",
+      "expected_commit": "e285726a33a1d1fc0e3870a6e58589f25cd53c83",
+      "actual_commit": "e285726a33a1d1fc0e3870a6e58589f25cd53c83",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/formatter-compatibility",
+      "expected_commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "actual_commit": "7ee21c2a808b38744643cbeaad9517436f6281a2",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/format-as",
+      "expected_commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "actual_commit": "e3c863ca8ee6e46a90b65d8e8b93c7789c67b240",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/legacy-compatibility",
+      "expected_commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "actual_commit": "083601f4aca62444539571ae9eac03ddde1545a0",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/conversion-preparation",
+      "expected_commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "actual_commit": "543f6913b4ada63547df28004d7ca0273b617f09",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/floating-conversion",
+      "expected_commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "actual_commit": "dbd0b9f5fb1bf00982317161abdc7c66aa85aa17",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/floating-formatting",
+      "expected_commit": "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8",
+      "actual_commit": "509dbd5a28fcd0b8b549876a317c0a254cc4ccc8",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/transport",
+      "expected_commit": "105c853df03ef06ff29b6de819e78f6b23dd4dcb",
+      "actual_commit": "105c853df03ef06ff29b6de819e78f6b23dd4dcb",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/extended-integers",
+      "expected_commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "actual_commit": "61c59c73c12bfaa9f413b71cb40596c98e3961ef",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/extended-floats",
+      "expected_commit": "e44145c128c8cafcc061ada1de8553fcbb79e179",
+      "actual_commit": "e44145c128c8cafcc061ada1de8553fcbb79e179",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-snapshots",
+      "expected_commit": "4436d6208ed94795ee5ba9376aa76b0d00b5fe11",
+      "actual_commit": "4436d6208ed94795ee5ba9376aa76b0d00b5fe11",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-isolation",
+      "expected_commit": "1d0552f3961a9a7cecf415b444c258e218f60e86",
+      "actual_commit": "1d0552f3961a9a7cecf415b444c258e218f60e86",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-oracle-negatives",
+      "expected_commit": "661db66d492a18c308ae55358a59372bd7bf541e",
+      "actual_commit": "661db66d492a18c308ae55358a59372bd7bf541e",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/migration",
+      "expected_commit": "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+      "actual_commit": "f50f24930fb7875c6381e16cbb5db50ddec1eb1e",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/benchmark-primitives",
+      "expected_commit": "75353cc601c85b52dc066f724bfd4a56fbf37a6e",
+      "actual_commit": "75353cc601c85b52dc066f724bfd4a56fbf37a6e",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/benchmark-driver",
+      "expected_commit": "d50fe860d0424ceb002ab69cef6a9e5b4c65e83d",
+      "actual_commit": "d50fe860d0424ceb002ab69cef6a9e5b4c65e83d",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/benchmark-resources",
+      "expected_commit": "cf70347b467f436447b41ea74a493e74cdc2a3e7",
+      "actual_commit": "cf70347b467f436447b41ea74a493e74cdc2a3e7",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-adapter-support",
+      "expected_commit": "160bd04b3657bf2d33167f342bb0b360429f3c0b",
+      "actual_commit": "160bd04b3657bf2d33167f342bb0b360429f3c0b",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-cuda",
+      "expected_commit": "fe65f6fcdc7443a587986283387848303809eb1c",
+      "actual_commit": "fe65f6fcdc7443a587986283387848303809eb1c",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-hip",
+      "expected_commit": "f50afd9c6852f5d60d9eabdb45ff094281bab2b6",
+      "actual_commit": "f50afd9c6852f5d60d9eabdb45ff094281bab2b6",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-kokkos",
+      "expected_commit": "8c25ab61e046087f5330127cd479befcadbe8cb4",
+      "actual_commit": "8c25ab61e046087f5330127cd479befcadbe8cb4",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-numeric-memory",
+      "expected_commit": "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+      "actual_commit": "d729ba7b56c07ec711eb9a24e9e91553f661a69a",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-memory-cuda",
+      "expected_commit": "17288fc322f07956b78999bf438f10b7f3a4086b",
+      "actual_commit": "17288fc322f07956b78999bf438f10b7f3a4086b",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-memory-hip",
+      "expected_commit": "fd5eeb4d4be89c45c2765713d133c264a3c00687",
+      "actual_commit": "fd5eeb4d4be89c45c2765713d133c264a3c00687",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-memory-kokkos",
+      "expected_commit": "50540f30832e14ee0a67ee5bfbed173ecb694c83",
+      "actual_commit": "50540f30832e14ee0a67ee5bfbed173ecb694c83",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-openmp",
+      "expected_commit": "93f6cb1ff2af9a3d0488dfd73a38c3e2eb8f1cfc",
+      "actual_commit": "93f6cb1ff2af9a3d0488dfd73a38c3e2eb8f1cfc",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-memory-openmp",
+      "expected_commit": "a0d74e7370ddf6aa612fd5c368c0a86d46ae30f3",
+      "actual_commit": "a0d74e7370ddf6aa612fd5c368c0a86d46ae30f3",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-sycl",
+      "expected_commit": "d7aecfab035ffe7ff0963149ae7f25745cc0b365",
+      "actual_commit": "d7aecfab035ffe7ff0963149ae7f25745cc0b365",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/tool-memory-sycl",
+      "expected_commit": "2ce97b23c175321e92dc4b700d24927033911f88",
+      "actual_commit": "2ce97b23c175321e92dc4b700d24927033911f88",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/obsolete-deletion",
+      "expected_commit": "cd7fcfd406baf316271d8b88dc03f712fd157d6a",
+      "actual_commit": "cd7fcfd406baf316271d8b88dc03f712fd157d6a",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/shared-family",
+      "expected_commit": "c325e8408f512f38861f56983a7ec9b748290118",
+      "actual_commit": "c325e8408f512f38861f56983a7ec9b748290118",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/chrono",
+      "expected_commit": "862369f1856e7174106cacace253671be59e7271",
+      "actual_commit": "862369f1856e7174106cacace253671be59e7271",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/enum-helpers",
+      "expected_commit": "bdcea2b2afb856a364e14b7578af9e4199bb7745",
+      "actual_commit": "bdcea2b2afb856a364e14b7578af9e4199bb7745",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/named-arguments",
+      "expected_commit": "26f1a22c34b885d9b982a5856ae976ef8742510d",
+      "actual_commit": "26f1a22c34b885d9b982a5856ae976ef8742510d",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/ranges",
+      "expected_commit": "241df53a29ac8cf096aacd20542c87b33540c0bf",
+      "actual_commit": "241df53a29ac8cf096aacd20542c87b33540c0bf",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/standard-types",
+      "expected_commit": "98a1c1e67fba095bd678e0a1769a2ab89efa5084",
+      "actual_commit": "98a1c1e67fba095bd678e0a1769a2ab89efa5084",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/feature-integration",
+      "expected_commit": "dd407fc38b596fcda23152a122f12bf69829c18d",
+      "actual_commit": "dd407fc38b596fcda23152a122f12bf69829c18d",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/std23",
+      "expected_commit": "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3",
+      "actual_commit": "3a07a5f9e3aebd120ffb193a0723ba409ee3cfe3",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/styling",
+      "expected_commit": "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb",
+      "actual_commit": "ad9f041e98a32f730a9bd5e4e47e2aa496b826fb",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/typed-printf",
+      "expected_commit": "aa36d84aaa2a050e56fbca8d7df5085e92040e48",
+      "actual_commit": "aa36d84aaa2a050e56fbca8d7df5085e92040e48",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/cmake-package",
+      "expected_commit": "58472a3e12d68fd7941be8998456916d1fffd412",
+      "actual_commit": "58472a3e12d68fd7941be8998456916d1fffd412",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/cmake-tests",
+      "expected_commit": "6498c0c38449019200b962f978ef3dbef0511003",
+      "actual_commit": "6498c0c38449019200b962f978ef3dbef0511003",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/ci-sanitizers",
+      "expected_commit": "584253ca2c158308def053f80e2537d34e052120",
+      "actual_commit": "584253ca2c158308def053f80e2537d34e052120",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/ci-conformance",
+      "expected_commit": "493137b96467eaefe225f5c423dcc354db1dd4d4",
+      "actual_commit": "493137b96467eaefe225f5c423dcc354db1dd4d4",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/reproducer-relocation",
+      "expected_commit": "36b45e924da8da7312408f6f948ff63f6ea22594",
+      "actual_commit": "36b45e924da8da7312408f6f948ff63f6ea22594",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/api-index",
+      "expected_commit": "77df1adccd0448a46e73af6be2af9c5a2efbc1ee",
+      "actual_commit": "77df1adccd0448a46e73af6be2af9c5a2efbc1ee",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/backend-regression-selection",
+      "expected_commit": "baaea496731052b4d53657b8498708a7848e0d80",
+      "actual_commit": "baaea496731052b4d53657b8498708a7848e0d80",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/build-compiler-selection",
+      "expected_commit": "91ebaec92fa783b997f07bebff0d19c9bfc56564",
+      "actual_commit": "91ebaec92fa783b997f07bebff0d19c9bfc56564",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/build-header-dependencies",
+      "expected_commit": "9fa6e8fa26c13f78962ad4ff0447a60a3f5cafa5",
+      "actual_commit": "9fa6e8fa26c13f78962ad4ff0447a60a3f5cafa5",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/local-ignores",
+      "expected_commit": "c90c80e02ea7e070211693d329a7aaed21f7c089",
+      "actual_commit": "c90c80e02ea7e070211693d329a7aaed21f7c089",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/complete",
+      "expected_commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "actual_commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-transport",
+      "expected_commit": "f53ed014cbf252ec8dd52bef86d29fb8fe2d3cc5",
+      "actual_commit": "f53ed014cbf252ec8dd52bef86d29fb8fe2d3cc5",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-extended-floats",
+      "expected_commit": "14f5fd6093390f9fbfeff075b204c7a20a3ec137",
+      "actual_commit": "14f5fd6093390f9fbfeff075b204c7a20a3ec137",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-tool-isolation",
+      "expected_commit": "923c35e806d4efdf3382f334fe944938d46fe0c7",
+      "actual_commit": "923c35e806d4efdf3382f334fe944938d46fe0c7",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-migration",
+      "expected_commit": "138abf8736b7557bcc4e86addb5bb568546dcf2d",
+      "actual_commit": "138abf8736b7557bcc4e86addb5bb568546dcf2d",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-tool-memory-cuda",
+      "expected_commit": "b5c9b7c97490563dd542a670ae0a547b82367246",
+      "actual_commit": "b5c9b7c97490563dd542a670ae0a547b82367246",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-tool-memory-hip",
+      "expected_commit": "42d2adceb71e25cf1c5c7cfdc7d9a6a5bab2bc51",
+      "actual_commit": "42d2adceb71e25cf1c5c7cfdc7d9a6a5bab2bc51",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-tool-memory-kokkos",
+      "expected_commit": "696c2a17db900b8bd280234e16fe6ed72ac5567a",
+      "actual_commit": "696c2a17db900b8bd280234e16fe6ed72ac5567a",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-tool-memory-openmp",
+      "expected_commit": "50f4dbf5859427940a43b250ee4cae8430596846",
+      "actual_commit": "50f4dbf5859427940a43b250ee4cae8430596846",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-tool-memory-sycl",
+      "expected_commit": "d1366ecfb76dfa76b7abedf345cc03d1a0e0e3c5",
+      "actual_commit": "d1366ecfb76dfa76b7abedf345cc03d1a0e0e3c5",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-feature-integration",
+      "expected_commit": "f01e027fc830f033a370df985a3bd60f1a50b78d",
+      "actual_commit": "f01e027fc830f033a370df985a3bd60f1a50b78d",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-cmake-tests",
+      "expected_commit": "3c1c891f53557897049cae5fc1042365f36f6427",
+      "actual_commit": "3c1c891f53557897049cae5fc1042365f36f6427",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-ci-sanitizers",
+      "expected_commit": "0de166f452c258390f02c3f0b7036983b4b255ce",
+      "actual_commit": "0de166f452c258390f02c3f0b7036983b4b255ce",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-ci-conformance",
+      "expected_commit": "7720ff1ea455ea24ed6a181b9de34f5b31abf763",
+      "actual_commit": "7720ff1ea455ea24ed6a181b9de34f5b31abf763",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-api-index",
+      "expected_commit": "1c67328facf29f55e2b538d66315a042478403df",
+      "actual_commit": "1c67328facf29f55e2b538d66315a042478403df",
+      "match": true
+    },
+    {
+      "ref": "refs/heads/review-v2/base-complete",
+      "expected_commit": "d28fbd5c555529f35019a491fed38170e87591f1",
+      "actual_commit": "d28fbd5c555529f35019a491fed38170e87591f1",
+      "match": true
+    }
+  ],
+  "all_remote_refs_preserved": true,
+  "ref_count": 141,
+  "historical_library_pin": {
+    "schema_version": 1,
+    "repository": "https://github.com/nscottnichols/ffmt.git",
+    "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "source_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+  },
+  "platforms_library_json_sha256": "39639531241ee2d506f94d07d5339d04f213c24258312a6c847d7d9442ffcf1c",
+  "historical_pin_matches_pre_followup": true,
+  "offline_tests": {
+    "command": "python3 -B -m unittest discover -s test -v",
+    "passed": 76,
+    "stdout": "review-evaluation-596c672-unittest.stdout",
+    "stderr": "review-evaluation-596c672-unittest.stderr"
+  },
+  "historical_byte_verification": {
+    "command": "python3 -B tools/verify_provenance.py --ffmt-checkout ../ffmt --library-revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9 --check-source-refs",
+    "stdout": "review-provenance-596c672.stdout",
+    "stderr": "review-provenance-596c672.stderr",
+    "result": "pass"
+  },
+  "limitations": [
+    "Remote commit identities verified without mutating refs. Existing annotated tags are compared by their peeled commit identities.",
+    "Historical byte equivalence is verified against the original split snapshot; it does not qualify changed library sources or relabel old hardware measurements."
+  ]
+}

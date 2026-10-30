@@ -1,0 +1,5 @@
+mkdir -p build/single-header/ffmt
+cp include/ffmt/base.hpp build/single-header/ffmt/base.hpp
+echo 'g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -fsycl  -O2' | cmp -s - build/.flags || echo 'g++ -std=c++20 -Wall -Werror -fno-fast-math -Iinclude  -isystem third_party/fmt/include -fsycl  -O2' > build/.flags
+g++ -std=c++20 -Wall -Werror -fno-fast-math  -O2 -Ibuild/single-header test/test_single_header.cpp -o build/test_single_header
+fail=0; for bin in build/test_single_header; do t0=$(perl -MTime::HiRes=time -e 'printf("%d\n", time() * 1e9)'); ./$bin; rc=$?; ms=$(( ($(perl -MTime::HiRes=time -e 'printf("%d\n", time() * 1e9)') - t0) / 1000000 )); if [ $rc -eq 0 ]; then echo "${bin#build/}: PASS (${ms}ms)"; elif [ $rc -eq 77 ] && [[ "         build/test_core_int128      build/test_engine_bitint    build/test_engine_quad               build/test_std23 " == *" $bin "* ]]; then echo "${bin#build/}: SKIP (optional compiler capability)"; else echo "${bin#build/}: FAIL (${ms}ms)"; fail=1; fi; done; exit $fail

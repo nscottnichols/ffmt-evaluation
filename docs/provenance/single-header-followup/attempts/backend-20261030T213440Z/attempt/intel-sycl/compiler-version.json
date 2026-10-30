@@ -1,0 +1,21 @@
+{
+  "name": "compiler-version",
+  "argv": [
+    "/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx",
+    "--version"
+  ],
+  "command": "/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx --version",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/intel-sycl",
+  "started_utc": "2026-10-30T21:36:45.047315+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 0.04,
+  "stdout": {
+    "path": "intel-sycl/compiler-version.stdout",
+    "sha256": "ef5ffaafd72152613451acceeb5cb5b7c2a49c56213639563218905d391bfd6b"
+  },
+  "stderr": {
+    "path": "intel-sycl/compiler-version.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

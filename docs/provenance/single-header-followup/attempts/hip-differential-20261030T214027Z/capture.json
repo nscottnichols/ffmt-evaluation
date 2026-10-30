@@ -1,0 +1,787 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/attempts/hip-differential-20261030T214027Z",
+      "--input",
+      "attempt/baseline-gfx90a-O0.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.json",
+      "--input",
+      "attempt/baseline-gfx90a-O0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.stderr",
+      "--input",
+      "attempt/baseline-gfx90a-O0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.stdout",
+      "--input",
+      "attempt/baseline-gfx90a-O2.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.json",
+      "--input",
+      "attempt/baseline-gfx90a-O2.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.stderr",
+      "--input",
+      "attempt/baseline-gfx90a-O2.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.stdout",
+      "--input",
+      "attempt/baseline-gfx942-O0.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.json",
+      "--input",
+      "attempt/baseline-gfx942-O0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.stderr",
+      "--input",
+      "attempt/baseline-gfx942-O0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.stdout",
+      "--input",
+      "attempt/baseline-gfx942-O2.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.json",
+      "--input",
+      "attempt/baseline-gfx942-O2.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.stderr",
+      "--input",
+      "attempt/baseline-gfx942-O2.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.stdout",
+      "--input",
+      "attempt/compiler-version.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.json",
+      "--input",
+      "attempt/compiler-version.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.stderr",
+      "--input",
+      "attempt/compiler-version.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.stdout",
+      "--input",
+      "attempt/final-gfx90a-O0.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.json",
+      "--input",
+      "attempt/final-gfx90a-O0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.stderr",
+      "--input",
+      "attempt/final-gfx90a-O0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.stdout",
+      "--input",
+      "attempt/final-gfx90a-O2.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.json",
+      "--input",
+      "attempt/final-gfx90a-O2.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.stderr",
+      "--input",
+      "attempt/final-gfx90a-O2.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.stdout",
+      "--input",
+      "attempt/final-gfx942-O0.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.json",
+      "--input",
+      "attempt/final-gfx942-O0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.stderr",
+      "--input",
+      "attempt/final-gfx942-O0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.stdout",
+      "--input",
+      "attempt/final-gfx942-O2.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.json",
+      "--input",
+      "attempt/final-gfx942-O2.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.stderr",
+      "--input",
+      "attempt/final-gfx942-O2.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.stdout",
+      "--input",
+      "attempt/manifest.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/manifest.json",
+      "--input",
+      "attempt/printf-only-gfx90a-O0.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.json",
+      "--input",
+      "attempt/printf-only-gfx90a-O0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.stderr",
+      "--input",
+      "attempt/printf-only-gfx90a-O0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.stdout",
+      "--input",
+      "attempt/printf-only-gfx90a-O2.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.json",
+      "--input",
+      "attempt/printf-only-gfx90a-O2.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.stderr",
+      "--input",
+      "attempt/printf-only-gfx90a-O2.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.stdout",
+      "--input",
+      "attempt/printf-only-gfx942-O0.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.json",
+      "--input",
+      "attempt/printf-only-gfx942-O0.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.stderr",
+      "--input",
+      "attempt/printf-only-gfx942-O0.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.stdout",
+      "--input",
+      "attempt/printf-only-gfx942-O2.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.json",
+      "--input",
+      "attempt/printf-only-gfx942-O2.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.stderr",
+      "--input",
+      "attempt/printf-only-gfx942-O2.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.stdout",
+      "--input",
+      "attempt/printf-only.cpp=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only.cpp",
+      "--input",
+      "attempt/probe.cpp=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/probe.cpp",
+      "--input",
+      "attempt/run-cobalt.sh=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/run-cobalt.sh",
+      "--input",
+      "attempt/run.py=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/run.py",
+      "--input",
+      "attempt/scheduler-receipts.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler-receipts.json",
+      "--input",
+      "attempt/submission.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/submission.json",
+      "--input",
+      "attempt/scheduler/1012532.cobaltlog=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.cobaltlog",
+      "--input",
+      "attempt/scheduler/1012532.error=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.error",
+      "--input",
+      "attempt/scheduler/1012532.output=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.output",
+      "--input",
+      "attempt/scheduler/qstat.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/qstat.stderr",
+      "--input",
+      "attempt/scheduler/qstat.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/qstat.stdout",
+      "--input",
+      "classification/nvcc-language-correction.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/nvcc-language-correction.json",
+      "--input",
+      "classification/hip-differential-summary.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-summary.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "attempt/baseline-gfx90a-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx90a-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx90a-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx90a-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx90a-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx90a-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx942-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx942-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx942-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx942-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx942-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/baseline-gfx942-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compiler-version.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx90a-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx90a-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx90a-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx90a-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx90a-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx90a-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx942-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx942-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx942-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx942-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx942-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/final-gfx942-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/manifest.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx90a-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx90a-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx90a-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx90a-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx90a-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx90a-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx942-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx942-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx942-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx942-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx942-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only-gfx942-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/printf-only.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only.cpp",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/probe.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/probe.cpp",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/run-cobalt.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/run.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler-receipts.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/submission.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012532.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.cobaltlog",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012532.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.error",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012532.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.output",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/qstat.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/qstat.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "classification/nvcc-language-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/nvcc-language-correction.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "classification/hip-differential-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-summary.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "attempt/baseline-gfx90a-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.json",
+      "storage": "visible",
+      "bytes": 1564,
+      "sha256": "a26630f3ab140e082a2eb0ed12be90b9869cc193462987d353fda74d75fe5137"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx90a-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx90a-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O0.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx90a-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.json",
+      "storage": "visible",
+      "bytes": 1567,
+      "sha256": "e8d6ce8ed00b81f1fb99ea47c3745e9e92954ecb28656d4f70a96bb02aed6060"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx90a-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.stderr",
+      "storage": "visible",
+      "bytes": 967,
+      "sha256": "da3e55eafb2900106629d10e2687b80b9e46aa32f3ce76b944ea7a9c53458c5c"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx90a-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx90a-O2.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx942-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.json",
+      "storage": "visible",
+      "bytes": 1564,
+      "sha256": "47d8f6b57ee191f9140d637b53f18901f5b86a4b4590d1dff65a35880569751a"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx942-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx942-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O0.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx942-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.json",
+      "storage": "visible",
+      "bytes": 1564,
+      "sha256": "914da449c8c2304a1f24d2ab5f96eae1db4d107d4c1fae04f45db70dd4cdfe53"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx942-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/baseline-gfx942-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/baseline-gfx942-O2.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compiler-version.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.json",
+      "storage": "visible",
+      "bytes": 427,
+      "sha256": "1805b75cb4ec03b167e1b3aac1764f819347a260847763a1d018d973df5cda30"
+    },
+    {
+      "relative_path": "attempt/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/compiler-version.stdout",
+      "storage": "visible",
+      "bytes": 359,
+      "sha256": "1ea4b187ec6c59cbe6aa5c7bee782c22e5acf4046363de0c26d15029dc5db021"
+    },
+    {
+      "relative_path": "attempt/final-gfx90a-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.json",
+      "storage": "visible",
+      "bytes": 1533,
+      "sha256": "920934442aabb5e3a3ca9038c92748541f7f81d36e8a9d67a1a08872264f4d60"
+    },
+    {
+      "relative_path": "attempt/final-gfx90a-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/final-gfx90a-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O0.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/final-gfx90a-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.json",
+      "storage": "visible",
+      "bytes": 1536,
+      "sha256": "3084592d768ee37c2d81960b28027f23a1f47f533b34689896e9b3c2019103d6"
+    },
+    {
+      "relative_path": "attempt/final-gfx90a-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.stderr",
+      "storage": "visible",
+      "bytes": 953,
+      "sha256": "775a7da2cc79d4ddc9837852e9a2aa5a9adc2bfc5abf5e97fd9799f0ffc60bb9"
+    },
+    {
+      "relative_path": "attempt/final-gfx90a-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx90a-O2.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/final-gfx942-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.json",
+      "storage": "visible",
+      "bytes": 1533,
+      "sha256": "42920c629a6f34723197175564fe038f32a7dba5df8ca1a9ce3799142525b419"
+    },
+    {
+      "relative_path": "attempt/final-gfx942-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/final-gfx942-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O0.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/final-gfx942-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.json",
+      "storage": "visible",
+      "bytes": 1533,
+      "sha256": "479f39b96d9674c3bc721b68e154d659c4fb4a4d1830be704f302f9e2596b83e"
+    },
+    {
+      "relative_path": "attempt/final-gfx942-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/final-gfx942-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/final-gfx942-O2.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/manifest.json",
+      "storage": "visible",
+      "bytes": 24242,
+      "sha256": "b4f447a67aa6e021d8a508930d99132ebf93ee6b36a88c6d278dd257f367cbd4"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx90a-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.json",
+      "storage": "visible",
+      "bytes": 1261,
+      "sha256": "cbed85cd7eb569d2582f5cc6073bb869ac802ad7797469b6cfe580b851d3492c"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx90a-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx90a-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx90a-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.json",
+      "storage": "visible",
+      "bytes": 1261,
+      "sha256": "fb60dfad7c3e7b19d4e170c9247408a69fd189b5b22c6655a9aa42a7d349381d"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx90a-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx90a-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O2.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx942-O0.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.json",
+      "storage": "visible",
+      "bytes": 1261,
+      "sha256": "8c99560177e05b5f917f27f90800fd80daf3884b77da0d6a906c615a259cf602"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx942-O0.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx942-O0.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O0.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx942-O2.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.json",
+      "storage": "visible",
+      "bytes": 1261,
+      "sha256": "f65d11345421c2493efae165abc31be1a4ae318eb33ca7ea66a015a3c15099c6"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx942-O2.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only-gfx942-O2.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx942-O2.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/printf-only.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only.cpp",
+      "storage": "visible",
+      "bytes": 123,
+      "sha256": "f09d11a564879bfeb7284775aa449ea68654aea36e2ec65fa5c878d9505120b6"
+    },
+    {
+      "relative_path": "attempt/probe.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/probe.cpp",
+      "storage": "visible",
+      "bytes": 243,
+      "sha256": "4bb85f142816b57ec19a7ef1e0f534ed61a97a231594f02b37f7bbef7c27852c"
+    },
+    {
+      "relative_path": "attempt/run-cobalt.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/run-cobalt.sh",
+      "storage": "visible",
+      "bytes": 317,
+      "sha256": "fa2ffb134111684bc99b1c26e0b8d41964595da89f5b41b1650ad7d2b421c875"
+    },
+    {
+      "relative_path": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/run.py",
+      "storage": "visible",
+      "bytes": 3264,
+      "sha256": "8fe5442c2cbcfbe14cca736ffe6e30ce0ad3a9203151225ed9aa1e1d0362d85f"
+    },
+    {
+      "relative_path": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler-receipts.json",
+      "storage": "visible",
+      "bytes": 541,
+      "sha256": "f1447dfeafe28409097b6cc4afb8a4c122a0efa95cdfaf2c9c3ab6d10f658f07"
+    },
+    {
+      "relative_path": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/submission.json",
+      "storage": "visible",
+      "bytes": 492,
+      "sha256": "c04be40f66de1ca0900310f9d720f79baeb8c966182acfd6a9508a57dd7b86b6"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012532.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.cobaltlog",
+      "storage": "visible",
+      "bytes": 2063,
+      "sha256": "5bbd3c68da9e9c076f081bc0e4bc162e5d4f0c2be27d1b04b8809c432b2d98c7"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012532.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.error",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012532.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/1012532.output",
+      "storage": "visible",
+      "bytes": 24558,
+      "sha256": "22238327c80063b83301aa16ef0765699b5c1dd992e092a8f48d62b0b4ffbad2"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/qstat.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/scheduler/qstat.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "classification/nvcc-language-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/nvcc-language-correction.json",
+      "storage": "visible",
+      "bytes": 640,
+      "sha256": "69bb8c6fb87105470a6d79c71496af97d38b49284add0285715c3cc2ae63965d"
+    },
+    {
+      "relative_path": "classification/hip-differential-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-summary.json",
+      "storage": "visible",
+      "bytes": 1568,
+      "sha256": "274b9d2d9396d61bf9155303484ef866bf0442300e1956627ce2c1888ed30181"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

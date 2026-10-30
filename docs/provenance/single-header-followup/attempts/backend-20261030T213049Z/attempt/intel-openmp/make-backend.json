@@ -1,0 +1,28 @@
+{
+  "name": "make-backend",
+  "argv": [
+    "make",
+    "--no-print-directory",
+    "-j2",
+    "CXX=/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx",
+    "FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt",
+    "EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "USE_OMP_ICPX=1",
+    "OMP_OPT=-O0",
+    "build/test_main_omp"
+  ],
+  "command": "make --no-print-directory -j2 CXX=/soft/compilers/oneapi/2025.0.0.825/oneapi/compiler/latest/bin/icpx FMT_DIR=/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt EXTRA_CXXFLAGS=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux USE_OMP_ICPX=1 OMP_OPT=-O0 build/test_main_omp",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213049Z/worktrees/intel-openmp",
+  "started_utc": "2026-10-30T21:31:54.966805+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 36.469,
+  "stdout": {
+    "path": "intel-openmp/make-backend.stdout",
+    "sha256": "cdaab8a61071d3142ec2ff0c4eeae3cda48ab7af87cbe3b098ab0c06e59d3a53"
+  },
+  "stderr": {
+    "path": "intel-openmp/make-backend.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

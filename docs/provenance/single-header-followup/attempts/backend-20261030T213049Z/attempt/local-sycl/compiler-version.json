@@ -1,0 +1,21 @@
+{
+  "name": "compiler-version",
+  "argv": [
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++",
+    "--version"
+  ],
+  "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++ --version",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213049Z/worktrees/local-sycl",
+  "started_utc": "2026-10-30T21:32:32.711602+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 0.426,
+  "stdout": {
+    "path": "local-sycl/compiler-version.stdout",
+    "sha256": "33fb568bedb56c4951c7a03d1103e198233172e7f93eb39fa952462cd20a235f"
+  },
+  "stderr": {
+    "path": "local-sycl/compiler-version.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

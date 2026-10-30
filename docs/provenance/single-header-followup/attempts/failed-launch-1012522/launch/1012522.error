@@ -1,0 +1,3 @@
+/home/nnichols/.ssh/config: line 32: Bad configuration option: sessiontype
+/home/nnichols/.ssh/config: line 65: Bad configuration option: remotecommand
+/home/nnichols/.ssh/config: terminating, 2 bad configuration options

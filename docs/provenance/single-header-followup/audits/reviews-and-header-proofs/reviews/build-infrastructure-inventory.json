@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "retained": [
+    {
+      "component": "test/test_*.cpp + capture.hpp + shared test bodies",
+      "need": "Original pinned host fmt reference and shared host/device cases remain the sole stdout comparison harness; feature fixtures move here."
+    },
+    {
+      "component": "test/reference.hpp + test/direct/test_*.cpp",
+      "need": "Direct checks inspect written/required sizes, bounded memory, sentinels, runtime errors, custom formatter protocols and compiler extension behavior that stdout comparison cannot observe."
+    },
+    {
+      "component": "test/direct/tests.mk",
+      "need": "Single explicit shared/direct source inventory consumed by Make and CMake; per-source special flags, reference linkage and optional exit 77 remain visible."
+    },
+    {
+      "component": "tools/negative.py + compile_diagnostics.py",
+      "need": "Run original negative compilation corpus with positive and syntax controls; retain compiler diagnostics locally and refuse crashes/missing headers/unrelated errors as successful rejection."
+    },
+    {
+      "component": "test/test_infrastructure.py",
+      "need": "Sixteen focused checks retain rejection classification, nonmutating fmt pin verification, coverage metric semantics and real Make contracts (missing sources, registration/header rebuild dependencies, C++23 opt-in and explicit optional skips)."
+    },
+    {
+      "component": ".github/scripts/coverage_union.py",
+      "need": "Original coverage collector reports the union of instantiated source regions, executable lines and branch edges, without percentage blocking policy changes."
+    },
+    {
+      "component": "test/test_single_header.cpp",
+      "need": "Compiles and runs against an isolated copy of base.hpp only, with no other ffmt header or fmt reference accessible."
+    },
+    {
+      "component": "benchmarks/benchmark*",
+      "need": "Reusable C++ formatting/printing and resource measurement primitives remain directly compilable; campaign snapshot/measurement orchestration moved to evaluation."
+    }
+  ],
+  "removed": [
+    {
+      "component": "mk/portable-tests.mk + mk/portable-coverage.mk + test/conformance/suites/*.mk",
+      "replacement": "Direct assertions use original Make run reporting; one source inventory replaces 34 independent registrations and duplicated CMake lists."
+    },
+    {
+      "component": "Library Python conformance.py, backends.py, backend_*.py, numeric_memory.py, snapshot/oracle/process helpers, benchmark.py",
+      "replacement": "Exact current implementations relocated into evaluation/tools/campaign_runner; library portable CI uses original harness plus direct assertions."
+    },
+    {
+      "component": "Library Python case registries and source templates",
+      "replacement": "Meaningful fixed cases now original shared C++ cases; independent generated numeric and campaign-template source remains evaluation-owned."
+    },
+    {
+      "component": "Python tests for obsolete capability registration framework",
+      "replacement": "Exact old test sources remain evaluation history; seven real Make contract checks now exercise the replacement rules without a C++ compiler, and actual allocated Make/CMake builds verify the declared source inventory."
+    }
+  ],
+  "relocation": {
+    "path": "../ffmt-evaluation/tools/campaign_runner",
+    "exact_files": 57,
+    "all_hashes_match": true
+  },
+  "commands": [
+    "make -j2 test-portable CXX=<compiler>",
+    "make -j2 test-cxx23 CXX=<compiler>",
+    "cmake -S . -B build/cmake -DFFMT_BUILD_TESTS=ON -DFFMT_BUILD_CXX23_TESTS=ON",
+    "cmake --build build/cmake -j2",
+    "ctest --test-dir build/cmake --output-on-failure",
+    "make USE_HIP=1 CXX=hipcc OFFLOAD_ARCH=<arch> compile-hip"
+  ],
+  "validation_so_far": {
+    "infrastructure_tests": {
+      "passed": 16,
+      "failed": 0
+    },
+    "make_dry_runs": [
+      "test-direct",
+      "test-cxx23",
+      "test-single-header",
+      "USE_HIP=1 compile-hip"
+    ],
+    "cmake_inventory_parse": {
+      "default_direct": 33,
+      "cxx23_direct": 1,
+      "forced_portable_float_flags": "-DFFMT_PORTABLE_SHORTEST=1"
+    },
+    "compile_status": "Allocated validation required; no library compilation run on login node."
+  }
+}

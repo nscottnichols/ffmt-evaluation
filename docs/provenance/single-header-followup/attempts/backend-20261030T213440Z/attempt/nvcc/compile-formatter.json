@@ -1,0 +1,36 @@
+{
+  "name": "compile-formatter",
+  "argv": [
+    "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc",
+    "-std=c++20",
+    "-arch=sm_80",
+    "--extended-lambda",
+    "--expt-relaxed-constexpr",
+    "-ccbin",
+    "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+    "-Xcompiler=-Wall,-Werror,-fno-fast-math",
+    "-Iinclude",
+    "-isystem",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+    "-DTEST_NO_MAIN",
+    "-O2",
+    "-dc",
+    "test/test_formatter.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/nvcc/formatter.o"
+  ],
+  "command": "/soft/compilers/cuda/cuda-12.9.1/bin/nvcc -std=c++20 -arch=sm_80 --extended-lambda --expt-relaxed-constexpr -ccbin /soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -Xcompiler=-Wall,-Werror,-fno-fast-math -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -DTEST_NO_MAIN -O2 -dc test/test_formatter.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/nvcc/formatter.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/nvcc",
+  "started_utc": "2026-10-30T21:35:55.376823+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 4.181,
+  "stdout": {
+    "path": "nvcc/compile-formatter.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "nvcc/compile-formatter.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

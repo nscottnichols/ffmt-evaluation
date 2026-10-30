@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/attempts/hip-full-o2-20261030T214415Z",
+      "--input",
+      "attempt/allocation-qstat.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/allocation-qstat.stderr",
+      "--input",
+      "attempt/allocation-qstat.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/allocation-qstat.stdout",
+      "--input",
+      "attempt/driver.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/driver.stderr",
+      "--input",
+      "attempt/driver.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/driver.stdout",
+      "--input",
+      "attempt/make.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/make.stderr",
+      "--input",
+      "attempt/make.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/make.stdout",
+      "--input",
+      "attempt/manifest.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/manifest.json",
+      "--input",
+      "attempt/run-allocated.sh=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/run-allocated.sh",
+      "--input",
+      "attempt/run.py=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/run.py",
+      "--input",
+      "attempt/scheduler-receipts.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler-receipts.json",
+      "--input",
+      "attempt/submission.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/submission.json",
+      "--input",
+      "attempt/scheduler/1012529.cobaltlog=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.cobaltlog",
+      "--input",
+      "attempt/scheduler/1012529.error=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.error",
+      "--input",
+      "attempt/scheduler/1012529.output=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.output",
+      "--input",
+      "attempt/scheduler/qstat.stderr=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/qstat.stderr",
+      "--input",
+      "attempt/scheduler/qstat.stdout=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/qstat.stdout"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "attempt/allocation-qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/allocation-qstat.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/allocation-qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/allocation-qstat.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/driver.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/driver.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/driver.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/driver.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/make.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/make.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/make.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/make.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/manifest.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run-allocated.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/run-allocated.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/run.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler-receipts.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/submission.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.cobaltlog",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.error",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/1012529.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.output",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/qstat.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/qstat.stdout",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "attempt/allocation-qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/allocation-qstat.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/allocation-qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/allocation-qstat.stdout",
+      "storage": "visible",
+      "bytes": 2531,
+      "sha256": "cc7a25ab9d403d306417f506e5c4d2a8f31eb016b43858d57391447da7afafd6"
+    },
+    {
+      "relative_path": "attempt/driver.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/driver.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/driver.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/driver.stdout",
+      "storage": "visible",
+      "bytes": 16622,
+      "sha256": "f2f686d653d8c54e020785bbea8b4576b359b085cc188b9a40488c785513a4cd"
+    },
+    {
+      "relative_path": "attempt/make.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/make.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/make.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/make.stdout",
+      "storage": "visible",
+      "bytes": 2726,
+      "sha256": "7329704f944ae49e874fc9dbb5ae891d673a5d73d3c56ae3e97e33e016120892"
+    },
+    {
+      "relative_path": "attempt/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/manifest.json",
+      "storage": "visible",
+      "bytes": 16622,
+      "sha256": "f2f686d653d8c54e020785bbea8b4576b359b085cc188b9a40488c785513a4cd"
+    },
+    {
+      "relative_path": "attempt/run-allocated.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/run-allocated.sh",
+      "storage": "visible",
+      "bytes": 307,
+      "sha256": "809e3bef4f7946afff6ac23100a506e07153fec10e38f56c7d851b87290c7038"
+    },
+    {
+      "relative_path": "attempt/run.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/run.py",
+      "storage": "visible",
+      "bytes": 2406,
+      "sha256": "e18fd5f8b4f1753183174aa9ca443c6c64152127a0baa4f57b0972da7d76a768"
+    },
+    {
+      "relative_path": "attempt/scheduler-receipts.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler-receipts.json",
+      "storage": "visible",
+      "bytes": 541,
+      "sha256": "a883baf0602bc8af24cc7d8eefaf35635b90b9d6ab10ccacfd5f52fa36cd8cf9"
+    },
+    {
+      "relative_path": "attempt/submission.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/submission.json",
+      "storage": "visible",
+      "bytes": 406,
+      "sha256": "cf17fe65557b8cf45f8c9c31f9a9563ce2723f263ea2c61475293bb6ba3eb40f"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.cobaltlog",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.cobaltlog",
+      "storage": "visible",
+      "bytes": 2053,
+      "sha256": "e1daf506748f3fc947e05217d3e2e48ef8c98075d7085bcef1b87afa32413f64"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.error",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.error",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/1012529.output",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/1012529.output",
+      "storage": "visible",
+      "bytes": 1088,
+      "sha256": "c26a2de2c9990989c33f3eefe1839c64966fd3714e18f23c15497d8f15a6dbc6"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/qstat.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "attempt/scheduler/qstat.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/scheduler/qstat.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

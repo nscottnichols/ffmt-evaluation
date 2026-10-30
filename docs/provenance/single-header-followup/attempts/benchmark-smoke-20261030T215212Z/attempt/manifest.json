@@ -1,0 +1,649 @@
+{
+  "job_id": "1012529",
+  "hostname": "cpl00",
+  "source_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497",
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "scope": "Relocation and linkage smoke, verification mode only, one batch per process. No performance campaign or timing comparison.",
+  "started_utc": "2026-10-30T21:52:17.560188+00:00",
+  "steps": [
+    {
+      "name": "compiler-version",
+      "argv": [
+        "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+        "--version"
+      ],
+      "command": "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ --version",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "compile-fmt",
+      "argv": [
+        "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-Wall",
+        "-Iinclude",
+        "-isystem",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "-c",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/src/format.cc",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/fmt.o"
+      ],
+      "command": "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -std=c++20 -O2 -fno-fast-math -Wall -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/src/format.cc -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/fmt.o",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 3.178
+    },
+    {
+      "name": "compile-library-single",
+      "argv": [
+        "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-Wall",
+        "-Iinclude",
+        "-isystem",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "benchmarks/benchmark.cpp",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single"
+      ],
+      "command": "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -std=c++20 -O2 -fno-fast-math -Wall -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include benchmarks/benchmark.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 2.727
+    },
+    {
+      "name": "compile-library-multi",
+      "argv": [
+        "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-Wall",
+        "-Iinclude",
+        "-isystem",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "-DBENCH_MULTI_TU=1",
+        "benchmarks/benchmark.cpp",
+        "benchmarks/benchmark_extra.cpp",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi"
+      ],
+      "command": "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -std=c++20 -O2 -fno-fast-math -Wall -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -DBENCH_MULTI_TU=1 benchmarks/benchmark.cpp benchmarks/benchmark_extra.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 5.233
+    },
+    {
+      "name": "compile-reference-single",
+      "argv": [
+        "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-Wall",
+        "-Iinclude",
+        "-isystem",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "-DBENCH_REFERENCE=1",
+        "benchmarks/benchmark.cpp",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/fmt.o",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single"
+      ],
+      "command": "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -std=c++20 -O2 -fno-fast-math -Wall -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -DBENCH_REFERENCE=1 benchmarks/benchmark.cpp /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/fmt.o -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 1.224
+    },
+    {
+      "name": "compile-reference-multi",
+      "argv": [
+        "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-Wall",
+        "-Iinclude",
+        "-isystem",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "-DBENCH_REFERENCE=1",
+        "-DBENCH_MULTI_TU=1",
+        "benchmarks/benchmark.cpp",
+        "benchmarks/benchmark_extra.cpp",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/fmt.o",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi"
+      ],
+      "command": "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -std=c++20 -O2 -fno-fast-math -Wall -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -DBENCH_REFERENCE=1 -DBENCH_MULTI_TU=1 benchmarks/benchmark.cpp benchmarks/benchmark_extra.cpp /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/fmt.o -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 1.725
+    },
+    {
+      "name": "compile-resource",
+      "argv": [
+        "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++",
+        "-std=c++20",
+        "-O2",
+        "-fno-fast-math",
+        "-Wall",
+        "-Iinclude",
+        "-isystem",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include",
+        "-c",
+        "benchmarks/benchmark_resource.cpp",
+        "-o",
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/resource.o"
+      ],
+      "command": "/soft/compilers/gcc/13.3.0/x86_64-suse-linux/bin/g++ -std=c++20 -O2 -fno-fast-math -Wall -Iinclude -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -c benchmarks/benchmark_resource.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/resource.o",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 1.674
+    },
+    {
+      "name": "library-single-f0-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single",
+        "0",
+        "0",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single 0 0 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "reference-single-f0-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single",
+        "0",
+        "0",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single 0 0 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.014
+    },
+    {
+      "name": "library-single-f0-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single",
+        "0",
+        "1",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single 0 1 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "reference-single-f0-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single",
+        "0",
+        "1",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single 0 1 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-single-f0-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single",
+        "0",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single 0 1 1 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "reference-single-f0-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single",
+        "0",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single 0 1 1 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-single-f1-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single",
+        "1",
+        "0",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single 1 0 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.017
+    },
+    {
+      "name": "reference-single-f1-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single",
+        "1",
+        "0",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single 1 0 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-single-f1-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single",
+        "1",
+        "1",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single 1 1 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.014
+    },
+    {
+      "name": "reference-single-f1-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single",
+        "1",
+        "1",
+        "0",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single 1 1 0 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-single-f1-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-single 1 1 1 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "reference-single-f1-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-single 1 1 1 1 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-multi-f0-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi",
+        "0",
+        "0",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi 0 0 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "reference-multi-f0-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi",
+        "0",
+        "0",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi 0 0 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-multi-f0-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi",
+        "0",
+        "1",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi 0 1 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.014
+    },
+    {
+      "name": "reference-multi-f0-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi",
+        "0",
+        "1",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi 0 1 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-multi-f0-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi",
+        "0",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi 0 1 1 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.014
+    },
+    {
+      "name": "reference-multi-f0-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi",
+        "0",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi 0 1 1 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.016
+    },
+    {
+      "name": "library-multi-f1-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi",
+        "1",
+        "0",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi 1 0 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.014
+    },
+    {
+      "name": "reference-multi-f1-p0-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi",
+        "1",
+        "0",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi 1 0 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-multi-f1-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi 1 1 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.014
+    },
+    {
+      "name": "reference-multi-f1-p1-n0",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi",
+        "1",
+        "1",
+        "0",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi 1 1 0 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "library-multi-f1-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/library-multi 1 1 1 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.015
+    },
+    {
+      "name": "reference-multi-f1-p1-n1",
+      "argv": [
+        "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/reference-multi 1 1 1 2 2 1",
+      "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/benchmark-smoke-20261030T215212Z/source",
+      "exit_code": 0,
+      "status": "pass",
+      "seconds": 0.014
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "single-f0-p0-n0",
+      "equal": true,
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "case": "single-f0-p1-n0",
+      "equal": true,
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "case": "single-f0-p1-n1",
+      "equal": true,
+      "bytes": 38,
+      "sha256": "a6c65e56dc731372f7b98f0537dffac02389165f6d41dcc9a3b1b75ca7ea8bb3"
+    },
+    {
+      "case": "single-f1-p0-n0",
+      "equal": true,
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "case": "single-f1-p1-n0",
+      "equal": true,
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "case": "single-f1-p1-n1",
+      "equal": true,
+      "bytes": 44,
+      "sha256": "ce2f26d44fe19290f3383e79270388b24d45c643b4cd02718f2f52290de388c0"
+    },
+    {
+      "case": "multi-f0-p0-n0",
+      "equal": true,
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "case": "multi-f0-p1-n0",
+      "equal": true,
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "case": "multi-f0-p1-n1",
+      "equal": true,
+      "bytes": 76,
+      "sha256": "48aabfb06a633b08bdb1440f7615425bde31982cdcbeecd30f48a40d4d4ddb5f"
+    },
+    {
+      "case": "multi-f1-p0-n0",
+      "equal": true,
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "case": "multi-f1-p1-n0",
+      "equal": true,
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    },
+    {
+      "case": "multi-f1-p1-n1",
+      "equal": true,
+      "bytes": 88,
+      "sha256": "1739f2960f62d99db58d42d971d6dc5ad1b3552a029455fbae100313c2a56f15"
+    }
+  ],
+  "source_sha256": {
+    "benchmarks/benchmark.cpp": "c2d5e2306994470df3c2f4ddbfc1a0d55d5c04408d6d06af6b5d74dd8821d4ac",
+    "benchmarks/benchmark_calls.hpp": "ea2a00e20fc6a1448ee63c4d009713659515af1093a63afdb1751839e39e8db3",
+    "benchmarks/benchmark_extra.cpp": "603235a564b05df3b9f6746c409a683308f3fc76362dee5dfbce127de2694bf4",
+    "benchmarks/benchmark_resource.cpp": "658e11f8bb5d7523dc72246bf81534971a1ed8ee1d041a3348cfb14920b404a2",
+    "include/ffmt/base.hpp": "a2e57ecf15f21cbdb4a7ee64e38f42c022617cedb1acee9bcc5bede1a210ecec"
+  },
+  "finished_utc": "2026-10-30T21:52:33.931052+00:00",
+  "status": "pass"
+}

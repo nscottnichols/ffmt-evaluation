@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-10-30T22:03:32.445829+00:00",
+  "prs": [
+    {
+      "repository": "nscottnichols/ffmt",
+      "number": 81,
+      "url": "https://github.com/nscottnichols/ffmt/pull/81",
+      "head": "3649622374b8beb29f2a1a1086031aba6a07c3e4",
+      "head_branch": "followup/single-header-harness",
+      "base": "471627c31cd1e09a2d4587c0369ec662251f7356",
+      "base_branch": "review-v2/complete",
+      "draft": true,
+      "body_file": "library-pr.md",
+      "body_sha256": "5207a1318708339a05786bd8b3bc7563717ba15b943f5c9a7d3e988397a2f04a"
+    },
+    {
+      "repository": "nscottnichols/ffmt-evaluation",
+      "number": 2,
+      "url": "https://github.com/nscottnichols/ffmt-evaluation/pull/2",
+      "head": "2f762c2b6a50c21da059af52769ac535ce8fb64b",
+      "head_branch": "followup/library-maintenance",
+      "base": "b087713958bd469c4e5c7ae1b61ee7c9e14bb52e",
+      "base_branch": "main",
+      "draft": true,
+      "body_file": "evaluation-pr.md",
+      "body_sha256": "5edb16e9b905ddd005de5078069a5d4a0381b9b4d50d50e97a7b9cd96a2a9522"
+    }
+  ],
+  "history": "Existing64libraryPRs untouched; bothnewfollowupsdraft/open/unmerged. Evaluationmetadata observes head before this publication-only documentation commit.",
+  "evidence_tag": "provenance/single-header-20261030",
+  "evidence_commit": "2f762c2b6a50c21da059af52769ac535ce8fb64b"
+}

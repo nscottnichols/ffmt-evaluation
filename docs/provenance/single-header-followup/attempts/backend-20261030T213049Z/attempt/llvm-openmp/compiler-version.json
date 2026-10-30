@@ -1,0 +1,21 @@
+{
+  "name": "compiler-version",
+  "argv": [
+    "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+    "--version"
+  ],
+  "command": "/soft/compilers/llvm/release-22.1.8/bin/clang++ --version",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213049Z/worktrees/llvm-openmp",
+  "started_utc": "2026-10-30T21:32:31.992111+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 0.039,
+  "stdout": {
+    "path": "llvm-openmp/compiler-version.stdout",
+    "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+  },
+  "stderr": {
+    "path": "llvm-openmp/compiler-version.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

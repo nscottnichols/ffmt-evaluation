@@ -1,0 +1,10 @@
+{
+  "merged_import_pr": "https://github.com/nscottnichols/ffmt-evaluation/pull/1",
+  "merged_import_head": "341014c054cf80293a8490228fdb23eead121a64",
+  "current_main": "b087713958bd469c4e5c7ae1b61ee7c9e14bb52e",
+  "tree_equivalence": "b79b7c687365525526d6af61c2ddb46a57b6c89f",
+  "followup_strategy": "Merge current main into follow-up; no rebasing or rewriting existing commits.",
+  "preserved_url_alias": "refs/tags/evaluation-campaign",
+  "alias_target": "341014c054cf80293a8490228fdb23eead121a64",
+  "alias_reason": "Merged branch was deleted; immutable tag preserves old library PR provenance URLs without changing their descriptions or recreating a moving branch."
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/single-header-followup/audits/final-remote-provenance-code-596c672",
+      "--input",
+      "audit=../ffmt/artifacts/simplify-followup/final-remote-provenance-code-audit.json",
+      "--input",
+      "remote-tags=../ffmt/artifacts/simplify-followup/review-remote-preserved-tags.txt",
+      "--input",
+      "remote-heads=../ffmt/artifacts/simplify-followup/review-remote-review-heads.txt",
+      "--input",
+      "offline-tests/stdout=../ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stdout",
+      "--input",
+      "offline-tests/stderr=../ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stderr",
+      "--input",
+      "historical-verifier/stdout=../ffmt/artifacts/simplify-followup/review-provenance-596c672.stdout",
+      "--input",
+      "historical-verifier/stderr=../ffmt/artifacts/simplify-followup/review-provenance-596c672.stderr"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/final-remote-provenance-code-audit.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "remote-tags",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-remote-preserved-tags.txt",
+      "handwritten_visible": true
+    },
+    {
+      "label": "remote-heads",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-remote-review-heads.txt",
+      "handwritten_visible": true
+    },
+    {
+      "label": "offline-tests/stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "offline-tests/stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stderr",
+      "handwritten_visible": true
+    },
+    {
+      "label": "historical-verifier/stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-provenance-596c672.stdout",
+      "handwritten_visible": true
+    },
+    {
+      "label": "historical-verifier/stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-provenance-596c672.stderr",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/final-remote-provenance-code-audit.json",
+      "storage": "visible",
+      "bytes": 34011,
+      "sha256": "7de6e3c9eb32116988a4e8a454efc7b01c3f017197f6f8a3bd6f9beb52dd0bb2"
+    },
+    {
+      "relative_path": "remote-tags",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-remote-preserved-tags.txt",
+      "storage": "visible",
+      "bytes": 6598,
+      "sha256": "8fbe4f9702f8919e1aebaeb302273ebd1d18413d39dbbe84fda202533fd45b1a"
+    },
+    {
+      "relative_path": "remote-heads",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-remote-review-heads.txt",
+      "storage": "visible",
+      "bytes": 6253,
+      "sha256": "8729a42f0e301f3b90a5c568dadca4bc4d397a6183729e4dd467510efbd7520f"
+    },
+    {
+      "relative_path": "offline-tests/stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "offline-tests/stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stderr",
+      "storage": "visible",
+      "bytes": 12287,
+      "sha256": "56a1672f3fdd598593cde801b204bc80b4dcd6e060e36d19fbe8a5e7efb4f020"
+    },
+    {
+      "relative_path": "historical-verifier/stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-provenance-596c672.stdout",
+      "storage": "visible",
+      "bytes": 360,
+      "sha256": "9b8417b9e16682b12388d80cdf70fcef6a7e85aaffa88a0f571e56208b99b970"
+    },
+    {
+      "relative_path": "historical-verifier/stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-provenance-596c672.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

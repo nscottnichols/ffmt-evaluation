@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "tool": "conformance",
+  "started_utc": "20261030T213131850381Z",
+  "command": [
+    "/home/nnichols/.local/bin/python3",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/campaign_runner/tools/conformance.py",
+    "--profiles",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/platforms/profiles.json",
+    "--profile",
+    "local",
+    "--source-root",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+    "--revision",
+    "WORKTREE",
+    "--fmt-dir",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt",
+    "--output",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/local/conformance-20261030T213131850381Z",
+    "--case",
+    "literal",
+    "--route",
+    "host-buffer",
+    "--opt",
+    "2",
+    "--no-memory",
+    "--no-negative"
+  ],
+  "output": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/local/conformance-20261030T213131850381Z",
+  "profile": "local",
+  "cobalt_jobid": null,
+  "sources": {
+    "evaluation_checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation",
+    "evaluation_commit": "341014c054cf80293a8490228fdb23eead121a64",
+    "evaluation_dirty": true,
+    "runner_checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/campaign_runner",
+    "runner_commit": "341014c054cf80293a8490228fdb23eead121a64",
+    "runner_dirty": true,
+    "source_checkout": "/vast/projects/datascience/nnichols/ffmt_project/ffmt",
+    "source_revision": "WORKTREE",
+    "source_commit": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+    "source_worktree": true,
+    "source_dirty": true,
+    "profiles_sha256": "c96e8e74e10c89f11cc6db3bfd493abb7c380f0118cdfddac0f056d75e06cfb4",
+    "configured_library_pin": {
+      "schema_version": 1,
+      "repository": "https://github.com/nscottnichols/ffmt.git",
+      "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+      "source_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+    }
+  },
+  "launcher_files": {
+    "tools/evaluation.py": "7e725410023dcd845246b38eab558c297e472b1a783462338447c53c10f61d88",
+    "tools/conformance.py": "1e58c56710db7f81b7b642aeb26a7085ec60c91177902a82db347f16e34a4016"
+  }
+}

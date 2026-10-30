@@ -1,0 +1,24 @@
+Jobid: 1012529
+qsub --mode script -q cpl_8354H -n 1 -t 120 --cwd /home/nnichols -O /home/nnichols/ffmt-followup-backend-controls-20261030T213849Z /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/run-cobalt.sh
+Fri Oct 30 21:38:57 2026 +0000 (UTC) submitted with cwd set to: /home/nnichols
+Fri Oct 30 21:39:08 2026 +0000 (UTC) 
+Fri Oct 30 21:39:08 2026 +0000 (UTC) Command: '/usr/bin/ssh' 'cpl00' '/usr/libexec/cobalt/cobalt-launcher.py' '--nf' '/var/tmp/cobalt.1012529' '--jobid' '1012529' '--cwd' '/home/nnichols' '--env' 'COBALT_JOBID=1012529' '/bin/bash' '/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-controls-20261030T213849Z/run-cobalt.sh'
+Fri Oct 30 21:39:08 2026 +0000 (UTC) 
+Fri Oct 30 21:39:08 2026 +0000 (UTC) Environment:
+Fri Oct 30 21:39:08 2026 +0000 (UTC) SHELL=/bin/bash
+Fri Oct 30 21:39:08 2026 +0000 (UTC) COBALT_NODEFILE=/tmp/tmpr3fqcE
+Fri Oct 30 21:39:08 2026 +0000 (UTC) COBALT_PARTNAME=cpl00
+Fri Oct 30 21:39:08 2026 +0000 (UTC) COBALT_JOBID=1012529
+Fri Oct 30 21:39:08 2026 +0000 (UTC) COBALT_STARTTIME=1793396338
+Fri Oct 30 21:39:08 2026 +0000 (UTC) LOGNAME=nnichols
+Fri Oct 30 21:39:08 2026 +0000 (UTC) USER=nnichols
+Fri Oct 30 21:39:08 2026 +0000 (UTC) COBALT_ENDTIME=1793403538
+Fri Oct 30 21:39:08 2026 +0000 (UTC) COBALT_PARTSIZE=1
+Fri Oct 30 21:39:08 2026 +0000 (UTC) HOME=/home/nnichols
+Fri Oct 30 21:39:08 2026 +0000 (UTC) COBALT_JOBSIZE=1
+Fri Oct 30 21:39:08 2026 +0000 (UTC) 
+Fri Oct 30 21:39:08 2026 +0000 (UTC) Info: stdin received from /dev/null
+Fri Oct 30 21:39:08 2026 +0000 (UTC) Info: stdout sent to /home/nnichols/ffmt-followup-backend-controls-20261030T213849Z.output
+Fri Oct 30 21:39:08 2026 +0000 (UTC) Info: stderr sent to /home/nnichols/ffmt-followup-backend-controls-20261030T213849Z.error
+Fri Oct 30 21:39:08 2026 +0000 (UTC) 
+Fri Oct 30 21:52:37 2026 +0000 (UTC) Info: task completed normally with an exit code of 0; initiating job cleanup and removal

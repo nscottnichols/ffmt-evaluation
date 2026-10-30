@@ -1,0 +1,800 @@
+{
+  "schema_version": 1,
+  "reviewer": "build_cleanup, independent of publisher",
+  "observed_utc": "2026-10-30T22:04:09.388190+00:00",
+  "library_followup": {
+    "number": 81,
+    "url": "https://github.com/nscottnichols/ffmt/pull/81",
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefName": "followup/single-header-harness",
+    "headRefOid": "3649622374b8beb29f2a1a1086031aba6a07c3e4",
+    "baseRefName": "review-v2/complete",
+    "baseRefOid": "471627c31cd1e09a2d4587c0369ec662251f7356",
+    "mergeCommit": null
+  },
+  "evaluation_followup": {
+    "number": 2,
+    "url": "https://github.com/nscottnichols/ffmt-evaluation/pull/2",
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefName": "followup/library-maintenance",
+    "headRefOid": "2f762c2b6a50c21da059af52769ac535ce8fb64b",
+    "baseRefName": "main",
+    "baseRefOid": "b087713958bd469c4e5c7ae1b61ee7c9e14bb52e",
+    "mergeCommit": null
+  },
+  "both_open_draft_unmerged": true,
+  "library_head_expected": true,
+  "library_base_expected": true,
+  "evaluation_head_at_first_publication_expected": true,
+  "evaluation_base_expected": true,
+  "old_stack_pr_count": 64,
+  "old_stack_ready_count": 4,
+  "old_stack_draft_count": 60,
+  "old_stack_checks": [
+    {
+      "number": 17,
+      "head": "review-v2/ci-review-waves",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 18,
+      "head": "review-v2/ci-resource-bounds",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 19,
+      "head": "review-v2/oracle-pin",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 20,
+      "head": "review-v2/build-registration",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 21,
+      "head": "review-v2/coverage-metrics",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 22,
+      "head": "review-v2/coverage-policy",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 23,
+      "head": "review-v2/tool-process",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 24,
+      "head": "review-v2/tool-negative",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 25,
+      "head": "review-v2/tool-host-oracle",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 26,
+      "head": "review-v2/core-prepare",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 27,
+      "head": "review-v2/checked-config",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 28,
+      "head": "review-v2/accounting",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 29,
+      "head": "review-v2/parsing",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 30,
+      "head": "review-v2/primitives",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 31,
+      "head": "review-v2/unicode",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 32,
+      "head": "review-v2/formatter-compatibility",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 33,
+      "head": "review-v2/format-as",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 34,
+      "head": "review-v2/legacy-compatibility",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 35,
+      "head": "review-v2/conversion-preparation",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 36,
+      "head": "review-v2/floating-conversion",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 37,
+      "head": "review-v2/floating-formatting",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 38,
+      "head": "review-v2/transport",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 39,
+      "head": "review-v2/extended-integers",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 40,
+      "head": "review-v2/extended-floats",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 41,
+      "head": "review-v2/tool-snapshots",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 42,
+      "head": "review-v2/tool-isolation",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 43,
+      "head": "review-v2/tool-oracle-negatives",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 44,
+      "head": "review-v2/migration",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 45,
+      "head": "review-v2/benchmark-primitives",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 46,
+      "head": "review-v2/benchmark-driver",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 47,
+      "head": "review-v2/benchmark-resources",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 48,
+      "head": "review-v2/tool-adapter-support",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 49,
+      "head": "review-v2/tool-cuda",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 50,
+      "head": "review-v2/tool-hip",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 51,
+      "head": "review-v2/tool-kokkos",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 52,
+      "head": "review-v2/tool-numeric-memory",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 53,
+      "head": "review-v2/tool-memory-cuda",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 54,
+      "head": "review-v2/tool-memory-hip",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 55,
+      "head": "review-v2/tool-memory-kokkos",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 56,
+      "head": "review-v2/tool-openmp",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 57,
+      "head": "review-v2/tool-memory-openmp",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 58,
+      "head": "review-v2/tool-sycl",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 59,
+      "head": "review-v2/tool-memory-sycl",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 60,
+      "head": "review-v2/obsolete-deletion",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 61,
+      "head": "review-v2/shared-family",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 62,
+      "head": "review-v2/chrono",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 63,
+      "head": "review-v2/enum-helpers",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 64,
+      "head": "review-v2/named-arguments",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 65,
+      "head": "review-v2/ranges",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 66,
+      "head": "review-v2/standard-types",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 67,
+      "head": "review-v2/feature-integration",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 68,
+      "head": "review-v2/std23",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 69,
+      "head": "review-v2/styling",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 70,
+      "head": "review-v2/typed-printf",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 71,
+      "head": "review-v2/cmake-package",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 72,
+      "head": "review-v2/cmake-tests",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 73,
+      "head": "review-v2/ci-sanitizers",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 74,
+      "head": "review-v2/ci-conformance",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 75,
+      "head": "review-v2/reproducer-relocation",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 76,
+      "head": "review-v2/api-index",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 77,
+      "head": "review-v2/backend-regression-selection",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 78,
+      "head": "review-v2/build-compiler-selection",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 79,
+      "head": "review-v2/build-header-dependencies",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    },
+    {
+      "number": 80,
+      "head": "review-v2/local-ignores",
+      "head_unchanged": true,
+      "base_name_unchanged": true,
+      "base_commit_unchanged": true,
+      "readiness_unchanged": true,
+      "still_open": true,
+      "body_unchanged": true
+    }
+  ],
+  "all_old_stack_state_heads_bases_readiness_bodies_preserved": true,
+  "immutable_evaluation_campaign_tag": "341014c054cf80293a8490228fdb23eead121a64",
+  "immutable_provenance_tag": "2f762c2b6a50c21da059af52769ac535ce8fb64b",
+  "tags_match_expected": true,
+  "platform_pins": {
+    "schema_version": 1,
+    "repository": "https://github.com/nscottnichols/ffmt.git",
+    "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "source_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+  },
+  "platform_pins_unchanged": true,
+  "body_review": {
+    "status": "pass",
+    "findings": [],
+    "reviewed": [
+      "Concrete one-header bounded/range example and maintenance tradeoff.",
+      "Original-harness foundation, retained direct-memory checks and ownership inventory.",
+      "Actual source revisions behind Make/CMake/backend/smoke results; documentation-only final library commit distinguished.",
+      "Explicit optional BitInt skip, invalid NVCC language controls, matching baseline/final gfx90a failure, no accelerator/timing rerun.",
+      "Short reading order and stable provenance/companion footer; no full-stack table duplicated."
+    ]
+  },
+  "hosted_checks": {
+    "library": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:25Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt/actions/runs/41135360194/job/124336404902",
+        "name": "${{ matrix.name }} -- ${{ matrix.mode }}",
+        "startedAt": "2026-10-30T22:02:32Z",
+        "status": "COMPLETED",
+        "workflowName": "device"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:25Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt/actions/runs/41135360137/job/124336401633",
+        "name": "${{ matrix.cxx }} ${{ matrix.opt }}",
+        "startedAt": "2026-10-30T22:02:32Z",
+        "status": "COMPLETED",
+        "workflowName": "host"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:25Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt/actions/runs/41135360194/job/124336356517",
+        "name": "${{ matrix.name }} (AOT pvc) -- ${{ matrix.mode }}",
+        "startedAt": "2026-10-30T22:02:25Z",
+        "status": "COMPLETED",
+        "workflowName": "device"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:25Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt/actions/runs/41135360137/job/124336355980",
+        "name": "plain ${{ matrix.os }}",
+        "startedAt": "2026-10-30T22:02:25Z",
+        "status": "COMPLETED",
+        "workflowName": "host"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:25Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt/actions/runs/41135360137/job/124336354904",
+        "name": "cmake",
+        "startedAt": "2026-10-30T22:02:25Z",
+        "status": "COMPLETED",
+        "workflowName": "host"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:25Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt/actions/runs/41135360137/job/124336411564",
+        "name": "source coverage reporting",
+        "startedAt": "2026-10-30T22:02:33Z",
+        "status": "COMPLETED",
+        "workflowName": "host"
+      }
+    ],
+    "evaluation": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:26Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt-evaluation/actions/runs/41135340424/job/124336286296",
+        "name": "offline",
+        "startedAt": "2026-10-30T22:02:17Z",
+        "status": "COMPLETED",
+        "workflowName": "Evaluation tools"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:01:18Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt-evaluation/actions/runs/41135195084/job/124335805452",
+        "name": "offline",
+        "startedAt": "2026-10-30T22:01:05Z",
+        "status": "COMPLETED",
+        "workflowName": "Evaluation tools"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-30T22:02:03Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/nscottnichols/ffmt-evaluation/actions/runs/41135292165/job/124336124686",
+        "name": "offline",
+        "startedAt": "2026-10-30T22:01:53Z",
+        "status": "COMPLETED",
+        "workflowName": "Evaluation tools"
+      }
+    ],
+    "interpretation": "Library compiler jobs are intentionally SKIPPED while draft; they are not passes. Evaluation offline jobs have SUCCESS conclusions."
+  },
+  "limitations": [
+    "Remote observations are a point-in-time snapshot; evaluation head may advance for publication records and overview links without changing code.",
+    "No mutation, merge, readiness change, branch rewrite or rerun performed."
+  ]
+}

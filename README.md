@@ -15,8 +15,12 @@ not establish a new hardware qualification.
 
 ## Select ffmt explicitly
 
-Use an existing checkout containing the portable runners. The source repository
-defaults to that checkout. `--revision WORKTREE` captures its current headers;
+Use an existing library checkout. Modern library revisions contain their own
+portable Make/CMake tests; campaign runners are maintained here in
+`tools/campaign_runner`. The launcher uses those evaluation-owned runners when
+the library no longer contains a campaign script. Historical checkouts that still
+contain their original runner keep that runner identity. The source repository
+defaults to the selected library checkout. `--revision WORKTREE` captures its current headers;
 an immutable revision captures headers with `git archive`.
 
 ```sh
@@ -26,8 +30,9 @@ python3 tools/conformance.py --revision WORKTREE --profile local \
 ```
 
 Alternatively, bootstrap a checkout with a full immutable commit. Mutable branch
-names are rejected for bootstrap. The runner pin must contain the portable
-external-source interface introduced by the repository split.
+names are rejected for bootstrap. The historical runner pin must contain the independent external-source interface
+introduced by the repository split. A separately pinned new library source is
+cached independently, so an old runner cache never has to contain new source objects.
 
 ```sh
 python3 tools/conformance.py --revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9 \
@@ -35,15 +40,17 @@ python3 tools/conformance.py --revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9
 ```
 
 The runner is independently pinned in [platforms/library.json](platforms/library.json).
-`--runner-revision FULL_COMMIT` overrides that pin. `--revision` selects the
+`--runner-revision FULL_COMMIT` explicitly selects a historical runner. An
+explicit runner revision lacking its runner script fails; it is never silently
+replaced by the evaluation-owned runner. `--revision` selects the
 library headers, so historical code can use the current pinned harness.
 `--ffmt-repository URL` selects the repository for bootstrap. Cached checkouts
 live under ignored `software/local/ffmt-checkouts/`; an existing checkout avoids
 cloning. The fmt oracle must be available under `third_party/fmt` at exactly
 `0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f`, or selected with `--fmt-dir`.
 
-For a historical snapshot, keep a current runner checkout and select the source
-repository separately. Retained archive refs provide the old commit objects.
+For a historical snapshot, select the source repository separately from the
+runner. Modern library checkouts use the evaluation-owned runner automatically. Retained archive refs provide the old commit objects.
 
 ```sh
 python3 tools/conformance.py --ffmt-checkout /path/to/current-ffmt \
@@ -52,7 +59,7 @@ python3 tools/conformance.py --ffmt-checkout /path/to/current-ffmt \
   --profile local --route host-buffer --opt 2 --case literal --no-memory --no-negative
 ```
 
-The portable runner records the library commit and header hashes separately from
+The selected runner records the library commit and header hashes separately from
 its own checkout, fixtures and tool hashes. Evaluation receipts in
 `artifacts/launchers/` add the evaluation commit, exact command, profile hash,
 discovery hash when present, exit status and hash of the resulting manifest.
@@ -112,3 +119,13 @@ historical ledger. Evaluation pins and original hardware evidence remain unchang
 The [review-stack skill](skills/ffmt-review-stack/SKILL.md) and
 [review workflow scripts](tools/review_stack/README.md) cover source assembly,
 intermediate CPU qualification, evidence preservation and staged publication.
+
+The [single-header library PR81](https://github.com/nscottnichols/ffmt/pull/81)
+and [evaluation PR2](https://github.com/nscottnichols/ffmt-evaluation/pull/2) stay
+draft and unmerged. The [follow-up provenance](docs/provenance/single-header-followup.md) records
+the new library source, test migration/inventory, relocated runner hashes,
+independent reviews and fresh validation. Existing source/runner pins and
+historical measurements remain unchanged. `python3 -m unittest discover -s test -v`
+also exercises relocated campaign tooling; obsolete build-registry tests are
+archival inputs whose current contracts are covered in the library's small
+infrastructure suite.

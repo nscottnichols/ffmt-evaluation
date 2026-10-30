@@ -1,0 +1,39 @@
+{
+  "source_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+  "source_tree": "f60a4b1102bd3674d8d59b46df6891653fb5a2ba",
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "queue": "skylake_8180",
+  "routes": [
+    "cuda-clang",
+    "nvcc",
+    "hip",
+    "intel-sycl",
+    "intel-openmp",
+    "llvm-openmp",
+    "local-sycl"
+  ],
+  "purpose": "CPU-only backend compilation/link checks; no device execution or hardware measurement",
+  "created_utc": "20261030T213049Z",
+  "qsub_argv": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "skylake_8180",
+    "-n",
+    "1",
+    "-t",
+    "120",
+    "--cwd",
+    "/home/nnichols",
+    "-O",
+    "/home/nnichols/ffmt-followup-backend-20261030T213049Z",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T213049Z/run-cobalt.sh"
+  ],
+  "qsub_exit_code": 0,
+  "qsub_stdout": "1012527\n",
+  "qsub_stderr": "",
+  "previous_attempt": "1012524",
+  "worktree_reuse": "Initial attempt never executed validation; clean detached worktrees retained without source changes."
+}

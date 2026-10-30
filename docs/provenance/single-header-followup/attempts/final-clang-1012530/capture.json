@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--validation",
+      "artifacts/single-header-followup-20261030/final-clang-1012530",
+      "--output",
+      "docs/provenance/single-header-followup/attempts/final-clang-1012530",
+      "--input",
+      "submission=artifacts/single-header-followup-20261030/final-clang-submission.json",
+      "--input",
+      "scripts/validate.py=artifacts/single-header-followup-20261030/validate_final.py",
+      "--input",
+      "scripts/validate.sh=artifacts/single-header-followup-20261030/validate-final.sh",
+      "--input",
+      "scheduler/1012530.output=/home/nnichols/1012530.output",
+      "--input",
+      "scheduler/1012530.error=/home/nnichols/1012530.error",
+      "--input",
+      "scheduler/1012530.cobaltlog=/home/nnichols/1012530.cobaltlog"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": "1012530",
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "validation",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530",
+      "handwritten_visible": false
+    },
+    {
+      "label": "submission",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-submission.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scripts/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate_final.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scripts/validate.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate-final.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scheduler/1012530.output",
+      "original_path": "/home/nnichols/1012530.output",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scheduler/1012530.error",
+      "original_path": "/home/nnichols/1012530.error",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scheduler/1012530.cobaltlog",
+      "original_path": "/home/nnichols/1012530.cobaltlog",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "validation/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/checkout.stderr",
+      "storage": "archive",
+      "bytes": 1661,
+      "sha256": "ac3afd4709f386535a5333aafc2324c7bf6995c69d5c7e40ce0158b0a270bf35"
+    },
+    {
+      "relative_path": "validation/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/checkout.stdout",
+      "storage": "archive",
+      "bytes": 97,
+      "sha256": "06167442213f2f288be80e5684454037432dd3fc2118f5c4149cd4db936638f7"
+    },
+    {
+      "relative_path": "validation/compiler.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/compiler.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/compiler.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/compiler.stdout",
+      "storage": "archive",
+      "bytes": 334,
+      "sha256": "49a9007929e2683b7defa034217c14fcda3fc4ccf711b7eda7a42b6356e11607"
+    },
+    {
+      "relative_path": "validation/make-portable.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/make-portable.stderr",
+      "storage": "archive",
+      "bytes": 24410,
+      "sha256": "ed7ae208412d5cc19b1cd8ea3e2f91487195be37a225fb986a47c66ebc53ccb9"
+    },
+    {
+      "relative_path": "validation/make-portable.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/make-portable.stdout",
+      "storage": "archive",
+      "bytes": 32103,
+      "sha256": "4fd7cdd5a78c40d3a556cf8e7869b51a3f47990d4676a6513d363bfc7a74dbc4"
+    },
+    {
+      "relative_path": "validation/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-1012530/manifest.json",
+      "storage": "visible",
+      "bytes": 19521,
+      "sha256": "12dfcdd764699b034491aee57a824e16694a5bb8ca284d132a2e5663e6d5d271"
+    },
+    {
+      "relative_path": "submission",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-clang-submission.json",
+      "storage": "visible",
+      "bytes": 528,
+      "sha256": "e720818b01327f1e004247a6f84d6e88d5f715a8150666f860a1524f2880b269"
+    },
+    {
+      "relative_path": "scripts/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate_final.py",
+      "storage": "visible",
+      "bytes": 4776,
+      "sha256": "c9608d78a14426ace57fd6c5b6d2d288df67af59b8d6704fd79b63a6d2a574ed"
+    },
+    {
+      "relative_path": "scripts/validate.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate-final.sh",
+      "storage": "visible",
+      "bytes": 294,
+      "sha256": "bbdffd5fc1cfac441e1d7c92cc99020a722524b072583d7d1b799b0bd12ea0fa"
+    },
+    {
+      "relative_path": "scheduler/1012530.output",
+      "original_path": "/home/nnichols/1012530.output",
+      "storage": "visible",
+      "bytes": 179,
+      "sha256": "fd2a8c40378d6b65cd609a4ebdfc489a2e3e0078d2bb921cd38ce4c5b34a76b8"
+    },
+    {
+      "relative_path": "scheduler/1012530.error",
+      "original_path": "/home/nnichols/1012530.error",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "scheduler/1012530.cobaltlog",
+      "original_path": "/home/nnichols/1012530.cobaltlog",
+      "storage": "visible",
+      "bytes": 2098,
+      "sha256": "d1e322144aeefc3582d866c8a2ed5ddca7d91228222bcbcde4b92407200afa03"
+    }
+  ],
+  "archive_sha256": "b368223407312140350f598017c1e37908a73c0a7edac2e89b8da17f44657972"
+}

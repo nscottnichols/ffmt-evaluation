@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/audits/reviews-and-header-proofs",
+      "--input",
+      "header-proofs=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-cleanup",
+      "--input",
+      "reviews=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "header-proofs",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-cleanup",
+      "handwritten_visible": true
+    },
+    {
+      "label": "reviews",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "header-proofs/production-header-move.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-cleanup/production-header-move.json",
+      "storage": "visible",
+      "bytes": 12267,
+      "sha256": "22906f09b8ba7fcb1979d80c2a5411549b65243714400d28ae7dbee2cdb18459"
+    },
+    {
+      "relative_path": "header-proofs/production-header-originals.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-cleanup/production-header-originals.json",
+      "storage": "visible",
+      "bytes": 5369,
+      "sha256": "d66fdce9355a34f9d64b0f5a13f9ab51ebc0404d5d9db2dfa567e5b8656a5668"
+    },
+    {
+      "relative_path": "reviews/build-infrastructure-inventory.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/build-infrastructure-inventory.json",
+      "storage": "visible",
+      "bytes": 4240,
+      "sha256": "ffb5df411b89bf1942a9e674de34cbf34f5ebd02df229d4552b4c8aa5cb52ea6"
+    },
+    {
+      "relative_path": "reviews/direct-test-mapping.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/direct-test-mapping.json",
+      "storage": "visible",
+      "bytes": 10185,
+      "sha256": "d1ad697cf987a406c9629a3b167e6af0a34fa48773806ffe50131698b675075e"
+    },
+    {
+      "relative_path": "reviews/direct-test-registrations.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/direct-test-registrations.json",
+      "storage": "visible",
+      "bytes": 8391,
+      "sha256": "1480f7212a69872261726cdbe2b97d7865bdbfd37f2634bb3fea506bf81a49cc"
+    },
+    {
+      "relative_path": "reviews/fixture-mapping.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/fixture-mapping.json",
+      "storage": "visible",
+      "bytes": 11467,
+      "sha256": "96a60d360b31884882cff80a2d4ac4e61d7b68a11a6a410a0e88c95d328563f9"
+    },
+    {
+      "relative_path": "reviews/independent-build-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-build-review.json",
+      "storage": "visible",
+      "bytes": 6748,
+      "sha256": "fedadc4c715851a69873ef48eaeca8ea51c84b09ccaa623a982dcf8bd7f818dc"
+    },
+    {
+      "relative_path": "reviews/independent-evaluation-final-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-evaluation-final-review.json",
+      "storage": "visible",
+      "bytes": 5189,
+      "sha256": "077164418657467c4cb6b8ef82bfcdcd535e6d9557b778ef536703d2e66ae3e8"
+    },
+    {
+      "relative_path": "reviews/independent-evaluation-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-evaluation-review.json",
+      "storage": "visible",
+      "bytes": 3975,
+      "sha256": "f2a0fbd0c4932a76e14d0c0a5cb3c15eae0807961902df5ee34736d833333328"
+    },
+    {
+      "relative_path": "reviews/independent-final-guard-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-final-guard-review.json",
+      "storage": "visible",
+      "bytes": 2029,
+      "sha256": "4899a765994bf0c90b4018caa92a548c10b4282ba99716a4955d662cb6acf397"
+    },
+    {
+      "relative_path": "reviews/independent-harness-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-harness-review.json",
+      "storage": "visible",
+      "bytes": 15623,
+      "sha256": "3fa3ddd96d523d91ec7abef0857a26b59f0775707983ac38ee79ac7ca6cb4aa5"
+    },
+    {
+      "relative_path": "reviews/independent-maintenance-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-maintenance-review.json",
+      "storage": "visible",
+      "bytes": 6087,
+      "sha256": "a611c6a8184f6f8cfe8a316972fb57c88d50bf2f6c762f2c96f6e0b2cc7f991a"
+    },
+    {
+      "relative_path": "reviews/independent-production-review-attempt1.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-production-review-attempt1.json",
+      "storage": "visible",
+      "bytes": 13717,
+      "sha256": "697f40620d48c39f4ad14e3f19f29bc616ff38f2bc5e2b498ce5e01c93cf3b19"
+    },
+    {
+      "relative_path": "reviews/independent-production-review-final.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-production-review-final.json",
+      "storage": "visible",
+      "bytes": 11649,
+      "sha256": "1a7e7d96fdc673b5edc697a2c21939b53c8e56f13e2becd90374822d3ac99770"
+    },
+    {
+      "relative_path": "reviews/independent-production-review.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-production-review.json",
+      "storage": "visible",
+      "bytes": 14225,
+      "sha256": "c8c88098b0a1542e0b588918ae9f7ab142c54c41c9343cf12e527436eb2fd955"
+    },
+    {
+      "relative_path": "reviews/make-cxx23-plan.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/make-cxx23-plan.txt",
+      "storage": "visible",
+      "bytes": 1596,
+      "sha256": "046f39641b80d040a83ee12fbe6b6ee8847bbdf412e3bccf4cf44735293ea905"
+    },
+    {
+      "relative_path": "reviews/make-direct-plan.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/make-direct-plan.txt",
+      "storage": "visible",
+      "bytes": 8052,
+      "sha256": "0474f356bb6131ba2aafa060dcc931ffbd19db3cf75cdb682e8a18ec6f9ed9e2"
+    },
+    {
+      "relative_path": "reviews/make-hip-plan.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/make-hip-plan.txt",
+      "storage": "visible",
+      "bytes": 1554,
+      "sha256": "16e3c0cb8493b675fb440811b4cebd0cb90c89afd295f17542272c823dfb6d26"
+    },
+    {
+      "relative_path": "reviews/make-portable-plan.txt",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/make-portable-plan.txt",
+      "storage": "visible",
+      "bytes": 14944,
+      "sha256": "2f05db98e17edcfa0a001904d91bf2c0067194ff8b967049a85a86c06c74c6c3"
+    },
+    {
+      "relative_path": "reviews/parse-registry.cmake",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/parse-registry.cmake",
+      "storage": "visible",
+      "bytes": 674,
+      "sha256": "fdcce29c70d5029952eed82d85fefb8131b53d1179c7671c6e8ae156240bfdc1"
+    },
+    {
+      "relative_path": "reviews/review-evaluation-596c672-unittest.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stderr",
+      "storage": "visible",
+      "bytes": 12287,
+      "sha256": "56a1672f3fdd598593cde801b204bc80b4dcd6e060e36d19fbe8a5e7efb4f020"
+    },
+    {
+      "relative_path": "reviews/review-evaluation-596c672-unittest.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-596c672-unittest.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-evaluation-final-unittest.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-final-unittest.stderr",
+      "storage": "visible",
+      "bytes": 12287,
+      "sha256": "0c72842224d097191c203287bd83c03277e6c8e5ed753679975d3ac753ad87d7"
+    },
+    {
+      "relative_path": "reviews/review-evaluation-final-unittest.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-final-unittest.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-evaluation-owned-dry-run.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-owned-dry-run.json",
+      "storage": "visible",
+      "bytes": 2299,
+      "sha256": "126f98bbe7e895cbb80c1a5b017b962563d14469bc55cbbda681d7293a8dfebc"
+    },
+    {
+      "relative_path": "reviews/review-evaluation-unittest.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-unittest.stderr",
+      "storage": "visible",
+      "bytes": 11524,
+      "sha256": "38f03123b5b1ec8fecae5de3d27dbf6b34530e3c69fdaf3d01d31854936769ba"
+    },
+    {
+      "relative_path": "reviews/review-evaluation-unittest.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-evaluation-unittest.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-infrastructure-final.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-infrastructure-final.stderr",
+      "storage": "visible",
+      "bytes": 2303,
+      "sha256": "72d3445174b1c7255aa3b97a22d08df6242186632594c560c09a228b3f67a869"
+    },
+    {
+      "relative_path": "reviews/review-infrastructure-final.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-infrastructure-final.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-infrastructure.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-infrastructure.stderr",
+      "storage": "visible",
+      "bytes": 1366,
+      "sha256": "dbc21cd1a7dd23d93c47bac09f99196f44e0512f28cd99132b978f7d354eac6e"
+    },
+    {
+      "relative_path": "reviews/review-infrastructure.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-infrastructure.stdout",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-make-compile-hip.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-compile-hip.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-make-compile-hip.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-compile-hip.stdout",
+      "storage": "visible",
+      "bytes": 1744,
+      "sha256": "2aac28613a84361a6223f0d5fea8972f2aeba70317b6419804886d6cf5306f2f"
+    },
+    {
+      "relative_path": "reviews/review-make-test-cxx23.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-test-cxx23.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-make-test-cxx23.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-test-cxx23.stdout",
+      "storage": "visible",
+      "bytes": 1596,
+      "sha256": "046f39641b80d040a83ee12fbe6b6ee8847bbdf412e3bccf4cf44735293ea905"
+    },
+    {
+      "relative_path": "reviews/review-make-test-portable.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-test-portable.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-make-test-portable.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-test-portable.stdout",
+      "storage": "visible",
+      "bytes": 14944,
+      "sha256": "2f05db98e17edcfa0a001904d91bf2c0067194ff8b967049a85a86c06c74c6c3"
+    },
+    {
+      "relative_path": "reviews/review-make-test-single-header.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-test-single-header.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-make-test-single-header.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-make-test-single-header.stdout",
+      "storage": "visible",
+      "bytes": 1056,
+      "sha256": "32e8ff6a4097fd89e741b1c81044670212131ef6a831aaf3b3fa165953ad43fb"
+    },
+    {
+      "relative_path": "reviews/review-provenance-596c672.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-provenance-596c672.stderr",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "reviews/review-provenance-596c672.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/review-provenance-596c672.stdout",
+      "storage": "visible",
+      "bytes": 360,
+      "sha256": "9b8417b9e16682b12388d80cdf70fcef6a7e85aaffa88a0f571e56208b99b970"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

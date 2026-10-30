@@ -1,0 +1,48 @@
+{
+  "source_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "job_id": "1012527",
+  "hostname": "skylake10",
+  "machine": "x86_64",
+  "routes": [
+    {
+      "route": "cuda-clang",
+      "status": "failure",
+      "manifest": "cuda-clang/manifest.json"
+    },
+    {
+      "route": "hip",
+      "status": "failure",
+      "manifest": "hip/manifest.json"
+    },
+    {
+      "route": "nvcc",
+      "status": "pass",
+      "manifest": "nvcc/manifest.json"
+    },
+    {
+      "route": "intel-openmp",
+      "status": "pass",
+      "manifest": "intel-openmp/manifest.json"
+    },
+    {
+      "route": "llvm-openmp",
+      "status": "failure",
+      "manifest": "llvm-openmp/manifest.json"
+    },
+    {
+      "route": "local-sycl",
+      "status": "failure",
+      "manifest": "local-sycl/manifest.json"
+    },
+    {
+      "route": "intel-sycl",
+      "status": "pass",
+      "manifest": "intel-sycl/manifest.json"
+    }
+  ],
+  "started_utc": "2026-10-30T21:31:07.663664+00:00",
+  "scope": "Compilation/link only. No accelerator execution. Architecture selections sm_80/gfx90a/spir64 are compilation targets, not measured hardware.",
+  "finished_utc": "2026-10-30T21:33:44.694497+00:00",
+  "status": "failure"
+}

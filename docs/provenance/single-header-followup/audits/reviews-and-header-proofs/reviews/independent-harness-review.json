@@ -1,0 +1,433 @@
+{
+  "reviewer": "single_header (independent of harness implementation)",
+  "starting_revision": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "plain_fixture_checks": [
+    {
+      "fixture": "literal",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "int-min",
+      "path": "test/test_integers.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "uint-max",
+      "path": "test/test_integers.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "ascii",
+      "path": "test/test_strings.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "no-newline",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "empty",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "nul-char",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "marker-text",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "uint-d",
+      "path": "test/test_integers.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "signed-hex",
+      "path": "test/test_integers.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "binary-max",
+      "path": "test/test_integers.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "zero-alt",
+      "path": "test/test_integers.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "align-zero",
+      "path": "test/test_layout.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "center-fill",
+      "path": "test/test_layout.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "repeated",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "dynamic-width",
+      "path": "test/test_layout.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "dynamic-precision",
+      "path": "test/test_layout.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "bool",
+      "path": "test/test_strings.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float-shortest",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float-notation",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float32",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float-fixed",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float-round",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float-hex",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float32-subnormal",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float64-subnormal",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float-large-fixed",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "float-special",
+      "path": "test/test_floats.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "unicode-width",
+      "path": "test/test_strings.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "unicode-precision",
+      "path": "test/test_strings.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "unicode-fill",
+      "path": "test/test_strings.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "debug-string",
+      "path": "test/test_strings.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "debug-char",
+      "path": "test/test_strings.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "null-pointer",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "long-padding",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "large-precision",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "long-literal",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "many-fields",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "percent-capacity",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    },
+    {
+      "fixture": "println-capacity",
+      "path": "test/test_misc.cpp",
+      "pattern_arguments_newline_identical": true
+    }
+  ],
+  "direct_body_checks": [
+    {
+      "source": "test/conformance/test_chrono.cpp",
+      "target": "test/direct/test_chrono.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "c7f4492cfc079aed8244d9d207b5349ee84a4133a2a79b7a880991abcccbcc6d"
+    },
+    {
+      "source": "test/conformance/test_core_accounting.cpp",
+      "target": "test/direct/test_core_accounting.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "d5c20450250dc5c67570eaefa7a2a4f95ba024fee4b78e7084f6e62424ae3899"
+    },
+    {
+      "source": "test/conformance/test_core_conversion.cpp",
+      "target": "test/direct/test_core_conversion.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "b3330c7642917c7df30b76b47f5fae3ace085e3c9988efae4dde1c12b9a95f07"
+    },
+    {
+      "source": "test/conformance/test_core_floating.cpp",
+      "target": "test/direct/test_core_floating.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "4b6088f802ffbafe7d07da94016cdc013cccd888ae63bd64c0871eb56b50ac77"
+    },
+    {
+      "source": "test/conformance/test_core_format_as.cpp",
+      "target": "test/direct/test_core_format_as.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "1f2b46e531463cbd216941f64b724847dacdec0ae3f29dbf42b4e9399bb2f912"
+    },
+    {
+      "source": "test/conformance/test_core_formatters.cpp",
+      "target": "test/direct/test_core_formatters.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "e8df358a77317ce134cd96e6c968d9d17a95d35ae562bf1638c410727d36677b"
+    },
+    {
+      "source": "test/conformance/test_core_forwarding.cpp",
+      "target": "test/direct/test_core_forwarding.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "97e05503f9e13820ad068b7e6d01c46962f7301755e1f2ae0720614cc635cc15"
+    },
+    {
+      "source": "test/conformance/test_core_int128.cpp",
+      "target": "test/direct/test_core_int128.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "e402db3eb6af356798ad10970bfc35ce2211c09dbe427e14c9bdbf7527e170e9"
+    },
+    {
+      "source": "test/conformance/test_core_legacy.cpp",
+      "target": "test/direct/test_core_legacy.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "6129391bf9df4c26ac8c5f821a3365e40e7d3ead4370b06eb4d386c7ec353217"
+    },
+    {
+      "source": "test/conformance/test_core_migration.cpp",
+      "target": "test/direct/test_core_migration.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "cb79a49e37db88c0f5c6d8807eaea545801939ca96729bcf8e982c0bd8280492"
+    },
+    {
+      "source": "test/conformance/test_core_parsing.cpp",
+      "target": "test/direct/test_core_parsing.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "e0cced520cf08de32c0de0b0c4cd9cccd68532ae877293f4208f0dd4b2aef4dd"
+    },
+    {
+      "source": "test/conformance/test_core_primitives.cpp",
+      "target": "test/direct/test_core_primitives.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "3d00acc2d47239062441f19cbdf29809d3e2c5b30692aeb397d4ae4489fb3bf3"
+    },
+    {
+      "source": "test/conformance/test_core_unicode.cpp",
+      "target": "test/direct/test_core_unicode.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "bcae48735acca20357016f0f1ff64686827f877ef7bd20e1200751d63fa8ad03"
+    },
+    {
+      "source": "test/conformance/test_engine_bitint.cpp",
+      "target": "test/direct/test_engine_bitint.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "adda291e1a012ac222bd7b2d4e1656ab9db3fc9f970a5369e81ad376b8759bd8"
+    },
+    {
+      "source": "test/conformance/test_engine_extended.cpp",
+      "target": "test/direct/test_engine_extended.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "7974b709418d531fca9efb4da15120a89f2674a3abe1b067370a00fb40cd991c"
+    },
+    {
+      "source": "test/conformance/test_engine_fast_math.cpp",
+      "target": "test/direct/test_engine_fast_math.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "1e4a4905191bfd80471aed50b2f0f1858d935083e74d29730c023619f2fa6f8c"
+    },
+    {
+      "source": "test/conformance/test_engine_legacy_hook.cpp",
+      "target": "test/direct/test_engine_legacy_hook.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "229a5a3534f40db645562083e7d88608bf8c315d3e46b0ead4f46060e35be3be"
+    },
+    {
+      "source": "test/conformance/test_engine_quad.cpp",
+      "target": "test/direct/test_engine_quad.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "f57045a05e1e5e301e52ebab4d785f85ead3e47e646cf18a2e359d39ba16a62a"
+    },
+    {
+      "source": "test/conformance/test_engine_transport.cpp",
+      "target": "test/direct/test_engine_transport.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "060f222a50c2663ccadf2e0b26c86d39fafdcb30bd479ed017133c68ecfaa8d6"
+    },
+    {
+      "source": "test/conformance/test_enum.cpp",
+      "target": "test/direct/test_enum.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "efe53c0bc12f5bb5f740e2c071a0235e365406a4058a8538063c54780749527d"
+    },
+    {
+      "source": "test/conformance/test_family_support.cpp",
+      "target": "test/direct/test_family_support.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "b1b5d8c04499af727d30a9923c2eaf2126c9784ba455c33cffda454fb660e133"
+    },
+    {
+      "source": "test/conformance/test_feature_integration.cpp",
+      "target": "test/direct/test_feature_integration.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "25f370d9e05abcf0db648531ca8a8896422a41605a6347ee748cdeb57758c979"
+    },
+    {
+      "source": "test/conformance/test_formatter_composition.cpp",
+      "target": "test/direct/test_formatter_composition.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "fde5d08c27a76fe7fadbf5a0849ba7bfc041892dcce0bbe36c43313843b0dfee"
+    },
+    {
+      "source": "test/conformance/test_legacy_forwarding.cpp",
+      "target": "test/direct/test_legacy_forwarding.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "aaf46b1ab07ef4ab9ac6189c628365dc97f942623748e29eba67f34bbfaa2342"
+    },
+    {
+      "source": "test/conformance/test_named_arguments.cpp",
+      "target": "test/direct/test_named_arguments.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "20bc4effe148a4da251828962a623e2da90e2c2229e337bbe5c7a0b163446db6"
+    },
+    {
+      "source": "test/conformance/test_printf.cpp",
+      "target": "test/direct/test_printf.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "2ca1ff3aeca8bebcd359dd2c8222dcd4525dd475b2ce31701af1483aae58c6cb"
+    },
+    {
+      "source": "test/conformance/test_ranges.cpp",
+      "target": "test/direct/test_ranges.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "41fc643f0d393379a8c11019c0f931970243586fc914ad1192d88ebf4fb71ff3"
+    },
+    {
+      "source": "test/conformance/test_ranges_forwarding.cpp",
+      "target": "test/direct/test_ranges_forwarding.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "da85a38fa8c1fbfc05470cdad2f8849c46c870b47da2dc89e46c1d1606e3fbde"
+    },
+    {
+      "source": "test/conformance/test_ranges_iterators.cpp",
+      "target": "test/direct/test_ranges_iterators.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "bfe22f206be3e06e1365bc3211ac12ceb853d1f6ff863a7825b80f65e48bb430"
+    },
+    {
+      "source": "test/conformance/test_std.cpp",
+      "target": "test/direct/test_std.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "5bb432dc8523b962c339fe3974cb5e7780027ae56fb5b232915783bac12b934c"
+    },
+    {
+      "source": "test/conformance/test_std23.cpp",
+      "target": "test/direct/test_std23.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "84dacc4b955619f84f8d6403cd2a4dfcfb0e810f1d853c5a3088214f5fa8744e"
+    },
+    {
+      "source": "test/conformance/test_style.cpp",
+      "target": "test/direct/test_style.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "f7d1e2350dd1f67a17334e7a9633271c31cca844cdae4b5ef54f7b2d45e4921e"
+    },
+    {
+      "source": "test/conformance/test_transport_forwarding.cpp",
+      "target": "test/direct/test_transport_forwarding.cpp",
+      "all_noninclude_lines_identical": true,
+      "current_sha256": "5dfea8378b1dc64b813e9e6eb6f2a60227475dfb05a3259e8a941496f4af2b88"
+    }
+  ],
+  "manual_checks": [
+    "14 extended feature fixtures preserve their expressions through original host stdout/oracle harness",
+    "All 9 negative fixture behaviors map to existing negative translation units",
+    "Shared host oracle macro block extracted without changing semantics",
+    "CUDA and HIP launcher now checks launch and execution runtime errors",
+    "reference.hpp is a small bounded-output helper, not a second launcher/fixture framework",
+    "Bounded reference helper preserves required size/truncation and now checks entire sentinel suffix",
+    "Host-only feature boundary is explicit; no claim that stdlib adapters run on devices"
+  ],
+  "findings": [
+    {
+      "finding": "std::cerr missing direct <iostream> include",
+      "status": "fixed"
+    },
+    {
+      "finding": "bounded helper only checked two unwritten sentinel bytes",
+      "status": "fixed: entire suffix checked"
+    },
+    {
+      "finding": "direct test rename alone would not satisfy migration",
+      "status": "resolved: 40 text fixtures migrated into original shared suites, 14 extended into original host suite, 33 direct API regressions retained byte-identically except includes"
+    }
+  ],
+  "limitations": [
+    "Static review only; allocated compiler/negative/backend/evaluation results owned by root and build_cleanup",
+    "No assertion that hardware campaigns or optional stdlib device callability are newly qualified"
+  ]
+}

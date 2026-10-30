@@ -1,0 +1,24 @@
+Jobid: 1012528
+qsub --mode script -q skylake_8180 -n 1 -t 120 --cwd /home/nnichols -O /home/nnichols/ffmt-followup-backend-20261030T213440Z /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T213440Z/run-cobalt.sh
+Fri Oct 30 21:35:08 2026 +0000 (UTC) submitted with cwd set to: /home/nnichols
+Fri Oct 30 21:35:27 2026 +0000 (UTC) 
+Fri Oct 30 21:35:27 2026 +0000 (UTC) Command: '/usr/bin/ssh' 'skylake10' '/usr/libexec/cobalt/cobalt-launcher.py' '--nf' '/var/tmp/cobalt.1012528' '--jobid' '1012528' '--cwd' '/home/nnichols' '--env' 'COBALT_JOBID=1012528' '/bin/bash' '/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-20261030T213440Z/run-cobalt.sh'
+Fri Oct 30 21:35:27 2026 +0000 (UTC) 
+Fri Oct 30 21:35:27 2026 +0000 (UTC) Environment:
+Fri Oct 30 21:35:27 2026 +0000 (UTC) SHELL=/bin/bash
+Fri Oct 30 21:35:27 2026 +0000 (UTC) COBALT_NODEFILE=/tmp/tmpzfMENH
+Fri Oct 30 21:35:27 2026 +0000 (UTC) COBALT_PARTNAME=skylake10
+Fri Oct 30 21:35:27 2026 +0000 (UTC) COBALT_JOBID=1012528
+Fri Oct 30 21:35:27 2026 +0000 (UTC) COBALT_STARTTIME=1793396115
+Fri Oct 30 21:35:27 2026 +0000 (UTC) LOGNAME=nnichols
+Fri Oct 30 21:35:27 2026 +0000 (UTC) USER=nnichols
+Fri Oct 30 21:35:27 2026 +0000 (UTC) COBALT_ENDTIME=1793403315
+Fri Oct 30 21:35:27 2026 +0000 (UTC) COBALT_PARTSIZE=1
+Fri Oct 30 21:35:27 2026 +0000 (UTC) HOME=/home/nnichols
+Fri Oct 30 21:35:27 2026 +0000 (UTC) COBALT_JOBSIZE=1
+Fri Oct 30 21:35:27 2026 +0000 (UTC) 
+Fri Oct 30 21:35:27 2026 +0000 (UTC) Info: stdin received from /dev/null
+Fri Oct 30 21:35:27 2026 +0000 (UTC) Info: stdout sent to /home/nnichols/ffmt-followup-backend-20261030T213440Z.output
+Fri Oct 30 21:35:27 2026 +0000 (UTC) Info: stderr sent to /home/nnichols/ffmt-followup-backend-20261030T213440Z.error
+Fri Oct 30 21:35:27 2026 +0000 (UTC) 
+Fri Oct 30 21:43:06 2026 +0000 (UTC) Info: task completed normally with an exit code of 0; initiating job cleanup and removal

@@ -1,0 +1,34 @@
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_auto_then_manual_index.cpp:5:23: error: call to consteval function 'fmt::fstring<int>::fstring<7UL>' is not a constant expression
+    5 |   NEG_EXPECT_REJECTED("{} {0}", 1);
+      |                       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:888:7: note: non-constexpr function 'report_error' cannot be used in a constant expression
+  888 |       report_error("cannot switch from automatic to manual argument indexing");
+      |       ^
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1264:5: note: in call to 'this->check_arg_id(0)'
+ 1264 |     base::check_arg_id(id);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1720:5: note: in call to 'this->context_.check_arg_id(0)'
+ 1720 |     context_.check_arg_id(id);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1617:54: note: in call to 'this->handler.on_arg_id(0)'
+ 1617 |       FMT_CONSTEXPR void on_index(int id) { arg_id = handler.on_arg_id(id); }
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1357:7: note: in call to 'handler.on_index(0)'
+ 1357 |       handler.on_index(index);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1622:13: note: in call to 'parse_arg_id<char, id_adapter &>(&"{} {0}"[5], &"{} {0}"[6], adapter)'
+ 1622 |     begin = parse_arg_id(begin, end, adapter);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:1651:19: note: in call to 'parse_replacement_field<char, fmt::detail::format_string_checker<char, 1, 0, false> &>(&"{} {0}"[4], &"{} {0}"[6], checker(this->str, arg_pack()))'
+ 1651 |       begin = p = parse_replacement_field(p - 1, end, handler);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:2722:7: note: in call to 'parse_format_string<char, fmt::detail::format_string_checker<char, 1, 0, false>>({&"{} {0}"[0], 6}, checker(this->str, arg_pack()))'
+ 2722 |       parse_format_string<char>(str, checker(str, arg_pack()));
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/clang-1012525/source/test/negative/reject_auto_then_manual_index.cpp:5:23: note: in call to 'fstring<7UL>("{} {0}")'
+    5 |   NEG_EXPECT_REJECTED("{} {0}", 1);
+      |                       ^~~~~~~~
+/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/third_party/fmt/include/fmt/core.h:653:27: note: declared here
+  653 | FMT_NORETURN FMT_API void report_error(const char* message);
+      |                           ^
+1 error generated.

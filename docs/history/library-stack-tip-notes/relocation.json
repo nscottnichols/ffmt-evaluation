@@ -1,0 +1,210 @@
+{
+  "source_commit": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "files": [
+    {
+      "source": "docs/api/accounting.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/accounting.md",
+      "sha256": "c1d5d819f6dec6e4d2c49eb7cf2a902c1dd48d71d4eff33941fd292b2ce475d7"
+    },
+    {
+      "source": "docs/api/checked-config.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/checked-config.md",
+      "sha256": "fbbcba9ff40b0ed76d1572cc70be8e7e93e0fe2158ba19323c97261ec8dc6317"
+    },
+    {
+      "source": "docs/api/conversion-preparation.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/conversion-preparation.md",
+      "sha256": "036463f698f5530ffaeb464e38dd42180cb57ed5fae2160cb06fd050d95bb284"
+    },
+    {
+      "source": "docs/api/core-prepare.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/core-prepare.md",
+      "sha256": "dc66f7cfad66ecb704fac5c5db4256c0550dc9338172285e159f15ebf7097b56"
+    },
+    {
+      "source": "docs/api/extended-floats.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/extended-floats.md",
+      "sha256": "d87740082f24c0476a4fc6a7ffc53f6065335c374722f13548c177d5bb4872d0"
+    },
+    {
+      "source": "docs/api/extended-integers.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/extended-integers.md",
+      "sha256": "822faabd7faf69c39dc2745c585a0afe8151820cd04ec5c8858844eef39cc6b8"
+    },
+    {
+      "source": "docs/api/floating-conversion.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/floating-conversion.md",
+      "sha256": "ea5389ba30fd36fcf1589e6b061fb48e16941c0decb103f024f0622d586188b6"
+    },
+    {
+      "source": "docs/api/floating-formatting.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/floating-formatting.md",
+      "sha256": "91e0bfbc007f0cf3a4ff574bedef84b101a4cd8705f2ca25f3934c4cc31d9d70"
+    },
+    {
+      "source": "docs/api/format-as.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/format-as.md",
+      "sha256": "ed2d5d960ae67439dfc41efac3b8d5b83c725ea4fda29f9c288f5204936c1132"
+    },
+    {
+      "source": "docs/api/formatter-compatibility.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/formatter-compatibility.md",
+      "sha256": "3c8fe9c270ada578d68623cc63d6c99c512340a91c0af1271d152c4b25726ab2"
+    },
+    {
+      "source": "docs/api/legacy-compatibility.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/legacy-compatibility.md",
+      "sha256": "40a4ed1add4449f15ee6902e474c59480dc1d4361010d02e859899d96bb7b48d"
+    },
+    {
+      "source": "docs/api/migration.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/migration.md",
+      "sha256": "0c97f91370c8a39f3d68509396bc5e72326833fdfafbd0184e38ced9a45c8f24"
+    },
+    {
+      "source": "docs/api/obsolete-deletion.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/obsolete-deletion.md",
+      "sha256": "d55591074ac00c7364550205c217726f6592962f95ec53db9dd3607591d02a24"
+    },
+    {
+      "source": "docs/api/parsing.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/parsing.md",
+      "sha256": "2d27afa40f9139d752056fb77c1be8af6f1f3d1a1ae4ef8c6be896ed414ed6b0"
+    },
+    {
+      "source": "docs/api/primitives.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/primitives.md",
+      "sha256": "438c5b5888a54560309906f9f2958157b30a113df65f392f792ba39347cde196"
+    },
+    {
+      "source": "docs/api/transport.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/transport.md",
+      "sha256": "339d6469da88e1c28b5f9b0a56b4f10382f5d986ff34bac1137276a28dac1ec6"
+    },
+    {
+      "source": "docs/api/unicode.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/api/unicode.md",
+      "sha256": "a1dd0cd1db52e9a3943ccf05632f7723d6ea36b7dfc3daaf11b970c833129055"
+    },
+    {
+      "source": "docs/conformance/benchmark-driver.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/benchmark-driver.md",
+      "sha256": "1d68eb54648dc6dc4d54570966c1379f202ad4a7a0be8896b7a7073190527dd4"
+    },
+    {
+      "source": "docs/conformance/benchmark-primitives.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/benchmark-primitives.md",
+      "sha256": "e441564434135f09d0094c672a46264011ca3d63f9efa3f2bdf3e2ef34d78919"
+    },
+    {
+      "source": "docs/conformance/benchmark-resources.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/benchmark-resources.md",
+      "sha256": "9f7683e8c355f1c50c173612d6ee84572eb98eb73ddc777477717e57ba23e5bb"
+    },
+    {
+      "source": "docs/conformance/coverage-metrics.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/coverage-metrics.md",
+      "sha256": "ffa2b9dabefb6b4f3e5b43040b0fd279d0d0d24969beb2f8c8650fbdbcb915ae"
+    },
+    {
+      "source": "docs/conformance/tool-adapter-support.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-adapter-support.md",
+      "sha256": "8c8f6d3f11677249fc98c2505556fa09efca05bc7d8d500ba115d47a07424e0d"
+    },
+    {
+      "source": "docs/conformance/tool-cuda.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-cuda.md",
+      "sha256": "032aa4d77c09bd12387ecacb7f5efa05bae48c227ef42c3e4f9fef2f3bd98c96"
+    },
+    {
+      "source": "docs/conformance/tool-engine-cases.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-engine-cases.md",
+      "sha256": "f18faa48861918271c71d6d3a1150da6edfbd869e23fcb263a2b28913838379c"
+    },
+    {
+      "source": "docs/conformance/tool-hip.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-hip.md",
+      "sha256": "343685925aa9cbcebb66980792bca9f073033ccbc256cbdc90b69002f19b454a"
+    },
+    {
+      "source": "docs/conformance/tool-host-oracle.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-host-oracle.md",
+      "sha256": "a024445f86a3b4e8fa8d82a1afb274c0c47db772df4847813753745e8f1955f3"
+    },
+    {
+      "source": "docs/conformance/tool-isolation.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-isolation.md",
+      "sha256": "3af5ebd637f6ced1028da90077673ac0de2bfaad9b93849c51944428833098ed"
+    },
+    {
+      "source": "docs/conformance/tool-kokkos.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-kokkos.md",
+      "sha256": "8a3f88d98a092d508a6750acbb19e0173de0f81540416897282d61364bff19dc"
+    },
+    {
+      "source": "docs/conformance/tool-memory-cuda.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-memory-cuda.md",
+      "sha256": "bce14d8f72ddf4aa8a0495a8a0460993b5e4204a2e220948e6715391b69358c1"
+    },
+    {
+      "source": "docs/conformance/tool-memory-hip.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-memory-hip.md",
+      "sha256": "da39682463e38aa2ec4bbdf7b007a89ab1b2a2eea700c5ac90ce7b37e2e6014b"
+    },
+    {
+      "source": "docs/conformance/tool-memory-kokkos.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-memory-kokkos.md",
+      "sha256": "e2bf43bd79e2aa589d1a3b0dc28e10bc51105a6528b6540efef2377eb9807ee5"
+    },
+    {
+      "source": "docs/conformance/tool-memory-openmp.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-memory-openmp.md",
+      "sha256": "293e563b50162371ef4dcc84a2573658fa47a2ff106b3ce6582a4992e2adea57"
+    },
+    {
+      "source": "docs/conformance/tool-memory-sycl.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-memory-sycl.md",
+      "sha256": "a49d2b4a8665ba7413c2fb1e66d9d686e3b6a41129984566c519f368b76c8c3d"
+    },
+    {
+      "source": "docs/conformance/tool-negative.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-negative.md",
+      "sha256": "1e2c4a6d26d5cd836513365324684ea184a22c616841ad4160ed41a7f995b56e"
+    },
+    {
+      "source": "docs/conformance/tool-numeric-memory.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-numeric-memory.md",
+      "sha256": "44c318ca3649c69daaba73bf5b725a0be5473447c28b1270360c70a2dae0c773"
+    },
+    {
+      "source": "docs/conformance/tool-openmp.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-openmp.md",
+      "sha256": "b64f7bb9d1d6bf1218a563631169fa7000940db232b025b380d8eaa1652e9eac"
+    },
+    {
+      "source": "docs/conformance/tool-oracle-negatives.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-oracle-negatives.md",
+      "sha256": "f7991fc4c63c6558c81c65ae3905adefbf02105fc64250e52b66b47debc5e622"
+    },
+    {
+      "source": "docs/conformance/tool-process.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-process.md",
+      "sha256": "cd3ded36886bce585035930786a5465c12e00925d0c08a856ffb1d9f4e6d4565"
+    },
+    {
+      "source": "docs/conformance/tool-snapshots.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-snapshots.md",
+      "sha256": "a32ef92ed334d00852b36e970c89aeb48c33c5685abde3303f304a1572b4f7b8"
+    },
+    {
+      "source": "docs/conformance/tool-sycl.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/conformance/tool-sycl.md",
+      "sha256": "d0bec2822be525a9749c4d75583df5932cb63996b4107f40b6d06e88d6c1c5df"
+    },
+    {
+      "source": "docs/contributing/CONFORMANCE_CI.md",
+      "destination": "docs/history/library-stack-tip-notes/docs/contributing/CONFORMANCE_CI.md",
+      "sha256": "873c9ec3e9f97474be57c2cd77451938d9e1832e1c707972e50d88cba4dbb36b"
+    }
+  ]
+}

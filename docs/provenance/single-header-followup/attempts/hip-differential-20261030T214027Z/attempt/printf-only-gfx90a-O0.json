@@ -1,0 +1,22 @@
+{
+  "name": "printf-only-gfx90a-O0",
+  "argv": [
+    "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc",
+    "-std=c++20",
+    "-O0",
+    "--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "--offload-arch=gfx90a",
+    "-x",
+    "hip",
+    "-c",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.o"
+  ],
+  "command": "/soft/compilers/rocm/rocm-7.0.2/bin/hipcc -std=c++20 -O0 --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux --offload-arch=gfx90a -x hip -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z/printf-only-gfx90a-O0.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-20261030T214027Z",
+  "started_utc": "2026-10-30T21:41:13.523569+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 2.632
+}

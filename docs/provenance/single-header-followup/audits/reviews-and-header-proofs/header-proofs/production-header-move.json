@@ -1,0 +1,296 @@
+{
+  "starting_revision": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "implementation": "include/ffmt/base.hpp",
+  "implementation_lines": 7185,
+  "compatibility_wrappers": 37,
+  "mechanical_changes": [
+    "Replaced local header inclusion with dependency-ordered inline source",
+    "Removed repeated pragma-once directives",
+    "Added logical section banners and standalone license notices",
+    "Replaced existing include paths with compatibility wrappers"
+  ],
+  "semantic_changes": [],
+  "segments": [
+    {
+      "source": "include/ffmt/detail/config.hpp",
+      "section": "Backend configuration and standard-library prerequisites",
+      "line": 65,
+      "lines": 45,
+      "moved_sha256": "2c415732b7db09b6f366c5268b43b5aba6e203fcb35c45c2f129e3209d47708a",
+      "verified_sha256": "2c415732b7db09b6f366c5268b43b5aba6e203fcb35c45c2f129e3209d47708a"
+    },
+    {
+      "source": "include/ffmt/detail/result.hpp",
+      "section": "Errors, string views, and output results",
+      "line": 114,
+      "lines": 64,
+      "moved_sha256": "88421fdc2485fef03090c8d0e6dd3fc6a2a8fa68f1cac6e6104b112ad1bd7934",
+      "verified_sha256": "88421fdc2485fef03090c8d0e6dd3fc6a2a8fa68f1cac6e6104b112ad1bd7934"
+    },
+    {
+      "source": "include/ffmt/detail/arguments.hpp",
+      "section": "Argument representations and native extended-type guards",
+      "line": 182,
+      "lines": 105,
+      "moved_sha256": "38c84990fa5660dbbb8222f9b46a2e41d8b39c54e56a7f6a910b0201acbb6925",
+      "verified_sha256": "38c84990fa5660dbbb8222f9b46a2e41d8b39c54e56a7f6a910b0201acbb6925"
+    },
+    {
+      "source": "include/ffmt/detail/unicode_width.hpp",
+      "section": "Unicode display width",
+      "line": 291,
+      "lines": 68,
+      "moved_sha256": "bcb1b01da752b41ce429e42568d8879509542713713a15d3cbac3ff837d23ccf",
+      "verified_sha256": "bcb1b01da752b41ce429e42568d8879509542713713a15d3cbac3ff837d23ccf"
+    },
+    {
+      "source": "include/ffmt/detail/parse.hpp",
+      "section": "Format specifications and parsing",
+      "line": 363,
+      "lines": 315,
+      "moved_sha256": "21951525438a55010b606853bde6764de0a18ebb3f2ffdd7f4b91885b97d4847",
+      "verified_sha256": "21951525438a55010b606853bde6764de0a18ebb3f2ffdd7f4b91885b97d4847"
+    },
+    {
+      "source": "include/ffmt/detail/type_categories.hpp",
+      "section": "Primitive type categories and validation rules",
+      "line": 682,
+      "lines": 52,
+      "moved_sha256": "270be292db291e6fa54ad0079f55bbecc21ae05c43923b74117eb0a94ae33c47",
+      "verified_sha256": "270be292db291e6fa54ad0079f55bbecc21ae05c43923b74117eb0a94ae33c47"
+    },
+    {
+      "source": "include/ffmt/detail/type_traits.hpp",
+      "section": "Primitive type traits",
+      "line": 738,
+      "lines": 22,
+      "moved_sha256": "59a0b1b2e8c4a3e33a459cc16235d0ab160b0cccf5ed4561cd588a995a8f5f42",
+      "verified_sha256": "59a0b1b2e8c4a3e33a459cc16235d0ab160b0cccf5ed4561cd588a995a8f5f42"
+    },
+    {
+      "source": "include/ffmt/detail/formatters.hpp",
+      "section": "Formatter protocols",
+      "line": 764,
+      "lines": 120,
+      "moved_sha256": "f36401c1c824fbf66c4b95a0f5eeef88283bcee5fafed32bb0b542f1907eb7b1",
+      "verified_sha256": "f36401c1c824fbf66c4b95a0f5eeef88283bcee5fafed32bb0b542f1907eb7b1"
+    },
+    {
+      "source": "include/ffmt/detail/context.hpp",
+      "section": "Parse and output contexts",
+      "line": 888,
+      "lines": 169,
+      "moved_sha256": "ece8aa382e24875a86214230023eb161b747125cb775460f32657efcfac203b7",
+      "verified_sha256": "ece8aa382e24875a86214230023eb161b747125cb775460f32657efcfac203b7"
+    },
+    {
+      "source": "include/ffmt/detail/output.hpp",
+      "section": "Bounded output and required-size accounting",
+      "line": 1061,
+      "lines": 113,
+      "moved_sha256": "ab8331102959d605fbe2cf74d632e5ea4a8ba22728b090d9224b28299f8eaa11",
+      "verified_sha256": "ab8331102959d605fbe2cf74d632e5ea4a8ba22728b090d9224b28299f8eaa11"
+    },
+    {
+      "source": "include/ffmt/detail/validation.hpp",
+      "section": "Argument validation",
+      "line": 1178,
+      "lines": 82,
+      "moved_sha256": "b4b59f0cab5eb397ba0447af95e841480978dc9b943971c639297c14ceed9919",
+      "verified_sha256": "b4b59f0cab5eb397ba0447af95e841480978dc9b943971c639297c14ceed9919"
+    },
+    {
+      "source": "include/ffmt/detail/execution.hpp",
+      "section": "Argument dispatch",
+      "line": 1264,
+      "lines": 131,
+      "moved_sha256": "38e31de3bc5d9c2b48a3b434c441739f01d55d67198660978f7d579aa29a2866",
+      "verified_sha256": "38e31de3bc5d9c2b48a3b434c441739f01d55d67198660978f7d579aa29a2866"
+    },
+    {
+      "source": "include/ffmt/detail/memory.hpp",
+      "section": "Binary representation helpers",
+      "line": 1399,
+      "lines": 59,
+      "moved_sha256": "593114ee88388b94622b6b886d685001255092f5c2e9e5029a3d49c047455dd3",
+      "verified_sha256": "593114ee88388b94622b6b886d685001255092f5c2e9e5029a3d49c047455dd3"
+    },
+    {
+      "source": "include/ffmt/detail/integer.hpp",
+      "section": "Integer formatting",
+      "line": 1462,
+      "lines": 70,
+      "moved_sha256": "409f78dbc6bc2badc25d9335a3ae3be117e45069eaa037b4f68fd488f974e01d",
+      "verified_sha256": "409f78dbc6bc2badc25d9335a3ae3be117e45069eaa037b4f68fd488f974e01d"
+    },
+    {
+      "source": "include/ffmt/detail/dragonbox.hpp",
+      "section": "Shortest floating-point conversion (Dragonbox)",
+      "line": 1536,
+      "lines": 650,
+      "moved_sha256": "a2caad4fb58484d36a997eeb1f210661bcb904bb80ce4b54266389dd1e356fb6",
+      "verified_sha256": "a2caad4fb58484d36a997eeb1f210661bcb904bb80ce4b54266389dd1e356fb6"
+    },
+    {
+      "source": "include/ffmt/detail/exact_decimal.hpp",
+      "section": "Exact decimal arithmetic",
+      "line": 2190,
+      "lines": 120,
+      "moved_sha256": "a0b79a50831e79f73b796c55220428c07d486558c625d098e8951545d471f3fd",
+      "verified_sha256": "a0b79a50831e79f73b796c55220428c07d486558c625d098e8951545d471f3fd"
+    },
+    {
+      "source": "include/ffmt/detail/floating.hpp",
+      "section": "Native binary floating-point representations",
+      "line": 2314,
+      "lines": 384,
+      "moved_sha256": "238136cec013f159dfe7f3b796fc19bfabbbd9c12e4e801054e8cff26f44fee5",
+      "verified_sha256": "238136cec013f159dfe7f3b796fc19bfabbbd9c12e4e801054e8cff26f44fee5"
+    },
+    {
+      "source": "include/ffmt/detail/numeric.hpp",
+      "section": "Numeric presentation",
+      "line": 2702,
+      "lines": 314,
+      "moved_sha256": "08afe77de4af77d34d3e5136a7ed6999ff49af5206aca5d6ef37fc75e9bfa002",
+      "verified_sha256": "08afe77de4af77d34d3e5136a7ed6999ff49af5206aca5d6ef37fc75e9bfa002"
+    },
+    {
+      "source": "include/ffmt/detail/extended.hpp",
+      "section": "Extended floating-point presentation",
+      "line": 3020,
+      "lines": 129,
+      "moved_sha256": "337c1f47206e1266cb000fdc037fba93b8c4554b353680a2e23ed35251e8df2f",
+      "verified_sha256": "337c1f47206e1266cb000fdc037fba93b8c4554b353680a2e23ed35251e8df2f"
+    },
+    {
+      "source": "include/ffmt/detail/unicode.hpp",
+      "section": "Unicode decoding and debug escaping",
+      "line": 3153,
+      "lines": 200,
+      "moved_sha256": "19273ad8a7825dcc51e78e91080fb93218d7df925dd058c3b24dfb48db416d3b",
+      "verified_sha256": "19273ad8a7825dcc51e78e91080fb93218d7df925dd058c3b24dfb48db416d3b"
+    },
+    {
+      "source": "include/ffmt/detail/text.hpp",
+      "section": "Text presentation",
+      "line": 3357,
+      "lines": 122,
+      "moved_sha256": "d2e4956b571d0cc99d201772b07986d94667da2881a834187708a32d03cd4433",
+      "verified_sha256": "d2e4956b571d0cc99d201772b07986d94667da2881a834187708a32d03cd4433"
+    },
+    {
+      "source": "include/ffmt/detail/value.hpp",
+      "section": "Formatting dispatch",
+      "line": 3483,
+      "lines": 75,
+      "moved_sha256": "61b683013f025612091a34a8a289fae009b81b12cfb17acd4929fb77e5160801",
+      "verified_sha256": "61b683013f025612091a34a8a289fae009b81b12cfb17acd4929fb77e5160801"
+    },
+    {
+      "source": "include/ffmt/detail/legacy_emit.hpp",
+      "section": "Legacy formatter compatibility",
+      "line": 3562,
+      "lines": 32,
+      "moved_sha256": "02da48735234b0a9433dea7c9a26da53eeac7439210f989956033f25b89b19c1",
+      "verified_sha256": "02da48735234b0a9433dea7c9a26da53eeac7439210f989956033f25b89b19c1"
+    },
+    {
+      "source": "include/ffmt/detail/transport.hpp",
+      "section": "Host and accelerator output transport",
+      "line": 3598,
+      "lines": 297,
+      "moved_sha256": "0f01525081d46d53543a6de79d98bad451c57ec953b7a5877b6e5cac760dc0ac",
+      "verified_sha256": "0f01525081d46d53543a6de79d98bad451c57ec953b7a5877b6e5cac760dc0ac"
+    },
+    {
+      "source": "include/ffmt/detail/print_macros.hpp",
+      "section": "Convenience macros",
+      "line": 3899,
+      "lines": 10,
+      "moved_sha256": "4d69f106627b16455c9260e6030f8fa4ffb40a341947552239b8a1e1b3caa894",
+      "verified_sha256": "4d69f106627b16455c9260e6030f8fa4ffb40a341947552239b8a1e1b3caa894"
+    },
+    {
+      "source": "include/ffmt/detail/sycl_formatters.hpp",
+      "section": "SYCL geometry formatters",
+      "line": 3913,
+      "lines": 91,
+      "moved_sha256": "14557f96263700915fbcf8f77011c22521bb950e186c5c03c02a646bcdf7430b",
+      "verified_sha256": "14557f96263700915fbcf8f77011c22521bb950e186c5c03c02a646bcdf7430b"
+    },
+    {
+      "source": "include/ffmt/args.hpp",
+      "section": "Named arguments",
+      "line": 4008,
+      "lines": 26,
+      "moved_sha256": "14dc59efa456046075360a7d3b729adfdbd511ee692bc460881901da10dfbd00",
+      "verified_sha256": "14dc59efa456046075360a7d3b729adfdbd511ee692bc460881901da10dfbd00"
+    },
+    {
+      "source": "include/ffmt/enum.hpp",
+      "section": "Enum helpers",
+      "line": 4038,
+      "lines": 20,
+      "moved_sha256": "84e882f123dfdf87dbddbb27c116a185d3984ea4010194b664fe37bff727e80f",
+      "verified_sha256": "84e882f123dfdf87dbddbb27c116a185d3984ea4010194b664fe37bff727e80f"
+    },
+    {
+      "source": "include/ffmt/detail/family.hpp",
+      "section": "Shared formatting support for compound values",
+      "line": 4062,
+      "lines": 348,
+      "moved_sha256": "87e204597b31bb4f7f1f5af2e29ee108945996d7d26d107325689821f3297421",
+      "verified_sha256": "87e204597b31bb4f7f1f5af2e29ee108945996d7d26d107325689821f3297421"
+    },
+    {
+      "source": "include/ffmt/ranges.hpp",
+      "section": "Ranges, tuples, and joins",
+      "line": 4414,
+      "lines": 646,
+      "moved_sha256": "e25a05671c189fe2ccf68f188dc143e37d257d40cdedad88e3460b71bae2f736",
+      "verified_sha256": "e25a05671c189fe2ccf68f188dc143e37d257d40cdedad88e3460b71bae2f736"
+    },
+    {
+      "source": "include/ffmt/chrono.hpp",
+      "section": "Chrono and calendar values",
+      "line": 5064,
+      "lines": 946,
+      "moved_sha256": "8b691609b6ce803cdd9a4bd16737236bf6cf39f70e2511af8913b5a5674f288f",
+      "verified_sha256": "8b691609b6ce803cdd9a4bd16737236bf6cf39f70e2511af8913b5a5674f288f"
+    },
+    {
+      "source": "include/ffmt/std.hpp",
+      "section": "Standard-library values",
+      "line": 6014,
+      "lines": 270,
+      "moved_sha256": "1692176cc28e8b32e4ad05f8387ae341c73b251b3eefed6880b9295de4a39453",
+      "verified_sha256": "1692176cc28e8b32e4ad05f8387ae341c73b251b3eefed6880b9295de4a39453"
+    },
+    {
+      "source": "include/ffmt/std23.hpp",
+      "section": "C++23 expected and unexpected values",
+      "line": 6288,
+      "lines": 55,
+      "moved_sha256": "83f2e20d2aab08d049e317bf9e12f563900a7712f3bf8a5ebfd1ef598567d0c3",
+      "verified_sha256": "83f2e20d2aab08d049e317bf9e12f563900a7712f3bf8a5ebfd1ef598567d0c3"
+    },
+    {
+      "source": "include/ffmt/color.hpp",
+      "section": "ANSI styling",
+      "line": 6347,
+      "lines": 349,
+      "moved_sha256": "4788b7fa0a2ee6a3b53e43ef8aaa49218f44a3f8e0b904cf9867512433919c10",
+      "verified_sha256": "4788b7fa0a2ee6a3b53e43ef8aaa49218f44a3f8e0b904cf9867512433919c10"
+    },
+    {
+      "source": "include/ffmt/printf.hpp",
+      "section": "Typed printf-style formatting",
+      "line": 6700,
+      "lines": 486,
+      "moved_sha256": "93138e61fbbff65d0dbab2786c4dafa722afa43bbdb71a12539c310f700e5d8b",
+      "verified_sha256": "93138e61fbbff65d0dbab2786c4dafa722afa43bbdb71a12539c310f700e5d8b"
+    }
+  ],
+  "all_moved_segments_byte_identical": true
+}

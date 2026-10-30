@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "validated_unmerged_followup",
+  "library_base": "471627c31cd1e09a2d4587c0369ec662251f7356",
+  "library_head": "3649622374b8beb29f2a1a1086031aba6a07c3e4",
+  "portable_qualified_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497",
+  "backend_qualified_revision": "f3170f07df7774fb086849b077422e3330166aec",
+  "initial_cmake_qualified_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+  "source_equivalence": {
+    "head_vs_portable_qualified": "Only docs/MAINTENANCE.md changes its provenance URL to an immutable tag; all code/tests/build files identical.",
+    "head_vs_backend_qualified": "All 38 headers and backend shared-test/build inputs identical; later host-main exception regression is covered by final portable runs.",
+    "initial_vs_final": "Backend runtime includes added under existing guards; nested stdout restoration test and documentation added. CMake wiring is unchanged."
+  },
+  "base_header_sha256": "a2e57ecf15f21cbdb4a7ee64e38f42c022617cedb1acee9bcc5bede1a210ecec",
+  "portable": [
+    {
+      "jobid": "1012530",
+      "source_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497",
+      "compiler": "Clang22",
+      "flags": "-O0 -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer",
+      "status": "pass",
+      "passed_binaries": 39,
+      "optional_skips": 0,
+      "negative_expected_rejections": 123
+    },
+    {
+      "jobid": "1012531",
+      "source_revision": "b0f82ee8d3449cf7b46834d7d1bbaf85b4df9497",
+      "compiler": "GCC13",
+      "flags": "-O2 -fno-fast-math",
+      "status": "pass_with_optional_skip",
+      "passed_binaries": 38,
+      "optional_skips": [
+        {
+          "suite": "engine_bitint",
+          "reason": "GCC13 lacks tested BitInt extension",
+          "exit_code": 77
+        }
+      ],
+      "negative_expected_rejections": 123,
+      "evaluation_smoke": {
+        "stdout_cases": 2,
+        "numeric_inputs": 26,
+        "formats_per_input": 5,
+        "failed": 0
+      }
+    }
+  ],
+  "cmake": {
+    "jobid": "1012525",
+    "source_revision": "0111b73a1fc55b5ebbdade261b0c194d6c83a410",
+    "ctest_passed": 41,
+    "ctest_failed": 0,
+    "skipped": 0,
+    "sanitizers": "Clang strict ASan/UBSan at -O0",
+    "install_consumer": "pass"
+  },
+  "offline_evaluation_tests": 76,
+  "library_infrastructure_tests": 16,
+  "capture_safety_tests": 2,
+  "benchmark_byte_comparisons": 12,
+  "accelerator_execution": false,
+  "hardware_campaign_repeated": false,
+  "historical_pins": {
+    "schema_version": 1,
+    "repository": "https://github.com/nscottnichols/ffmt.git",
+    "runner_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9",
+    "source_commit": "4b8cf257fc68c5b20c0c493e34d1d90269e76fd9"
+  },
+  "fmt_revision": "0fc31633e7d53ac895ae0a688b83b7d44f0b0c1f",
+  "historical_measurements": "Unchanged; new source revisions do not relabel prior source hashes, measurements or failures.",
+  "preserved_failures": [
+    "Cobalt1012522/23/24 SSH launch failures before tests",
+    "Initial backend include-order failures fixed explicitly",
+    "Initial warning-as-error toolchain failures with recorded subsequent flags",
+    "Initial NVCC host-language invocations invalidated, never CUDA qualification",
+    "ROCm7 gfx90a -O2 failure reproduced on baseline and consolidated header"
+  ],
+  "created_utc": "2026-10-30T21:57:06.768807+00:00"
+}

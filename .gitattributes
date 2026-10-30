@@ -9,3 +9,9 @@ docs/provenance/review-stack-validation/**/*.cobaltlog -whitespace
 # included in capture hashes. This does not hide handwritten files from review.
 docs/provenance/reviewer-stack-v2/archival-inputs/planning/build_tool_stages.py -whitespace
 docs/provenance/reviewer-stack-v2/archival-inputs/stage-inputs/root-stages/backend-regression-selection/changes.patch -whitespace
+# Byte-preserved compiler/scheduler output in the new follow-up. Only raw logs
+# are generated; handwritten headers, scripts, fixtures and reviews stay visible.
+docs/provenance/single-header-followup/attempts/**/*.stdout -whitespace linguist-generated=true
+docs/provenance/single-header-followup/attempts/**/*.stderr -whitespace linguist-generated=true
+docs/provenance/single-header-followup/attempts/**/*.error -whitespace linguist-generated=true
+docs/provenance/single-header-followup/attempts/**/*.cobaltlog -whitespace linguist-generated=true

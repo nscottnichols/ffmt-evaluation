@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "tools/review_stack/capture.py",
+      "--output",
+      "docs/provenance/single-header-followup/audits/final-source-and-base-mapping",
+      "--input",
+      "evaluation-base-mapping=artifacts/single-header-followup-20261030/evaluation-base-mapping.json",
+      "--input",
+      "final-source-audit=artifacts/single-header-followup-20261030/final-source-audit.json",
+      "--input",
+      "captured-stream-reference-audit=../ffmt/artifacts/simplify-followup/capture-stream-reference-audit-initial.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "evaluation-base-mapping",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/evaluation-base-mapping.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "final-source-audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-source-audit.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "captured-stream-reference-audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/capture-stream-reference-audit-initial.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "evaluation-base-mapping",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/evaluation-base-mapping.json",
+      "storage": "visible",
+      "bytes": 674,
+      "sha256": "458973576da0537a89672979bbfcb4b0506b04dce47645e4d0b8639da9ef1687"
+    },
+    {
+      "relative_path": "final-source-audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/final-source-audit.json",
+      "storage": "visible",
+      "bytes": 3881,
+      "sha256": "0b2f35d5bff3d89db57df016ea066eb950007cddbf892b3675bc32b8fb9dcc36"
+    },
+    {
+      "relative_path": "captured-stream-reference-audit",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/capture-stream-reference-audit-initial.json",
+      "storage": "visible",
+      "bytes": 94524,
+      "sha256": "ed34b5234f2288ac0c8dc02f3ae66ee5a0150a99e8577947c4b75fde6fc38609"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--validation",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/gcc-1012526",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/attempts/gcc-1012526",
+      "--input",
+      "submission=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/gcc-retry-submission.json",
+      "--input",
+      "scripts/validate.py=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/validate_portable.py",
+      "--input",
+      "scripts/validate.sh=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup-20261030/validate-portable.sh",
+      "--input",
+      "scheduler/1012526.output=/home/nnichols/1012526.output",
+      "--input",
+      "scheduler/1012526.error=/home/nnichols/1012526.error",
+      "--input",
+      "scheduler/1012526.cobaltlog=/home/nnichols/1012526.cobaltlog"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": "1012526",
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "validation",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526",
+      "handwritten_visible": false
+    },
+    {
+      "label": "submission",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-retry-submission.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scripts/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate_portable.py",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scripts/validate.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate-portable.sh",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scheduler/1012526.output",
+      "original_path": "/home/nnichols/1012526.output",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scheduler/1012526.error",
+      "original_path": "/home/nnichols/1012526.error",
+      "handwritten_visible": true
+    },
+    {
+      "label": "scheduler/1012526.cobaltlog",
+      "original_path": "/home/nnichols/1012526.cobaltlog",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {
+    "executable_or_library": 5,
+    "compiler_or_runtime_product": 1
+  },
+  "files": [
+    {
+      "relative_path": "validation/checkout.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/checkout.stderr",
+      "storage": "archive",
+      "bytes": 2090,
+      "sha256": "0064ceacd9df969b9ff9e70a5aca2b2c0c1f49c1dce6d18effe7b7e64bf4dbbd"
+    },
+    {
+      "relative_path": "validation/checkout.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/checkout.stdout",
+      "storage": "archive",
+      "bytes": 100,
+      "sha256": "f2d0c54c78c3a3c74c5ccdf75c43b35447cb9d3bd61d708b3abad3513f8c85b1"
+    },
+    {
+      "relative_path": "validation/compiler.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/compiler.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/compiler.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/compiler.stdout",
+      "storage": "archive",
+      "bytes": 219,
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke.stdout",
+      "storage": "archive",
+      "bytes": 404,
+      "sha256": "f5ff3f80ebc307a73ba00928097f115fdccf8e4a87b341e78b0defa544f44fd0"
+    },
+    {
+      "relative_path": "validation/make-portable.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/make-portable.stderr",
+      "storage": "archive",
+      "bytes": 24410,
+      "sha256": "2f374a1e504c24aa27f9abce2199e04fa1d000cd5a18fdbbd570b80d8f526f5c"
+    },
+    {
+      "relative_path": "validation/make-portable.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/make-portable.stdout",
+      "storage": "archive",
+      "bytes": 27859,
+      "sha256": "3dd54a38aeb8d4412f6d3f11da8e69b48b12f86c3bcaea980ed1b728f1435379"
+    },
+    {
+      "relative_path": "validation/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/manifest.json",
+      "storage": "visible",
+      "bytes": 20998,
+      "sha256": "5d5e44a82a3e773527641f722455cd266d44cff1da7ec6daddc666e487aa5776"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/manifest.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/manifest.json",
+      "storage": "visible",
+      "bytes": 22983,
+      "sha256": "4e8be106d8d69ff09ad14d837e92c4d8bbf3fef46223f518a8ecb1771e3299a3"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/cases-0-1-build.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/cases-0-1-build.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/cases-0-1-build.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/cases-0-1-build.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/cases-0-1.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/cases-0-1.cpp",
+      "storage": "archive",
+      "bytes": 499,
+      "sha256": "6356d93c19af4f5c5587c59d7f60f3ab267f858c1cd046b5883803909a007628"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/compiler-version.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/compiler-version.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/compiler-version.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/compiler-version.stdout",
+      "storage": "archive",
+      "bytes": 219,
+      "sha256": "3619f0f05f2e2d5acba88c4510c5be6594fbdf5587e7e92b2cefc4bca4f73981"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/control-build.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-build.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/control-build.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-build.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/control-run.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-run.stderr",
+      "storage": "archive",
+      "bytes": 17,
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/control-run.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control-run.stdout",
+      "storage": "archive",
+      "bytes": 9,
+      "sha256": "fd55d107298af4befdc0f39c71ca8d578862b7b83b637abdf45b7766fc8fa7a3"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/control.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/control.cpp",
+      "storage": "archive",
+      "bytes": 449,
+      "sha256": "5d07cbbfaa23ca0ab1d3e5589961d807270ba4186910635f01e7c8929d847be0"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/literal.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/literal.stderr",
+      "storage": "archive",
+      "bytes": 17,
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/literal.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/literal.stdout",
+      "storage": "archive",
+      "bytes": 16,
+      "sha256": "831fdd374094b747120bebee8a234630c7dec952cb56a2672206caa2cec7dfad"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/long-padding.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/long-padding.stderr",
+      "storage": "archive",
+      "bytes": 17,
+      "sha256": "9fdc246bd920860884c49c71e852902758c4eb5308e3562bcfaa213d34986ebd"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/long-padding.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/long-padding.stdout",
+      "storage": "archive",
+      "bytes": 302,
+      "sha256": "964f4a3632bacb042011a76e871722a3c3f436fcebcecdd74aee60703dcac8a6"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/numeric-memory-build.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-build.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/numeric-memory-build.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-build.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/numeric-memory-run.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-run.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/numeric-memory-run.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory-run.stdout",
+      "storage": "archive",
+      "bytes": 2713,
+      "sha256": "4fb6c98f722dba85007a6037a9be7a6836d3463447856105314076d4275bc1b6"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/host-buffer-O2/numeric-memory.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/host-buffer-O2/numeric-memory.cpp",
+      "storage": "archive",
+      "bytes": 3552,
+      "sha256": "22b250990eb131da059ae46c37f7e8a2bd8aef8f2262eac26441b43b05ece8c3"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/cases.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/cases.cpp",
+      "storage": "archive",
+      "bytes": 488,
+      "sha256": "999972d5db363a670fa35ae9feb00ee322d98bdb3c2da1df999b52244940f9fb"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/fmt-build.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/fmt-build.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/fmt-build.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/fmt-build.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/literal.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/literal.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/literal.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/literal.stdout",
+      "storage": "archive",
+      "bytes": 16,
+      "sha256": "831fdd374094b747120bebee8a234630c7dec952cb56a2672206caa2cec7dfad"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/long-padding.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/long-padding.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/long-padding.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/long-padding.stdout",
+      "storage": "archive",
+      "bytes": 302,
+      "sha256": "964f4a3632bacb042011a76e871722a3c3f436fcebcecdd74aee60703dcac8a6"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/numeric-memory-build.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-build.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/numeric-memory-build.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-build.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/numeric-memory-run.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-run.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/numeric-memory-run.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory-run.stdout",
+      "storage": "archive",
+      "bytes": 2713,
+      "sha256": "4fb6c98f722dba85007a6037a9be7a6836d3463447856105314076d4275bc1b6"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/numeric-memory.cpp",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/numeric-memory.cpp",
+      "storage": "archive",
+      "bytes": 3568,
+      "sha256": "20171b9276c3e9cf201f975dcc5c16557ada37d354f1fafad9efa1b9ce0c1dfd"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/oracle-build.stderr",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/oracle-build.stderr",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "validation/evaluation-smoke/oracle/oracle-build.stdout",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-1012526/evaluation-smoke/oracle/oracle-build.stdout",
+      "storage": "archive",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "submission",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/gcc-retry-submission.json",
+      "storage": "visible",
+      "bytes": 522,
+      "sha256": "49ae4a236536d4005142cfd14ba2e4db3ac13bae306c559567edf8f8427863c4"
+    },
+    {
+      "relative_path": "scripts/validate.py",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate_portable.py",
+      "storage": "visible",
+      "bytes": 4681,
+      "sha256": "d7acbb63d9a0151237ee630a103487bc7f78b491987f028d01416509db83500e"
+    },
+    {
+      "relative_path": "scripts/validate.sh",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate-portable.sh",
+      "storage": "visible",
+      "bytes": 297,
+      "sha256": "fa7838273a03f7d4abc09aa3f56a188ee90a1fe7d945c600b018e52fe013d2ce"
+    },
+    {
+      "relative_path": "scheduler/1012526.output",
+      "original_path": "/home/nnichols/1012526.output",
+      "storage": "visible",
+      "bytes": 190,
+      "sha256": "9a98963e454118181daa0cd78d603e4c59545f533857423df2fb63458efcb2b0"
+    },
+    {
+      "relative_path": "scheduler/1012526.error",
+      "original_path": "/home/nnichols/1012526.error",
+      "storage": "visible",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "scheduler/1012526.cobaltlog",
+      "original_path": "/home/nnichols/1012526.cobaltlog",
+      "storage": "visible",
+      "bytes": 2077,
+      "sha256": "a8a9f5ae63d0af1fe44e0ba70abe3407321ddc0fc5dd477fbdde0b99db4c622f"
+    }
+  ],
+  "archive_sha256": "ccc4399016da7bf02883786e82844c9c163dcae38440ad39125f290f09bbae8f"
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "status": "inputs_only",
+  "capture_tool": {
+    "path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+    "sha256": "c01ab6a91d0fbc2ee2b1837cbcc37e04f560040111b834b022b2711329ec655c",
+    "invocation": [
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/tools/review_stack/capture.py",
+      "--output",
+      "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/docs/provenance/single-header-followup/audits/backend-qualification-classification",
+      "--input",
+      "backend-validation-summary.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-validation-summary.json",
+      "--input",
+      "backend-validation-summary.md=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/backend-validation-summary.md",
+      "--input",
+      "nvcc-language-correction.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/nvcc-language-correction.json",
+      "--input",
+      "hip-differential-summary.json=/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-summary.json",
+      "--input",
+      "independent-eligibility-review=/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-final-backend-eligibility-review.json"
+    ],
+    "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation"
+  },
+  "cobalt_jobid": null,
+  "stage_status_counts": {},
+  "roots": [
+    {
+      "label": "backend-validation-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-validation-summary.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "backend-validation-summary.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-validation-summary.md",
+      "handwritten_visible": true
+    },
+    {
+      "label": "nvcc-language-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/nvcc-language-correction.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "hip-differential-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-summary.json",
+      "handwritten_visible": true
+    },
+    {
+      "label": "independent-eligibility-review",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-final-backend-eligibility-review.json",
+      "handwritten_visible": true
+    }
+  ],
+  "exclusion_policy": {
+    "pruned_directories": [
+      ".git",
+      "CMakeFiles",
+      "__pycache__",
+      "build",
+      "source"
+    ],
+    "cmake_build_detection": "CMakeCache.txt or cmake-build prefix",
+    "compiler_product_suffixes": [
+      ".a",
+      ".bc",
+      ".dll",
+      ".dylib",
+      ".exe",
+      ".o",
+      ".profdata",
+      ".profraw",
+      ".pyc",
+      ".so"
+    ],
+    "explanation": "Source checkouts and disposable products are omitted; their recorded source hashes remain in manifests. Original evidence is unchanged."
+  },
+  "skipped_files": {},
+  "files": [
+    {
+      "relative_path": "backend-validation-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-validation-summary.json",
+      "storage": "visible",
+      "bytes": 12907,
+      "sha256": "57f6f4c2995313ec6bb11c76291b36b0b0824a71ccce2b735da4ca96f8e479ba"
+    },
+    {
+      "relative_path": "backend-validation-summary.md",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-validation-summary.md",
+      "storage": "visible",
+      "bytes": 2263,
+      "sha256": "ca859a3ba765948ed9fca7afa015e20ad9a9b02cf6c2a628836c1419c91f4f02"
+    },
+    {
+      "relative_path": "nvcc-language-correction.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/nvcc-language-correction.json",
+      "storage": "visible",
+      "bytes": 640,
+      "sha256": "69bb8c6fb87105470a6d79c71496af97d38b49284add0285715c3cc2ae63965d"
+    },
+    {
+      "relative_path": "hip-differential-summary.json",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/hip-differential-summary.json",
+      "storage": "visible",
+      "bytes": 1568,
+      "sha256": "274b9d2d9396d61bf9155303484ef866bf0442300e1956627ce2c1888ed30181"
+    },
+    {
+      "relative_path": "independent-eligibility-review",
+      "original_path": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/simplify-followup/independent-final-backend-eligibility-review.json",
+      "storage": "visible",
+      "bytes": 2344,
+      "sha256": "213aefcfd5a34671d5128373cfd97cf3f385e12cc800010c5d2b99d87f02ef61"
+    }
+  ],
+  "archive_sha256": "272adeccafe73e7009d51f2ec2be9871db5e0eb14239f483ea429be26c3c6402"
+}

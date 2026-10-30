@@ -1,0 +1,24 @@
+Jobid: 1012532
+qsub --mode script -q skylake_8180 -n 1 -t 30 --cwd /home/nnichols -O /home/nnichols/ffmt-followup-hip-differential-20261030T214027Z /bin/bash /vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/run-cobalt.sh
+Fri Oct 30 21:40:33 2026 +0000 (UTC) submitted with cwd set to: /home/nnichols
+Fri Oct 30 21:40:59 2026 +0000 (UTC) 
+Fri Oct 30 21:40:59 2026 +0000 (UTC) Command: '/usr/bin/ssh' 'skylake09' '/usr/libexec/cobalt/cobalt-launcher.py' '--nf' '/var/tmp/cobalt.1012532' '--jobid' '1012532' '--cwd' '/home/nnichols' '--env' 'COBALT_JOBID=1012532' '/bin/bash' '/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-differential-20261030T214027Z/run-cobalt.sh'
+Fri Oct 30 21:40:59 2026 +0000 (UTC) 
+Fri Oct 30 21:40:59 2026 +0000 (UTC) Environment:
+Fri Oct 30 21:40:59 2026 +0000 (UTC) SHELL=/bin/bash
+Fri Oct 30 21:40:59 2026 +0000 (UTC) COBALT_NODEFILE=/tmp/tmpb81hvM
+Fri Oct 30 21:40:59 2026 +0000 (UTC) COBALT_PARTNAME=skylake09
+Fri Oct 30 21:40:59 2026 +0000 (UTC) COBALT_JOBID=1012532
+Fri Oct 30 21:40:59 2026 +0000 (UTC) COBALT_STARTTIME=1793396439
+Fri Oct 30 21:40:59 2026 +0000 (UTC) LOGNAME=nnichols
+Fri Oct 30 21:40:59 2026 +0000 (UTC) USER=nnichols
+Fri Oct 30 21:40:59 2026 +0000 (UTC) COBALT_ENDTIME=1793398239
+Fri Oct 30 21:40:59 2026 +0000 (UTC) COBALT_PARTSIZE=1
+Fri Oct 30 21:40:59 2026 +0000 (UTC) HOME=/home/nnichols
+Fri Oct 30 21:40:59 2026 +0000 (UTC) COBALT_JOBSIZE=1
+Fri Oct 30 21:40:59 2026 +0000 (UTC) 
+Fri Oct 30 21:40:59 2026 +0000 (UTC) Info: stdin received from /dev/null
+Fri Oct 30 21:40:59 2026 +0000 (UTC) Info: stdout sent to /home/nnichols/ffmt-followup-hip-differential-20261030T214027Z.output
+Fri Oct 30 21:40:59 2026 +0000 (UTC) Info: stderr sent to /home/nnichols/ffmt-followup-hip-differential-20261030T214027Z.error
+Fri Oct 30 21:40:59 2026 +0000 (UTC) 
+Fri Oct 30 21:41:44 2026 +0000 (UTC) Info: task completed normally with an exit code of 0; initiating job cleanup and removal

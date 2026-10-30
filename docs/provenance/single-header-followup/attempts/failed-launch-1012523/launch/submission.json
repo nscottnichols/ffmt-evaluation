@@ -1,0 +1,25 @@
+{
+  "command": [
+    "qsub",
+    "--mode",
+    "script",
+    "-q",
+    "cpl_8354H",
+    "-n",
+    "1",
+    "-t",
+    "120",
+    "--cwd",
+    "/home/nnichols",
+    "--env",
+    "FFMT_VALIDATION_SYSTEM=cpl",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup-20261030/validate-portable.sh",
+    "gcc",
+    "0111b73a1fc55b5ebbdade261b0c194d6c83a410"
+  ],
+  "stdout": "1012523\n",
+  "stderr": "",
+  "returncode": 0,
+  "submitted": "2026-10-30T21:29:07.230690+00:00"
+}

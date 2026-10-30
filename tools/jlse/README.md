@@ -8,12 +8,12 @@ export FFMT_CHECKOUT=/path/to/ffmt
 ```
 
 Every submission accepts `--ffmt-checkout PATH`, `--source-root PATH`,
-`--runner-revision FULL_COMMIT` and `--ffmt-repository URL`. The source root
-defaults to the runner checkout. With no existing checkout, an immutable runner
+`--runner-revision FULL_COMMIT` and `--ffmt-repository URL`. The source root defaults to the selected library checkout. Modern library
+checkouts use the evaluation-owned campaign runner; explicit historical runner
+revisions remain independently selected. With no existing checkout, an immutable runner
 pin is required. Historical library commits can use a current runner checkout
 and a separate source repository containing the retained archive refs. The
-launcher records these identities separately; this repository contains no
-library headers.
+launcher records these identities separately; this repository contains no library implementation headers.
 
 Use `python3 tools/jlse/submit.py discovery rome h100 mi300x chiatta gh200` to
 inspect one allocated node per hardware category. `--dry-run` prints the exact
@@ -48,7 +48,8 @@ python3 tools/jlse/submit.py baseline h100 --minutes 120
 python3 tools/jlse/submit.py head mi300x --revision WORKTREE --extra --route hip --opt 2
 python3 tools/jlse/submit.py provision rome --extra --component kokkos-serial --jobs 12
 python3 tools/jlse/submit.py provision chiatta --extra --component intel-llvm --component kokkos-sycl
-python3 tools/jlse/submit.py host-tests gh200 --revision WORKTREE
+python3 tools/jlse/submit.py host-tests gh200 --revision WORKTREE \
+  --runner-revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9
 python3 tools/jlse/submit.py benchmark rome --revision WORKTREE --extra --multi-tu
 ```
 
@@ -94,7 +95,12 @@ Trials with LLVM 22 failed while linking OCML bitcode; LLVM 23 exposed upstream
 API mismatches. Installation is successful only when its per-job manifest
 records `installed`; source downloads alone establish no support.
 
-`host_tests.py` covers the engine, legacy emission hook, native extended float,
+`host_tests.py` is a historical fixture recipe requiring a runner checkout that
+contains the original monolithic fixtures (select
+`--runner-revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9`). It fails before
+compilation when fixtures are absent. For the current library, use
+`build_checks.py` to execute its portable Make/CMake suite. The historical recipe
+covers the engine, legacy emission hook, native extended float,
 optional `__float128` and BitInt extensions, portable shortest conversion,
 format families, printf formatting and the C++23 adapters at both optimization
 levels. Optional compiler/library features returning 77 are recorded as

@@ -1,0 +1,31 @@
+{
+  "name": "header-only-device-consumer",
+  "argv": [
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++",
+    "-std=c++20",
+    "-O2",
+    "-fno-fast-math",
+    "--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header",
+    "-fsycl",
+    "-fsycl-targets=spir64",
+    "-c",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-sycl.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/local-sycl/header-only.o"
+  ],
+  "command": "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/software/chiatta/install/intel-llvm/bin/clang++ -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -fsycl -fsycl-targets=spir64 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-sycl.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/local-sycl/header-only.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/local-sycl",
+  "started_utc": "2026-10-30T21:42:14.634852+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 8.544,
+  "stdout": {
+    "path": "local-sycl/header-only-device-consumer.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "local-sycl/header-only-device-consumer.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

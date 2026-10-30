@@ -1,0 +1,13 @@
+{
+  "allocation_job_id": "1012529",
+  "allocation_verification": "allocation-qstat.stdout",
+  "argv": [
+    "/usr/bin/ssh",
+    "-o",
+    "BatchMode=yes",
+    "cpl00",
+    "/bin/bash",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt-evaluation/artifacts/single-header-followup/hip-full-o2-20261030T214415Z/run-allocated.sh"
+  ],
+  "source_revision": "f3170f07df7774fb086849b077422e3330166aec"
+}

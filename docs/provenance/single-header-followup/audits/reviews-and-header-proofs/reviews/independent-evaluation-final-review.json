@@ -1,0 +1,79 @@
+{
+  "reviewer": "build_cleanup, independent of root evaluation integration",
+  "scope": [
+    "tools/evaluation.py",
+    "test/test_evaluation.py",
+    "test/test_campaign_runner.py",
+    "platforms/library.json",
+    "../ffmt/docs/API.md",
+    "../ffmt/docs/BUILD.md",
+    "../ffmt/docs/CONFORMANCE.md",
+    "../ffmt/docs/BACKENDS.md",
+    "README.md"
+  ],
+  "source_files_sha256": {
+    "tools/evaluation.py": "58aa3521071b0e38847219077759c0f7ddac9f96b678ec132a14cf92e9fd950c",
+    "test/test_evaluation.py": "8cd9d868d36780fc16da77a1f86d4486be4adb618f08c9ca9b439ad04063b666",
+    "test/test_campaign_runner.py": "389936e02bb8f769ba141d264cbe22c3c6190074f5e4518ce60300325cffea8c",
+    "tools/jlse/host_tests.py": "e8be112e5a1e753f266be5ae5fe66191b24560129960c3b4423cdc2c07a8b48a",
+    "test/test_historical_host_recipe.py": "eff92865f8271cdebed0c6ec36457aa74920647afef02b782033789d456ddba2",
+    "README.md": "b91f7b4969c8b42dbf48d4c84d19a58553fd101f039f97e1378d129c291acbd6",
+    "tools/jlse/README.md": "8ffdf881792088d42c5d8ee8e51cb89be9c334c09b842895b220f17c83c18721"
+  },
+  "checks": [
+    "Modern library checkouts without campaign tools select evaluation-owned tools/campaign_runner and retain separately validated library source checkout/revision.",
+    "Historical existing checkouts retain historical runners and fixture identities; immutable bootstrap requires full 40-character hashes and rejects dirty/mismatched cached checkouts without modification.",
+    "Explicit requested runner revision no longer silently substitutes evaluation-owned runner if pinned commit lacks tools/conformance.py.",
+    "Identity records evaluation checkout/commit/dirty state, runner checkout/commit/dirty state, source checkout/commit/revision/dirty state, source snapshot hashes and unchanged configured library pin separately.",
+    "Relocated campaign tests run through explicit discovery bridge; four retired Make tests are excluded with visible explanation and seven replacement contracts plus original fmt-pin checks now exercise actual library Makefile.",
+    "Library API/BUILD/CONFORMANCE documentation describes one directly maintained implementation, compatibility includes, original shared-case harness, direct memory checks, C++20/C++23 boundaries and evaluation-only campaign provenance.",
+    "README now distinguishes modern evaluation-owned runner fallback, explicit historical runner pins and separately cached new pinned sources.",
+    "MAINTENANCE.md inventories retained/removed/relocated components, preserves all 33 direct test sources/34 variants, and explains the single-header parse-surface tradeoff without claiming GPU execution from host-only fixtures."
+  ],
+  "commands": [
+    {
+      "command": "python3 -B -m unittest discover -s test -v",
+      "passed": 76,
+      "failed": 0,
+      "stdout": "review-evaluation-final-unittest.stdout",
+      "stderr": "review-evaluation-final-unittest.stderr"
+    },
+    {
+      "command": "python3 -B tools/conformance.py --ffmt-checkout ../ffmt --dry-run --case literal --route host-buffer --opt 2 --no-memory --no-negative",
+      "exit_code": 0,
+      "record": "review-evaluation-owned-dry-run.json"
+    }
+  ],
+  "pin_unchanged_from_existing_history": true,
+  "findings": [
+    {
+      "id": "explicit-runner-pin",
+      "severity": "required",
+      "status": "fixed and independently retested",
+      "detail": "Missing runner at explicit pin now errors instead of silently changing runner identity."
+    },
+    {
+      "id": "legacy-host-tests-fixtures",
+      "severity": "boundary-documentation",
+      "status": "fixed: early fixture preflight plus two passing boundary regressions; authored by this reviewer at root request",
+      "detail": "tools/jlse/host_tests.py expects old monolith C++ fixtures absent from modern owned runner. Preserve historical recipe with explicit historical runner; modern library should use portable Make/CMake checks."
+    },
+    {
+      "id": "kokkos-test-ownership",
+      "severity": "documentation",
+      "status": "fixed and reviewed: BACKENDS.md attributes Kokkos checks to evaluation adapter",
+      "detail": "BACKENDS.md Kokkos testing row should identify evaluation adapter; library original harness has no Kokkos launcher."
+    },
+    {
+      "id": "arbitrary-new-pin-bootstrap",
+      "severity": "pre-existing limitation",
+      "status": "fixed and independently tested: new source pin uses a separate immutable cache checkout; historical runner stays pinned",
+      "detail": "Without an existing library checkout the cached historical runner may not contain arbitrary newer source commit objects; existing checkout plus explicit revision is reliable and preserves source identity."
+    }
+  ],
+  "limitations": [
+    "Offline tests and source/ownership review only. Actual C++ portable, negative, backend compilation, single-header and evaluation execution results are reported separately.",
+    "Independent review covers root evaluation bootstrap/source selection and documentation. Legacy host-recipe preflight was authored by this reviewer at root request and should be cross-reviewed separately."
+  ],
+  "prior_review": "independent-evaluation-review.json"
+}

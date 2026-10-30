@@ -1,0 +1,19 @@
+{
+  "include/fmt/args.h": "b105f72e62d7eb403c12c4c0ba22a94d42344b20206664814bf9568c6785fc83",
+  "include/fmt/base.h": "2f5945de9d42002ded554467ae6411927b25dae678f8588113e820cb4370004a",
+  "include/fmt/chrono.h": "5a654781e89e06b4fe8c2e9f8e6860f6aabe38d9c50d6864a2c7ab2adeac93ad",
+  "include/fmt/color.h": "80db3364b9f5b8247f4012d05d1353be1d0aed7c1b5bd65bdcd2817d50b64e7c",
+  "include/fmt/compile.h": "c8d933b1cdf923d2d39295a402c17488dd1afc96456185465e15155ef4255dfd",
+  "include/fmt/core.h": "897262b154a6c4233a6d134f3aca5796407fedbedbbcdaf644cd0b3c63cb635c",
+  "include/fmt/enum.h": "56cc7e8b2bcc6b6d83b1001248e2c1fb1fc52caa3047d0aed798b4b65804445e",
+  "include/fmt/fmt-c.h": "3f2acf7887a3d68e261e3a2ece6777213016348b80520864176f2553e9cf60a2",
+  "include/fmt/format-inl.h": "d888aa021ee32fb04d843c17e5a6653c85b1b242246adb242ec20dce9204b461",
+  "include/fmt/format.h": "0930b1f9f8bd6990c741e7b15435b10d8cf57d0de8271d0db5de19785682e39f",
+  "include/fmt/os.h": "812c0d7e95991caef7e6ef1bd4e8508dc930f615600e78e1121b3eb5dbc8bf20",
+  "include/fmt/ostream.h": "f3d624f543e74a837910a635b8f7b1e04dc8fbaee3ef34b86d3e8ec077827385",
+  "include/fmt/printf.h": "b5d5da335d04ef7832589259c800687ede57698ff91601150a0df7067be32b07",
+  "include/fmt/ranges.h": "e81bb7b20aa884db81143fea8eac41e4da82f9c4f54694ce6a89905de9383928",
+  "include/fmt/std.h": "2c439a27e697511c82b15b4dba452196d77b2a0f74e595041089068d0dbc6ba4",
+  "include/fmt/xchar.h": "84d263074870c4fe3cb663df2102dddf12a34e8e2032c46757f3274502daacd9",
+  "src/format.cc": "5ccc4d8a363bd5c570782bc3dd92020664b1aa89de2d48b3b87d040c8c7bcc02"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "header-only-device-consumer",
+  "argv": [
+    "/soft/compilers/llvm/release-22.1.8/bin/clang++",
+    "-std=c++20",
+    "-O2",
+    "-fno-fast-math",
+    "--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux",
+    "-Wno-error=unknown-cuda-version",
+    "-Wno-error=unused-command-line-argument",
+    "-I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header",
+    "-x",
+    "cuda",
+    "--cuda-path=/soft/compilers/cuda/cuda-12.9.1",
+    "--cuda-gpu-arch=sm_80",
+    "-c",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-gpu.cpp",
+    "-o",
+    "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/cuda-clang/header-only.o"
+  ],
+  "command": "/soft/compilers/llvm/release-22.1.8/bin/clang++ -std=c++20 -O2 -fno-fast-math --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -Wno-error=unknown-cuda-version -Wno-error=unused-command-line-argument -I/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/single-header -x cuda --cuda-path=/soft/compilers/cuda/cuda-12.9.1 --cuda-gpu-arch=sm_80 -c /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/header-only-gpu.cpp -o /vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/cuda-clang/header-only.o",
+  "cwd": "/vast/projects/datascience/nnichols/ffmt_project/ffmt/artifacts/single-header-followup/backend-20261030T213440Z/worktrees/cuda-clang",
+  "started_utc": "2026-10-30T21:42:46.570060+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "seconds": 8.091,
+  "stdout": {
+    "path": "cuda-clang/header-only-device-consumer.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "cuda-clang/header-only-device-consumer.stderr",
+    "sha256": "4c867886ddb77c6db7803f23a155589b44ac01174d8958014aa9b07e256666f0"
+  }
+}

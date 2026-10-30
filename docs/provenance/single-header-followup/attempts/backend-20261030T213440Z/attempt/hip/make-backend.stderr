@@ -1,0 +1,51 @@
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr34 = S_CSELECT_B32 killed renamable $sgpr9, killed $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr9, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr9 = S_CSELECT_B32 killed renamable $sgpr13, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr66 = S_CSELECT_B32 killed renamable $sgpr7, killed $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr96 = S_CSELECT_B32 killed renamable $sgpr11, $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr82 = S_CSELECT_B32 killed renamable $sgpr9, killed $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr4 = S_CSELECT_B32 killed renamable $sgpr11, $vgpr0, implicit $scc
+14 errors generated when compiling for gfx90a.
+failed to execute:/soft/compilers/rocm/rocm-7.0.2/llvm/bin/clang++  --offload-arch=gfx90a -O3  -std=c++20 -Wall -Werror -fno-fast-math -Iinclude --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -x hip -DTEST_NO_MAIN -c test/test_integers.cpp -o "build/hip_integers.o"
+make: *** [Makefile:245: build/hip_integers.o] Error 1
+make: *** Waiting for unfinished jobs....
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr50 = S_CSELECT_B32 killed renamable $sgpr9, killed $vgpr0, implicit $scc
+error: Illegal instruction detected: Operand has incorrect register class.
+renamable $sgpr4 = S_CSELECT_B32 killed renamable $sgpr11, $vgpr0, implicit $scc
+8 errors generated when compiling for gfx90a.
+failed to execute:/soft/compilers/rocm/rocm-7.0.2/llvm/bin/clang++  --offload-arch=gfx90a -O3  -std=c++20 -Wall -Werror -fno-fast-math -Iinclude --gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux -isystem /vast/projects/datascience/nnichols/ffmt_project/ffmt/third_party/fmt/include -x hip -DTEST_NO_MAIN -c test/test_floats.cpp -o "build/hip_floats.o"
+make: *** [Makefile:245: build/hip_floats.o] Error 1

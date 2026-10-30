@@ -195,3 +195,10 @@ No GPU campaign was repeated.
 The paper helper builds into fresh ignored output and preserves the historical
 paper, generated tables and selection ledger. A successful eight-page rebuild
 and unchanged-evidence verification were also checked after the split.
+
+The subsequent [single-header follow-up](single-header-followup.md) records the
+new library source and original-harness cleanup, with source/test equivalence
+audits, exact fresh validation and preserved failures. The historical pins and
+qualified measurements above retain their original identities. The original
+merged evaluation branch remains addressable through the immutable
+`evaluation-campaign` tag, preserving old PR evidence URLs.

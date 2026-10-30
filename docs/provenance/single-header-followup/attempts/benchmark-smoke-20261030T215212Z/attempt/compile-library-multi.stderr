@@ -1,0 +1,4 @@
+benchmarks/benchmark.cpp: In function 'int main(int, char**)':
+benchmarks/benchmark.cpp:132:10: warning: unused variable 'kernel_durations' [-Wunused-variable]
+  132 |   double kernel_durations[36]{};
+      |          ^~~~~~~~~~~~~~~~

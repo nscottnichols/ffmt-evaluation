@@ -5,6 +5,13 @@ review decisions. 4 PRs form the initial ready wave;
 later waves remain draft until prerequisite human review. All PRs stay unmerged.
 The library builds and runs its portable tests without this evaluation repository.
 
+The original 64-stage graph below remains unchanged. A subsequent maintenance
+follow-up, [library PR81](https://github.com/nscottnichols/ffmt/pull/81), is based
+on its collection tip and remains draft/unmerged. Its
+[single-header source mapping and validation](single-header-followup.md) and
+[evaluation companion PR2](https://github.com/nscottnichols/ffmt-evaluation/pull/2)
+are separate from the frozen original stage index.
+
 Read wave 1 first, then choose independent branches from their common prerequisite.
 The core is introduced behind an internal checked header while the original public
 implementation remains selected. Public migration follows its component tests;
@@ -93,6 +100,7 @@ actual GitHub base and full immutable hashes are in
 | 13 | [#72](https://github.com/nscottnichols/ffmt/pull/72) | Register every split portable suite explicitly in CTest | `cmake-package`, `migration`, `named-arguments`, `ranges`, `chrono`, `standard-types`, `std23`, `styling`, `enum-helpers`, `typed-printf`, `feature-integration`, `tool-numeric-memory` | [`6498c0c38449`](https://github.com/nscottnichols/ffmt/commit/6498c0c38449019200b962f978ef3dbef0511003) | draft |
 | 13 | [#74](https://github.com/nscottnichols/ffmt/pull/74) | Run and retain independent host corpus checks in ready CI | `ci-sanitizers`, `tool-numeric-memory`, `named-arguments`, `ranges`, `chrono`, `standard-types`, `std23`, `styling`, `enum-helpers`, `typed-printf`, `feature-integration` | [`493137b96467`](https://github.com/nscottnichols/ffmt/commit/493137b96467eaefe225f5c423dcc354db1dd4d4) | draft |
 | 13 | [#76](https://github.com/nscottnichols/ffmt/pull/76) | Make library contracts and portable guides easy to navigate | `cmake-tests`, `ci-conformance`, `reproducer-relocation`, `benchmark-driver`, `tool-memory-cuda`, `tool-memory-hip`, `tool-memory-openmp`, `tool-memory-sycl`, `tool-memory-kokkos` | [`77df1adccd04`](https://github.com/nscottnichols/ffmt/commit/77df1adccd0448a46e73af6be2af9c5a2efbc1ee) | draft |
+| Follow-up | [#81](https://github.com/nscottnichols/ffmt/pull/81) | Maintain one implementation header and the original test harness | `review-v2/complete` | [`3649622374b8`](https://github.com/nscottnichols/ffmt/commit/3649622374b8beb29f2a1a1086031aba6a07c3e4) | draft |
 
 ## Snapshot mapping and source changes
 
