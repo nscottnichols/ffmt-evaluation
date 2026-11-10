@@ -12,7 +12,8 @@ def compiler(route):
 def prefix(route):
     from backends import WORKSPACE
     key = "FFMT_KOKKOS_" + route.split("-", 1)[1].upper() + "_PREFIX"
-    fallback = WORKSPACE / "software" / os.environ.get("FFMT_PROFILE", "local") / "install" / route
+    root = Path(os.environ["FFMT_RUNTIME_ROOT"]) if "FFMT_RUNTIME_ROOT" in os.environ else WORKSPACE
+    fallback = root / "software" / os.environ.get("FFMT_PROFILE", "local") / "install" / route
     return Path(os.environ.get(key, fallback))
 
 def flags(route, optimization):

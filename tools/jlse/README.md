@@ -46,8 +46,12 @@ as a library revision.
 ```bash
 python3 tools/jlse/submit.py baseline h100 --minutes 120
 python3 tools/jlse/submit.py head mi300x --revision WORKTREE --extra --route hip --opt 2
-python3 tools/jlse/submit.py provision rome --extra --component kokkos-serial --jobs 12
-python3 tools/jlse/submit.py provision chiatta --extra --component intel-llvm --component kokkos-sycl
+python3 tools/jlse/submit.py provision rome \
+  --env FFMT_RUNTIME_ROOT=/path/to/ffmt-ci/releases/20261110-r1 \
+  --extra --component kokkos-serial --jobs 12 --access-group intel-dga
+python3 tools/jlse/submit.py provision chiatta \
+  --env FFMT_RUNTIME_ROOT=/path/to/ffmt-ci/releases/20261110-r1 \
+  --extra --component intel-llvm --component kokkos-sycl --access-group intel-dga
 python3 tools/jlse/submit.py host-tests gh200 --revision WORKTREE \
   --runner-revision 4b8cf257fc68c5b20c0c493e34d1d90269e76fd9
 python3 tools/jlse/submit.py benchmark rome --revision WORKTREE --extra --multi-tu
@@ -65,7 +69,7 @@ python3 tools/jlse/submit.py head h100 --queue gpu_a40 \
 python3 tools/jlse/submit.py head h100 --queue gpu_a40 \
   --revision 21f9f5ef4b5fbbc173dcd2fc274f94d30d26f8c8 \
   --env FFMT_GPU_ARCH=sm_86 \
-  --env FFMT_KOKKOS_CUDA_PREFIX="$PWD/software/h100/install/kokkos-cuda-sm86" \
+  --env FFMT_KOKKOS_CUDA_PREFIX=/path/to/ffmt-ci/releases/20261110-r1/software/h100/install/kokkos-cuda-sm86 \
   --extra --route kokkos-cuda --opt 2 --case bounded-family-padding --numeric-samples 1
 ```
 
@@ -76,17 +80,33 @@ records; the full focused campaign's selected cases remain in its manifest.
 
 Source dependencies are pinned by commit in `platforms/dependencies.json`;
 binary archives are pinned by SHA-256 from upstream release metadata. Downloads,
-source trees, build trees and install prefixes belong in ignored
-`software/<profile>/{downloads,src,build,install}` directories. `provision.py`
+source trees, build trees and install prefixes belong in the explicit runtime
+root's `software/<scope>/{downloads,src,build,install}` directories.
+`provision.py`
 requires an allocation for builds and binary installation; `--fetch-only`
 allows source downloads before an allocation. Its per-component manifest never
 turns a failed configuration/build into a successful installation.
 
+On JLSE, shared releases under `/vast/projects/intel_anl_shared` use the
+`intel-dga` access group; `datascience` does not include every CI reader. Check
+the actual intended accounts with `groups USER`, verify the complete path with
+`namei -l`, and retain group read/search permission throughout the release.
+Qualify the exact release root as each required account before changing a
+`current` symlink or making dependent CI jobs automatic; group membership and
+permission checks do not replace a job run under the CI identity.
+Pass `--access-group intel-dga` to `provision.py` to normalize group ownership
+and add group read/search permission after components and manifests are written.
+
 AdaptiveCpp 25.10 requires an official LLVM at most version 20 and a shared
 `libLLVM`. Both the shared JLSE LLVM20 installation and the upstream binary
 archive lack that library; the recipe therefore builds pinned LLVM20 from source
-with its shared library enabled. Intel LLVM's SYCL compiler and Intel oneAPI's OpenMP compiler are selected
-separately. No device route permits CPU fallback.
+with its shared library enabled. The environment adds LLVM20's `lib` and native
+target-specific OpenMP directory so AdaptiveCpp's OpenMP backend can load
+`libomp.so` from the native architecture's shared scope. LLVM20's `bin` is
+not added globally: AdaptiveCpp's configuration names its own Clang, while
+native CUDA and OpenMP routes retain their LLVM22/23 compiler. Intel LLVM's SYCL
+compiler and Intel oneAPI's OpenMP compiler are selected separately. No device
+route permits CPU fallback.
 
 chipStar 1.3 installs with pinned LLVM 20 and SPIR-V translator 20.1.18. The
 recipe also freezes its transitive SPIRV-Tools source and fingerprints the

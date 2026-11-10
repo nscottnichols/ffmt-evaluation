@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install pinned dependencies into an ignored system prefix, inside a job."""
+"""Install pinned dependencies into an explicit release prefix, inside a job."""
 import argparse
 import datetime
 import hashlib
@@ -16,6 +16,73 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[2]
 RECIPES = json.loads((ROOT / "platforms/dependencies.json").read_text())
+
+
+def validate_deployment_root(value, allow_legacy=False):
+    root = Path(value)
+    if not root.is_absolute():
+        raise ValueError("--deployment-root must be absolute")
+    if ".." in root.parts:
+        raise ValueError("--deployment-root must not contain '..'")
+    if root.is_symlink():
+        raise ValueError("--deployment-root must not be a symlink")
+    if not allow_legacy and (root.parent.name != "releases" or not root.name):
+        raise ValueError("--deployment-root must have the form .../releases/<id>")
+    return root
+
+
+def validate_storage_scope(value):
+    if not value or value in (".", "..") or Path(value).name != value:
+        raise ValueError("--storage-scope must be a single path component")
+    return value
+
+
+def validate_llvm_prefix(value):
+    if value is None:
+        return None
+    prefix = Path(value)
+    if not prefix.is_absolute():
+        raise ValueError("--llvm-prefix must be absolute")
+    return prefix
+
+
+def normalize_release_access(root, group, log):
+    run(["chgrp", "-R", "-h", "--", group, str(root)], log)
+    run(["chmod", "-R", "g+rX", str(root)], log)
+
+
+def prepare_storage(base):
+    for path in ["downloads", "src", "build", "install"]:
+        (base / path).mkdir(parents=True, exist_ok=True)
+
+
+def common_llvm_base(args):
+    return args.deployment_root / "software" / platform.machine()
+
+
+def llvm_dependency(args, log, ready):
+    if args.llvm_prefix is not None:
+        return Path(args.llvm_prefix)
+    base = common_llvm_base(args)
+    prefix = base / "install/llvm20-shared"
+    if not ready(prefix):
+        prepare_storage(base)
+        provision("llvm-shared", args, base, log)
+    return prefix
+
+
+def provision_host_runtime(base):
+    target = Path("/usr/lib64/libstdc++.so.6")
+    if not target.is_file():
+        raise RuntimeError(f"Host libstdc++ is unavailable: {target}")
+    link = base / "install/host-runtime/lib/libstdc++.so.6"
+    link.parent.mkdir(parents=True, exist_ok=True)
+    if link.is_symlink():
+        link.unlink()
+    elif link.exists():
+        raise RuntimeError(f"Refusing to replace non-symlink host-runtime entry: {link}")
+    link.symlink_to(target)
+    return {"prefix": str(link.parent.parent), "path": str(link), "target": str(target)}
 
 
 def run(argv, log, cwd=None):
@@ -97,10 +164,11 @@ def cmake_install(name, src, base, flags, jobs, log, build_override=None):
 
 def typed_spirv_adapter(base, translator, major):
     """Keep LLVM HIPSPV's +all setting compatible with the measured Intel IGC."""
+    translator = Path(os.path.abspath(translator))
     wrapper = base / "install/spirv-translator-typed/bin" / f"llvm-spirv-{major}"
     wrapper.parent.mkdir(parents=True, exist_ok=True)
     wrapper.write_text(
-        "#!/usr/bin/python3\nimport os,sys\ntranslator=" + repr(str(translator.resolve())) + "\n"
+        "#!/usr/bin/python3\nimport os,sys\ntranslator=" + repr(str(translator)) + "\n"
         'args=[a+",-SPV_KHR_untyped_pointers" if a.startswith("--spirv-ext=") else a for a in sys.argv[1:]]\n'
         "os.execv(translator,[translator,*args])\n")
     wrapper.chmod(0o755)
@@ -114,6 +182,8 @@ def typed_spirv_adapter(base, translator, major):
 def provision(component, args, base, log):
     if component == "intel-llvm":
         return install_archive(component, base, log)
+    if component == "host-runtime":
+        return provision_host_runtime(base)
     name = "kokkos" if component.startswith("kokkos-") else "llvm20" if component == "llvm-shared" else component
     src = source(name, base, log)
     if args.fetch_only:
@@ -134,12 +204,7 @@ def provision(component, args, base, log):
                   "-DLLVM_PARALLEL_LINK_JOBS=2"]
         return cmake_install("llvm20-shared", src / "llvm", base, flags, args.jobs, log, args.resume_build)
     if name == "adaptivecpp":
-        llvm = Path(args.llvm_prefix or "/soft/compilers/llvm/release-20.1.8")
-        if not any((llvm / "lib").glob("libLLVM.so*")) and not args.llvm_prefix:
-            local_llvm = base / "install/llvm20-shared"
-            if not (local_llvm / "lib/libLLVM.so").exists():
-                provision("llvm-shared", args, base, log)
-            llvm = local_llvm
+        llvm = llvm_dependency(args, log, lambda prefix: any((prefix / "lib").glob("libLLVM.so*")))
         flags += [f"-DCMAKE_C_COMPILER={llvm}/bin/clang", f"-DCMAKE_CXX_COMPILER={llvm}/bin/clang++",
                   f"-DLLVM_DIR={llvm}/lib/cmake/llvm", "-DACPP_COMPILER_FEATURE_PROFILE=full",
                   "-DWITH_OPENCL_BACKEND=OFF", "-DWITH_LEVEL_ZERO_BACKEND=OFF",
@@ -151,9 +216,7 @@ def provision(component, args, base, log):
         elif args.profile == "chiatta":
             flags += ["-DWITH_LEVEL_ZERO_BACKEND=ON"]
     elif name == "chipstar":
-        llvm = Path(args.llvm_prefix or base / "install/llvm20-shared")
-        if not (llvm / "bin/llvm-config").exists() and not args.llvm_prefix:
-            provision("llvm-shared", args, base, log)
+        llvm = llvm_dependency(args, log, lambda prefix: (prefix / "bin/llvm-config").exists())
         os.environ["LD_LIBRARY_PATH"] = str(base/"install/spirv-translator/lib") + os.pathsep + str(llvm/"lib") + os.pathsep + os.environ.get("LD_LIBRARY_PATH", "")
         run(["git", "-C", src, "submodule", "update", "--init", "--recursive", "--depth", "1"], log)
         # Upstream v1.3 fetches SPIRV-Tools main. Freeze the measured transitive
@@ -185,7 +248,7 @@ def provision(component, args, base, log):
             flags += [f"-DLLVM_SPIRV={translator}"]
             extra["typed_pointer_adapter"] = typed_spirv_adapter(base, translator, major)
     elif name == "spirv-translator":
-        llvm = Path(args.llvm_prefix or base / "install/llvm20-shared")
+        llvm = llvm_dependency(args, log, lambda prefix: (prefix / "bin/llvm-config").exists())
         flags += [f"-DCMAKE_C_COMPILER={llvm}/bin/clang", f"-DCMAKE_CXX_COMPILER={llvm}/bin/clang++",
                   f"-DLLVM_DIR={llvm}/lib/cmake/llvm", "-DLLVM_SPIRV_INCLUDE_TESTS=OFF",
                   "-DBUILD_SHARED_LIBS=ON", f"-DCMAKE_INSTALL_RPATH={base}/install/spirv-translator/lib;{llvm}/lib"]
@@ -228,30 +291,45 @@ def provision(component, args, base, log):
     return result
 
 
-def main():
+def parse_args(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--profile", required=True)
+    p.add_argument("--deployment-root", required=True)
+    p.add_argument("--access-group", help="Recursively grant this group read/search access after provisioning")
+    p.add_argument("--storage-scope")
+    p.add_argument("--allow-legacy-root", action="store_true")
     p.add_argument("--component", action="append", required=True, choices=["intel-llvm", "llvm-shared", "adaptivecpp", "chipstar", "spirv-translator",
-                   "kokkos-serial", "kokkos-cuda", "kokkos-hip", "kokkos-sycl"])
+                   "kokkos-serial", "kokkos-cuda", "kokkos-hip", "kokkos-sycl", "host-runtime"])
     p.add_argument("--jobs", type=int, default=8)
     p.add_argument("--llvm-prefix")
     p.add_argument("--kokkos-cuda-compiler", choices=["clang", "nvcc"], default="clang")
     p.add_argument("--install-suffix", help="Keep a distinct compiler/architecture installation alongside the primary prefix")
     p.add_argument("--resume-build", help="Resume a named LLVM build directory after recovering a missing prerequisite")
     p.add_argument("--fetch-only", action="store_true", help="Download sources without compilation (login-safe)")
-    a = p.parse_args()
+    a = p.parse_args(argv)
+    try:
+        a.deployment_root = validate_deployment_root(a.deployment_root, a.allow_legacy_root)
+        a.storage_scope = validate_storage_scope(a.storage_scope if a.storage_scope is not None else a.profile)
+        a.llvm_prefix = validate_llvm_prefix(a.llvm_prefix)
+    except ValueError as error:
+        p.error(str(error))
     if a.install_suffix and any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_" for c in a.install_suffix):
         p.error("--install-suffix accepts letters, digits, dash and underscore")
     if a.resume_build and ("/" in a.resume_build or a.resume_build in (".", "..")):
         p.error("--resume-build must name a directory directly under software/<profile>/build")
+    return a
+
+
+def main(argv=None):
+    a = parse_args(argv)
     if not a.fetch_only and not os.getenv("COBALT_JOBID"):
-        p.error("Build/install requires an active Cobalt allocation")
-    base = ROOT / "software" / a.profile
-    for path in ["downloads", "src", "build", "install"]:
-        (base / path).mkdir(parents=True, exist_ok=True)
-    output = ROOT / "artifacts" / a.profile / f"provision-{os.getenv('COBALT_JOBID', 'fetch')}"
+        raise SystemExit("Build/install requires an active Cobalt allocation")
+    base = a.deployment_root / "software" / a.storage_scope
+    prepare_storage(base)
+    output = a.deployment_root / "manifests/components" / a.profile / f"provision-{os.getenv('COBALT_JOBID', 'fetch')}"
     output.mkdir(parents=True, exist_ok=True)
     results = {"schema_version": 1, "profile": a.profile, "machine": platform.machine(),
+               "deployment_root": str(a.deployment_root), "storage_scope": a.storage_scope,
                "cobalt_jobid": os.getenv("COBALT_JOBID"), "components": {},
                "timestamp_utc": datetime.datetime.now(datetime.timezone.utc).isoformat()}
     failed = False
@@ -266,6 +344,17 @@ def main():
             results["components"][component] = result
             (output / "manifest.json").write_text(json.dumps(results, indent=2) + "\n")
             print(component, result["status"], result.get("error", ""), flush=True)
+    if a.access_group:
+        with (output / "access.log").open("w") as log:
+            try:
+                normalize_release_access(a.deployment_root, a.access_group, log)
+                access = {"group": a.access_group, "status": "normalized"}
+            except Exception as exc:
+                access = {"group": a.access_group, "status": "infrastructure_failure", "error": str(exc)}
+                failed = True
+            results["access"] = access
+            (output / "manifest.json").write_text(json.dumps(results, indent=2) + "\n")
+            print("access", access["status"], access.get("error", ""), flush=True)
     raise SystemExit(1 if failed else 0)
 
 

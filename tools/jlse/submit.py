@@ -28,7 +28,7 @@ def main():
     a = p.parse_args()
     for value in a.env:
         key, separator, _ = value.partition("=")
-        if not separator or not re.fullmatch(r"FFMT_(?:CXX_[A-Z_]+|FLAGS_[A-Z_]+|KOKKOS_[A-Z_]+_PREFIX|HOST_CXX|OMP_RUNTIME_PREFIX|GPU_ARCH)|CXX|CUDA_PATH|ROCM_PATH|CHIP_(?:BE|DEVICE_TYPE|SKIP_UNINIT)", key):
+        if not separator or not re.fullmatch(r"FFMT_(?:CXX_[A-Z_]+|FLAGS_[A-Z_]+|KOKKOS_[A-Z_]+_PREFIX|HOST_CXX|OMP_RUNTIME_PREFIX|GPU_ARCH|RUNTIME_ROOT|FMT_DIR|PYTHON)|CXX|CUDA_PATH|ROCM_PATH|CHIP_(?:BE|DEVICE_TYPE|SKIP_UNINIT)", key):
             p.error("--env accepts explicit compiler and runtime selections only")
     configuration = json.loads((ROOT / "platforms/profiles.json").read_text())
     profiles = configuration["profiles"]

@@ -14,6 +14,10 @@ profile=${1:?system profile required}
 stage=${2:-baseline}
 revision=${3:-}
 shift "$(( $# >= 3 ? 3 : $# ))"
+if [ "$stage" = provision ] && [ -z "${FFMT_RUNTIME_ROOT:-}" ]; then
+  printf 'FFMT_RUNTIME_ROOT is required for provisioning\n' >&2
+  exit 2
+fi
 root=$(cd "$(dirname "$0")/../.." && pwd)
 cd "$root"
 export FFMT_WORKSPACE="$root" FFMT_PROFILES_FILE="$root/platforms/profiles.json"
@@ -27,7 +31,7 @@ if [ -z "$revision" ]; then
     revision=$(git -C "${FFMT_SOURCE_ROOT:?set FFMT_CHECKOUT or FFMT_SOURCE_ROOT to the external library}" rev-parse --verify 'HEAD^{commit}')
   fi
 fi
-mkdir -p "software/$profile/"{downloads,src,build,install} "artifacts/$profile"
+mkdir -p "artifacts/$profile"
 exec > >(tee -a "artifacts/$profile/job-${COBALT_JOBID:-manual}.log") 2>&1
 printf 'profile=%s stage=%s revision=%s\n' "$profile" "$stage" "$revision"
 date -u
@@ -42,7 +46,7 @@ if [ "$stage" = discovery ]; then exit 0; fi
 case "$stage" in
   host-tests) exec "$ffmt_python" tools/jlse/host_tests.py --profile "$profile" --revision "$revision" "$@" ;;
   diagnostics) exec "$ffmt_python" tools/jlse/diagnose.py --profile "$profile" --revision "$revision" "$@" ;;
-  provision) exec "$ffmt_python" tools/jlse/provision.py --profile "$profile" "$@" ;;
+  provision) exec "$ffmt_python" tools/jlse/provision.py --profile "$profile" --deployment-root "$FFMT_RUNTIME_ROOT" "$@" ;;
   benchmark) exec "$ffmt_python" tools/benchmark.py --profile "$profile" --revision "$revision" "$@" ;;
   *) exec "$ffmt_python" tools/conformance.py --profile "$profile" --revision "$revision" --label "$stage" "$@" ;;
 esac

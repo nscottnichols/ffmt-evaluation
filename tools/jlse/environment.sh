@@ -1,12 +1,21 @@
 #!/bin/bash
 # Source this only inside an allocation. Local toolchains override shared ones.
 ffmt_system=${1:?profile required}
+ffmt_arch=$(uname -m)
 ffmt_user_sycl=${FFMT_CXX_SYCL:-}
 ffmt_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)
+if [ "${FFMT_RUNTIME_ROOT+x}" = x ]; then
+  case "$FFMT_RUNTIME_ROOT" in
+    /*) ffmt_software_root="$FFMT_RUNTIME_ROOT/software" ;;
+    *) printf 'FFMT_RUNTIME_ROOT must be an absolute path\n' >&2; return 2 ;;
+  esac
+else
+  ffmt_software_root="$ffmt_root/software"
+fi
 if [ -f /etc/profile.d/modules.sh ]; then source /etc/profile.d/modules.sh; fi
 if type module >/dev/null 2>&1; then
   module use /soft/modulefiles
-  if [ "$(uname -m)" = x86_64 ]; then
+  if [ "$ffmt_arch" = x86_64 ]; then
     module load gcc/13.3.0 || true
     module load llvm/release-22.1.8 || true
     module load cmake/3.28.3 || true
@@ -36,7 +45,7 @@ if type module >/dev/null 2>&1; then
         unset ffmt_oneapi
         ;;
     esac
-  elif [ "$(uname -m)" = aarch64 ]; then
+  elif [ "$ffmt_arch" = aarch64 ]; then
     export FFMT_PYTHON=/usr/bin/python3.12
     # Keep native defaults while honoring explicit general, oracle and route
     # compiler selections. Python remains native even with an inherited x86 PATH.
@@ -64,18 +73,20 @@ if type module >/dev/null 2>&1; then
     unset ffmt_version
   fi
 fi
-ffmt_prefix="$ffmt_root/software/$ffmt_system/install"
+ffmt_prefix="$ffmt_software_root/$ffmt_system/install"
 for ffmt_tool in gcc llvm cuda intel-llvm adaptivecpp spirv-translator chipstar kokkos; do
   if [ -d "$ffmt_prefix/$ffmt_tool/bin" ]; then export PATH="$ffmt_prefix/$ffmt_tool/bin:$PATH"; fi
   if [ -d "$ffmt_prefix/$ffmt_tool/lib" ]; then export LD_LIBRARY_PATH="$ffmt_prefix/$ffmt_tool/lib:${LD_LIBRARY_PATH:-}"; fi
   if [ -d "$ffmt_prefix/$ffmt_tool/lib64" ]; then export LD_LIBRARY_PATH="$ffmt_prefix/$ffmt_tool/lib64:${LD_LIBRARY_PATH:-}"; fi
 done
+ffmt_llvm20="$ffmt_software_root/$ffmt_arch/install/llvm20-shared"
+if [ -d "$ffmt_llvm20/lib" ]; then
+  export LD_LIBRARY_PATH="$ffmt_llvm20/lib:$ffmt_llvm20/lib/$ffmt_arch-unknown-linux-gnu:${LD_LIBRARY_PATH:-}"
+fi
 # The shared GCC 13 build omits a GLIBCXX_3.4.21 futex symbol used by newer
 # CMake/LLVM binaries. Isolate the native OS libstdc++ rather than shadowing
 # accelerator libraries with the whole system library directory.
-if [ -f /usr/lib64/libstdc++.so.6 ]; then
-  mkdir -p "$ffmt_prefix/host-runtime/lib"
-  ln -sfn /usr/lib64/libstdc++.so.6 "$ffmt_prefix/host-runtime/lib/libstdc++.so.6"
+if [ -L "$ffmt_prefix/host-runtime/lib/libstdc++.so.6" ]; then
   export LD_LIBRARY_PATH="$ffmt_prefix/host-runtime/lib:${LD_LIBRARY_PATH:-}"
 fi
 if [ -x "$ffmt_prefix/intel-llvm/bin/clang++" ]; then export FFMT_CXX_SYCL="${ffmt_user_sycl:-$ffmt_prefix/intel-llvm/bin/clang++}"; fi
@@ -84,7 +95,7 @@ if [ -x "$ffmt_prefix/chipstar/bin/hipcc" ]; then
   export FFMT_CXX_CHIPSTAR="${FFMT_CXX_CHIPSTAR:-$ffmt_prefix/chipstar/bin/hipcc}"
   # The locally built Clang otherwise selects native GCC14 headers, whose
   # hardened string_view indexing calls a host-only assertion on SPIR devices.
-  if [ "$(uname -m)" = x86_64 ] && [ -z "${FFMT_FLAGS_CHIPSTAR:-}" ]; then
+  if [ "$ffmt_arch" = x86_64 ] && [ -z "${FFMT_FLAGS_CHIPSTAR:-}" ]; then
     export FFMT_FLAGS_CHIPSTAR=--gcc-toolchain=/soft/compilers/gcc/13.3.0/x86_64-suse-linux
     if [ -d "$ffmt_prefix/spirv-translator-typed/bin" ]; then
       export FFMT_FLAGS_CHIPSTAR="$FFMT_FLAGS_CHIPSTAR -B$ffmt_prefix/spirv-translator-typed/bin"
@@ -92,7 +103,7 @@ if [ -x "$ffmt_prefix/chipstar/bin/hipcc" ]; then
   fi
 fi
 if [ -n "${FFMT_OMP_RUNTIME_PREFIX:-}" ]; then
-  export LD_LIBRARY_PATH="$FFMT_OMP_RUNTIME_PREFIX/lib:$FFMT_OMP_RUNTIME_PREFIX/lib/x86_64-unknown-linux-gnu:${LD_LIBRARY_PATH:-}"
+  export LD_LIBRARY_PATH="$FFMT_OMP_RUNTIME_PREFIX/lib:$FFMT_OMP_RUNTIME_PREFIX/lib/$ffmt_arch-unknown-linux-gnu:${LD_LIBRARY_PATH:-}"
 fi
 for ffmt_backend in serial cuda hip sycl; do
   ffmt_export="FFMT_KOKKOS_${ffmt_backend^^}_PREFIX"
@@ -103,4 +114,4 @@ for ffmt_backend in serial cuda hip sycl; do
 done
 unset ffmt_backend ffmt_export ffmt_user_sycl
 export OMP_TARGET_OFFLOAD=MANDATORY LC_ALL=C GOMAXPROCS=2
-unset ffmt_tool ffmt_prefix ffmt_system ffmt_root
+unset ffmt_tool ffmt_prefix ffmt_system ffmt_root ffmt_software_root ffmt_llvm20 ffmt_arch
