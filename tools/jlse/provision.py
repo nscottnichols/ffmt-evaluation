@@ -10,6 +10,7 @@ import platform
 import shlex
 import shutil
 import subprocess
+import sysconfig
 import tarfile
 import time
 import urllib.request
@@ -71,10 +72,20 @@ def llvm_dependency(args, log, ready):
     return prefix
 
 
+def host_libstdcxx():
+    candidates = [Path("/usr/lib64/libstdc++.so.6")]
+    multiarch = sysconfig.get_config_var("MULTIARCH")
+    if multiarch:
+        candidates.extend(Path(root) / multiarch / "libstdc++.so.6"
+                          for root in ("/usr/lib", "/lib"))
+    for target in candidates:
+        if target.is_file():
+            return target
+    raise RuntimeError("Host libstdc++ is unavailable: " + ", ".join(map(str, candidates)))
+
+
 def provision_host_runtime(base):
-    target = Path("/usr/lib64/libstdc++.so.6")
-    if not target.is_file():
-        raise RuntimeError(f"Host libstdc++ is unavailable: {target}")
+    target = host_libstdcxx()
     link = base / "install/host-runtime/lib/libstdc++.so.6"
     link.parent.mkdir(parents=True, exist_ok=True)
     if link.is_symlink():

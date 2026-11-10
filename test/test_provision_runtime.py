@@ -98,20 +98,29 @@ class HostRuntimeTests(unittest.TestCase):
             base = Path(temporary)
             link = base / "install/host-runtime/lib/libstdc++.so.6"
             result = provision.provision_host_runtime(base)
+            target = Path(result["target"])
+            self.assertTrue(target.is_file())
             self.assertTrue(link.is_symlink())
             self.assertEqual(Path(result["path"]), link)
-            self.assertEqual(os.readlink(link), "/usr/lib64/libstdc++.so.6")
+            self.assertEqual(os.readlink(link), str(target))
 
             link.unlink()
             link.symlink_to("/usr/lib64/libm.so.6")
             provision.provision_host_runtime(base)
-            self.assertEqual(os.readlink(link), "/usr/lib64/libstdc++.so.6")
+            self.assertEqual(os.readlink(link), str(target))
 
             link.unlink()
             link.write_text("preserve this regular file")
             with self.assertRaisesRegex(RuntimeError, "Refusing to replace non-symlink"):
                 provision.provision_host_runtime(base)
             self.assertEqual(link.read_text(), "preserve this regular file")
+
+    def test_multiarch_host_library_discovery(self):
+        expected = Path("/usr/lib/x86_64-linux-gnu/libstdc++.so.6")
+        with mock.patch.object(provision.sysconfig, "get_config_var", return_value="x86_64-linux-gnu"), \
+                mock.patch.object(provision.Path, "is_file", autospec=True,
+                                  side_effect=lambda path: path == expected):
+            self.assertEqual(provision.host_libstdcxx(), expected)
 
     def test_manifest_and_log_stay_in_release(self):
         with tempfile.TemporaryDirectory() as temporary:
