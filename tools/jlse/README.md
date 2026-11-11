@@ -97,6 +97,72 @@ permission checks do not replace a job run under the CI identity.
 Pass `--access-group intel-dga` to `provision.py` to normalize group ownership
 and add group read/search permission after components and manifests are written.
 
+After both CI accounts have fresh pipelines for the same full commit and exact
+release root, record one offline qualification JSON file per account. Overall
+pipeline status may be `success` or `failed`; both require a nonempty
+`qualified_jobs` list naming successful jobs that consumed the exact runtime.
+Job-level success qualifies account/runtime access only and does not waive failed
+matrix targets. Use the GitLab pipeline and job identities in this form,
+replacing both commit placeholders with the same 40-character commit ID:
+
+```json
+{
+  "account": "nnichols",
+  "release_root": "/vast/projects/intel_anl_shared/ffmt-ci/releases/20261110-r1",
+  "tested_commit": "FULL_TESTED_COMMIT",
+  "pipeline": {
+    "id": 12345,
+    "sha": "FULL_TESTED_COMMIT",
+    "status": "failed",
+    "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/pipelines/12345",
+    "user": {"username": "nnichols"},
+    "created_at": "2026-11-11T00:00:00+00:00",
+    "updated_at": "2026-11-11T01:00:00+00:00",
+    "qualified_jobs": [
+      {
+        "id": 23456,
+        "name": "jlse-runtime-h100",
+        "status": "success",
+        "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/23456"
+      }
+    ]
+  }
+}
+```
+
+Run the finalizer from the evaluation repository root. It rejects missing or
+mismatched dual-account evidence, non-installed or duplicate components, paths
+outside the release, and source/archive hash mismatches. Host-runtime symlinks
+may target their recorded absolute system library. The finalizer normalizes and
+verifies group access, aggregates installed components by storage scope, then
+atomically records `state: ready`, `frozen: true` and `frozen_utc`:
+
+```bash
+python3 tools/jlse/finalize_release.py \
+  --deployment-root /vast/projects/intel_anl_shared/ffmt-ci/releases/20261110-r1 \
+  --access-group intel-dga --tested-commit "$TESTED_COMMIT" \
+  --qualification nnichols=/path/to/nnichols-qualification.json \
+  --qualification bertoni=/path/to/bertoni-qualification.json
+```
+
+The finalizer does not create `current`. Only after it exits successfully, use
+this separate activation step; the final tests and `ln` also refuse to replace
+an existing path:
+
+```bash
+set -e
+root=/vast/projects/intel_anl_shared/ffmt-ci
+release=releases/20261110-r1
+jq -e '.state == "ready" and .frozen == true' \
+  "$root/$release/manifests/release.json" >/dev/null
+test ! -e "$root/current"
+test ! -L "$root/current"
+ln -s "$release" "$root/current"
+```
+
+Treat the terminal manifest as immutable; use a new versioned release for any
+subsequent component or qualification change.
+
 AdaptiveCpp 25.10 requires an official LLVM at most version 20 and a shared
 `libLLVM`. Both the shared JLSE LLVM20 installation and the upstream binary
 archive lack that library; the recipe therefore builds pinned LLVM20 from source
