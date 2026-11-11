@@ -135,7 +135,8 @@ mismatched dual-account evidence, non-installed or duplicate components, paths
 outside the release, and source/archive hash mismatches. Host-runtime symlinks
 may target their recorded absolute system library. The finalizer normalizes and
 verifies group access, aggregates installed components by storage scope, then
-atomically records `state: ready`, `frozen: true` and `frozen_utc`:
+atomically records `state: ready`, `frozen: true` and `frozen_utc`. Git checks
+disable optional locks so they do not rewrite source-index ownership:
 
 ```bash
 python3 tools/jlse/finalize_release.py \

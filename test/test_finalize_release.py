@@ -227,6 +227,11 @@ class ReleaseFinalizerTests(unittest.TestCase):
         with self.assertRaisesRegex(finalize.ReleaseError, "source patch SHA-256 mismatch"):
             finalize.verify_component(self.kokkos, self.release, "rome/kokkos-serial")
 
+    def test_git_verification_disables_optional_locks(self):
+        with mock.patch.object(finalize.subprocess, "check_output", return_value=b"") as git_output:
+            finalize.git_output(Path("/source"), "diff", "--binary")
+        self.assertEqual(git_output.call_args.kwargs["env"]["GIT_OPTIONAL_LOCKS"], "0")
+
     def test_component_verification_checks_adapter_hashes(self):
         prefix = self.release / "software/rome/install/kokkos-serial"
         adapter = prefix / "bin/llvm-spirv-20"

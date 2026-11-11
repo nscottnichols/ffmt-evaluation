@@ -64,8 +64,11 @@ def file_sha256(path):
 
 
 def git_output(source, *arguments):
+    environment = os.environ.copy()
+    environment["GIT_OPTIONAL_LOCKS"] = "0"
     try:
-        return subprocess.check_output(["git", "-C", str(source), *arguments], stderr=subprocess.PIPE)
+        return subprocess.check_output(["git", "-C", str(source), *arguments],
+                                       stderr=subprocess.PIPE, env=environment)
     except subprocess.CalledProcessError as error:
         diagnostic = error.stderr.decode(errors="replace").strip()
         raise ReleaseError(f"Git verification failed for {source}: {diagnostic}") from error
