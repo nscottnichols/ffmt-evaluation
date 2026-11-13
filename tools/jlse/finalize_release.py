@@ -179,7 +179,7 @@ def validate_qualification(evidence, account, root, tested_commit):
     if evidence.get("tested_commit") != tested_commit:
         raise ReleaseError(f"qualification tested commit mismatch for {account}")
     pipeline = evidence.get("pipeline")
-    if not isinstance(pipeline, dict) or pipeline.get("status") not in {"success", "failed"}:
+    if not isinstance(pipeline, dict) or pipeline.get("status") not in {"success", "failed", "manual"}:
         raise ReleaseError(f"unsupported qualification pipeline status for {account}")
     user = pipeline.get("user")
     if not isinstance(user, dict) or user.get("username") != account:
@@ -220,6 +220,31 @@ def validate_qualification(evidence, account, root, tested_commit):
                 not parsed_job_url.path.endswith(f"/jobs/{job_id}")):
             raise ReleaseError(f"invalid qualified job URL for {account}")
         job_ids.add(job_id)
+    if pipeline.get("status") == "manual":
+        automatic_jobs = pipeline.get("automatic_jobs")
+        if not isinstance(automatic_jobs, list) or not automatic_jobs:
+            raise ReleaseError(f"manual qualification requires completed automatic jobs for {account}")
+        automatic_job_ids = set()
+        for job in automatic_jobs:
+            if not isinstance(job, dict) or job.get("status") not in {"success", "failed"}:
+                raise ReleaseError(f"automatic job was not completed for {account}")
+            name = job.get("name")
+            if not isinstance(name, str) or not name.strip():
+                raise ReleaseError(f"automatic job name is missing for {account}")
+            job_id = job.get("id")
+            if (isinstance(job_id, bool) or not isinstance(job_id, int) or job_id <= 0 or
+                    job_id in automatic_job_ids):
+                raise ReleaseError(f"invalid or duplicate automatic job ID for {account}")
+            job_url = job.get("web_url")
+            if not isinstance(job_url, str):
+                raise ReleaseError(f"invalid automatic job URL for {account}")
+            parsed_job_url = urlparse(job_url)
+            if (parsed_job_url.scheme != "https" or not parsed_job_url.netloc or
+                    not parsed_job_url.path.endswith(f"/jobs/{job_id}")):
+                raise ReleaseError(f"invalid automatic job URL for {account}")
+            automatic_job_ids.add(job_id)
+        if not job_ids.issubset(automatic_job_ids):
+            raise ReleaseError(f"qualified jobs must be completed automatic jobs for {account}")
     return dict(evidence, status="qualified")
 
 

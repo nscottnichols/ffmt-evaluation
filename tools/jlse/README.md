@@ -99,11 +99,16 @@ and add group read/search permission after components and manifests are written.
 
 After both CI accounts have fresh pipelines for the same full commit and exact
 release root, record one offline qualification JSON file per account. Overall
-pipeline status may be `success` or `failed`; both require a nonempty
+pipeline status may be `success`, `failed`, or `manual`; all require a nonempty
 `qualified_jobs` list naming successful jobs that consumed the exact runtime.
-Job-level success qualifies account/runtime access only and does not waive failed
-matrix targets. Use the GitLab pipeline and job identities in this form,
-replacing both commit placeholders with the same 40-character commit ID:
+A `manual` pipeline also requires an `automatic_jobs` list containing every
+non-manual job attempt, including failed and retried attempts. Every listed
+automatic job must have terminal status `success` or `failed`, and every
+qualified job must occur in that list. This distinguishes a pipeline whose only
+remaining jobs are intentional manual targets from one with work still queued
+or running. Job-level success qualifies account/runtime access only and does not
+waive failed matrix targets. Use the GitLab pipeline and job identities in this
+form, replacing both commit placeholders with the same 40-character commit ID:
 
 ```json
 {
@@ -125,10 +130,27 @@ replacing both commit placeholders with the same 40-character commit ID:
         "status": "success",
         "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/23456"
       }
+    ],
+    "automatic_jobs": [
+      {
+        "id": 23456,
+        "name": "jlse-runtime-h100",
+        "status": "success",
+        "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/23456"
+      },
+      {
+        "id": 23457,
+        "name": "known-structural-failure",
+        "status": "failed",
+        "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/23457"
+      }
     ]
   }
 }
 ```
+
+The `automatic_jobs` field is required only when the overall pipeline status is
+`manual`; manual jobs themselves must not appear in that list.
 
 Run the finalizer from the evaluation repository root. It rejects missing or
 mismatched dual-account evidence, non-installed or duplicate components, paths

@@ -189,6 +189,60 @@ class ReleaseFinalizerTests(unittest.TestCase):
         self.assertEqual(qualified["status"], "qualified")
         self.assertEqual(qualified["pipeline"]["status"], "failed")
 
+    def test_manual_pipeline_with_completed_automatic_jobs_is_accepted(self):
+        evidence = self.evidence("nnichols", 101)
+        evidence["pipeline"]["status"] = "manual"
+        qualified_job = evidence["pipeline"]["qualified_jobs"][0]
+        evidence["pipeline"]["automatic_jobs"] = [
+            dict(qualified_job),
+            {
+                "id": 1102,
+                "name": "known-structural-failure",
+                "status": "failed",
+                "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/1102",
+            },
+        ]
+        qualified = finalize.validate_qualification(evidence, "nnichols", self.release, COMMIT)
+        self.assertEqual(qualified["status"], "qualified")
+        self.assertEqual(qualified["pipeline"]["status"], "manual")
+
+    def test_manual_pipeline_requires_completed_automatic_jobs(self):
+        for name, automatic_jobs in (
+                ("missing", None),
+                ("empty", []),
+                ("running", [{
+                    "id": 1101,
+                    "name": "jlse-runtime-h100",
+                    "status": "running",
+                    "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/1101",
+                }]),
+                ("manual", [{
+                    "id": 1101,
+                    "name": "intentionally-unqualified",
+                    "status": "manual",
+                    "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/1101",
+                }])):
+            with self.subTest(name=name):
+                evidence = self.evidence("nnichols", 101)
+                evidence["pipeline"]["status"] = "manual"
+                if automatic_jobs is not None:
+                    evidence["pipeline"]["automatic_jobs"] = automatic_jobs
+                with self.assertRaisesRegex(finalize.ReleaseError,
+                                            "completed automatic jobs|automatic job was not completed"):
+                    finalize.validate_qualification(evidence, "nnichols", self.release, COMMIT)
+
+    def test_manual_pipeline_requires_qualified_jobs_in_automatic_jobs(self):
+        evidence = self.evidence("nnichols", 101)
+        evidence["pipeline"]["status"] = "manual"
+        evidence["pipeline"]["automatic_jobs"] = [{
+            "id": 1102,
+            "name": "another-runtime-job",
+            "status": "success",
+            "web_url": "https://gitlab.jlse.anl.gov/bertoni/ffmt/-/jobs/1102",
+        }]
+        with self.assertRaisesRegex(finalize.ReleaseError, "must be completed automatic jobs"):
+            finalize.validate_qualification(evidence, "nnichols", self.release, COMMIT)
+
     def test_failed_pipeline_without_qualified_jobs_is_rejected(self):
         evidence = self.evidence("nnichols", 101)
         evidence["pipeline"]["status"] = "failed"
